@@ -6,17 +6,18 @@
       "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",
       "status": "active",
       "color": "#00ff88",
-      "lastUpdated": "2026-01-26T21:00:00Z",
-      "lastWorkedOn": "Scanner OCR improvements for Nobility Homes forms, calendar scheduling, organization fixes, delete property feature",
+      "lastUpdated": "2026-01-26T23:50:00Z",
+      "lastWorkedOn": "Fixed address parser (rejects false positives like '95 Phone'), added scan guidance tip for landscape mode, fixing camera button layout",
       "todos": [
         { "id": "1", "text": "Test sign-out flow after latest fix", "done": false },
         { "id": "2", "text": "Test onboarding creates organization_members", "done": false },
         { "id": "3", "text": "Delete test properties and add real data", "done": false },
-        { "id": "4", "text": "Continue refining scanner for edge cases", "done": false },
+        { "id": "4", "text": "Fix camera capture button visibility (in progress)", "done": false },
         { "id": "5", "text": "Add materials list tracking", "done": false }
       ],
       "changelog": [
-        { "date": "2026-01-26", "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages." }
+        { "date": "2026-01-26", "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages." },
+        { "date": "2026-01-26", "summary": "Evening session: Fixed address parser - now requires 3+ digit street numbers and filters keywords (Phone, Serial, etc) to prevent false matches. Added dismissable scan guidance tip suggesting landscape mode for customer info. Camera button layout fix in progress." }
       ],
       "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
       "liveUrl": "https://fieldsyncv2.pages.dev"
@@ -93,20 +94,22 @@
     {
       "id": "command-center",
       "name": "Command Center",
-      "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub",
+      "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
       "status": "active",
       "color": "#00ff88",
-      "lastUpdated": "2026-01-26T23:10:00Z",
-      "lastWorkedOn": "Added embedded Claude chat panel, Cloudflare Worker for Telegram relay, auto-refresh on updates",
+      "lastUpdated": "2026-01-26T23:50:00Z",
+      "lastWorkedOn": "Deployed Telegram relay worker, chat panel live and connected",
       "todos": [
         { "id": "1", "text": "Implement GitHub-based data sync", "done": true },
         { "id": "2", "text": "Add embedded Claude chat interface", "done": true },
-        { "id": "3", "text": "Deploy Telegram relay worker", "done": false },
-        { "id": "4", "text": "Real-time updates when AI makes changes", "done": true }
+        { "id": "3", "text": "Deploy Telegram relay worker", "done": true },
+        { "id": "4", "text": "Real-time updates when AI makes changes", "done": true },
+        { "id": "5", "text": "Auto-update dashboard after every conversation", "done": false }
       ],
       "changelog": [
         { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic, neon accents, glass effects. Project cards, detail views, todo lists, ideas hub." },
-        { "date": "2026-01-26", "summary": "Added embedded Claude chat panel with floating button. Created Cloudflare Worker for Telegram relay. Auto-refresh after messages. GitHub-based data sync complete." }
+        { "date": "2026-01-26", "summary": "Added embedded Claude chat panel with floating button. Created Cloudflare Worker for Telegram relay. Auto-refresh after messages. GitHub-based data sync complete." },
+        { "date": "2026-01-26", "summary": "Kam deployed the Telegram relay worker to Cloudflare. Chat panel now fully connected - messages route through to Claude via Telegram." }
       ],
       "repoUrl": "https://github.com/ava-type1/command-center",
       "liveUrl": "https://command-center-2nk.pages.dev"

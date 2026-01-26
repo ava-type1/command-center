@@ -96,18 +96,20 @@
       "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub",
       "status": "active",
       "color": "#00ff88",
-      "lastUpdated": "2026-01-26T22:00:00Z",
-      "lastWorkedOn": "Initial build - dark theme, project cards, ideas hub, deployed to Cloudflare",
+      "lastUpdated": "2026-01-26T23:10:00Z",
+      "lastWorkedOn": "Added embedded Claude chat panel, Cloudflare Worker for Telegram relay, auto-refresh on updates",
       "todos": [
-        { "id": "1", "text": "Implement GitHub-based data sync", "done": false },
-        { "id": "2", "text": "Add embedded Claude chat interface", "done": false },
-        { "id": "3", "text": "Real-time updates when AI makes changes", "done": false }
+        { "id": "1", "text": "Implement GitHub-based data sync", "done": true },
+        { "id": "2", "text": "Add embedded Claude chat interface", "done": true },
+        { "id": "3", "text": "Deploy Telegram relay worker", "done": false },
+        { "id": "4", "text": "Real-time updates when AI makes changes", "done": true }
       ],
       "changelog": [
-        { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic, neon accents, glass effects. Project cards, detail views, todo lists, ideas hub." }
+        { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic, neon accents, glass effects. Project cards, detail views, todo lists, ideas hub." },
+        { "date": "2026-01-26", "summary": "Added embedded Claude chat panel with floating button. Created Cloudflare Worker for Telegram relay. Auto-refresh after messages. GitHub-based data sync complete." }
       ],
       "repoUrl": "https://github.com/ava-type1/command-center",
-      "liveUrl": "https://command-center.pages.dev"
+      "liveUrl": "https://command-center-2nk.pages.dev"
     }
   ]
 }

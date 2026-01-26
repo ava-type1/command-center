@@ -3,6 +3,7 @@ import { ProjectCard } from './components/ProjectCard';
 import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
 import { Header } from './components/Header';
+import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2 } from 'lucide-react';
 import type { Project, Idea } from './types';
 
@@ -19,6 +20,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastSync, setLastSync] = useState<Date | null>(null);
+  const [chatOpen, setChatOpen] = useState(false);
 
   // Load data from GitHub
   const loadData = async () => {
@@ -186,6 +188,14 @@ function App() {
           <IdeasHub ideas={ideas} onUpdate={updateIdeas} />
         )}
       </main>
+
+      {/* AI Chat */}
+      <AIChatButton onClick={() => setChatOpen(true)} />
+      <AIChatPanel 
+        isOpen={chatOpen} 
+        onClose={() => setChatOpen(false)} 
+        onRefresh={loadData}
+      />
     </div>
   );
 }

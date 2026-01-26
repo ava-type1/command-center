@@ -1,6 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Lightbulb, Sparkles, TrendingUp, Wrench, Zap, Plus, Trash2 } from 'lucide-react';
 import type { Idea } from '../types';
+
+interface IdeasHubProps {
+  ideas: Idea[];
+  onUpdate: (ideas: Idea[]) => void;
+}
 
 const categoryIcons = {
   saas: Zap,
@@ -22,7 +27,7 @@ const potentialColors = {
   high: '#00ff88',
 };
 
-const initialIdeas: Idea[] = [
+const placeholderIdeas: Idea[] = [
   {
     id: '1',
     title: 'CGM Data Aggregator API',
@@ -76,8 +81,8 @@ const initialIdeas: Idea[] = [
   },
 ];
 
-export function IdeasHub() {
-  const [ideas, setIdeas] = useState<Idea[]>(initialIdeas);
+export function IdeasHub({ ideas, onUpdate }: IdeasHubProps) {
+  const displayIdeas = ideas.length > 0 ? ideas : placeholderIdeas;
   const [filter, setFilter] = useState<string>('all');
   const [showAdd, setShowAdd] = useState(false);
   const [newIdea, setNewIdea] = useState({
@@ -87,21 +92,6 @@ export function IdeasHub() {
     potential: 'medium' as Idea['potential'],
   });
 
-  useEffect(() => {
-    const saved = localStorage.getItem('kam-ideas');
-    if (saved) {
-      try {
-        setIdeas(JSON.parse(saved));
-      } catch (e) {
-        console.error('Failed to load ideas');
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('kam-ideas', JSON.stringify(ideas));
-  }, [ideas]);
-
   const addIdea = () => {
     if (!newIdea.title.trim()) return;
     const idea: Idea = {
@@ -109,18 +99,18 @@ export function IdeasHub() {
       ...newIdea,
       createdAt: new Date().toISOString(),
     };
-    setIdeas([idea, ...ideas]);
+    onUpdate([idea, ...displayIdeas]);
     setNewIdea({ title: '', description: '', category: 'saas', potential: 'medium' });
     setShowAdd(false);
   };
 
   const deleteIdea = (id: string) => {
-    setIdeas(ideas.filter(i => i.id !== id));
+    onUpdate(displayIdeas.filter(i => i.id !== id));
   };
 
   const filteredIdeas = filter === 'all' 
-    ? ideas 
-    : ideas.filter(i => i.category === filter || i.potential === filter);
+    ? displayIdeas 
+    : displayIdeas.filter(i => i.category === filter || i.potential === filter);
 
   return (
     <div>

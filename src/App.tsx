@@ -3,105 +3,110 @@ import { ProjectCard } from './components/ProjectCard';
 import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
 import { Header } from './components/Header';
-import type { Project } from './types';
+import { Loader2 } from 'lucide-react';
+import type { Project, Idea } from './types';
 
-// Initial projects data - will be loaded from JSON files in production
-const initialProjects: Project[] = [
-  {
-    id: 'fieldsync',
-    name: 'FieldSync',
-    description: 'Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination',
-    status: 'active',
-    color: '#00ff88',
-    lastUpdated: new Date().toISOString(),
-    lastWorkedOn: 'Scanner OCR improvements, calendar scheduling, organization fixes',
-    todos: [
-      { id: '1', text: 'Test sign-out flow after latest fix', done: false },
-      { id: '2', text: 'Test onboarding creates organization_members', done: false },
-      { id: '3', text: 'Delete test properties and add real data', done: false },
-      { id: '4', text: 'Continue refining scanner for edge cases', done: false },
-    ],
-    changelog: [
-      { date: '2026-01-26', summary: 'Fixed scanner parsing for Nobility Homes forms - names, addresses, all 3 phone numbers. Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature.' },
-    ],
-    repoUrl: 'https://github.com/ava-type1/fieldsyncv2',
-    liveUrl: 'https://fieldsyncv2.pages.dev',
-  },
-  {
-    id: 'ava-type1',
-    name: 'AVA Type 1',
-    description: 'iOS simulation game teaching T1D management - gamified diabetes education for kids',
-    status: 'active',
-    color: '#00d4ff',
-    lastUpdated: '2026-01-20T00:00:00Z',
-    lastWorkedOn: 'Physiological modeling, achievement systems',
-    todos: [
-      { id: '1', text: 'Complete sticker collection system', done: false },
-      { id: '2', text: 'Finalize 60x accelerated mode', done: false },
-      { id: '3', text: 'Beta testing with families', done: false },
-    ],
-    changelog: [
-      { date: '2026-01-20', summary: 'Approximately 80% complete. Core simulation working.' },
-    ],
-    repoUrl: 'https://github.com/ava-type1/ava-type1',
-  },
-  {
-    id: 'ava-companion',
-    name: 'AVA Companion',
-    description: 'Physical plush toy with ESP32-C6 display showing simulated glucose - pairs with AVA Type 1 app',
-    status: 'paused',
-    color: '#bf00ff',
-    lastUpdated: '2026-01-15T00:00:00Z',
-    lastWorkedOn: 'ESP32-C6 BLE communication, enclosure design',
-    todos: [
-      { id: '1', text: 'Finalize 3D printed enclosure', done: false },
-      { id: '2', text: 'Test battery life with ONN 5000mAh pack', done: false },
-      { id: '3', text: 'BLE pairing reliability', done: false },
-    ],
-    changelog: [],
-  },
-  {
-    id: 'ava-drive',
-    name: 'AvaDrive',
-    description: 'Driving safety product - real-time CGM data on external display for diabetics',
-    status: 'idea',
-    color: '#ff0080',
-    lastUpdated: '2026-01-10T00:00:00Z',
-    lastWorkedOn: 'Concept and initial architecture',
-    todos: [
-      { id: '1', text: 'Research CGM API access (Dexcom, Libre)', done: false },
-      { id: '2', text: 'Design dashboard display UI', done: false },
-    ],
-    changelog: [],
-  },
-];
+// GitHub raw content URLs
+const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
+const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
+const IDEAS_URL = `${GITHUB_BASE}/ideas.json`;
 
 function App() {
-  const [projects, setProjects] = useState<Project[]>(initialProjects);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [ideas, setIdeas] = useState<Idea[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [view, setView] = useState<'dashboard' | 'ideas'>('dashboard');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [lastSync, setLastSync] = useState<Date | null>(null);
 
-  // Load projects from localStorage on mount
-  useEffect(() => {
-    const saved = localStorage.getItem('kam-projects');
-    if (saved) {
-      try {
-        setProjects(JSON.parse(saved));
-      } catch (e) {
-        console.error('Failed to load saved projects');
+  // Load data from GitHub
+  const loadData = async () => {
+    setLoading(true);
+    setError(null);
+    
+    try {
+      // Try GitHub first
+      const [projectsRes, ideasRes] = await Promise.all([
+        fetch(PROJECTS_URL + '?t=' + Date.now()), // Cache bust
+        fetch(IDEAS_URL + '?t=' + Date.now()),
+      ]);
+
+      if (projectsRes.ok && ideasRes.ok) {
+        const projectsData = await projectsRes.json();
+        const ideasData = await ideasRes.json();
+        
+        setProjects(projectsData.projects || []);
+        setIdeas(ideasData.ideas || []);
+        setLastSync(new Date());
+        
+        // Cache locally
+        localStorage.setItem('kam-projects', JSON.stringify(projectsData.projects));
+        localStorage.setItem('kam-ideas', JSON.stringify(ideasData.ideas));
+        localStorage.setItem('kam-last-sync', new Date().toISOString());
+      } else {
+        throw new Error('Failed to fetch from GitHub');
       }
+    } catch (err) {
+      console.warn('GitHub fetch failed, using local cache:', err);
+      
+      // Fallback to localStorage
+      const cachedProjects = localStorage.getItem('kam-projects');
+      const cachedIdeas = localStorage.getItem('kam-ideas');
+      const cachedSync = localStorage.getItem('kam-last-sync');
+      
+      if (cachedProjects) {
+        setProjects(JSON.parse(cachedProjects));
+      }
+      if (cachedIdeas) {
+        setIdeas(JSON.parse(cachedIdeas));
+      }
+      if (cachedSync) {
+        setLastSync(new Date(cachedSync));
+      }
+      
+      if (!cachedProjects && !cachedIdeas) {
+        setError('Unable to load data. Check your connection.');
+      }
+    } finally {
+      setLoading(false);
     }
+  };
+
+  useEffect(() => {
+    loadData();
+    
+    // Refresh every 5 minutes
+    const interval = setInterval(loadData, 5 * 60 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
-  // Save projects to localStorage when they change
-  useEffect(() => {
-    localStorage.setItem('kam-projects', JSON.stringify(projects));
-  }, [projects]);
-
+  // Local updates (for todo toggling, etc.) - saves to localStorage only
+  // GitHub updates come from me after our conversations
   const updateProject = (updatedProject: Project) => {
-    setProjects(prev => prev.map(p => p.id === updatedProject.id ? updatedProject : p));
+    setProjects(prev => {
+      const updated = prev.map(p => p.id === updatedProject.id ? updatedProject : p);
+      localStorage.setItem('kam-projects', JSON.stringify(updated));
+      return updated;
+    });
     setSelectedProject(updatedProject);
   };
+
+  const updateIdeas = (newIdeas: Idea[]) => {
+    setIdeas(newIdeas);
+    localStorage.setItem('kam-ideas', JSON.stringify(newIdeas));
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <Loader2 className="w-8 h-8 animate-spin text-neon-green mx-auto mb-4" />
+          <p className="text-gray-400">Loading Command Center...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (selectedProject) {
     return (
@@ -118,6 +123,15 @@ function App() {
       <Header view={view} onViewChange={setView} />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {error && (
+          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+            {error}
+            <button onClick={loadData} className="ml-4 underline hover:text-red-300">
+              Retry
+            </button>
+          </div>
+        )}
+
         {view === 'dashboard' ? (
           <>
             {/* Stats row */}
@@ -140,8 +154,24 @@ function App() {
               </div>
             </div>
 
+            {/* Sync status */}
+            {lastSync && (
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-semibold text-gray-200">Projects</h2>
+                <div className="flex items-center gap-2 text-xs text-gray-500">
+                  <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
+                  Synced {lastSync.toLocaleTimeString()}
+                  <button 
+                    onClick={loadData}
+                    className="ml-2 px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 transition-colors"
+                  >
+                    Refresh
+                  </button>
+                </div>
+              </div>
+            )}
+
             {/* Projects grid */}
-            <h2 className="text-xl font-semibold mb-4 text-gray-200">Projects</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map(project => (
                 <ProjectCard
@@ -153,7 +183,7 @@ function App() {
             </div>
           </>
         ) : (
-          <IdeasHub />
+          <IdeasHub ideas={ideas} onUpdate={updateIdeas} />
         )}
       </main>
     </div>

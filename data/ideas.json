@@ -1,0 +1,75 @@
+{
+  "ideas": [
+    {
+      "id": "1",
+      "title": "CGM Data Aggregator API",
+      "description": "A unified API that connects to Dexcom, Libre, and Medtronic CGM systems. Developers could build apps without dealing with each proprietary API. Charge per API call.",
+      "category": "saas",
+      "potential": "high",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Could be the foundation for AvaDrive and other diabetes apps. You already have Dexcom working - expand to others."
+    },
+    {
+      "id": "2",
+      "title": "Mobile Home Service Marketplace",
+      "description": "Like Thumbtack but specifically for manufactured home services - setup crews, leveling, skirting, plumbing. Connect homeowners with vetted contractors.",
+      "category": "saas",
+      "potential": "high",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Natural extension of FieldSync. You already understand the industry pain points from the inside."
+    },
+    {
+      "id": "3",
+      "title": "Diabetes Camp Simulation Mode",
+      "description": "Partner with diabetes camps to use AVA Type 1 as a training tool. Kids practice management in accelerated time before going on real pumps.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "B2B revenue stream for the AVA app. Camps would pay for licenses."
+    },
+    {
+      "id": "4",
+      "title": "NFC Sticker Packs for AVA",
+      "description": "Physical NFC stickers kids can scan to trigger in-game events (eating food, exercise, etc.). Sell as expansion packs. Makes the game tangible.",
+      "category": "product",
+      "potential": "medium",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Low cost to produce, high margin. Creates physical product line alongside app."
+    },
+    {
+      "id": "5",
+      "title": "FieldSync → QuickBooks Integration",
+      "description": "Auto-generate invoices from completed walkthroughs. Sync materials costs. Time tracking for hourly billing. Contractors would pay for this.",
+      "category": "feature",
+      "potential": "high",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "This is where the money is in FieldSync. Accounting integration = premium tier."
+    },
+    {
+      "id": "6",
+      "title": "Warranty Claim Automation",
+      "description": "AI reads walkthrough notes and photos, auto-fills manufacturer warranty claim forms. Saves hours per claim. Sell to service companies.",
+      "category": "saas",
+      "potential": "high",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "This is a huge pain point you experience directly. Could integrate with FieldSync or standalone."
+    },
+    {
+      "id": "7",
+      "title": "AVA Arcade - Mini Games Collection",
+      "description": "Standalone app with diabetes-themed mini games from AVA Type 1. Free with ads, or bundle with main app.",
+      "category": "product",
+      "potential": "low",
+      "createdAt": "2026-01-26T00:00:00Z"
+    },
+    {
+      "id": "8",
+      "title": "Service Tech Training Platform",
+      "description": "Video courses + certification for manufactured home service technicians. Partner with manufacturers for official certs.",
+      "category": "saas",
+      "potential": "medium",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Industry has no standardized training. First mover could own this space."
+    }
+  ]
+}

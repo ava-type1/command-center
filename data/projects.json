@@ -1,0 +1,113 @@
+{
+  "projects": [
+    {
+      "id": "fieldsync",
+      "name": "FieldSync",
+      "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",
+      "status": "active",
+      "color": "#00ff88",
+      "lastUpdated": "2026-01-26T21:00:00Z",
+      "lastWorkedOn": "Scanner OCR improvements for Nobility Homes forms, calendar scheduling, organization fixes, delete property feature",
+      "todos": [
+        { "id": "1", "text": "Test sign-out flow after latest fix", "done": false },
+        { "id": "2", "text": "Test onboarding creates organization_members", "done": false },
+        { "id": "3", "text": "Delete test properties and add real data", "done": false },
+        { "id": "4", "text": "Continue refining scanner for edge cases", "done": false },
+        { "id": "5", "text": "Add materials list tracking", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-26", "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
+      "liveUrl": "https://fieldsyncv2.pages.dev"
+    },
+    {
+      "id": "ava-type1-app",
+      "name": "AVA Type 1 App",
+      "description": "iOS simulation game teaching T1D management - gamified diabetes education for kids ages 5-18",
+      "status": "active",
+      "color": "#00d4ff",
+      "lastUpdated": "2026-01-20T00:00:00Z",
+      "lastWorkedOn": "Physiological modeling, achievement systems, 60x accelerated mode",
+      "todos": [
+        { "id": "1", "text": "Complete sticker collection system", "done": false },
+        { "id": "2", "text": "Finalize 60x accelerated mode", "done": false },
+        { "id": "3", "text": "Beta testing with families", "done": false },
+        { "id": "4", "text": "App Store submission prep", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-20", "summary": "Approximately 80% complete. Core simulation working with realistic carb absorption and insulin action curves." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/ava-type1"
+    },
+    {
+      "id": "ava-drive",
+      "name": "AvaDrive",
+      "description": "Driving safety display - real-time CGM data mirrored to external ESP32 display for diabetics while driving",
+      "status": "active",
+      "color": "#ff0080",
+      "lastUpdated": "2026-01-26T00:00:00Z",
+      "lastWorkedOn": "Dexcom Sandbox API integration, iPhone app fetching CGM data",
+      "todos": [
+        { "id": "1", "text": "Complete Dexcom API integration", "done": true },
+        { "id": "2", "text": "ESP32 BLE display communication", "done": false },
+        { "id": "3", "text": "Design car mount/display enclosure", "done": false },
+        { "id": "4", "text": "Apply for Dexcom production API access", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-26", "summary": "Dexcom Sandbox API working. Closest to production-ready in AVA ecosystem." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/ava-drive"
+    },
+    {
+      "id": "ava-companion",
+      "name": "AVA Companion",
+      "description": "Physical plush toy with ESP32-C6 display showing simulated glucose - pairs with AVA Type 1 app via BLE",
+      "status": "paused",
+      "color": "#bf00ff",
+      "lastUpdated": "2026-01-15T00:00:00Z",
+      "lastWorkedOn": "ESP32-C6 BLE communication, Waveshare display integration, enclosure design",
+      "todos": [
+        { "id": "1", "text": "Finalize 3D printed enclosure for Bambu Lab P1S", "done": false },
+        { "id": "2", "text": "Test battery life with ONN 5000mAh pack", "done": false },
+        { "id": "3", "text": "BLE pairing reliability improvements", "done": false },
+        { "id": "4", "text": "Source plush toy manufacturer", "done": false }
+      ],
+      "changelog": [],
+      "repoUrl": "https://github.com/ava-type1/ava-companion"
+    },
+    {
+      "id": "ava-heart",
+      "name": "AVA Heart",
+      "description": "Standalone glucose display device for home - shows real CGM data on dedicated display",
+      "status": "idea",
+      "color": "#ffc800",
+      "lastUpdated": "2026-01-10T00:00:00Z",
+      "lastWorkedOn": "Concept design, hardware selection",
+      "todos": [
+        { "id": "1", "text": "Define hardware requirements", "done": false },
+        { "id": "2", "text": "Design enclosure for bedside/desk", "done": false }
+      ],
+      "changelog": []
+    },
+    {
+      "id": "command-center",
+      "name": "Command Center",
+      "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub",
+      "status": "active",
+      "color": "#00ff88",
+      "lastUpdated": "2026-01-26T22:00:00Z",
+      "lastWorkedOn": "Initial build - dark theme, project cards, ideas hub, deployed to Cloudflare",
+      "todos": [
+        { "id": "1", "text": "Implement GitHub-based data sync", "done": false },
+        { "id": "2", "text": "Add embedded Claude chat interface", "done": false },
+        { "id": "3", "text": "Real-time updates when AI makes changes", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic, neon accents, glass effects. Project cards, detail views, todo lists, ideas hub." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/command-center",
+      "liveUrl": "https://command-center.pages.dev"
+    }
+  ]
+}

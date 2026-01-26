@@ -15,7 +15,7 @@ interface AIChatPanelProps {
 }
 
 // Worker URL - you'll deploy this to Cloudflare Workers
-const WORKER_URL = 'https://command-center-chat.kameronmartinllc.workers.dev';
+const WORKER_URL = 'https://command-center-chat.5wwncts568.workers.dev';
 
 export function AIChatPanel({ isOpen, onClose, onRefresh }: AIChatPanelProps) {
   const [messages, setMessages] = useState<Message[]>([

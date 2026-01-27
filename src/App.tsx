@@ -5,6 +5,8 @@ import { IdeasHub } from './components/IdeasHub';
 import { NewsFeed } from './components/NewsFeed';
 import { Header } from './components/Header';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
+import { WeatherWidget } from './components/WeatherWidget';
+import { LinksPanel } from './components/LinksPanel';
 import { Loader2 } from 'lucide-react';
 import type { Project, Idea } from './types';
 
@@ -166,52 +168,71 @@ function App() {
 
         {view === 'dashboard' ? (
           <>
-            {/* Stats row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-              <div className="glass rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-neon-green">{projects.filter(p => p.status === 'active').length}</div>
-                <div className="text-sm text-gray-400 mt-1">Active</div>
+            {/* Top row: Stats + Weather */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-8">
+              {/* Stats - takes 3 columns on large screens */}
+              <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div className="glass rounded-xl p-4 text-center">
+                  <div className="text-3xl font-bold text-neon-green">{projects.filter(p => p.status === 'active').length}</div>
+                  <div className="text-sm text-gray-400 mt-1">Active</div>
+                </div>
+                <div className="glass rounded-xl p-4 text-center">
+                  <div className="text-3xl font-bold text-yellow-400">{projects.filter(p => p.status === 'paused').length}</div>
+                  <div className="text-sm text-gray-400 mt-1">Paused</div>
+                </div>
+                <div className="glass rounded-xl p-4 text-center">
+                  <div className="text-3xl font-bold text-neon-cyan">{projects.filter(p => p.status === 'completed').length}</div>
+                  <div className="text-sm text-gray-400 mt-1">Completed</div>
+                </div>
+                <div className="glass rounded-xl p-4 text-center">
+                  <div className="text-3xl font-bold text-neon-purple">{projects.filter(p => p.status === 'idea').length}</div>
+                  <div className="text-sm text-gray-400 mt-1">Ideas</div>
+                </div>
               </div>
-              <div className="glass rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-yellow-400">{projects.filter(p => p.status === 'paused').length}</div>
-                <div className="text-sm text-gray-400 mt-1">Paused</div>
-              </div>
-              <div className="glass rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-neon-cyan">{projects.filter(p => p.status === 'completed').length}</div>
-                <div className="text-sm text-gray-400 mt-1">Completed</div>
-              </div>
-              <div className="glass rounded-xl p-4 text-center">
-                <div className="text-3xl font-bold text-neon-purple">{projects.filter(p => p.status === 'idea').length}</div>
-                <div className="text-sm text-gray-400 mt-1">Ideas</div>
+              
+              {/* Weather widget - takes 1 column on large screens */}
+              <div className="lg:col-span-1">
+                <WeatherWidget />
               </div>
             </div>
 
-            {/* Sync status */}
-            {lastSync && (
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-xl font-semibold text-gray-200">Projects</h2>
-                <div className="flex items-center gap-2 text-xs text-gray-500">
-                  <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
-                  Synced {lastSync.toLocaleTimeString()}
-                  <button 
-                    onClick={loadData}
-                    className="ml-2 px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 transition-colors"
-                  >
-                    Refresh
-                  </button>
+            {/* Main content: Projects + Links sidebar */}
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+              {/* Projects section - takes 3 columns */}
+              <div className="lg:col-span-3">
+                {/* Sync status */}
+                {lastSync && (
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-xl font-semibold text-gray-200">Projects</h2>
+                    <div className="flex items-center gap-2 text-xs text-gray-500">
+                      <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
+                      Synced {lastSync.toLocaleTimeString()}
+                      <button 
+                        onClick={loadData}
+                        className="ml-2 px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 transition-colors"
+                      >
+                        Refresh
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* Projects grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {projects.map(project => (
+                    <ProjectCard
+                      key={project.id}
+                      project={project}
+                      onClick={() => setSelectedProject(project)}
+                    />
+                  ))}
                 </div>
               </div>
-            )}
 
-            {/* Projects grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.map(project => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  onClick={() => setSelectedProject(project)}
-                />
-              ))}
+              {/* Sidebar - takes 1 column */}
+              <div className="lg:col-span-1 space-y-4">
+                <LinksPanel />
+              </div>
             </div>
           </>
         ) : view === 'news' ? (

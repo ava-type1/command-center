@@ -48,7 +48,7 @@
       "name": "AvaDrive",
       "description": "Driving safety display - real-time CGM data mirrored to external ESP32 display for diabetics while driving",
       "status": "active",
-      "progress": 35,
+      "progress": 88,
       "color": "#ff0080",
       "lastUpdated": "2026-01-26T00:00:00Z",
       "lastWorkedOn": "Dexcom Sandbox API integration, iPhone app fetching CGM data",

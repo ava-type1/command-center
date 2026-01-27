@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Cloud, Sun, CloudRain, Snowflake, Wind, Droplets, RefreshCw, MapPin } from 'lucide-react';
+import { Cloud, Sun, CloudRain, Snowflake, Wind, Droplets, RefreshCw, MapPin, CloudSun, CloudFog } from 'lucide-react';
 
 interface WeatherData {
   temp: number;
@@ -7,72 +7,101 @@ interface WeatherData {
   humidity: number;
   wind: number;
   condition: string;
+  conditionCode: number;
   location: string;
   forecast: Array<{
     day: string;
     high: number;
     low: number;
-    condition: string;
+    conditionCode: number;
   }>;
 }
 
-const getWeatherIcon = (condition: string) => {
-  const c = condition.toLowerCase();
-  if (c.includes('rain') || c.includes('shower')) return <CloudRain className="w-8 h-8 text-blue-400" />;
-  if (c.includes('snow')) return <Snowflake className="w-8 h-8 text-blue-200" />;
-  if (c.includes('cloud') || c.includes('overcast')) return <Cloud className="w-8 h-8 text-gray-400" />;
-  if (c.includes('sun') || c.includes('clear')) return <Sun className="w-8 h-8 text-yellow-400" />;
-  return <Cloud className="w-8 h-8 text-gray-400" />;
+// WMO Weather interpretation codes
+const getWeatherInfo = (code: number): { icon: React.ReactNode; label: string } => {
+  // Clear
+  if (code === 0) return { icon: <Sun className="w-8 h-8 text-yellow-400" />, label: 'Clear' };
+  // Mainly clear, partly cloudy
+  if (code === 1 || code === 2) return { icon: <CloudSun className="w-8 h-8 text-yellow-300" />, label: 'Partly Cloudy' };
+  // Overcast
+  if (code === 3) return { icon: <Cloud className="w-8 h-8 text-gray-400" />, label: 'Cloudy' };
+  // Fog
+  if (code === 45 || code === 48) return { icon: <CloudFog className="w-8 h-8 text-gray-400" />, label: 'Foggy' };
+  // Drizzle
+  if (code >= 51 && code <= 57) return { icon: <CloudRain className="w-8 h-8 text-blue-300" />, label: 'Drizzle' };
+  // Rain
+  if (code >= 61 && code <= 67) return { icon: <CloudRain className="w-8 h-8 text-blue-400" />, label: 'Rain' };
+  // Snow
+  if (code >= 71 && code <= 77) return { icon: <Snowflake className="w-8 h-8 text-blue-200" />, label: 'Snow' };
+  // Rain showers
+  if (code >= 80 && code <= 82) return { icon: <CloudRain className="w-8 h-8 text-blue-400" />, label: 'Showers' };
+  // Snow showers
+  if (code >= 85 && code <= 86) return { icon: <Snowflake className="w-8 h-8 text-blue-200" />, label: 'Snow Showers' };
+  // Thunderstorm
+  if (code >= 95 && code <= 99) return { icon: <CloudRain className="w-8 h-8 text-purple-400" />, label: 'Thunderstorm' };
+  
+  return { icon: <Cloud className="w-8 h-8 text-gray-400" />, label: 'Unknown' };
 };
 
-const getForecastIcon = (condition: string, size = 'w-5 h-5') => {
-  const c = condition.toLowerCase();
-  if (c.includes('rain') || c.includes('shower')) return <CloudRain className={`${size} text-blue-400`} />;
-  if (c.includes('snow')) return <Snowflake className={`${size} text-blue-200`} />;
-  if (c.includes('cloud') || c.includes('overcast')) return <Cloud className={`${size} text-gray-400`} />;
-  if (c.includes('sun') || c.includes('clear')) return <Sun className={`${size} text-yellow-400`} />;
-  return <Cloud className={`${size} text-gray-400`} />;
+const getSmallIcon = (code: number) => {
+  if (code === 0) return <Sun className="w-4 h-4 text-yellow-400" />;
+  if (code === 1 || code === 2) return <CloudSun className="w-4 h-4 text-yellow-300" />;
+  if (code === 3) return <Cloud className="w-4 h-4 text-gray-400" />;
+  if (code === 45 || code === 48) return <CloudFog className="w-4 h-4 text-gray-400" />;
+  if (code >= 51 && code <= 67) return <CloudRain className="w-4 h-4 text-blue-400" />;
+  if (code >= 71 && code <= 86) return <Snowflake className="w-4 h-4 text-blue-200" />;
+  if (code >= 80 && code <= 82) return <CloudRain className="w-4 h-4 text-blue-400" />;
+  if (code >= 95) return <CloudRain className="w-4 h-4 text-purple-400" />;
+  return <Cloud className="w-4 h-4 text-gray-400" />;
 };
+
+// Jacksonville, FL coordinates
+const LAT = 30.3322;
+const LON = -81.6557;
+const LOCATION_NAME = 'Jacksonville, FL';
 
 export function WeatherWidget() {
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [location] = useState('Jacksonville,FL');
 
   const fetchWeather = async () => {
     setLoading(true);
     setError(null);
     
     try {
-      // Using wttr.in - free, no API key needed
-      const response = await fetch(`https://wttr.in/${encodeURIComponent(location)}?format=j1`);
+      // Open-Meteo API - free, no key required, CORS-enabled
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FNew_York&forecast_days=3`;
+      
+      const response = await fetch(url);
       if (!response.ok) throw new Error('Weather fetch failed');
       
       const data = await response.json();
-      const current = data.current_condition[0];
-      const forecast = data.weather.slice(0, 3);
+      const current = data.current;
+      const daily = data.daily;
+      
+      const weatherInfo = getWeatherInfo(current.weather_code);
       
       setWeather({
-        temp: parseInt(current.temp_F),
-        feels_like: parseInt(current.FeelsLikeF),
-        humidity: parseInt(current.humidity),
-        wind: parseInt(current.windspeedMiles),
-        condition: current.weatherDesc[0].value,
-        location: data.nearest_area[0].areaName[0].value + ', ' + data.nearest_area[0].region[0].value,
-        forecast: forecast.map((day: any, i: number) => ({
-          day: i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : new Date(day.date).toLocaleDateString('en-US', { weekday: 'short' }),
-          high: parseInt(day.maxtempF),
-          low: parseInt(day.mintempF),
-          condition: day.hourly[4].weatherDesc[0].value
+        temp: Math.round(current.temperature_2m),
+        feels_like: Math.round(current.apparent_temperature),
+        humidity: current.relative_humidity_2m,
+        wind: Math.round(current.wind_speed_10m),
+        condition: weatherInfo.label,
+        conditionCode: current.weather_code,
+        location: LOCATION_NAME,
+        forecast: daily.time.map((date: string, i: number) => ({
+          day: i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : new Date(date).toLocaleDateString('en-US', { weekday: 'short' }),
+          high: Math.round(daily.temperature_2m_max[i]),
+          low: Math.round(daily.temperature_2m_min[i]),
+          conditionCode: daily.weather_code[i]
         }))
       });
       
-      // Cache it
+      // Cache locally
       localStorage.setItem('kam-weather', JSON.stringify({
         data: weather,
-        timestamp: Date.now(),
-        location
+        timestamp: Date.now()
       }));
     } catch (err) {
       console.error('Weather error:', err);
@@ -82,7 +111,7 @@ export function WeatherWidget() {
       const cached = localStorage.getItem('kam-weather');
       if (cached) {
         const { data } = JSON.parse(cached);
-        setWeather(data);
+        if (data) setWeather(data);
       }
     } finally {
       setLoading(false);
@@ -94,7 +123,7 @@ export function WeatherWidget() {
     // Refresh every 30 minutes
     const interval = setInterval(fetchWeather, 30 * 60 * 1000);
     return () => clearInterval(interval);
-  }, [location]);
+  }, []);
 
   if (loading && !weather) {
     return (
@@ -119,6 +148,8 @@ export function WeatherWidget() {
 
   if (!weather) return null;
 
+  const weatherInfo = getWeatherInfo(weather.conditionCode);
+
   return (
     <div className="glass rounded-xl p-4">
       {/* Header */}
@@ -139,7 +170,7 @@ export function WeatherWidget() {
       {/* Current weather */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
-          {getWeatherIcon(weather.condition)}
+          {weatherInfo.icon}
           <div>
             <div className="text-4xl font-bold text-white">{weather.temp}°</div>
             <div className="text-sm text-gray-400">{weather.condition}</div>
@@ -167,7 +198,7 @@ export function WeatherWidget() {
             <div key={i} className="text-center">
               <div className="text-xs text-gray-500 mb-1">{day.day}</div>
               <div className="flex justify-center mb-1">
-                {getForecastIcon(day.condition, 'w-4 h-4')}
+                {getSmallIcon(day.conditionCode)}
               </div>
               <div className="text-sm">
                 <span className="text-white font-medium">{day.high}°</span>

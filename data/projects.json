@@ -5,6 +5,7 @@
       "name": "FieldSync",
       "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",
       "status": "active",
+      "progress": 55,
       "color": "#00ff88",
       "lastUpdated": "2026-01-26T23:50:00Z",
       "lastWorkedOn": "Fixed address parser (rejects false positives like '95 Phone'), added scan guidance tip for landscape mode, fixing camera button layout",
@@ -27,6 +28,7 @@
       "name": "AVA Type 1 App",
       "description": "iOS simulation game teaching T1D management - gamified diabetes education for kids ages 5-18",
       "status": "active",
+      "progress": 80,
       "color": "#00d4ff",
       "lastUpdated": "2026-01-20T00:00:00Z",
       "lastWorkedOn": "Physiological modeling, achievement systems, 60x accelerated mode",
@@ -46,6 +48,7 @@
       "name": "AvaDrive",
       "description": "Driving safety display - real-time CGM data mirrored to external ESP32 display for diabetics while driving",
       "status": "active",
+      "progress": 35,
       "color": "#ff0080",
       "lastUpdated": "2026-01-26T00:00:00Z",
       "lastWorkedOn": "Dexcom Sandbox API integration, iPhone app fetching CGM data",
@@ -65,6 +68,7 @@
       "name": "AVA Companion",
       "description": "Physical plush toy with ESP32-C6 display showing simulated glucose - pairs with AVA Type 1 app via BLE",
       "status": "paused",
+      "progress": 25,
       "color": "#bf00ff",
       "lastUpdated": "2026-01-15T00:00:00Z",
       "lastWorkedOn": "ESP32-C6 BLE communication, Waveshare display integration, enclosure design",
@@ -82,6 +86,7 @@
       "name": "AVA Heart",
       "description": "Standalone glucose display device for home - shows real CGM data on dedicated display",
       "status": "idea",
+      "progress": 10,
       "color": "#ffc800",
       "lastUpdated": "2026-01-10T00:00:00Z",
       "lastWorkedOn": "Concept design, hardware selection",
@@ -96,20 +101,23 @@
       "name": "Command Center",
       "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
       "status": "active",
+      "progress": 70,
       "color": "#00ff88",
-      "lastUpdated": "2026-01-26T23:50:00Z",
-      "lastWorkedOn": "Deployed Telegram relay worker, chat panel live and connected",
+      "lastUpdated": "2026-01-27T18:00:00Z",
+      "lastWorkedOn": "Added Weather widget and Quick Links panel",
       "todos": [
         { "id": "1", "text": "Implement GitHub-based data sync", "done": true },
         { "id": "2", "text": "Add embedded Claude chat interface", "done": true },
         { "id": "3", "text": "Deploy Telegram relay worker", "done": true },
         { "id": "4", "text": "Real-time updates when AI makes changes", "done": true },
-        { "id": "5", "text": "Auto-update dashboard after every conversation", "done": false }
+        { "id": "5", "text": "Weather widget", "done": true },
+        { "id": "6", "text": "Quick Links panel", "done": true },
+        { "id": "7", "text": "Auto-update dashboard after every conversation", "done": false }
       ],
       "changelog": [
+        { "date": "2026-01-27", "summary": "Added Weather widget (Open-Meteo API, Fort White FL) and Quick Links panel with editable bookmarks." },
         { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic, neon accents, glass effects. Project cards, detail views, todo lists, ideas hub." },
-        { "date": "2026-01-26", "summary": "Added embedded Claude chat panel with floating button. Created Cloudflare Worker for Telegram relay. Auto-refresh after messages. GitHub-based data sync complete." },
-        { "date": "2026-01-26", "summary": "Kam deployed the Telegram relay worker to Cloudflare. Chat panel now fully connected - messages route through to Claude via Telegram." }
+        { "date": "2026-01-26", "summary": "Added embedded Claude chat panel with floating button. Created Cloudflare Worker for Telegram relay. Auto-refresh after messages. GitHub-based data sync complete." }
       ],
       "repoUrl": "https://github.com/ava-type1/command-center",
       "liveUrl": "https://command-center-2nk.pages.dev"
@@ -119,6 +127,7 @@
       "name": "DiabetesData.io",
       "description": "🩸 Unified CGM Data API - B2B SaaS providing single API for all CGM systems (Dexcom, Libre, Medtronic). Revenue model: $0-$299/month tiers.",
       "status": "active",
+      "progress": 40,
       "color": "#ff3366",
       "lastUpdated": "2026-01-27T08:00:00Z",
       "lastWorkedOn": "NIGHTLY INNOVATION: Built complete API service from scratch! Cloudflare Workers deployment, client libraries, business plan, $300K ARR potential",
@@ -135,13 +144,7 @@
         { "date": "2026-01-27", "summary": "🌙 NIGHTLY INNOVATION SESSION: Built entire DiabetesData.io from scratch! Unified CGM API service with Cloudflare Workers, complete documentation site, client libraries (JS/Python/Swift), business plan projecting $300K ARR by Year 3. Addresses major market gap - fragmented CGM APIs. Ready for production deployment and customer acquisition." }
       ],
       "repoUrl": "https://github.com/ava-type1/diabetesdata-io",
-      "liveUrl": "https://api.diabetesdata.io (pending deployment)",
-      "keyMetrics": {
-        "targetMarket": "2000+ diabetes app developers",
-        "revenueProjection": "$300K ARR by Year 3",
-        "pricingTiers": "Free → $29 → $99 → $299/month",
-        "competitiveAdvantage": "First unified CGM API service"
-      }
+      "liveUrl": "https://api.diabetesdata.io (pending deployment)"
     }
   ]
 }

@@ -16,7 +16,6 @@ const statusLabels = {
 export function ProjectCard({ project, onClick }: ProjectCardProps) {
   const completedTodos = project.todos.filter(t => t.done).length;
   const totalTodos = project.todos.length;
-  const progress = totalTodos > 0 ? (completedTodos / totalTodos) * 100 : 0;
 
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
@@ -66,25 +65,33 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
         <p className="text-sm text-gray-300 line-clamp-1">{project.lastWorkedOn}</p>
       </div>
 
-      {/* Progress bar */}
-      {totalTodos > 0 && (
-        <div className="mb-4">
-          <div className="flex justify-between text-xs text-gray-500 mb-1">
-            <span>Progress</span>
-            <span>{completedTodos}/{totalTodos} tasks</span>
-          </div>
-          <div className="h-1.5 bg-dark-600 rounded-full overflow-hidden">
-            <div
-              className="h-full rounded-full transition-all duration-500"
-              style={{
-                width: `${progress}%`,
-                background: `linear-gradient(90deg, ${project.color}, ${project.color}80)`,
-                boxShadow: `0 0 10px ${project.color}40`,
-              }}
-            />
-          </div>
+      {/* Overall Progress bar */}
+      <div className="mb-4">
+        <div className="flex justify-between text-xs mb-1.5">
+          <span className="text-gray-500">Overall Progress</span>
+          <span 
+            className="font-semibold"
+            style={{ color: project.color }}
+          >
+            {project.progress ?? 0}%
+          </span>
         </div>
-      )}
+        <div className="h-2 bg-dark-600 rounded-full overflow-hidden">
+          <div
+            className="h-full rounded-full transition-all duration-500"
+            style={{
+              width: `${project.progress ?? 0}%`,
+              background: `linear-gradient(90deg, ${project.color}, ${project.color}80)`,
+              boxShadow: `0 0 10px ${project.color}40`,
+            }}
+          />
+        </div>
+        {totalTodos > 0 && (
+          <div className="text-xs text-gray-500 mt-1">
+            {completedTodos}/{totalTodos} tasks done
+          </div>
+        )}
+      </div>
 
       {/* Footer */}
       <div className="flex items-center justify-between pt-3 border-t border-white/5">

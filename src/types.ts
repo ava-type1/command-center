@@ -14,6 +14,7 @@ export interface Project {
   name: string;
   description: string;
   status: 'active' | 'paused' | 'completed' | 'idea';
+  progress: number; // 0-100 overall completion percentage
   color: string;
   lastUpdated: string;
   lastWorkedOn: string;

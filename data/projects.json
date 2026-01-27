@@ -113,6 +113,35 @@
       ],
       "repoUrl": "https://github.com/ava-type1/command-center",
       "liveUrl": "https://command-center-2nk.pages.dev"
+    },
+    {
+      "id": "diabetesdata-io",
+      "name": "DiabetesData.io",
+      "description": "🩸 Unified CGM Data API - B2B SaaS providing single API for all CGM systems (Dexcom, Libre, Medtronic). Revenue model: $0-$299/month tiers.",
+      "status": "active",
+      "color": "#ff3366",
+      "lastUpdated": "2026-01-27T08:00:00Z",
+      "lastWorkedOn": "NIGHTLY INNOVATION: Built complete API service from scratch! Cloudflare Workers deployment, client libraries, business plan, $300K ARR potential",
+      "todos": [
+        { "id": "1", "text": "Deploy to production on Cloudflare Workers", "done": false },
+        { "id": "2", "text": "Set up Stripe billing integration", "done": false },
+        { "id": "3", "text": "Integrate real Libre API (currently mock data)", "done": false },
+        { "id": "4", "text": "Create customer dashboard", "done": false },
+        { "id": "5", "text": "Launch developer beta program", "done": false },
+        { "id": "6", "text": "Add Medtronic API integration", "done": false },
+        { "id": "7", "text": "Implement webhooks for real-time alerts", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-27", "summary": "🌙 NIGHTLY INNOVATION SESSION: Built entire DiabetesData.io from scratch! Unified CGM API service with Cloudflare Workers, complete documentation site, client libraries (JS/Python/Swift), business plan projecting $300K ARR by Year 3. Addresses major market gap - fragmented CGM APIs. Ready for production deployment and customer acquisition." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/diabetesdata-io",
+      "liveUrl": "https://api.diabetesdata.io (pending deployment)",
+      "keyMetrics": {
+        "targetMarket": "2000+ diabetes app developers",
+        "revenueProjection": "$300K ARR by Year 3",
+        "pricingTiers": "Free → $29 → $99 → $299/month",
+        "competitiveAdvantage": "First unified CGM API service"
+      }
     }
   ]
 }

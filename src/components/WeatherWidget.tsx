@@ -55,10 +55,10 @@ const getSmallIcon = (code: number) => {
   return <Cloud className="w-4 h-4 text-gray-400" />;
 };
 
-// Jacksonville, FL coordinates
-const LAT = 30.3322;
-const LON = -81.6557;
-const LOCATION_NAME = 'Jacksonville, FL';
+// Fort White, FL 32038 coordinates
+const LAT = 29.92329;
+const LON = -82.71373;
+const LOCATION_NAME = 'Fort White, FL';
 
 export function WeatherWidget() {
   const [weather, setWeather] = useState<WeatherData | null>(null);

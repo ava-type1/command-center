@@ -1,11 +1,11 @@
-import { useState, useRef, useEffect } from 'react';
-import { Send, Bot, Loader2, X, Sparkles } from 'lucide-react';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { Send, Bot, Loader2, X, Sparkles, RefreshCw } from 'lucide-react';
 
 interface Message {
   id: string;
-  role: 'user' | 'assistant' | 'system';
+  role: 'user' | 'assistant';
   content: string;
-  timestamp: Date;
+  created_at: string;
 }
 
 interface AIChatPanelProps {
@@ -14,22 +14,51 @@ interface AIChatPanelProps {
   onRefresh: () => void;
 }
 
-// Worker URL - you'll deploy this to Cloudflare Workers
 const WORKER_URL = 'https://command-center-chat.5wwncts568.workers.dev';
 
 export function AIChatPanel({ isOpen, onClose, onRefresh }: AIChatPanelProps) {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      role: 'system',
-      content: "I'm connected to Claude via Telegram. Send a message and I'll update your dashboard!",
-      timestamp: new Date(),
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
+  const [loading, setLoading] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const pollIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Fetch messages from Supabase via worker
+  const fetchMessages = useCallback(async () => {
+    try {
+      const res = await fetch(`${WORKER_URL}/messages`);
+      if (res.ok) {
+        const data = await res.json();
+        setMessages(data);
+      }
+    } catch (err) {
+      console.error('Failed to fetch messages:', err);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  // Start polling when panel opens
+  useEffect(() => {
+    if (isOpen) {
+      fetchMessages();
+      // Poll every 3 seconds for new messages
+      pollIntervalRef.current = setInterval(fetchMessages, 3000);
+    } else {
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current);
+        pollIntervalRef.current = null;
+      }
+    }
+    return () => {
+      if (pollIntervalRef.current) {
+        clearInterval(pollIntervalRef.current);
+      }
+    };
+  }, [isOpen, fetchMessages]);
+
+  // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
@@ -37,58 +66,42 @@ export function AIChatPanel({ isOpen, onClose, onRefresh }: AIChatPanelProps) {
   const sendMessage = async () => {
     if (!input.trim() || sending) return;
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      role: 'user',
-      content: input.trim(),
-      timestamp: new Date(),
-    };
-
-    setMessages(prev => [...prev, userMessage]);
+    const content = input.trim();
     setInput('');
     setSending(true);
 
+    // Optimistically add message
+    const tempMessage: Message = {
+      id: `temp-${Date.now()}`,
+      role: 'user',
+      content,
+      created_at: new Date().toISOString(),
+    };
+    setMessages(prev => [...prev, tempMessage]);
+
     try {
-      const response = await fetch(WORKER_URL, {
+      const res = await fetch(`${WORKER_URL}/message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          message: `[Dashboard] ${userMessage.content}`,
-          source: 'command-center'
-        }),
+        body: JSON.stringify({ message: content }),
       });
 
-      if (response.ok) {
-        setMessages(prev => [
-          ...prev,
-          {
-            id: (Date.now() + 1).toString(),
-            role: 'assistant',
-            content: "Message sent! I'll update the dashboard shortly. Hit refresh in ~30 seconds to see changes.",
-            timestamp: new Date(),
-          },
-        ]);
-        
-        // Auto-refresh after 30 seconds
-        setTimeout(() => {
-          onRefresh();
-        }, 30000);
-      } else {
-        throw new Error('Failed to send');
-      }
+      if (!res.ok) throw new Error('Failed to send');
+      
+      // Fetch fresh messages
+      await fetchMessages();
     } catch (err) {
-      setMessages(prev => [
-        ...prev,
-        {
-          id: (Date.now() + 1).toString(),
-          role: 'system',
-          content: "Couldn't reach Claude. Try Telegram directly: @Avatype1bot",
-          timestamp: new Date(),
-        },
-      ]);
+      console.error('Send error:', err);
+      // Remove optimistic message on error
+      setMessages(prev => prev.filter(m => m.id !== tempMessage.id));
     } finally {
       setSending(false);
     }
+  };
+
+  const formatTime = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
   if (!isOpen) return null;
@@ -104,40 +117,62 @@ export function AIChatPanel({ isOpen, onClose, onRefresh }: AIChatPanelProps) {
             </div>
             <div>
               <h3 className="font-semibold text-white">Claude</h3>
-              <p className="text-xs text-gray-400">Your AI assistant</p>
+              <p className="text-xs text-gray-400 flex items-center gap-1">
+                <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
+                Live chat
+              </p>
             </div>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-lg hover:bg-white/5 transition-colors"
-          >
-            <X className="w-5 h-5 text-gray-400" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={fetchMessages}
+              className="p-2 rounded-lg hover:bg-white/5 transition-colors"
+              title="Refresh"
+            >
+              <RefreshCw className="w-4 h-4 text-gray-400" />
+            </button>
+            <button
+              onClick={onClose}
+              className="p-2 rounded-lg hover:bg-white/5 transition-colors"
+            >
+              <X className="w-5 h-5 text-gray-400" />
+            </button>
+          </div>
         </div>
 
         {/* Messages */}
         <div className="h-80 overflow-y-auto p-4 space-y-4">
-          {messages.map(msg => (
-            <div
-              key={msg.id}
-              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-[80%] rounded-2xl px-4 py-2 ${
-                  msg.role === 'user'
-                    ? 'bg-neon-green/20 text-neon-green border border-neon-green/30'
-                    : msg.role === 'assistant'
-                    ? 'bg-neon-cyan/10 text-gray-200 border border-neon-cyan/20'
-                    : 'bg-dark-600 text-gray-400 border border-white/5'
-                }`}
-              >
-                <p className="text-sm">{msg.content}</p>
-                <p className="text-xs opacity-50 mt-1">
-                  {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                </p>
-              </div>
+          {loading ? (
+            <div className="flex items-center justify-center h-full">
+              <Loader2 className="w-6 h-6 animate-spin text-neon-green" />
             </div>
-          ))}
+          ) : messages.length === 0 ? (
+            <div className="text-center text-gray-500 py-8">
+              <Bot className="w-12 h-12 mx-auto mb-3 opacity-50" />
+              <p>No messages yet.</p>
+              <p className="text-sm">Start a conversation!</p>
+            </div>
+          ) : (
+            messages.map(msg => (
+              <div
+                key={msg.id}
+                className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`max-w-[85%] rounded-2xl px-4 py-2 ${
+                    msg.role === 'user'
+                      ? 'bg-neon-green/20 text-neon-green border border-neon-green/30'
+                      : 'bg-neon-cyan/10 text-gray-200 border border-neon-cyan/20'
+                  }`}
+                >
+                  <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                  <p className="text-xs opacity-50 mt-1">
+                    {formatTime(msg.created_at)}
+                  </p>
+                </div>
+              </div>
+            ))
+          )}
           <div ref={messagesEndRef} />
         </div>
 
@@ -148,8 +183,8 @@ export function AIChatPanel({ isOpen, onClose, onRefresh }: AIChatPanelProps) {
               type="text"
               value={input}
               onChange={e => setInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && sendMessage()}
-              placeholder="Ask Claude to update the dashboard..."
+              onKeyDown={e => e.key === 'Enter' && !e.shiftKey && sendMessage()}
+              placeholder="Type a message..."
               className="flex-1 bg-dark-700 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-neon-green/50 transition-colors"
               disabled={sending}
             />
@@ -166,7 +201,7 @@ export function AIChatPanel({ isOpen, onClose, onRefresh }: AIChatPanelProps) {
             </button>
           </div>
           <p className="text-xs text-gray-500 mt-2 text-center">
-            Messages go to Claude via Telegram • Changes sync automatically
+            Messages sync in real-time • Claude responds via this chat
           </p>
         </div>
       </div>

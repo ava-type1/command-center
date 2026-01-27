@@ -1,0 +1,63 @@
+{
+  "lastUpdated": "2026-01-27T07:00:00Z",
+  "items": [
+    {
+      "id": "1",
+      "title": "Claude 3.5 Opus Released with Extended Thinking",
+      "summary": "Anthropic released Claude 3.5 Opus with built-in extended thinking capabilities, allowing for deeper reasoning on complex tasks without manual prompting.",
+      "url": "https://anthropic.com",
+      "category": "claude",
+      "source": "Anthropic",
+      "date": "2026-01-26",
+      "relevance": "Use 'thinking: high' in your cron jobs for complex analysis tasks"
+    },
+    {
+      "id": "2",
+      "title": "Dexcom G8 Announced - 30-Day Sensor Life",
+      "summary": "Dexcom announces the G8 CGM system featuring 30-day wear time, improved accuracy, and smaller form factor. Expected release Q3 2026.",
+      "category": "diabetes",
+      "source": "Dexcom Press Release",
+      "date": "2026-01-25",
+      "relevance": "Longer sensor life = fewer API auth refreshes needed for AvaDrive"
+    },
+    {
+      "id": "3",
+      "title": "Cursor AI IDE Adds Claude Code Integration",
+      "summary": "Cursor now supports direct Claude Code integration, allowing developers to use Claude's coding capabilities within the Cursor editor with full context awareness.",
+      "url": "https://cursor.sh",
+      "category": "tools",
+      "source": "Cursor Blog",
+      "date": "2026-01-24",
+      "relevance": "Could streamline your iOS development workflow for AVA apps"
+    },
+    {
+      "id": "4",
+      "title": "OpenAI Releases GPT-5 Preview",
+      "summary": "GPT-5 preview released with 1M token context window and improved reasoning. Benchmark shows 40% improvement on coding tasks.",
+      "category": "ai",
+      "source": "OpenAI",
+      "date": "2026-01-23",
+      "relevance": "Competition driving innovation - Claude features improving in response"
+    },
+    {
+      "id": "5",
+      "title": "Loop 3.4 Released - New Automatic Bolus Features",
+      "summary": "DIY Loop algorithm updated with smarter automatic bolus delivery and improved Omnipod 5 compatibility.",
+      "url": "https://loopkit.github.io/loopdocs/",
+      "category": "diabetes",
+      "source": "LoopDocs",
+      "date": "2026-01-22",
+      "relevance": "Potential integration point for AVA ecosystem education features"
+    },
+    {
+      "id": "6",
+      "title": "Cloudflare Workers AI Now Supports Claude",
+      "summary": "Cloudflare adds Claude models to Workers AI, enabling serverless Claude inference at the edge with pay-per-request pricing.",
+      "url": "https://developers.cloudflare.com/workers-ai/",
+      "category": "tools",
+      "source": "Cloudflare Blog",
+      "date": "2026-01-21",
+      "relevance": "Could reduce costs for DiabetesData.io API by using edge inference"
+    }
+  ]
+}

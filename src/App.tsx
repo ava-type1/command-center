@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ProjectCard } from './components/ProjectCard';
 import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
+import { NewsFeed } from './components/NewsFeed';
 import { Header } from './components/Header';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2 } from 'lucide-react';
@@ -11,12 +12,26 @@ import type { Project, Idea } from './types';
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
 const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
 const IDEAS_URL = `${GITHUB_BASE}/ideas.json`;
+const NEWS_URL = `${GITHUB_BASE}/news.json`;
+
+interface NewsItem {
+  id: string;
+  title: string;
+  summary: string;
+  url?: string;
+  category: 'ai' | 'diabetes' | 'claude' | 'tools';
+  source: string;
+  date: string;
+  relevance?: string;
+}
 
 function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [newsLastUpdated, setNewsLastUpdated] = useState<string | undefined>();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [view, setView] = useState<'dashboard' | 'ideas'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'ideas' | 'news'>('dashboard');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastSync, setLastSync] = useState<Date | null>(null);
@@ -29,9 +44,10 @@ function App() {
     
     try {
       // Try GitHub first
-      const [projectsRes, ideasRes] = await Promise.all([
+      const [projectsRes, ideasRes, newsRes] = await Promise.all([
         fetch(PROJECTS_URL + '?t=' + Date.now()), // Cache bust
         fetch(IDEAS_URL + '?t=' + Date.now()),
+        fetch(NEWS_URL + '?t=' + Date.now()),
       ]);
 
       if (projectsRes.ok && ideasRes.ok) {
@@ -49,12 +65,21 @@ function App() {
       } else {
         throw new Error('Failed to fetch from GitHub');
       }
+
+      // News is optional - don't fail if it doesn't exist
+      if (newsRes.ok) {
+        const newsData = await newsRes.json();
+        setNews(newsData.items || []);
+        setNewsLastUpdated(newsData.lastUpdated);
+        localStorage.setItem('kam-news', JSON.stringify(newsData));
+      }
     } catch (err) {
       console.warn('GitHub fetch failed, using local cache:', err);
       
       // Fallback to localStorage
       const cachedProjects = localStorage.getItem('kam-projects');
       const cachedIdeas = localStorage.getItem('kam-ideas');
+      const cachedNews = localStorage.getItem('kam-news');
       const cachedSync = localStorage.getItem('kam-last-sync');
       
       if (cachedProjects) {
@@ -62,6 +87,11 @@ function App() {
       }
       if (cachedIdeas) {
         setIdeas(JSON.parse(cachedIdeas));
+      }
+      if (cachedNews) {
+        const newsData = JSON.parse(cachedNews);
+        setNews(newsData.items || []);
+        setNewsLastUpdated(newsData.lastUpdated);
       }
       if (cachedSync) {
         setLastSync(new Date(cachedSync));
@@ -184,6 +214,8 @@ function App() {
               ))}
             </div>
           </>
+        ) : view === 'news' ? (
+          <NewsFeed news={news} lastUpdated={newsLastUpdated} />
         ) : (
           <IdeasHub ideas={ideas} onUpdate={updateIdeas} />
         )}
@@ -194,7 +226,6 @@ function App() {
       <AIChatPanel 
         isOpen={chatOpen} 
         onClose={() => setChatOpen(false)} 
-        onRefresh={loadData}
       />
     </div>
   );

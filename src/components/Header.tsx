@@ -1,8 +1,8 @@
-import { LayoutDashboard, Lightbulb, Zap } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, Zap, Newspaper } from 'lucide-react';
 
 interface HeaderProps {
-  view: 'dashboard' | 'ideas';
-  onViewChange: (view: 'dashboard' | 'ideas') => void;
+  view: 'dashboard' | 'ideas' | 'news';
+  onViewChange: (view: 'dashboard' | 'ideas' | 'news') => void;
 }
 
 export function Header({ view, onViewChange }: HeaderProps) {
@@ -32,7 +32,18 @@ export function Header({ view, onViewChange }: HeaderProps) {
               }`}
             >
               <LayoutDashboard className="w-4 h-4" />
-              <span className="hidden sm:inline">Dashboard</span>
+              <span className="hidden sm:inline">Projects</span>
+            </button>
+            <button
+              onClick={() => onViewChange('news')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                view === 'news'
+                  ? 'bg-dark-500 text-neon-cyan shadow-neon-cyan/20 shadow-lg'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              <Newspaper className="w-4 h-4" />
+              <span className="hidden sm:inline">News</span>
             </button>
             <button
               onClick={() => onViewChange('ideas')}
@@ -43,7 +54,7 @@ export function Header({ view, onViewChange }: HeaderProps) {
               }`}
             >
               <Lightbulb className="w-4 h-4" />
-              <span className="hidden sm:inline">Ideas Hub</span>
+              <span className="hidden sm:inline">Ideas</span>
             </button>
           </nav>
         </div>

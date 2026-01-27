@@ -75,8 +75,8 @@ export default {
           body: JSON.stringify({ role: 'user', content: message }),
         });
 
-        // Forward to Telegram
-        const telegramMessage = `🖥️ *Command Center*\n\n${message}`;
+        // Forward to Telegram - format clearly shows this is FROM KAM needing a response
+        const telegramMessage = `📩 *KAM FROM DASHBOARD* (respond via dashboard!):\n\n${message}`;
         await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

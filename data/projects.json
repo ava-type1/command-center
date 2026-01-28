@@ -64,6 +64,30 @@
       "repoUrl": "https://github.com/ava-type1/ava-drive"
     },
     {
+      "id": "pulse-game",
+      "name": "PULSE",
+      "description": "One-button arcade game - your circle pulses, tap to lock size, fit through gates. Simple, addictive, Flappy Bird energy.",
+      "status": "active",
+      "progress": 60,
+      "color": "#00ff88",
+      "lastUpdated": "2026-01-28T05:10:00Z",
+      "lastWorkedOn": "Built initial game, fixed gate alignment bug",
+      "todos": [
+        { "id": "1", "text": "Core game loop", "done": true },
+        { "id": "2", "text": "Scoring and combos", "done": true },
+        { "id": "3", "text": "High score persistence", "done": true },
+        { "id": "4", "text": "Fix gate positioning", "done": true },
+        { "id": "5", "text": "Sound effects", "done": false },
+        { "id": "6", "text": "Mobile optimization", "done": false },
+        { "id": "7", "text": "Leaderboards", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-28", "summary": "Built PULSE from scratch - one button timing game. Player circle pulses, tap to lock size, squeeze through gates. Combo system, difficulty scaling, deployed to GitHub Pages." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/pulse-game",
+      "liveUrl": "https://ava-type1.github.io/pulse-game/"
+    },
+    {
       "id": "ava-companion",
       "name": "AVA Companion",
       "description": "Physical plush toy with ESP32-C6 display showing simulated glucose - pairs with AVA Type 1 app via BLE",
@@ -101,10 +125,10 @@
       "name": "Command Center",
       "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
       "status": "active",
-      "progress": 70,
+      "progress": 75,
       "color": "#00ff88",
-      "lastUpdated": "2026-01-27T18:00:00Z",
-      "lastWorkedOn": "Added Weather widget and Quick Links panel",
+      "lastUpdated": "2026-01-28T05:00:00Z",
+      "lastWorkedOn": "Added project progress bars with completion percentages",
       "todos": [
         { "id": "1", "text": "Implement GitHub-based data sync", "done": true },
         { "id": "2", "text": "Add embedded Claude chat interface", "done": true },
@@ -112,12 +136,12 @@
         { "id": "4", "text": "Real-time updates when AI makes changes", "done": true },
         { "id": "5", "text": "Weather widget", "done": true },
         { "id": "6", "text": "Quick Links panel", "done": true },
-        { "id": "7", "text": "Auto-update dashboard after every conversation", "done": false }
+        { "id": "7", "text": "Project progress bars", "done": true },
+        { "id": "8", "text": "Auto-update dashboard after every conversation", "done": false }
       ],
       "changelog": [
-        { "date": "2026-01-27", "summary": "Added Weather widget (Open-Meteo API, Fort White FL) and Quick Links panel with editable bookmarks." },
-        { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic, neon accents, glass effects. Project cards, detail views, todo lists, ideas hub." },
-        { "date": "2026-01-26", "summary": "Added embedded Claude chat panel with floating button. Created Cloudflare Worker for Telegram relay. Auto-refresh after messages. GitHub-based data sync complete." }
+        { "date": "2026-01-27", "summary": "Added project progress bars with completion percentages. Weather widget (Fort White FL). Quick Links panel." },
+        { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic. Added Claude chat panel with Telegram relay." }
       ],
       "repoUrl": "https://github.com/ava-type1/command-center",
       "liveUrl": "https://command-center-2nk.pages.dev"
@@ -125,26 +149,18 @@
     {
       "id": "diabetesdata-io",
       "name": "DiabetesData.io",
-      "description": "🩸 Unified CGM Data API - B2B SaaS providing single API for all CGM systems (Dexcom, Libre, Medtronic). Revenue model: $0-$299/month tiers.",
-      "status": "active",
+      "description": "Unified CGM Data API concept - shelved due to manufacturer API restrictions preventing resale",
+      "status": "paused",
       "progress": 40,
       "color": "#ff3366",
-      "lastUpdated": "2026-01-27T08:00:00Z",
-      "lastWorkedOn": "NIGHTLY INNOVATION: Built complete API service from scratch! Cloudflare Workers deployment, client libraries, business plan, $300K ARR potential",
-      "todos": [
-        { "id": "1", "text": "Deploy to production on Cloudflare Workers", "done": false },
-        { "id": "2", "text": "Set up Stripe billing integration", "done": false },
-        { "id": "3", "text": "Integrate real Libre API (currently mock data)", "done": false },
-        { "id": "4", "text": "Create customer dashboard", "done": false },
-        { "id": "5", "text": "Launch developer beta program", "done": false },
-        { "id": "6", "text": "Add Medtronic API integration", "done": false },
-        { "id": "7", "text": "Implement webhooks for real-time alerts", "done": false }
-      ],
+      "lastUpdated": "2026-01-28T04:00:00Z",
+      "lastWorkedOn": "Shelved - CGM manufacturers prohibit API reselling. Pivoting to personal health hub concept instead.",
+      "todos": [],
       "changelog": [
-        { "date": "2026-01-27", "summary": "🌙 NIGHTLY INNOVATION SESSION: Built entire DiabetesData.io from scratch! Unified CGM API service with Cloudflare Workers, complete documentation site, client libraries (JS/Python/Swift), business plan projecting $300K ARR by Year 3. Addresses major market gap - fragmented CGM APIs. Ready for production deployment and customer acquisition." }
+        { "date": "2026-01-28", "summary": "SHELVED: Dexcom, Abbott, Medtronic all prohibit redistribution of API data. B2B SaaS model not viable. Concept may pivot to personal-use health data aggregator." },
+        { "date": "2026-01-27", "summary": "Built initial API service with Cloudflare Workers, client libraries, business plan." }
       ],
-      "repoUrl": "https://github.com/ava-type1/diabetesdata-io",
-      "liveUrl": "https://api.diabetesdata.io (pending deployment)"
+      "repoUrl": "https://github.com/ava-type1/diabetesdata-io"
     }
   ]
 }

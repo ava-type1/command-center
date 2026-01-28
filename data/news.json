@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-27T07:00:00Z",
+  "lastUpdated": "2026-01-28T12:00:00Z",
   "items": [
     {
       "id": "1",
@@ -58,6 +58,56 @@
       "source": "Cloudflare Blog",
       "date": "2026-01-21",
       "relevance": "Could reduce costs for DiabetesData.io API by using edge inference"
+    },
+    {
+      "id": "7",
+      "title": "OpenAI Launches Prism - AI-Native Scientific Workspace",
+      "summary": "OpenAI introduces Prism, a free cloud-based LaTeX workspace for scientific writing powered by GPT-5.2, integrating AI directly into research workflows.",
+      "url": "https://openai.com/index/introducing-prism/",
+      "category": "ai",
+      "source": "OpenAI",
+      "date": "2026-01-28",
+      "relevance": "Could inspire AI-integrated documentation for AVA project, especially technical papers"
+    },
+    {
+      "id": "8", 
+      "title": "ASML Announces 1700 Position Reduction",
+      "summary": "ASML plans workforce reduction focusing on engineering optimization. Stock implications for tech sector and supply chain impacts.",
+      "url": "https://www.asml.com/en/news/press-releases/2026/strengthening-focus-on-engineering-and-innovation",
+      "category": "tools",
+      "source": "ASML Press Release", 
+      "date": "2026-01-28",
+      "relevance": "Tech industry layoffs may affect hiring market for iOS developers, potential opportunity"
+    },
+    {
+      "id": "9",
+      "title": "SVG Path Editor - Open Source Tool Trending",
+      "summary": "Interactive browser-based SVG path editor gaining popularity on HN. Useful for creating custom icons and graphics without design software.",
+      "url": "https://yqnn.github.io/svg-path-editor/",
+      "category": "tools",
+      "source": "Hacker News",
+      "date": "2026-01-28", 
+      "relevance": "Perfect for creating custom icons for AVA app UI and companion device displays"
+    },
+    {
+      "id": "10",
+      "title": "WhatsApp Adopts Rust for Security at Scale",
+      "summary": "Facebook Engineering shares how Rust is being used to add security layers to WhatsApp, demonstrating real-world systems programming.",
+      "url": "https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/",
+      "category": "tools",
+      "source": "Facebook Engineering",
+      "date": "2026-01-27",
+      "relevance": "Security patterns applicable to ESP32-C6 firmware development for AVA devices"
+    },
+    {
+      "id": "11",
+      "title": "Claude Opus 4.5 - Best Model for Coding and Agents",
+      "summary": "Latest Claude model delivers frontier performance with dramatically improved token efficiency, especially for coding tasks and computer use.",
+      "url": "https://www.anthropic.com/news",
+      "category": "claude", 
+      "source": "Anthropic",
+      "date": "2026-01-28",
+      "relevance": "You're running on this model - expect better iOS development assistance and more efficient conversations"
     }
   ]
 }

@@ -161,6 +161,28 @@
         { "date": "2026-01-27", "summary": "Built initial API service with Cloudflare Workers, client libraries, business plan." }
       ],
       "repoUrl": "https://github.com/ava-type1/diabetesdata-io"
+    },
+    {
+      "id": "syncfield",
+      "name": "SyncField",
+      "description": "Offline-first field service management for teams working in areas with poor connectivity - PWA that syncs when connected",
+      "status": "active",
+      "progress": 70,
+      "color": "#2563eb",
+      "lastUpdated": "2026-01-28T07:00:00Z",
+      "lastWorkedOn": "Built complete MVP - offline PWA with work orders, photo docs, time tracking, manager dashboard, auto-sync",
+      "todos": [
+        { "id": "1", "text": "GPS tracking (even offline)", "done": false },
+        { "id": "2", "text": "Digital signatures for customer sign-off", "done": false },
+        { "id": "3", "text": "Material tracking and inventory requests", "done": false },
+        { "id": "4", "text": "Route optimization for multiple jobs", "done": false },
+        { "id": "5", "text": "QuickBooks integration API", "done": false },
+        { "id": "6", "text": "Landing page and marketing site", "done": false }
+      ],
+      "changelog": [
+        { "date": "2026-01-28", "summary": "Built complete SyncField MVP in nightly innovation session. Progressive Web App with offline functionality, work order management, photo documentation, time tracking, manager dashboard. Auto-syncs when connectivity restored. Target: $10-30/user/month SaaS for field service teams (construction, utilities, contractors)." }
+      ],
+      "repoUrl": "https://github.com/ava-type1/syncfield"
     }
   ]
 }

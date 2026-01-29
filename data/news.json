@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-28T12:00:00Z",
+  "lastUpdated": "2026-01-29T12:00:00Z",
   "items": [
+    {
+      "id": "12",
+      "title": "Trinity Large: Open 400B Sparse MoE Model Released",
+      "summary": "Arcee AI releases Trinity Large, a 400B parameter sparse mixture-of-experts model with open weights. Free preview available on OpenRouter for limited time.",
+      "url": "https://www.arcee.ai/",
+      "category": "ai",
+      "source": "Arcee AI / Hacker News",
+      "date": "2026-01-29",
+      "relevance": "Large open model could be useful for local inference in AVA ecosystem, especially for educational content generation"
+    },
+    {
+      "id": "13", 
+      "title": "LM Studio 0.4.0 Released - Next Generation Local AI",
+      "summary": "Major update to LM Studio with improved performance, new SDKs (JS/Python), and enhanced local model management. Free for home and work use.",
+      "url": "https://lmstudio.ai",
+      "category": "tools",
+      "source": "LM Studio / Hacker News",
+      "date": "2026-01-29",
+      "relevance": "Perfect for local AI development and testing AVA app features without API costs during development"
+    },
+    {
+      "id": "14",
+      "title": "LLM Traffic Interceptor - Debug AI API Calls in Real-Time",
+      "summary": "Open-source MitM proxy tool by Juan Munoz that intercepts LLM API traffic, visualizes token usage in terminal dashboard, tracks costs and monitors context windows.",
+      "url": "https://github.com/jmuncor",
+      "category": "tools", 
+      "source": "GitHub / Hacker News",
+      "date": "2026-01-29",
+      "relevance": "Essential for debugging Claude Code integration and monitoring API costs during AVA development"
+    },
+    {
+      "id": "15",
+      "title": "Windows App Development CLI (WinApp) Released",
+      "summary": "Microsoft releases WinApp CLI tool for Windows app development, streamlining project setup and deployment workflows.",
+      "url": "https://windows.com",
+      "category": "tools",
+      "source": "Windows Developer Blog / Hacker News", 
+      "date": "2026-01-29",
+      "relevance": "While iOS-focused, CLI patterns could inspire similar tooling for ESP32-C6 development automation"
+    },
+    {
+      "id": "16",
+      "title": "Apple 30% Cut Coming to Patreon iOS Subscriptions",
+      "summary": "Apple expanding App Store payment requirements to Patreon creators in iOS app, taking up to 30% cut from creator subscriptions managed through iOS.",
+      "url": "https://macrumors.com",
+      "category": "tools",
+      "source": "MacRumors / Hacker News",
+      "date": "2026-01-29", 
+      "relevance": "Important for AVA monetization strategy - consider alternative payment flows to avoid Apple's cut"
+    },
     {
       "id": "1",
       "title": "Claude 3.5 Opus Released with Extended Thinking",

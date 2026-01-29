@@ -382,6 +382,76 @@
         }
       ],
       "repoUrl": "https://github.com/ava-type1/syncfield"
+    },
+    {
+      "id": "t1d-benefits-navigator",
+      "name": "T1D Benefits Navigator",
+      "description": "Patient Assistance Program finder for Type 1 Diabetes - comprehensive PWA with 30+ manufacturer and nonprofit programs, eligibility scoring, and application guidance",
+      "status": "active",
+      "progress": 100,
+      "color": "#4c7cf0",
+      "lastUpdated": "2026-01-29T08:00:00Z",
+      "lastWorkedOn": "COMPLETED: Full production-ready PWA with comprehensive PAP database, eligibility scoring algorithm, step-by-step application guidance, PWA functionality, deployed to Cloudflare Pages",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Comprehensive PAP database (30+ programs)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Eligibility scoring algorithm (1-10 scale)",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "User profile form with multi-step wizard",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Program results with filtering and sorting",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Detailed program pages with application guidance",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Document checklists and requirements",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "PWA functionality (installable, offline)",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Dark responsive UI design",
+          "done": true
+        },
+        {
+          "id": "9",
+          "text": "Deploy to Cloudflare Pages",
+          "done": true
+        },
+        {
+          "id": "10",
+          "text": "GitHub repository under ava-type1",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-01-29",
+          "summary": "NIGHTLY BUILD COMPLETE: Built entire T1D Benefits Navigator from scratch. Full production PWA with comprehensive Patient Assistance Program database covering all major insulin/CGM/pump manufacturers plus nonprofits. Smart eligibility scoring, step-by-step application guidance, installable PWA. React + Vite + Tailwind stack. Deployed to Cloudflare Pages with proper PWA configuration."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/t1d-benefits-navigator",
+      "liveUrl": "https://t1d-benefits-navigator.pages.dev"
     }
   ]
 }

@@ -70,6 +70,24 @@
       "potential": "medium",
       "createdAt": "2026-01-26T00:00:00Z",
       "notes": "Industry has no standardized training. First mover could own this space."
+    },
+    {
+      "id": "9",
+      "title": "AVA Home — Matter Smart Bulb CGM Alerts",
+      "description": "Connect CGM glucose data to Matter-compatible smart home devices via Apple HomeKit. Flash lights red for lows, yellow for highs. Visual alerts you can't miss even when phone is in another room. Huge for nighttime lows — bedroom light flashes, harder to sleep through than phone buzzing.",
+      "category": "feature",
+      "potential": "high",
+      "createdAt": "2026-01-29T05:22:00Z",
+      "notes": "HomeKit API is straightforward (difficulty 3/10). Could be a feature of AvaDrive, AVA Heart, or standalone AVA Home module. Reference bulb: OREiN Matter Smart Bulb 4-pack (https://a.co/d/5kKmDSp). Supports Apple Home, Alexa, Google, SmartThings."
+    },
+    {
+      "id": "10",
+      "title": "T1D Benefits Navigator",
+      "description": "App that matches T1D families with patient assistance programs (PAPs) based on income, insurance status, and medication/supply needs. Input info once, see which programs you qualify for, pre-fill applications. Nobody does this well today.",
+      "category": "saas",
+      "potential": "high",
+      "createdAt": "2026-01-29T05:00:00Z",
+      "notes": "Finite list of T1D PAPs (~20-30 programs). Eligibility is mostly income vs FPL thresholds + insurance status — stable criteria. Revenue via premium tier, affiliate fees, or B2B to clinics/employers. Fits AVA brand: education + access. MVP could be built in 1-2 weeks."
     }
   ]
 }

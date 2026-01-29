@@ -10,15 +10,41 @@
       "lastUpdated": "2026-01-26T23:50:00Z",
       "lastWorkedOn": "Fixed address parser (rejects false positives like '95 Phone'), added scan guidance tip for landscape mode, fixing camera button layout",
       "todos": [
-        { "id": "1", "text": "Test sign-out flow after latest fix", "done": false },
-        { "id": "2", "text": "Test onboarding creates organization_members", "done": false },
-        { "id": "3", "text": "Delete test properties and add real data", "done": false },
-        { "id": "4", "text": "Fix camera capture button visibility (in progress)", "done": false },
-        { "id": "5", "text": "Add materials list tracking", "done": false }
+        {
+          "id": "1",
+          "text": "Test sign-out flow after latest fix",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Test onboarding creates organization_members",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Delete test properties and add real data",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Fix camera capture button visibility (in progress)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Add materials list tracking",
+          "done": false
+        }
       ],
       "changelog": [
-        { "date": "2026-01-26", "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages." },
-        { "date": "2026-01-26", "summary": "Evening session: Fixed address parser - now requires 3+ digit street numbers and filters keywords (Phone, Serial, etc) to prevent false matches. Added dismissable scan guidance tip suggesting landscape mode for customer info. Camera button layout fix in progress." }
+        {
+          "date": "2026-01-26",
+          "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages."
+        },
+        {
+          "date": "2026-01-26",
+          "summary": "Evening session: Fixed address parser - now requires 3+ digit street numbers and filters keywords (Phone, Serial, etc) to prevent false matches. Added dismissable scan guidance tip suggesting landscape mode for customer info. Camera button layout fix in progress."
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
       "liveUrl": "https://fieldsyncv2.pages.dev"
@@ -33,13 +59,32 @@
       "lastUpdated": "2026-01-20T00:00:00Z",
       "lastWorkedOn": "Physiological modeling, achievement systems, 60x accelerated mode",
       "todos": [
-        { "id": "1", "text": "Complete sticker collection system", "done": false },
-        { "id": "2", "text": "Finalize 60x accelerated mode", "done": false },
-        { "id": "3", "text": "Beta testing with families", "done": false },
-        { "id": "4", "text": "App Store submission prep", "done": false }
+        {
+          "id": "1",
+          "text": "Complete sticker collection system",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Finalize 60x accelerated mode",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Beta testing with families",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "App Store submission prep",
+          "done": false
+        }
       ],
       "changelog": [
-        { "date": "2026-01-20", "summary": "Approximately 80% complete. Core simulation working with realistic carb absorption and insulin action curves." }
+        {
+          "date": "2026-01-20",
+          "summary": "Approximately 80% complete. Core simulation working with realistic carb absorption and insulin action curves."
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-type1"
     },
@@ -50,16 +95,44 @@
       "status": "active",
       "progress": 88,
       "color": "#ff0080",
-      "lastUpdated": "2026-01-26T00:00:00Z",
-      "lastWorkedOn": "Dexcom Sandbox API integration, iPhone app fetching CGM data",
+      "lastUpdated": "2026-01-29T05:22:00Z",
+      "lastWorkedOn": "Researched Matter smart bulb integration for CGM alerts via HomeKit",
       "todos": [
-        { "id": "1", "text": "Complete Dexcom API integration", "done": true },
-        { "id": "2", "text": "ESP32 BLE display communication", "done": false },
-        { "id": "3", "text": "Design car mount/display enclosure", "done": false },
-        { "id": "4", "text": "Apply for Dexcom production API access", "done": false }
+        {
+          "id": "1",
+          "text": "Complete Dexcom API integration",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "ESP32 BLE display communication",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Design car mount/display enclosure",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Apply for Dexcom production API access",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Matter smart bulb integration — flash lights for low/high BG alerts via HomeKit API",
+          "done": false
+        }
       ],
       "changelog": [
-        { "date": "2026-01-26", "summary": "Dexcom Sandbox API working. Closest to production-ready in AVA ecosystem." }
+        {
+          "date": "2026-01-26",
+          "summary": "Dexcom Sandbox API working. Closest to production-ready in AVA ecosystem."
+        },
+        {
+          "date": "2026-01-29",
+          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI — difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-drive"
     },
@@ -73,16 +146,47 @@
       "lastUpdated": "2026-01-28T05:10:00Z",
       "lastWorkedOn": "Built initial game, fixed gate alignment bug",
       "todos": [
-        { "id": "1", "text": "Core game loop", "done": true },
-        { "id": "2", "text": "Scoring and combos", "done": true },
-        { "id": "3", "text": "High score persistence", "done": true },
-        { "id": "4", "text": "Fix gate positioning", "done": true },
-        { "id": "5", "text": "Sound effects", "done": false },
-        { "id": "6", "text": "Mobile optimization", "done": false },
-        { "id": "7", "text": "Leaderboards", "done": false }
+        {
+          "id": "1",
+          "text": "Core game loop",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Scoring and combos",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "High score persistence",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Fix gate positioning",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Sound effects",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Mobile optimization",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Leaderboards",
+          "done": false
+        }
       ],
       "changelog": [
-        { "date": "2026-01-28", "summary": "Built PULSE from scratch - one button timing game. Player circle pulses, tap to lock size, squeeze through gates. Combo system, difficulty scaling, deployed to GitHub Pages." }
+        {
+          "date": "2026-01-28",
+          "summary": "Built PULSE from scratch - one button timing game. Player circle pulses, tap to lock size, squeeze through gates. Combo system, difficulty scaling, deployed to GitHub Pages."
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/pulse-game",
       "liveUrl": "https://ava-type1.github.io/pulse-game/"
@@ -97,10 +201,26 @@
       "lastUpdated": "2026-01-15T00:00:00Z",
       "lastWorkedOn": "ESP32-C6 BLE communication, Waveshare display integration, enclosure design",
       "todos": [
-        { "id": "1", "text": "Finalize 3D printed enclosure for Bambu Lab P1S", "done": false },
-        { "id": "2", "text": "Test battery life with ONN 5000mAh pack", "done": false },
-        { "id": "3", "text": "BLE pairing reliability improvements", "done": false },
-        { "id": "4", "text": "Source plush toy manufacturer", "done": false }
+        {
+          "id": "1",
+          "text": "Finalize 3D printed enclosure for Bambu Lab P1S",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Test battery life with ONN 5000mAh pack",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "BLE pairing reliability improvements",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Source plush toy manufacturer",
+          "done": false
+        }
       ],
       "changelog": [],
       "repoUrl": "https://github.com/ava-type1/ava-companion"
@@ -115,8 +235,16 @@
       "lastUpdated": "2026-01-10T00:00:00Z",
       "lastWorkedOn": "Concept design, hardware selection",
       "todos": [
-        { "id": "1", "text": "Define hardware requirements", "done": false },
-        { "id": "2", "text": "Design enclosure for bedside/desk", "done": false }
+        {
+          "id": "1",
+          "text": "Define hardware requirements",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Design enclosure for bedside/desk",
+          "done": false
+        }
       ],
       "changelog": []
     },
@@ -130,18 +258,56 @@
       "lastUpdated": "2026-01-28T05:00:00Z",
       "lastWorkedOn": "Added project progress bars with completion percentages",
       "todos": [
-        { "id": "1", "text": "Implement GitHub-based data sync", "done": true },
-        { "id": "2", "text": "Add embedded Claude chat interface", "done": true },
-        { "id": "3", "text": "Deploy Telegram relay worker", "done": true },
-        { "id": "4", "text": "Real-time updates when AI makes changes", "done": true },
-        { "id": "5", "text": "Weather widget", "done": true },
-        { "id": "6", "text": "Quick Links panel", "done": true },
-        { "id": "7", "text": "Project progress bars", "done": true },
-        { "id": "8", "text": "Auto-update dashboard after every conversation", "done": false }
+        {
+          "id": "1",
+          "text": "Implement GitHub-based data sync",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Add embedded Claude chat interface",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Deploy Telegram relay worker",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Real-time updates when AI makes changes",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Weather widget",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Quick Links panel",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Project progress bars",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Auto-update dashboard after every conversation",
+          "done": false
+        }
       ],
       "changelog": [
-        { "date": "2026-01-27", "summary": "Added project progress bars with completion percentages. Weather widget (Fort White FL). Quick Links panel." },
-        { "date": "2026-01-26", "summary": "Built Command Center dashboard with dark cyberpunk aesthetic. Added Claude chat panel with Telegram relay." }
+        {
+          "date": "2026-01-27",
+          "summary": "Added project progress bars with completion percentages. Weather widget (Fort White FL). Quick Links panel."
+        },
+        {
+          "date": "2026-01-26",
+          "summary": "Built Command Center dashboard with dark cyberpunk aesthetic. Added Claude chat panel with Telegram relay."
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/command-center",
       "liveUrl": "https://command-center-2nk.pages.dev"
@@ -157,8 +323,14 @@
       "lastWorkedOn": "Shelved - CGM manufacturers prohibit API reselling. Pivoting to personal health hub concept instead.",
       "todos": [],
       "changelog": [
-        { "date": "2026-01-28", "summary": "SHELVED: Dexcom, Abbott, Medtronic all prohibit redistribution of API data. B2B SaaS model not viable. Concept may pivot to personal-use health data aggregator." },
-        { "date": "2026-01-27", "summary": "Built initial API service with Cloudflare Workers, client libraries, business plan." }
+        {
+          "date": "2026-01-28",
+          "summary": "SHELVED: Dexcom, Abbott, Medtronic all prohibit redistribution of API data. B2B SaaS model not viable. Concept may pivot to personal-use health data aggregator."
+        },
+        {
+          "date": "2026-01-27",
+          "summary": "Built initial API service with Cloudflare Workers, client libraries, business plan."
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/diabetesdata-io"
     },
@@ -172,15 +344,42 @@
       "lastUpdated": "2026-01-28T07:00:00Z",
       "lastWorkedOn": "Built complete MVP - offline PWA with work orders, photo docs, time tracking, manager dashboard, auto-sync",
       "todos": [
-        { "id": "1", "text": "GPS tracking (even offline)", "done": false },
-        { "id": "2", "text": "Digital signatures for customer sign-off", "done": false },
-        { "id": "3", "text": "Material tracking and inventory requests", "done": false },
-        { "id": "4", "text": "Route optimization for multiple jobs", "done": false },
-        { "id": "5", "text": "QuickBooks integration API", "done": false },
-        { "id": "6", "text": "Landing page and marketing site", "done": false }
+        {
+          "id": "1",
+          "text": "GPS tracking (even offline)",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Digital signatures for customer sign-off",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Material tracking and inventory requests",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Route optimization for multiple jobs",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "QuickBooks integration API",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Landing page and marketing site",
+          "done": false
+        }
       ],
       "changelog": [
-        { "date": "2026-01-28", "summary": "Built complete SyncField MVP in nightly innovation session. Progressive Web App with offline functionality, work order management, photo documentation, time tracking, manager dashboard. Auto-syncs when connectivity restored. Target: $10-30/user/month SaaS for field service teams (construction, utilities, contractors)." }
+        {
+          "date": "2026-01-28",
+          "summary": "Built complete SyncField MVP in nightly innovation session. Progressive Web App with offline functionality, work order management, photo documentation, time tracking, manager dashboard. Auto-syncs when connectivity restored. Target: $10-30/user/month SaaS for field service teams (construction, utilities, contractors)."
+        }
       ],
       "repoUrl": "https://github.com/ava-type1/syncfield"
     }

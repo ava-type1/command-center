@@ -84,10 +84,11 @@
       "id": "10",
       "title": "T1D Benefits Navigator",
       "description": "App that matches T1D families with patient assistance programs (PAPs) based on income, insurance status, and medication/supply needs. Input info once, see which programs you qualify for, pre-fill applications. Nobody does this well today.",
-      "category": "saas",
+      "category": "built",
       "potential": "high",
       "createdAt": "2026-01-29T05:00:00Z",
-      "notes": "Finite list of T1D PAPs (~20-30 programs). Eligibility is mostly income vs FPL thresholds + insurance status — stable criteria. Revenue via premium tier, affiliate fees, or B2B to clinics/employers. Fits AVA brand: education + access. MVP could be built in 1-2 weeks."
+      "builtAt": "2026-01-29T08:00:00Z",
+      "notes": "✅ BUILT: Full production PWA deployed to https://t1d-benefits-navigator.pages.dev. Comprehensive PAP database with 30+ programs, smart eligibility scoring, application guidance, installable PWA. React + Vite + Tailwind stack. GitHub: https://github.com/ava-type1/t1d-benefits-navigator"
     }
   ]
 }

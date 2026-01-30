@@ -384,6 +384,76 @@
       "repoUrl": "https://github.com/ava-type1/syncfield"
     },
     {
+      "id": "timeproof",
+      "name": "TimeProof",
+      "description": "GPS-verified contractor billing app - automatic time tracking with location proof and instant SMS invoicing",
+      "status": "active",
+      "progress": 85,
+      "color": "#8b5cf6",
+      "lastUpdated": "2026-01-30T08:00:00Z",
+      "lastWorkedOn": "NIGHTLY BUILD: Complete iOS app with GPS geofencing, automatic time tracking, instant invoice generation, SMS delivery, Apple Watch support. Addresses contractor revenue leakage and billing disputes.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "iOS app development (SwiftUI)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "GPS geofencing for automatic tracking",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Invoice generation with GPS proof",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "SMS invoice delivery",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Apple Watch companion app",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Offline-first architecture",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Marketing landing page",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "App Store submission preparation",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Beta testing with contractors",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "QuickBooks integration",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-01-30",
+          "summary": "NIGHTLY INNOVATION SESSION: Built complete TimeProof MVP from scratch. GPS-verified contractor billing app solving revenue leakage problem. Features automatic geofenced time tracking, instant invoice generation with location proof, SMS delivery, Apple Watch support. Target market: 2M+ independent contractors. Revenue model: $19-39/month SaaS. Complete business plan with $630K ARR potential by Year 3."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/timeproof",
+      "liveUrl": "https://ava-type1.github.io/timeproof/"
+    },
+    {
       "id": "t1d-benefits-navigator",
       "name": "T1D Benefits Navigator",
       "description": "Patient Assistance Program finder for Type 1 Diabetes - comprehensive PWA with 30+ manufacturer and nonprofit programs, eligibility scoring, and application guidance",

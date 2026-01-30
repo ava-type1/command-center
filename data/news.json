@@ -1,6 +1,66 @@
 {
-  "lastUpdated": "2026-01-29T12:00:00Z",
+  "lastUpdated": "2026-01-30T12:00:00Z",
   "items": [
+    {
+      "id": "17",
+      "title": "Senseonics Eversense 365 Approved in Europe - World's First One-Year CGM",
+      "summary": "Senseonics receives CE Mark approval for Eversense 365, the only implantable CGM with 365-day sensor life. Launching in Germany, Italy, Spain, and Sweden.",
+      "url": "https://www.globenewswire.com/news-release/2026/01/29/3229070/0/en/Senseonics-Receives-European-Approval-for-Eversense-365-World-s-Longest-lasting-Continuous-Glucose-Monitor.html",
+      "category": "diabetes",
+      "source": "Senseonics / Globe Newswire",
+      "date": "2026-01-30",
+      "relevance": "One-year sensor means revolutionary reduction in API auth refreshes for AvaDrive - only one 'Day 1' setup annually vs every 10-14 days"
+    },
+    {
+      "id": "18", 
+      "title": "Anthropic Preparing Security Center for Claude Code",
+      "summary": "New Security Center feature in development for Claude Code, offering repository security scans, issue catalogs, and manual scan initiation across branches.",
+      "url": "https://www.testingcatalog.com/anthropic-prepares-to-release-security-center-for-claude-code/",
+      "category": "claude",
+      "source": "Testing Catalog",
+      "date": "2026-01-30", 
+      "relevance": "Will help secure AVA app development with automated security scanning for iOS codebase and ESP32-C6 firmware"
+    },
+    {
+      "id": "19",
+      "title": "Claude Code Now Works with Local Ollama Models",
+      "summary": "Ollama v0.14.0+ adds Anthropic Messages API compatibility, enabling Claude Code to run entirely offline with local models like Mistral and Gemma.",
+      "url": "https://habr.com/en/articles/988538/",
+      "category": "claude",
+      "source": "Habr.com",
+      "date": "2026-01-30",
+      "relevance": "Perfect for field work with no cell service - run Claude Code locally on Mac without internet for ESP32-C6 development"
+    },
+    {
+      "id": "20",
+      "title": "AI Tools Now Write 29% of New US Software Code",
+      "summary": "Latest industry analysis shows AI coding assistants have reached significant adoption milestone, fundamentally changing software development workflows.",
+      "url": "https://dev.to/alexmercedcoder/ai-coding-dominates-2026-week-of-january-20-27-7lc",
+      "category": "ai",
+      "source": "DEV Community",
+      "date": "2026-01-30",
+      "relevance": "Validates your Claude Code approach - AI-first development is mainstream, gives competitive edge for AVA app development"
+    },
+    {
+      "id": "21",
+      "title": "Claude 'Cowork' GUI Version Released for Non-Technical Users",
+      "summary": "Anthropic launches Cowork with graphical interface aimed at non-technical users, expanding Claude accessibility beyond developers.",
+      "url": "https://en.wikipedia.org/wiki/Claude_(language_model)",
+      "category": "ai",
+      "source": "Wikipedia / Anthropic",
+      "date": "2026-01-30", 
+      "relevance": "Potential inspiration for AVA app UI - making complex diabetes management accessible to kids and families through better interfaces"
+    },
+    {
+      "id": "22",
+      "title": "QNX Developer Desktop Adds Raspberry Pi 5 Support",
+      "summary": "QNX releases January 2026 update with Pi 5 hardware support, new audio features, and improved driver development documentation.",
+      "url": "https://devblog.qnx.com/jan-2026-release-pi-5-images-ddks-developer-desktop-updates/",
+      "category": "tools",
+      "source": "QNX Developer Blog", 
+      "date": "2026-01-30",
+      "relevance": "Pi 5 could be interesting alternative to ESP32-C6 for more powerful AVA companion devices with video/advanced features"
+    },
     {
       "id": "12",
       "title": "Trinity Large: Open 400B Sparse MoE Model Released",

@@ -1,0 +1,256 @@
+{
+  "title": "Dexcom API Access Application Process",
+  "description": "Step-by-step checklist for applying for Dexcom API access as researched from developer.dexcom.com",
+  "last_updated": "2026-01-31T02:53:00Z",
+  "total_steps": 15,
+  "estimated_timeline": "3-6 months for full access",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Initial Registration",
+      "description": "Register as a Dexcom Developer at developer.dexcom.com",
+      "category": "registration",
+      "required_info": [
+        "Name and email",
+        "Username and password",
+        "Acceptance of Registered Developer Agreement"
+      ],
+      "outcome": "Access to sandbox environment, app creation, support requests",
+      "status": "not_started",
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 2,
+      "title": "Create Your First App",
+      "description": "Create an app profile to get API credentials",
+      "category": "setup",
+      "required_info": [
+        "App name and description",
+        "App functionality details",
+        "Target platform (web, mobile, etc.)"
+      ],
+      "outcome": "API credentials for sandbox testing",
+      "status": "not_started", 
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 3,
+      "title": "Study API Documentation",
+      "description": "Review endpoint overview, authentication flows, and data scopes",
+      "category": "development",
+      "required_info": [
+        "OAuth 2.0 implementation understanding",
+        "API endpoint familiarization",
+        "Data scopes: EGV, Calibrations, Events, Device Details"
+      ],
+      "outcome": "Technical readiness for implementation",
+      "status": "not_started",
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 4,
+      "title": "Implement Sandbox Testing",
+      "description": "Build and test your app using sandbox data",
+      "category": "development",
+      "required_info": [
+        "Sandbox base URL implementation",
+        "Test with provided sandbox user accounts",
+        "OAuth flow implementation"
+      ],
+      "outcome": "Functional app prototype with fake data",
+      "status": "not_started",
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 5,
+      "title": "Complete Development",
+      "description": "Build full app functionality and user interface",
+      "category": "development", 
+      "required_info": [
+        "User authentication flow",
+        "Data visualization/processing",
+        "Error handling and edge cases",
+        "HIPAA compliance considerations"
+      ],
+      "outcome": "Production-ready application",
+      "status": "not_started",
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 6,
+      "title": "Determine Partnership Type",
+      "description": "Choose your application path based on use case",
+      "category": "planning",
+      "required_info": [
+        "Individual developer (personal use)",
+        "Commercial app developer (business)",
+        "Research app developer (clinical/academic)"
+      ],
+      "outcome": "Clear application pathway",
+      "status": "not_started",
+      "notes": "AVA Type 1 would be commercial app developer",
+      "completed_date": null
+    },
+    {
+      "id": 7,
+      "title": "Prepare Partnership Assets",
+      "description": "Assemble required documentation for Limited Access application",
+      "category": "documentation",
+      "required_info": [
+        "Business plan/model",
+        "Technical architecture documentation",
+        "User privacy and data handling policies",
+        "App screenshots/demo",
+        "Target market analysis"
+      ],
+      "outcome": "Complete application package",
+      "status": "not_started",
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 8,
+      "title": "Apply for Limited Access",
+      "description": "Submit application through My Apps section or Partnership Interest Questionnaire",
+      "category": "application",
+      "required_info": [
+        "Partnership Interest Questionnaire at dexcom.com/b2b",
+        "Completed app profile in My Apps",
+        "Business justification"
+      ],
+      "outcome": "Application under Dexcom review",
+      "status": "not_started",
+      "notes": "Use dexcom.com/b2b for commercial apps",
+      "completed_date": null
+    },
+    {
+      "id": 9,
+      "title": "Dexcom Partnership Review",
+      "description": "Wait for Dexcom Strategic Partnerships team review",
+      "category": "review",
+      "required_info": [
+        "Patience - can take several weeks",
+        "Respond promptly to any follow-up questions"
+      ],
+      "outcome": "Approval/denial decision",
+      "status": "not_started",
+      "notes": "No control over timeline here",
+      "completed_date": null
+    },
+    {
+      "id": 10,
+      "title": "Sign Data Licensing Agreement",
+      "description": "Review and agree to Dexcom's standard, non-negotiable terms",
+      "category": "legal",
+      "required_info": [
+        "Legal review of terms",
+        "Understanding of data usage restrictions",
+        "Compliance requirements"
+      ],
+      "outcome": "Limited Access granted (up to 5 users)",
+      "status": "not_started",
+      "notes": "Terms are non-negotiable",
+      "completed_date": null
+    },
+    {
+      "id": 11,
+      "title": "Test with Real Users",
+      "description": "Use Limited Access to test with up to 5 real Dexcom users",
+      "category": "testing",
+      "required_info": [
+        "Recruit test users (can include yourself if T1D)",
+        "Test OAuth flow with real accounts",
+        "Validate data accuracy and reliability",
+        "Gather user feedback"
+      ],
+      "outcome": "Validated app performance with real data",
+      "status": "not_started",
+      "notes": "Perfect for testing with your own family",
+      "completed_date": null
+    },
+    {
+      "id": 12,
+      "title": "Refine and Optimize",
+      "description": "Improve app based on real-world testing feedback",
+      "category": "development",
+      "required_info": [
+        "Performance optimizations",
+        "User experience improvements",
+        "Bug fixes from real data testing",
+        "Compliance verification"
+      ],
+      "outcome": "Commercial-ready application",
+      "status": "not_started",
+      "notes": "",
+      "completed_date": null
+    },
+    {
+      "id": 13,
+      "title": "Apply for Full Access",
+      "description": "Submit Full Access Questionnaire through My Apps",
+      "category": "application",
+      "required_info": [
+        "Complete Full Access Questionnaire",
+        "Demonstrate production readiness",
+        "Show user traction/demand",
+        "Regulatory compliance documentation"
+      ],
+      "outcome": "Full Access review initiated",
+      "status": "not_started",
+      "notes": "Need to show real user demand",
+      "completed_date": null
+    },
+    {
+      "id": 14,
+      "title": "Technical & Commercial Review",
+      "description": "Pass Dexcom's comprehensive app review process",
+      "category": "review",
+      "required_info": [
+        "Technical implementation audit",
+        "User interface/experience review",
+        "Compliance verification",
+        "Commercial viability assessment"
+      ],
+      "outcome": "Full Access approval or feedback for improvements",
+      "status": "not_started",
+      "notes": "Most rigorous step - prepare thoroughly",
+      "completed_date": null
+    },
+    {
+      "id": 15,
+      "title": "Launch as Digital Health Partner",
+      "description": "Go live with unlimited user access and partnership benefits",
+      "category": "launch",
+      "required_info": [
+        "Public app launch",
+        "Marketing and user acquisition",
+        "Ongoing compliance monitoring",
+        "Partnership gallery listing (optional)"
+      ],
+      "outcome": "Full commercial access to Dexcom API",
+      "status": "not_started",
+      "notes": "Eligible for Dexcom Gallery inclusion",
+      "completed_date": null
+    }
+  ],
+  "important_notes": [
+    "Each app requires separate review - not per developer",
+    "Limited Access allows 5 users maximum for testing",
+    "Full Access requires active users within 60 days of launch",
+    "Data Licensing Agreement terms are non-negotiable",
+    "Must comply with FDA regulations for digital health",
+    "Commercial apps should use dexcom.com/b2b pathway",
+    "Process can take 3-6 months from start to full access"
+  ],
+  "key_urls": [
+    "https://developer.dexcom.com/docs/dexcom/getting-started/",
+    "https://developer.dexcom.com/docs/dexcom/scopes-access/",
+    "https://www.dexcom.com/b2b",
+    "https://developer.dexcom.com/user/register"
+  ]
+}

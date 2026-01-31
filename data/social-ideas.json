@@ -1,0 +1,124 @@
+{
+  "ideas": [
+    {
+      "id": "si001",
+      "title": "T1D vs T2D Education Series",
+      "description": "Clear, simple posts explaining the differences between Type 1 and Type 2 diabetes. Combat the confusion and stigma.",
+      "platform": "x",
+      "content_type": "thread",
+      "category": "education",
+      "priority": "high",
+      "notes": "So much misinformation out there. People think T1D is caused by diet.",
+      "suggested_timing": "weekly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si002", 
+      "title": "Day in the Life: T1D Parent",
+      "description": "Real, unfiltered look at managing a child's T1D - the 3am alarms, school coordination, sports management.",
+      "platform": "tiktok",
+      "content_type": "video_series",
+      "category": "lifestyle",
+      "priority": "high",
+      "notes": "Show both the struggles and the wins. Normalize the reality.",
+      "suggested_timing": "monthly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si003",
+      "title": "Tech Evolution Timeline",
+      "description": "Visual journey through diabetes tech from the 1990s to today. Celebrate how far we've come.",
+      "platform": "both",
+      "content_type": "visual_story", 
+      "category": "education",
+      "priority": "medium",
+      "notes": "Could be really engaging on TikTok with transition effects",
+      "suggested_timing": "quarterly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si004",
+      "title": "AVA Development Diary",
+      "description": "Behind-the-scenes content showing AVA's development journey, challenges, breakthroughs.",
+      "platform": "x",
+      "content_type": "build_in_public",
+      "category": "product",
+      "priority": "high",
+      "notes": "People love the authentic journey. Show failures too.",
+      "suggested_timing": "weekly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si005",
+      "title": "Community Spotlight",
+      "description": "Feature other T1D families, their stories, their solutions. Build community.",
+      "platform": "both",
+      "content_type": "interview",
+      "category": "community",
+      "priority": "medium",
+      "notes": "Could partner with T1D influencers and advocates",
+      "suggested_timing": "biweekly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si006",
+      "title": "CGM Data Storytelling",
+      "description": "Turn glucose graphs into stories - what caused that spike, how we managed that low, celebrating a good day.",
+      "platform": "x",
+      "content_type": "data_story",
+      "category": "education",
+      "priority": "medium",
+      "notes": "Make data relatable and human",
+      "suggested_timing": "weekly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si007",
+      "title": "Mythbuster Monday",
+      "description": "Weekly series debunking diabetes myths and misconceptions",
+      "platform": "both",
+      "content_type": "educational_series",
+      "category": "education",
+      "priority": "high",
+      "notes": "So much misinformation needs correcting",
+      "suggested_timing": "weekly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si008",
+      "title": "Kids' Perspective Videos",
+      "description": "Let kids with T1D share their own stories, tips, and experiences in their own words",
+      "platform": "tiktok",
+      "content_type": "user_generated",
+      "category": "community",
+      "priority": "high",
+      "notes": "Kids relating to kids is powerful. Need parental permissions.",
+      "suggested_timing": "monthly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si009",
+      "title": "Quick Tips Series",
+      "description": "15-second practical tips for T1D management - packing supplies, travel tips, restaurant strategies",
+      "platform": "tiktok",
+      "content_type": "quick_tips",
+      "category": "practical",
+      "priority": "medium",
+      "notes": "Bite-sized, actionable content",
+      "suggested_timing": "twice_weekly",
+      "created_at": "2026-01-31T02:53:00Z"
+    },
+    {
+      "id": "si010",
+      "title": "T1D Parent Support Groups",
+      "description": "Create and promote virtual meetups, support groups, resource sharing for T1D families",
+      "platform": "x",
+      "content_type": "community_building",
+      "category": "support",
+      "priority": "medium",
+      "notes": "Could tie into AVA user community",
+      "suggested_timing": "monthly",
+      "created_at": "2026-01-31T02:53:00Z"
+    }
+  ]
+}

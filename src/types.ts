@@ -33,3 +33,34 @@ export interface Idea {
   createdAt: string;
   notes?: string;
 }
+
+export interface SocialPost {
+  id: string;
+  platform: 'x' | 'tiktok' | 'facebook';
+  type: 'post' | 'reply' | 'retweet' | 'thread';
+  content: string;
+  media_notes?: string;
+  hashtags: string[];
+  status: 'draft' | 'approved' | 'posted' | 'rejected';
+  suggested_date: string;
+  created_at: string;
+  performance?: {
+    likes?: number;
+    views?: number;
+    comments?: number;
+    shares?: number;
+  } | null;
+}
+
+export interface SocialIdea {
+  id: string;
+  title: string;
+  description: string;
+  platform: 'x' | 'tiktok' | 'both';
+  content_type: string;
+  category: string;
+  priority: 'low' | 'medium' | 'high';
+  notes?: string;
+  suggested_timing: string;
+  created_at: string;
+}

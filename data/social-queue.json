@@ -1,0 +1,88 @@
+{
+  "posts": [
+    {
+      "id": "sq001",
+      "platform": "x",
+      "type": "thread",
+      "content": "🧵 Our story: When your 4-year-old gets diagnosed with T1D, everything changes. As a T1D dad myself, I thought I knew what we were facing.\n\nI was wrong. 30 years between diagnoses. Same disease, completely different world.\n\n1/7",
+      "media_notes": "Photo of AVA bear with glucose meter",
+      "hashtags": ["#Type1Diabetes", "#T1D", "#DiabetesDad", "#CGM", "#AVAType1"],
+      "status": "draft",
+      "suggested_date": "2026-02-03T10:00:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    },
+    {
+      "id": "sq002", 
+      "platform": "x",
+      "type": "thread",
+      "content": "2/7 When I was diagnosed in 1994, we had:\n• Finger pricks 8x/day\n• Urine strips \n• NPH insulin that peaked whenever it felt like it\n• 'Diabetic' food (🤢)\n• A glucose meter the size of a brick\n\nSurvival mode.",
+      "media_notes": "Split image: 1994 glucose meter vs modern CGM",
+      "hashtags": ["#Type1Diabetes", "#T1D", "#DiabetesToday"],
+      "status": "draft",
+      "suggested_date": "2026-02-03T10:05:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    },
+    {
+      "id": "sq003",
+      "platform": "tiktok",
+      "type": "post",
+      "content": "30 years between T1D diagnoses - same disease, different universe 🌟\n\n1994 Dad vs 2024 Daughter\n\nThe tech evolution is INSANE but the emotional journey? Still the same. 💙\n\n#T1D #Type1Diabetes #DiabetesTech #ParentLife",
+      "media_notes": "Side-by-side comparison video: old vs new diabetes tech, with emotional overlay about the human side staying the same",
+      "hashtags": ["#T1D", "#Type1Diabetes", "#DiabetesTech", "#ParentLife", "#CGM"],
+      "status": "draft",
+      "suggested_date": "2026-02-04T15:00:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    },
+    {
+      "id": "sq004",
+      "platform": "x",
+      "type": "post",
+      "content": "Meet AVA 🐻\n\nThe companion that makes T1D management less scary for kids. Built by a T1D dad who remembers being the scared kid.\n\nReal-time glucose alerts, gentle reminders, and always there when you need her.\n\n#AVAType1 #T1D #DiabetesTech",
+      "media_notes": "Video of AVA bear responding to CGM alerts, showing gentle interaction",
+      "hashtags": ["#AVAType1", "#T1D", "#Type1Diabetes", "#DiabetesTech", "#Kids"],
+      "status": "approved",
+      "suggested_date": "2026-02-05T12:00:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    },
+    {
+      "id": "sq005",
+      "platform": "tiktok", 
+      "type": "post",
+      "content": "POV: You're building a diabetes companion for your daughter and realize you're basically Iron Man creating FRIDAY 🤖✨\n\n\"AVA, what's my glucose?\"\n\"137 mg/dL and stable 💙\"\n\nDad level: Maximum overdrive",
+      "media_notes": "Humorous video showing development process with Iron Man parallels, AVA responding to voice commands",
+      "hashtags": ["#DadLife", "#T1D", "#Tech", "#AVA", "#DiabetesTech"],
+      "status": "draft",
+      "suggested_date": "2026-02-06T18:00:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    },
+    {
+      "id": "sq006",
+      "platform": "x",
+      "type": "post",
+      "content": "Behind the scenes: When your 'simple' diabetes app becomes an AI companion, a hardware project, and accidentally a small revolution in pediatric care. 🚀\n\nSometimes the best solutions come from the deepest personal need.\n\n#BuildInPublic #AVAType1",
+      "media_notes": "Time-lapse of development workspace, code, prototypes, late night coffee",
+      "hashtags": ["#BuildInPublic", "#AVAType1", "#EntrepreneurLife", "#T1D"],
+      "status": "draft",
+      "suggested_date": "2026-02-07T09:00:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    },
+    {
+      "id": "sq007",
+      "platform": "x",
+      "type": "post",
+      "content": "T1D education time 📚\n\nMyth: \"You can't eat sugar if you have diabetes\"\nReality: You can eat anything - you just need to dose insulin correctly for it.\n\nThe goal isn't restriction, it's education and empowerment.\n\n#T1D #DiabetesEducation",
+      "media_notes": "Infographic showing insulin-to-carb ratios, normal foods with proper dosing",
+      "hashtags": ["#T1D", "#DiabetesEducation", "#Type1Diabetes", "#DiabetesMyths"],
+      "status": "draft", 
+      "suggested_date": "2026-02-08T14:00:00Z",
+      "created_at": "2026-01-31T02:53:00Z",
+      "performance": null
+    }
+  ]
+}

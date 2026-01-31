@@ -1,8 +1,8 @@
-import { LayoutDashboard, Lightbulb, Zap, Newspaper } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, Zap, Newspaper, MessageSquare } from 'lucide-react';
 
 interface HeaderProps {
-  view: 'dashboard' | 'ideas' | 'news';
-  onViewChange: (view: 'dashboard' | 'ideas' | 'news') => void;
+  view: 'dashboard' | 'ideas' | 'news' | 'social';
+  onViewChange: (view: 'dashboard' | 'ideas' | 'news' | 'social') => void;
 }
 
 export function Header({ view, onViewChange }: HeaderProps) {
@@ -44,6 +44,17 @@ export function Header({ view, onViewChange }: HeaderProps) {
             >
               <Newspaper className="w-4 h-4" />
               <span className="hidden sm:inline">News</span>
+            </button>
+            <button
+              onClick={() => onViewChange('social')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                view === 'social'
+                  ? 'bg-dark-500 text-neon-pink shadow-neon-pink/20 shadow-lg'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span className="hidden sm:inline">Social</span>
             </button>
             <button
               onClick={() => onViewChange('ideas')}

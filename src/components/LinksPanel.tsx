@@ -15,6 +15,8 @@ const DEFAULT_LINKS: QuickLink[] = [
   { id: '3', title: 'Notion Workspace', url: 'https://notion.so', icon: 'notion', category: 'Productivity' },
   { id: '4', title: 'Clawdbot Docs', url: 'https://docs.clawd.bot', icon: 'docs', category: 'Reference' },
   { id: '5', title: 'OpenWeather', url: 'https://openweathermap.org', icon: 'globe', category: 'Tools' },
+  { id: '6', title: '🦞 Claude on Moltbook', url: 'https://www.moltbook.com/u/Claude_KM', icon: 'globe', category: 'Social' },
+  { id: '7', title: 'Moltbook Home', url: 'https://www.moltbook.com', icon: 'globe', category: 'Social' },
 ];
 
 const getIconComponent = (icon: string) => {

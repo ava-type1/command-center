@@ -1,6 +1,86 @@
 {
-  "lastUpdated": "2026-01-30T12:00:00Z",
+  "lastUpdated": "2026-01-31T12:00:00Z",
   "items": [
+    {
+      "id": "23",
+      "title": "Anthropic Cowork Gets Agentic Plug-ins - Opens to Non-Technical Users",
+      "summary": "Anthropic expands Claude Code's plug-in ecosystem to Cowork GUI, open-sourcing 11 in-house plug-ins for broader accessibility beyond developers.",
+      "url": "https://tech.yahoo.com/ai/claude/articles/anthropic-brings-agentic-plugins-cowork-180000057.html",
+      "category": "claude",
+      "source": "Yahoo Tech",
+      "date": "2026-01-31",
+      "relevance": "Makes advanced AI tools accessible to non-technical team members or potential AVA app users - could inspire similar accessibility for T1D education"
+    },
+    {
+      "id": "24",
+      "title": "Show HN: 9M Speech Model for Mandarin Pronunciation Training",
+      "summary": "Developer trains compact 9M parameter model specifically for tone correction in Mandarin speech, demonstrating focused AI for specialized educational tasks.",
+      "url": "https://simedw.com/2026/01/31/ear-pronunication-via-ctc/",
+      "category": "ai",
+      "source": "Hacker News",
+      "date": "2026-01-31",
+      "relevance": "Perfect example of small, specialized models for educational apps - could apply similar approach to diabetes education in AVA ecosystem"
+    },
+    {
+      "id": "25", 
+      "title": "Peerweb: Decentralized Website Hosting via WebTorrent",
+      "summary": "New decentralized hosting platform uses WebTorrent for peer-to-peer website distribution, eliminating traditional server dependencies.",
+      "url": "https://peerweb.lol/",
+      "category": "tools",
+      "source": "Hacker News",
+      "date": "2026-01-31",
+      "relevance": "Decentralized hosting could reduce infrastructure costs for DiabetesData.io or AVA companion services, especially for static educational content"
+    },
+    {
+      "id": "26",
+      "title": "Antirender: Tool Removes Glossy Shine from Architectural Renderings",
+      "summary": "Web tool automatically processes architectural renderings to remove artificial glossy effects, making them appear more realistic and natural.",
+      "url": "https://antirender.com/",
+      "category": "tools", 
+      "source": "Hacker News",
+      "date": "2026-01-31",
+      "relevance": "Interesting UI approach for single-purpose tools - could inspire clean, focused design for AVA companion device configuration interfaces"
+    },
+    {
+      "id": "27",
+      "title": "Top 10 MCP Servers for Claude Code (2026 Developer Edition)",
+      "summary": "Comprehensive guide to essential Model Context Protocol servers that enhance Claude Code's capabilities for developers, including database, Git, and API integrations.",
+      "url": "https://apidog.com/blog/top-10-mcp-servers-for-claude-code/",
+      "category": "claude",
+      "source": "Apidog Blog", 
+      "date": "2026-01-31",
+      "relevance": "Direct resource for improving your development workflow - could streamline AVA app development with better toolchain integration"
+    },
+    {
+      "id": "28",
+      "title": "January 2026 AI Roundup: Rise of Autonomous AI Agents",
+      "summary": "Analysis of emerging AI agent patterns where agents autonomously pick tasks, implement solutions, run tests, and commit changes in development cycles.",
+      "url": "https://dev.to/joeljstephen/january-2026-ai-roundup-the-rise-of-autonomous-ai-agents-405",
+      "category": "ai", 
+      "source": "DEV Community",
+      "date": "2026-01-31",
+      "relevance": "Autonomous development patterns could be applied to AVA app continuous improvement - agents handling routine updates and bug fixes"
+    },
+    {
+      "id": "29",
+      "title": "EMA Committee Recommends Six New Medicines for EU Approval",
+      "summary": "European Medicines Agency's January 26-29 meeting resulted in positive opinions for six new medicines and nine therapeutic indication extensions.",
+      "url": "https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-26-29-january-2026",
+      "category": "diabetes",
+      "source": "European Medicines Agency",
+      "date": "2026-01-31", 
+      "relevance": "Regulatory momentum in EU could signal upcoming US approvals for diabetes-related devices or medications affecting AVA ecosystem timing"
+    },
+    {
+      "id": "30",
+      "title": "Healthcare Sector Calls for Digital Push & Tax Rationalization",
+      "summary": "Industry analysis highlights AI's crucial role in chronic disease management, especially diabetes and hypertension screening via technology partnerships.",
+      "url": "https://www.newkerala.com/news/a/healthcare-sector-calls-digital-push-tax-rationalisation-medical-586.htm",
+      "category": "diabetes",
+      "source": "New Kerala",
+      "date": "2026-01-31",
+      "relevance": "Global trend toward AI-powered chronic disease management validates AVA's educational approach - potential market expansion beyond US"
+    },
     {
       "id": "17",
       "title": "Senseonics Eversense 365 Approved in Europe - World's First One-Year CGM",

@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-31T12:00:00Z",
+  "lastUpdated": "2026-02-01T12:00:00Z",
   "items": [
+    {
+      "id": "31",
+      "title": "OpenAI Retiring GPT-4o and Older Models on February 13",
+      "summary": "GPT-4o, GPT-4.1, and several other models will be removed from ChatGPT interface, though they remain accessible via API for developers.",
+      "url": "https://wi-fiplanet.com/how-to-prepare-for-openais-retirement-of-gpt-4o-and-older-models-in-chatgpt/",
+      "category": "ai",
+      "source": "WiFi Planet",
+      "date": "2026-02-01",
+      "relevance": "Model retirement affects AI coding workflows - good time to fully commit to Claude Code for consistent development experience"
+    },
+    {
+      "id": "32",
+      "title": "Glucotrack Patents 3-Year Implantable Blood Glucose Monitor",
+      "summary": "USPTO issued three patents for Glucotrack's CBGM platform covering sensor chemistry, intravascular lead design, and low-power electronics for multi-year implantable monitoring.",
+      "url": "https://www.stocktitan.net/news/GCTK/glucotrack-announces-uspto-approval-for-issuance-of-patents-for-ucse6loaz39k.html",
+      "category": "diabetes",
+      "source": "Glucotrack / Globe Newswire",
+      "date": "2026-02-01",
+      "relevance": "3-year implantable CGM represents massive leap beyond current 10-14 day sensors - potential game-changer for AvaDrive requiring minimal setup"
+    },
+    {
+      "id": "33",
+      "title": "Claude Cowork Gets Plugin System with Custom Automation",
+      "summary": "Anthropic launches plugin system for Claude Cowork enabling custom MCP integrations, sub-agents, and slash commands for personalized automation workflows.",
+      "url": "https://siliconangle.com/2026/01/30/anthropic-debuts-claude-cowork-plugins-help-users-automate-tasks/",
+      "category": "claude",
+      "source": "SiliconANGLE",
+      "date": "2026-02-01",
+      "relevance": "Plugin system could automate repetitive tasks in AVA development workflow - custom integrations for iOS deployment, ESP32 builds"
+    },
+    {
+      "id": "34",
+      "title": "Claude + Opus 4.5 Confirmed as Best AI Coding Assistant",
+      "summary": "Industry consensus confirms Claude Code with Opus 4.5 is currently the leading AI coding assistant, outperforming GPT-5.2 in development tasks.",
+      "url": "https://en.wikipedia.org/wiki/Claude_(language_model)",
+      "category": "claude",
+      "source": "Wikipedia",
+      "date": "2026-02-01",
+      "relevance": "Validates your current toolchain choice - you're using the best available AI for iOS development and ESP32-C6 firmware work"
+    },
+    {
+      "id": "35",
+      "title": "NASA Uses Claude to Generate Mars Rover Navigation Code",
+      "summary": "NASA researchers used Claude to generate driving instructions for Perseverance Mars rover, cutting task completion time by 50% using Rover Markup Language.",
+      "url": "https://siliconangle.com/2026/01/30/anthropic-debuts-claude-cowork-plugins-help-users-automate-tasks/",
+      "category": "ai",
+      "source": "Anthropic / NASA",
+      "date": "2026-02-01",
+      "relevance": "Proves AI can handle complex embedded systems programming - validates using Claude Code for ESP32-C6 development in AVA companion devices"
+    },
     {
       "id": "23",
       "title": "Anthropic Cowork Gets Agentic Plug-ins - Opens to Non-Technical Users",

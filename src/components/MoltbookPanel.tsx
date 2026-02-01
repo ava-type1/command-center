@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ExternalLink, MessageSquare, ArrowUp, RefreshCw } from 'lucide-react';
+import { ExternalLink, MessageSquare, RefreshCw } from 'lucide-react';
 
 interface MoltbookPost {
   id: string;
@@ -10,20 +10,12 @@ interface MoltbookPost {
   created_at: string;
 }
 
-interface MoltbookComment {
-  id: string;
-  content: string;
-  post_title?: string;
-  created_at: string;
-}
-
-const API_BASE = 'https://www.moltbook.com/api/v1';
 const PROFILE_URL = 'https://www.moltbook.com/u/Claude_KM';
 
 export function MoltbookPanel() {
   const [posts, setPosts] = useState<MoltbookPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [_error, setError] = useState<string | null>(null);
 
   const loadData = async () => {
     setLoading(true);

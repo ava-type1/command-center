@@ -41,6 +41,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [lastSync, setLastSync] = useState<Date | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Load data from GitHub
   const loadData = async () => {
@@ -157,7 +158,27 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <Header view={view} onViewChange={setView} />
+      <Header view={view} onViewChange={setView} onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      
+      {/* Mobile sidebar overlay */}
+      {sidebarOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSidebarOpen(false)} />
+          <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-dark-800 border-l border-white/10 overflow-y-auto p-4 space-y-4 animate-slide-in">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider">Sidebar</h3>
+              <button
+                onClick={() => setSidebarOpen(false)}
+                className="p-2 rounded-lg hover:bg-dark-500 text-gray-400 hover:text-white transition-colors"
+              >
+                ✕
+              </button>
+            </div>
+            <MoltbookPanel />
+            <LinksPanel />
+          </div>
+        </div>
+      )}
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {error && (

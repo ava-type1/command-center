@@ -1,11 +1,12 @@
-import { LayoutDashboard, Lightbulb, Zap, Newspaper, MessageSquare } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, Zap, Newspaper, MessageSquare, PanelRightOpen } from 'lucide-react';
 
 interface HeaderProps {
   view: 'dashboard' | 'ideas' | 'news' | 'social';
   onViewChange: (view: 'dashboard' | 'ideas' | 'news' | 'social') => void;
+  onToggleSidebar?: () => void;
 }
 
-export function Header({ view, onViewChange }: HeaderProps) {
+export function Header({ view, onViewChange, onToggleSidebar }: HeaderProps) {
   return (
     <header className="glass border-b border-white/5 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,6 +23,16 @@ export function Header({ view, onViewChange }: HeaderProps) {
           </div>
 
           {/* Nav tabs */}
+          <div className="flex items-center gap-2">
+          {onToggleSidebar && (
+            <button
+              onClick={onToggleSidebar}
+              className="lg:hidden p-2 rounded-lg hover:bg-dark-500 text-gray-400 hover:text-neon-green transition-colors"
+              title="Toggle sidebar"
+            >
+              <PanelRightOpen className="w-5 h-5" />
+            </button>
+          )}
           <nav className="flex gap-1 bg-dark-700/50 rounded-lg p-1">
             <button
               onClick={() => onViewChange('dashboard')}
@@ -68,6 +79,7 @@ export function Header({ view, onViewChange }: HeaderProps) {
               <span className="hidden sm:inline">Ideas</span>
             </button>
           </nav>
+          </div>
         </div>
       </div>
     </header>

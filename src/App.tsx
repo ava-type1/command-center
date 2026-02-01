@@ -8,7 +8,9 @@ import { Header } from './components/Header';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { WeatherWidget } from './components/WeatherWidget';
 import { LinksPanel } from './components/LinksPanel';
+import { MoltbookPanel } from './components/MoltbookPanel';
 import { Loader2 } from 'lucide-react';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import type { Project, Idea } from './types';
 
 // GitHub raw content URLs
@@ -167,6 +169,7 @@ function App() {
           </div>
         )}
 
+        <ErrorBoundary>
         {view === 'dashboard' ? (
           <>
             {/* Top row: Stats + Weather */}
@@ -232,6 +235,7 @@ function App() {
 
               {/* Sidebar - takes 1 column */}
               <div className="lg:col-span-1 space-y-4">
+                <MoltbookPanel />
                 <LinksPanel />
               </div>
             </div>
@@ -243,6 +247,7 @@ function App() {
         ) : (
           <IdeasHub ideas={ideas} onUpdate={updateIdeas} />
         )}
+        </ErrorBoundary>
       </main>
 
       {/* AI Chat */}

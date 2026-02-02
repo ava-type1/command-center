@@ -1,8 +1,8 @@
-import { LayoutDashboard, Lightbulb, Zap, Newspaper, MessageSquare, PanelRightOpen } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, Zap, Newspaper, MessageSquare, PanelRightOpen, Calendar } from 'lucide-react';
 
 interface HeaderProps {
-  view: 'dashboard' | 'ideas' | 'news' | 'social';
-  onViewChange: (view: 'dashboard' | 'ideas' | 'news' | 'social') => void;
+  view: 'dashboard' | 'ideas' | 'news' | 'social' | 'calendar';
+  onViewChange: (view: 'dashboard' | 'ideas' | 'news' | 'social' | 'calendar') => void;
   onToggleSidebar?: () => void;
 }
 
@@ -66,6 +66,17 @@ export function Header({ view, onViewChange, onToggleSidebar }: HeaderProps) {
             >
               <MessageSquare className="w-4 h-4" />
               <span className="hidden sm:inline">Social</span>
+            </button>
+            <button
+              onClick={() => onViewChange('calendar')}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                view === 'calendar'
+                  ? 'bg-dark-500 text-neon-cyan shadow-neon-cyan/20 shadow-lg'
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              <Calendar className="w-4 h-4" />
+              <span className="hidden sm:inline">Activity</span>
             </button>
             <button
               onClick={() => onViewChange('ideas')}

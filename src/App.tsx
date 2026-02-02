@@ -4,6 +4,7 @@ import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
 import { NewsFeed } from './components/NewsFeed';
 import { SocialMedia } from './components/SocialMedia';
+import { ActivityCalendar } from './components/ActivityCalendar';
 import { Header } from './components/Header';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { WeatherWidget } from './components/WeatherWidget';
@@ -36,7 +37,7 @@ function App() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [newsLastUpdated, setNewsLastUpdated] = useState<string | undefined>();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [view, setView] = useState<'dashboard' | 'ideas' | 'news' | 'social'>('dashboard');
+  const [view, setView] = useState<'dashboard' | 'ideas' | 'news' | 'social' | 'calendar'>('dashboard');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastSync, setLastSync] = useState<Date | null>(null);
@@ -265,6 +266,8 @@ function App() {
           <NewsFeed news={news} lastUpdated={newsLastUpdated} />
         ) : view === 'social' ? (
           <SocialMedia />
+        ) : view === 'calendar' ? (
+          <ActivityCalendar />
         ) : (
           <IdeasHub ideas={ideas} onUpdate={updateIdeas} />
         )}

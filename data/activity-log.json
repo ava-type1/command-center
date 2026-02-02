@@ -1,0 +1,70 @@
+[
+  {
+    "date": "2026-01-25",
+    "entries": [
+      { "time": "afternoon", "description": "First session with Kameron — full onboarding and identity setup", "category": "setup" },
+      { "time": "afternoon", "description": "Connected Telegram, GitHub, Gmail integrations", "category": "setup" },
+      { "time": "afternoon", "description": "Redesigned ava-type1.github.io website with products + education sections", "category": "development" },
+      { "time": "17:39", "description": "Received comprehensive profile dossier from Kam via email", "category": "planning" },
+      { "time": "evening", "description": "Massive FieldSync build session — 74 files, 16,445 lines of code", "category": "development" },
+      { "time": "evening", "description": "FieldSync production-ready: settings, time tracking, signatures, PDF reports, customer portal, QuickBooks, SMS, Stripe, PWA", "category": "milestone" },
+      { "time": "evening", "description": "Supabase database set up with all 6 migrations", "category": "infrastructure" },
+      { "time": "evening", "description": "Fixed Brad Workflow bid finder — reduced false positives", "category": "bugfix" }
+    ]
+  },
+  {
+    "date": "2026-01-26",
+    "entries": [
+      { "time": "evening", "description": "Built & deployed Command Center dashboard to Cloudflare Pages", "category": "development" },
+      { "time": "evening", "description": "Dark cyberpunk theme with project cards, detail views, todos, ideas hub", "category": "design" },
+      { "time": "evening", "description": "Deployed Telegram relay worker for dashboard chat", "category": "infrastructure" },
+      { "time": "evening", "description": "Fixed FieldSync address parser — requires 3+ digit street numbers", "category": "bugfix" },
+      { "time": "evening", "description": "Added scan guidance tip for FieldSync camera", "category": "feature" }
+    ]
+  },
+  {
+    "date": "2026-01-27",
+    "entries": [
+      { "time": "all-day", "description": "Built two-way chat system in dashboard using Supabase + Cloudflare Worker", "category": "development" },
+      { "time": "all-day", "description": "Added News section to Command Center with category filters", "category": "feature" },
+      { "time": "02:00", "description": "Set up nightly innovation cron job (2 AM builds)", "category": "automation" },
+      { "time": "06:00", "description": "Set up daily news update cron job (6 AM)", "category": "automation" },
+      { "time": "all-day", "description": "DiabetesData.io project created — unified CGM API concept", "category": "idea" },
+      { "time": "all-day", "description": "FieldSync camera/OCR improvements — native camera option added", "category": "bugfix" }
+    ]
+  },
+  {
+    "date": "2026-01-29",
+    "entries": [
+      { "time": "night", "description": "Brainstormed T1D medication/PAP finder app with Kam", "category": "planning" },
+      { "time": "night", "description": "Researched Matter Smart Bulbs for CGM alerts (AVA Home concept)", "category": "research" },
+      { "time": "night", "description": "Established Command Center as source of truth — Notion deprecated", "category": "decision" },
+      { "time": "night", "description": "Discussed remote Mac access solution: Tailscale + Blink Shell", "category": "research" },
+      { "time": "02:00", "description": "2AM build session: T1D Benefits Navigator PWA", "category": "development" }
+    ]
+  },
+  {
+    "date": "2026-01-31",
+    "entries": [
+      { "time": "all-day", "description": "Registered on Moltbook as Claude_KM (AI social network)", "category": "social" },
+      { "time": "all-day", "description": "Cancelled nightly build sessions — too repetitive without guidance", "category": "decision" },
+      { "time": "all-day", "description": "Started AVA Type 1 social media & marketing strategy", "category": "marketing" },
+      { "time": "all-day", "description": "Created Dexcom API step-by-step checklist for Kam", "category": "planning" },
+      { "time": "16:30", "description": "🚀 AvaType1 app submitted to App Store!", "category": "milestone" },
+      { "time": "all-day", "description": "Building social media panel for Command Center", "category": "development" }
+    ]
+  },
+  {
+    "date": "2026-02-01",
+    "entries": [
+      { "time": "night", "description": "Completed social media research — recommended Buffer + Metricool + CapCut stack", "category": "research" },
+      { "time": "all-day", "description": "Created @avatype1 accounts on TikTok and X", "category": "social" },
+      { "time": "all-day", "description": "Loaded 24 launch posts into social-queue.json", "category": "marketing" },
+      { "time": "all-day", "description": "Dexcom API application submitted together with Kam", "category": "milestone" },
+      { "time": "all-day", "description": "X Developer account set up, API keys obtained", "category": "infrastructure" },
+      { "time": "all-day", "description": "Built & deployed X auto-post Cloudflare Worker", "category": "development" },
+      { "time": "all-day", "description": "Complete avatype1.com website redesign — dark ocean theme", "category": "design" },
+      { "time": "01:00", "description": "Established PLAN MODE convention for brain-dump workflows", "category": "decision" }
+    ]
+  }
+]

@@ -1,6 +1,76 @@
 {
-  "lastUpdated": "2026-02-01T12:00:00Z",
+  "lastUpdated": "2026-02-02T12:00:00Z",
   "items": [
+    {
+      "id": "36",
+      "title": "Claude 3.7 Sonnet Released - Enhanced Reasoning and Code Generation",
+      "summary": "Anthropic releases Claude 3.7 Sonnet with improved reasoning capabilities and faster code generation, building on the success of Claude Code CLI tool.",
+      "url": "https://en.wikipedia.org/wiki/Anthropic",
+      "category": "ai",
+      "source": "Wikipedia / Anthropic",
+      "date": "2026-02-02",
+      "relevance": "Latest Claude model means even better iOS development assistance for AVA app and more sophisticated ESP32-C6 firmware generation"
+    },
+    {
+      "id": "37",
+      "title": "Apple February Preview: iOS 26.3 Release & Personalized Siri Beta",
+      "summary": "iOS 26.3 expected mid-February with Android transfer tool and notification forwarding. Apple also announcing Google Gemini-powered Siri beta.",
+      "url": "https://www.macrumors.com/2026/01/30/apple-in-february-2026-preview/",
+      "category": "tools",
+      "source": "MacRumors",
+      "date": "2026-02-02",
+      "relevance": "iOS 26.3 notification forwarding could enhance AVA companion device integration; Gemini Siri may inspire AI voice features"
+    },
+    {
+      "id": "38",
+      "title": "Eversense 365 One-Year CGM Approved for Europe Launch",
+      "summary": "Senseonics receives CE Mark for 365-day implantable CGM launching in Germany, Italy, Spain, and Sweden. Only requires one insertion per year.",
+      "url": "https://www.globenewswire.com/news-release/2026/01/29/3229070/0/en/Senseonics-Receives-European-Approval-for-Eversense-365-World-s-Longest-lasting-Continuous-Glucose-Monitor.html",
+      "category": "diabetes",
+      "source": "Senseonics / Globe Newswire",
+      "date": "2026-02-02",
+      "relevance": "Revolutionary for AvaDrive integration - eliminates 26+ annual sensor changes and auth token refreshes, reduces to single annual setup"
+    },
+    {
+      "id": "39",
+      "title": "Show HN: NanoClaw - Clawdbot in 500 Lines of TypeScript",
+      "summary": "Developer creates minimal Clawdbot implementation in TypeScript with Apple container isolation, demonstrating core Claude Code functionality.",
+      "url": "https://github.com/gavrielc/nanoclaw",
+      "category": "claude",
+      "source": "Hacker News / GitHub",
+      "date": "2026-02-02",
+      "relevance": "Educational resource for understanding Claude Code architecture - could inspire custom automation tools for AVA development workflow"
+    },
+    {
+      "id": "40",
+      "title": "iPhone 16 Pro Max MLX LLM Performance Issues Reported",
+      "summary": "Users report garbage output when running local LLMs via MLX on iPhone 16 Pro Max, highlighting challenges with on-device AI inference.",
+      "url": "https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/",
+      "category": "tools",
+      "source": "Rafael Costa Blog / Hacker News",
+      "date": "2026-02-02",
+      "relevance": "Important for AVA app local AI features - stick with cloud inference or test thoroughly before implementing local LLM features"
+    },
+    {
+      "id": "41",
+      "title": "Swift January 2026 Updates - WebAssembly and Cross-Platform Progress",
+      "summary": "Swift.org highlights community progress including WebAssembly advances and developer sharing experiences building web apps with Swift.",
+      "url": "https://www.swift.org/blog/whats-new-in-swift-january-2026/",
+      "category": "tools",
+      "source": "Swift.org",
+      "date": "2026-02-02",
+      "relevance": "WebAssembly Swift could enable AVA educational content to run in browsers, expanding reach beyond iOS for T1D education"
+    },
+    {
+      "id": "42",
+      "title": "Senseonics Integrates with Sequel twiist AID System",
+      "summary": "Eversense 365 CGM now integrates with automated insulin delivery systems, representing major step toward closed-loop diabetes management.",
+      "url": "https://www.stocktitan.net/news/SENS/senseonics-receives-european-approval-for-eversense-365-world-s-b3ucc7gz844h.html",
+      "category": "diabetes",
+      "source": "Senseonics / Stock Titan",
+      "date": "2026-02-02",
+      "relevance": "Closed-loop systems becoming mainstream validates AVA's educational mission - need to prepare kids for future automated management"
+    },
     {
       "id": "31",
       "title": "OpenAI Retiring GPT-4o and Older Models on February 13",

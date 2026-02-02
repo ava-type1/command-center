@@ -45,7 +45,7 @@ export function ContentQueue({ posts, onUpdate }: ContentQueueProps) {
   };
 
   const getPostToXUrl = (post: SocialPost) => {
-    const text = post.content + (post.hashtags.length > 0 ? '\n\n' + post.hashtags.join(' ') : '');
+    const text = post.content + (post.hashtags?.length > 0 ? '\n\n' + post.hashtags?.join(' ') : '');
     return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
   };
 
@@ -129,9 +129,9 @@ export function ContentQueue({ posts, onUpdate }: ContentQueueProps) {
                 </div>
               )}
 
-              {post.hashtags.length > 0 && (
+              {post.hashtags?.length > 0 && (
                 <div className="flex flex-wrap gap-2">
-                  {post.hashtags.map(tag => (
+                  {post.hashtags?.map(tag => (
                     <span key={tag} className="text-sm text-neon-cyan">
                       {tag}
                     </span>
@@ -168,7 +168,7 @@ export function ContentQueue({ posts, onUpdate }: ContentQueueProps) {
                 {post.platform === 'tiktok' && (
                   <button
                     onClick={() => {
-                      const text = post.content + (post.hashtags.length > 0 ? '\n\n' + post.hashtags.join(' ') : '');
+                      const text = post.content + (post.hashtags?.length > 0 ? '\n\n' + post.hashtags?.join(' ') : '');
                       navigator.clipboard.writeText(text);
                     }}
                     className="flex items-center gap-2 px-4 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400 rounded-lg text-sm font-medium transition-colors"

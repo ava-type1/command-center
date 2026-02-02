@@ -1,4 +1,4 @@
-import { Calendar, Clock, Trash2, Edit } from 'lucide-react';
+import { Calendar, Clock, Trash2, Edit, ExternalLink } from 'lucide-react';
 import type { SocialPost } from '../../types';
 
 interface ContentQueueProps {
@@ -42,6 +42,11 @@ export function ContentQueue({ posts, onUpdate }: ContentQueueProps) {
       post.id === postId ? { ...post, status: newStatus } : post
     );
     onUpdate(updatedPosts);
+  };
+
+  const getPostToXUrl = (post: SocialPost) => {
+    const text = post.content + (post.hashtags.length > 0 ? '\n\n' + post.hashtags.join(' ') : '');
+    return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
   };
 
   const formatDate = (dateStr: string) => {
@@ -149,7 +154,28 @@ export function ContentQueue({ posts, onUpdate }: ContentQueueProps) {
               </div>
 
               {/* Action buttons */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
+                {post.platform === 'x' && (
+                  <a
+                    href={getPostToXUrl(post)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg text-sm font-medium transition-colors"
+                  >
+                    <span>𝕏</span> Post to X <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+                {post.platform === 'tiktok' && (
+                  <button
+                    onClick={() => {
+                      const text = post.content + (post.hashtags.length > 0 ? '\n\n' + post.hashtags.join(' ') : '');
+                      navigator.clipboard.writeText(text);
+                    }}
+                    className="flex items-center gap-2 px-4 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400 rounded-lg text-sm font-medium transition-colors"
+                  >
+                    🎵 Copy for TikTok
+                  </button>
+                )}
                 {post.status === 'draft' && (
                   <button
                     onClick={() => updatePostStatus(post.id, 'approved')}

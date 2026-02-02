@@ -1,12 +1,28 @@
 {
   "posts": [
     {
+      "id": "personal-announce-01",
+      "platform": "x",
+      "type": "single",
+      "content": "Y'all have seen me talk about this — here's where it's at.\n\n30+ years with Type 1 Diabetes. My daughter diagnosed at 3. A car wreck from a low on my way to work. All of it led me to build @avatype1.\n\n🎮 App that makes learning about diabetes fun for kids\n🚗 Device that shows your BG on your dashboard while driving\n💊 Free tools to find financial help for insulin & supplies\n\nCheck it out: https://ava-type1.github.io\n\nT1D fam — I'd love feedback. Shares help too 💙\n\n#Type1Diabetes #T1D #DiabetesAwareness #AVAType1",
+      "status": "ready",
+      "priority": true,
+      "suggested_date": "2026-02-02T15:00:00Z",
+      "created_at": "2026-02-02T14:44:00Z",
+      "performance": null
+    },
+    {
       "id": "launch-x-01",
       "platform": "x",
       "type": "thread",
       "content": "I was diagnosed with Type 1 Diabetes at age 4. That was 1992.\n\nIn 2022, my daughter Kaislyn was diagnosed at age 3.\n\n30 years apart. Same disease. Same fear.\n\nBut this time, I could do something about it.\n\nToday I'm launching AVA Type 1. 🧵",
       "media_notes": "Family photo or AVA app screenshot",
-      "hashtags": ["#Type1Diabetes", "#T1D", "#AVAType1", "#AppLaunch"],
+      "hashtags": [
+        "#Type1Diabetes",
+        "#T1D",
+        "#AVAType1",
+        "#AppLaunch"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-03T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -18,7 +34,11 @@
       "platform": "x",
       "type": "thread",
       "content": "AVA Type 1 is a simulation game that teaches kids ages 5-18 how to manage Type 1 Diabetes.\n\nCarb counting. Insulin dosing. Recognizing highs and lows.\n\nNot a textbook. A game.\n\nBecause kids learn by playing, not by reading pamphlets in a doctor's office.",
-      "hashtags": ["#T1D", "#AVAType1", "#EdTech"],
+      "hashtags": [
+        "#T1D",
+        "#AVAType1",
+        "#EdTech"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-03T14:05:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -30,7 +50,11 @@
       "platform": "x",
       "type": "thread",
       "content": "I built this with SwiftUI on nights and weekends. No VC funding. No team of 50. Just a dad who's lived with T1D for 30+ years and a daughter who deserves better tools than I had.\n\nEvery feature comes from real experience. Not focus groups.",
-      "hashtags": ["#BuildInPublic", "#IndieApp", "#SwiftUI"],
+      "hashtags": [
+        "#BuildInPublic",
+        "#IndieApp",
+        "#SwiftUI"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-03T14:10:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -43,7 +67,11 @@
       "type": "thread",
       "content": "And we're building something physical too — AVA Buddy.\n\nA plush companion with an ESP32 display that connects to the app via Bluetooth. Something a kid can hold. Something that makes diabetes feel less lonely.\n\nComing soon.",
       "media_notes": "Photo of AVA Buddy prototype",
-      "hashtags": ["#AVABuddy", "#ESP32", "#DiabetesTech"],
+      "hashtags": [
+        "#AVABuddy",
+        "#ESP32",
+        "#DiabetesTech"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-03T14:15:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -55,7 +83,11 @@
       "platform": "x",
       "type": "thread",
       "content": "If you know a kid with T1D, a newly diagnosed family, a school nurse, an endo — share this.\n\nAVA Type 1 is on the App Store now.\n\nMaking learning about diabetes care feel less like a burden and more like an adventure.\n\n@avatype1 🩵",
-      "hashtags": ["#AVAType1", "#T1D", "#DiabetesAwareness"],
+      "hashtags": [
+        "#AVAType1",
+        "#T1D",
+        "#DiabetesAwareness"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-03T14:20:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -68,7 +100,14 @@
       "type": "post",
       "content": "Hook: \"In 1992, I was diagnosed with Type 1 Diabetes at age 4. In 2022, my daughter was diagnosed at age 3.\"\n\nSide-by-side old vs modern diabetes supplies. Same disease, completely different tools. \"But one thing that STILL doesn't exist? Something that makes a little kid actually understand what's happening to their body. So I built it.\"",
       "media_notes": "Side-by-side comparison video: old supplies vs modern CGM/pump, emotional transition to app reveal",
-      "hashtags": ["#type1diabetes", "#t1d", "#t1dparent", "#diabetesdad", "#avatype1", "#chronicillness"],
+      "hashtags": [
+        "#type1diabetes",
+        "#t1d",
+        "#t1dparent",
+        "#diabetesdad",
+        "#avatype1",
+        "#chronicillness"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-03T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -79,7 +118,10 @@
       "platform": "x",
       "type": "post",
       "content": "Type 1 Diabetes doesn't care that you're 3 years old.\n\nSo we built something that meets kids where they are.",
-      "hashtags": ["#T1D", "#AVAType1"],
+      "hashtags": [
+        "#T1D",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-04T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -91,7 +133,14 @@
       "type": "post",
       "content": "Hook: \"This app doesn't exist yet on the App Store. Until now.\"\n\nScreen recording walkthrough of simulation gameplay — managing blood sugar, making food choices, responding to highs and lows. \"It's not a textbook. It's a game. And it actually teaches.\"",
       "media_notes": "Screen recording of app gameplay with energetic cuts, show gamification elements",
-      "hashtags": ["#applaunch", "#indiedev", "#t1d", "#avatype1", "#diabetestech", "#edtech"],
+      "hashtags": [
+        "#applaunch",
+        "#indiedev",
+        "#t1d",
+        "#avatype1",
+        "#diabetestech",
+        "#edtech"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-04T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -102,7 +151,11 @@
       "platform": "x",
       "type": "post",
       "content": "T1D parents — what's the one thing you wish existed when your kid was first diagnosed?\n\nI'm building for that answer. Drop it below. 👇",
-      "hashtags": ["#T1D", "#T1DParent", "#AVAType1"],
+      "hashtags": [
+        "#T1D",
+        "#T1DParent",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-05T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -114,7 +167,13 @@
       "type": "post",
       "content": "Hook: \"The doctor said three words that broke me: 'She has diabetes.'\"\n\nEmotional but grounded story of Kaislyn's diagnosis. The ER. The training. Finger pricks on a 3-year-old. \"I've lived with this for 30 years. I know what she's facing. And I decided she'd have better tools than I did.\" Transition to app.",
       "media_notes": "Talking to camera, genuine emotion, end with app footage and Kaislyn",
-      "hashtags": ["#diabetesdiagnosis", "#t1dparent", "#parentlife", "#chronicillness", "#avatype1"],
+      "hashtags": [
+        "#diabetesdiagnosis",
+        "#t1dparent",
+        "#parentlife",
+        "#chronicillness",
+        "#avatype1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-06T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -125,7 +184,11 @@
       "platform": "x",
       "type": "post",
       "content": "To every parent who's set a 2AM alarm to check blood sugar:\n\nI see you. I am you.\n\nThis app is for your kid. And for you.",
-      "hashtags": ["#T1D", "#T1DParent", "#AVAType1"],
+      "hashtags": [
+        "#T1D",
+        "#T1DParent",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-06T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -137,7 +200,13 @@
       "type": "post",
       "content": "Hook: \"'Can't you just give her less sugar?'\" (deadpan stare)\n\nRapid-fire myth-busting. \"Type 1 is autoimmune, not dietary.\" \"No, she didn't eat too much candy.\" \"Yes, she will have this forever.\" \"No, cinnamon won't fix it.\" End: \"This is why I built an app — because education matters.\"",
       "media_notes": "Quick cuts, text overlays for each myth, deadpan reactions",
-      "hashtags": ["#t1dmyths", "#diabetesmyths", "#type1vstype2", "#autoimmune", "#avatype1"],
+      "hashtags": [
+        "#t1dmyths",
+        "#diabetesmyths",
+        "#type1vstype2",
+        "#autoimmune",
+        "#avatype1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-07T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -148,7 +217,11 @@
       "platform": "x",
       "type": "post",
       "content": "Quick T1D fact most people don't know:\n\nType 1 is autoimmune. The body attacks its own insulin-producing cells. It has nothing to do with diet or lifestyle.\n\nYou can't prevent it. You can't reverse it. You manage it. Every single day.",
-      "hashtags": ["#T1D", "#DiabetesEducation", "#Type1Diabetes"],
+      "hashtags": [
+        "#T1D",
+        "#DiabetesEducation",
+        "#Type1Diabetes"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-07T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -160,7 +233,13 @@
       "type": "post",
       "content": "Hook: \"I asked my daughter to explain her diabetes.\"\n\nLet Kaislyn explain in her own words (adorable kid energy). Then show how the app teaches these concepts through play — carb counting as a game, insulin as a superpower. \"She shouldn't have to be a scientist. She should get to be a kid.\"",
       "media_notes": "Kaislyn talking to camera, then transition to app gameplay showing same concepts",
-      "hashtags": ["#t1dkids", "#diabeteslife", "#t1dparenting", "#avatype1", "#kidshealth"],
+      "hashtags": [
+        "#t1dkids",
+        "#diabeteslife",
+        "#t1dparenting",
+        "#avatype1",
+        "#kidshealth"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-08T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -171,7 +250,10 @@
       "platform": "x",
       "type": "post",
       "content": "\"Making learning about diabetes care feel less like a burden and more like an adventure.\"\n\nThat's not a tagline. That's a promise from a dad to his daughter.",
-      "hashtags": ["#AVAType1", "#T1D"],
+      "hashtags": [
+        "#AVAType1",
+        "#T1D"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-09T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -183,7 +265,14 @@
       "type": "post",
       "content": "Hook: Camera on desk covered in electronics and a half-sewn plush toy at 2AM.\n\nBehind-the-scenes building AVA Buddy — ESP32 display, soldering, coding, sewing. \"My daughter hugs this thing. And it talks back to the app. I'm a dad who codes at 2AM because I remember being 4 years old and scared.\"",
       "media_notes": "Workshop footage, close-ups of electronics, show the plush coming together",
-      "hashtags": ["#esp32", "#maker", "#indiedev", "#avatype1", "#avabuddy", "#buildinpublic"],
+      "hashtags": [
+        "#esp32",
+        "#maker",
+        "#indiedev",
+        "#avatype1",
+        "#avabuddy",
+        "#buildinpublic"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-10T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -194,7 +283,11 @@
       "platform": "x",
       "type": "post",
       "content": "The T1D community is the most resilient group of people I've ever known.\n\n30 years in, and I'm still learning from you.\n\nBuilding @avatype1 in the open because this community deserves transparency, not marketing.",
-      "hashtags": ["#T1D", "#BuildInPublic", "#AVAType1"],
+      "hashtags": [
+        "#T1D",
+        "#BuildInPublic",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-10T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -205,7 +298,11 @@
       "platform": "x",
       "type": "post",
       "content": "Hot take: Most diabetes education materials are designed for adults and handed to children.\n\nKids deserve tools built *for* them. Not adapted *at* them.",
-      "hashtags": ["#T1D", "#DiabetesEducation", "#AVAType1"],
+      "hashtags": [
+        "#T1D",
+        "#DiabetesEducation",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-11T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -217,7 +314,13 @@
       "type": "post",
       "content": "Hook: Show a plate of food. Text overlay: \"Quick — how many carbs? You have 10 seconds.\"\n\nFast-paced game-show style. Show different meals, challenge viewers to guess carbs. Most get it wrong. \"This is what a 5-year-old with T1D has to learn. We turned it into a game.\" Show app's carb-counting feature.",
       "media_notes": "Quick cuts between food plates with countdown timer, reveal carb counts, transition to app",
-      "hashtags": ["#carbcounting", "#t1dlife", "#diabetesgame", "#avatype1", "#nutrition"],
+      "hashtags": [
+        "#carbcounting",
+        "#t1dlife",
+        "#diabetesgame",
+        "#avatype1",
+        "#nutrition"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-12T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -228,7 +331,10 @@
       "platform": "x",
       "type": "post",
       "content": "The gap between \"your child has diabetes\" and \"your child understands diabetes\" is enormous.\n\nAVA Type 1 lives in that gap.",
-      "hashtags": ["#T1D", "#AVAType1"],
+      "hashtags": [
+        "#T1D",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-12T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -240,7 +346,14 @@
       "type": "post",
       "content": "Hook: \"I searched the App Store for a T1D education app for kids. Here's what I found:\" (shows nothing useful)\n\nWalk through what exists — mostly adult-focused, clinical, boring for kids. \"My daughter deserves better. Every T1D kid deserves better. Nobody was building it. So I did. SwiftUI. Nights and weekends. One dad. One mission.\"",
       "media_notes": "Screen recording of App Store search, show the gap, then reveal AVA Type 1",
-      "hashtags": ["#indiedev", "#buildinpublic", "#t1d", "#avatype1", "#startuplife", "#dadlife"],
+      "hashtags": [
+        "#indiedev",
+        "#buildinpublic",
+        "#t1d",
+        "#avatype1",
+        "#startuplife",
+        "#dadlife"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-13T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -251,7 +364,11 @@
       "platform": "x",
       "type": "post",
       "content": "I've been practicing for this app for 30 years. I just didn't know it until my daughter's diagnosis.",
-      "hashtags": ["#T1D", "#AVAType1", "#IndieApp"],
+      "hashtags": [
+        "#T1D",
+        "#AVAType1",
+        "#IndieApp"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-14T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -263,7 +380,12 @@
       "type": "post",
       "content": "Hook: \"I've had Type 1 Diabetes for over 30 years. Here's what I wish someone told me at age 4.\"\n\nList format: \"You're not broken.\" \"It gets easier but it never goes away.\" \"The people who get it are your people.\" \"Technology will change your life.\" \"And someday, you might build something that helps the next kid.\" Close on Kaislyn.",
       "media_notes": "Talking to camera, genuine and reflective, end with Kaislyn footage",
-      "hashtags": ["#t1dlife", "#diabeteswarrior", "#livingwithdiabetes", "#avatype1"],
+      "hashtags": [
+        "#t1dlife",
+        "#diabeteswarrior",
+        "#livingwithdiabetes",
+        "#avatype1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-15T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -275,7 +397,13 @@
       "type": "post",
       "content": "Hook: Kaislyn tapping on an iPad, giggling.\n\nShow Kaislyn using the app. Her reactions. What she likes. What confused her. \"My toughest QA tester is 5 years old. And she's the reason this exists.\" End with her saying something about AVA in her own words.",
       "media_notes": "Kaislyn using app on iPad, genuine reactions, end with her words",
-      "hashtags": ["#kidtester", "#avatype1", "#t1dkids", "#dadbuilds", "#indieapp"],
+      "hashtags": [
+        "#kidtester",
+        "#avatype1",
+        "#t1dkids",
+        "#dadbuilds",
+        "#indieapp"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-14T19:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",
@@ -286,7 +414,12 @@
       "platform": "x",
       "type": "post",
       "content": "Current status: waiting for App Store review while refreshing the screen every 4 minutes like it's a blood sugar monitor.\n\nSome habits never change. 😅",
-      "hashtags": ["#AppStore", "#IndieDev", "#T1D", "#AVAType1"],
+      "hashtags": [
+        "#AppStore",
+        "#IndieDev",
+        "#T1D",
+        "#AVAType1"
+      ],
       "status": "draft",
       "suggested_date": "2026-02-02T14:00:00Z",
       "created_at": "2026-02-01T18:20:00Z",

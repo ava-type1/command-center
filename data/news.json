@@ -1,6 +1,66 @@
 {
-  "lastUpdated": "2026-02-02T12:00:00Z",
+  "lastUpdated": "2026-02-03T12:00:00Z",
   "items": [
+    {
+      "id": "43",
+      "title": "Claude Sonnet 5 Expected to Launch Today - Major Performance Boost",
+      "summary": "Leaked reports suggest Claude Sonnet 5 launches February 3, 2026 with superior coding capabilities and faster inference than current models.",
+      "url": "https://www.testingcatalog.com/anthropic-is-about-to-drop-sonnet-5-during-super-bowl-week/",
+      "category": "claude",
+      "source": "Testing Catalog",
+      "date": "2026-02-03",
+      "relevance": "Major upgrade to your primary coding assistant - expect even better iOS development help for AVA app and ESP32-C6 firmware generation"
+    },
+    {
+      "id": "44",
+      "title": "FDA Clears Eversense 365 - First One-Year CGM in United States",
+      "summary": "Senseonics receives FDA clearance for Eversense 365, the world's first 1-year implantable CGM. Launch expected Q4 2024 for adults with T1D/T2D.",
+      "url": "https://www.drugtopics.com/view/fda-clears-first-1-year-cgm-for-diabetes",
+      "category": "diabetes",
+      "source": "Drug Topics",
+      "date": "2026-02-03",
+      "relevance": "Revolutionary for AvaDrive - eliminates 26+ annual sensor changes, reduces auth complexity to single yearly setup. Perfect for long-term reliability."
+    },
+    {
+      "id": "45",
+      "title": "OpenAI Launches Codex App to Challenge Claude Code Dominance",
+      "summary": "OpenAI releases dedicated Codex app with GPT-5.2-Codex integration, targeting developers as direct competition to Anthropic's $1B Claude Code business.",
+      "url": "https://www.technology.org/2026/02/03/openai-releases-codex-app-challenges-anthropics-coding-dominance/",
+      "category": "ai",
+      "source": "Technology.org",
+      "date": "2026-02-03",
+      "relevance": "Competition heating up in AI coding - validates your Claude Code choice but worth monitoring OpenAI's developer tooling advances"
+    },
+    {
+      "id": "46",
+      "title": "Anthropic Labs Division Announced with Mike Krieger Leadership",
+      "summary": "Anthropic creates new 'Labs' division led by former Instagram co-founder Mike Krieger, focusing on experimental AI applications beyond core models.",
+      "url": "https://en.wikipedia.org/wiki/Anthropic",
+      "category": "ai",
+      "source": "Wikipedia / Anthropic",
+      "date": "2026-02-03",
+      "relevance": "Anthropic expanding beyond models into applications - could lead to specialized tools for specific domains like health tech"
+    },
+    {
+      "id": "47",
+      "title": "No-Code Micro SaaS Ideas Trending for 2026 Development",
+      "summary": "Analysis of profitable no-code SaaS opportunities focusing on automation tools, productivity enhancers, and specialized vertical solutions.",
+      "url": "https://www.knack.com/blog/no-code-micro-saas-ideas/",
+      "category": "tools",
+      "source": "Knack Blog",
+      "date": "2026-02-03",
+      "relevance": "Could inspire rapid prototyping approaches for AVA companion app features and field service automation tools"
+    },
+    {
+      "id": "48",
+      "title": "Decagon Raises Billions with Generative AI Customer Support Platform",
+      "summary": "SaaS startup Decagon achieves billion-dollar valuation by building AI systems that completely solve customer problems rather than deflecting tickets.",
+      "url": "https://trackboxx.com/en/10-saas-startups-that-made-billions-in-2025-and-what-founders-can-learn-from-them/",
+      "category": "tools",
+      "source": "Trackboxx",
+      "date": "2026-02-03",
+      "relevance": "Problem-solving approach vs deflection strategy - applies to AVA app design where education should solve real diabetes management challenges"
+    },
     {
       "id": "36",
       "title": "Claude 3.7 Sonnet Released - Enhanced Reasoning and Code Generation",

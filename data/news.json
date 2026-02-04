@@ -1,6 +1,66 @@
 {
-  "lastUpdated": "2026-02-03T12:00:00Z",
+  "lastUpdated": "2026-02-04T12:00:00Z",
   "items": [
+    {
+      "id": "49",
+      "title": "FDA Approves Abbott's Lingo and Libre Rio - Two New OTC Continuous Glucose Monitors",
+      "summary": "Abbott receives FDA clearance for Lingo (general wellness) and Libre Rio (T2D without insulin), expanding OTC CGM market after Dexcom's Stelo.",
+      "url": "https://www.drugtopics.com/view/fda-approves-2-new-otc-continuous-glucose-monitors",
+      "category": "diabetes",
+      "source": "Drug Topics",
+      "date": "2026-02-04", 
+      "relevance": "OTC CGMs becoming mainstream validates AVA's educational mission - need to prepare content for non-prescription glucose monitoring users"
+    },
+    {
+      "id": "50",
+      "title": "Anthropic Launches Claude Legal Plugin - Causes Legal Tech Stock Market Meltdown",
+      "summary": "Claude Cowork adds specialized legal plugin for document review, risk flagging, and compliance tracking. Public legal software stocks plummet 8.5%+.",
+      "url": "https://legaltechnology.com/2026/02/03/anthropic-unveils-claude-legal-plugin-and-causes-market-meltdown/",
+      "category": "claude",
+      "source": "Legal Technology", 
+      "date": "2026-02-04",
+      "relevance": "Anthropic shifting from model supplier to application layer - validates specialized AI tooling approach for AVA ecosystem verticals"
+    },
+    {
+      "id": "51",
+      "title": "Apple Swift Student Challenge Opens February 6-28, 2026",
+      "summary": "Apple announces Swift Student Challenge with app playground submissions. Also announcing SwiftUI foundation sessions on February 10.",
+      "url": "https://developer.apple.com/hello/february26/",
+      "category": "tools",
+      "source": "Apple Developer",
+      "date": "2026-02-04",
+      "relevance": "Perfect timing to submit AVA Type 1 simulation as Swift Student Challenge entry - could provide valuable validation and exposure"
+    },
+    {
+      "id": "52",
+      "title": "Claude 5 (Sonnet 5) Release Expected February 2026 Based on Vertex AI Logs",
+      "summary": "Date string '20260203' found in Vertex AI logs suggests Claude 5 launch imminent. Analysis points to February/March 2026 release window.",
+      "url": "https://help.apiyi.com/en/claude-5-latest-news-2026-features-release-en.html",
+      "category": "claude",
+      "source": "Apiyi.com Blog",
+      "date": "2026-02-04",
+      "relevance": "Major Claude upgrade coming - expect enhanced coding capabilities for AVA development and more sophisticated diabetes content generation"
+    },
+    {
+      "id": "53", 
+      "title": "WIRED: Signos First FDA-Cleared AI-Enabled CGM System for Weight Management",
+      "summary": "Signos becomes first FDA-cleared AI system using CGMs for weight loss and metabolic health nudging in non-diabetic adults.",
+      "url": "https://www.wired.com/story/cgms-really-can-help-you-lose-weight/",
+      "category": "diabetes",
+      "source": "WIRED",
+      "date": "2026-02-04",
+      "relevance": "Validates AVA's gamification approach - AI-powered behavioral nudging with glucose data works for education and lifestyle changes"
+    },
+    {
+      "id": "54",
+      "title": "PearAI: Open-Source AI-Powered Code Editor Gaining Developer Traction",
+      "summary": "New VS Code alternative integrates AI-powered coding assistance directly into editor workflow, joining ranks with Cursor and Windsurf.",
+      "url": "https://www.saasgenius.com/new-tools/",
+      "category": "tools",
+      "source": "SaaS Genius",
+      "date": "2026-02-04",
+      "relevance": "Competition heating up in AI code editors - worth evaluating against Claude Code for AVA development workflow optimization"
+    },
     {
       "id": "43",
       "title": "Claude Sonnet 5 Expected to Launch Today - Major Performance Boost",

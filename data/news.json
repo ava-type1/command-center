@@ -1,6 +1,86 @@
 {
-  "lastUpdated": "2026-02-04T12:00:00Z",
+  "lastUpdated": "2026-02-05T12:00:00Z",
   "items": [
+    {
+      "id": "55",
+      "title": "GitHub Integrates Claude and Codex as Coding Agents in Public Preview",
+      "summary": "Claude by Anthropic and OpenAI Codex now available as coding agents for Copilot Pro+ and Enterprise customers, enabling autonomous task assignment from issues and PRs.",
+      "url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github/",
+      "category": "claude",
+      "source": "GitHub Changelog",
+      "date": "2026-02-05",
+      "relevance": "Direct integration with your GitHub repos - assign Claude to work on AVA app features autonomously, streamlining development workflow"
+    },
+    {
+      "id": "56",
+      "title": "Apple Xcode 26.3 Adds Native AI Coding Agent Support",
+      "summary": "Apple releases Xcode 26.3 with autonomous AI coding capabilities, including Claude Agent SDK integration for SwiftUI and UIKit development with visual preview verification.",
+      "url": "https://cyberinsider.com/apple-embraces-agentic-ai-coding-in-macos-with-xcode-26-3/",
+      "category": "tools",
+      "source": "CyberInsider",
+      "date": "2026-02-05",
+      "relevance": "Game-changer for AVA iOS development - Claude can now autonomously code SwiftUI interfaces, test via Xcode Previews, and iterate without leaving your IDE"
+    },
+    {
+      "id": "57",
+      "title": "Anthropic Claude Cowork Triggers 'SaaSpocalypse' with Legal Plugin",
+      "summary": "Claude Cowork's 11 new plugins cause $285B tech selloff as AI moves from assistance to automation. Legal, finance, and productivity plugins threaten traditional SaaS models.",
+      "url": "https://www.cnbctv18.com/technology/what-is-anthropics-new-ai-tool-and-why-it-has-triggered-a-saaspocalypse-ws-el-19841489.htm",
+      "category": "claude",
+      "source": "CNBC-TV18",
+      "date": "2026-02-05",
+      "relevance": "Major AI capability expansion - Claude now handles complete workflows from legal to finance. Consider how specialized diabetes education plugins could enhance AVA ecosystem"
+    },
+    {
+      "id": "58",
+      "title": "Twiist Pump Adds Diabeloop DBLG2 - First No-Meal-Announcement AID System",
+      "summary": "Sequel Med Tech announces partnership with Diabeloop for fully automated insulin delivery algorithm that requires zero meal announcements, launching spring 2026.",
+      "url": "https://www.hcplive.com/view/diabetes-dialogue-tech-updates-on-twiist-minimed-go-and-more",
+      "category": "diabetes",
+      "source": "HCPLive",
+      "date": "2026-02-05",
+      "relevance": "Revolutionary simplification of diabetes management - validates AVA's education mission toward fully automated systems. Kids need to understand the underlying physiology as systems get smarter"
+    },
+    {
+      "id": "59",
+      "title": "OpenAI GPT-5.2 Performance Upgrade - 40% Speed Improvement",
+      "summary": "OpenAI releases GPT-5.2 API upgrade with 40% performance improvement, competing directly with Claude 3.5 Sonnet inference speeds for coding tasks.",
+      "url": "https://www.eonmsk.com/2026/02/03/openai-upgrades-40-performance-of-gpt-5-2-api-models/",
+      "category": "ai",
+      "source": "EONMSK News",
+      "date": "2026-02-05",
+      "relevance": "AI competition intensifying - validates your Claude Code choice as both companies push performance boundaries. Expect continued improvements in coding assistance quality"
+    },
+    {
+      "id": "60",
+      "title": "Medtronic MiniMed Go FDA Cleared - Smart MDI with Libre Integration",
+      "summary": "Medtronic's MiniMed Go mobile app receives FDA clearance, pairing InPen smart insulin pen with rebranded Libre 3 Plus (Instinct) for advanced MDI management.",
+      "url": "https://www.hcplive.com/view/diabetes-dialogue-tech-updates-on-twiist-minimed-go-and-more",
+      "category": "diabetes",
+      "source": "HCPLive",
+      "date": "2026-02-05",
+      "relevance": "Smart MDI systems advancing - good reference for AVA app's insulin-on-board modeling and carb ratio education. Shows market demand for intelligent diabetes management tools"
+    },
+    {
+      "id": "61",
+      "title": "DexCom CEO: GLP-1 Users Should Also Wear CGMs",
+      "summary": "DexCom CEO Jake Leach advocates for CGM use among type 2 diabetics on GLP-1 medications, expanding CGM market beyond traditional insulin-dependent users.",
+      "url": "https://medcitynews.com/2026/02/dexcoms-ceo-believes-diabetics-on-glp-1s-should-also-wear-cgms/",
+      "category": "diabetes",
+      "source": "MedCity News",
+      "date": "2026-02-05",
+      "relevance": "CGM market expanding beyond T1D - potential broader audience for AVA educational content. Consider educational modules for T2D and GLP-1 users understanding glucose patterns"
+    },
+    {
+      "id": "62",
+      "title": "2026 SaaS Trends: AI Investment Without Performance Visibility",
+      "summary": "Zylo's SaaS Management Index shows teams heavily investing in AI tools but lacking visibility into productivity gains, cost savings, or performance impact measurement.",
+      "url": "https://zylo.com/blog/saas-predictions-for-2026-signal-a-shift-in-spend-and-governance/",
+      "category": "tools",
+      "source": "Zylo",
+      "date": "2026-02-05",
+      "relevance": "Important insight for AVA monetization - focus on measurable outcomes and clear ROI when positioning educational tools. Track learning progress and diabetes management improvements"
+    },
     {
       "id": "49",
       "title": "FDA Approves Abbott's Lingo and Libre Rio - Two New OTC Continuous Glucose Monitors",

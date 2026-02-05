@@ -197,6 +197,114 @@
       "potential": "low",
       "createdAt": "2026-02-05T05:00:00Z",
       "notes": "MQTT integration. Purely for viral content — not a real product. Would get millions of views."
+    },
+    {
+      "id": "23",
+      "title": "🔧 Ralph Wiggum - Autonomous Loop Plugin",
+      "description": "Run Claude Code autonomously for hours. Sets up a self-referential feedback loop where Claude keeps working on a task until completion. Named after the Simpsons character.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "INSTALL: /plugin install ralph-wiggum@anthropic-agent-skills | USE: /ralph-loop 'Build feature X' --max-iterations 10 --completion-promise 'DONE' | Great for longer tasks like building entire features while you do other work. GitHub: https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum"
+    },
+    {
+      "id": "24",
+      "title": "🔧 XcodeBuildMCP - iOS Build Integration",
+      "description": "MCP server that lets Claude Code build, run, and test your iOS/macOS projects directly. No more copy-pasting build errors — Claude sees them in real-time.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "INSTALL: npm install -g xcodebuildmcp@beta | CONFIG: Add to ~/.config/claude-code/mcp.json | Perfect for AVA Type 1 development. Claude can build, run simulator, see errors, fix them automatically. GitHub: https://github.com/cameroncooke/XcodeBuildMCP"
+    },
+    {
+      "id": "25",
+      "title": "🔧 Swift/iOS Development Skill",
+      "description": "Official skill that teaches Claude Swift 6 standards, modern SwiftUI patterns, @Observable macro, async/await best practices. Makes Claude way better at iOS code.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "INSTALL: /plugin marketplace add anthropics/skills then /plugin install example-skills@anthropic-agent-skills | Or download from mcpmarket.com/tools/skills/developing-with-swift | Enforces modern patterns you want in AVA apps."
+    },
+    {
+      "id": "26",
+      "title": "🔧 ESP-IDF MCP Server",
+      "description": "MCP server for ESP32 development using ESP-IDF framework. Claude can build, flash firmware, and auto-fix build errors for your ESP32 projects.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "INSTALL: Clone https://github.com/nicholasgriffintn/esp-mcp | CONFIG: claude mcp add-json 'esp-run' with IDF_PATH set | Perfect for AvaDrive ESP32 display firmware. Claude can flash directly to connected device."
+    },
+    {
+      "id": "27",
+      "title": "🔧 Embedded Systems Skill",
+      "description": "Skill for firmware development on STM32, ESP32, and Nordic platforms. Teaches Claude embedded patterns, memory constraints, real-time considerations.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "Download from mcpmarket.com/tools/skills/embedded-systems-engineer | Improves Claude's ESP32 code quality for AvaDrive hardware projects."
+    },
+    {
+      "id": "28",
+      "title": "🔧 Context7 MCP - Live Documentation",
+      "description": "Gives Claude access to up-to-date, version-specific documentation for any library. No more outdated API suggestions — pulls current docs directly.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "INSTALL: npx -y @anthropic-ai/mcp-context7 | Especially useful for fast-moving libraries like SwiftUI, ESP-IDF. Claude always has current API info."
+    },
+    {
+      "id": "29",
+      "title": "🔧 Cloudflare Workers Skill",
+      "description": "Official Cloudflare skill for deploying Workers, KV, R2, D1, Pages. Claude knows the latest Wrangler commands and best practices.",
+      "category": "improvement",
+      "potential": "medium",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "GitHub: https://github.com/cloudflare/skills | Useful for Command Center, Benefits Navigator, and other Cloudflare deployments. Claude handles wrangler config correctly."
+    },
+    {
+      "id": "30",
+      "title": "🔧 Anthropic Official Skills Pack",
+      "description": "Bundle of official skills from Anthropic: document creation (docx, pptx, xlsx, pdf), web artifacts builder, MCP builder, webapp testing, skill creator.",
+      "category": "improvement",
+      "potential": "medium",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "INSTALL: /plugin marketplace add anthropics/skills | /plugin install document-skills@anthropic-agent-skills | /plugin install example-skills@anthropic-agent-skills | Good baseline of capabilities."
+    },
+    {
+      "id": "31",
+      "title": "🔧 React Native Skill (Vercel)",
+      "description": "Official skill from Vercel team for React Native best practices and performance. If you ever build AVA apps for Android too, this is essential.",
+      "category": "improvement",
+      "potential": "medium",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "GitHub: https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills | For potential cross-platform AVA development."
+    },
+    {
+      "id": "32",
+      "title": "🔧 Expo Skill - React Native Builds",
+      "description": "Official skill from Expo team. If AVA Type 1 ever goes cross-platform with React Native + Expo, this handles builds, EAS, and deployment.",
+      "category": "improvement",
+      "potential": "low",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "GitHub: https://github.com/expo/skills | Future consideration for Android version of AVA apps."
+    },
+    {
+      "id": "33",
+      "title": "🔧 Sentry Skill - Error Tracking",
+      "description": "Official Sentry skill for error tracking and monitoring. Claude can set up Sentry, query errors, and help debug production issues.",
+      "category": "improvement",
+      "potential": "medium",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "GitHub: https://github.com/getsentry/skills | Useful when AVA apps are in production and you need crash reporting."
+    },
+    {
+      "id": "34",
+      "title": "🔧 Awesome Agent Skills Repository",
+      "description": "Curated collection of 200+ skills from Anthropic, Google Labs, Vercel, Stripe, Cloudflare, Trail of Bits, Hugging Face, and community. One-stop shop for finding skills.",
+      "category": "improvement",
+      "potential": "high",
+      "createdAt": "2026-02-05T06:00:00Z",
+      "notes": "GitHub: https://github.com/VoltAgent/awesome-agent-skills | Bookmark this — it's the most comprehensive skills directory. Browse when you need new capabilities."
     }
   ]
 }

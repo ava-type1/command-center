@@ -89,6 +89,114 @@
       "createdAt": "2026-01-29T05:00:00Z",
       "builtAt": "2026-01-29T08:00:00Z",
       "notes": "✅ BUILT: Full production PWA deployed to https://t1d-benefits-navigator.pages.dev. Comprehensive PAP database with 30+ programs, smart eligibility scoring, application guidance, installable PWA. React + Vite + Tailwind stack. GitHub: https://github.com/ava-type1/t1d-benefits-navigator"
+    },
+    {
+      "id": "11",
+      "title": "AvaDrive MQTT: Whole House RGB Takeover",
+      "description": "Every RGB light strip and smart bulb in the house syncs to the same color based on glucose. Urgent low = entire house turns red simultaneously. Film at night for viral video potential.",
+      "category": "feature",
+      "potential": "high",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration idea for AvaDrive. Visual impact is huge — shareable on TikTok/Instagram. Easy to demo with a few Hue bulbs + LED strips."
+    },
+    {
+      "id": "12",
+      "title": "AvaDrive MQTT: Smart Mirror BG Display",
+      "description": "Bathroom mirror shows glucose reading while getting ready in the morning. See your BG while brushing teeth. Raspberry Pi + two-way mirror + small display.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Smart mirrors are trendy in maker community. Natural daily touchpoint."
+    },
+    {
+      "id": "13",
+      "title": "AvaDrive MQTT: Fridge Magnet Display",
+      "description": "Small ESP32 display stuck to the fridge. Ironic placement — you see your BG right as you're reaching for a snack. Could flash warnings before you grab carbs.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Humorous angle for content. 'My fridge judges me now.'"
+    },
+    {
+      "id": "14",
+      "title": "AvaDrive MQTT: Motorcycle/Bike Helmet HUD",
+      "description": "Tiny display or LED strip inside helmet visor shows glucose at a glance. Critical for riders who can't check phones. Safety angle is huge.",
+      "category": "feature",
+      "potential": "high",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Niche but passionate audience (T1D motorcyclists). Could save lives."
+    },
+    {
+      "id": "15",
+      "title": "AvaDrive MQTT: Treadmill/Gym Mount",
+      "description": "Mount the portable display on gym equipment. See BG while working out without stopping. Exercise affects glucose — real-time visibility during workouts is valuable.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Fitness community crossover. Demo video at the gym."
+    },
+    {
+      "id": "16",
+      "title": "AvaDrive MQTT: Gaming Overlay/Pause",
+      "description": "Push glucose alerts as overlay on gaming PC/console. Optional auto-pause for urgent lows. 'My PS5 pauses Fortnite when my BG drops.'",
+      "category": "feature",
+      "potential": "high",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Huge with T1D gamers and gaming parents. MQTT → Home Assistant → PC macro or smart plug."
+    },
+    {
+      "id": "17",
+      "title": "AvaDrive MQTT: Backyard/Pool Speaker Alerts",
+      "description": "Outdoor speakers announce glucose alerts when you're in the yard, garage, or by the pool. Voice alerts: 'Kaislyn is 65 and dropping.'",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Practical for parents doing yardwork. Can't miss an announcement."
+    },
+    {
+      "id": "18",
+      "title": "AvaDrive MQTT: Nightstand BG Clock",
+      "description": "Replace bedside alarm clock with BG display. Wake up, see your glucose immediately. Doubles as night light with color-coded glow.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Simple, practical, daily use. Could sell as a kit."
+    },
+    {
+      "id": "19",
+      "title": "AvaDrive MQTT: Car Cupholder Mount",
+      "description": "Custom 3D-printed cupholder adapter for the portable display. Perfect positioning while driving. Doesn't block vents or windshield.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT/portable display accessory. Practical car use case. Could sell the STL or printed mount."
+    },
+    {
+      "id": "20",
+      "title": "AvaDrive MQTT: Bubble Machine Alert (Kids)",
+      "description": "Bubble machine activates when BG goes low. Fun, non-scary alert for young kids. 'Time for juice — look, bubbles!' Makes treating lows less traumatic.",
+      "category": "feature",
+      "potential": "medium",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Viral potential with kids content. Wholesome angle. MQTT → smart plug → bubble machine."
+    },
+    {
+      "id": "21",
+      "title": "AvaDrive MQTT: Vibrating Wearable Band",
+      "description": "Simple wristband or ankle band that vibrates for alerts. Different patterns for different urgency. Works when you can't hear or see alerts.",
+      "category": "feature",
+      "potential": "high",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Great for deaf/HoH community, heavy sleepers, loud environments. ESP32 + vibration motor."
+    },
+    {
+      "id": "22",
+      "title": "AvaDrive MQTT: Nerf Gun Wake-Up (Viral Joke)",
+      "description": "Motorized Nerf gun fires foam dart at sleeping person for urgent lows. Obviously a joke/viral video concept. 'Level 3 alert: physical intervention.'",
+      "category": "feature",
+      "potential": "low",
+      "createdAt": "2026-02-05T05:00:00Z",
+      "notes": "MQTT integration. Purely for viral content — not a real product. Would get millions of views."
     }
   ]
 }

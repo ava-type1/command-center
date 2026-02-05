@@ -28,9 +28,10 @@ export interface Idea {
   id: string;
   title: string;
   description: string;
-  category: 'saas' | 'product' | 'feature' | 'improvement';
+  category: 'saas' | 'product' | 'feature' | 'improvement' | 'built';
   potential: 'low' | 'medium' | 'high';
   createdAt: string;
+  builtAt?: string;
   notes?: string;
 }
 

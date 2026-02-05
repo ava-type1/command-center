@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Lightbulb, Sparkles, TrendingUp, Wrench, Zap, Plus, Trash2 } from 'lucide-react';
+import { Lightbulb, Sparkles, TrendingUp, Wrench, Zap, Plus, Trash2, CheckCircle2 } from 'lucide-react';
 import type { Idea } from '../types';
 
 interface IdeasHubProps {
@@ -12,6 +12,7 @@ const categoryIcons = {
   product: Sparkles,
   feature: Wrench,
   improvement: TrendingUp,
+  built: CheckCircle2,
 };
 
 const categoryLabels = {
@@ -19,6 +20,7 @@ const categoryLabels = {
   product: 'Physical Product',
   feature: 'New Feature',
   improvement: 'Improvement',
+  built: '✅ Built',
 };
 
 const potentialColors = {
@@ -134,7 +136,7 @@ export function IdeasHub({ ideas, onUpdate }: IdeasHubProps) {
 
       {/* Filters */}
       <div className="flex flex-wrap gap-2 mb-6">
-        {['all', 'saas', 'product', 'feature', 'improvement', 'high', 'medium'].map(f => (
+        {['all', 'saas', 'product', 'feature', 'improvement', 'built', 'high', 'medium'].map(f => (
           <button
             key={f}
             onClick={() => setFilter(f)}
@@ -144,7 +146,7 @@ export function IdeasHub({ ideas, onUpdate }: IdeasHubProps) {
                 : 'bg-dark-600/50 text-gray-400 border border-white/5 hover:text-white'
             }`}
           >
-            {f === 'all' ? 'All' : f === 'high' ? '🔥 High Potential' : f === 'medium' ? '⭐ Medium' : categoryLabels[f as keyof typeof categoryLabels]}
+            {f === 'all' ? 'All' : f === 'high' ? '🔥 High Potential' : f === 'medium' ? '⭐ Medium' : f === 'built' ? '✅ Built' : categoryLabels[f as keyof typeof categoryLabels]}
           </button>
         ))}
       </div>
@@ -228,6 +230,7 @@ export function IdeasHub({ ideas, onUpdate }: IdeasHubProps) {
                   <option value="product">Physical Product</option>
                   <option value="feature">New Feature</option>
                   <option value="improvement">Improvement</option>
+                  <option value="built">✅ Built</option>
                 </select>
                 <select
                   value={newIdea.potential}

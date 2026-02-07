@@ -1,60 +1,33 @@
 /**
  * Command Center Chat Relay Worker
  * 
- * Receives messages from the dashboard, stores in Supabase, and forwards to Telegram.
- * Also provides endpoint for Claude to post responses.
+ * Proxies chat messages from the dashboard directly to Clawdbot's
+ * OpenAI-compatible Chat Completions API. Supports streaming.
  * 
- * Environment Variables:
- * - TELEGRAM_BOT_TOKEN: Bot token from @BotFather
- * - TELEGRAM_CHAT_ID: Chat ID for notifications
- * - SUPABASE_URL: Supabase project URL
- * - SUPABASE_ANON_KEY: Supabase anon/public key
+ * Environment Variables (secrets):
+ * - CLAWDBOT_API_URL: e.g. http://217.216.67.51:8443
+ * - CLAWDBOT_API_TOKEN: Gateway auth token
+ * - CLAUDE_RESPONSE_KEY: Legacy key (kept for backward compat)
  */
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     
-    // CORS headers
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     };
 
-    // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return new Response(null, { headers: corsHeaders });
     }
 
-    // GET /messages - fetch conversation history
-    if (request.method === 'GET' && url.pathname === '/messages') {
+    // POST /chat - send message, get streaming response from Clawdbot
+    if (request.method === 'POST' && (url.pathname === '/chat' || url.pathname === '/')) {
       try {
-        const res = await fetch(
-          `${env.SUPABASE_URL}/rest/v1/dashboard_messages?order=created_at.asc&limit=50`,
-          {
-            headers: {
-              'apikey': env.SUPABASE_ANON_KEY,
-              'Authorization': `Bearer ${env.SUPABASE_ANON_KEY}`,
-            },
-          }
-        );
-        const messages = await res.json();
-        return new Response(JSON.stringify(messages), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        });
-      } catch (err) {
-        return new Response(JSON.stringify({ error: err.message }), {
-          status: 500,
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        });
-      }
-    }
-
-    // POST /message - user sends a message
-    if (request.method === 'POST' && (url.pathname === '/' || url.pathname === '/message')) {
-      try {
-        const { message } = await request.json();
+        const { message, history } = await request.json();
         
         if (!message) {
           return new Response(JSON.stringify({ error: 'No message provided' }), {
@@ -63,33 +36,59 @@ export default {
           });
         }
 
-        // Store user message in Supabase
-        await fetch(`${env.SUPABASE_URL}/rest/v1/dashboard_messages`, {
+        // Build messages array with history context
+        const messages = [];
+        
+        // Add conversation history if provided
+        if (history && Array.isArray(history)) {
+          for (const msg of history.slice(-20)) { // Keep last 20 messages for context
+            messages.push({
+              role: msg.role,
+              content: msg.content,
+            });
+          }
+        }
+        
+        // Add the new user message
+        messages.push({ role: 'user', content: message });
+
+        const apiUrl = env.CLAWDBOT_API_URL || 'http://217.216.67.51:8443';
+        const apiToken = env.CLAWDBOT_API_TOKEN;
+
+        // Call Clawdbot with streaming
+        const response = await fetch(`${apiUrl}/v1/chat/completions`, {
           method: 'POST',
           headers: {
-            'apikey': env.SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${env.SUPABASE_ANON_KEY}`,
+            'Authorization': `Bearer ${apiToken}`,
             'Content-Type': 'application/json',
-            'Prefer': 'return=minimal',
+            'x-clawdbot-agent-id': 'main',
           },
-          body: JSON.stringify({ role: 'user', content: message }),
-        });
-
-        // Forward to Telegram - format clearly shows this is FROM KAM needing a response
-        const telegramMessage = `📩 *KAM FROM DASHBOARD* (respond via dashboard!):\n\n${message}`;
-        await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            chat_id: env.TELEGRAM_CHAT_ID,
-            text: telegramMessage,
-            parse_mode: 'Markdown',
+            model: 'clawdbot:main',
+            stream: true,
+            user: 'kam-dashboard',
+            messages,
           }),
         });
 
-        return new Response(JSON.stringify({ success: true }), {
-          headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        if (!response.ok) {
+          const errText = await response.text();
+          return new Response(JSON.stringify({ error: `Clawdbot API error: ${response.status}`, details: errText }), {
+            status: 502,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          });
+        }
+
+        // Stream the SSE response back to the client
+        return new Response(response.body, {
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'text/event-stream',
+            'Cache-Control': 'no-cache',
+            'Connection': 'keep-alive',
+          },
         });
+
       } catch (err) {
         return new Response(JSON.stringify({ error: err.message }), {
           status: 500,
@@ -98,18 +97,10 @@ export default {
       }
     }
 
-    // POST /respond - Claude posts a response (requires auth)
-    if (request.method === 'POST' && url.pathname === '/respond') {
+    // POST /chat/sync - non-streaming version (simpler, for fallback)
+    if (request.method === 'POST' && url.pathname === '/chat/sync') {
       try {
-        const authHeader = request.headers.get('Authorization');
-        if (authHeader !== `Bearer ${env.CLAUDE_RESPONSE_KEY}`) {
-          return new Response(JSON.stringify({ error: 'Unauthorized' }), {
-            status: 401,
-            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-          });
-        }
-
-        const { message } = await request.json();
+        const { message, history } = await request.json();
         
         if (!message) {
           return new Response(JSON.stringify({ error: 'No message provided' }), {
@@ -118,27 +109,76 @@ export default {
           });
         }
 
-        // Store assistant message in Supabase
-        await fetch(`${env.SUPABASE_URL}/rest/v1/dashboard_messages`, {
+        const messages = [];
+        if (history && Array.isArray(history)) {
+          for (const msg of history.slice(-20)) {
+            messages.push({ role: msg.role, content: msg.content });
+          }
+        }
+        messages.push({ role: 'user', content: message });
+
+        const apiUrl = env.CLAWDBOT_API_URL || 'http://217.216.67.51:8443';
+        const apiToken = env.CLAWDBOT_API_TOKEN;
+
+        const response = await fetch(`${apiUrl}/v1/chat/completions`, {
           method: 'POST',
           headers: {
-            'apikey': env.SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${env.SUPABASE_ANON_KEY}`,
+            'Authorization': `Bearer ${apiToken}`,
             'Content-Type': 'application/json',
-            'Prefer': 'return=minimal',
+            'x-clawdbot-agent-id': 'main',
           },
-          body: JSON.stringify({ role: 'assistant', content: message }),
+          body: JSON.stringify({
+            model: 'clawdbot:main',
+            stream: false,
+            user: 'kam-dashboard',
+            messages,
+          }),
         });
 
-        return new Response(JSON.stringify({ success: true }), {
+        if (!response.ok) {
+          const errText = await response.text();
+          return new Response(JSON.stringify({ error: `API error: ${response.status}` }), {
+            status: 502,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+          });
+        }
+
+        const data = await response.json();
+        const reply = data.choices?.[0]?.message?.content || 'No response';
+
+        return new Response(JSON.stringify({ reply }), {
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
+
       } catch (err) {
         return new Response(JSON.stringify({ error: err.message }), {
           status: 500,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
+    }
+
+    // GET /health - simple health check
+    if (request.method === 'GET' && url.pathname === '/health') {
+      return new Response(JSON.stringify({ status: 'ok', ts: Date.now() }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // ---- Legacy endpoints (kept for backward compat) ----
+
+    // GET /messages - return empty (no more Supabase)
+    if (request.method === 'GET' && url.pathname === '/messages') {
+      return new Response(JSON.stringify([]), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+
+    // POST /respond - legacy, no-op
+    if (request.method === 'POST' && url.pathname === '/respond') {
+      return new Response(JSON.stringify({ success: true, note: 'Legacy endpoint - chat now uses /chat' }), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
     }
 
     return new Response('Not found', { status: 404, headers: corsHeaders });

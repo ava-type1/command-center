@@ -2,5 +2,6 @@ name = "command-center-chat"
 main = "index.js"
 compatibility_date = "2024-01-01"
 
-# Set these secrets via: wrangler secret put TELEGRAM_BOT_TOKEN
-# and: wrangler secret put TELEGRAM_CHAT_ID
+# Set secrets via: wrangler secret put <NAME>
+# Required: CLAWDBOT_API_TOKEN
+# Optional: CLAWDBOT_API_URL (defaults to http://217.216.67.51:8443)

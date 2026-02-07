@@ -1,6 +1,86 @@
 {
-  "lastUpdated": "2026-02-05T12:00:00Z",
+  "lastUpdated": "2026-02-07T12:00:00Z",
   "items": [
+    {
+      "id": "63",
+      "title": "Claude Opus 4.6 Launches with 'Agent Teams' — Parallel Multi-Agent Coding",
+      "summary": "Anthropic releases Opus 4.6 with 1M token context window and 'agent teams' that split large tasks across coordinated parallel agents. Available in research preview for API users and subscribers.",
+      "url": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
+      "category": "claude",
+      "source": "TechCrunch",
+      "date": "2026-02-07",
+      "relevance": "You're running on this model now. Agent teams could parallelize AVA codebase reviews and ESP32-C6 firmware tasks — multiple agents owning different pieces simultaneously"
+    },
+    {
+      "id": "64",
+      "title": "OpenAI Fires Back with GPT-5.3-Codex — 25% Faster, Self-Improving",
+      "summary": "OpenAI launches GPT-5.3-Codex minutes after Anthropic's Opus 4.6, claiming it can build 'complex games and apps from scratch over days.' First model that helped debug and deploy itself.",
+      "url": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
+      "category": "ai",
+      "source": "TechCrunch",
+      "date": "2026-02-07",
+      "relevance": "AI coding arms race intensifying — both companies dropped models within 15 minutes of each other. Competition drives better tools for AVA development"
+    },
+    {
+      "id": "65",
+      "title": "Goldman Sachs Deploys Claude Opus 4.6 Agents for Trade Accounting",
+      "summary": "After 6 months of development, Goldman Sachs is deploying autonomous Claude-powered agents for trade accounting, compliance, and client onboarding — core banking operations.",
+      "url": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
+      "category": "ai",
+      "source": "CNBC",
+      "date": "2026-02-07",
+      "relevance": "Shows Claude handling complex, regulated industry workflows autonomously. Same AI powering your development is now running Goldman Sachs operations"
+    },
+    {
+      "id": "66",
+      "title": "FDA Approves Medtronic Simplera Sync CGM for MiniMed 780G System",
+      "summary": "FDA clears Simplera Sync — an all-in-one disposable CGM with no fingersticks, no overtape, and 2-step insertion — for use with MiniMed 780G automated insulin delivery system.",
+      "url": "https://www.medicaleconomics.com/view/fda-approves-medtronic-s-simplera-sync-sensor-for-use-with-minimed-780g-insulin-system",
+      "category": "diabetes",
+      "source": "Medical Economics",
+      "date": "2026-02-07",
+      "relevance": "Simplified CGM insertion is huge for kids like Kaislyn. MiniMed 780G's auto-correction every 5 minutes + meal detection aligns with what AVA's simulation teaches"
+    },
+    {
+      "id": "67",
+      "title": "Study: isCGM Cuts Hypoglycemia Episodes 45.8% in T1D Over 2 Years",
+      "summary": "New research shows intermittently scanned CGMs reduce hypoglycemia unawareness by 45.8%, lower glucose variability, and decrease hypoglycemia-related fear — while being more cost-effective than rtCGM.",
+      "url": "https://www.drugtopics.com/view/intermittently-scanned-cgm-can-reduce-hypoglycemic-episodes-in-t1d",
+      "category": "diabetes",
+      "source": "Drug Topics",
+      "date": "2026-02-07",
+      "relevance": "Strong validation for AVA's education mission — even basic scan-style CGMs significantly improve outcomes. Educational content on recognizing lows is critical"
+    },
+    {
+      "id": "68",
+      "title": "Insulin Pump Market Projected to Hit $18.9B by 2035 — 9.65% CAGR",
+      "summary": "Market analysis shows insulin pump sector growing from $8.26B to $18.93B by 2035. Insulet leads with $2.1B revenue, 500K+ US users. Canada hits 47.8% adoption via government funding.",
+      "url": "https://www.globenewswire.com/news-release/2026/02/06/3233783/0/en/Insulin-Pump-Market-Insights-2-1B-Revenue-from-Insulet-500-000-U-S-Users-and-47-8-Adoption-in-Canada-Driven-by-Government-Funding.html",
+      "category": "diabetes",
+      "source": "Globe Newswire",
+      "date": "2026-02-07",
+      "relevance": "Massive growing market for diabetes tech — AVA ecosystem sits right in the education layer feeding into this adoption wave. Canada's government-funded model is interesting"
+    },
+    {
+      "id": "69",
+      "title": "Anthropic's 'SaaSpocalypse' Deepens — Opus 4.6 Triggers Second Wave Selloff",
+      "summary": "Fortune reports Opus 4.6's financial analysis capabilities spooked investors further after Cowork plugins caused initial $285B rout. Model excels at screening, due diligence, and market intelligence.",
+      "url": "https://fortune.com/2026/02/06/anthropic-claude-opus-4-6-stock-selloff-new-upgrade/",
+      "category": "ai",
+      "source": "Fortune",
+      "date": "2026-02-07",
+      "relevance": "Claude is reshaping entire industries in real-time. The AI you use daily for coding is simultaneously disrupting Wall Street — speaks to the power of the platform you're building on"
+    },
+    {
+      "id": "70",
+      "title": "Research: Insulin Pumps Don't Cause Weight Gain in Diabetics — Myth Busted",
+      "summary": "Birmingham Children's Hospital study debunks the common myth that automated insulin pumps contribute to weight gain in diabetes patients, removing a key barrier to pump adoption.",
+      "url": "https://www.nationalworld.com/your-world/research-shows-that-insulin-pumps-dont-contribute-to-weight-gain-in-diabetics-5506304",
+      "category": "diabetes",
+      "source": "National World",
+      "date": "2026-02-07",
+      "relevance": "Important myth-busting for AVA educational content — pumps get unfairly stigmatized. Could be a good topic for an in-app learning module on pump therapy facts"
+    },
     {
       "id": "55",
       "title": "GitHub Integrates Claude and Codex as Coding Agents in Public Preview",
@@ -80,544 +160,6 @@
       "source": "Zylo",
       "date": "2026-02-05",
       "relevance": "Important insight for AVA monetization - focus on measurable outcomes and clear ROI when positioning educational tools. Track learning progress and diabetes management improvements"
-    },
-    {
-      "id": "49",
-      "title": "FDA Approves Abbott's Lingo and Libre Rio - Two New OTC Continuous Glucose Monitors",
-      "summary": "Abbott receives FDA clearance for Lingo (general wellness) and Libre Rio (T2D without insulin), expanding OTC CGM market after Dexcom's Stelo.",
-      "url": "https://www.drugtopics.com/view/fda-approves-2-new-otc-continuous-glucose-monitors",
-      "category": "diabetes",
-      "source": "Drug Topics",
-      "date": "2026-02-04", 
-      "relevance": "OTC CGMs becoming mainstream validates AVA's educational mission - need to prepare content for non-prescription glucose monitoring users"
-    },
-    {
-      "id": "50",
-      "title": "Anthropic Launches Claude Legal Plugin - Causes Legal Tech Stock Market Meltdown",
-      "summary": "Claude Cowork adds specialized legal plugin for document review, risk flagging, and compliance tracking. Public legal software stocks plummet 8.5%+.",
-      "url": "https://legaltechnology.com/2026/02/03/anthropic-unveils-claude-legal-plugin-and-causes-market-meltdown/",
-      "category": "claude",
-      "source": "Legal Technology", 
-      "date": "2026-02-04",
-      "relevance": "Anthropic shifting from model supplier to application layer - validates specialized AI tooling approach for AVA ecosystem verticals"
-    },
-    {
-      "id": "51",
-      "title": "Apple Swift Student Challenge Opens February 6-28, 2026",
-      "summary": "Apple announces Swift Student Challenge with app playground submissions. Also announcing SwiftUI foundation sessions on February 10.",
-      "url": "https://developer.apple.com/hello/february26/",
-      "category": "tools",
-      "source": "Apple Developer",
-      "date": "2026-02-04",
-      "relevance": "Perfect timing to submit AVA Type 1 simulation as Swift Student Challenge entry - could provide valuable validation and exposure"
-    },
-    {
-      "id": "52",
-      "title": "Claude 5 (Sonnet 5) Release Expected February 2026 Based on Vertex AI Logs",
-      "summary": "Date string '20260203' found in Vertex AI logs suggests Claude 5 launch imminent. Analysis points to February/March 2026 release window.",
-      "url": "https://help.apiyi.com/en/claude-5-latest-news-2026-features-release-en.html",
-      "category": "claude",
-      "source": "Apiyi.com Blog",
-      "date": "2026-02-04",
-      "relevance": "Major Claude upgrade coming - expect enhanced coding capabilities for AVA development and more sophisticated diabetes content generation"
-    },
-    {
-      "id": "53", 
-      "title": "WIRED: Signos First FDA-Cleared AI-Enabled CGM System for Weight Management",
-      "summary": "Signos becomes first FDA-cleared AI system using CGMs for weight loss and metabolic health nudging in non-diabetic adults.",
-      "url": "https://www.wired.com/story/cgms-really-can-help-you-lose-weight/",
-      "category": "diabetes",
-      "source": "WIRED",
-      "date": "2026-02-04",
-      "relevance": "Validates AVA's gamification approach - AI-powered behavioral nudging with glucose data works for education and lifestyle changes"
-    },
-    {
-      "id": "54",
-      "title": "PearAI: Open-Source AI-Powered Code Editor Gaining Developer Traction",
-      "summary": "New VS Code alternative integrates AI-powered coding assistance directly into editor workflow, joining ranks with Cursor and Windsurf.",
-      "url": "https://www.saasgenius.com/new-tools/",
-      "category": "tools",
-      "source": "SaaS Genius",
-      "date": "2026-02-04",
-      "relevance": "Competition heating up in AI code editors - worth evaluating against Claude Code for AVA development workflow optimization"
-    },
-    {
-      "id": "43",
-      "title": "Claude Sonnet 5 Expected to Launch Today - Major Performance Boost",
-      "summary": "Leaked reports suggest Claude Sonnet 5 launches February 3, 2026 with superior coding capabilities and faster inference than current models.",
-      "url": "https://www.testingcatalog.com/anthropic-is-about-to-drop-sonnet-5-during-super-bowl-week/",
-      "category": "claude",
-      "source": "Testing Catalog",
-      "date": "2026-02-03",
-      "relevance": "Major upgrade to your primary coding assistant - expect even better iOS development help for AVA app and ESP32-C6 firmware generation"
-    },
-    {
-      "id": "44",
-      "title": "FDA Clears Eversense 365 - First One-Year CGM in United States",
-      "summary": "Senseonics receives FDA clearance for Eversense 365, the world's first 1-year implantable CGM. Launch expected Q4 2024 for adults with T1D/T2D.",
-      "url": "https://www.drugtopics.com/view/fda-clears-first-1-year-cgm-for-diabetes",
-      "category": "diabetes",
-      "source": "Drug Topics",
-      "date": "2026-02-03",
-      "relevance": "Revolutionary for AvaDrive - eliminates 26+ annual sensor changes, reduces auth complexity to single yearly setup. Perfect for long-term reliability."
-    },
-    {
-      "id": "45",
-      "title": "OpenAI Launches Codex App to Challenge Claude Code Dominance",
-      "summary": "OpenAI releases dedicated Codex app with GPT-5.2-Codex integration, targeting developers as direct competition to Anthropic's $1B Claude Code business.",
-      "url": "https://www.technology.org/2026/02/03/openai-releases-codex-app-challenges-anthropics-coding-dominance/",
-      "category": "ai",
-      "source": "Technology.org",
-      "date": "2026-02-03",
-      "relevance": "Competition heating up in AI coding - validates your Claude Code choice but worth monitoring OpenAI's developer tooling advances"
-    },
-    {
-      "id": "46",
-      "title": "Anthropic Labs Division Announced with Mike Krieger Leadership",
-      "summary": "Anthropic creates new 'Labs' division led by former Instagram co-founder Mike Krieger, focusing on experimental AI applications beyond core models.",
-      "url": "https://en.wikipedia.org/wiki/Anthropic",
-      "category": "ai",
-      "source": "Wikipedia / Anthropic",
-      "date": "2026-02-03",
-      "relevance": "Anthropic expanding beyond models into applications - could lead to specialized tools for specific domains like health tech"
-    },
-    {
-      "id": "47",
-      "title": "No-Code Micro SaaS Ideas Trending for 2026 Development",
-      "summary": "Analysis of profitable no-code SaaS opportunities focusing on automation tools, productivity enhancers, and specialized vertical solutions.",
-      "url": "https://www.knack.com/blog/no-code-micro-saas-ideas/",
-      "category": "tools",
-      "source": "Knack Blog",
-      "date": "2026-02-03",
-      "relevance": "Could inspire rapid prototyping approaches for AVA companion app features and field service automation tools"
-    },
-    {
-      "id": "48",
-      "title": "Decagon Raises Billions with Generative AI Customer Support Platform",
-      "summary": "SaaS startup Decagon achieves billion-dollar valuation by building AI systems that completely solve customer problems rather than deflecting tickets.",
-      "url": "https://trackboxx.com/en/10-saas-startups-that-made-billions-in-2025-and-what-founders-can-learn-from-them/",
-      "category": "tools",
-      "source": "Trackboxx",
-      "date": "2026-02-03",
-      "relevance": "Problem-solving approach vs deflection strategy - applies to AVA app design where education should solve real diabetes management challenges"
-    },
-    {
-      "id": "36",
-      "title": "Claude 3.7 Sonnet Released - Enhanced Reasoning and Code Generation",
-      "summary": "Anthropic releases Claude 3.7 Sonnet with improved reasoning capabilities and faster code generation, building on the success of Claude Code CLI tool.",
-      "url": "https://en.wikipedia.org/wiki/Anthropic",
-      "category": "ai",
-      "source": "Wikipedia / Anthropic",
-      "date": "2026-02-02",
-      "relevance": "Latest Claude model means even better iOS development assistance for AVA app and more sophisticated ESP32-C6 firmware generation"
-    },
-    {
-      "id": "37",
-      "title": "Apple February Preview: iOS 26.3 Release & Personalized Siri Beta",
-      "summary": "iOS 26.3 expected mid-February with Android transfer tool and notification forwarding. Apple also announcing Google Gemini-powered Siri beta.",
-      "url": "https://www.macrumors.com/2026/01/30/apple-in-february-2026-preview/",
-      "category": "tools",
-      "source": "MacRumors",
-      "date": "2026-02-02",
-      "relevance": "iOS 26.3 notification forwarding could enhance AVA companion device integration; Gemini Siri may inspire AI voice features"
-    },
-    {
-      "id": "38",
-      "title": "Eversense 365 One-Year CGM Approved for Europe Launch",
-      "summary": "Senseonics receives CE Mark for 365-day implantable CGM launching in Germany, Italy, Spain, and Sweden. Only requires one insertion per year.",
-      "url": "https://www.globenewswire.com/news-release/2026/01/29/3229070/0/en/Senseonics-Receives-European-Approval-for-Eversense-365-World-s-Longest-lasting-Continuous-Glucose-Monitor.html",
-      "category": "diabetes",
-      "source": "Senseonics / Globe Newswire",
-      "date": "2026-02-02",
-      "relevance": "Revolutionary for AvaDrive integration - eliminates 26+ annual sensor changes and auth token refreshes, reduces to single annual setup"
-    },
-    {
-      "id": "39",
-      "title": "Show HN: NanoClaw - Clawdbot in 500 Lines of TypeScript",
-      "summary": "Developer creates minimal Clawdbot implementation in TypeScript with Apple container isolation, demonstrating core Claude Code functionality.",
-      "url": "https://github.com/gavrielc/nanoclaw",
-      "category": "claude",
-      "source": "Hacker News / GitHub",
-      "date": "2026-02-02",
-      "relevance": "Educational resource for understanding Claude Code architecture - could inspire custom automation tools for AVA development workflow"
-    },
-    {
-      "id": "40",
-      "title": "iPhone 16 Pro Max MLX LLM Performance Issues Reported",
-      "summary": "Users report garbage output when running local LLMs via MLX on iPhone 16 Pro Max, highlighting challenges with on-device AI inference.",
-      "url": "https://journal.rafaelcosta.me/my-thousand-dollar-iphone-cant-do-math/",
-      "category": "tools",
-      "source": "Rafael Costa Blog / Hacker News",
-      "date": "2026-02-02",
-      "relevance": "Important for AVA app local AI features - stick with cloud inference or test thoroughly before implementing local LLM features"
-    },
-    {
-      "id": "41",
-      "title": "Swift January 2026 Updates - WebAssembly and Cross-Platform Progress",
-      "summary": "Swift.org highlights community progress including WebAssembly advances and developer sharing experiences building web apps with Swift.",
-      "url": "https://www.swift.org/blog/whats-new-in-swift-january-2026/",
-      "category": "tools",
-      "source": "Swift.org",
-      "date": "2026-02-02",
-      "relevance": "WebAssembly Swift could enable AVA educational content to run in browsers, expanding reach beyond iOS for T1D education"
-    },
-    {
-      "id": "42",
-      "title": "Senseonics Integrates with Sequel twiist AID System",
-      "summary": "Eversense 365 CGM now integrates with automated insulin delivery systems, representing major step toward closed-loop diabetes management.",
-      "url": "https://www.stocktitan.net/news/SENS/senseonics-receives-european-approval-for-eversense-365-world-s-b3ucc7gz844h.html",
-      "category": "diabetes",
-      "source": "Senseonics / Stock Titan",
-      "date": "2026-02-02",
-      "relevance": "Closed-loop systems becoming mainstream validates AVA's educational mission - need to prepare kids for future automated management"
-    },
-    {
-      "id": "31",
-      "title": "OpenAI Retiring GPT-4o and Older Models on February 13",
-      "summary": "GPT-4o, GPT-4.1, and several other models will be removed from ChatGPT interface, though they remain accessible via API for developers.",
-      "url": "https://wi-fiplanet.com/how-to-prepare-for-openais-retirement-of-gpt-4o-and-older-models-in-chatgpt/",
-      "category": "ai",
-      "source": "WiFi Planet",
-      "date": "2026-02-01",
-      "relevance": "Model retirement affects AI coding workflows - good time to fully commit to Claude Code for consistent development experience"
-    },
-    {
-      "id": "32",
-      "title": "Glucotrack Patents 3-Year Implantable Blood Glucose Monitor",
-      "summary": "USPTO issued three patents for Glucotrack's CBGM platform covering sensor chemistry, intravascular lead design, and low-power electronics for multi-year implantable monitoring.",
-      "url": "https://www.stocktitan.net/news/GCTK/glucotrack-announces-uspto-approval-for-issuance-of-patents-for-ucse6loaz39k.html",
-      "category": "diabetes",
-      "source": "Glucotrack / Globe Newswire",
-      "date": "2026-02-01",
-      "relevance": "3-year implantable CGM represents massive leap beyond current 10-14 day sensors - potential game-changer for AvaDrive requiring minimal setup"
-    },
-    {
-      "id": "33",
-      "title": "Claude Cowork Gets Plugin System with Custom Automation",
-      "summary": "Anthropic launches plugin system for Claude Cowork enabling custom MCP integrations, sub-agents, and slash commands for personalized automation workflows.",
-      "url": "https://siliconangle.com/2026/01/30/anthropic-debuts-claude-cowork-plugins-help-users-automate-tasks/",
-      "category": "claude",
-      "source": "SiliconANGLE",
-      "date": "2026-02-01",
-      "relevance": "Plugin system could automate repetitive tasks in AVA development workflow - custom integrations for iOS deployment, ESP32 builds"
-    },
-    {
-      "id": "34",
-      "title": "Claude + Opus 4.5 Confirmed as Best AI Coding Assistant",
-      "summary": "Industry consensus confirms Claude Code with Opus 4.5 is currently the leading AI coding assistant, outperforming GPT-5.2 in development tasks.",
-      "url": "https://en.wikipedia.org/wiki/Claude_(language_model)",
-      "category": "claude",
-      "source": "Wikipedia",
-      "date": "2026-02-01",
-      "relevance": "Validates your current toolchain choice - you're using the best available AI for iOS development and ESP32-C6 firmware work"
-    },
-    {
-      "id": "35",
-      "title": "NASA Uses Claude to Generate Mars Rover Navigation Code",
-      "summary": "NASA researchers used Claude to generate driving instructions for Perseverance Mars rover, cutting task completion time by 50% using Rover Markup Language.",
-      "url": "https://siliconangle.com/2026/01/30/anthropic-debuts-claude-cowork-plugins-help-users-automate-tasks/",
-      "category": "ai",
-      "source": "Anthropic / NASA",
-      "date": "2026-02-01",
-      "relevance": "Proves AI can handle complex embedded systems programming - validates using Claude Code for ESP32-C6 development in AVA companion devices"
-    },
-    {
-      "id": "23",
-      "title": "Anthropic Cowork Gets Agentic Plug-ins - Opens to Non-Technical Users",
-      "summary": "Anthropic expands Claude Code's plug-in ecosystem to Cowork GUI, open-sourcing 11 in-house plug-ins for broader accessibility beyond developers.",
-      "url": "https://tech.yahoo.com/ai/claude/articles/anthropic-brings-agentic-plugins-cowork-180000057.html",
-      "category": "claude",
-      "source": "Yahoo Tech",
-      "date": "2026-01-31",
-      "relevance": "Makes advanced AI tools accessible to non-technical team members or potential AVA app users - could inspire similar accessibility for T1D education"
-    },
-    {
-      "id": "24",
-      "title": "Show HN: 9M Speech Model for Mandarin Pronunciation Training",
-      "summary": "Developer trains compact 9M parameter model specifically for tone correction in Mandarin speech, demonstrating focused AI for specialized educational tasks.",
-      "url": "https://simedw.com/2026/01/31/ear-pronunication-via-ctc/",
-      "category": "ai",
-      "source": "Hacker News",
-      "date": "2026-01-31",
-      "relevance": "Perfect example of small, specialized models for educational apps - could apply similar approach to diabetes education in AVA ecosystem"
-    },
-    {
-      "id": "25", 
-      "title": "Peerweb: Decentralized Website Hosting via WebTorrent",
-      "summary": "New decentralized hosting platform uses WebTorrent for peer-to-peer website distribution, eliminating traditional server dependencies.",
-      "url": "https://peerweb.lol/",
-      "category": "tools",
-      "source": "Hacker News",
-      "date": "2026-01-31",
-      "relevance": "Decentralized hosting could reduce infrastructure costs for DiabetesData.io or AVA companion services, especially for static educational content"
-    },
-    {
-      "id": "26",
-      "title": "Antirender: Tool Removes Glossy Shine from Architectural Renderings",
-      "summary": "Web tool automatically processes architectural renderings to remove artificial glossy effects, making them appear more realistic and natural.",
-      "url": "https://antirender.com/",
-      "category": "tools", 
-      "source": "Hacker News",
-      "date": "2026-01-31",
-      "relevance": "Interesting UI approach for single-purpose tools - could inspire clean, focused design for AVA companion device configuration interfaces"
-    },
-    {
-      "id": "27",
-      "title": "Top 10 MCP Servers for Claude Code (2026 Developer Edition)",
-      "summary": "Comprehensive guide to essential Model Context Protocol servers that enhance Claude Code's capabilities for developers, including database, Git, and API integrations.",
-      "url": "https://apidog.com/blog/top-10-mcp-servers-for-claude-code/",
-      "category": "claude",
-      "source": "Apidog Blog", 
-      "date": "2026-01-31",
-      "relevance": "Direct resource for improving your development workflow - could streamline AVA app development with better toolchain integration"
-    },
-    {
-      "id": "28",
-      "title": "January 2026 AI Roundup: Rise of Autonomous AI Agents",
-      "summary": "Analysis of emerging AI agent patterns where agents autonomously pick tasks, implement solutions, run tests, and commit changes in development cycles.",
-      "url": "https://dev.to/joeljstephen/january-2026-ai-roundup-the-rise-of-autonomous-ai-agents-405",
-      "category": "ai", 
-      "source": "DEV Community",
-      "date": "2026-01-31",
-      "relevance": "Autonomous development patterns could be applied to AVA app continuous improvement - agents handling routine updates and bug fixes"
-    },
-    {
-      "id": "29",
-      "title": "EMA Committee Recommends Six New Medicines for EU Approval",
-      "summary": "European Medicines Agency's January 26-29 meeting resulted in positive opinions for six new medicines and nine therapeutic indication extensions.",
-      "url": "https://www.ema.europa.eu/en/news/meeting-highlights-committee-medicinal-products-human-use-chmp-26-29-january-2026",
-      "category": "diabetes",
-      "source": "European Medicines Agency",
-      "date": "2026-01-31", 
-      "relevance": "Regulatory momentum in EU could signal upcoming US approvals for diabetes-related devices or medications affecting AVA ecosystem timing"
-    },
-    {
-      "id": "30",
-      "title": "Healthcare Sector Calls for Digital Push & Tax Rationalization",
-      "summary": "Industry analysis highlights AI's crucial role in chronic disease management, especially diabetes and hypertension screening via technology partnerships.",
-      "url": "https://www.newkerala.com/news/a/healthcare-sector-calls-digital-push-tax-rationalisation-medical-586.htm",
-      "category": "diabetes",
-      "source": "New Kerala",
-      "date": "2026-01-31",
-      "relevance": "Global trend toward AI-powered chronic disease management validates AVA's educational approach - potential market expansion beyond US"
-    },
-    {
-      "id": "17",
-      "title": "Senseonics Eversense 365 Approved in Europe - World's First One-Year CGM",
-      "summary": "Senseonics receives CE Mark approval for Eversense 365, the only implantable CGM with 365-day sensor life. Launching in Germany, Italy, Spain, and Sweden.",
-      "url": "https://www.globenewswire.com/news-release/2026/01/29/3229070/0/en/Senseonics-Receives-European-Approval-for-Eversense-365-World-s-Longest-lasting-Continuous-Glucose-Monitor.html",
-      "category": "diabetes",
-      "source": "Senseonics / Globe Newswire",
-      "date": "2026-01-30",
-      "relevance": "One-year sensor means revolutionary reduction in API auth refreshes for AvaDrive - only one 'Day 1' setup annually vs every 10-14 days"
-    },
-    {
-      "id": "18", 
-      "title": "Anthropic Preparing Security Center for Claude Code",
-      "summary": "New Security Center feature in development for Claude Code, offering repository security scans, issue catalogs, and manual scan initiation across branches.",
-      "url": "https://www.testingcatalog.com/anthropic-prepares-to-release-security-center-for-claude-code/",
-      "category": "claude",
-      "source": "Testing Catalog",
-      "date": "2026-01-30", 
-      "relevance": "Will help secure AVA app development with automated security scanning for iOS codebase and ESP32-C6 firmware"
-    },
-    {
-      "id": "19",
-      "title": "Claude Code Now Works with Local Ollama Models",
-      "summary": "Ollama v0.14.0+ adds Anthropic Messages API compatibility, enabling Claude Code to run entirely offline with local models like Mistral and Gemma.",
-      "url": "https://habr.com/en/articles/988538/",
-      "category": "claude",
-      "source": "Habr.com",
-      "date": "2026-01-30",
-      "relevance": "Perfect for field work with no cell service - run Claude Code locally on Mac without internet for ESP32-C6 development"
-    },
-    {
-      "id": "20",
-      "title": "AI Tools Now Write 29% of New US Software Code",
-      "summary": "Latest industry analysis shows AI coding assistants have reached significant adoption milestone, fundamentally changing software development workflows.",
-      "url": "https://dev.to/alexmercedcoder/ai-coding-dominates-2026-week-of-january-20-27-7lc",
-      "category": "ai",
-      "source": "DEV Community",
-      "date": "2026-01-30",
-      "relevance": "Validates your Claude Code approach - AI-first development is mainstream, gives competitive edge for AVA app development"
-    },
-    {
-      "id": "21",
-      "title": "Claude 'Cowork' GUI Version Released for Non-Technical Users",
-      "summary": "Anthropic launches Cowork with graphical interface aimed at non-technical users, expanding Claude accessibility beyond developers.",
-      "url": "https://en.wikipedia.org/wiki/Claude_(language_model)",
-      "category": "ai",
-      "source": "Wikipedia / Anthropic",
-      "date": "2026-01-30", 
-      "relevance": "Potential inspiration for AVA app UI - making complex diabetes management accessible to kids and families through better interfaces"
-    },
-    {
-      "id": "22",
-      "title": "QNX Developer Desktop Adds Raspberry Pi 5 Support",
-      "summary": "QNX releases January 2026 update with Pi 5 hardware support, new audio features, and improved driver development documentation.",
-      "url": "https://devblog.qnx.com/jan-2026-release-pi-5-images-ddks-developer-desktop-updates/",
-      "category": "tools",
-      "source": "QNX Developer Blog", 
-      "date": "2026-01-30",
-      "relevance": "Pi 5 could be interesting alternative to ESP32-C6 for more powerful AVA companion devices with video/advanced features"
-    },
-    {
-      "id": "12",
-      "title": "Trinity Large: Open 400B Sparse MoE Model Released",
-      "summary": "Arcee AI releases Trinity Large, a 400B parameter sparse mixture-of-experts model with open weights. Free preview available on OpenRouter for limited time.",
-      "url": "https://www.arcee.ai/",
-      "category": "ai",
-      "source": "Arcee AI / Hacker News",
-      "date": "2026-01-29",
-      "relevance": "Large open model could be useful for local inference in AVA ecosystem, especially for educational content generation"
-    },
-    {
-      "id": "13", 
-      "title": "LM Studio 0.4.0 Released - Next Generation Local AI",
-      "summary": "Major update to LM Studio with improved performance, new SDKs (JS/Python), and enhanced local model management. Free for home and work use.",
-      "url": "https://lmstudio.ai",
-      "category": "tools",
-      "source": "LM Studio / Hacker News",
-      "date": "2026-01-29",
-      "relevance": "Perfect for local AI development and testing AVA app features without API costs during development"
-    },
-    {
-      "id": "14",
-      "title": "LLM Traffic Interceptor - Debug AI API Calls in Real-Time",
-      "summary": "Open-source MitM proxy tool by Juan Munoz that intercepts LLM API traffic, visualizes token usage in terminal dashboard, tracks costs and monitors context windows.",
-      "url": "https://github.com/jmuncor",
-      "category": "tools", 
-      "source": "GitHub / Hacker News",
-      "date": "2026-01-29",
-      "relevance": "Essential for debugging Claude Code integration and monitoring API costs during AVA development"
-    },
-    {
-      "id": "15",
-      "title": "Windows App Development CLI (WinApp) Released",
-      "summary": "Microsoft releases WinApp CLI tool for Windows app development, streamlining project setup and deployment workflows.",
-      "url": "https://windows.com",
-      "category": "tools",
-      "source": "Windows Developer Blog / Hacker News", 
-      "date": "2026-01-29",
-      "relevance": "While iOS-focused, CLI patterns could inspire similar tooling for ESP32-C6 development automation"
-    },
-    {
-      "id": "16",
-      "title": "Apple 30% Cut Coming to Patreon iOS Subscriptions",
-      "summary": "Apple expanding App Store payment requirements to Patreon creators in iOS app, taking up to 30% cut from creator subscriptions managed through iOS.",
-      "url": "https://macrumors.com",
-      "category": "tools",
-      "source": "MacRumors / Hacker News",
-      "date": "2026-01-29", 
-      "relevance": "Important for AVA monetization strategy - consider alternative payment flows to avoid Apple's cut"
-    },
-    {
-      "id": "1",
-      "title": "Claude 3.5 Opus Released with Extended Thinking",
-      "summary": "Anthropic released Claude 3.5 Opus with built-in extended thinking capabilities, allowing for deeper reasoning on complex tasks without manual prompting.",
-      "url": "https://anthropic.com",
-      "category": "claude",
-      "source": "Anthropic",
-      "date": "2026-01-26",
-      "relevance": "Use 'thinking: high' in your cron jobs for complex analysis tasks"
-    },
-    {
-      "id": "2",
-      "title": "Dexcom G8 Announced - 30-Day Sensor Life",
-      "summary": "Dexcom announces the G8 CGM system featuring 30-day wear time, improved accuracy, and smaller form factor. Expected release Q3 2026.",
-      "category": "diabetes",
-      "source": "Dexcom Press Release",
-      "date": "2026-01-25",
-      "relevance": "Longer sensor life = fewer API auth refreshes needed for AvaDrive"
-    },
-    {
-      "id": "3",
-      "title": "Cursor AI IDE Adds Claude Code Integration",
-      "summary": "Cursor now supports direct Claude Code integration, allowing developers to use Claude's coding capabilities within the Cursor editor with full context awareness.",
-      "url": "https://cursor.sh",
-      "category": "tools",
-      "source": "Cursor Blog",
-      "date": "2026-01-24",
-      "relevance": "Could streamline your iOS development workflow for AVA apps"
-    },
-    {
-      "id": "4",
-      "title": "OpenAI Releases GPT-5 Preview",
-      "summary": "GPT-5 preview released with 1M token context window and improved reasoning. Benchmark shows 40% improvement on coding tasks.",
-      "category": "ai",
-      "source": "OpenAI",
-      "date": "2026-01-23",
-      "relevance": "Competition driving innovation - Claude features improving in response"
-    },
-    {
-      "id": "5",
-      "title": "Loop 3.4 Released - New Automatic Bolus Features",
-      "summary": "DIY Loop algorithm updated with smarter automatic bolus delivery and improved Omnipod 5 compatibility.",
-      "url": "https://loopkit.github.io/loopdocs/",
-      "category": "diabetes",
-      "source": "LoopDocs",
-      "date": "2026-01-22",
-      "relevance": "Potential integration point for AVA ecosystem education features"
-    },
-    {
-      "id": "6",
-      "title": "Cloudflare Workers AI Now Supports Claude",
-      "summary": "Cloudflare adds Claude models to Workers AI, enabling serverless Claude inference at the edge with pay-per-request pricing.",
-      "url": "https://developers.cloudflare.com/workers-ai/",
-      "category": "tools",
-      "source": "Cloudflare Blog",
-      "date": "2026-01-21",
-      "relevance": "Could reduce costs for DiabetesData.io API by using edge inference"
-    },
-    {
-      "id": "7",
-      "title": "OpenAI Launches Prism - AI-Native Scientific Workspace",
-      "summary": "OpenAI introduces Prism, a free cloud-based LaTeX workspace for scientific writing powered by GPT-5.2, integrating AI directly into research workflows.",
-      "url": "https://openai.com/index/introducing-prism/",
-      "category": "ai",
-      "source": "OpenAI",
-      "date": "2026-01-28",
-      "relevance": "Could inspire AI-integrated documentation for AVA project, especially technical papers"
-    },
-    {
-      "id": "8", 
-      "title": "ASML Announces 1700 Position Reduction",
-      "summary": "ASML plans workforce reduction focusing on engineering optimization. Stock implications for tech sector and supply chain impacts.",
-      "url": "https://www.asml.com/en/news/press-releases/2026/strengthening-focus-on-engineering-and-innovation",
-      "category": "tools",
-      "source": "ASML Press Release", 
-      "date": "2026-01-28",
-      "relevance": "Tech industry layoffs may affect hiring market for iOS developers, potential opportunity"
-    },
-    {
-      "id": "9",
-      "title": "SVG Path Editor - Open Source Tool Trending",
-      "summary": "Interactive browser-based SVG path editor gaining popularity on HN. Useful for creating custom icons and graphics without design software.",
-      "url": "https://yqnn.github.io/svg-path-editor/",
-      "category": "tools",
-      "source": "Hacker News",
-      "date": "2026-01-28", 
-      "relevance": "Perfect for creating custom icons for AVA app UI and companion device displays"
-    },
-    {
-      "id": "10",
-      "title": "WhatsApp Adopts Rust for Security at Scale",
-      "summary": "Facebook Engineering shares how Rust is being used to add security layers to WhatsApp, demonstrating real-world systems programming.",
-      "url": "https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/",
-      "category": "tools",
-      "source": "Facebook Engineering",
-      "date": "2026-01-27",
-      "relevance": "Security patterns applicable to ESP32-C6 firmware development for AVA devices"
-    },
-    {
-      "id": "11",
-      "title": "Claude Opus 4.5 - Best Model for Coding and Agents",
-      "summary": "Latest Claude model delivers frontier performance with dramatically improved token efficiency, especially for coding tasks and computer use.",
-      "url": "https://www.anthropic.com/news",
-      "category": "claude", 
-      "source": "Anthropic",
-      "date": "2026-01-28",
-      "relevance": "You're running on this model - expect better iOS development assistance and more efficient conversations"
     }
   ]
 }

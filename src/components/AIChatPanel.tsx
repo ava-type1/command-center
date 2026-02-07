@@ -13,7 +13,7 @@ interface AIChatPanelProps {
   onClose: () => void;
 }
 
-const API_URL = 'http://217.216.67.51:8443/v1/chat/completions';
+const API_URL = 'https://vmi3042450.contaboserver.net:8443/v1/chat/completions';
 const API_TOKEN = '4c6b9520fe27cba5e3258e3ee09dc43ca5e7ef53e4c72cb0';
 const STORAGE_KEY = 'koda-chat-history';
 

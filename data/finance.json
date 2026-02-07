@@ -1,0 +1,389 @@
+{
+  "lastUpdated": "2026-02-07T06:11:23.084830+00:00",
+  "account": {
+    "name": "TD BUSINESS SIMPLE CHECKING (5108)",
+    "balance": 240.81,
+    "available": 148.77
+  },
+  "categories": [
+    {
+      "name": "ATM/Cash",
+      "total": 950.35,
+      "count": 10
+    },
+    {
+      "name": "Subscriptions/Recurring",
+      "total": 881.59,
+      "count": 18
+    },
+    {
+      "name": "Shopping",
+      "total": 760.08,
+      "count": 24
+    },
+    {
+      "name": "Gas/Fuel",
+      "total": 610.04,
+      "count": 66
+    },
+    {
+      "name": "Groceries",
+      "total": 407.21,
+      "count": 15
+    },
+    {
+      "name": "Bank Fees",
+      "total": 363.33,
+      "count": 9
+    },
+    {
+      "name": "Food/Dining",
+      "total": 114.68,
+      "count": 9
+    },
+    {
+      "name": "Other",
+      "total": 12.21,
+      "count": 1
+    }
+  ],
+  "topStores": [
+    {
+      "name": "Pai ATM",
+      "total": 812.35,
+      "count": 4
+    },
+    {
+      "name": "Shell",
+      "total": 372.89,
+      "count": 35
+    },
+    {
+      "name": "Overdraft Paid",
+      "total": 350.0,
+      "count": 6
+    },
+    {
+      "name": "Ap Hometowne Capital Ma",
+      "total": 296.89,
+      "count": 1
+    },
+    {
+      "name": "Ap Smokeys Smoke Shop",
+      "total": 258.82,
+      "count": 15
+    },
+    {
+      "name": "Clay Electric CO",
+      "total": 246.75,
+      "count": 1
+    },
+    {
+      "name": "Winn-Dixie",
+      "total": 191.78,
+      "count": 1
+    },
+    {
+      "name": "Amazon",
+      "total": 154.94,
+      "count": 4
+    },
+    {
+      "name": "Windstream",
+      "total": 149.95,
+      "count": 1
+    },
+    {
+      "name": "Family Dollar",
+      "total": 136.96,
+      "count": 10
+    },
+    {
+      "name": "Apple",
+      "total": 128.49,
+      "count": 4
+    },
+    {
+      "name": "Ap Pit Stop",
+      "total": 124.74,
+      "count": 16
+    },
+    {
+      "name": "Ap Pai ATM",
+      "total": 123.0,
+      "count": 1
+    },
+    {
+      "name": "Ap Claude Ai Subscription Anthropic",
+      "total": 91.42,
+      "count": 1
+    },
+    {
+      "name": "Dollar General",
+      "total": 78.47,
+      "count": 4
+    }
+  ],
+  "recurring": [
+    {
+      "name": "Pai ATM",
+      "amount": 203.09,
+      "count": 4,
+      "lastDate": "2026-02-04"
+    },
+    {
+      "name": "Hungry Howie's",
+      "amount": 19.3,
+      "count": 2,
+      "lastDate": "2026-01-26"
+    },
+    {
+      "name": "Pit Stop",
+      "amount": 16.37,
+      "count": 2,
+      "lastDate": "2026-01-30"
+    },
+    {
+      "name": "Ap Anthropic",
+      "amount": 10.0,
+      "count": 4,
+      "lastDate": "2026-01-21"
+    },
+    {
+      "name": "Ap Discount Food Mart",
+      "amount": 4.85,
+      "count": 2,
+      "lastDate": "2026-01-26"
+    },
+    {
+      "name": "Circle K",
+      "amount": 3.21,
+      "count": 2,
+      "lastDate": "2026-02-04"
+    },
+    {
+      "name": "ATM Fee",
+      "amount": 3.0,
+      "count": 5,
+      "lastDate": "2026-02-04"
+    }
+  ],
+  "monthlyMinimum": 4099.49,
+  "totalSpending": 4099.49,
+  "recentTransactions": [
+    {
+      "date": "2026-02-05",
+      "description": "OVERDRAFT PD",
+      "payee": "Overdraft Paid",
+      "amount": -105.0,
+      "category": "Bank Fees"
+    },
+    {
+      "date": "2026-02-05",
+      "description": "VISA DDA PUR AP, 476501     PIT STOP  39                FORT",
+      "payee": "Ap Pit Stop",
+      "amount": -5.91,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-05",
+      "description": "VISA DDA PUR AP, 442733     MCDONALD S F39353           LAKE",
+      "payee": "McDonald's",
+      "amount": -6.42,
+      "category": "Food/Dining"
+    },
+    {
+      "date": "2026-02-05",
+      "description": "VISA DDA PUR, 420429     SPOTIFY USA                 877 778",
+      "payee": "Spotify",
+      "amount": -13.62,
+      "category": "Subscriptions/Recurring"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "NONTD ATM FEE",
+      "payee": "ATM Fee",
+      "amount": -3.0,
+      "category": "ATM/Cash"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "DDA PURCHASE AP, 0100       CIRCLE K   22842 13138      RAIF",
+      "payee": "Circle K",
+      "amount": -3.2,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "DDA PURCHASE *4097, 11708901   EXXON II                    M",
+      "payee": "ExxonMobil",
+      "amount": -15.0,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "VISA DDA PUR, 422108     SMOKEYS SMOKE SHOP          FORT WH",
+      "payee": "Smokeys Smoke Shop",
+      "amount": -20.41,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "DDA WITHDRAW *4097, NW05154    PAI ATM                     F",
+      "payee": "Pai ATM",
+      "amount": -203.35,
+      "category": "ATM/Cash"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "OD GRACE FEE REFUND",
+      "payee": "Overdraft Fee Refund",
+      "amount": 70.0,
+      "category": "Bank Fees"
+    },
+    {
+      "date": "2026-02-03",
+      "description": "OVERDRAFT PD",
+      "payee": "Overdraft Paid",
+      "amount": -70.0,
+      "category": "Bank Fees"
+    },
+    {
+      "date": "2026-02-03",
+      "description": "DEPOSIT",
+      "payee": "Deposit",
+      "amount": 392.4,
+      "category": "Income/Transfer"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "NONTD ATM FEE",
+      "payee": "ATM Fee",
+      "amount": -3.0,
+      "category": "ATM/Cash"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 476501     PIT STOP  39                FORT",
+      "payee": "Ap Pit Stop",
+      "amount": -4.49,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 476501     PIT STOP  39                FORT",
+      "payee": "Ap Pit Stop",
+      "amount": -4.92,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 431605     SHELL OIL 10002733003       FORT",
+      "payee": "Shell",
+      "amount": -5.46,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 469216     AMAZON MKTPL 2Y90Z92O3      AMZN",
+      "payee": "Amazon",
+      "amount": -7.02,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 476501     PIT STOP  39                FORT",
+      "payee": "Ap Pit Stop",
+      "amount": -7.78,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "DDA PURCHASE AP, 11208001   FAMILY DOLLAR               FT W",
+      "payee": "Family Dollar",
+      "amount": -11.95,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 476501     PIT STOP  39                FORT",
+      "payee": "Ap Pit Stop",
+      "amount": -14.49,
+      "category": "Gas/Fuel"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "DDA PURCHASE AP, 319372     DOLLAR GENERAL   DG 0789    FORT",
+      "payee": "Dollar General",
+      "amount": -16.6,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR, 420429     GOOGLE WORKSPACE AVATYPE    650 253",
+      "payee": "Google Workspace Avatype",
+      "amount": -19.8,
+      "category": "Subscriptions/Recurring"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "DDA PURCHASE AP, 422108     SMOKEYS SMOKE SHOP          FORT",
+      "payee": "Ap Smokeys Smoke Shop",
+      "amount": -21.5,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 422108     SMOKEYS SMOKE SHOP          FORT",
+      "payee": "Ap Smokeys Smoke Shop",
+      "amount": -21.5,
+      "category": "Shopping"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR, 469216     GEICO   AUTO                800 841",
+      "payee": "Geico",
+      "amount": -66.23,
+      "category": "Subscriptions/Recurring"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "VISA DDA PUR AP, 449216     SIMPLY BUSINESS             SIMP",
+      "payee": "Ap Simply Business",
+      "amount": -74.44,
+      "category": "Subscriptions/Recurring"
+    },
+    {
+      "date": "2026-02-02",
+      "description": "DDA WITHDRAW *4097, RT36544    PAI ATM                     F",
+      "payee": "Pai ATM",
+      "amount": -203.0,
+      "category": "ATM/Cash"
+    },
+    {
+      "date": "2026-01-30",
+      "description": "MAINTENANCE FEE",
+      "payee": "Maintenance Fee",
+      "amount": -10.0,
+      "category": "Bank Fees"
+    },
+    {
+      "date": "2026-01-30",
+      "description": "DDA PURCHASE AP, 11208001   FAMILY DOLLAR               FT W",
+      "payee": "Family Dollar",
+      "amount": -4.75,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-01-30",
+      "description": "DDA PURCHASE AP, 319372     DOLLAR GENERAL   DG 0789    FORT",
+      "payee": "Dollar General",
+      "amount": -16.6,
+      "category": "Groceries"
+    }
+  ],
+  "period": {
+    "start": "2026-01-08",
+    "end": "2026-02-07"
+  }
+}

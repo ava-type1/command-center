@@ -2,108 +2,62 @@ import { useState, useEffect } from 'react';
 import { ProjectCard } from './components/ProjectCard';
 import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
-import { NewsFeed } from './components/NewsFeed';
-import { SocialMedia } from './components/SocialMedia';
-import { ActivityCalendar } from './components/ActivityCalendar';
-import { Header } from './components/Header';
+import { FinanceDashboard } from './components/FinanceDashboard';
+import { ContentCreator } from './components/ContentCreator';
+import { Sidebar, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
-import { WeatherWidget } from './components/WeatherWidget';
-import { LinksPanel } from './components/LinksPanel';
-import { MoltbookPanel } from './components/MoltbookPanel';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Menu, RefreshCw } from 'lucide-react';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import type { Project, Idea } from './types';
 
-// GitHub raw content URLs
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
 const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
 const IDEAS_URL = `${GITHUB_BASE}/ideas.json`;
-const NEWS_URL = `${GITHUB_BASE}/news.json`;
-
-interface NewsItem {
-  id: string;
-  title: string;
-  summary: string;
-  url?: string;
-  category: 'ai' | 'diabetes' | 'claude' | 'tools';
-  source: string;
-  date: string;
-  relevance?: string;
-}
 
 function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
-  const [news, setNews] = useState<NewsItem[]>([]);
-  const [newsLastUpdated, setNewsLastUpdated] = useState<string | undefined>();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [view, setView] = useState<'dashboard' | 'ideas' | 'news' | 'social' | 'calendar'>('dashboard');
+  const [view, setView] = useState<View>('dashboard');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [lastSync, setLastSync] = useState<Date | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // Load data from GitHub
   const loadData = async () => {
     setLoading(true);
     setError(null);
-    
+
     try {
-      // Try GitHub first
-      const [projectsRes, ideasRes, newsRes] = await Promise.all([
-        fetch(PROJECTS_URL + '?t=' + Date.now()), // Cache bust
+      const [projectsRes, ideasRes] = await Promise.all([
+        fetch(PROJECTS_URL + '?t=' + Date.now()),
         fetch(IDEAS_URL + '?t=' + Date.now()),
-        fetch(NEWS_URL + '?t=' + Date.now()),
       ]);
 
       if (projectsRes.ok && ideasRes.ok) {
         const projectsData = await projectsRes.json();
         const ideasData = await ideasRes.json();
-        
+
         setProjects(projectsData.projects || []);
         setIdeas(ideasData.ideas || []);
         setLastSync(new Date());
-        
-        // Cache locally
+
         localStorage.setItem('kam-projects', JSON.stringify(projectsData.projects));
         localStorage.setItem('kam-ideas', JSON.stringify(ideasData.ideas));
         localStorage.setItem('kam-last-sync', new Date().toISOString());
       } else {
         throw new Error('Failed to fetch from GitHub');
       }
-
-      // News is optional - don't fail if it doesn't exist
-      if (newsRes.ok) {
-        const newsData = await newsRes.json();
-        setNews(newsData.items || []);
-        setNewsLastUpdated(newsData.lastUpdated);
-        localStorage.setItem('kam-news', JSON.stringify(newsData));
-      }
-    } catch (err) {
-      console.warn('GitHub fetch failed, using local cache:', err);
-      
-      // Fallback to localStorage
+    } catch {
       const cachedProjects = localStorage.getItem('kam-projects');
       const cachedIdeas = localStorage.getItem('kam-ideas');
-      const cachedNews = localStorage.getItem('kam-news');
       const cachedSync = localStorage.getItem('kam-last-sync');
-      
-      if (cachedProjects) {
-        setProjects(JSON.parse(cachedProjects));
-      }
-      if (cachedIdeas) {
-        setIdeas(JSON.parse(cachedIdeas));
-      }
-      if (cachedNews) {
-        const newsData = JSON.parse(cachedNews);
-        setNews(newsData.items || []);
-        setNewsLastUpdated(newsData.lastUpdated);
-      }
-      if (cachedSync) {
-        setLastSync(new Date(cachedSync));
-      }
-      
+
+      if (cachedProjects) setProjects(JSON.parse(cachedProjects));
+      if (cachedIdeas) setIdeas(JSON.parse(cachedIdeas));
+      if (cachedSync) setLastSync(new Date(cachedSync));
+
       if (!cachedProjects && !cachedIdeas) {
         setError('Unable to load data. Check your connection.');
       }
@@ -114,14 +68,10 @@ function App() {
 
   useEffect(() => {
     loadData();
-    
-    // Refresh every 5 minutes
     const interval = setInterval(loadData, 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
 
-  // Local updates (for todo toggling, etc.) - saves to localStorage only
-  // GitHub updates come from me after our conversations
   const updateProject = (updatedProject: Project) => {
     setProjects(prev => {
       const updated = prev.map(p => p.id === updatedProject.id ? updatedProject : p);
@@ -149,137 +99,143 @@ function App() {
 
   if (selectedProject) {
     return (
-      <ProjectDetail
-        project={selectedProject}
-        onBack={() => setSelectedProject(null)}
-        onUpdate={updateProject}
-      />
+      <>
+        <ProjectDetail
+          project={selectedProject}
+          onBack={() => setSelectedProject(null)}
+          onUpdate={updateProject}
+        />
+        <AIChatButton onClick={() => setChatOpen(true)} />
+        <AIChatPanel isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen">
-      <Header view={view} onViewChange={setView} onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-      
-      {/* Mobile sidebar overlay */}
-      {sidebarOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setSidebarOpen(false)} />
-          <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-dark-800 border-l border-white/10 overflow-y-auto p-4 space-y-4 animate-slide-in">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wider">Sidebar</h3>
-              <button
-                onClick={() => setSidebarOpen(false)}
-                className="p-2 rounded-lg hover:bg-dark-500 text-gray-400 hover:text-white transition-colors"
-              >
-                ✕
+    <div className="min-h-screen flex">
+      {/* Sidebar */}
+      <Sidebar
+        view={view}
+        onViewChange={setView}
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+
+      {/* Main content area */}
+      <div className="flex-1 lg:ml-64 min-h-screen">
+        {/* Top bar - mobile */}
+        <header className="glass border-b border-white/5 sticky top-0 z-30 lg:hidden">
+          <div className="flex items-center justify-between px-4 h-14">
+            <button
+              onClick={() => setSidebarOpen(true)}
+              className="p-2 rounded-lg hover:bg-white/5 text-gray-400"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+            <h1 className="text-sm font-semibold text-white">Command Center</h1>
+            <div className="w-9" /> {/* Spacer */}
+          </div>
+        </header>
+
+        <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {error && (
+            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+              {error}
+              <button onClick={loadData} className="ml-4 underline hover:text-red-300">
+                Retry
               </button>
             </div>
-            <MoltbookPanel />
-            <LinksPanel />
-          </div>
-        </div>
-      )}
-      
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {error && (
-          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
-            {error}
-            <button onClick={loadData} className="ml-4 underline hover:text-red-300">
-              Retry
-            </button>
-          </div>
-        )}
+          )}
 
-        <ErrorBoundary>
-        {view === 'dashboard' ? (
-          <>
-            {/* Top row: Stats + Weather */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-8">
-              {/* Stats - takes 3 columns on large screens */}
-              <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-4">
-                <div className="glass rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold text-neon-green">{projects.filter(p => p.status === 'active').length}</div>
-                  <div className="text-sm text-gray-400 mt-1">Active</div>
-                </div>
-                <div className="glass rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold text-yellow-400">{projects.filter(p => p.status === 'paused').length}</div>
-                  <div className="text-sm text-gray-400 mt-1">Paused</div>
-                </div>
-                <div className="glass rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold text-neon-cyan">{projects.filter(p => p.status === 'completed').length}</div>
-                  <div className="text-sm text-gray-400 mt-1">Completed</div>
-                </div>
-                <div className="glass rounded-xl p-4 text-center">
-                  <div className="text-3xl font-bold text-neon-purple">{projects.filter(p => p.status === 'idea').length}</div>
-                  <div className="text-sm text-gray-400 mt-1">Ideas</div>
-                </div>
-              </div>
-              
-              {/* Weather widget - takes 1 column on large screens */}
-              <div className="lg:col-span-1">
-                <WeatherWidget />
-              </div>
-            </div>
-
-            {/* Main content: Projects + Links sidebar */}
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-              {/* Projects section - takes 3 columns */}
-              <div className="lg:col-span-3">
-                {/* Sync status */}
-                {lastSync && (
-                  <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-xl font-semibold text-gray-200">Projects</h2>
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                      <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
-                      Synced {lastSync.toLocaleTimeString()}
-                      <button 
-                        onClick={loadData}
-                        className="ml-2 px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 transition-colors"
-                      >
-                        Refresh
-                      </button>
-                    </div>
-                  </div>
-                )}
-
-                {/* Projects grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-                  {projects.map(project => (
-                    <ProjectCard
-                      key={project.id}
-                      project={project}
-                      onClick={() => setSelectedProject(project)}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Sidebar - takes 1 column */}
-              <div className="lg:col-span-1 space-y-4">
-                <MoltbookPanel />
-                <LinksPanel />
-              </div>
-            </div>
-          </>
-        ) : view === 'news' ? (
-          <NewsFeed news={news} lastUpdated={newsLastUpdated} />
-        ) : view === 'social' ? (
-          <SocialMedia />
-        ) : view === 'calendar' ? (
-          <ActivityCalendar />
-        ) : (
-          <IdeasHub ideas={ideas} onUpdate={updateIdeas} />
-        )}
-        </ErrorBoundary>
-      </main>
+          <ErrorBoundary>
+            {view === 'dashboard' && (
+              <DashboardView
+                projects={projects}
+                onSelectProject={setSelectedProject}
+                lastSync={lastSync}
+                onRefresh={loadData}
+              />
+            )}
+            {view === 'finance' && <FinanceDashboard />}
+            {view === 'content' && <ContentCreator />}
+            {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
+          </ErrorBoundary>
+        </main>
+      </div>
 
       {/* AI Chat */}
       <AIChatButton onClick={() => setChatOpen(true)} />
-      <AIChatPanel 
-        isOpen={chatOpen} 
-        onClose={() => setChatOpen(false)} 
-      />
+      <AIChatPanel isOpen={chatOpen} onClose={() => setChatOpen(false)} />
+    </div>
+  );
+}
+
+// Dashboard sub-view
+function DashboardView({
+  projects,
+  onSelectProject,
+  lastSync,
+  onRefresh,
+}: {
+  projects: Project[];
+  onSelectProject: (p: Project) => void;
+  lastSync: Date | null;
+  onRefresh: () => void;
+}) {
+  const active = projects.filter(p => p.status === 'active');
+  const paused = projects.filter(p => p.status === 'paused');
+  const completed = projects.filter(p => p.status === 'completed');
+  const ideaProjects = projects.filter(p => p.status === 'idea');
+
+  return (
+    <div className="space-y-8">
+      {/* Stats */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="glass rounded-xl p-4 text-center">
+          <div className="text-3xl font-bold text-neon-green">{active.length}</div>
+          <div className="text-sm text-gray-400 mt-1">Active</div>
+        </div>
+        <div className="glass rounded-xl p-4 text-center">
+          <div className="text-3xl font-bold text-yellow-400">{paused.length}</div>
+          <div className="text-sm text-gray-400 mt-1">Paused</div>
+        </div>
+        <div className="glass rounded-xl p-4 text-center">
+          <div className="text-3xl font-bold text-neon-cyan">{completed.length}</div>
+          <div className="text-sm text-gray-400 mt-1">Completed</div>
+        </div>
+        <div className="glass rounded-xl p-4 text-center">
+          <div className="text-3xl font-bold text-neon-purple">{ideaProjects.length}</div>
+          <div className="text-sm text-gray-400 mt-1">Ideas</div>
+        </div>
+      </div>
+
+      {/* Sync status */}
+      {lastSync && (
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold text-gray-200">Projects</h2>
+          <div className="flex items-center gap-2 text-xs text-gray-500">
+            <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
+            Synced {lastSync.toLocaleTimeString()}
+            <button
+              onClick={onRefresh}
+              className="ml-2 p-1.5 rounded-lg bg-dark-600 hover:bg-dark-500 transition-colors"
+            >
+              <RefreshCw className="w-3 h-3" />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Projects grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+        {projects.map(project => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onClick={() => onSelectProject(project)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

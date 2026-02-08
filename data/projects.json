@@ -96,7 +96,7 @@
       "progress": 88,
       "color": "#ff0080",
       "lastUpdated": "2026-02-07T23:00:00Z",
-      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received — these will be used for AvaDrive (dash mount CGM display)",
+      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received \u2014 these will be used for AvaDrive (dash mount CGM display)",
       "todos": [
         {
           "id": "1",
@@ -120,7 +120,7 @@
         },
         {
           "id": "5",
-          "text": "Matter smart bulb integration — flash lights for low/high BG alerts via HomeKit API",
+          "text": "Matter smart bulb integration \u2014 flash lights for low/high BG alerts via HomeKit API",
           "done": false
         }
       ],
@@ -131,7 +131,7 @@
         },
         {
           "date": "2026-01-29",
-          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI — difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
+          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI \u2014 difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
         },
         {
           "date": "2026-02-07",
@@ -198,23 +198,23 @@
     {
       "id": "ava-companion",
       "name": "AVA Companion",
-      "description": "Strap-on diabetes buddy device — turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
+      "description": "Strap-on diabetes buddy device \u2014 turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
       "status": "active",
       "progress": 40,
       "color": "#bf00ff",
-      "lastUpdated": "2026-02-08T00:00:00Z",
-      "lastWorkedOn": "Hardware selection finalized, business model defined, pricing set, sourcing identified",
+      "lastUpdated": "2026-02-08T00:23:00Z",
+      "lastWorkedOn": "Documented product roadmap (Phase 1-3), App Store rejection fixes, lifecycle upgrade path",
       "hardware": {
         "screen": {
           "name": "DIYmalls ESP32-2432S024C",
           "specs": "2.4\" IPS 240x320 Capacitive Touch, ESP32-WROOM-32, ILI9341 driver",
           "features": "USB-C, TF card slot, speaker (SC8002B), RGB LED, temp/humidity sensor, battery switch",
-          "batteryManagement": "IP5603 Power Bank SoC — handles charging, discharging, overcurrent protection",
+          "batteryManagement": "IP5603 Power Bank SoC \u2014 handles charging, discharging, overcurrent protection",
           "batteryConnector": "JST 1.25mm 2-pin",
           "amazonLink": "https://a.co/d/06BnG9Ky",
           "amazonPrice": "$13-15",
           "aliexpressPrice": "$7.50-$8.30",
-          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6★, 1299 reviews)"
+          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6\u2605, 1299 reviews)"
         },
         "battery": {
           "name": "TAHULU 3.7V 1000mAh LiPo",
@@ -228,15 +228,15 @@
         "enclosure": {
           "type": "3D printed (Bambu Lab P1S)",
           "designTool": "CadQuery (Python)",
-          "status": "Pending — design after boards arrive, plan 2-3 revision prints",
+          "status": "Pending \u2014 design after boards arrive, plan 2-3 revision prints",
           "features": "Holds board + LiPo as single unit, velcro strap mount on back, USB-C charging slot"
         },
-        "attachment": "Adjustable velcro strap — wraps around any stuffed animal"
+        "attachment": "Adjustable velcro strap \u2014 wraps around any stuffed animal"
       },
       "pricing": {
         "retailPrice": "$99",
         "launchPromo": "$79-89 launch week discount",
-        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 — 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
+        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 \u2014 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
       },
       "costs": {
         "amazonSourced": {
@@ -271,8 +271,14 @@
         "initialInvestment": "~$123 (5 boards + batteries + cables + straps + boxes)"
       },
       "marketing": {
-        "channels": ["TikTok", "Instagram Reels", "X/Twitter", "Facebook (organic story, not self-promo)", "Reddit (r/diabetes_t1, r/parents)"],
-        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy — don't self-promote in groups.",
+        "channels": [
+          "TikTok",
+          "Instagram Reels",
+          "X/Twitter",
+          "Facebook (organic story, not self-promo)",
+          "Reddit (r/diabetes_t1, r/parents)"
+        ],
+        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy \u2014 don't self-promote in groups.",
         "appCrossSell": "Include QR code linking to AVA Type 1 app in packaging. Every Companion sold = app install.",
         "launchTiming": "Launch product listing same day AVA Type 1 app is approved on App Store"
       },
@@ -309,7 +315,7 @@
         },
         {
           "id": "7",
-          "text": "Test board with LiPo — verify charging circuit works",
+          "text": "Test board with LiPo \u2014 verify charging circuit works",
           "done": false
         },
         {
@@ -336,15 +342,109 @@
           "id": "12",
           "text": "Film product demo video for TikTok/social launch",
           "done": false
+        },
+        {
+          "id": "13",
+          "text": "FIX: Add medical citations/references screen to app (ADA, JDRF, CDC sources)",
+          "done": false
+        },
+        {
+          "id": "14",
+          "text": "FIX: Add medical disclaimer to app (Settings/About screen)",
+          "done": false
+        },
+        {
+          "id": "15",
+          "text": "FIX: Film BLE demo video \u2014 iPhone + ESP32 pairing on physical device",
+          "done": false
+        },
+        {
+          "id": "16",
+          "text": "FIX: Reply to App Store Connect with hardware ownership answers",
+          "done": false
+        },
+        {
+          "id": "17",
+          "text": "FIX: Upload demo video (YouTube unlisted) and link in App Review Info",
+          "done": false
+        },
+        {
+          "id": "18",
+          "text": "Resubmit app to App Store after all fixes",
+          "done": false
+        },
+        {
+          "id": "19",
+          "text": "PHASE 2: Build OTA firmware update system into ESP32 firmware",
+          "done": false
+        },
+        {
+          "id": "20",
+          "text": "PHASE 2: Port live CGM display firmware to ESP32-2432S024C",
+          "done": false
+        },
+        {
+          "id": "21",
+          "text": "PHASE 2: Add \"Upgrade to Live Mode\" flow in AVA app",
+          "done": false
         }
       ],
       "changelog": [
         {
           "date": "2026-02-07",
-          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector — LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
+          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector \u2014 LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
+        },
+        {
+          "date": "2026-02-08",
+          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem \u2014 one hardware platform, multiple firmware profiles, lifetime customer relationship."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/ava-companion"
+      "repoUrl": "https://github.com/ava-type1/ava-companion",
+      "roadmap": {
+        "phase1_launch": {
+          "name": "Phase 1 \u2014 Launch (Current)",
+          "product": "AVA Companion \u2014 Simulation Mode",
+          "description": "Standalone diabetes simulation display. Straps onto any stuffed animal. Shows simulated glucose numbers for educational play.",
+          "price": "$99 retail ($79-89 launch promo)",
+          "status": "In progress \u2014 ordering Tuesday, targeting app approval window"
+        },
+        "phase2_upgrade": {
+          "name": "Phase 2 \u2014 Live Mode Upgrade",
+          "product": "AVA Companion \u2192 AVA Live Display",
+          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device \u2014 transitions from educational toy to real health tool.",
+          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app \u2192 Upgrade to Live Mode \u2192 device reflashes automatically. No mail-in required.",
+          "alternateMethod": "Mail-in reflash service as fallback option",
+          "upgradePrice": "$39-49 for firmware unlock",
+          "prerequisites": [
+            "AvaDrive Dexcom API production access approved",
+            "OTA update system built into ESP32 firmware",
+            "Live CGM display firmware ported to ESP32-2432S024C"
+          ],
+          "status": "Planned \u2014 depends on Dexcom production API approval"
+        },
+        "phase3_ecosystem": {
+          "name": "Phase 3 \u2014 Full Ecosystem",
+          "description": "AVA app ties together Companion (simulation), Live Display (real CGM), AvaDrive (car mount), and AVA Heart (bedside). All using similar ESP32 hardware with different firmware and form factors.",
+          "vision": "One hardware platform, multiple firmware profiles, lifetime customer relationship from diagnosis through adulthood."
+        }
+      },
+      "appStoreReview": {
+        "status": "Rejected \u2014 fixable",
+        "submissionId": "61573647-429f-41f7-b0c1-f45504fe8270",
+        "reviewDate": "2026-02-03",
+        "issues": [
+          {
+            "guideline": "2.1.0 \u2014 Performance: App Completeness",
+            "issue": "Need demo video showing BLE pairing with physical hardware on real iPhone. Need to answer hardware ownership questions.",
+            "fix": "Film BLE demo video (iPhone + ESP32 board). Reply with hardware info: AVA Companion by KameronMartinLLC, own product, not third-party."
+          },
+          {
+            "guideline": "1.4.1 \u2014 Safety: Physical Harm",
+            "issue": "Medical information in Home and Learn sections lacks citations/sources.",
+            "fix": "Add Medical References screen with ADA Standards of Care, JDRF resources, CDC diabetes info, insulin pharmacokinetic studies. Add medical disclaimer."
+          }
+        ]
+      }
     },
     {
       "id": "ava-heart",

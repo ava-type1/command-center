@@ -1,165 +1,85 @@
 {
-  "lastUpdated": "2026-02-07T12:00:00Z",
+  "lastUpdated": "2026-02-08T12:00:00Z",
   "items": [
     {
-      "id": "63",
-      "title": "Claude Opus 4.6 Launches with 'Agent Teams' — Parallel Multi-Agent Coding",
-      "summary": "Anthropic releases Opus 4.6 with 1M token context window and 'agent teams' that split large tasks across coordinated parallel agents. Available in research preview for API users and subscribers.",
-      "url": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
-      "category": "claude",
-      "source": "TechCrunch",
-      "date": "2026-02-07",
-      "relevance": "You're running on this model now. Agent teams could parallelize AVA codebase reviews and ESP32-C6 firmware tasks — multiple agents owning different pieces simultaneously"
+      "id": "71",
+      "title": "Garmin Patents Non-Invasive HbA1c Tracking via Wrist Sensors",
+      "summary": "Garmin filed a patent (US 20260033750) for estimating glycated hemoglobin (HbA1c) using optical PPG sensors already in its watches. Uses pulse spectroscopy AC/DC ratios across wavelengths — no needles. Could ship in Fenix 9 or Venu 5 with Elevate 6 sensor, pending FDA clearance.",
+      "url": "https://the5krunner.com/2026/02/06/garmin-non-invasive-blood-glucose-tracking/",
+      "category": "diabetes",
+      "source": "The5kRunner",
+      "date": "2026-02-08",
+      "relevance": "Non-invasive HbA1c from a wristwatch would be huge for T1D families. Not real-time glucose, but long-term trend tracking without blood draws — directly relevant to AVA's mission of making diabetes management less burdensome"
     },
     {
-      "id": "64",
-      "title": "OpenAI Fires Back with GPT-5.3-Codex — 25% Faster, Self-Improving",
-      "summary": "OpenAI launches GPT-5.3-Codex minutes after Anthropic's Opus 4.6, claiming it can build 'complex games and apps from scratch over days.' First model that helped debug and deploy itself.",
+      "id": "72",
+      "title": "FDA Expands MiniMed 780G Label — Now Works with Ultra-Rapid Insulins Fiasp & Lyumjev",
+      "summary": "Medtronic receives 510(k) clearance for MiniMed 780G with Novo Nordisk's Fiasp and Eli Lilly's Lyumjev. Also cleared for Abbott's Instinct CGM with Type 2 diabetes. Medicare beneficiaries can now access the full system.",
+      "url": "https://www.medtechdive.com/news/medtronic-wins-expanded-fda-label-for-780g-insulin-pump/811435/",
+      "category": "diabetes",
+      "source": "MedTech Dive",
+      "date": "2026-02-08",
+      "relevance": "Ultra-rapid insulins with auto-delivery = faster correction, fewer missed-meal penalties. AVA's insulin action curves could model Fiasp/Lyumjev profiles to teach kids how different insulins behave"
+    },
+    {
+      "id": "73",
+      "title": "Abbott Hit with FDA Warning Letter Over Libre CGM Accuracy — Sensors Recalled",
+      "summary": "FDA issued a warning letter to Abbott over accuracy problems with FreeStyle Libre CGMs. Certain Libre 3 and Libre 3 Plus sensors recalled due to incorrect glucose readings. Abbott must address manufacturing quality issues.",
+      "url": "https://www.medtechdive.com/news/abbott-receives-fda-warning-letter-over-freestyle-libre-cgms/811262/",
+      "category": "diabetes",
+      "source": "MedTech Dive",
+      "date": "2026-02-08",
+      "relevance": "Major CGM reliability issue — Libre is one of the most popular CGMs for kids. Reinforces why AVA's education on recognizing symptoms (not just trusting devices) matters. Kaislyn's family should check sensor lot numbers"
+    },
+    {
+      "id": "74",
+      "title": "Claude Opus 4.6 Launches — Agent Teams, 1M Context, Financial Analysis",
+      "summary": "Anthropic's Opus 4.6 introduces 'agent teams' for parallel multi-agent coding, 1M token context, and deep financial analysis capabilities. Triggered second wave of the 'SaaSpocalypse' stock selloff as Wall Street fears AI replacing entire software categories.",
+      "url": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
+      "category": "claude",
+      "source": "TechCrunch / Bloomberg",
+      "date": "2026-02-08",
+      "relevance": "You're running on this model right now. Agent teams could parallelize AVA development — one agent on SwiftUI, another on ESP32 firmware, another on test cases, all coordinated"
+    },
+    {
+      "id": "75",
+      "title": "OpenAI Drops GPT-5.3-Codex Minutes After Opus 4.6 — AI Coding Arms Race",
+      "summary": "OpenAI launched GPT-5.3-Codex within minutes of Anthropic's Opus 4.6, claiming it can 'build complex games and apps from scratch over days.' First model that helped debug and deploy itself. Built to supercharge Codex agentic coding.",
       "url": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
       "category": "ai",
       "source": "TechCrunch",
-      "date": "2026-02-07",
-      "relevance": "AI coding arms race intensifying — both companies dropped models within 15 minutes of each other. Competition drives better tools for AVA development"
+      "date": "2026-02-08",
+      "relevance": "The AI coding race is white-hot — both major labs dropped models within 15 minutes. Competition means better tools for building AVA faster. Worth evaluating Codex for specific tasks"
     },
     {
-      "id": "65",
-      "title": "Goldman Sachs Deploys Claude Opus 4.6 Agents for Trade Accounting",
-      "summary": "After 6 months of development, Goldman Sachs is deploying autonomous Claude-powered agents for trade accounting, compliance, and client onboarding — core banking operations.",
-      "url": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
+      "id": "76",
+      "title": "Anthropic's Cowork Causes $285B Stock Rout — 'SaaSpocalypse' Arrives",
+      "summary": "Claude Cowork's 11 industry plugins (legal, finance, HR, productivity) triggered a $285 billion selloff across SaaS, financial services, and asset management stocks. Goldman Sachs now deploying Claude agents for trade accounting and compliance.",
+      "url": "https://www.bloomberg.com/news/articles/2026-02-03/legal-software-stocks-plunge-as-anthropic-releases-new-ai-tool",
       "category": "ai",
-      "source": "CNBC",
-      "date": "2026-02-07",
-      "relevance": "Shows Claude handling complex, regulated industry workflows autonomously. Same AI powering your development is now running Goldman Sachs operations"
+      "source": "Bloomberg / CNBC",
+      "date": "2026-02-08",
+      "relevance": "AI is now reshaping trillion-dollar industries in real-time. The same platform you build on daily just shook Wall Street — speaks to the leverage you get from building on Claude"
     },
     {
-      "id": "66",
-      "title": "FDA Approves Medtronic Simplera Sync CGM for MiniMed 780G System",
-      "summary": "FDA clears Simplera Sync — an all-in-one disposable CGM with no fingersticks, no overtape, and 2-step insertion — for use with MiniMed 780G automated insulin delivery system.",
-      "url": "https://www.medicaleconomics.com/view/fda-approves-medtronic-s-simplera-sync-sensor-for-use-with-minimed-780g-insulin-system",
+      "id": "77",
+      "title": "WIRED: CGMs Can Actually Help You Lose Weight — New Evidence",
+      "summary": "New research featured in WIRED shows continuous glucose monitors help with weight management even for non-diabetics. CGM data drives better food choices by providing immediate feedback on glucose responses to meals.",
+      "url": "https://www.wired.com/story/cgms-really-can-help-you-lose-weight/",
       "category": "diabetes",
-      "source": "Medical Economics",
-      "date": "2026-02-07",
-      "relevance": "Simplified CGM insertion is huge for kids like Kaislyn. MiniMed 780G's auto-correction every 5 minutes + meal detection aligns with what AVA's simulation teaches"
+      "source": "WIRED",
+      "date": "2026-02-08",
+      "relevance": "CGMs going mainstream beyond diabetes — expanding the total addressable market for glucose education tools like AVA. Understanding glucose responses is becoming a general wellness topic"
     },
     {
-      "id": "67",
-      "title": "Study: isCGM Cuts Hypoglycemia Episodes 45.8% in T1D Over 2 Years",
-      "summary": "New research shows intermittently scanned CGMs reduce hypoglycemia unawareness by 45.8%, lower glucose variability, and decrease hypoglycemia-related fear — while being more cost-effective than rtCGM.",
-      "url": "https://www.drugtopics.com/view/intermittently-scanned-cgm-can-reduce-hypoglycemic-episodes-in-t1d",
-      "category": "diabetes",
-      "source": "Drug Topics",
-      "date": "2026-02-07",
-      "relevance": "Strong validation for AVA's education mission — even basic scan-style CGMs significantly improve outcomes. Educational content on recognizing lows is critical"
-    },
-    {
-      "id": "68",
-      "title": "Insulin Pump Market Projected to Hit $18.9B by 2035 — 9.65% CAGR",
-      "summary": "Market analysis shows insulin pump sector growing from $8.26B to $18.93B by 2035. Insulet leads with $2.1B revenue, 500K+ US users. Canada hits 47.8% adoption via government funding.",
-      "url": "https://www.globenewswire.com/news-release/2026/02/06/3233783/0/en/Insulin-Pump-Market-Insights-2-1B-Revenue-from-Insulet-500-000-U-S-Users-and-47-8-Adoption-in-Canada-Driven-by-Government-Funding.html",
-      "category": "diabetes",
-      "source": "Globe Newswire",
-      "date": "2026-02-07",
-      "relevance": "Massive growing market for diabetes tech — AVA ecosystem sits right in the education layer feeding into this adoption wave. Canada's government-funded model is interesting"
-    },
-    {
-      "id": "69",
-      "title": "Anthropic's 'SaaSpocalypse' Deepens — Opus 4.6 Triggers Second Wave Selloff",
-      "summary": "Fortune reports Opus 4.6's financial analysis capabilities spooked investors further after Cowork plugins caused initial $285B rout. Model excels at screening, due diligence, and market intelligence.",
-      "url": "https://fortune.com/2026/02/06/anthropic-claude-opus-4-6-stock-selloff-new-upgrade/",
-      "category": "ai",
-      "source": "Fortune",
-      "date": "2026-02-07",
-      "relevance": "Claude is reshaping entire industries in real-time. The AI you use daily for coding is simultaneously disrupting Wall Street — speaks to the power of the platform you're building on"
-    },
-    {
-      "id": "70",
-      "title": "Research: Insulin Pumps Don't Cause Weight Gain in Diabetics — Myth Busted",
-      "summary": "Birmingham Children's Hospital study debunks the common myth that automated insulin pumps contribute to weight gain in diabetes patients, removing a key barrier to pump adoption.",
-      "url": "https://www.nationalworld.com/your-world/research-shows-that-insulin-pumps-dont-contribute-to-weight-gain-in-diabetics-5506304",
-      "category": "diabetes",
-      "source": "National World",
-      "date": "2026-02-07",
-      "relevance": "Important myth-busting for AVA educational content — pumps get unfairly stigmatized. Could be a good topic for an in-app learning module on pump therapy facts"
-    },
-    {
-      "id": "55",
-      "title": "GitHub Integrates Claude and Codex as Coding Agents in Public Preview",
-      "summary": "Claude by Anthropic and OpenAI Codex now available as coding agents for Copilot Pro+ and Enterprise customers, enabling autonomous task assignment from issues and PRs.",
+      "id": "78",
+      "title": "GitHub Now Offers Claude & Codex as Coding Agents in Public Preview",
+      "summary": "Claude by Anthropic and OpenAI Codex available as coding agents for Copilot Pro+ and Enterprise. Assign autonomous tasks directly from GitHub issues and PRs — agents write code, create PRs, and iterate on feedback.",
       "url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github/",
       "category": "claude",
       "source": "GitHub Changelog",
-      "date": "2026-02-05",
-      "relevance": "Direct integration with your GitHub repos - assign Claude to work on AVA app features autonomously, streamlining development workflow"
-    },
-    {
-      "id": "56",
-      "title": "Apple Xcode 26.3 Adds Native AI Coding Agent Support",
-      "summary": "Apple releases Xcode 26.3 with autonomous AI coding capabilities, including Claude Agent SDK integration for SwiftUI and UIKit development with visual preview verification.",
-      "url": "https://cyberinsider.com/apple-embraces-agentic-ai-coding-in-macos-with-xcode-26-3/",
-      "category": "tools",
-      "source": "CyberInsider",
-      "date": "2026-02-05",
-      "relevance": "Game-changer for AVA iOS development - Claude can now autonomously code SwiftUI interfaces, test via Xcode Previews, and iterate without leaving your IDE"
-    },
-    {
-      "id": "57",
-      "title": "Anthropic Claude Cowork Triggers 'SaaSpocalypse' with Legal Plugin",
-      "summary": "Claude Cowork's 11 new plugins cause $285B tech selloff as AI moves from assistance to automation. Legal, finance, and productivity plugins threaten traditional SaaS models.",
-      "url": "https://www.cnbctv18.com/technology/what-is-anthropics-new-ai-tool-and-why-it-has-triggered-a-saaspocalypse-ws-el-19841489.htm",
-      "category": "claude",
-      "source": "CNBC-TV18",
-      "date": "2026-02-05",
-      "relevance": "Major AI capability expansion - Claude now handles complete workflows from legal to finance. Consider how specialized diabetes education plugins could enhance AVA ecosystem"
-    },
-    {
-      "id": "58",
-      "title": "Twiist Pump Adds Diabeloop DBLG2 - First No-Meal-Announcement AID System",
-      "summary": "Sequel Med Tech announces partnership with Diabeloop for fully automated insulin delivery algorithm that requires zero meal announcements, launching spring 2026.",
-      "url": "https://www.hcplive.com/view/diabetes-dialogue-tech-updates-on-twiist-minimed-go-and-more",
-      "category": "diabetes",
-      "source": "HCPLive",
-      "date": "2026-02-05",
-      "relevance": "Revolutionary simplification of diabetes management - validates AVA's education mission toward fully automated systems. Kids need to understand the underlying physiology as systems get smarter"
-    },
-    {
-      "id": "59",
-      "title": "OpenAI GPT-5.2 Performance Upgrade - 40% Speed Improvement",
-      "summary": "OpenAI releases GPT-5.2 API upgrade with 40% performance improvement, competing directly with Claude 3.5 Sonnet inference speeds for coding tasks.",
-      "url": "https://www.eonmsk.com/2026/02/03/openai-upgrades-40-performance-of-gpt-5-2-api-models/",
-      "category": "ai",
-      "source": "EONMSK News",
-      "date": "2026-02-05",
-      "relevance": "AI competition intensifying - validates your Claude Code choice as both companies push performance boundaries. Expect continued improvements in coding assistance quality"
-    },
-    {
-      "id": "60",
-      "title": "Medtronic MiniMed Go FDA Cleared - Smart MDI with Libre Integration",
-      "summary": "Medtronic's MiniMed Go mobile app receives FDA clearance, pairing InPen smart insulin pen with rebranded Libre 3 Plus (Instinct) for advanced MDI management.",
-      "url": "https://www.hcplive.com/view/diabetes-dialogue-tech-updates-on-twiist-minimed-go-and-more",
-      "category": "diabetes",
-      "source": "HCPLive",
-      "date": "2026-02-05",
-      "relevance": "Smart MDI systems advancing - good reference for AVA app's insulin-on-board modeling and carb ratio education. Shows market demand for intelligent diabetes management tools"
-    },
-    {
-      "id": "61",
-      "title": "DexCom CEO: GLP-1 Users Should Also Wear CGMs",
-      "summary": "DexCom CEO Jake Leach advocates for CGM use among type 2 diabetics on GLP-1 medications, expanding CGM market beyond traditional insulin-dependent users.",
-      "url": "https://medcitynews.com/2026/02/dexcoms-ceo-believes-diabetics-on-glp-1s-should-also-wear-cgms/",
-      "category": "diabetes",
-      "source": "MedCity News",
-      "date": "2026-02-05",
-      "relevance": "CGM market expanding beyond T1D - potential broader audience for AVA educational content. Consider educational modules for T2D and GLP-1 users understanding glucose patterns"
-    },
-    {
-      "id": "62",
-      "title": "2026 SaaS Trends: AI Investment Without Performance Visibility",
-      "summary": "Zylo's SaaS Management Index shows teams heavily investing in AI tools but lacking visibility into productivity gains, cost savings, or performance impact measurement.",
-      "url": "https://zylo.com/blog/saas-predictions-for-2026-signal-a-shift-in-spend-and-governance/",
-      "category": "tools",
-      "source": "Zylo",
-      "date": "2026-02-05",
-      "relevance": "Important insight for AVA monetization - focus on measurable outcomes and clear ROI when positioning educational tools. Track learning progress and diabetes management improvements"
+      "date": "2026-02-08",
+      "relevance": "Direct integration with your repos — assign Claude to AVA app features or ESP32 firmware autonomously from GitHub issues. Streamlines the development workflow significantly"
     }
   ]
 }

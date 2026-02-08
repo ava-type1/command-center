@@ -95,8 +95,8 @@
       "status": "active",
       "progress": 88,
       "color": "#ff0080",
-      "lastUpdated": "2026-01-29T05:22:00Z",
-      "lastWorkedOn": "Researched Matter smart bulb integration for CGM alerts via HomeKit",
+      "lastUpdated": "2026-02-07T23:00:00Z",
+      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received — these will be used for AvaDrive (dash mount CGM display)",
       "todos": [
         {
           "id": "1",
@@ -132,6 +132,10 @@
         {
           "date": "2026-01-29",
           "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI — difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
+        },
+        {
+          "date": "2026-02-07",
+          "summary": "20x Waveshare ESP32-C6 1.47\" screens received. These compact displays are now designated for AvaDrive (car dash mount). Previously planned for Companion but too small for kid-friendly use."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-drive"
@@ -194,35 +198,152 @@
     {
       "id": "ava-companion",
       "name": "AVA Companion",
-      "description": "Physical plush toy with ESP32-C6 display showing simulated glucose - pairs with AVA Type 1 app via BLE",
-      "status": "paused",
-      "progress": 25,
+      "description": "Strap-on diabetes buddy device — turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
+      "status": "active",
+      "progress": 40,
       "color": "#bf00ff",
-      "lastUpdated": "2026-01-15T00:00:00Z",
-      "lastWorkedOn": "ESP32-C6 BLE communication, Waveshare display integration, enclosure design",
+      "lastUpdated": "2026-02-08T00:00:00Z",
+      "lastWorkedOn": "Hardware selection finalized, business model defined, pricing set, sourcing identified",
+      "hardware": {
+        "screen": {
+          "name": "DIYmalls ESP32-2432S024C",
+          "specs": "2.4\" IPS 240x320 Capacitive Touch, ESP32-WROOM-32, ILI9341 driver",
+          "features": "USB-C, TF card slot, speaker (SC8002B), RGB LED, temp/humidity sensor, battery switch",
+          "batteryManagement": "IP5603 Power Bank SoC — handles charging, discharging, overcurrent protection",
+          "batteryConnector": "JST 1.25mm 2-pin",
+          "amazonLink": "https://a.co/d/06BnG9Ky",
+          "amazonPrice": "$13-15",
+          "aliexpressPrice": "$7.50-$8.30",
+          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6★, 1299 reviews)"
+        },
+        "battery": {
+          "name": "TAHULU 3.7V 1000mAh LiPo",
+          "specs": "1S 3C, PH1.25 plug, protection board included",
+          "connector": "JST PH1.25mm 2-pin (plug and play, no soldering)",
+          "amazonLink": "https://a.co/d/0b8gOlUP",
+          "amazonPrice": "~$3.50/ea (4-pack)",
+          "alibabaPrice": "~$1.10/ea (custom 2-pin from IDC Electronic Tech)",
+          "estimatedRuntime": "7-10 hours active display (WiFi off), charges via USB-C"
+        },
+        "enclosure": {
+          "type": "3D printed (Bambu Lab P1S)",
+          "designTool": "CadQuery (Python)",
+          "status": "Pending — design after boards arrive, plan 2-3 revision prints",
+          "features": "Holds board + LiPo as single unit, velcro strap mount on back, USB-C charging slot"
+        },
+        "attachment": "Adjustable velcro strap — wraps around any stuffed animal"
+      },
+      "pricing": {
+        "retailPrice": "$99",
+        "launchPromo": "$79-89 launch week discount",
+        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 — 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
+      },
+      "costs": {
+        "amazonSourced": {
+          "board": "$14.00",
+          "battery": "$3.50",
+          "usbCable": "$0.90",
+          "velcroStrap": "$0.80",
+          "packaging": "$0.80",
+          "3dPrint": "$1.50",
+          "instructionCard": "$0.25",
+          "shipping": "$6.00",
+          "totalPerUnit": "$27.75",
+          "profitPerUnit": "$71.25"
+        },
+        "alibabaSourced": {
+          "board": "$8.00",
+          "battery": "$1.10",
+          "usbCable": "$0.50",
+          "velcroStrap": "$0.50",
+          "packaging": "$0.50",
+          "3dPrint": "$1.50",
+          "instructionCard": "$0.25",
+          "shipping": "$6.00",
+          "totalPerUnit": "$18.35",
+          "profitPerUnit": "$80.65"
+        }
+      },
+      "businessModel": {
+        "type": "Made-to-order",
+        "fulfillment": "Handcrafted to order. Ships within 5 business days.",
+        "strategy": "Buy 5 boards from Amazon upfront for immediate orders. Order from AliExpress/Alibaba for ongoing inventory (2-3 week shipping). Pre-stock cheap items (batteries, straps, pre-printed cases, ~$90 upfront).",
+        "initialInvestment": "~$123 (5 boards + batteries + cables + straps + boxes)"
+      },
+      "marketing": {
+        "channels": ["TikTok", "Instagram Reels", "X/Twitter", "Facebook (organic story, not self-promo)", "Reddit (r/diabetes_t1, r/parents)"],
+        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy — don't self-promote in groups.",
+        "appCrossSell": "Include QR code linking to AVA Type 1 app in packaging. Every Companion sold = app install.",
+        "launchTiming": "Launch product listing same day AVA Type 1 app is approved on App Store"
+      },
       "todos": [
         {
           "id": "1",
-          "text": "Finalize 3D printed enclosure for Bambu Lab P1S",
+          "text": "Order 5x ESP32-2432S024C from Amazon (Tuesday payday)",
           "done": false
         },
         {
           "id": "2",
-          "text": "Test battery life with ONN 5000mAh pack",
+          "text": "Order 2x TAHULU battery 4-packs from Amazon",
           "done": false
         },
         {
           "id": "3",
-          "text": "BLE pairing reliability improvements",
+          "text": "Order USB-C cables, velcro straps, kraft boxes",
           "done": false
         },
         {
           "id": "4",
-          "text": "Source plush toy manufacturer",
+          "text": "Place AliExpress bulk order (20-30 boards) for pipeline stock",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Send battery inquiry to Alibaba sellers (custom 2-pin JST 1.25mm)",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Port firmware from Waveshare ESP32-C6 to ESP32-2432S024C (2.4\" 240x320)",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Test board with LiPo — verify charging circuit works",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Design 3D printed enclosure in CadQuery (after boards arrive)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Print and test-fit enclosure (plan 2-3 revisions)",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Design instruction card with QR code to app",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Create product listing on website with photos",
+          "done": false
+        },
+        {
+          "id": "12",
+          "text": "Film product demo video for TikTok/social launch",
           "done": false
         }
       ],
-      "changelog": [],
+      "changelog": [
+        {
+          "date": "2026-02-07",
+          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector — LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
+        }
+      ],
       "repoUrl": "https://github.com/ava-type1/ava-companion"
     },
     {

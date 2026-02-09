@@ -743,6 +743,82 @@
       ],
       "repoUrl": "https://github.com/ava-type1/t1d-benefits-navigator",
       "liveUrl": "https://t1d-benefits-navigator.pages.dev"
+    },
+    {
+      "id": "gentlytold",
+      "name": "GentlyTold",
+      "description": "Memorial pages SaaS for funeral homes. AI-powered narrative generation, automated intake-to-publish pipeline, family memories with photo uploads. B2B model: $50/page wholesale, $249 lifetime hosting.",
+      "status": "completed",
+      "progress": 100,
+      "color": "#a78bfa",
+      "lastUpdated": "2026-02-09T20:00:00Z",
+      "lastWorkedOn": "MVP complete — engine worker, intake form, memories API, sales site, leave-behind print sheet all built and deployed. Ready for sales.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Buy GentlyTold.com domain (Feb 11-12)",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Walk into Gateway-Forest Lawn with demo",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Build welcome/landing page wrapper for hosting options",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Add video support to memorial template",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-09",
+          "summary": "Full MVP built: GentlyTold engine worker (intake → Claude API → generate → preview → approve → publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/gentlytold",
+      "liveUrl": "https://gentlytold.pages.dev",
+      "demoUrl": "https://ava-type1.github.io/rhodes-memorial/"
+    },
+    {
+      "id": "bid-finder",
+      "name": "Brad's Bid Finder",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Scrapes SAM.gov, ConstructConnect, FDOT, MFMP, and Bonfire portals for site prep, demolition, and excavation opportunities in FL/GA.",
+      "status": "completed",
+      "progress": 100,
+      "color": "#f59e0b",
+      "lastUpdated": "2026-02-09T21:30:00Z",
+      "lastWorkedOn": "Dark pro UI redesign, full SAM.gov detail enrichment (contacts, descriptions, NAICS), ConstructConnect descriptions, relevance filtering, closed bid removal. 150 open bids from 5 sources.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Set up automated weekly refresh cron job",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Add PlanHub as data source",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Get Brad's feedback on bid quality",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-09",
+          "summary": "Built from scratch: Dark pro dashboard with tile/list views, 5 data sources (SAM.gov, ConstructConnect, FDOT, MFMP, Bonfire), full bid detail enrichment, contact info, email drafting, relevance scoring, FL/GA filtering. 150 open bids, 65 high relevance. Deployed to Cloudflare Pages."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/brad-workflow",
+      "liveUrl": "https://bid-finder.pages.dev"
     }
   ]
 }

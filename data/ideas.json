@@ -1,319 +1,302 @@
 {
   "ideas": [
     {
-      "id": "1",
-      "title": "CGM Data Aggregator API",
-      "description": "A unified API that connects to Dexcom, Libre, and Medtronic CGM systems. Developers could build apps without dealing with each proprietary API. Charge per API call.",
+      "id": "35",
+      "title": "📖 Memorial Pages SaaS",
+      "description": "AI-powered memorial websites sold through funeral homes. Funeral home pays $50/page wholesale, charges family $149-199. Family pays $249 lifetime hosting directly on the page. AI generates narrative from obituary + historical newspaper research. 99% margins.",
       "category": "saas",
       "potential": "high",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "Could be the foundation for AvaDrive and other diabetes apps. You already have Dexcom working - expand to others."
+      "effort": "active",
+      "score": 95,
+      "status": "🔨 Building MVP",
+      "createdAt": "2026-02-09T02:00:00Z",
+      "notes": "MVP in progress — template system, intake form, Cloudflare Worker with Claude API, sales page. Rhodes memorial is the live demo. Conservative: $52k/yr (5 funeral homes). Moderate: $212k/yr (20). Optimistic: $667k/yr (50). Full business plan in memorial-saas-idea.md"
     },
     {
-      "id": "2",
-      "title": "Mobile Home Service Marketplace",
-      "description": "Like Thumbtack but specifically for manufactured home services - setup crews, leveling, skirting, plumbing. Connect homeowners with vetted contractors.",
+      "id": "36",
+      "title": "📖 LifeBook — Private Digital Baby Book",
+      "description": "Beautiful private digital baby book that turns quick photos and notes into AI-written life story. Not a social feed — a NARRATIVE. Hand your kid a beautiful website on their 18th birthday. Same infrastructure as Memorial Pages.",
       "category": "saas",
       "potential": "high",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "Natural extension of FieldSync. You already understand the industry pain points from the inside."
-    },
-    {
-      "id": "3",
-      "title": "Diabetes Camp Simulation Mode",
-      "description": "Partner with diabetes camps to use AVA Type 1 as a training tool. Kids practice management in accelerated time before going on real pumps.",
-      "category": "feature",
-      "potential": "medium",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "B2B revenue stream for the AVA app. Camps would pay for licenses."
-    },
-    {
-      "id": "4",
-      "title": "NFC Sticker Packs for AVA",
-      "description": "Physical NFC stickers kids can scan to trigger in-game events (eating food, exercise, etc.). Sell as expansion packs. Makes the game tangible.",
-      "category": "product",
-      "potential": "medium",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "Low cost to produce, high margin. Creates physical product line alongside app."
-    },
-    {
-      "id": "5",
-      "title": "FieldSync → QuickBooks Integration",
-      "description": "Auto-generate invoices from completed walkthroughs. Sync materials costs. Time tracking for hourly billing. Contractors would pay for this.",
-      "category": "feature",
-      "potential": "high",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "This is where the money is in FieldSync. Accounting integration = premium tier."
-    },
-    {
-      "id": "6",
-      "title": "Warranty Claim Automation",
-      "description": "AI reads walkthrough notes and photos, auto-fills manufacturer warranty claim forms. Saves hours per claim. Sell to service companies.",
-      "category": "saas",
-      "potential": "high",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "This is a huge pain point you experience directly. Could integrate with FieldSync or standalone."
-    },
-    {
-      "id": "7",
-      "title": "AVA Arcade - Mini Games Collection",
-      "description": "Standalone app with diabetes-themed mini games from AVA Type 1. Free with ads, or bundle with main app.",
-      "category": "product",
-      "potential": "low",
-      "createdAt": "2026-01-26T00:00:00Z"
-    },
-    {
-      "id": "8",
-      "title": "Service Tech Training Platform",
-      "description": "Video courses + certification for manufactured home service technicians. Partner with manufacturers for official certs.",
-      "category": "saas",
-      "potential": "medium",
-      "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "Industry has no standardized training. First mover could own this space."
-    },
-    {
-      "id": "9",
-      "title": "AVA Home — Matter Smart Bulb CGM Alerts",
-      "description": "Connect CGM glucose data to Matter-compatible smart home devices via Apple HomeKit. Flash lights red for lows, yellow for highs. Visual alerts you can't miss even when phone is in another room. Huge for nighttime lows — bedroom light flashes, harder to sleep through than phone buzzing.",
-      "category": "feature",
-      "potential": "high",
-      "createdAt": "2026-01-29T05:22:00Z",
-      "notes": "HomeKit API is straightforward (difficulty 3/10). Could be a feature of AvaDrive, AVA Heart, or standalone AVA Home module. Reference bulb: OREiN Matter Smart Bulb 4-pack (https://a.co/d/5kKmDSp). Supports Apple Home, Alexa, Google, SmartThings."
+      "effort": "concept",
+      "score": 85,
+      "status": "💡 Idea — builds on Memorial Pages infra",
+      "createdAt": "2026-02-09T03:33:00Z",
+      "notes": "Competitors (Tinybeans, Qeepsake, FamilyAlbum, Growbook) are all 'private Instagram for baby' — none do AI narrative or keepsake websites. Shares template engine with Memorial Pages. Parenting apps market: $2.8B by 2029. Revenue: freemium app + printed books + lifetime web hosting."
     },
     {
       "id": "10",
-      "title": "T1D Benefits Navigator",
-      "description": "App that matches T1D families with patient assistance programs (PAPs) based on income, insurance status, and medication/supply needs. Input info once, see which programs you qualify for, pre-fill applications. Nobody does this well today.",
-      "category": "built",
+      "title": "🏥 T1D Benefits Navigator",
+      "description": "PWA that matches T1D families with patient assistance programs based on income, insurance, and needs. Input info once, see what you qualify for.",
+      "category": "saas",
       "potential": "high",
+      "effort": "shipped",
+      "score": 80,
+      "status": "✅ Live — needs marketing",
       "createdAt": "2026-01-29T05:00:00Z",
-      "builtAt": "2026-01-29T08:00:00Z",
-      "notes": "✅ BUILT: Full production PWA deployed to https://t1d-benefits-navigator.pages.dev. Comprehensive PAP database with 30+ programs, smart eligibility scoring, application guidance, installable PWA. React + Vite + Tailwind stack. GitHub: https://github.com/ava-type1/t1d-benefits-navigator"
+      "notes": "DEPLOYED: https://t1d-benefits-navigator.pages.dev | 30+ programs, smart eligibility scoring, installable PWA. GitHub: ava-type1/t1d-benefits-navigator. Needs traffic and awareness to validate."
     },
     {
-      "id": "11",
-      "title": "AvaDrive MQTT: Whole House RGB Takeover",
-      "description": "Every RGB light strip and smart bulb in the house syncs to the same color based on glucose. Urgent low = entire house turns red simultaneously. Film at night for viral video potential.",
+      "id": "1",
+      "title": "💉 CGM Data Aggregator API (DiabetesData.io)",
+      "description": "Unified API for Dexcom, Libre, Medtronic CGMs. One integration for developers. Charge per API call.",
+      "category": "saas",
+      "potential": "high",
+      "effort": "prototype",
+      "score": 70,
+      "status": "⚠️ Prototype built — API access limited",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Only Dexcom has accessible API. Libre restricted, Medtronic closed. May pivot to 'Dexcom API made easy' wrapper. Prototype at ava-type1/diabetesdata-io. Dexcom partner intake submitted."
+    },
+    {
+      "id": "6",
+      "title": "📋 Warranty Claim Automation",
+      "description": "AI reads walkthrough notes/photos, auto-fills manufacturer warranty claim forms. Saves hours per claim.",
+      "category": "saas",
+      "potential": "high",
+      "effort": "concept",
+      "score": 68,
+      "status": "💡 Idea",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Huge pain point Kam experiences directly. Could integrate with FieldSync or standalone. You know the exact forms and process."
+    },
+    {
+      "id": "2",
+      "title": "🏠 Mobile Home Service Marketplace",
+      "description": "Thumbtack for manufactured home services — setup crews, leveling, skirting, plumbing. Connect homeowners with vetted contractors.",
+      "category": "saas",
+      "potential": "high",
+      "effort": "concept",
+      "score": 65,
+      "status": "💡 Idea",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Natural extension of FieldSync. Kam understands the industry from inside."
+    },
+    {
+      "id": "9",
+      "title": "🏡 AVA Home — Smart Home CGM Alerts",
+      "description": "Connect CGM data to Matter/HomeKit smart devices. Flash lights for lows, color-code rooms by glucose. Philips Hue, LED strips, any Matter device.",
       "category": "feature",
       "potential": "high",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration idea for AvaDrive. Visual impact is huge — shareable on TikTok/Instagram. Easy to demo with a few Hue bulbs + LED strips."
+      "effort": "designed",
+      "score": 62,
+      "status": "📐 Designed — Hue API integration planned",
+      "createdAt": "2026-01-29T05:22:00Z",
+      "notes": "Per-light customization, up to 50 lights, behind $10 paywall. MQTT output for DIY community. Part of AvaDrive expansion."
+    },
+    {
+      "id": "4",
+      "title": "🏷️ NFC Sticker Packs for AVA",
+      "description": "Physical NFC stickers kids scan to trigger in-game events. Sell as expansion packs for AVA Type 1 app.",
+      "category": "product",
+      "potential": "medium",
+      "effort": "concept",
+      "score": 55,
+      "status": "💡 Idea — depends on AVA app launch",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Low cost to produce, high margin. Physical product line alongside app. Needs app to be live first."
+    },
+    {
+      "id": "3",
+      "title": "🏕️ Diabetes Camp Simulation Mode",
+      "description": "Partner with diabetes camps to use AVA Type 1 as training tool. Kids practice management in accelerated time before going on real pumps.",
+      "category": "feature",
+      "potential": "medium",
+      "effort": "concept",
+      "score": 50,
+      "status": "💡 Idea — depends on AVA app launch",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "B2B revenue stream for AVA app. Camps would pay for licenses."
+    },
+    {
+      "id": "8",
+      "title": "🎓 Service Tech Training Platform",
+      "description": "Video courses + certification for manufactured home service technicians. Partner with manufacturers.",
+      "category": "saas",
+      "potential": "medium",
+      "effort": "concept",
+      "score": 45,
+      "status": "💡 Idea",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "No standardized training in industry. First mover advantage."
+    },
+    {
+      "id": "5",
+      "title": "📊 FieldSync QuickBooks Integration",
+      "description": "Auto-generate invoices from completed walkthroughs. Sync materials costs. Time tracking for hourly billing.",
+      "category": "feature",
+      "potential": "high",
+      "effort": "designed",
+      "score": 60,
+      "status": "📐 Designed — part of FieldSync",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Already built into FieldSync architecture. Premium tier feature. Needs FieldSync to get users first."
+    },
+    {
+      "id": "7",
+      "title": "🎮 AVA Arcade - Mini Games Collection",
+      "description": "Standalone app with diabetes-themed mini games from AVA Type 1.",
+      "category": "product",
+      "potential": "low",
+      "effort": "concept",
+      "score": 25,
+      "status": "💡 Idea — low priority",
+      "createdAt": "2026-01-26T00:00:00Z",
+      "notes": "Free with ads or bundle with main app. Only worth building after AVA Type 1 has traction."
+    }
+  ],
+  "avadrive_integrations": [
+    {
+      "id": "11",
+      "title": "Whole House RGB Takeover",
+      "description": "Every RGB light syncs to glucose color. Urgent low = entire house turns red. Viral video potential.",
+      "potential": "high",
+      "notes": "Film at night for TikTok content."
     },
     {
       "id": "12",
-      "title": "AvaDrive MQTT: Smart Mirror BG Display",
-      "description": "Bathroom mirror shows glucose reading while getting ready in the morning. See your BG while brushing teeth. Raspberry Pi + two-way mirror + small display.",
-      "category": "feature",
-      "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Smart mirrors are trendy in maker community. Natural daily touchpoint."
+      "title": "Smart Mirror BG Display",
+      "description": "Bathroom mirror shows glucose. Raspberry Pi + two-way mirror.",
+      "potential": "medium"
     },
     {
       "id": "13",
-      "title": "AvaDrive MQTT: Fridge Magnet Display",
-      "description": "Small ESP32 display stuck to the fridge. Ironic placement — you see your BG right as you're reaching for a snack. Could flash warnings before you grab carbs.",
-      "category": "feature",
+      "title": "Fridge Magnet Display",
+      "description": "ESP32 display on fridge. See BG right as you reach for a snack.",
       "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Humorous angle for content. 'My fridge judges me now.'"
+      "notes": "'My fridge judges me now.'"
     },
     {
       "id": "14",
-      "title": "AvaDrive MQTT: Motorcycle/Bike Helmet HUD",
-      "description": "Tiny display or LED strip inside helmet visor shows glucose at a glance. Critical for riders who can't check phones. Safety angle is huge.",
-      "category": "feature",
-      "potential": "high",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Niche but passionate audience (T1D motorcyclists). Could save lives."
+      "title": "Motorcycle Helmet HUD",
+      "description": "Tiny display inside helmet visor. Critical for riders who can't check phones.",
+      "potential": "high"
     },
     {
       "id": "15",
-      "title": "AvaDrive MQTT: Treadmill/Gym Mount",
-      "description": "Mount the portable display on gym equipment. See BG while working out without stopping. Exercise affects glucose — real-time visibility during workouts is valuable.",
-      "category": "feature",
-      "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Fitness community crossover. Demo video at the gym."
+      "title": "Treadmill/Gym Mount",
+      "description": "Mount display on gym equipment. Real-time BG during workouts.",
+      "potential": "medium"
     },
     {
       "id": "16",
-      "title": "AvaDrive MQTT: Gaming Overlay/Pause",
-      "description": "Push glucose alerts as overlay on gaming PC/console. Optional auto-pause for urgent lows. 'My PS5 pauses Fortnite when my BG drops.'",
-      "category": "feature",
+      "title": "Gaming Overlay/Auto-Pause",
+      "description": "Push glucose alerts as overlay on gaming. Auto-pause for urgent lows.",
       "potential": "high",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Huge with T1D gamers and gaming parents. MQTT → Home Assistant → PC macro or smart plug."
+      "notes": "'My PS5 pauses Fortnite when my BG drops.'"
     },
     {
       "id": "17",
-      "title": "AvaDrive MQTT: Backyard/Pool Speaker Alerts",
-      "description": "Outdoor speakers announce glucose alerts when you're in the yard, garage, or by the pool. Voice alerts: 'Kaislyn is 65 and dropping.'",
-      "category": "feature",
-      "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Practical for parents doing yardwork. Can't miss an announcement."
+      "title": "Backyard/Pool Speaker Alerts",
+      "description": "Outdoor speakers announce glucose when you're in the yard.",
+      "potential": "medium"
     },
     {
       "id": "18",
-      "title": "AvaDrive MQTT: Nightstand BG Clock",
-      "description": "Replace bedside alarm clock with BG display. Wake up, see your glucose immediately. Doubles as night light with color-coded glow.",
-      "category": "feature",
-      "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Simple, practical, daily use. Could sell as a kit."
+      "title": "Nightstand BG Clock",
+      "description": "Bedside clock replaced with BG display. Color-coded night light glow.",
+      "potential": "medium"
     },
     {
       "id": "19",
-      "title": "AvaDrive MQTT: Car Cupholder Mount",
-      "description": "Custom 3D-printed cupholder adapter for the portable display. Perfect positioning while driving. Doesn't block vents or windshield.",
-      "category": "feature",
-      "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT/portable display accessory. Practical car use case. Could sell the STL or printed mount."
+      "title": "Car Cupholder Mount",
+      "description": "3D-printed cupholder adapter for portable display.",
+      "potential": "medium"
     },
     {
       "id": "20",
-      "title": "AvaDrive MQTT: Bubble Machine Alert (Kids)",
-      "description": "Bubble machine activates when BG goes low. Fun, non-scary alert for young kids. 'Time for juice — look, bubbles!' Makes treating lows less traumatic.",
-      "category": "feature",
+      "title": "Bubble Machine Alert (Kids)",
+      "description": "Bubble machine activates on low BG. Fun, non-scary alert for young kids.",
       "potential": "medium",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Viral potential with kids content. Wholesome angle. MQTT → smart plug → bubble machine."
+      "notes": "Viral potential. 'Time for juice — look, bubbles!'"
     },
     {
       "id": "21",
-      "title": "AvaDrive MQTT: Vibrating Wearable Band",
-      "description": "Simple wristband or ankle band that vibrates for alerts. Different patterns for different urgency. Works when you can't hear or see alerts.",
-      "category": "feature",
+      "title": "Vibrating Wearable Band",
+      "description": "Wristband vibrates for alerts. Different patterns for urgency levels.",
       "potential": "high",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Great for deaf/HoH community, heavy sleepers, loud environments. ESP32 + vibration motor."
+      "notes": "Great for deaf/HoH, heavy sleepers, loud environments."
     },
     {
       "id": "22",
-      "title": "AvaDrive MQTT: Nerf Gun Wake-Up (Viral Joke)",
-      "description": "Motorized Nerf gun fires foam dart at sleeping person for urgent lows. Obviously a joke/viral video concept. 'Level 3 alert: physical intervention.'",
-      "category": "feature",
+      "title": "Nerf Gun Wake-Up",
+      "description": "Motorized Nerf gun fires foam dart for urgent lows. Viral joke concept.",
       "potential": "low",
-      "createdAt": "2026-02-05T05:00:00Z",
-      "notes": "MQTT integration. Purely for viral content — not a real product. Would get millions of views."
-    },
+      "notes": "Content only — not a real product. Would get millions of views."
+    }
+  ],
+  "tools_and_skills": [
     {
       "id": "23",
-      "title": "🔧 Ralph Wiggum - Autonomous Loop Plugin",
-      "description": "Run Claude Code autonomously for hours. Sets up a self-referential feedback loop where Claude keeps working on a task until completion. Named after the Simpsons character.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "INSTALL: /plugin install ralph-wiggum@anthropic-agent-skills | USE: /ralph-loop 'Build feature X' --max-iterations 10 --completion-promise 'DONE' | Great for longer tasks like building entire features while you do other work. GitHub: https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum"
+      "title": "Ralph Wiggum - Autonomous Loop Plugin",
+      "install": "/plugin install ralph-wiggum@anthropic-agent-skills",
+      "notes": "GitHub: https://github.com/anthropics/claude-code/tree/main/plugins/ralph-wiggum"
     },
     {
       "id": "24",
-      "title": "🔧 XcodeBuildMCP - iOS Build Integration",
-      "description": "MCP server that lets Claude Code build, run, and test your iOS/macOS projects directly. No more copy-pasting build errors — Claude sees them in real-time.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "INSTALL: npm install -g xcodebuildmcp@beta | CONFIG: Add to ~/.config/claude-code/mcp.json | Perfect for AVA Type 1 development. Claude can build, run simulator, see errors, fix them automatically. GitHub: https://github.com/cameroncooke/XcodeBuildMCP"
+      "title": "XcodeBuildMCP - iOS Build Integration",
+      "install": "npm install -g xcodebuildmcp@beta",
+      "notes": "GitHub: https://github.com/cameroncooke/XcodeBuildMCP"
     },
     {
       "id": "25",
-      "title": "🔧 Swift/iOS Development Skill",
-      "description": "Official skill that teaches Claude Swift 6 standards, modern SwiftUI patterns, @Observable macro, async/await best practices. Makes Claude way better at iOS code.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "INSTALL: /plugin marketplace add anthropics/skills then /plugin install example-skills@anthropic-agent-skills | Or download from mcpmarket.com/tools/skills/developing-with-swift | Enforces modern patterns you want in AVA apps."
+      "title": "Swift/iOS Development Skill",
+      "install": "/plugin marketplace add anthropics/skills",
+      "notes": "mcpmarket.com/tools/skills/developing-with-swift"
     },
     {
       "id": "26",
-      "title": "🔧 ESP-IDF MCP Server",
-      "description": "MCP server for ESP32 development using ESP-IDF framework. Claude can build, flash firmware, and auto-fix build errors for your ESP32 projects.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "INSTALL: Clone https://github.com/nicholasgriffintn/esp-mcp | CONFIG: claude mcp add-json 'esp-run' with IDF_PATH set | Perfect for AvaDrive ESP32 display firmware. Claude can flash directly to connected device."
+      "title": "ESP-IDF MCP Server",
+      "install": "Clone https://github.com/nicholasgriffintn/esp-mcp",
+      "notes": "For AvaDrive ESP32 firmware development"
     },
     {
       "id": "27",
-      "title": "🔧 Embedded Systems Skill",
-      "description": "Skill for firmware development on STM32, ESP32, and Nordic platforms. Teaches Claude embedded patterns, memory constraints, real-time considerations.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "Download from mcpmarket.com/tools/skills/embedded-systems-engineer | Improves Claude's ESP32 code quality for AvaDrive hardware projects."
+      "title": "Embedded Systems Skill",
+      "install": "mcpmarket.com/tools/skills/embedded-systems-engineer",
+      "notes": "Improves ESP32 code quality"
     },
     {
       "id": "28",
-      "title": "🔧 Context7 MCP - Live Documentation",
-      "description": "Gives Claude access to up-to-date, version-specific documentation for any library. No more outdated API suggestions — pulls current docs directly.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "INSTALL: npx -y @anthropic-ai/mcp-context7 | Especially useful for fast-moving libraries like SwiftUI, ESP-IDF. Claude always has current API info."
+      "title": "Context7 MCP - Live Documentation",
+      "install": "npx -y @anthropic-ai/mcp-context7",
+      "notes": "Always-current API docs for any library"
     },
     {
       "id": "29",
-      "title": "🔧 Cloudflare Workers Skill",
-      "description": "Official Cloudflare skill for deploying Workers, KV, R2, D1, Pages. Claude knows the latest Wrangler commands and best practices.",
-      "category": "improvement",
-      "potential": "medium",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "GitHub: https://github.com/cloudflare/skills | Useful for Command Center, Benefits Navigator, and other Cloudflare deployments. Claude handles wrangler config correctly."
+      "title": "Cloudflare Workers Skill",
+      "install": "GitHub: https://github.com/cloudflare/skills",
+      "notes": "For Workers, KV, R2, D1, Pages deployments"
     },
     {
       "id": "30",
-      "title": "🔧 Anthropic Official Skills Pack",
-      "description": "Bundle of official skills from Anthropic: document creation (docx, pptx, xlsx, pdf), web artifacts builder, MCP builder, webapp testing, skill creator.",
-      "category": "improvement",
-      "potential": "medium",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "INSTALL: /plugin marketplace add anthropics/skills | /plugin install document-skills@anthropic-agent-skills | /plugin install example-skills@anthropic-agent-skills | Good baseline of capabilities."
+      "title": "Anthropic Official Skills Pack",
+      "install": "/plugin marketplace add anthropics/skills",
+      "notes": "Document creation, web artifacts, MCP builder, testing"
     },
     {
       "id": "31",
-      "title": "🔧 React Native Skill (Vercel)",
-      "description": "Official skill from Vercel team for React Native best practices and performance. If you ever build AVA apps for Android too, this is essential.",
-      "category": "improvement",
-      "potential": "medium",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "GitHub: https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills | For potential cross-platform AVA development."
+      "title": "React Native Skill (Vercel)",
+      "install": "GitHub: https://github.com/vercel-labs/agent-skills/tree/main/skills/react-native-skills",
+      "notes": "For potential cross-platform AVA development"
     },
     {
       "id": "32",
-      "title": "🔧 Expo Skill - React Native Builds",
-      "description": "Official skill from Expo team. If AVA Type 1 ever goes cross-platform with React Native + Expo, this handles builds, EAS, and deployment.",
-      "category": "improvement",
-      "potential": "low",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "GitHub: https://github.com/expo/skills | Future consideration for Android version of AVA apps."
+      "title": "Expo Skill - React Native Builds",
+      "install": "GitHub: https://github.com/expo/skills",
+      "notes": "Future Android consideration"
     },
     {
       "id": "33",
-      "title": "🔧 Sentry Skill - Error Tracking",
-      "description": "Official Sentry skill for error tracking and monitoring. Claude can set up Sentry, query errors, and help debug production issues.",
-      "category": "improvement",
-      "potential": "medium",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "GitHub: https://github.com/getsentry/skills | Useful when AVA apps are in production and you need crash reporting."
-    },
-    {
-      "id": "35",
-      "title": "📖 LifeBook — Private Digital Baby Book & Life Story Platform",
-      "description": "A beautiful, private digital baby book that turns quick phone photos and messy notes into a curated, AI-written life story. Not a social feed — a NARRATIVE. Parents snap a photo, jot a note ('first haircut, he screamed'), and AI turns it into a beautifully written memory entry. The book grows over time into a gift you hand your kid on their 18th birthday. Same template engine as Memorial Pages — one celebrates life beginning, the other honors life lived.",
-      "category": "saas",
-      "potential": "high",
-      "createdAt": "2026-02-09T03:33:00Z",
-      "notes": "Inspired by Kam's own baby book his mom made. Competitors: Tinybeans ($50/yr, ad-heavy, users angry), Qeepsake (Shark Tank, SMS gimmick, just a book printer), FamilyAlbum (photo dump), Growbook (newest, $8/mo, still just private Instagram). NONE do AI narrative, curated storytelling, or beautiful web-based keepsakes. Gap: every app is 'private social feed for baby' — nobody is making the actual BOOK experience digitally. Key features: AI-assisted storytelling from quick inputs, physical memento documentation (photo the lock of hair + story = digital memento), time capsules, milestone context, printable/shareable as website OR physical book. Revenue: freemium app ($5-10/mo premium) + printed books ($30-50) + lifetime hosting for web version. SHARES INFRASTRUCTURE with Memorial Pages MVP (same templates, same AI engine, same hosting). Hospital/pediatrician B2B channel possible. Parenting apps market: $2.8B by 2029."
+      "title": "Sentry Skill - Error Tracking",
+      "install": "GitHub: https://github.com/getsentry/skills",
+      "notes": "Crash reporting for production apps"
     },
     {
       "id": "34",
-      "title": "🔧 Awesome Agent Skills Repository",
-      "description": "Curated collection of 200+ skills from Anthropic, Google Labs, Vercel, Stripe, Cloudflare, Trail of Bits, Hugging Face, and community. One-stop shop for finding skills.",
-      "category": "improvement",
-      "potential": "high",
-      "createdAt": "2026-02-05T06:00:00Z",
-      "notes": "GitHub: https://github.com/VoltAgent/awesome-agent-skills | Bookmark this — it's the most comprehensive skills directory. Browse when you need new capabilities."
+      "title": "Awesome Agent Skills Repository",
+      "install": "GitHub: https://github.com/VoltAgent/awesome-agent-skills",
+      "notes": "200+ skills directory — browse when you need new capabilities"
     }
   ]
 }

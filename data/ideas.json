@@ -298,6 +298,15 @@
       "notes": "GitHub: https://github.com/getsentry/skills | Useful when AVA apps are in production and you need crash reporting."
     },
     {
+      "id": "35",
+      "title": "📖 LifeBook — Private Digital Baby Book & Life Story Platform",
+      "description": "A beautiful, private digital baby book that turns quick phone photos and messy notes into a curated, AI-written life story. Not a social feed — a NARRATIVE. Parents snap a photo, jot a note ('first haircut, he screamed'), and AI turns it into a beautifully written memory entry. The book grows over time into a gift you hand your kid on their 18th birthday. Same template engine as Memorial Pages — one celebrates life beginning, the other honors life lived.",
+      "category": "saas",
+      "potential": "high",
+      "createdAt": "2026-02-09T03:33:00Z",
+      "notes": "Inspired by Kam's own baby book his mom made. Competitors: Tinybeans ($50/yr, ad-heavy, users angry), Qeepsake (Shark Tank, SMS gimmick, just a book printer), FamilyAlbum (photo dump), Growbook (newest, $8/mo, still just private Instagram). NONE do AI narrative, curated storytelling, or beautiful web-based keepsakes. Gap: every app is 'private social feed for baby' — nobody is making the actual BOOK experience digitally. Key features: AI-assisted storytelling from quick inputs, physical memento documentation (photo the lock of hair + story = digital memento), time capsules, milestone context, printable/shareable as website OR physical book. Revenue: freemium app ($5-10/mo premium) + printed books ($30-50) + lifetime hosting for web version. SHARES INFRASTRUCTURE with Memorial Pages MVP (same templates, same AI engine, same hosting). Hospital/pediatrician B2B channel possible. Parenting apps market: $2.8B by 2029."
+    },
+    {
       "id": "34",
       "title": "🔧 Awesome Agent Skills Repository",
       "description": "Curated collection of 200+ skills from Anthropic, Google Labs, Vercel, Stripe, Cloudflare, Trail of Bits, Hugging Face, and community. One-stop shop for finding skills.",

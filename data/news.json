@@ -1,85 +1,85 @@
 {
-  "lastUpdated": "2026-02-08T12:00:00Z",
+  "lastUpdated": "2026-02-09T12:00:00Z",
   "items": [
     {
-      "id": "71",
-      "title": "Garmin Patents Non-Invasive HbA1c Tracking via Wrist Sensors",
-      "summary": "Garmin filed a patent (US 20260033750) for estimating glycated hemoglobin (HbA1c) using optical PPG sensors already in its watches. Uses pulse spectroscopy AC/DC ratios across wavelengths — no needles. Could ship in Fenix 9 or Venu 5 with Elevate 6 sensor, pending FDA clearance.",
-      "url": "https://the5krunner.com/2026/02/06/garmin-non-invasive-blood-glucose-tracking/",
-      "category": "diabetes",
-      "source": "The5kRunner",
-      "date": "2026-02-08",
-      "relevance": "Non-invasive HbA1c from a wristwatch would be huge for T1D families. Not real-time glucose, but long-term trend tracking without blood draws — directly relevant to AVA's mission of making diabetes management less burdensome"
+      "id": "79",
+      "title": "Anthropic Cowork Plugins Trigger $611B 'SaaSpocalypse' — Wall Street in Full Panic",
+      "summary": "Anthropic's Claude Cowork launched 11 industry-specific plugins (legal, finance, HR, sales, data, marketing) that triggered a $611 billion selloff across SaaS and financial stocks. Goldman Sachs is already deploying Claude agents for trade accounting. CNN, Fortune, and Bloomberg all covered the rout as investors fear AI will obsolete entire software categories.",
+      "url": "https://www.cnn.com/2026/02/04/investing/us-stocks-anthropic-software",
+      "category": "ai",
+      "source": "CNN / Fortune / Bloomberg",
+      "date": "2026-02-09",
+      "relevance": "The platform you build on daily just shook Wall Street. Cowork plugins show the direction — specialized AI agents replacing expensive SaaS tools. The same agent architecture powers your Clawdbot setup"
     },
     {
-      "id": "72",
-      "title": "FDA Expands MiniMed 780G Label — Now Works with Ultra-Rapid Insulins Fiasp & Lyumjev",
-      "summary": "Medtronic receives 510(k) clearance for MiniMed 780G with Novo Nordisk's Fiasp and Eli Lilly's Lyumjev. Also cleared for Abbott's Instinct CGM with Type 2 diabetes. Medicare beneficiaries can now access the full system.",
+      "id": "80",
+      "title": "Claude Opus 4.6 Drops — Agent Teams, 1M Context, Parallel Multi-Agent Coding",
+      "summary": "Anthropic released Opus 4.6 with 'agent teams' for parallel multi-agent development, 1M token context window, and deep financial analysis. Triggered a second wave of stock selloffs. Fortune notes it could 'make things worse' for enterprise software incumbents.",
+      "url": "https://fortune.com/2026/02/06/anthropic-claude-opus-4-6-stock-selloff-new-upgrade/",
+      "category": "claude",
+      "source": "Fortune / TechCrunch",
+      "date": "2026-02-09",
+      "relevance": "This is the model running your Clawdbot right now. Agent teams could parallelize AVA development — one agent on SwiftUI, another on ESP32, another on testing, all coordinated"
+    },
+    {
+      "id": "81",
+      "title": "OpenAI Fires Back with GPT-5.3-Codex & Standalone Mac App",
+      "summary": "OpenAI launched GPT-5.3-Codex within minutes of Opus 4.6 and a standalone Codex Mac app. Claims the model can 'build complex apps from scratch over days' and helped debug and deploy itself. CNBC reports it's part of a direct push to steal share from Anthropic and Cursor.",
+      "url": "https://www.cnbc.com/2026/02/02/openai-codex-app-apple-computers.html",
+      "category": "ai",
+      "source": "CNBC / TechCrunch",
+      "date": "2026-02-09",
+      "relevance": "AI coding arms race = better tools for everyone. A standalone Mac coding app could be useful for quick AVA prototyping when you don't want full IDE setup"
+    },
+    {
+      "id": "82",
+      "title": "NVIDIA Vera Rubin Platform: Six New Chips for Trillion-Parameter Agentic AI",
+      "summary": "NVIDIA detailed its Vera Rubin platform — six new chips (R100 GPUs, Vera CPUs, HBM4 memory) designed specifically for agentic AI at trillion-parameter scale. Unveiled at CES 2026, it's purpose-built for autonomous reasoning workloads. Jensen Huang says software stock selloff is overblown.",
+      "url": "https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/",
+      "category": "ai",
+      "source": "NVIDIA Developer Blog",
+      "date": "2026-02-09",
+      "relevance": "The hardware foundation for next-gen AI. Jensen pushing back on the SaaS panic is notable — he sees AI augmenting software, not replacing it entirely"
+    },
+    {
+      "id": "83",
+      "title": "Abbott Hit with FDA Warning Letter — Libre 3 Sensors Recalled Over Accuracy Issues",
+      "summary": "FDA issued a warning letter to Abbott over accuracy problems with FreeStyle Libre CGMs. Certain Libre 3 and Libre 3 Plus sensors recalled due to incorrect glucose readings. CNET updated its CGM buying guide to flag affected lots. Major reliability concern for the most popular consumer CGM.",
+      "url": "https://www.medtechdive.com/news/abbott-receives-fda-warning-letter-over-freestyle-libre-cgms/811262/",
+      "category": "diabetes",
+      "source": "MedTech Dive / CNET",
+      "date": "2026-02-09",
+      "relevance": "Libre is one of the most popular CGMs for kids. Reinforces why AVA's education on recognizing symptoms (not just trusting devices) matters. If Kaislyn uses Libre, check sensor lot numbers"
+    },
+    {
+      "id": "84",
+      "title": "FDA Expands MiniMed 780G — Now Cleared for Ultra-Rapid Insulins Fiasp & Lyumjev",
+      "summary": "Medtronic received 510(k) clearance for MiniMed 780G with Novo Nordisk's Fiasp and Eli Lilly's Lyumjev ultra-rapid insulins. Also cleared for Abbott's Instinct CGM with Type 2 diabetes. Medicare beneficiaries now have full access.",
       "url": "https://www.medtechdive.com/news/medtronic-wins-expanded-fda-label-for-780g-insulin-pump/811435/",
       "category": "diabetes",
       "source": "MedTech Dive",
-      "date": "2026-02-08",
-      "relevance": "Ultra-rapid insulins with auto-delivery = faster correction, fewer missed-meal penalties. AVA's insulin action curves could model Fiasp/Lyumjev profiles to teach kids how different insulins behave"
+      "date": "2026-02-09",
+      "relevance": "Ultra-rapid insulins + auto-delivery = faster corrections. AVA's simulation could model Fiasp/Lyumjev insulin action curves to teach kids how different insulins behave differently"
     },
     {
-      "id": "73",
-      "title": "Abbott Hit with FDA Warning Letter Over Libre CGM Accuracy — Sensors Recalled",
-      "summary": "FDA issued a warning letter to Abbott over accuracy problems with FreeStyle Libre CGMs. Certain Libre 3 and Libre 3 Plus sensors recalled due to incorrect glucose readings. Abbott must address manufacturing quality issues.",
-      "url": "https://www.medtechdive.com/news/abbott-receives-fda-warning-letter-over-freestyle-libre-cgms/811262/",
-      "category": "diabetes",
-      "source": "MedTech Dive",
-      "date": "2026-02-08",
-      "relevance": "Major CGM reliability issue — Libre is one of the most popular CGMs for kids. Reinforces why AVA's education on recognizing symptoms (not just trusting devices) matters. Kaislyn's family should check sensor lot numbers"
-    },
-    {
-      "id": "74",
-      "title": "Claude Opus 4.6 Launches — Agent Teams, 1M Context, Financial Analysis",
-      "summary": "Anthropic's Opus 4.6 introduces 'agent teams' for parallel multi-agent coding, 1M token context, and deep financial analysis capabilities. Triggered second wave of the 'SaaSpocalypse' stock selloff as Wall Street fears AI replacing entire software categories.",
-      "url": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
-      "category": "claude",
-      "source": "TechCrunch / Bloomberg",
-      "date": "2026-02-08",
-      "relevance": "You're running on this model right now. Agent teams could parallelize AVA development — one agent on SwiftUI, another on ESP32 firmware, another on test cases, all coordinated"
-    },
-    {
-      "id": "75",
-      "title": "OpenAI Drops GPT-5.3-Codex Minutes After Opus 4.6 — AI Coding Arms Race",
-      "summary": "OpenAI launched GPT-5.3-Codex within minutes of Anthropic's Opus 4.6, claiming it can 'build complex games and apps from scratch over days.' First model that helped debug and deploy itself. Built to supercharge Codex agentic coding.",
-      "url": "https://techcrunch.com/2026/02/05/openai-launches-new-agentic-coding-model-only-minutes-after-anthropic-drops-its-own/",
+      "id": "85",
+      "title": "India AI Impact Summit 2026 — First Global AI Summit in the Global South (Feb 16-20)",
+      "summary": "India hosts the first global AI summit in the Global South, Feb 16-20 in New Delhi. Speakers include Sundar Pichai, Jensen Huang, Bill Gates, and Sam Altman. Five-star hotel prices skyrocketing. Agenda covers AI governance, compute infrastructure, and emerging market deployment.",
+      "url": "https://www.indiatoday.in/technology/news/story/sundar-pichai-bill-gates-and-other-major-tech-leaders-attending-india-ai-impact-summit-2026-everything-to-know-2865367-2026-02-09",
       "category": "ai",
-      "source": "TechCrunch",
-      "date": "2026-02-08",
-      "relevance": "The AI coding race is white-hot — both major labs dropped models within 15 minutes. Competition means better tools for building AVA faster. Worth evaluating Codex for specific tasks"
+      "source": "India Today / The Statesman",
+      "date": "2026-02-09",
+      "relevance": "All the major AI leaders in one room next week. Watch for announcements — Pichai (Gemini updates), Jensen (Rubin details), and Altman (GPT-5 roadmap) could all drop news"
     },
     {
-      "id": "76",
-      "title": "Anthropic's Cowork Causes $285B Stock Rout — 'SaaSpocalypse' Arrives",
-      "summary": "Claude Cowork's 11 industry plugins (legal, finance, HR, productivity) triggered a $285 billion selloff across SaaS, financial services, and asset management stocks. Goldman Sachs now deploying Claude agents for trade accounting and compliance.",
-      "url": "https://www.bloomberg.com/news/articles/2026-02-03/legal-software-stocks-plunge-as-anthropic-releases-new-ai-tool",
-      "category": "ai",
-      "source": "Bloomberg / CNBC",
-      "date": "2026-02-08",
-      "relevance": "AI is now reshaping trillion-dollar industries in real-time. The same platform you build on daily just shook Wall Street — speaks to the leverage you get from building on Claude"
-    },
-    {
-      "id": "77",
-      "title": "WIRED: CGMs Can Actually Help You Lose Weight — New Evidence",
-      "summary": "New research featured in WIRED shows continuous glucose monitors help with weight management even for non-diabetics. CGM data drives better food choices by providing immediate feedback on glucose responses to meals.",
-      "url": "https://www.wired.com/story/cgms-really-can-help-you-lose-weight/",
-      "category": "diabetes",
-      "source": "WIRED",
-      "date": "2026-02-08",
-      "relevance": "CGMs going mainstream beyond diabetes — expanding the total addressable market for glucose education tools like AVA. Understanding glucose responses is becoming a general wellness topic"
-    },
-    {
-      "id": "78",
-      "title": "GitHub Now Offers Claude & Codex as Coding Agents in Public Preview",
-      "summary": "Claude by Anthropic and OpenAI Codex available as coding agents for Copilot Pro+ and Enterprise. Assign autonomous tasks directly from GitHub issues and PRs — agents write code, create PRs, and iterate on feedback.",
-      "url": "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github/",
-      "category": "claude",
-      "source": "GitHub Changelog",
-      "date": "2026-02-08",
-      "relevance": "Direct integration with your repos — assign Claude to AVA app features or ESP32 firmware autonomously from GitHub issues. Streamlines the development workflow significantly"
+      "id": "86",
+      "title": "Home Assistant 2026.2 — New Default Dashboard, Area-Based Automation, Device Database",
+      "summary": "Major HA update: redesigned 'Overview' dashboard that auto-organizes by area, simplified add-ons as 'Apps', integration with Open Home Foundation's public device database, and improved climate/energy area assignments. Developer tools moved to Settings.",
+      "url": "https://www.howtogeek.com/home-assistant-20262-arrives-with-new-default-dashboard-simplified-apps/",
+      "category": "productivity",
+      "source": "How-To Geek / XDA",
+      "date": "2026-02-09",
+      "relevance": "If you ever set up smart home automation for the workshop or home, HA 2026.2 makes area-based automations much easier. Could also integrate ESP32 devices from AVA projects"
     }
   ]
 }

@@ -10,7 +10,9 @@
       "score": 95,
       "status": "🔨 Building MVP — Week 1 of 3",
       "createdAt": "2026-02-09T02:00:00Z",
-      "notes": "MVP in progress — template system, intake form, Cloudflare Worker + Claude API, sales page. Rhodes memorial is the live demo. 22 funeral homes identified within 50mi of Fort White FL. Gateway-Forest Lawn (Lake City) is #1 target — owner's wife is from Fort White. Strategy: offer first 2-3 pages FREE per funeral home, let family reactions sell the product. Full action plan: memorial-mvp/ACTION-PLAN.md | Business plan: memorial-saas-idea.md | Funeral home list: memorial-mvp/funeral-homes-50mi-fort-white.md | Conservative: $52k/yr (5 homes). Moderate: $212k/yr (20). Optimistic: $667k/yr (50)."
+      "demoUrl": "https://gentlytold.pages.dev",
+      "liveDemo": "https://ava-type1.github.io/rhodes-memorial/",
+      "notes": "MVP in progress — template system, intake form, Cloudflare Worker + Claude API, sales page. Rhodes memorial is the live demo. 22 funeral homes identified within 50mi of Fort White FL. Gateway-Forest Lawn (Lake City) is #1 target — owner's wife is from Fort White. Strategy: offer first 2-3 pages FREE per funeral home, let family reactions sell the product. Full action plan: memorial-mvp/ACTION-PLAN.md | Business plan: memorial-saas-idea.md | Funeral home list: memorial-mvp/funeral-homes-50mi-fort-white.md | Conservative: $52k/yr (5 homes). Moderate: $212k/yr (20). Optimistic: $667k/yr (50). DEMO SITE: https://gentlytold.pages.dev | LIVE EXAMPLE: https://ava-type1.github.io/rhodes-memorial/ | Domain: GentlyTold.com (buying Tue Feb 11)"
     },
     {
       "id": "36",

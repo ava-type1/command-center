@@ -190,6 +190,18 @@ export function IdeasHub({ ideas, onUpdate }: IdeasHubProps) {
                 </div>
               </div>
               <p className="text-sm text-gray-400 mb-3">{idea.description}</p>
+              {(idea as any).demoUrl && (
+                <div className="flex gap-2 mb-2">
+                  <a href={(idea as any).demoUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-medium px-3 py-1.5 rounded-lg bg-neon-purple/10 text-neon-purple border border-neon-purple/20 hover:bg-neon-purple/20 transition-colors">
+                    🌐 View Site
+                  </a>
+                  {(idea as any).liveDemo && (
+                    <a href={(idea as any).liveDemo} target="_blank" rel="noopener noreferrer" className="text-xs font-medium px-3 py-1.5 rounded-lg bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20 hover:bg-neon-cyan/20 transition-colors">
+                      ✨ Live Demo
+                    </a>
+                  )}
+                </div>
+              )}
               {idea.notes && (
                 <div className="text-xs text-neon-cyan/80 bg-neon-cyan/5 px-3 py-2 rounded-lg border border-neon-cyan/10">
                   💡 {idea.notes}

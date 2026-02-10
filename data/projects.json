@@ -1,6 +1,80 @@
 {
   "projects": [
     {
+      "id": "glucose-insights",
+      "name": "Glucose Insights Pro",
+      "description": "AI-powered CGM + pump data analysis SaaS — glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
+      "status": "active",
+      "progress": 70,
+      "color": "#ff0040",
+      "lastUpdated": "2026-02-11T04:00:00Z",
+      "lastWorkedOn": "Built full MVP: glucose trend charts, insulin overlay, AI analysis, endo report generator, insurance doc generator (LoMN, PA reports, hypo docs), data chatbot with Llama 4 Scout",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Glucose trend charts with time range selection",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Insulin dose overlay on glucose charts",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "AI-powered pattern analysis",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Endocrinologist report generator",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Insurance documentation generator (LoMN, PA, hypo docs)",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Data chatbot (Llama 4 Scout)",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Stripe payment integration ($9.99/mo)",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Landing page and marketing site",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "User authentication and data persistence",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "HealthKit integration for iOS app version",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Polish UI and onboarding flow",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-11",
+          "summary": "NIGHTLY BUILD: Built complete Glucose Insights MVP. Features: glucose trend visualization with customizable time ranges, insulin dose overlay, AI-powered pattern analysis identifying problem areas, endocrinologist report generator (professional PDF-ready reports), insurance documentation generator (Letters of Medical Necessity, Prior Authorization reports, hypoglycemia documentation), and an AI data chatbot powered by Llama 4 Scout that knows your data and asks proactive lifestyle questions. Freemium model: basic charts free, $9.99/mo for AI features."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/glucose-insights"
+    },
+    {
       "id": "fieldsync",
       "name": "FieldSync",
       "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",

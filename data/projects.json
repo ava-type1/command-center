@@ -56,8 +56,8 @@
       "status": "active",
       "progress": 80,
       "color": "#00d4ff",
-      "lastUpdated": "2026-01-20T00:00:00Z",
-      "lastWorkedOn": "Physiological modeling, achievement systems, 60x accelerated mode",
+      "lastUpdated": "2026-02-10T00:15:00Z",
+      "lastWorkedOn": "Resubmitted to App Store with video walkthrough, detailed explanation, and patent references",
       "todos": [
         {
           "id": "1",
@@ -81,6 +81,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-09",
+          "summary": "Resubmitted to App Store \u2014 included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
+        },
         {
           "date": "2026-01-20",
           "summary": "Approximately 80% complete. Core simulation working with realistic carb absorption and insulin action curves."
@@ -752,7 +756,7 @@
       "progress": 100,
       "color": "#a78bfa",
       "lastUpdated": "2026-02-09T20:00:00Z",
-      "lastWorkedOn": "MVP complete — engine worker, intake form, memories API, sales site, leave-behind print sheet all built and deployed. Ready for sales.",
+      "lastWorkedOn": "MVP complete \u2014 engine worker, intake form, memories API, sales site, leave-behind print sheet all built and deployed. Ready for sales.",
       "todos": [
         {
           "id": "1",
@@ -778,7 +782,7 @@
       "changelog": [
         {
           "date": "2026-02-09",
-          "summary": "Full MVP built: GentlyTold engine worker (intake → Claude API → generate → preview → approve → publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
+          "summary": "Full MVP built: GentlyTold engine worker (intake \u2192 Claude API \u2192 generate \u2192 preview \u2192 approve \u2192 publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/gentlytold",
@@ -792,8 +796,8 @@
       "status": "completed",
       "progress": 100,
       "color": "#f59e0b",
-      "lastUpdated": "2026-02-09T21:30:00Z",
-      "lastWorkedOn": "Dark pro UI redesign, full SAM.gov detail enrichment (contacts, descriptions, NAICS), ConstructConnect descriptions, relevance filtering, closed bid removal. 150 open bids from 5 sources.",
+      "lastUpdated": "2026-02-10T00:15:00Z",
+      "lastWorkedOn": "Added Find Email / Open Bid Page button to email modal for bids missing contact emails",
       "todos": [
         {
           "id": "1",
@@ -814,11 +818,50 @@
       "changelog": [
         {
           "date": "2026-02-09",
+          "summary": "Added 'Open Bid Page' / 'Find Email' button to email draft modal. 144/150 bids lack contact emails \u2014 button opens source page or Google search to help find procurement contacts."
+        },
+        {
+          "date": "2026-02-09",
           "summary": "Built from scratch: Dark pro dashboard with tile/list views, 5 data sources (SAM.gov, ConstructConnect, FDOT, MFMP, Bonfire), full bid detail enrichment, contact info, email drafting, relevance scoring, FL/GA filtering. 150 open bids, 65 high relevance. Deployed to Cloudflare Pages."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/brad-workflow",
       "liveUrl": "https://bid-finder.pages.dev"
+    },
+    {
+      "id": "rhodes-cookbook",
+      "name": "Rhodes Family Cookbook",
+      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ \u2014 Jerry & Gloria Rhodes' restaurant",
+      "status": "active",
+      "progress": 90,
+      "color": "#c4a478",
+      "lastUpdated": "2026-02-10T00:15:00Z",
+      "lastWorkedOn": "Built complete cookbook site with 36 recipes, interactive serving scaler, organized by category",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Find restaurant logo photo",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Add more recipes if Kam finds them",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Verify scaled-down restaurant recipe quantities",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-09",
+          "summary": "Built complete digital cookbook from scratch. 36 recipes digitized from family photos (magazine clippings, handwritten cards, restaurant binder). Categories: Sauces & Dressings (8), Mains (7), Appetizers (2), Sides (8), Desserts (11). Interactive serving scaler on every recipe. Restaurant-scale recipes converted to home portions. Deployed to GitHub Pages."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/rhodes-cookbook",
+      "liveUrl": "https://ava-type1.github.io/rhodes-cookbook/"
     }
   ]
 }

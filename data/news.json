@@ -1,85 +1,85 @@
 {
-  "lastUpdated": "2026-02-10T12:00:00Z",
+  "lastUpdated": "2026-02-11T12:00:00Z",
   "items": [
     {
-      "id": "87",
-      "title": "Claude Sonnet 5 Launched Feb 3 — Codename 'Fennec', Already Topping Benchmarks",
-      "summary": "Anthropic quietly released Claude Sonnet 5 on February 3, codenamed 'Fennec'. Prediction markets now show 54% probability of a full Claude 5 family by end of March. The model was first spotted in Google Vertex AI logs. Mashable and Dataconomy confirmed the launch, with early benchmarks showing strong gains over Sonnet 4.",
-      "url": "https://dataconomy.com/2026/02/04/anthropic-fennec-leak-signals-imminent-claude-sonnet-5-launch/",
+      "id": "95",
+      "title": "Xcode 26.3 Integrates Claude Agent & OpenAI Codex — Agentic Coding Comes to Apple Dev",
+      "summary": "Apple released Xcode 26.3 with native integration of Anthropic's Claude Agent and OpenAI's Codex directly in the IDE. The AI systems can autonomously write code, build projects, run tests, and iterate — turning Xcode into an agentic coding environment. This is Apple's biggest AI developer tooling move yet.",
+      "url": "https://venturebeat.com/technology/apple-integrates-anthropics-claude-and-openais-codex-into-xcode-26-3-in-push",
       "category": "claude",
-      "source": "Dataconomy / Mashable / MLQ.ai",
-      "date": "2026-02-10",
-      "relevance": "Sonnet 5 is now live. This is the mid-tier model — likely faster and cheaper than Opus 4.6 for everyday coding tasks. Worth testing for AVA development workflows where speed matters more than max capability"
+      "source": "VentureBeat",
+      "date": "2026-02-11",
+      "relevance": "Huge for AVA development. Claude Agent inside Xcode means you could have AI autonomously building and testing SwiftUI views, running simulator tests, and iterating on the AVA app — all without leaving your IDE. Worth upgrading immediately."
     },
     {
-      "id": "88",
-      "title": "Claude Code v2.1.21 — Agent Teams, Opus 4.6 Support, Task System Overhaul",
-      "summary": "Claude Code's latest release adds experimental Agent Teams (multi-agent collaboration with team leads and shared task lists, enable with CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1), native Opus 4.6 support with 1M token context, customizable keybindings, task management with dependency tracking, and VSCode plugin support. Also fixes session compaction, MCP Unicode handling, and background agent permissions.",
-      "url": "https://claudefa.st/blog/guide/changelog",
+      "id": "96",
+      "title": "Claude Code Fast Mode — 2.5x Faster Responses Now in Preview",
+      "summary": "Anthropic rolled out a 'fast mode' for Claude Code powered by Opus 4.6, delivering up to 2.5x faster responses. Aimed at high-intensity tasks like debugging large codebases, reviewing files, and generating complex scripts. Currently in early research preview for users with additional usage enabled.",
+      "url": "https://www.storyboard18.com/amp/digital/anthropic-rolls-out-fast-mode-for-claude-code-to-speed-up-developer-workflows-89148.htm",
       "category": "claude",
-      "source": "Claude Code Changelog",
-      "date": "2026-02-10",
-      "relevance": "Agent Teams is the big one — imagine one agent on SwiftUI, another on ESP32 firmware, another on tests, all coordinated. Task dependency tracking also useful for complex AVA feature branches"
+      "source": "Storyboard18 / Anthropic",
+      "date": "2026-02-11",
+      "relevance": "Speed has been the main friction point with Claude Code for quick iterations. 2.5x faster on debugging and code review could make the edit-test cycle on AVA much tighter. Worth enabling if you're on the preview list."
     },
     {
-      "id": "89",
-      "title": "Dexcom Adds AI-Powered Smart Meal Logging to Stelo OTC CGM",
-      "summary": "Dexcom announced an AI-enhanced Smart Food Logging feature for its Stelo over-the-counter CGM. Users can now log meals with AI assistance that estimates carb counts and correlates glucose responses. Stelo is Dexcom's consumer-grade CGM that doesn't require a prescription.",
-      "url": "https://www.drugdeliverybusiness.com/dexcom-enhanced-ai-logging-stelo-cgm/",
+      "id": "97",
+      "title": "FreeStyle Libre 3 Sensor Recall — 7 Deaths, 860 Injuries from Incorrect Low Readings",
+      "summary": "FDA expanded recall details on certain FreeStyle Libre 3 and Libre 3 Plus sensors that display glucose readings lower than actual levels. As of Jan 7, 2026, Abbott reported 860 serious injuries and 7 deaths associated with the faulty sensors. Specific model numbers are affected — readers and apps are not impacted.",
+      "url": "https://www.cnet.com/health/medical/check-cgm-recalled-freestyle-libre-3-sensors-associated-7-deaths/",
       "category": "diabetes",
-      "source": "Drug Delivery Business",
-      "date": "2026-02-10",
-      "relevance": "Direct competition validation for AVA's carb-tracking features. Dexcom adding AI meal logging to their OTC CGM proves the market wants smarter food → glucose correlation. AVA's simulation could model this same concept for learning"
+      "source": "CNET / FDA / UPI",
+      "date": "2026-02-11",
+      "relevance": "Critical safety news for the T1D community. Falsely low CGM readings are dangerous — people skip treatment thinking they're fine. This reinforces why education tools like AVA matter: teaching people to recognize when something feels off vs what the device says."
     },
     {
-      "id": "90",
-      "title": "Insulet Launches Omnipod 5 + Omnipod Discover in the Middle East",
-      "summary": "Insulet expanded Omnipod 5 and the new Omnipod Discover platform to Saudi Arabia, Kuwait, UAE, and Qatar. The system pairs with both Abbott Libre 2 Plus and Dexcom G7 sensors. Omnipod 5 is cleared for ages 2+ with T1D — same system Kam uses.",
-      "url": "https://www.drugdeliverybusiness.com/insulet-launches-omnipod-5-omnipod-discover-in-the-middle-east/",
+      "id": "98",
+      "title": "Sequel Med Twiist Pump — Oreo-Sized, Tidepool Loop Algorithm, Apple Watch Control",
+      "summary": "Deep dive on the Twiist insulin pump from Sequel Med. Uses sound waves (iiSure™ Technology) to measure each microdose of insulin, detects occlusions 9x faster than competitors. Size of an Oreo cookie (~2 oz). Powered by Tidepool Loop algorithm, compatible with Libre 3 Plus, controllable via iPhone app or Apple Watch. Approved for ages 6+.",
+      "url": "https://www.theeducatedpatient.com/view/the-sequel-med-twiist-insulin-pump-a-new-twist-on-diabetes-management",
       "category": "diabetes",
-      "source": "Drug Delivery Business / Rutland Herald",
-      "date": "2026-02-10",
-      "relevance": "Your pump system going global — Omnipod 5 expanding internationally means more families worldwide who could benefit from AVA's educational tools. Also validates Omnipod's dominance in tubeless delivery"
+      "source": "The Educated Patient",
+      "date": "2026-02-11",
+      "relevance": "Serious competitor to Omnipod. The Tidepool Loop algorithm is open-source-derived, Apple Watch control is slick, and the meal absorption profiles (fast/standard/slow with food emojis) are something AVA's simulation could model. Worth watching as a device to potentially support in AVA's Live Track."
     },
     {
-      "id": "91",
-      "title": "Insulin Pump Market Projected to Hit $25.4B by 2033 — CGM Integration Driving Growth",
-      "summary": "New market analysis from Astute Analytica projects the insulin pump market reaching $25.4 billion by 2033, driven by CGM sensor integration, auto-calibration features, and real-time dosing algorithms. Collaboration between pump and sensor makers is accelerating innovation.",
-      "url": "https://www.globenewswire.com/news-release/2026/02/09/3234713/0/en/Insulin-Pump-Market-to-Reach-US-25-40-Billion-by-2033-Driven-by-Rising-Diabetes-Burden-and-Shift-Toward-Precision-Insulin-Delivery-Astute-Analytica.html",
+      "id": "99",
+      "title": "Medtronic 780G Wins Expanded FDA Label — Now Covers Type 2, Ultra-Rapid Insulins, Abbott CGM",
+      "summary": "Medtronic received expanded FDA clearance for its MiniMed 780G insulin pump, now covering Type 2 diabetes use, compatibility with Abbott's CGM platform, and support for ultra-rapid-acting insulins (Lyumjev, Fiasp, Merilog). This significantly broadens the 780G's addressable market.",
+      "url": "https://www.medtechdive.com/news/medtronic-wins-expanded-fda-label-for-780g-insulin-pump/811435/",
       "category": "diabetes",
-      "source": "GlobeNewsWire / Astute Analytica",
-      "date": "2026-02-10",
-      "relevance": "$25B market by 2033 = massive opportunity for education tools. Every new pump user needs to learn how the technology works. AVA is positioned exactly where the growth is — teaching the next generation of pump users"
+      "source": "MedTech Dive",
+      "date": "2026-02-11",
+      "relevance": "Pumps expanding into Type 2 means the education market is growing fast. Every new pump user — T1 or T2 — needs to learn carb counting, insulin timing, and CGM interpretation. AVA's educational tools become relevant to a much larger audience."
     },
     {
-      "id": "92",
-      "title": "India AI Impact Summit Next Week — 100 Countries, Pichai, Gates, Jensen, Altman All Attending",
-      "summary": "The largest-ever global AI summit kicks off Feb 16-20 in New Delhi with 100+ countries, 15+ heads of state, and 100+ CEOs. Confirmed speakers include Sundar Pichai, Bill Gates, Jensen Huang. Sam Altman reportedly attending closed-door meetings. India is pushing an 'impact-first' AI governance agenda focused on the Global South.",
+      "id": "100",
+      "title": "OpenAI Codex Mac App — Native macOS Coding Agent That 'Builds Apps Over Days'",
+      "summary": "OpenAI launched Codex as a native macOS app on Feb 3. Commands multiple AI coding agents simultaneously, runs shell commands in parallel, and supports personal skill loading from ~/.agents/skills. Positioned as a direct competitor to Claude Code with persistent multi-day project memory.",
+      "url": "https://thesyntaxdiaries.com/openai-codex-app-ai-coding-agents-complete-guide",
+      "category": "ai",
+      "source": "The Syntax Diaries / Releasebot",
+      "date": "2026-02-11",
+      "relevance": "Worth trying alongside Claude Code. The skill-loading system (~/.agents/skills) is interesting — similar to Clawdbot's skill architecture. Multi-agent parallel execution could be useful for complex builds. Competition is making all these tools better."
+    },
+    {
+      "id": "101",
+      "title": "India AI Impact Summit Next Week — Pichai, Gates, Jensen, Altman, 100+ Countries",
+      "summary": "The largest global AI summit to date kicks off Feb 16-20 in New Delhi with 100+ countries, 15+ heads of state, and 100+ CEOs. Confirmed: Sundar Pichai, Bill Gates, Jensen Huang. Sam Altman attending closed-door sessions. India pushing 'impact-first' AI governance for the Global South.",
       "url": "https://www.indiatoday.in/technology/news/story/sundar-pichai-bill-gates-and-other-major-tech-leaders-attending-india-ai-impact-summit-2026-everything-to-know-2865367-2026-02-09",
       "category": "ai",
-      "source": "India Today / Business Standard / DQ India",
-      "date": "2026-02-10",
-      "relevance": "Watch next week for major announcements — every major AI leader in one room. Pichai could drop Gemini updates, Jensen may reveal Vera Rubin pricing, and Altman's closed-door meetings suggest OpenAI has something cooking"
+      "source": "India Today / Business Standard",
+      "date": "2026-02-11",
+      "relevance": "Watch next week for major announcements. Every AI CEO in one room usually means product drops. Pichai may reveal Gemini updates, Jensen could announce Vera Rubin pricing, Altman's closed-door meetings hint at something big from OpenAI."
     },
     {
-      "id": "93",
-      "title": "OpenAI GPT-5.3-Codex + Standalone Mac Coding App — Direct Salvo at Claude Code",
-      "summary": "OpenAI launched GPT-5.3-Codex (their best coding model yet) alongside a standalone Codex Mac app that can 'build complex apps from scratch over days.' Released within minutes of Opus 4.6 to maximize competitive impact. CNBC reports it's specifically targeting Anthropic and Cursor's developer audience.",
-      "url": "https://venturebeat.com/technology/openais-gpt-5-3-codex-drops-as-anthropic-upgrades-claude-ai-coding-wars-heat",
+      "id": "102",
+      "title": "The Atlantic: AI Could 'Wipe Out Half of All Entry-Level White-Collar Jobs' in 1-5 Years",
+      "summary": "Major Atlantic feature citing Anthropic CEO Dario Amodei warning AI could drive unemployment up 10-20% and eliminate half of entry-level white-collar jobs within 1-5 years. UC Berkeley study shows AI is making people work MORE, not less — smaller teams absorbing more work as companies cut headcount under AI pretenses.",
+      "url": "https://www.theatlantic.com/magazine/2026/03/ai-economy-labor-market-transformation/685731/",
       "category": "ai",
-      "source": "VentureBeat / CNBC",
-      "date": "2026-02-10",
-      "relevance": "The AI coding war benefits builders like you — more competition means better tools, faster. Worth trying the Codex Mac app for quick prototyping sessions when you want something lighter than full Claude Code"
-    },
-    {
-      "id": "94",
-      "title": "Dexcom CEO: Diabetics on GLP-1s Should Also Wear CGMs",
-      "summary": "Dexcom CEO Jake Leach is pushing for CGM adoption among the growing GLP-1 user base, arguing that even patients using Ozempic/Wegovy for diabetes management benefit from continuous glucose monitoring. This positions CGMs not just for insulin-dependent diabetics but for the broader metabolic health market.",
-      "url": "https://medcitynews.com/2026/02/dexcoms-ceo-believes-diabetics-on-glp-1s-should-also-wear-cgms/",
-      "category": "diabetes",
-      "source": "MedCity News",
-      "date": "2026-02-10",
-      "relevance": "Dexcom expanding CGM beyond T1D into the GLP-1 crowd massively grows the addressable market for glucose education. AVA's learning tools could adapt for Type 2 and metabolic health audiences down the road"
+      "source": "The Atlantic / UC Berkeley / Tech Brew",
+      "date": "2026-02-11",
+      "relevance": "The labor disruption is real and accelerating. For an independent contractor like you, AI tools are a force multiplier — you're using them to build products, not being replaced by them. But worth considering: AVA could also serve as a training tool for healthcare workers being asked to do more with less."
     }
   ]
 }

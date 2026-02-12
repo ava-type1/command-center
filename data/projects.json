@@ -3,7 +3,7 @@
     {
       "id": "glucose-insights",
       "name": "Glucose Insights Pro",
-      "description": "AI-powered CGM + pump data analysis SaaS — glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
+      "description": "AI-powered CGM + pump data analysis SaaS \u2014 glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
       "status": "active",
       "progress": 70,
       "color": "#ff0040",
@@ -157,7 +157,7 @@
       "changelog": [
         {
           "date": "2026-02-09",
-          "summary": "Resubmitted to App Store — included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
+          "summary": "Resubmitted to App Store \u2014 included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
         },
         {
           "date": "2026-01-20",
@@ -174,7 +174,7 @@
       "progress": 88,
       "color": "#ff0080",
       "lastUpdated": "2026-02-07T23:00:00Z",
-      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received — these will be used for AvaDrive (dash mount CGM display)",
+      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received \u2014 these will be used for AvaDrive (dash mount CGM display)",
       "todos": [
         {
           "id": "1",
@@ -198,7 +198,7 @@
         },
         {
           "id": "5",
-          "text": "Matter smart bulb integration — flash lights for low/high BG alerts via HomeKit API",
+          "text": "Matter smart bulb integration \u2014 flash lights for low/high BG alerts via HomeKit API",
           "done": false
         }
       ],
@@ -209,7 +209,7 @@
         },
         {
           "date": "2026-01-29",
-          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI — difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
+          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI \u2014 difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
         },
         {
           "date": "2026-02-07",
@@ -276,7 +276,7 @@
     {
       "id": "ava-companion",
       "name": "AVA Companion",
-      "description": "Strap-on diabetes buddy device — turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
+      "description": "Strap-on diabetes buddy device \u2014 turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
       "status": "active",
       "progress": 40,
       "color": "#bf00ff",
@@ -287,12 +287,12 @@
           "name": "DIYmalls ESP32-2432S024C",
           "specs": "2.4\" IPS 240x320 Capacitive Touch, ESP32-WROOM-32, ILI9341 driver",
           "features": "USB-C, TF card slot, speaker (SC8002B), RGB LED, temp/humidity sensor, battery switch",
-          "batteryManagement": "IP5603 Power Bank SoC — handles charging, discharging, overcurrent protection",
+          "batteryManagement": "IP5603 Power Bank SoC \u2014 handles charging, discharging, overcurrent protection",
           "batteryConnector": "JST 1.25mm 2-pin",
           "amazonLink": "https://a.co/d/06BnG9Ky",
           "amazonPrice": "$13-15",
           "aliexpressPrice": "$7.50-$8.30",
-          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6★, 1299 reviews)"
+          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6\u2605, 1299 reviews)"
         },
         "battery": {
           "name": "TAHULU 3.7V 1000mAh LiPo",
@@ -306,15 +306,15 @@
         "enclosure": {
           "type": "3D printed (Bambu Lab P1S)",
           "designTool": "CadQuery (Python)",
-          "status": "Pending — design after boards arrive, plan 2-3 revision prints",
+          "status": "Pending \u2014 design after boards arrive, plan 2-3 revision prints",
           "features": "Holds board + LiPo as single unit, velcro strap mount on back, USB-C charging slot"
         },
-        "attachment": "Adjustable velcro strap — wraps around any stuffed animal"
+        "attachment": "Adjustable velcro strap \u2014 wraps around any stuffed animal"
       },
       "pricing": {
         "retailPrice": "$99",
         "launchPromo": "$79-89 launch week discount",
-        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 — 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
+        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 \u2014 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
       },
       "costs": {
         "amazonSourced": {
@@ -356,7 +356,7 @@
           "Facebook (organic story, not self-promo)",
           "Reddit (r/diabetes_t1, r/parents)"
         ],
-        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy — don't self-promote in groups.",
+        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy \u2014 don't self-promote in groups.",
         "appCrossSell": "Include QR code linking to AVA Type 1 app in packaging. Every Companion sold = app install.",
         "launchTiming": "Launch product listing same day AVA Type 1 app is approved on App Store"
       },
@@ -393,7 +393,7 @@
         },
         {
           "id": "7",
-          "text": "Test board with LiPo — verify charging circuit works",
+          "text": "Test board with LiPo \u2014 verify charging circuit works",
           "done": false
         },
         {
@@ -433,7 +433,7 @@
         },
         {
           "id": "15",
-          "text": "FIX: Film BLE demo video — iPhone + ESP32 pairing on physical device",
+          "text": "FIX: Film BLE demo video \u2014 iPhone + ESP32 pairing on physical device",
           "done": false
         },
         {
@@ -470,27 +470,27 @@
       "changelog": [
         {
           "date": "2026-02-07",
-          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector — LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
+          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector \u2014 LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
         },
         {
           "date": "2026-02-08",
-          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem — one hardware platform, multiple firmware profiles, lifetime customer relationship."
+          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem \u2014 one hardware platform, multiple firmware profiles, lifetime customer relationship."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-companion",
       "roadmap": {
         "phase1_launch": {
-          "name": "Phase 1 — Launch (Current)",
-          "product": "AVA Companion — Simulation Mode",
+          "name": "Phase 1 \u2014 Launch (Current)",
+          "product": "AVA Companion \u2014 Simulation Mode",
           "description": "Standalone diabetes simulation display. Straps onto any stuffed animal. Shows simulated glucose numbers for educational play.",
           "price": "$99 retail ($79-89 launch promo)",
-          "status": "In progress — ordering Tuesday, targeting app approval window"
+          "status": "In progress \u2014 ordering Tuesday, targeting app approval window"
         },
         "phase2_upgrade": {
-          "name": "Phase 2 — Live Mode Upgrade",
-          "product": "AVA Companion → AVA Live Display",
-          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device — transitions from educational toy to real health tool.",
-          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app → Upgrade to Live Mode → device reflashes automatically. No mail-in required.",
+          "name": "Phase 2 \u2014 Live Mode Upgrade",
+          "product": "AVA Companion \u2192 AVA Live Display",
+          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device \u2014 transitions from educational toy to real health tool.",
+          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app \u2192 Upgrade to Live Mode \u2192 device reflashes automatically. No mail-in required.",
           "alternateMethod": "Mail-in reflash service as fallback option",
           "upgradePrice": "$39-49 for firmware unlock",
           "prerequisites": [
@@ -498,26 +498,26 @@
             "OTA update system built into ESP32 firmware",
             "Live CGM display firmware ported to ESP32-2432S024C"
           ],
-          "status": "Planned — depends on Dexcom production API approval"
+          "status": "Planned \u2014 depends on Dexcom production API approval"
         },
         "phase3_ecosystem": {
-          "name": "Phase 3 — Full Ecosystem",
+          "name": "Phase 3 \u2014 Full Ecosystem",
           "description": "AVA app ties together Companion (simulation), Live Display (real CGM), AvaDrive (car mount), and AVA Heart (bedside). All using similar ESP32 hardware with different firmware and form factors.",
           "vision": "One hardware platform, multiple firmware profiles, lifetime customer relationship from diagnosis through adulthood."
         }
       },
       "appStoreReview": {
-        "status": "Rejected — fixable",
+        "status": "Rejected \u2014 fixable",
         "submissionId": "61573647-429f-41f7-b0c1-f45504fe8270",
         "reviewDate": "2026-02-03",
         "issues": [
           {
-            "guideline": "2.1.0 — Performance: App Completeness",
+            "guideline": "2.1.0 \u2014 Performance: App Completeness",
             "issue": "Need demo video showing BLE pairing with physical hardware on real iPhone. Need to answer hardware ownership questions.",
             "fix": "Film BLE demo video (iPhone + ESP32 board). Reply with hardware info: AVA Companion by KameronMartinLLC, own product, not third-party."
           },
           {
-            "guideline": "1.4.1 — Safety: Physical Harm",
+            "guideline": "1.4.1 \u2014 Safety: Physical Harm",
             "issue": "Medical information in Home and Learn sections lacks citations/sources.",
             "fix": "Add Medical References screen with ADA Standards of Care, JDRF resources, CDC diabetes info, insulin pharmacokinetic studies. Add medical disclaimer."
           }
@@ -826,70 +826,105 @@
       "id": "gentlytold",
       "name": "GentlyTold",
       "description": "Memorial pages SaaS for funeral homes. AI-powered narrative generation, automated intake-to-publish pipeline, family memories with photo uploads. B2B model: $50/page wholesale, $249 lifetime hosting.",
-      "status": "completed",
-      "progress": 100,
+      "status": "active",
+      "progress": 75,
       "color": "#a78bfa",
-      "lastUpdated": "2026-02-11T05:30:00Z",
-      "lastWorkedOn": "MVP complete — engine worker, intake form, memories API, sales site, leave-behind print sheet all built and deployed. Ready for sales.",
+      "lastUpdated": "2026-02-12T05:55:00Z",
+      "lastWorkedOn": "Domain purchased (gentlytold.com on Cloudflare). Site deployed to Pages, engine + memories workers routed to subdomains. DNS records needed to go fully live.",
       "todos": [
         {
           "id": "1",
-          "text": "Buy GentlyTold.com domain (target: Feb 11-12)",
+          "text": "Add 4 DNS CNAME records in Cloudflare dashboard (gentlytold.com, www, engine, memories)",
           "done": false
         },
         {
           "id": "2",
-          "text": "Point domain to Cloudflare Pages deployment",
+          "text": "Verify gentlytold.com loads the landing page",
           "done": false
         },
         {
           "id": "3",
-          "text": "Walk into Gateway-Forest Lawn funeral home with printed demo",
+          "text": "Verify engine.gentlytold.com/api/health returns OK",
           "done": false
         },
         {
           "id": "4",
-          "text": "Build welcome/landing page wrapper showing hosting upgrade options",
+          "text": "Test full intake flow: intake form \u2192 generate \u2192 preview \u2192 approve \u2192 publish",
           "done": false
         },
         {
           "id": "5",
-          "text": "Add video support to memorial page template",
+          "text": "Set up hello@gentlytold.com email routing (Cloudflare Email Routing)",
           "done": false
         },
         {
           "id": "6",
-          "text": "Set up Stripe for $29/yr and $249 lifetime family hosting payments",
+          "text": "Update Rhodes demo links to use gentlytold.com domain",
           "done": false
         },
         {
           "id": "7",
-          "text": "Build funeral home portal (submit intake form → preview → approve → publish)",
+          "text": "Set up Stripe for $29/yr and $249 lifetime family hosting payments",
           "done": false
         },
         {
           "id": "8",
-          "text": "Print leave-behind sheets for funeral home visits",
+          "text": "Print leave-behind sheets with gentlytold.com URLs",
           "done": false
         },
         {
           "id": "9",
-          "text": "Visit 5 funeral homes within 50mi of Fort White with demo",
+          "text": "Walk into Gateway-Forest Lawn funeral home with printed demo",
           "done": false
         },
         {
           "id": "10",
-          "text": "Get first paying funeral home partner",
+          "text": "Visit 5 funeral homes within 50mi of Fort White",
           "done": false
         },
         {
           "id": "11",
+          "text": "Get first paying funeral home partner",
+          "done": false
+        },
+        {
+          "id": "20",
+          "text": "Domain purchased: gentlytold.com (Cloudflare Registrar)",
+          "done": true
+        },
+        {
+          "id": "21",
+          "text": "Site deployed to Cloudflare Pages (gentlytold.pages.dev)",
+          "done": true
+        },
+        {
+          "id": "22",
+          "text": "Engine worker routed to engine.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "23",
+          "text": "Memories worker routed to memories.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "24",
+          "text": "Intake form updated to use engine.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "25",
+          "text": "Contribute page updated to use memories.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "11a",
           "text": "Engine worker deployed and live",
           "done": true
         },
         {
           "id": "12",
-          "text": "Intake form built",
+          "text": "Intake form built (paste obituary + manual entry)",
           "done": true
         },
         {
@@ -916,16 +951,25 @@
           "id": "17",
           "text": "22 funeral homes identified within 50mi",
           "done": true
+        },
+        {
+          "id": "18",
+          "text": "Video support added to memorial template",
+          "done": true
         }
       ],
       "changelog": [
         {
+          "date": "2026-02-12",
+          "summary": "Domain purchased: gentlytold.com via Cloudflare Registrar. Deployed site to Cloudflare Pages. Configured engine.gentlytold.com and memories.gentlytold.com worker routes. Updated all internal URLs to use new domain. DNS CNAME records needed to activate custom domains."
+        },
+        {
           "date": "2026-02-09",
-          "summary": "Full MVP built: GentlyTold engine worker (intake → Claude API → generate → preview → approve → publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
+          "summary": "Full MVP built: GentlyTold engine worker (intake \u2192 Claude API \u2192 generate \u2192 preview \u2192 approve \u2192 publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/gentlytold",
-      "liveUrl": "https://gentlytold.pages.dev",
+      "liveUrl": "https://gentlytold.com",
       "demoUrl": "https://ava-type1.github.io/rhodes-memorial/"
     },
     {
@@ -957,7 +1001,7 @@
       "changelog": [
         {
           "date": "2026-02-09",
-          "summary": "Added 'Open Bid Page' / 'Find Email' button to email draft modal. 144/150 bids lack contact emails — button opens source page or Google search to help find procurement contacts."
+          "summary": "Added 'Open Bid Page' / 'Find Email' button to email draft modal. 144/150 bids lack contact emails \u2014 button opens source page or Google search to help find procurement contacts."
         },
         {
           "date": "2026-02-09",
@@ -970,7 +1014,7 @@
     {
       "id": "rhodes-cookbook",
       "name": "Rhodes Family Cookbook",
-      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ — Jerry & Gloria Rhodes' restaurant",
+      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ \u2014 Jerry & Gloria Rhodes' restaurant",
       "status": "active",
       "progress": 90,
       "color": "#c4a478",
@@ -1005,7 +1049,7 @@
     {
       "id": "kodaai",
       "name": "KodaAI",
-      "description": "Managed AI assistant SaaS for small businesses. AI phone answering, email, calendar, CRM — packaged as a monthly service. First client: Karen's hair salon in Fort White.",
+      "description": "Managed AI assistant SaaS for small businesses. AI phone answering, email, calendar, CRM \u2014 packaged as a monthly service. First client: Karen's hair salon in Fort White.",
       "status": "active",
       "progress": 25,
       "color": "#06b6d4",
@@ -1039,7 +1083,7 @@
         },
         {
           "id": "6",
-          "text": "Connect Twilio number → ElevenLabs (native integration)",
+          "text": "Connect Twilio number \u2192 ElevenLabs (native integration)",
           "done": false
         },
         {
@@ -1049,7 +1093,7 @@
         },
         {
           "id": "8",
-          "text": "Set up Google Calendar OAuth (Cloud Console → Calendar API → OAuth creds)",
+          "text": "Set up Google Calendar OAuth (Cloud Console \u2192 Calendar API \u2192 OAuth creds)",
           "done": false
         },
         {
@@ -1059,7 +1103,7 @@
         },
         {
           "id": "10",
-          "text": "End-to-end test: call number → AI answers → checks calendar → books appointment → Karen gets Telegram notification",
+          "text": "End-to-end test: call number \u2192 AI answers \u2192 checks calendar \u2192 books appointment \u2192 Karen gets Telegram notification",
           "done": false
         },
         {
@@ -1130,8 +1174,8 @@
       ],
       "repoUrl": null,
       "pricing": {
-        "personal": "$99/mo — email, reminders, research, personal assistant",
-        "business": "$299/mo — full AI employee (phone + email + calendar + CRM)",
+        "personal": "$99/mo \u2014 email, reminders, research, personal assistant",
+        "business": "$299/mo \u2014 full AI employee (phone + email + calendar + CRM)",
         "costPerClient": "$25-50/mo (ElevenLabs + Twilio + Claude API)",
         "profitPerClient": "$75-250/mo depending on tier"
       }
@@ -1139,7 +1183,7 @@
     {
       "id": "karen-salon-agent",
       "name": "Karen's Salon AI (KodaAI Beta)",
-      "description": "First KodaAI deployment — AI phone receptionist for Karen's hair salon in Fort White, FL. Answers missed calls, checks real-time availability, books appointments, notifies Karen via Telegram. Proof of concept for KodaAI SaaS.",
+      "description": "First KodaAI deployment \u2014 AI phone receptionist for Karen's hair salon in Fort White, FL. Answers missed calls, checks real-time availability, books appointments, notifies Karen via Telegram. Proof of concept for KodaAI SaaS.",
       "status": "active",
       "progress": 30,
       "color": "#8b5cf6",
@@ -1173,7 +1217,7 @@
         },
         {
           "id": "6",
-          "text": "Connect Twilio → ElevenLabs",
+          "text": "Connect Twilio \u2192 ElevenLabs",
           "done": false
         },
         {
@@ -1188,7 +1232,7 @@
         },
         {
           "id": "9",
-          "text": "Have Karen snap her current schedule → sync to Google Calendar",
+          "text": "Have Karen snap her current schedule \u2192 sync to Google Calendar",
           "done": false
         },
         {
@@ -1203,12 +1247,12 @@
         },
         {
           "id": "12",
-          "text": "Get Karen's actual service pricing (optional — AI can say \"call for pricing\")",
+          "text": "Get Karen's actual service pricing (optional \u2014 AI can say \"call for pricing\")",
           "done": false
         },
         {
           "id": "13",
-          "text": "Train Karen on daily workflow: snap paper schedule → send to Telegram",
+          "text": "Train Karen on daily workflow: snap paper schedule \u2192 send to Telegram",
           "done": false
         },
         {

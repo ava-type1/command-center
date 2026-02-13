@@ -247,6 +247,44 @@
       "status": "💡 Idea — low priority",
       "createdAt": "2026-01-26T00:00:00Z",
       "notes": "Free with ads or bundle with main app. Only worth building after AVA Type 1 has traction."
+    },
+    {
+      "id": "45",
+      "title": "🌐 InstantSite — Auto Website Generator SaaS",
+      "description": "Business owners fill a form, get a live professional website in 60 seconds. Same quality as hand-built sites but fully automated. Tiered: Free, $19/mo Pro, $39/mo Business. Cloudflare Workers stack.",
+      "category": "saas",
+      "potential": "high",
+      "effort": "active",
+      "score": 93,
+      "status": "🔨 Building MVP",
+      "createdAt": "2026-02-13T04:25:00Z",
+      "highlight": true,
+      "highlightColor": "red",
+      "notes": "STANDOUT OPPORTUNITY. Same GentlyTold pattern (form → auto-generate → deploy) applied to business websites. Templates based on real sites already built (handyman, salon). Market: millions of small businesses without websites. Upgrade tiers: images/maps (Pro), calendar/custom domain (Business). Near-zero hosting cost on Cloudflare."
+    },
+    {
+      "id": "46",
+      "title": "💼 Direct Local Website Sales",
+      "description": "Skip Fiverr, sell websites direct to local businesses via Facebook groups and in-person. $250-500/site, no platform fees. Portfolio: Tim's handyman site, Karen's salon, AVA Type 1.",
+      "category": "service",
+      "potential": "high",
+      "effort": "active",
+      "score": 88,
+      "status": "🚀 Ready to launch — post in FB groups",
+      "createdAt": "2026-02-13T03:55:00Z",
+      "notes": "Zero cost to start. Post portfolio links in every local Facebook group (Fort White, Lake City, Gainesville, Jax, Ocala). Show live sites as proof. Bundle with Google Business Profile optimization ($50-100 extra). Add $25-50/mo maintenance plans for recurring revenue. Can run alongside Fiverr."
+    },
+    {
+      "id": "47",
+      "title": "📦 Website Template Store (Gumroad/Etsy)",
+      "description": "Package existing sites as downloadable HTML/CSS templates. $29-49 each. Build once, sell forever. Restaurant, contractor, salon templates.",
+      "category": "digital-product",
+      "potential": "medium",
+      "effort": "prototype",
+      "score": 78,
+      "status": "💡 Ready to package — sites already built",
+      "createdAt": "2026-02-13T04:18:00Z",
+      "notes": "Three sites already exist (handyman, salon, tech). Strip specific business info, package as templates, list on Gumroad + Etsy. Zero delivery cost. Passive income play — build once, earn forever."
     }
   ],
   "avadrive_integrations": [

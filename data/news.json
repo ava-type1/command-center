@@ -1,85 +1,85 @@
 {
-  "lastUpdated": "2026-02-12T12:00:00Z",
+  "lastUpdated": "2026-02-13T12:00:00Z",
   "items": [
     {
-      "id": "103",
-      "title": "Anthropic Opens Claude Free Tier — Files, Connectors, Skills Now Free (As OpenAI Adds Ads)",
-      "summary": "Anthropic announced free-tier users can now create files, use third-party connectors (Slack, Notion, Zapier, Figma, etc.), and access skills — all previously paid-only. Compaction (auto context summarization) also extended to free users. The move comes days after OpenAI started showing ads in ChatGPT for non-subscribers, with Anthropic promising to keep Claude ad-free.",
-      "url": "https://www.macrumors.com/2026/02/11/anthropic-claude-more-free-features/",
+      "id": "111",
+      "title": "Omnipod 5 Upgrades Coming 2026 — Full CGM Interop, ML-Powered Insights, Omnipod 6 in 2027",
+      "summary": "Insulet outlined a 3-year roadmap at its Innovation Showcase. Omnipod 5 upgrades (pending FDA clearance, expected 2026): full interoperability with all major CGMs, improved algorithm for better time-in-range, and Omnipod Discover — a machine-learning insights platform for real-time dose recommendations and streamlined onboarding. Omnipod 6 (2027) brings an adaptive algorithm that learns individual glucose patterns. By 2028, a Fully Closed Loop for Type 2 — zero carb counting, zero meal announcements, fully autonomous insulin delivery designed for primary care prescribing.",
+      "url": "https://www.hcplive.com/view/diabetes-dialogue-upcoming-upgrades-for-omnipod-technology",
+      "category": "diabetes",
+      "source": "HCPLive",
+      "date": "2026-02-13",
+      "relevance": "Kam uses Omnipod 5 — these upgrades are directly relevant. Full CGM interop means less vendor lock-in. The ML insights platform could change how dose adjustments are made. For AVA's simulation, modeling adaptive algorithms (like Omnipod 6's learning system) could be an advanced teaching feature — showing kids how their pump learns their patterns over time."
+    },
+    {
+      "id": "112",
+      "title": "ChatGPT Now Shows Ads to Free & Go Users — Anthropic Counters by Going Ad-Free & Expanding Free Tier",
+      "summary": "OpenAI officially began testing ads in ChatGPT for US users on Free and Go tiers this week. Ads are labeled, non-personalized, and only shown to logged-in adults. Paid tiers (Plus, Pro, Business, Enterprise) remain ad-free. Days later, Anthropic responded by expanding Claude's free tier to include file creation, third-party connectors (Slack, Notion, Zapier, Figma), skills, and compaction — all previously paid features. Anthropic explicitly committed to keeping Claude ad-free.",
+      "url": "https://mashable.com/article/openai-chatgpt-ads-begin-rollout",
+      "category": "ai",
+      "source": "Mashable / MacRumors",
+      "date": "2026-02-13",
+      "relevance": "A strategic divergence in the AI business model war. OpenAI is going the ad-supported route while Anthropic is betting on premium conversion by giving more away free. For devs like Kam, Claude's free connectors (Slack, Notion, Zapier) make it a free automation hub. If you recommend tools to other T1D devs, Claude free tier is now genuinely powerful."
+    },
+    {
+      "id": "113",
+      "title": "ByteDance Building 'SeedChip' AI Processor — 100K Units in 2026 via Samsung",
+      "summary": "ByteDance is developing an in-house AI chip codenamed SeedChip and is in manufacturing talks with Samsung Electronics. The TikTok parent aims to produce at least 100,000 units in 2026, scaling to 350,000. Previously ByteDance worked with Broadcom and TSMC, but US export restrictions are pushing the company toward Samsung's foundry. At a January all-hands, ByteDance acknowledged its AI models still lag OpenAI but pledged continued heavy investment.",
+      "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/",
+      "category": "ai",
+      "source": "Reuters",
+      "date": "2026-02-13",
+      "relevance": "The AI chip race is fragmenting. ByteDance building custom silicon signals that every major tech company now considers AI compute a strategic asset, not something you just rent from Nvidia. Long-term this could affect AI API pricing and availability — more competition in chips means lower costs for everyone building AI products."
+    },
+    {
+      "id": "114",
+      "title": "GitHub Octoverse: TypeScript Overtakes Python as #1 Language, AI Reshaping How Software Is Built",
+      "summary": "GitHub's latest Octoverse data shows TypeScript overtook Python and JavaScript as the most-used language on GitHub in 2025, adding over 1 million contributors. Python grew 48.78% YoY (~850K new contributors), while JavaScript grew slower at 24.79%. The report highlights that the fastest-growing tools aren't about writing more code — they're about reducing friction. Typed languages win in AI-assisted workflows because type systems give AI models better context for code generation.",
+      "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
       "category": "claude",
-      "source": "MacRumors / Anthropic",
-      "date": "2026-02-12",
-      "relevance": "The connectors are the real story — free access to Slack, Notion, Zapier, and Figma integrations means Claude is becoming a free automation hub. If you recommend AVA tools to other devs, they can now use Claude for free to connect their workflows. Also a smart competitive play against ChatGPT's ad move."
+      "source": "GitHub Blog",
+      "date": "2026-02-13",
+      "relevance": "TypeScript's rise is directly tied to AI coding tools — type annotations give Claude Code and Copilot much better context for generating correct code. If you're starting new projects (like command center or AVA backend services), TypeScript is the clear choice. Python remains king for AI/ML work. SwiftUI already has strong typing, which is why Claude Code works well with it."
     },
     {
-      "id": "104",
-      "title": "Claude Opus 4.6 Triggers Trillion-Dollar Software Selloff — Agent Teams & 1M Token Context",
-      "summary": "Anthropic's Claude Opus 4.6 release (Feb 5) sparked a massive stock selloff across enterprise SaaS companies. Key features: autonomous AI agent teams that work in parallel on complex projects, 1M token context window, and industry-specific Cowork plug-ins (including PowerPoint generation). Outperforms GPT-5.2 on real-world professional tasks. Financial data firms hit hardest — FactSet down 10%, S&P Global and Moody's also dropped.",
-      "url": "https://fortune.com/2026/02/06/anthropic-claude-opus-4-6-stock-selloff-new-upgrade/",
-      "category": "ai",
-      "source": "Fortune",
-      "date": "2026-02-12",
-      "relevance": "This is the model powering Koda right now. The agent teams feature (multiple AI agents in parallel) could be game-changing for AVA development — imagine one agent working on SwiftUI views while another handles the simulation model simultaneously. 1M token context means entire codebases in a single conversation."
-    },
-    {
-      "id": "105",
-      "title": "xAI Mass Exodus — Half the Co-Founders Leave Amid SpaceX Merger",
-      "summary": "Six of xAI's twelve original co-founders have departed following a major reorganization tied to SpaceX's acquisition. Elon Musk is restructuring xAI to 'enhance execution speed,' but the talent drain raises questions about Grok's future competitiveness. Meanwhile, Grok has surpassed DeepSeek to become the third-largest AI chatbot.",
-      "url": "https://opentools.ai/news",
-      "category": "ai",
-      "source": "OpenTools / Multiple Sources",
-      "date": "2026-02-12",
-      "relevance": "Half the founding team leaving is a big deal. Grok gaining market share while hemorrhaging talent is an interesting paradox. The SpaceX merger suggests Musk is consolidating AI into his hardware/space empire rather than keeping it as a standalone lab. One to watch but doesn't change the Claude/OpenAI duopoly for dev tools."
-    },
-    {
-      "id": "106",
-      "title": "ADA 2026 Standards of Care — CGM Now Recommended at Diabetes Onset, AID Access Expanded",
-      "summary": "The American Diabetes Association published its 2026 Standards of Care with major tech updates: CGM is now recommended at the time of diabetes onset (not just for insulin users), automated insulin delivery (AID) systems no longer require C-peptide levels or autoantibody tests to initiate, and new guidance ensures schools/workplaces must accommodate CGM and pump use for kids and adults.",
-      "url": "https://www.patientcareonline.com/view/ada-publishes-2026-standards-of-care-with-updates-to-sections-on-technology-obesity-cardiometabolic-disease-management",
+      "id": "115",
+      "title": "Tandem Diabetes Care Q4 2025 Earnings Coming Feb 19 — Analysts Bullish with 38% Upside",
+      "summary": "Tandem Diabetes Care reports Q4 2025 earnings on February 19. Analysts expect revenue of $277M (up from $249M in Q3) and near-breakeven EPS of -$0.06. The stock has 38.4% potential upside according to analyst consensus. Tandem's t:slim X2 pump continues to be a market leader in AID systems. Stifel Nicolaus raised its price target, citing strong adoption trends.",
+      "url": "https://www.defenseworld.net/2026/02/12/tandem-diabetes-care-tndm-to-release-earnings-on-thursday.html",
       "category": "diabetes",
-      "source": "Patient Care Online / ADA",
-      "date": "2026-02-12",
-      "relevance": "Huge for Kaislyn and every T1D kid. The school/workplace guidance means schools MUST let kids manage their CGMs and pumps during class — no more fighting with administrators. CGM-at-onset also means more newly diagnosed families who need education tools exactly like AVA. The addressable market just got bigger."
+      "source": "Defense World / Stock Titan",
+      "date": "2026-02-13",
+      "relevance": "Kaislyn uses the Tandem t:slim X2 — this is her pump company. Strong earnings would mean continued R&D investment in the platform. Worth watching the Feb 19 report for any announcements about next-gen features, Dexcom G8 compatibility, or Mobi pump expansion. If Tandem stock pops, it signals the diabetes tech market is healthy — good for AVA's target ecosystem."
     },
     {
-      "id": "107",
-      "title": "Dexcom CEO: CGM + GLP-1 Together Gets Better Outcomes Than Either Alone",
-      "summary": "Dexcom CEO Jake Leach is pushing for CGM adoption alongside GLP-1 drugs (Ozempic, Mounjaro) for Type 2 diabetes. His argument: GLP-1s suppress appetite but CGMs provide real-time feedback on how food, activity, and medication actually affect glucose — giving 'CGM as lifestyle coach' a clinical backing. Dexcom sees CGM+GLP-1 as complementary, not competing.",
-      "url": "https://medcitynews.com/2026/02/dexcoms-ceo-believes-diabetics-on-glp-1s-should-also-wear-cgms/",
-      "category": "diabetes",
-      "source": "MedCity News",
-      "date": "2026-02-12",
-      "relevance": "This is the 'CGM as lifestyle tool' narrative that could eventually push CGMs to the general wellness market. For AVA, it validates the education angle — if CGMs are becoming standard for T2D alongside GLP-1s, millions more people need to learn how to read and interpret glucose data. AVA's simulation could teach that."
-    },
-    {
-      "id": "108",
-      "title": "Medtronic 780G Gets Expanded FDA Clearance — Ultra-Rapid Insulins, Abbott CGM, Type 2 Support",
-      "summary": "Medtronic's MiniMed 780G insulin pump received 510(k) clearance for use with ultra-rapid-acting insulins (Fiasp, Lyumjev), Abbott's Instinct CGM sensor, and expanded use in Type 2 diabetes. The ultra-rapid insulins reduce the impact of missed or late meal doses. Medicare/Medicare Advantage coverage now includes the 780G with Instinct sensor.",
-      "url": "https://www.medtechdive.com/news/medtronic-wins-expanded-fda-label-for-780g-insulin-pump/811435/",
-      "category": "diabetes",
-      "source": "MedTech Dive",
-      "date": "2026-02-12",
-      "relevance": "Ultra-rapid insulin compatibility is a practical improvement — faster insulin action means better post-meal control. For AVA's simulation model, this is worth modeling: different insulin types (regular, rapid, ultra-rapid) have different absorption curves. Could be an advanced teaching mode showing how insulin choice affects BG."
-    },
-    {
-      "id": "109",
-      "title": "MIT Names Generative Coding & Mechanistic Interpretability as 2026 Breakthrough Technologies",
-      "summary": "MIT Technology Review's 2026 Breakthrough Technologies list includes 'generative coding' (AI writing production software autonomously) and 'mechanistic interpretability' (understanding what's happening inside LLMs by tracing features from prompt to response). Anthropic's interpretability research was specifically highlighted as taking the field 'to another level.'",
-      "url": "https://www.technologyreview.com/2026/01/12/1130027/generative-coding-ai-software-2026-breakthrough-technology/",
+      "id": "116",
+      "title": "AI Reads Brain MRI Scans in Seconds — University of Michigan Breakthrough",
+      "summary": "Researchers at the University of Michigan created an AI system that interprets brain MRI scans in seconds, accurately identifying a wide range of neurological conditions and determining which cases need urgent care. The system can flag critical findings for immediate radiologist review while routing routine scans for standard processing, potentially transforming emergency neurology workflows.",
+      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/",
       "category": "ai",
-      "source": "MIT Technology Review",
-      "date": "2026-02-12",
-      "relevance": "Generative coding being named a breakthrough validates what you're already doing — using AI to build real products. Mechanistic interpretability is Anthropic's long game: understanding WHY models work makes them safer and more reliable. Good for long-term trust in AI-assisted medical tools like AVA."
+      "source": "ScienceDaily / University of Michigan",
+      "date": "2026-02-13",
+      "relevance": "Another example of AI excelling at medical pattern recognition — the same fundamental approach that makes CGM trend prediction possible. This kind of real-time medical AI validates the broader ecosystem AVA operates in: technology making healthcare faster and more accessible. The triage angle (urgent vs. routine) is a pattern that could apply to glucose alerts too."
     },
     {
-      "id": "110",
-      "title": "Claude Code Fixes — VS Code Scroll Bug, Tab Key, Bash Permissions Patched",
-      "summary": "Anthropic pushed Claude Code updates fixing a VS Code terminal scroll-to-top regression (introduced in 2.1.37), Tab key incorrectly queueing slash commands instead of autocompleting, and bash permission matching for commands using environment variable wrappers. Incremental but quality-of-life improvements for daily users.",
-      "url": "https://releasebot.io/updates/anthropic",
-      "category": "claude",
-      "source": "Releasebot / Anthropic",
-      "date": "2026-02-12",
-      "relevance": "Small fixes but the scroll-to-top bug was annoying if you hit it. The Tab autocomplete fix is a daily quality-of-life improvement. Worth updating Claude Code if you haven't recently."
+      "id": "117",
+      "title": "Goldman Sachs Deploys Anthropic's Claude Agents for Trade Accounting & Client Onboarding",
+      "summary": "Goldman Sachs is building AI agents using Anthropic's Claude to automate trade accounting and client onboarding workflows. The agents handle repetitive compliance tasks, cross-reference documentation, and flag exceptions for human review. Blackstone also increased its stake in Anthropic to ~$1 billion. Enterprise adoption of Claude agents is accelerating across finance, legal, and operations.",
+      "url": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
+      "category": "ai",
+      "source": "CNBC / Reuters",
+      "date": "2026-02-13",
+      "relevance": "Anthropic's enterprise push validates the agent architecture you're already using with Clawdbot. Goldman deploying Claude agents for real financial workflows means the underlying technology is being trusted with high-stakes work. Blackstone's $1B stake signals Anthropic isn't going anywhere — long-term stability for the tools you're building on."
+    },
+    {
+      "id": "118",
+      "title": "Taiwan Hikes 2026 GDP Forecast to 7.7% — AI Chip Demand Driving Economic Boom",
+      "summary": "Taiwan's government raised its 2026 economic growth forecast to 7.7%, up from previous estimates, driven almost entirely by surging global demand for AI chips. TSMC continues to be the world's most critical semiconductor manufacturer, with AI accelerator orders (from Nvidia, Apple, AMD, and others) filling capacity through 2027. The AI hardware boom is now a macroeconomic force.",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/",
+      "category": "ai",
+      "source": "Reuters",
+      "date": "2026-02-13",
+      "relevance": "The AI boom is now reshaping entire national economies. This matters for long-term API pricing — as chip supply scales up over the next 1-2 years, AI inference costs should continue dropping, making tools like Claude Code and Clawdbot cheaper to run. Good macro trend for indie builders like you."
     }
   ]
 }

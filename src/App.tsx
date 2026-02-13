@@ -4,6 +4,7 @@ import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
 import { FinanceDashboard } from './components/FinanceDashboard';
 import { ContentCreator } from './components/ContentCreator';
+import { DailyBriefing } from './components/DailyBriefing';
 import { Sidebar, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2, Menu, RefreshCw } from 'lucide-react';
@@ -13,10 +14,12 @@ import type { Project, Idea } from './types';
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
 const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
 const IDEAS_URL = `${GITHUB_BASE}/ideas.json`;
+const DAILY_LOG_URL = `${GITHUB_BASE}/daily-log.json`;
 
 function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
+  const [dailyLog, setDailyLog] = useState<any[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [view, setView] = useState<View>('dashboard');
   const [loading, setLoading] = useState(true);
@@ -30,9 +33,10 @@ function App() {
     setError(null);
 
     try {
-      const [projectsRes, ideasRes] = await Promise.all([
+      const [projectsRes, ideasRes, dailyLogRes] = await Promise.all([
         fetch(PROJECTS_URL + '?t=' + Date.now()),
         fetch(IDEAS_URL + '?t=' + Date.now()),
+        fetch(DAILY_LOG_URL + '?t=' + Date.now()),
       ]);
 
       if (projectsRes.ok && ideasRes.ok) {
@@ -46,6 +50,12 @@ function App() {
         localStorage.setItem('kam-projects', JSON.stringify(projectsData.projects));
         localStorage.setItem('kam-ideas', JSON.stringify(ideasData.ideas));
         localStorage.setItem('kam-last-sync', new Date().toISOString());
+
+        if (dailyLogRes.ok) {
+          const dailyLogData = await dailyLogRes.json();
+          setDailyLog(dailyLogData.days || []);
+          localStorage.setItem('kam-daily-log', JSON.stringify(dailyLogData.days));
+        }
       } else {
         throw new Error('Failed to fetch from GitHub');
       }
@@ -53,10 +63,12 @@ function App() {
       const cachedProjects = localStorage.getItem('kam-projects');
       const cachedIdeas = localStorage.getItem('kam-ideas');
       const cachedSync = localStorage.getItem('kam-last-sync');
+      const cachedDailyLog = localStorage.getItem('kam-daily-log');
 
       if (cachedProjects) setProjects(JSON.parse(cachedProjects));
       if (cachedIdeas) setIdeas(JSON.parse(cachedIdeas));
       if (cachedSync) setLastSync(new Date(cachedSync));
+      if (cachedDailyLog) setDailyLog(JSON.parse(cachedDailyLog));
 
       if (!cachedProjects && !cachedIdeas) {
         setError('Unable to load data. Check your connection.');
@@ -159,6 +171,7 @@ function App() {
             {view === 'finance' && <FinanceDashboard />}
             {view === 'content' && <ContentCreator />}
             {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
+            {view === 'briefing' && <DailyBriefing days={dailyLog} />}
           </ErrorBoundary>
         </main>
       </div>

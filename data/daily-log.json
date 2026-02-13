@@ -1,0 +1,85 @@
+{
+  "days": [
+    {
+      "date": "2026-02-13",
+      "summary": "Major KodaAI evolution day — pivoted from manual setup to self-service platform. Built consumer onboarding, phone integration spec, portfolio site. Improved Glucose Insights with export guides.",
+      "highlights": [
+        "KodaAI self-service platform designed and landing page deployed",
+        "Stripe payment integration completed for InstantSite",
+        "Phone answering spec (Retell AI + Twilio) researched and coded",
+        "Portfolio site built for Nobility Homes",
+        "Glucose Insights export guides added (Glooko, Dexcom, Libre)"
+      ],
+      "decisions": [
+        "KodaAI pricing restructured: $79 Lite / $149 Standard / $299 Pro",
+        "SMS via Twilio as primary channel (not Telegram) — grandma-proof",
+        "Single Anthropic API key bundled into subscription, use Sonnet not Opus for clients",
+        "Brother-in-law's site prep business = first beta tester",
+        "Cloudflare Moltworker for hosting client instances (not per-user VPS)"
+      ],
+      "ideas": [
+        "iOS app wrapper for KodaAI (future, web app first)",
+        "Business-specific templates: car salesman, realtor, contractor, salon, etc.",
+        "Facebook page auto-posting and comment replies for clients",
+        "Job scraper for contractor clients",
+        "Inventory connection for car dealerships"
+      ],
+      "actionItems": [
+        { "text": "Set up Twilio account and buy test number", "owner": "Kam", "status": "pending" },
+        { "text": "Build SMS bridge (Twilio → Clawdbot)", "owner": "Koda", "status": "pending" },
+        { "text": "Configure site prep assistant for brother-in-law beta", "owner": "Koda", "status": "pending" },
+        { "text": "Fiverr W-9 verification", "owner": "Kam", "status": "waiting" },
+        { "text": "Walk into Gateway-Forest Lawn with GentlyTold demo", "owner": "Kam", "status": "pending" },
+        { "text": "Follow up on Glooko API request", "owner": "Koda", "status": "done" }
+      ],
+      "projects_touched": ["kodaai", "instantsite", "glucose-insights", "gentlytold"],
+      "mood": "productive"
+    },
+    {
+      "date": "2026-02-12",
+      "summary": "GentlyTold domain setup and pipeline fixes. AVA app still in Apple review.",
+      "highlights": [
+        "gentlytold.com domain connected via Cloudflare",
+        "Email routing set up for kameron@gentlytold.com",
+        "Engine worker AI_PROXY_TOKEN fixed — full pipeline working",
+        "AVA Mini enclosure work continued"
+      ],
+      "decisions": [
+        "GentlyTold is the brand name going forward (not memorial-mvp)"
+      ],
+      "ideas": [],
+      "actionItems": [
+        { "text": "Set up Stripe for GentlyTold", "owner": "Koda", "status": "pending" },
+        { "text": "Build leave-behind print sheets", "owner": "Koda", "status": "pending" }
+      ],
+      "projects_touched": ["gentlytold", "ava-app", "ava-mini"],
+      "mood": "steady"
+    },
+    {
+      "date": "2026-02-11",
+      "summary": "Skills audit and InstantSite micro-SaaS build day. Fiverr gig created.",
+      "highlights": [
+        "Installed 10 new skills from ClawHub",
+        "Built and deployed InstantSite micro-SaaS",
+        "Created Fiverr gig with 3 tiers",
+        "Income strategy discussion — focus on passive income"
+      ],
+      "decisions": [
+        "InstantSite as top micro-SaaS pick",
+        "Fiverr pricing: $75 / $150 / $250 tiers"
+      ],
+      "ideas": [
+        "QR Menu Builder",
+        "Review Collector",
+        "Simple Booking Page",
+        "Estimate/Invoice Generator"
+      ],
+      "actionItems": [
+        { "text": "Submit W-9 on Fiverr", "owner": "Kam", "status": "done" },
+        { "text": "Add image uploads to InstantSite", "owner": "Koda", "status": "done" }
+      ],
+      "projects_touched": ["instantsite", "fiverr"],
+      "mood": "energized"
+    }
+  ]
+}

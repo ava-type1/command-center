@@ -1,6 +1,6 @@
-import { LayoutDashboard, Lightbulb, DollarSign, PenTool, X, Zap } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, DollarSign, PenTool, Calendar, X, Zap } from 'lucide-react';
 
-export type View = 'dashboard' | 'finance' | 'content' | 'ideas';
+export type View = 'dashboard' | 'finance' | 'content' | 'ideas' | 'briefing';
 
 interface SidebarProps {
   view: View;
@@ -14,6 +14,7 @@ const navItems: { id: View; label: string; icon: typeof LayoutDashboard; activeC
   { id: 'finance', label: 'Finance', icon: DollarSign, activeColor: '#00d4ff', activeBg: 'rgba(0,212,255,0.1)', activeBorder: 'rgba(0,212,255,0.2)' },
   { id: 'content', label: 'Content', icon: PenTool, activeColor: '#ff0080', activeBg: 'rgba(255,0,128,0.1)', activeBorder: 'rgba(255,0,128,0.2)' },
   { id: 'ideas', label: 'Ideas', icon: Lightbulb, activeColor: '#bf00ff', activeBg: 'rgba(191,0,255,0.1)', activeBorder: 'rgba(191,0,255,0.2)' },
+  { id: 'briefing', label: 'Daily Briefing', icon: Calendar, activeColor: '#ff6600', activeBg: 'rgba(255,102,0,0.1)', activeBorder: 'rgba(255,102,0,0.2)' },
 ];
 
 export function Sidebar({ view, onViewChange, isOpen, onClose }: SidebarProps) {

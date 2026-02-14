@@ -1049,135 +1049,139 @@
     {
       "id": "kodaai",
       "name": "KodaAI",
-      "description": "Managed AI assistant SaaS for small businesses. AI phone answering, email, calendar, CRM — packaged as a monthly service. First client: Karen's hair salon in Fort White.",
+      "description": "Consumer GUI for OpenClaw — the 'grandma-proof' managed AI assistant platform. Each client gets their own isolated OpenClaw sandbox on Cloudflare, accessed via SMS. Sign up, answer 5 questions, get a personal AI assistant on your phone. No tech knowledge needed.",
       "status": "active",
-      "progress": 25,
+      "progress": 30,
       "color": "#06b6d4",
-      "lastUpdated": "2026-02-11T05:30:00Z",
-      "lastWorkedOn": "Built Cloudflare Worker (calendar API), client dashboard with multi-stylist calendar, ElevenLabs agent template, salon config. Analyzed previous Python phone assistant project.",
+      "lastUpdated": "2026-02-14T16:30:00Z",
+      "lastWorkedOn": "MAJOR PIVOT: Repositioned as consumer GUI for OpenClaw. Deep competitive research completed. 1,091-line platform spec written. Project scaffolded (1,868 lines TypeScript). Multi-tenant Moltworker architecture designed.",
       "todos": [
         {
-          "id": "1",
-          "text": "Set up Google account/calendar for Karen's salon",
+          "id": "kam-1",
+          "text": "⚡ KAM: Sign up for Twilio account (twilio.com) + buy a local FL phone number",
           "done": false
         },
         {
-          "id": "2",
-          "text": "Create Twilio account + buy local FL phone number",
+          "id": "kam-2",
+          "text": "⚡ KAM: Validate demand — ask 5 local business owners if they'd pay $99/mo for an AI assistant they text",
           "done": false
         },
         {
-          "id": "3",
-          "text": "Create ElevenLabs Conversational AI agent in dashboard",
+          "id": "kam-3",
+          "text": "⚡ KAM: Talk to Brad's brother-in-law about being beta tester #1",
           "done": false
         },
         {
-          "id": "4",
-          "text": "Configure agent with salon system prompt + tools",
+          "id": "kam-4",
+          "text": "⚡ KAM: Set up Stripe account for KodaAI billing",
           "done": false
         },
         {
           "id": "5",
-          "text": "Select natural-sounding voice for phone receptionist",
-          "done": false
+          "text": "Deep competitive research completed (nobody has built consumer OpenClaw GUI yet)",
+          "done": true
         },
         {
           "id": "6",
-          "text": "Connect Twilio number → ElevenLabs (native integration)",
-          "done": false
+          "text": "Platform spec written (PLATFORM-SPEC.md — 1,091 lines)",
+          "done": true
         },
         {
           "id": "7",
-          "text": "Deploy Cloudflare Worker (kodaai-salon) with Google Calendar creds",
-          "done": false
+          "text": "Project scaffolded (kodaai-platform/ — 1,868 lines TypeScript)",
+          "done": true
         },
         {
           "id": "8",
-          "text": "Set up Google Calendar OAuth (Cloud Console → Calendar API → OAuth creds)",
-          "done": false
+          "text": "Multi-tenant architecture designed (isolated Cloudflare Sandboxes per client)",
+          "done": true
         },
         {
           "id": "9",
-          "text": "Wire paper schedule photo parser into Karen's Telegram agent",
-          "done": false
+          "text": "Industry templates created (contractor, salon, restaurant, retail, professional services)",
+          "done": true
         },
         {
           "id": "10",
-          "text": "End-to-end test: call number → AI answers → checks calendar → books appointment → Karen gets Telegram notification",
-          "done": false
+          "text": "D1 database schema designed (clients, sandboxes, billing, audit_log)",
+          "done": true
         },
         {
           "id": "11",
-          "text": "Build KodaAI marketing site / landing page",
-          "done": false
+          "text": "Twilio SMS bridge code written (inbound/outbound routing)",
+          "done": true
         },
         {
           "id": "12",
-          "text": "Set up Stripe billing for client subscriptions",
-          "done": false
+          "text": "Stripe webhook handler code written",
+          "done": true
         },
         {
           "id": "13",
-          "text": "Deploy client dashboard to Cloudflare Pages (per-client subdomain)",
+          "text": "Wire up Twilio credentials + test SMS routing end-to-end",
           "done": false
         },
         {
           "id": "14",
-          "text": "Document full client onboarding process (repeatable for new clients)",
+          "text": "Wire up Stripe credentials + test payment → provisioning flow",
           "done": false
         },
         {
           "id": "15",
-          "text": "Demo at a real estate office (30-day free trial)",
+          "text": "Build signup frontend (5-question onboarding wizard)",
           "done": false
         },
         {
           "id": "16",
-          "text": "ElevenLabs account created (kameronmartinllc@gmail.com)",
-          "done": true
+          "text": "Deploy provisioning Worker to Cloudflare",
+          "done": false
         },
         {
           "id": "17",
-          "text": "Cloudflare Worker built (availability + booking + photo sync endpoints)",
-          "done": true
+          "text": "Test full flow: signup → pay → sandbox spins up → SMS works",
+          "done": false
         },
         {
           "id": "18",
-          "text": "Client dashboard calendar page built (multi-stylist, color-coded, day/week views)",
-          "done": true
+          "text": "Build simple client dashboard (conversation history, settings)",
+          "done": false
         },
         {
           "id": "19",
-          "text": "ElevenLabs agent template written (system prompt + tool definitions)",
-          "done": true
+          "text": "Build admin dashboard (manage all client instances)",
+          "done": false
         },
         {
           "id": "20",
-          "text": "Salon service config (23 services, 6 categories, 2 stylists)",
-          "done": true
-        },
-        {
-          "id": "21",
-          "text": "Previous Python phone assistant analyzed and architecture mapped",
-          "done": true
+          "text": "First beta client live and working",
+          "done": false
         }
       ],
       "changelog": [
         {
+          "date": "2026-02-14",
+          "summary": "MAJOR PIVOT: Heard on Moonshots podcast (Peter Diamandis) that whoever perfects the consumer GUI for OpenClaw will capture massive value. Deep research confirmed: nobody has built it yet. Cloud providers only solving hosting, not usability. Completed: competitive landscape analysis, 1,091-line platform spec (PLATFORM-SPEC.md), project scaffold with 1,868 lines TypeScript (provisioning, Twilio SMS, Stripe billing, admin API, industry templates). Architecture: each client gets isolated Cloudflare Sandbox (Moltworker), accessed via SMS. Cost per client: $35-65/mo. Revenue: $99-349/mo."
+        },
+        {
+          "date": "2026-02-13",
+          "summary": "Landing page deployed to kodaai.kameronmartinllc.workers.dev. 5-step signup wizard. Moltworker architecture chosen for multi-tenant. Brother-in-law identified as first beta."
+        },
+        {
           "date": "2026-02-11",
-          "summary": "Major build session. Decided on ElevenLabs over Retell AI for voice. Built: Cloudflare Worker (calendar availability + booking + photo sync + Telegram notifications), client dashboard calendar with multi-stylist color-coding (Karen=purple, Linda=cyan), day/week views, flexible hours panel. Configured 23 salon services across 6 categories. Analyzed Kam's previous Python phone assistant project. Architecture: ElevenLabs (voice) + Claude (brain) + Twilio (phone) + Google Calendar (bookings) + Telegram (notifications)."
+          "summary": "Built Cloudflare Worker (calendar API), client dashboard, ElevenLabs agent template. Salon config for Karen beta."
         },
         {
           "date": "2026-02-10",
-          "summary": "Concept born. Pricing tiers defined (9-299/mo). Client dashboard MVP built (Chat, Email, Activity, Settings, Support pages). Business templates created (contractor, realtor, personal). Beta plan: Karen's hair salon first."
+          "summary": "Concept born. Pricing tiers defined. Client dashboard MVP built."
         }
       ],
       "repoUrl": null,
       "pricing": {
-        "personal": "$99/mo — email, reminders, research, personal assistant",
-        "business": "$299/mo — full AI employee (phone + email + calendar + CRM)",
-        "costPerClient": "$25-50/mo (ElevenLabs + Twilio + Claude API)",
-        "profitPerClient": "$75-250/mo depending on tier"
+        "starter": "$99/mo — AI assistant via SMS, email monitoring, scheduling, auto-responses",
+        "pro": "$199/mo — + calendar integration, Google Maps, client dashboard",
+        "business": "$349/mo — + AI phone answering, full automation, custom workflows",
+        "costPerClient": "$35-65/mo (Cloudflare Sandbox + Claude API + Twilio)",
+        "profitPerClient": "$34-284/mo depending on tier"
       }
     },
     {

@@ -75,19 +75,19 @@ let animFrame, lastTime = 0;
 let totalTime = 0, levelStart = 0;
 let explosionParticles = [];
 let moveThrottle = 0;
-const MOVE_DELAY = 0.08; // seconds between moves
+const MOVE_DELAY = 0.055; // seconds between moves — snappy for big mazes
 
 const LEVELS = [
-  { cols: 7,  rows: 7,  time: 20 },
-  { cols: 9,  rows: 9,  time: 28 },
-  { cols: 11, rows: 11, time: 35 },
-  { cols: 13, rows: 13, time: 40 },
-  { cols: 15, rows: 15, time: 45 },
-  { cols: 17, rows: 17, time: 50 },
-  { cols: 19, rows: 19, time: 55 },
-  { cols: 21, rows: 21, time: 60 },
-  { cols: 23, rows: 23, time: 65 },
-  { cols: 25, rows: 25, time: 72 },
+  { cols: 11, rows: 11, time: 18 },
+  { cols: 15, rows: 15, time: 22 },
+  { cols: 19, rows: 19, time: 26 },
+  { cols: 21, rows: 21, time: 28 },
+  { cols: 25, rows: 25, time: 32 },
+  { cols: 27, rows: 27, time: 34 },
+  { cols: 31, rows: 31, time: 38 },
+  { cols: 33, rows: 33, time: 40 },
+  { cols: 35, rows: 35, time: 44 },
+  { cols: 39, rows: 39, time: 48 },
 ];
 
 function resize() {
@@ -123,6 +123,20 @@ function generateMaze(cols, rows) {
       if (next.y===cur.y-1){cur.walls.top=false;next.walls.bottom=false}
       next.visited=true; cur=next;
     } else { cur=stack.pop(); }
+  }
+  // Make maze harder: remove some extra walls to create loops and misleading paths
+  const extraPaths = Math.floor(cols * rows * 0.04); // 4% extra openings
+  for (let i = 0; i < extraPaths; i++) {
+    const rx = Math.floor(Math.random() * (cols - 2)) + 1;
+    const ry = Math.floor(Math.random() * (rows - 2)) + 1;
+    const dir = Math.random() > 0.5 ? 'right' : 'bottom';
+    if (dir === 'right' && rx < cols - 1) {
+      grid[ry][rx].walls.right = false;
+      grid[ry][rx + 1].walls.left = false;
+    } else if (dir === 'bottom' && ry < rows - 1) {
+      grid[ry][rx].walls.bottom = false;
+      grid[ry + 1][rx].walls.top = false;
+    }
   }
   return grid;
 }
@@ -160,7 +174,7 @@ function initLevel(lvl) {
   playerTrail = [{x:0,y:0}];
   fuseMax = cfg.time;
   fuseTimer = fuseMax;
-  fuseDelay = 3 + lvl * 0.5;
+  fuseDelay = 2.5 + lvl * 0.3; // Less head start as you level up
   fuseStarted = false;
   fuse = {path:solution, progress:0};
   levelStart = performance.now();

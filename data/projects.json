@@ -79,10 +79,10 @@
       "name": "FieldSync",
       "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",
       "status": "active",
-      "progress": 55,
+      "progress": 70,
       "color": "#00ff88",
-      "lastUpdated": "2026-01-26T23:50:00Z",
-      "lastWorkedOn": "Fixed address parser (rejects false positives like '95 Phone'), added scan guidance tip for landscape mode, fixing camera button layout",
+      "lastUpdated": "2026-02-11T18:00:00Z",
+      "lastWorkedOn": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready. Refactored codebase. OCR scanner tested with Nobility Homes work orders.",
       "todos": [
         {
           "id": "1",
@@ -118,10 +118,14 @@
         {
           "date": "2026-01-26",
           "summary": "Evening session: Fixed address parser - now requires 3+ digit street numbers and filters keywords (Phone, Serial, etc) to prevent false matches. Added dismissable scan guidance tip suggesting landscape mode for customer info. Camera button layout fix in progress."
+        },
+        {
+          "date": "2026-02-11",
+          "summary": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready, installable on mobile. Refactored codebase via sub-agent. Tested OCR scanner with Nobility Homes work orders — tried Tesseract, Cloudflare Workers AI (Llama 3.2 Vision), landed on OpenAI Vision API for best accuracy."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
-      "liveUrl": "https://fieldsyncv2.pages.dev"
+      "liveUrl": "https://fieldsync-b2y.pages.dev"
     },
     {
       "id": "ava-type1-app",
@@ -1392,47 +1396,47 @@
     {
       "id": "instantsite",
       "name": "InstantSite",
-      "description": "Micro-SaaS auto website generator — business owners fill a form, get a professional live website in 60 seconds. Tiered: Free/Basic ($9/mo), Pro ($19/mo), Business ($39/mo). Built on Cloudflare Workers.",
+      "description": "Micro-SaaS auto website generator — business owners fill a form, get a professional live website in 60 seconds. Preview-before-payment flow, Stripe billing, cross-promo ads on free tier. Built on Cloudflare Workers.",
       "status": "active",
-      "progress": 10,
+      "progress": 45,
       "color": "#ff6b35",
-      "lastUpdated": "2026-02-13T04:25:00Z",
-      "lastWorkedOn": "Architecture designed, sub-agent building MVP. Landing page + form + auto-generator + Cloudflare deployment.",
+      "lastUpdated": "2026-02-13T16:00:00Z",
+      "lastWorkedOn": "Deployed with Stripe integration, preview-before-payment flow, cross-promo ads on free sites, KV-based image serving.",
       "todos": [
         {
           "id": "1",
           "text": "Build landing page with pricing tiers",
-          "done": false
+          "done": true
         },
         {
           "id": "2",
           "text": "Build multi-step business info form",
-          "done": false
+          "done": true
         },
         {
           "id": "3",
           "text": "Build site generator engine (Cloudflare Worker)",
-          "done": false
+          "done": true
         },
         {
           "id": "4",
           "text": "Create business site templates (handyman, salon, restaurant, contractor)",
-          "done": false
+          "done": true
         },
         {
           "id": "5",
           "text": "Deploy to Cloudflare Workers + Pages",
-          "done": false
+          "done": true
         },
         {
           "id": "6",
           "text": "Add Stripe payment integration",
-          "done": false
+          "done": true
         },
         {
           "id": "7",
           "text": "Add image upload (R2 or KV)",
-          "done": false
+          "done": true
         },
         {
           "id": "8",
@@ -1463,7 +1467,118 @@
       "changelog": [
         {
           "date": "2026-02-13",
-          "summary": "Concept born from Fiverr gig discussion. If you can build a site in 10 min manually, automate it. Architecture: Cloudflare Worker receives form data, generates site from templates, serves dynamically. Tiered pricing: Free (basic site), Pro $19/mo (images, map, branding), Business $39/mo (calendar, contact form, custom domain). Building MVP tonight."
+          "summary": "Concept born from Fiverr gig discussion. If you can build a site in 10 min manually, automate it. Architecture: Cloudflare Worker receives form data, generates site from templates, serves dynamically."
+        },
+        {
+          "date": "2026-02-13",
+          "summary": "MVP deployed: preview-before-payment flow (user sees full site before committing), Stripe integration (checkout + webhooks + subscription lifecycle), cross-promo ads on free tier (rotate KodaAI, GentlyTold, upgrade CTAs), KV-based image serving (R2 ready when enabled). Tiers: Free (with banner), Pro $29/mo, Lifetime $199. Live at instant-site-engine.kameronmartinllc.workers.dev"
+        }
+      ],
+      "liveUrl": "https://instant-site-engine.kameronmartinllc.workers.dev"
+    },
+    {
+      "id": "crewclock",
+      "name": "CrewClock",
+      "description": "GPS time tracking for contractor crews — trackers in trucks auto clock in/out via geofence. Zero employee effort. Traccar self-hosted + cheap GPS trackers.",
+      "status": "idea",
+      "progress": 15,
+      "color": "#f97316",
+      "lastUpdated": "2026-02-13T16:00:00Z",
+      "lastWorkedOn": "Researched architecture: Traccar (open-source GPS server) + Bouncie trackers ($67, $8/mo) for beta, cheap Concox/Sinotrack ($15, $3-5/mo SIM) for scale. Brad = first customer.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Set up Traccar server (self-hosted)",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Order Bouncie tracker for beta testing with Brad",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Build geofence auto clock-in/out logic",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Build crew dashboard (attendance, hours, job sites)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Test with Brad's crew",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Research completed (architecture, pricing, competitors)",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-13",
+          "summary": "Researched and designed. Target: contractors with crews (Brad = first customer). GPS tracker in each truck → auto clock in/out via geofence. Pricing: Starter $39/mo (5 trucks), Crew $79/mo (15), Company $149/mo (50). Brad's cost ~$129/mo vs Samsara $225-360/mo. Key insight: employees lie about hours, GPS verification solves it. Cross-sells into KodaAI for contractor tier."
+        }
+      ]
+    },
+    {
+      "id": "twilio-sms",
+      "name": "Koda SMS (Twilio)",
+      "description": "AI receptionist via SMS — Koda handles customer texts while Kam is in the field with no cell service. Local FL number (386) 433-3380. Dog-fooding for KodaAI.",
+      "status": "active",
+      "progress": 60,
+      "color": "#ef4444",
+      "lastUpdated": "2026-02-13T16:00:00Z",
+      "lastWorkedOn": "Server built and running (Express on port 3457, pm2 managed, Caddy proxy). Inbound SMS webhook working. BLOCKED on Twilio account upgrade ($35-40) for outbound.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Express server built and running (pm2 + Caddy)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Inbound SMS webhook → Clawdbot working",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Outbound SMS code written",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Local FL number acquired: (386) 433-3380",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Upgrade Twilio account ($35-40)",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Register A2P 10DLC brand ($4) + campaign ($15)",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Test full inbound + outbound SMS flow end-to-end",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Give number to Nobility Homes / Matt as contact",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-13",
+          "summary": "Built Twilio SMS server: Express on port 3457, pm2 managed, Caddy reverse proxy on :8444. Inbound SMS → Clawdbot hooks/agent endpoint working. Outbound code written but blocked by A2P 10DLC registration (trial account). Monthly cost: ~$3.15/mo fixed + $0.0079/text. This is the KodaAI product being dog-fooded for Kam's Nobility Homes work first."
         }
       ]
     }

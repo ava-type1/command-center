@@ -1,85 +1,85 @@
 {
-  "lastUpdated": "2026-02-13T12:00:00Z",
+  "lastUpdated": "2026-02-14T12:00:00Z",
   "items": [
     {
-      "id": "111",
-      "title": "Omnipod 5 Upgrades Coming 2026 — Full CGM Interop, ML-Powered Insights, Omnipod 6 in 2027",
-      "summary": "Insulet outlined a 3-year roadmap at its Innovation Showcase. Omnipod 5 upgrades (pending FDA clearance, expected 2026): full interoperability with all major CGMs, improved algorithm for better time-in-range, and Omnipod Discover — a machine-learning insights platform for real-time dose recommendations and streamlined onboarding. Omnipod 6 (2027) brings an adaptive algorithm that learns individual glucose patterns. By 2028, a Fully Closed Loop for Type 2 — zero carb counting, zero meal announcements, fully autonomous insulin delivery designed for primary care prescribing.",
-      "url": "https://www.hcplive.com/view/diabetes-dialogue-upcoming-upgrades-for-omnipod-technology",
-      "category": "diabetes",
-      "source": "HCPLive",
-      "date": "2026-02-13",
-      "relevance": "Kam uses Omnipod 5 — these upgrades are directly relevant. Full CGM interop means less vendor lock-in. The ML insights platform could change how dose adjustments are made. For AVA's simulation, modeling adaptive algorithms (like Omnipod 6's learning system) could be an advanced teaching feature — showing kids how their pump learns their patterns over time."
-    },
-    {
-      "id": "112",
-      "title": "ChatGPT Now Shows Ads to Free & Go Users — Anthropic Counters by Going Ad-Free & Expanding Free Tier",
-      "summary": "OpenAI officially began testing ads in ChatGPT for US users on Free and Go tiers this week. Ads are labeled, non-personalized, and only shown to logged-in adults. Paid tiers (Plus, Pro, Business, Enterprise) remain ad-free. Days later, Anthropic responded by expanding Claude's free tier to include file creation, third-party connectors (Slack, Notion, Zapier, Figma), skills, and compaction — all previously paid features. Anthropic explicitly committed to keeping Claude ad-free.",
-      "url": "https://mashable.com/article/openai-chatgpt-ads-begin-rollout",
+      "id": "119",
+      "title": "Anthropic Closes Record $30B Funding Round — Valued at $380B",
+      "summary": "Anthropic closed a record-setting $30 billion funding round, now valued at $380 billion. The round was led by Coatue and GIC. Anthropic also aired two commercials during Super Bowl LX as part of a broader marketing campaign. Separately, Anthropic expanded Claude's free tier to include file creation, third-party connectors (Slack, Notion, Zapier, Figma), and skills — countering OpenAI's move to show ads on ChatGPT's free tier.",
+      "url": "https://www.reuters.com/technology/anthropic-valued-380-billion-latest-funding-round-2026-02-12/",
       "category": "ai",
-      "source": "Mashable / MacRumors",
-      "date": "2026-02-13",
-      "relevance": "A strategic divergence in the AI business model war. OpenAI is going the ad-supported route while Anthropic is betting on premium conversion by giving more away free. For devs like Kam, Claude's free connectors (Slack, Notion, Zapier) make it a free automation hub. If you recommend tools to other T1D devs, Claude free tier is now genuinely powerful."
+      "source": "Reuters / Yahoo Finance",
+      "date": "2026-02-14",
+      "relevance": "Massive validation for the platform you're building on. $30B in funding means Anthropic has a long runway — Claude isn't going anywhere. The expanded free tier with connectors could be useful for AVA's community outreach or T1D family support tools. Anthropic is clearly winning the 'developer trust' war vs OpenAI's ad-supported model."
     },
     {
-      "id": "113",
-      "title": "ByteDance Building 'SeedChip' AI Processor — 100K Units in 2026 via Samsung",
-      "summary": "ByteDance is developing an in-house AI chip codenamed SeedChip and is in manufacturing talks with Samsung Electronics. The TikTok parent aims to produce at least 100,000 units in 2026, scaling to 350,000. Previously ByteDance worked with Broadcom and TSMC, but US export restrictions are pushing the company toward Samsung's foundry. At a January all-hands, ByteDance acknowledged its AI models still lag OpenAI but pledged continued heavy investment.",
-      "url": "https://www.reuters.com/world/asia-pacific/bytedance-developing-ai-chip-manufacturing-talks-with-samsung-sources-say-2026-02-11/",
+      "id": "120",
+      "title": "US Military Used Claude in Venezuela Raid via Palantir — Raises Policy Questions",
+      "summary": "Anthropic's Claude was used in the U.S. military operation that captured former Venezuelan President Nicolas Maduro, deployed through Palantir's classified platforms. This marks a significant milestone for AI in military operations. Anthropic's usage policies technically forbid using Claude to support violence or surveillance, creating tension with this deployment. The Pentagon is pushing AI companies to expand access on classified networks.",
+      "url": "https://www.reuters.com/world/americas/us-used-anthropics-claude-during-the-venezuela-raid-wsj-reports-2026-02-13/",
+      "category": "ai",
+      "source": "Reuters / WSJ",
+      "date": "2026-02-14",
+      "relevance": "This is a landmark moment for AI — Claude being used in an actual military operation is unprecedented. It raises real questions about AI ethics and usage policies. Worth watching how Anthropic responds, since their stated policies conflict with military use. For you as a builder on Claude: the technology is clearly capable of high-stakes real-world operations, which is both impressive and sobering."
+    },
+    {
+      "id": "121",
+      "title": "ByteDance's Seedance 2.0 Goes Viral — AI Video Generation Gets Cinematic",
+      "summary": "ByteDance launched Seedance 2.0, an AI video model capable of generating cinematic-quality videos from text prompts. It processes text, images, audio, and video simultaneously. Elon Musk commented 'It's happening fast' on X. The model is being compared to DeepSeek's disruption of the text AI space — this time for video. Designed for professional film, e-commerce, and advertising production.",
+      "url": "https://www.reuters.com/business/media-telecom/bytedances-new-ai-video-model-goes-viral-china-looks-second-deepseek-moment-2026-02-12/",
       "category": "ai",
       "source": "Reuters",
-      "date": "2026-02-13",
-      "relevance": "The AI chip race is fragmenting. ByteDance building custom silicon signals that every major tech company now considers AI compute a strategic asset, not something you just rent from Nvidia. Long-term this could affect AI API pricing and availability — more competition in chips means lower costs for everyone building AI products."
+      "date": "2026-02-14",
+      "relevance": "AI video generation hitting cinematic quality has big implications for indie creators. For AVA marketing: you could potentially create promotional videos for the app or diabetes education content using AI video tools instead of hiring production teams. Keep an eye on when Seedance 2.0 becomes accessible outside China — could be a game-changer for marketing on a budget."
     },
     {
-      "id": "114",
-      "title": "GitHub Octoverse: TypeScript Overtakes Python as #1 Language, AI Reshaping How Software Is Built",
-      "summary": "GitHub's latest Octoverse data shows TypeScript overtook Python and JavaScript as the most-used language on GitHub in 2025, adding over 1 million contributors. Python grew 48.78% YoY (~850K new contributors), while JavaScript grew slower at 24.79%. The report highlights that the fastest-growing tools aren't about writing more code — they're about reducing friction. Typed languages win in AI-assisted workflows because type systems give AI models better context for code generation.",
-      "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
+      "id": "122",
+      "title": "ADA 2026 Standards of Care — Major Updates for CGM, AID Systems, and School/Workplace Access",
+      "summary": "The American Diabetes Association published 2026 Standards of Care with significant updates: AID systems no longer require minimum C-peptide levels or islet autoantibodies for T1D initiation, expanding access. New guidance facilitates CGM and insulin delivery system use in schools and workplaces, ensuring kids and adults get proper time to monitor glucose. Emphasis on selecting glucose-lowering therapies across clinical contexts.",
+      "url": "https://www.patientcareonline.com/view/ada-publishes-2026-standards-of-care-with-updates-to-sections-on-technology-obesity-cardiometabolic-disease-management",
+      "category": "diabetes",
+      "source": "Patient Care Online / ADA",
+      "date": "2026-02-14",
+      "relevance": "Directly impacts both Kam and Kaislyn. Removing barriers to AID initiation means more kids get pumps sooner. The school/workplace guidance is huge — Kaislyn's school should now have clearer ADA-backed guidelines for supporting her CGM and pump use. For AVA: these expanded access guidelines mean a larger potential user base for the simulation app, as more newly-diagnosed kids get tech earlier."
+    },
+    {
+      "id": "123",
+      "title": "Claude Code v2.1.41-42 — Agent Teams Fix, Auth CLI, Windows ARM64, Performance Boosts",
+      "summary": "Recent Claude Code releases (v2.1.39-2.1.42) bring several improvements: guard against launching Claude Code inside another session, fixed Agent Teams model identifiers for Bedrock/Vertex, new CLI auth commands (login/status/logout), Windows ARM64 support, improved startup performance by deferring schema construction, better prompt cache hit rates, and multiple stability fixes for streaming and session handling.",
+      "url": "https://releasebot.io/updates/anthropic/claude-code",
       "category": "claude",
-      "source": "GitHub Blog",
-      "date": "2026-02-13",
-      "relevance": "TypeScript's rise is directly tied to AI coding tools — type annotations give Claude Code and Copilot much better context for generating correct code. If you're starting new projects (like command center or AVA backend services), TypeScript is the clear choice. Python remains king for AI/ML work. SwiftUI already has strong typing, which is why Claude Code works well with it."
+      "source": "Releasebot / Anthropic Changelog",
+      "date": "2026-02-14",
+      "relevance": "The improved prompt cache hit rates directly reduce your API costs — fewer cache misses means cheaper Claude Code sessions. The auth CLI commands make it easier to manage multiple accounts or switch contexts. Agent Teams fixes matter if you scale Clawdbot to use multi-agent collaboration. Keep your Claude Code updated."
     },
     {
-      "id": "115",
-      "title": "Tandem Diabetes Care Q4 2025 Earnings Coming Feb 19 — Analysts Bullish with 38% Upside",
-      "summary": "Tandem Diabetes Care reports Q4 2025 earnings on February 19. Analysts expect revenue of $277M (up from $249M in Q3) and near-breakeven EPS of -$0.06. The stock has 38.4% potential upside according to analyst consensus. Tandem's t:slim X2 pump continues to be a market leader in AID systems. Stifel Nicolaus raised its price target, citing strong adoption trends.",
+      "id": "124",
+      "title": "Xcode 26.3 Adds Agentic Coding — Claude and Codex Now Built Into Apple's IDE",
+      "summary": "Apple released Xcode 26.3 with native integration of Anthropic's Claude Agent and OpenAI's Codex directly in the IDE. Developers can now automate repetitive tasks, generate intelligent code snippets, and troubleshoot within Xcode's workflow. This represents a shift toward agentic AI systems in development environments, where AI acts autonomously to assist with coding tasks.",
+      "url": "https://sdtimes.com/ai/xcode-26-3-adds-agentic-coding-support/",
+      "category": "claude",
+      "source": "SD Times / Coaio",
+      "date": "2026-02-14",
+      "relevance": "This is directly relevant to AVA development. Claude Agent built into Xcode means you can get AI-assisted SwiftUI coding without leaving the IDE. For the ~80% complete AVA Type 1 app, this could accelerate the final push — especially for complex simulation logic and UI polish. Worth updating Xcode if you haven't already."
+    },
+    {
+      "id": "125",
+      "title": "Tandem Diabetes Q4 Earnings Feb 19 — Analysts See 38% Upside, Revenue Growth Accelerating",
+      "summary": "Tandem Diabetes Care reports Q4 2025 earnings on February 19. Analysts expect $277M revenue (up from $249M Q3), near-breakeven EPS. Stifel Nicolaus raised its price target, citing strong adoption trends for the t:slim X2 and AID systems. The company's stock has 38.4% potential upside according to consensus. Healthy financials signal continued R&D investment in the platform.",
       "url": "https://www.defenseworld.net/2026/02/12/tandem-diabetes-care-tndm-to-release-earnings-on-thursday.html",
       "category": "diabetes",
       "source": "Defense World / Stock Titan",
-      "date": "2026-02-13",
-      "relevance": "Kaislyn uses the Tandem t:slim X2 — this is her pump company. Strong earnings would mean continued R&D investment in the platform. Worth watching the Feb 19 report for any announcements about next-gen features, Dexcom G8 compatibility, or Mobi pump expansion. If Tandem stock pops, it signals the diabetes tech market is healthy — good for AVA's target ecosystem."
+      "date": "2026-02-14",
+      "relevance": "Kaislyn's pump company reporting strong numbers. Watch the Feb 19 call for announcements about next-gen features, Dexcom G8 compatibility, or Mobi pump expansion. Strong Tandem financials = continued innovation on the platform Kaislyn depends on. If they announce new kid-friendly features, that could inform AVA's companion device design too."
     },
     {
-      "id": "116",
-      "title": "AI Reads Brain MRI Scans in Seconds — University of Michigan Breakthrough",
-      "summary": "Researchers at the University of Michigan created an AI system that interprets brain MRI scans in seconds, accurately identifying a wide range of neurological conditions and determining which cases need urgent care. The system can flag critical findings for immediate radiologist review while routing routine scans for standard processing, potentially transforming emergency neurology workflows.",
-      "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/",
-      "category": "ai",
-      "source": "ScienceDaily / University of Michigan",
-      "date": "2026-02-13",
-      "relevance": "Another example of AI excelling at medical pattern recognition — the same fundamental approach that makes CGM trend prediction possible. This kind of real-time medical AI validates the broader ecosystem AVA operates in: technology making healthcare faster and more accessible. The triage angle (urgent vs. routine) is a pattern that could apply to glucose alerts too."
-    },
-    {
-      "id": "117",
-      "title": "Goldman Sachs Deploys Anthropic's Claude Agents for Trade Accounting & Client Onboarding",
-      "summary": "Goldman Sachs is building AI agents using Anthropic's Claude to automate trade accounting and client onboarding workflows. The agents handle repetitive compliance tasks, cross-reference documentation, and flag exceptions for human review. Blackstone also increased its stake in Anthropic to ~$1 billion. Enterprise adoption of Claude agents is accelerating across finance, legal, and operations.",
-      "url": "https://www.cnbc.com/2026/02/06/anthropic-goldman-sachs-ai-model-accounting.html",
-      "category": "ai",
-      "source": "CNBC / Reuters",
-      "date": "2026-02-13",
-      "relevance": "Anthropic's enterprise push validates the agent architecture you're already using with Clawdbot. Goldman deploying Claude agents for real financial workflows means the underlying technology is being trusted with high-stakes work. Blackstone's $1B stake signals Anthropic isn't going anywhere — long-term stability for the tools you're building on."
-    },
-    {
-      "id": "118",
-      "title": "Taiwan Hikes 2026 GDP Forecast to 7.7% — AI Chip Demand Driving Economic Boom",
-      "summary": "Taiwan's government raised its 2026 economic growth forecast to 7.7%, up from previous estimates, driven almost entirely by surging global demand for AI chips. TSMC continues to be the world's most critical semiconductor manufacturer, with AI accelerator orders (from Nvidia, Apple, AMD, and others) filling capacity through 2027. The AI hardware boom is now a macroeconomic force.",
-      "url": "https://www.reuters.com/technology/artificial-intelligence/",
-      "category": "ai",
-      "source": "Reuters",
-      "date": "2026-02-13",
-      "relevance": "The AI boom is now reshaping entire national economies. This matters for long-term API pricing — as chip supply scales up over the next 1-2 years, AI inference costs should continue dropping, making tools like Claude Code and Clawdbot cheaper to run. Good macro trend for indie builders like you."
+      "id": "126",
+      "title": "OpenAI Launches Codex-Spark on Cerebras Hardware — Ultra-Low-Latency Coding AI",
+      "summary": "OpenAI partnered with Cerebras to launch Codex-Spark, running on Cerebras' Wafer Scale Engine 3 for ultra-low-latency AI coding inference. This gives Codex a 'latency-first' serving tier designed for new interaction patterns and real-time coding experiences. The partnership signals a trend toward specialized hardware for different AI workloads, moving beyond Nvidia's dominance.",
+      "url": "https://releasebot.io/updates/openai",
+      "category": "claude",
+      "source": "Releasebot / OpenAI",
+      "date": "2026-02-14",
+      "relevance": "Competition for Claude Code's coding market. OpenAI investing in custom hardware for coding AI suggests they see real-time code assistance as a key battleground. For you: more competition means better tools and lower prices over time. Worth trying Codex-Spark to compare with Claude Code for specific SwiftUI tasks, but Claude's Xcode integration likely gives it the edge for your workflow."
     }
   ]
 }

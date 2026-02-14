@@ -7,40 +7,36 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#0a0a12;--wall:#1a1a2e;--wall-glow:#16213e;
-  --path:#0d0d1a;--player:#00ff88;--fuse:#ff4444;
-  --fuse-glow:#ff6b35;--exit:#00d4ff;--text:#e0e0e0;
-  --gold:#ffd700;--glass:rgba(255,255,255,0.05);
+  --bg:#0a0a12;--path:#0d0d18;--player:#00ff88;--fuse:#ff4444;
+  --fuse-glow:#ff6b35;--exit:#00d4ff;--text:#e0e0e0;--gold:#ffd700;
 }
 html,body{height:100%;overflow:hidden}
-body{font-family:'Courier New',monospace;background:var(--bg);color:var(--text);display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:none}
+body{font-family:'Courier New',monospace;background:var(--bg);color:var(--text);display:flex;flex-direction:column;align-items:center;justify-content:center;touch-action:none;-webkit-user-select:none;user-select:none}
 
-#game-container{position:relative;width:min(90vw,90vh);height:min(90vw,90vh);max-width:600px;max-height:600px}
+#game-container{position:relative;width:min(90vw,85vh);height:min(90vw,85vh);max-width:560px;max-height:560px}
 canvas{display:block;border-radius:12px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 0 40px rgba(0,0,0,0.5)}
 
 #hud{position:absolute;top:-44px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;font-size:14px;padding:0 4px}
 #hud .level{color:var(--exit);font-weight:bold;font-size:16px}
-#hud .timer{color:var(--fuse);font-weight:bold;font-size:16px}
-#hud .fuse-bar{flex:1;margin:0 16px;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;position:relative}
-#hud .fuse-fill{height:100%;background:linear-gradient(90deg,var(--fuse),var(--fuse-glow));border-radius:3px;transition:width 0.1s;position:relative}
-#hud .fuse-fill::after{content:'';position:absolute;right:-2px;top:-3px;width:8px;height:12px;background:var(--gold);border-radius:50%;box-shadow:0 0 8px var(--gold);animation:spark 0.3s ease-in-out infinite alternate}
+#hud .timer{color:var(--fuse);font-weight:bold;font-size:16px;min-width:50px;text-align:right}
+#hud .fuse-bar{flex:1;margin:0 16px;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden}
+#hud .fuse-fill{height:100%;background:linear-gradient(90deg,var(--fuse),var(--fuse-glow));border-radius:3px;transition:width 0.1s}
 
-@keyframes spark{0%{opacity:0.6;transform:scale(0.8)}100%{opacity:1;transform:scale(1.2)}}
-@keyframes pulse{0%{box-shadow:0 0 10px var(--player)}50%{box-shadow:0 0 25px var(--player)}100%{box-shadow:0 0 10px var(--player)}}
-@keyframes explode{0%{transform:scale(1);opacity:1}50%{transform:scale(3);opacity:0.5}100%{transform:scale(5);opacity:0}}
+#msg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:24px;font-weight:bold;color:var(--player);opacity:0;transition:opacity 0.3s;pointer-events:none;text-shadow:0 0 20px var(--player)}
+#msg.show{opacity:1}
 
 #overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(10,10,18,0.92);border-radius:12px;z-index:10;backdrop-filter:blur(8px);transition:opacity 0.3s}
 #overlay.hidden{opacity:0;pointer-events:none}
 #overlay h1{font-size:clamp(28px,6vw,48px);margin-bottom:8px;background:linear-gradient(135deg,var(--player),var(--exit));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-#overlay h2{font-size:clamp(16px,3vw,22px);color:var(--fuse);margin-bottom:24px}
+#overlay h2{font-size:clamp(16px,3vw,22px);color:var(--fuse);margin-bottom:20px}
 #overlay p{color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:20px;text-align:center;max-width:280px;line-height:1.5}
 #overlay button{padding:14px 40px;border:none;border-radius:50px;background:linear-gradient(135deg,var(--player),var(--exit));color:#000;font-weight:bold;font-size:16px;cursor:pointer;font-family:inherit;transition:transform 0.2s,box-shadow 0.2s}
 #overlay button:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,255,136,0.3)}
-#overlay .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;text-align:center}
-#overlay .stat{background:var(--glass);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px}
-#overlay .stat-val{font-size:22px;font-weight:bold;color:var(--player)}
-#overlay .stat-label{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px}
-.level-text{font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:4px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;text-align:center}
+.stat{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px}
+.stat-val{font-size:22px;font-weight:bold;color:var(--player)}
+.stat-label{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px}
+#controls-hint{position:absolute;bottom:-28px;text-align:center;width:100%;font-size:11px;color:rgba(255,255,255,0.25)}
 </style>
 </head>
 <body>
@@ -51,12 +47,14 @@ canvas{display:block;border-radius:12px;border:1px solid rgba(255,255,255,0.08);
     <span class="timer" id="hud-timer">00:00</span>
   </div>
   <canvas id="canvas"></canvas>
+  <div id="msg"></div>
   <div id="overlay">
     <h1>FUSE</h1>
     <h2>🧨 Maze Runner</h2>
-    <p>Drag through the maze before the fuse catches you. 10 levels. Don't blow up.</p>
-    <button id="start-btn">START</button>
+    <p>Swipe or use arrow keys to navigate the maze. Escape before the fuse catches you.<br><br>10 levels. Don't blow up.</p>
+    <button id="start-btn" onclick="startGame()">START</button>
   </div>
+  <div id="controls-hint">Swipe / Arrow Keys / WASD</div>
 </div>
 
 <script>
@@ -64,37 +62,37 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const container = document.getElementById('game-container');
 const overlay = document.getElementById('overlay');
-const startBtn = document.getElementById('start-btn');
 const hudLevel = document.getElementById('hud-level');
 const hudTimer = document.getElementById('hud-timer');
 const fuseFill = document.getElementById('fuse-fill');
+const msgEl = document.getElementById('msg');
 
 let W, H, cellSize;
 let maze, player, exit, fuse, level, gameState;
-let fuseTimer, fuseMax, fuseTrail, playerTrail, fuseDelay, fuseStarted;
-let dragActive = false;
-let animFrame;
+let fuseTimer, fuseMax, fuseStarted, fuseDelay;
+let playerTrail;
+let animFrame, lastTime = 0;
 let totalTime = 0, levelStart = 0;
 let explosionParticles = [];
+let moveThrottle = 0;
+const MOVE_DELAY = 0.08; // seconds between moves
 
 const LEVELS = [
-  { cols: 7,  rows: 7,  time: 15 },
-  { cols: 9,  rows: 9,  time: 20 },
-  { cols: 11, rows: 11, time: 25 },
-  { cols: 13, rows: 13, time: 28 },
-  { cols: 15, rows: 15, time: 32 },
-  { cols: 17, rows: 17, time: 35 },
-  { cols: 19, rows: 19, time: 38 },
-  { cols: 21, rows: 21, time: 40 },
-  { cols: 23, rows: 23, time: 42 },
-  { cols: 25, rows: 25, time: 45 },
+  { cols: 7,  rows: 7,  time: 20 },
+  { cols: 9,  rows: 9,  time: 28 },
+  { cols: 11, rows: 11, time: 35 },
+  { cols: 13, rows: 13, time: 40 },
+  { cols: 15, rows: 15, time: 45 },
+  { cols: 17, rows: 17, time: 50 },
+  { cols: 19, rows: 19, time: 55 },
+  { cols: 21, rows: 21, time: 60 },
+  { cols: 23, rows: 23, time: 65 },
+  { cols: 25, rows: 25, time: 72 },
 ];
 
 function resize() {
   const s = Math.min(container.clientWidth, container.clientHeight);
-  canvas.width = s;
-  canvas.height = s;
-  W = H = s;
+  canvas.width = s; canvas.height = s; W = H = s;
 }
 
 function generateMaze(cols, rows) {
@@ -102,62 +100,49 @@ function generateMaze(cols, rows) {
   for (let y = 0; y < rows; y++) {
     grid[y] = [];
     for (let x = 0; x < cols; x++) {
-      grid[y][x] = { x, y, walls: { top: true, right: true, bottom: true, left: true }, visited: false };
+      grid[y][x] = { x, y, walls: { top:true, right:true, bottom:true, left:true }, visited:false };
     }
   }
   const stack = [];
-  let current = grid[0][0];
-  current.visited = true;
-  stack.push(current);
-
-  while (stack.length > 0) {
-    const neighbors = [];
-    const { x, y } = current;
-    if (y > 0 && !grid[y-1][x].visited) neighbors.push(grid[y-1][x]);
-    if (x < cols-1 && !grid[y][x+1].visited) neighbors.push(grid[y][x+1]);
-    if (y < rows-1 && !grid[y+1][x].visited) neighbors.push(grid[y+1][x]);
-    if (x > 0 && !grid[y][x-1].visited) neighbors.push(grid[y][x-1]);
-
-    if (neighbors.length > 0) {
-      const next = neighbors[Math.floor(Math.random() * neighbors.length)];
-      stack.push(current);
-      // Remove walls
-      if (next.x === current.x + 1) { current.walls.right = false; next.walls.left = false; }
-      if (next.x === current.x - 1) { current.walls.left = false; next.walls.right = false; }
-      if (next.y === current.y + 1) { current.walls.bottom = false; next.walls.top = false; }
-      if (next.y === current.y - 1) { current.walls.top = false; next.walls.bottom = false; }
-      next.visited = true;
-      current = next;
-    } else {
-      current = stack.pop();
-    }
+  let cur = grid[0][0];
+  cur.visited = true;
+  stack.push(cur);
+  while (stack.length) {
+    const nb = [];
+    const {x,y} = cur;
+    if (y>0 && !grid[y-1][x].visited) nb.push(grid[y-1][x]);
+    if (x<cols-1 && !grid[y][x+1].visited) nb.push(grid[y][x+1]);
+    if (y<rows-1 && !grid[y+1][x].visited) nb.push(grid[y+1][x]);
+    if (x>0 && !grid[y][x-1].visited) nb.push(grid[y][x-1]);
+    if (nb.length) {
+      const next = nb[Math.floor(Math.random()*nb.length)];
+      stack.push(cur);
+      if (next.x===cur.x+1){cur.walls.right=false;next.walls.left=false}
+      if (next.x===cur.x-1){cur.walls.left=false;next.walls.right=false}
+      if (next.y===cur.y+1){cur.walls.bottom=false;next.walls.top=false}
+      if (next.y===cur.y-1){cur.walls.top=false;next.walls.bottom=false}
+      next.visited=true; cur=next;
+    } else { cur=stack.pop(); }
   }
   return grid;
 }
 
 function solveMaze(grid, start, end) {
-  const cols = grid[0].length, rows = grid.length;
-  const visited = Array.from({ length: rows }, () => Array(cols).fill(false));
-  const queue = [[start]];
-  visited[start.y][start.x] = true;
-
-  while (queue.length > 0) {
-    const path = queue.shift();
-    const curr = path[path.length - 1];
-    if (curr.x === end.x && curr.y === end.y) return path;
-
-    const cell = grid[curr.y][curr.x];
-    const dirs = [
-      { dx: 0, dy: -1, wall: 'top' },
-      { dx: 1, dy: 0, wall: 'right' },
-      { dx: 0, dy: 1, wall: 'bottom' },
-      { dx: -1, dy: 0, wall: 'left' },
-    ];
-    for (const d of dirs) {
-      const nx = curr.x + d.dx, ny = curr.y + d.dy;
-      if (nx >= 0 && nx < cols && ny >= 0 && ny < rows && !visited[ny][nx] && !cell.walls[d.wall]) {
-        visited[ny][nx] = true;
-        queue.push([...path, { x: nx, y: ny }]);
+  const cols=grid[0].length, rows=grid.length;
+  const vis=Array.from({length:rows},()=>Array(cols).fill(false));
+  const queue=[[start]];
+  vis[start.y][start.x]=true;
+  while(queue.length){
+    const path=queue.shift();
+    const c=path[path.length-1];
+    if(c.x===end.x&&c.y===end.y) return path;
+    const cell=grid[c.y][c.x];
+    const dirs=[{dx:0,dy:-1,w:'top'},{dx:1,dy:0,w:'right'},{dx:0,dy:1,w:'bottom'},{dx:-1,dy:0,w:'left'}];
+    for(const d of dirs){
+      const nx=c.x+d.dx, ny=c.y+d.dy;
+      if(nx>=0&&nx<cols&&ny>=0&&ny<rows&&!vis[ny][nx]&&!cell.walls[d.w]){
+        vis[ny][nx]=true;
+        queue.push([...path,{x:nx,y:ny}]);
       }
     }
   }
@@ -166,133 +151,106 @@ function solveMaze(grid, start, end) {
 
 function initLevel(lvl) {
   level = lvl;
-  const cfg = LEVELS[Math.min(lvl, LEVELS.length - 1)];
-  const cols = cfg.cols, rows = cfg.rows;
-  cellSize = W / cols;
-
-  maze = generateMaze(cols, rows);
-  player = { x: 0, y: 0 };
-  exit = { x: cols - 1, y: rows - 1 };
-
+  const cfg = LEVELS[Math.min(lvl, LEVELS.length-1)];
+  cellSize = W / cfg.cols;
+  maze = generateMaze(cfg.cols, cfg.rows);
+  player = {x:0, y:0};
+  exit = {x:cfg.cols-1, y:cfg.rows-1};
   const solution = solveMaze(maze, player, exit);
-  fuseTrail = [];
-  playerTrail = [{ x: 0, y: 0 }];
-
+  playerTrail = [{x:0,y:0}];
   fuseMax = cfg.time;
   fuseTimer = fuseMax;
-  fuseDelay = 3 + level * 0.3; // 3 second head start, slightly more per level
+  fuseDelay = 3 + lvl * 0.5;
   fuseStarted = false;
-  fuse = { path: solution, progress: 0 };
+  fuse = {path:solution, progress:0};
   levelStart = performance.now();
   gameState = 'playing';
-
-  hudLevel.textContent = `LVL ${lvl + 1}`;
+  hudLevel.textContent = `LVL ${lvl+1}`;
   explosionParticles = [];
+  pendingDir = null;
+  showMsg(`Level ${lvl+1}`, 1500);
 }
 
-function getCellFromPixel(px, py) {
-  const cols = maze[0].length, rows = maze.length;
-  const cx = Math.floor(px / cellSize);
-  const cy = Math.floor(py / cellSize);
-  return { x: Math.max(0, Math.min(cols - 1, cx)), y: Math.max(0, Math.min(rows - 1, cy)) };
-}
-
-function canMove(from, to) {
-  const dx = to.x - from.x, dy = to.y - from.y;
-  if (Math.abs(dx) + Math.abs(dy) !== 1) return false;
-  const cell = maze[from.y][from.x];
-  if (dx === 1 && !cell.walls.right) return true;
-  if (dx === -1 && !cell.walls.left) return true;
-  if (dy === 1 && !cell.walls.bottom) return true;
-  if (dy === -1 && !cell.walls.top) return true;
+function canMove(fx, fy, tx, ty) {
+  const cell = maze[fy][fx];
+  const dx=tx-fx, dy=ty-fy;
+  if(dx===1) return !cell.walls.right;
+  if(dx===-1) return !cell.walls.left;
+  if(dy===1) return !cell.walls.bottom;
+  if(dy===-1) return !cell.walls.top;
   return false;
 }
 
-function movePlayer(target) {
+let pendingDir = null;
+
+function tryMove(dx, dy) {
   if (gameState !== 'playing') return;
-  // Try to path-find step by step to target
-  const dx = target.x - player.x;
-  const dy = target.y - player.y;
-
-  // Try direct neighbor move
-  const steps = [];
-  if (Math.abs(dx) >= Math.abs(dy)) {
-    if (dx !== 0) steps.push({ x: player.x + Math.sign(dx), y: player.y });
-    if (dy !== 0) steps.push({ x: player.x, y: player.y + Math.sign(dy) });
-  } else {
-    if (dy !== 0) steps.push({ x: player.x, y: player.y + Math.sign(dy) });
-    if (dx !== 0) steps.push({ x: player.x + Math.sign(dx), y: player.y });
-  }
-
-  for (const step of steps) {
-    if (canMove(player, step)) {
-      player.x = step.x;
-      player.y = step.y;
-      playerTrail.push({ x: player.x, y: player.y });
-
-      if (player.x === exit.x && player.y === exit.y) {
-        winLevel();
-      }
-      return;
-    }
+  const nx = player.x + dx, ny = player.y + dy;
+  const cols = maze[0].length, rows = maze.length;
+  if (nx<0||nx>=cols||ny<0||ny>=rows) return;
+  if (!canMove(player.x, player.y, nx, ny)) return;
+  
+  player.x = nx;
+  player.y = ny;
+  playerTrail.push({x:nx, y:ny});
+  moveThrottle = MOVE_DELAY;
+  
+  if (player.x === exit.x && player.y === exit.y) {
+    winLevel();
   }
 }
 
 function winLevel() {
   gameState = 'won';
   totalTime += (performance.now() - levelStart) / 1000;
-
   if (level >= 9) {
-    showOverlay('victory');
+    setTimeout(() => showOverlay('victory'), 400);
   } else {
-    setTimeout(() => {
-      initLevel(level + 1);
-    }, 500);
+    showMsg('✓ CLEAR!', 800);
+    setTimeout(() => initLevel(level+1), 900);
   }
 }
 
 function explode() {
   gameState = 'dead';
-  // Generate particles
-  const px = (player.x + 0.5) * cellSize;
-  const py = (player.y + 0.5) * cellSize;
-  for (let i = 0; i < 40; i++) {
-    const angle = Math.random() * Math.PI * 2;
-    const speed = 2 + Math.random() * 6;
+  const px=(player.x+0.5)*cellSize, py=(player.y+0.5)*cellSize;
+  for(let i=0;i<50;i++){
+    const a=Math.random()*Math.PI*2, sp=2+Math.random()*8;
     explosionParticles.push({
-      x: px, y: py,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      life: 1,
-      size: 2 + Math.random() * 4,
-      color: Math.random() > 0.5 ? '#ff4444' : '#ffd700',
+      x:px,y:py, vx:Math.cos(a)*sp, vy:Math.sin(a)*sp,
+      life:1, size:2+Math.random()*5,
+      color: ['#ff4444','#ffd700','#ff6b35','#fff'][Math.floor(Math.random()*4)]
     });
   }
-  setTimeout(() => showOverlay('dead'), 1200);
+  setTimeout(() => showOverlay('dead'), 1000);
+}
+
+function showMsg(text, dur) {
+  msgEl.textContent = text;
+  msgEl.classList.add('show');
+  setTimeout(() => msgEl.classList.remove('show'), dur);
+}
+
+function formatTime(s) {
+  return `${Math.floor(s/60).toString().padStart(2,'0')}:${Math.floor(s%60).toString().padStart(2,'0')}`;
 }
 
 function showOverlay(type) {
   overlay.classList.remove('hidden');
-  if (type === 'start') {
-    overlay.innerHTML = `
-      <h1>FUSE</h1>
-      <h2>🧨 Maze Runner</h2>
-      <p>Drag through the maze before the fuse catches you. 10 levels. Don't blow up.</p>
+  if(type==='start'){
+    overlay.innerHTML=`<h1>FUSE</h1><h2>🧨 Maze Runner</h2>
+      <p>Swipe or use arrow keys to navigate the maze. Escape before the fuse catches you.<br><br>10 levels. Don't blow up.</p>
       <button onclick="startGame()">START</button>`;
-  } else if (type === 'dead') {
-    overlay.innerHTML = `
-      <h1 style="background:linear-gradient(135deg,#ff4444,#ff6b35);-webkit-background-clip:text;-webkit-text-fill-color:transparent">💥 BOOM</h1>
+  } else if(type==='dead'){
+    overlay.innerHTML=`<h1 style="background:linear-gradient(135deg,#ff4444,#ff6b35);-webkit-background-clip:text;-webkit-text-fill-color:transparent">💥 BOOM</h1>
       <h2>The fuse got you!</h2>
-      <p class="level-text">Failed on Level ${level + 1}</p>
       <div class="stats">
-        <div class="stat"><div class="stat-val" style="color:var(--fuse)">${level + 1}</div><div class="stat-label">LEVEL</div></div>
+        <div class="stat"><div class="stat-val" style="color:var(--fuse)">Level ${level+1}</div><div class="stat-label">REACHED</div></div>
         <div class="stat"><div class="stat-val" style="color:var(--fuse)">${formatTime(totalTime)}</div><div class="stat-label">TIME</div></div>
       </div>
       <button onclick="startGame()">TRY AGAIN</button>`;
-  } else if (type === 'victory') {
-    overlay.innerHTML = `
-      <h1>🏆 ESCAPED!</h1>
-      <h2>All 10 levels cleared!</h2>
+  } else if(type==='victory'){
+    overlay.innerHTML=`<h1>🏆 ESCAPED!</h1><h2>All 10 levels cleared!</h2>
       <div class="stats">
         <div class="stat"><div class="stat-val">10</div><div class="stat-label">LEVELS</div></div>
         <div class="stat"><div class="stat-val">${formatTime(totalTime)}</div><div class="stat-label">TOTAL TIME</div></div>
@@ -301,234 +259,239 @@ function showOverlay(type) {
   }
 }
 
-function formatTime(s) {
-  const m = Math.floor(s / 60);
-  const sec = Math.floor(s % 60);
-  return `${m.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-}
-
 function draw() {
-  ctx.fillStyle = var_bg;
-  ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#0a0a12';
+  ctx.fillRect(0,0,W,H);
+  if (!maze) return;
+  const cols=maze[0].length, rows=maze.length, cs=cellSize;
 
-  const cols = maze[0].length, rows = maze.length;
-  const cs = cellSize;
-
-  // Draw path cells
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < cols; x++) {
-      ctx.fillStyle = '#0d0d18';
-      ctx.fillRect(x * cs + 1, y * cs + 1, cs - 2, cs - 2);
-    }
+  // Draw cells
+  for(let y=0;y<rows;y++) for(let x=0;x<cols;x++){
+    ctx.fillStyle='#0d0d18';
+    ctx.fillRect(x*cs+1, y*cs+1, cs-2, cs-2);
   }
 
-  // Draw fuse trail (already burned)
-  const fuseIdx = fuseStarted ? Math.floor(fuse.progress) : -1;
-  for (let i = 0; i <= Math.min(fuseIdx, fuse.path.length - 1); i++) {
-    const p = fuse.path[i];
-    const intensity = i === fuseIdx ? 1 : Math.max(0.15, 1 - (fuseIdx - i) * 0.04);
-    ctx.fillStyle = i === fuseIdx
-      ? `rgba(255, 215, 0, ${intensity})`
-      : `rgba(255, 68, 68, ${intensity * 0.5})`;
-    ctx.fillRect(p.x * cs + 2, p.y * cs + 2, cs - 4, cs - 4);
-
-    // Fuse head glow
-    if (i === fuseIdx) {
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = '#ffd700';
-      ctx.fillStyle = 'rgba(255, 215, 0, 0.8)';
-      ctx.beginPath();
-      ctx.arc((p.x + 0.5) * cs, (p.y + 0.5) * cs, cs * 0.25, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.shadowBlur = 0;
-    }
+  // Draw player trail (subtle breadcrumbs)
+  for(let i=0;i<playerTrail.length-1;i++){
+    const p=playerTrail[i];
+    const alpha = Math.max(0.04, 0.2 - (playerTrail.length-1-i)*0.005);
+    ctx.fillStyle=`rgba(0,255,136,${alpha})`;
+    ctx.beginPath();
+    ctx.arc((p.x+0.5)*cs, (p.y+0.5)*cs, cs*0.12, 0, Math.PI*2);
+    ctx.fill();
   }
 
-  // Draw player trail
-  for (let i = 0; i < playerTrail.length - 1; i++) {
-    const p = playerTrail[i];
-    const alpha = Math.max(0.05, 0.3 - (playerTrail.length - 1 - i) * 0.01);
-    ctx.fillStyle = `rgba(0, 255, 136, ${alpha})`;
-    ctx.fillRect(p.x * cs + 3, p.y * cs + 3, cs - 6, cs - 6);
+  // Draw fuse trail
+  if(fuseStarted){
+    const fi = Math.floor(fuse.progress);
+    for(let i=0;i<=Math.min(fi, fuse.path.length-1);i++){
+      const p=fuse.path[i];
+      if(i===fi){
+        // Fuse head — bright spark
+        ctx.shadowBlur=18; ctx.shadowColor='#ffd700';
+        ctx.fillStyle='rgba(255,215,0,0.9)';
+        ctx.beginPath();
+        ctx.arc((p.x+0.5)*cs,(p.y+0.5)*cs, cs*0.3, 0, Math.PI*2);
+        ctx.fill();
+        ctx.shadowBlur=0;
+        // Ember particles
+        ctx.fillStyle='rgba(255,100,30,0.6)';
+        ctx.beginPath();
+        ctx.arc((p.x+0.5)*cs + (Math.random()-0.5)*cs*0.3, (p.y+0.5)*cs + (Math.random()-0.5)*cs*0.3, cs*0.08, 0, Math.PI*2);
+        ctx.fill();
+      } else {
+        // Burned trail
+        const fade = Math.max(0.1, 1-(fi-i)*0.03);
+        ctx.fillStyle=`rgba(255,50,30,${fade*0.35})`;
+        ctx.fillRect(p.x*cs+3, p.y*cs+3, cs-6, cs-6);
+      }
+    }
   }
 
   // Draw walls
-  ctx.strokeStyle = '#2a2a4a';
-  ctx.lineWidth = 2;
-  for (let y = 0; y < rows; y++) {
-    for (let x = 0; x < cols; x++) {
-      const cell = maze[y][x];
-      const px = x * cs, py = y * cs;
-      ctx.beginPath();
-      if (cell.walls.top) { ctx.moveTo(px, py); ctx.lineTo(px + cs, py); }
-      if (cell.walls.right) { ctx.moveTo(px + cs, py); ctx.lineTo(px + cs, py + cs); }
-      if (cell.walls.bottom) { ctx.moveTo(px, py + cs); ctx.lineTo(px + cs, py + cs); }
-      if (cell.walls.left) { ctx.moveTo(px, py); ctx.lineTo(px, py + cs); }
-      ctx.stroke();
-    }
+  ctx.strokeStyle='#2a2a4a'; ctx.lineWidth=2;
+  for(let y=0;y<rows;y++) for(let x=0;x<cols;x++){
+    const c=maze[y][x], px=x*cs, py=y*cs;
+    ctx.beginPath();
+    if(c.walls.top){ctx.moveTo(px,py);ctx.lineTo(px+cs,py)}
+    if(c.walls.right){ctx.moveTo(px+cs,py);ctx.lineTo(px+cs,py+cs)}
+    if(c.walls.bottom){ctx.moveTo(px,py+cs);ctx.lineTo(px+cs,py+cs)}
+    if(c.walls.left){ctx.moveTo(px,py);ctx.lineTo(px,py+cs)}
+    ctx.stroke();
   }
 
-  // Draw exit
-  ctx.shadowBlur = 12;
-  ctx.shadowColor = '#00d4ff';
-  ctx.fillStyle = '#00d4ff';
+  // Draw exit pulse
+  const pulse = 0.25 + Math.sin(performance.now()*0.005)*0.08;
+  ctx.shadowBlur=15; ctx.shadowColor='#00d4ff';
+  ctx.fillStyle='#00d4ff';
   ctx.beginPath();
-  ctx.arc((exit.x + 0.5) * cs, (exit.y + 0.5) * cs, cs * 0.3, 0, Math.PI * 2);
+  ctx.arc((exit.x+0.5)*cs,(exit.y+0.5)*cs, cs*pulse, 0, Math.PI*2);
   ctx.fill();
-  ctx.shadowBlur = 0;
+  ctx.shadowBlur=0;
 
   // Draw player
-  if (gameState === 'playing' || gameState === 'won') {
-    ctx.shadowBlur = 15;
-    ctx.shadowColor = '#00ff88';
-    ctx.fillStyle = '#00ff88';
+  if(gameState==='playing'||gameState==='won'){
+    ctx.shadowBlur=12; ctx.shadowColor='#00ff88';
+    ctx.fillStyle='#00ff88';
     ctx.beginPath();
-    ctx.arc((player.x + 0.5) * cs, (player.y + 0.5) * cs, cs * 0.3, 0, Math.PI * 2);
+    ctx.arc((player.x+0.5)*cs,(player.y+0.5)*cs, cs*0.28, 0, Math.PI*2);
     ctx.fill();
-    ctx.shadowBlur = 0;
+    // Inner glow
+    ctx.fillStyle='rgba(255,255,255,0.5)';
+    ctx.beginPath();
+    ctx.arc((player.x+0.5)*cs,(player.y+0.5)*cs, cs*0.1, 0, Math.PI*2);
+    ctx.fill();
+    ctx.shadowBlur=0;
   }
 
-  // Draw explosion particles
-  for (const p of explosionParticles) {
-    ctx.globalAlpha = p.life;
-    ctx.fillStyle = p.color;
+  // Explosion particles
+  for(const p of explosionParticles){
+    ctx.globalAlpha=p.life;
+    ctx.fillStyle=p.color;
     ctx.beginPath();
-    ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
+    ctx.arc(p.x,p.y, p.size*p.life, 0, Math.PI*2);
     ctx.fill();
   }
-  ctx.globalAlpha = 1;
+  ctx.globalAlpha=1;
 }
 
-const var_bg = '#0a0a12';
-
 function update(dt) {
-  if (gameState !== 'playing') {
-    // Update particles
-    explosionParticles = explosionParticles.filter(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-      p.life -= dt * 1.5;
-      p.vy += 2 * dt;
-      return p.life > 0;
-    });
-    return;
-  }
+  // Update particles regardless of state
+  explosionParticles = explosionParticles.filter(p => {
+    p.x+=p.vx; p.y+=p.vy; p.life-=dt*1.2; p.vy+=3*dt;
+    return p.life>0;
+  });
 
-  const elapsed = (performance.now() - levelStart) / 1000;
-  hudTimer.textContent = formatTime(elapsed);
+  if(gameState!=='playing') return;
+  if(moveThrottle>0) moveThrottle-=dt;
 
-  // Head start countdown
-  if (!fuseStarted) {
+  // Head start
+  if(!fuseStarted){
     fuseDelay -= dt;
-    const pct = fuseDelay / (3 + level * 0.3);
-    fuseFill.style.width = '100%';
-    fuseFill.style.background = 'linear-gradient(90deg, #00ff88, #00d4ff)';
-    hudTimer.textContent = '🏃 GO!';
-    if (fuseDelay <= 0) {
-      fuseStarted = true;
-    }
+    fuseFill.style.width='100%';
+    fuseFill.style.background='linear-gradient(90deg,#00ff88,#00d4ff)';
+    const left = Math.ceil(fuseDelay);
+    hudTimer.textContent = left > 0 ? `🏃 ${left}s` : '🔥 GO!';
+    if(fuseDelay<=0) fuseStarted=true;
+    // Process held direction during countdown too
+    if(pendingDir && moveThrottle<=0) tryMove(pendingDir.dx, pendingDir.dy);
     return;
   }
 
   fuseTimer -= dt;
-  const pct = Math.max(0, fuseTimer / fuseMax);
-  fuseFill.style.width = (pct * 100) + '%';
-  fuseFill.style.background = pct < 0.25
-    ? 'linear-gradient(90deg, #ff0000, #ff4444)'
-    : 'linear-gradient(90deg, var(--fuse), var(--fuse-glow))';
+  const pct = Math.max(0, fuseTimer/fuseMax);
+  fuseFill.style.width = (pct*100)+'%';
+  fuseFill.style.background = pct<0.2 ? 'linear-gradient(90deg,#ff0000,#ff4444)' : 'linear-gradient(90deg,var(--fuse),var(--fuse-glow))';
+  hudTimer.textContent = formatTime(fuseMax - fuseTimer);
 
-  // Advance fuse along solution path
-  const fuseSpeed = fuse.path.length / fuseMax;
-  fuse.progress += fuseSpeed * dt;
+  // Advance fuse
+  const speed = fuse.path.length / fuseMax;
+  fuse.progress += speed * dt;
 
-  // Check if fuse caught player (skip first cell - player spawn)
-  const fuseIdx = Math.floor(fuse.progress);
-  if (fuseIdx > 1 && fuseIdx < fuse.path.length) {
-    const fp = fuse.path[fuseIdx];
-    if (fp.x === player.x && fp.y === player.y) {
-      explode();
-    }
+  // Fuse catches player?
+  const fi = Math.floor(fuse.progress);
+  if(fi>=2 && fi<fuse.path.length){
+    const fp=fuse.path[fi];
+    if(fp.x===player.x && fp.y===player.y) explode();
   }
+  if(fuseTimer<=0) explode();
 
-  if (fuseTimer <= 0) {
-    explode();
-  }
+  // Process held direction
+  if(pendingDir && moveThrottle<=0) tryMove(pendingDir.dx, pendingDir.dy);
 }
 
-let lastTime = 0;
-function gameLoop(timestamp) {
-  const dt = Math.min((timestamp - lastTime) / 1000, 0.05);
-  lastTime = timestamp;
-
-  update(dt);
-  draw();
+function gameLoop(ts) {
+  const dt = Math.min((ts-lastTime)/1000, 0.05);
+  lastTime = ts;
+  update(dt); draw();
   animFrame = requestAnimationFrame(gameLoop);
 }
 
 function startGame() {
   overlay.classList.add('hidden');
-  totalTime = 0;
+  totalTime=0;
   initLevel(0);
-  lastTime = performance.now();
-  if (animFrame) cancelAnimationFrame(animFrame);
-  animFrame = requestAnimationFrame(gameLoop);
+  lastTime=performance.now();
+  if(animFrame) cancelAnimationFrame(animFrame);
+  animFrame=requestAnimationFrame(gameLoop);
 }
 
-// Touch / Mouse controls
-function getPos(e) {
-  const rect = canvas.getBoundingClientRect();
-  const t = e.touches ? e.touches[0] : e;
-  return { x: t.clientX - rect.left, y: t.clientY - rect.top };
-}
+// === CONTROLS ===
+// Keyboard
+const keyDirs = {
+  ArrowUp:{dx:0,dy:-1}, ArrowDown:{dx:0,dy:1}, ArrowLeft:{dx:-1,dy:0}, ArrowRight:{dx:1,dy:0},
+  w:{dx:0,dy:-1}, s:{dx:0,dy:1}, a:{dx:-1,dy:0}, d:{dx:1,dy:0},
+};
+document.addEventListener('keydown', e => {
+  if(gameState!=='playing'){if(e.key==='Enter'||e.key===' ')startGame();return}
+  const dir = keyDirs[e.key];
+  if(dir){e.preventDefault(); pendingDir=dir; if(moveThrottle<=0)tryMove(dir.dx,dir.dy)}
+});
+document.addEventListener('keyup', e => {
+  const dir=keyDirs[e.key];
+  if(dir && pendingDir && dir.dx===pendingDir.dx && dir.dy===pendingDir.dy) pendingDir=null;
+});
 
-canvas.addEventListener('mousedown', (e) => { dragActive = true; handleDrag(e); });
-canvas.addEventListener('mousemove', (e) => { if (dragActive) handleDrag(e); });
-canvas.addEventListener('mouseup', () => dragActive = false);
-canvas.addEventListener('mouseleave', () => dragActive = false);
+// Touch — swipe direction from drag start point
+let touchStart = null;
+let lastTouchCell = null;
 
-canvas.addEventListener('touchstart', (e) => { e.preventDefault(); dragActive = true; handleDrag(e); }, { passive: false });
-canvas.addEventListener('touchmove', (e) => { e.preventDefault(); if (dragActive) handleDrag(e); }, { passive: false });
-canvas.addEventListener('touchend', () => dragActive = false);
+canvas.addEventListener('touchstart', e => {
+  e.preventDefault();
+  const t=e.touches[0], rect=canvas.getBoundingClientRect();
+  touchStart = {x:t.clientX-rect.left, y:t.clientY-rect.top};
+  lastTouchCell = {x:player.x, y:player.y};
+}, {passive:false});
 
-function handleDrag(e) {
-  if (gameState !== 'playing') return;
-  const pos = getPos(e);
-  const target = getCellFromPixel(pos.x, pos.y);
-  if (target.x !== player.x || target.y !== player.y) {
-    movePlayer(target);
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if(!touchStart || gameState!=='playing') return;
+  const t=e.touches[0], rect=canvas.getBoundingClientRect();
+  const cx=t.clientX-rect.left, cy=t.clientY-rect.top;
+  const dx=cx-touchStart.x, dy=cy-touchStart.y;
+  const threshold = cellSize * 0.35;
+  
+  if(Math.abs(dx)>threshold || Math.abs(dy)>threshold){
+    if(Math.abs(dx)>Math.abs(dy)){
+      pendingDir = {dx:Math.sign(dx), dy:0};
+    } else {
+      pendingDir = {dx:0, dy:Math.sign(dy)};
+    }
+    if(moveThrottle<=0){
+      tryMove(pendingDir.dx, pendingDir.dy);
+      // Reset touch origin to current position for continuous swiping
+      touchStart = {x:cx, y:cy};
+    }
   }
-}
+}, {passive:false});
 
-// Keyboard controls
-document.addEventListener('keydown', (e) => {
-  if (gameState !== 'playing') {
-    if (e.key === 'Enter' || e.key === ' ') startGame();
-    return;
-  }
-  const moves = {
-    ArrowUp: { x: player.x, y: player.y - 1 },
-    ArrowDown: { x: player.x, y: player.y + 1 },
-    ArrowLeft: { x: player.x - 1, y: player.y },
-    ArrowRight: { x: player.x + 1, y: player.y },
-    w: { x: player.x, y: player.y - 1 },
-    s: { x: player.x, y: player.y + 1 },
-    a: { x: player.x - 1, y: player.y },
-    d: { x: player.x + 1, y: player.y },
-  };
-  if (moves[e.key]) {
-    e.preventDefault();
-    movePlayer(moves[e.key]);
+canvas.addEventListener('touchend', () => { touchStart=null; pendingDir=null; });
+
+// Mouse drag
+let mouseDown = false, mouseStart = null;
+canvas.addEventListener('mousedown', e => {
+  mouseDown=true;
+  const rect=canvas.getBoundingClientRect();
+  mouseStart={x:e.clientX-rect.left, y:e.clientY-rect.top};
+});
+canvas.addEventListener('mousemove', e => {
+  if(!mouseDown||!mouseStart||gameState!=='playing') return;
+  const rect=canvas.getBoundingClientRect();
+  const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
+  const dx=cx-mouseStart.x, dy=cy-mouseStart.y;
+  const threshold=cellSize*0.35;
+  if(Math.abs(dx)>threshold||Math.abs(dy)>threshold){
+    if(Math.abs(dx)>Math.abs(dy)) pendingDir={dx:Math.sign(dx),dy:0};
+    else pendingDir={dx:0,dy:Math.sign(dy)};
+    if(moveThrottle<=0){tryMove(pendingDir.dx,pendingDir.dy);mouseStart={x:cx,y:cy}}
   }
 });
+canvas.addEventListener('mouseup',()=>{mouseDown=false;mouseStart=null;pendingDir=null});
+canvas.addEventListener('mouseleave',()=>{mouseDown=false;mouseStart=null;pendingDir=null});
 
 // Init
 resize();
-window.addEventListener('resize', () => {
-  resize();
-  if (maze) {
-    cellSize = W / maze[0].length;
-  }
-});
+window.addEventListener('resize',()=>{resize();if(maze)cellSize=W/maze[0].length});
 showOverlay('start');
 </script>
 </body>

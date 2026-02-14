@@ -75,7 +75,7 @@ let animFrame, lastTime = 0;
 let totalTime = 0, levelStart = 0;
 let explosionParticles = [];
 let moveThrottle = 0;
-const MOVE_DELAY = 0.055; // seconds between moves — snappy for big mazes
+const MOVE_DELAY = 0.07; // seconds between moves
 
 const LEVELS = [
   { cols: 11, rows: 11, time: 18 },
@@ -196,18 +196,45 @@ function canMove(fx, fy, tx, ty) {
 }
 
 let pendingDir = null;
+let queuedTurn = null; // Buffered turn for intersections
+let currentDir = null; // Direction player is currently moving
 
 function tryMove(dx, dy) {
   if (gameState !== 'playing') return;
   const nx = player.x + dx, ny = player.y + dy;
   const cols = maze[0].length, rows = maze.length;
-  if (nx<0||nx>=cols||ny<0||ny>=rows) return;
-  if (!canMove(player.x, player.y, nx, ny)) return;
+  if (nx<0||nx>=cols||ny<0||ny>=rows) {
+    // Can't go that way — queue it as a turn for next intersection
+    queuedTurn = {dx, dy};
+    return;
+  }
+  if (!canMove(player.x, player.y, nx, ny)) {
+    // Wall — queue the turn, try it each step
+    queuedTurn = {dx, dy};
+    return;
+  }
   
   player.x = nx;
   player.y = ny;
   playerTrail.push({x:nx, y:ny});
+  currentDir = {dx, dy};
   moveThrottle = MOVE_DELAY;
+  
+  // After moving, check if queued turn is now possible
+  if (queuedTurn && (queuedTurn.dx !== dx || queuedTurn.dy !== dy)) {
+    const qx = player.x + queuedTurn.dx;
+    const qy = player.y + queuedTurn.dy;
+    if (qx>=0 && qx<cols && qy>=0 && qy<rows && canMove(player.x, player.y, qx, qy)) {
+      // Execute the queued turn immediately
+      player.x = qx;
+      player.y = qy;
+      playerTrail.push({x:qx, y:qy});
+      currentDir = {dx:queuedTurn.dx, dy:queuedTurn.dy};
+      pendingDir = queuedTurn;
+      queuedTurn = null;
+      moveThrottle = MOVE_DELAY;
+    }
+  }
   
   if (player.x === exit.x && player.y === exit.y) {
     winLevel();
@@ -439,11 +466,19 @@ const keyDirs = {
 document.addEventListener('keydown', e => {
   if(gameState!=='playing'){if(e.key==='Enter'||e.key===' ')startGame();return}
   const dir = keyDirs[e.key];
-  if(dir){e.preventDefault(); pendingDir=dir; if(moveThrottle<=0)tryMove(dir.dx,dir.dy)}
+  if(dir){
+    e.preventDefault();
+    pendingDir = dir;
+    queuedTurn = dir; // Always queue the new direction
+    if(moveThrottle<=0) tryMove(dir.dx, dir.dy);
+  }
 });
 document.addEventListener('keyup', e => {
   const dir=keyDirs[e.key];
-  if(dir && pendingDir && dir.dx===pendingDir.dx && dir.dy===pendingDir.dy) pendingDir=null;
+  if(dir && pendingDir && dir.dx===pendingDir.dx && dir.dy===pendingDir.dy){
+    pendingDir=null;
+    // Keep queuedTurn alive briefly so it still executes at next intersection
+  }
 });
 
 // Touch — swipe direction from drag start point
@@ -466,14 +501,16 @@ canvas.addEventListener('touchmove', e => {
   const threshold = cellSize * 0.35;
   
   if(Math.abs(dx)>threshold || Math.abs(dy)>threshold){
+    let newDir;
     if(Math.abs(dx)>Math.abs(dy)){
-      pendingDir = {dx:Math.sign(dx), dy:0};
+      newDir = {dx:Math.sign(dx), dy:0};
     } else {
-      pendingDir = {dx:0, dy:Math.sign(dy)};
+      newDir = {dx:0, dy:Math.sign(dy)};
     }
+    pendingDir = newDir;
+    queuedTurn = newDir;
     if(moveThrottle<=0){
-      tryMove(pendingDir.dx, pendingDir.dy);
-      // Reset touch origin to current position for continuous swiping
+      tryMove(newDir.dx, newDir.dy);
       touchStart = {x:cx, y:cy};
     }
   }

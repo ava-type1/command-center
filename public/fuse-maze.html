@@ -71,7 +71,7 @@ const fuseFill = document.getElementById('fuse-fill');
 
 let W, H, cellSize;
 let maze, player, exit, fuse, level, gameState;
-let fuseTimer, fuseMax, fuseTrail, playerTrail;
+let fuseTimer, fuseMax, fuseTrail, playerTrail, fuseDelay, fuseStarted;
 let dragActive = false;
 let animFrame;
 let totalTime = 0, levelStart = 0;
@@ -180,6 +180,8 @@ function initLevel(lvl) {
 
   fuseMax = cfg.time;
   fuseTimer = fuseMax;
+  fuseDelay = 3 + level * 0.3; // 3 second head start, slightly more per level
+  fuseStarted = false;
   fuse = { path: solution, progress: 0 };
   levelStart = performance.now();
   gameState = 'playing';
@@ -321,7 +323,7 @@ function draw() {
   }
 
   // Draw fuse trail (already burned)
-  const fuseIdx = Math.floor(fuse.progress);
+  const fuseIdx = fuseStarted ? Math.floor(fuse.progress) : -1;
   for (let i = 0; i <= Math.min(fuseIdx, fuse.path.length - 1); i++) {
     const p = fuse.path[i];
     const intensity = i === fuseIdx ? 1 : Math.max(0.15, 1 - (fuseIdx - i) * 0.04);
@@ -412,6 +414,22 @@ function update(dt) {
     return;
   }
 
+  const elapsed = (performance.now() - levelStart) / 1000;
+  hudTimer.textContent = formatTime(elapsed);
+
+  // Head start countdown
+  if (!fuseStarted) {
+    fuseDelay -= dt;
+    const pct = fuseDelay / (3 + level * 0.3);
+    fuseFill.style.width = '100%';
+    fuseFill.style.background = 'linear-gradient(90deg, #00ff88, #00d4ff)';
+    hudTimer.textContent = '🏃 GO!';
+    if (fuseDelay <= 0) {
+      fuseStarted = true;
+    }
+    return;
+  }
+
   fuseTimer -= dt;
   const pct = Math.max(0, fuseTimer / fuseMax);
   fuseFill.style.width = (pct * 100) + '%';
@@ -419,16 +437,13 @@ function update(dt) {
     ? 'linear-gradient(90deg, #ff0000, #ff4444)'
     : 'linear-gradient(90deg, var(--fuse), var(--fuse-glow))';
 
-  const elapsed = (performance.now() - levelStart) / 1000;
-  hudTimer.textContent = formatTime(elapsed);
-
   // Advance fuse along solution path
   const fuseSpeed = fuse.path.length / fuseMax;
   fuse.progress += fuseSpeed * dt;
 
-  // Check if fuse caught player
+  // Check if fuse caught player (skip first cell - player spawn)
   const fuseIdx = Math.floor(fuse.progress);
-  if (fuseIdx < fuse.path.length) {
+  if (fuseIdx > 1 && fuseIdx < fuse.path.length) {
     const fp = fuse.path[fuseIdx];
     if (fp.x === player.x && fp.y === player.y) {
       explode();

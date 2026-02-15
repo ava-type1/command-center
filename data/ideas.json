@@ -285,6 +285,19 @@
       "status": "\ud83d\udca1 Ready to package \u2014 sites already built",
       "createdAt": "2026-02-13T04:18:00Z",
       "notes": "Three sites already exist (handyman, salon, tech). Strip specific business info, package as templates, list on Gumroad + Etsy. Zero delivery cost. Passive income play \u2014 build once, earn forever."
+    },
+    {
+      "id": "48",
+      "title": "\ud83d\udcfc VHS Vault \u2014 Nostalgic Video Library App",
+      "description": "iPhone app that turns your video collection into a virtual VHS shelf. Upload videos, each one gets a VHS tape with a sharpie-on-white-label title. Browse your shelf, pull a tape, watch it. Pure nostalgia UI.",
+      "category": "product",
+      "potential": "high",
+      "effort": "concept",
+      "score": 85,
+      "status": "\ud83d\udca1 Concept",
+      "createdAt": "2026-02-15T04:36:00Z",
+      "highlight": false,
+      "notes": "Nostalgia play targeting millennials/Gen X. Key features: realistic VHS shelf UI (wooden shelf, worn tape spines), auto-generated sharpie handwriting labels from video title or AI-detected content, VHS static/tracking effect on playback start, optional CRT TV filter overlay, organize by \"shelves\" (Family, Vacations, Holidays). Monetization: free (10 tapes) \u2192 $4.99 unlimited or $2.99/mo. Could go viral on TikTok with the aesthetic. SwiftUI build, PhotosUI for import, AVFoundation for playback with retro filters. Low effort MVP \u2014 mostly UI/UX polish."
     }
   ],
   "avadrive_integrations": [

@@ -5,6 +5,7 @@ import { IdeasHub } from './components/IdeasHub';
 import { FinanceDashboard } from './components/FinanceDashboard';
 import { ContentCreator } from './components/ContentCreator';
 import { DailyBriefing } from './components/DailyBriefing';
+import { ProspectsList } from './components/ProspectsList';
 import { Sidebar, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2, Menu, RefreshCw } from 'lucide-react';
@@ -171,6 +172,7 @@ function App() {
             {view === 'finance' && <FinanceDashboard />}
             {view === 'content' && <ContentCreator />}
             {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
+            {view === 'prospects' && <ProspectsList />}
             {view === 'briefing' && <DailyBriefing days={dailyLog} />}
           </ErrorBoundary>
         </main>

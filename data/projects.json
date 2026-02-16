@@ -1305,20 +1305,20 @@
       "name": "Fiverr Freelance",
       "description": "Website building gig on Fiverr — AI-assisted sites delivered in minutes. 3-tier pricing: Basic $75, Standard $150, Premium $250. Portfolio: Total Transformation, Karen's Country Cuts, AVA Type 1.",
       "status": "active",
-      "progress": 80,
+      "progress": 90,
       "color": "#1dbf73",
-      "lastUpdated": "2026-02-13T03:30:00Z",
-      "lastWorkedOn": "Gig fully set up — overview, pricing tiers, description, requirements, gallery. W-9 submitted, waiting on verification before publishing.",
+      "lastUpdated": "2026-02-16T02:48:00Z",
+      "lastWorkedOn": "GIG LIVE! W-9 cleared Feb 15, gig published and accepting orders. $75/$150/$250 tiers.",
       "todos": [
         {
           "id": "1",
           "text": "W-9 verification (1-3 business days)",
-          "done": false
+          "done": true
         },
         {
           "id": "2",
           "text": "Publish gig once W-9 clears",
-          "done": false
+          "done": true
         },
         {
           "id": "3",
@@ -1387,6 +1387,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-15",
+          "summary": "GIG IS LIVE! W-9 verification completed ~9:44 PM ET. Gig published ~9:48 PM ET and now accepting orders. Was blocked since Feb 13 on W-9 — now fully operational."
+        },
         {
           "date": "2026-02-13",
           "summary": "Full Fiverr gig setup session. Created website building gig with 3 tiers: Basic ($75, 1-page, 2-day), Standard ($150, 3-page, 3-day), Premium ($250, 5-page, 4-day). Added extras: additional page ($25), revision ($10), content upload ($15), e-commerce ($75). Extra fast delivery enabled. Gallery: Total Transformation, Karen's Country Cuts, AVA Type 1. Requirements questions set. W-9 submitted — waiting verification before publish."
@@ -1581,6 +1585,129 @@
           "summary": "Built Twilio SMS server: Express on port 3457, pm2 managed, Caddy reverse proxy on :8444. Inbound SMS → Clawdbot hooks/agent endpoint working. Outbound code written but blocked by A2P 10DLC registration (trial account). Monthly cost: ~$3.15/mo fixed + $0.0079/text. This is the KodaAI product being dog-fooded for Kam's Nobility Homes work first."
         }
       ]
+    },
+    {
+      "id": "vhs-vault",
+      "name": "VHS Vault",
+      "description": "Nostalgic iPhone app — virtual VHS tape collection. Upload videos, each gets a VHS tape with sharpie-on-white-label. Browse your shelf, pull a tape, watch the video. Targets millennials/Gen X who grew up with VCR culture.",
+      "status": "active",
+      "progress": 85,
+      "color": "#8b4513",
+      "lastUpdated": "2026-02-16T02:30:00Z",
+      "lastWorkedOn": "Full app built in one session — 13 Swift files, ~2,300 lines. All visuals rendered in code (no external assets). Permanent Marker font for sharpie style.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Core app built (13 Swift files, ~2,300 lines)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Shelf browsing UI with wooden bookcase",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Tape pull animation",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "VHS static intro effect",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Video playback with CRT scan lines",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Spinning spool cassette view",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Add tapes from Photos library",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Add sound effects (freesound.org sources documented)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "App Store submission",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Monetization: free (5 tapes) → $4.99 unlimited",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-15",
+          "summary": "NIGHTLY BUILD: Full VHS Vault app built from scratch. 13 Swift files, ~2,300 lines SwiftUI. All visuals code-rendered (no image assets). Permanent Marker font bundled for sharpie-on-tape aesthetic. Features: oak bookcase shelf, tape pull animation, VHS static intro, CRT scan line playback, spinning spool cassette view, add tapes from Photos. Product vision: NOT about digitizing old tapes — it's a curated video library for your best/most important videos with nostalgic VHS aesthetic. Freemium: 5 free tapes, $4.99 unlimited."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/vhs-vault-ios"
+    },
+    {
+      "id": "tiwahe-times",
+      "name": "The Tiwahe Times",
+      "description": "Hyperlocal digital newspaper for Fort White, FL. AI-powered content generation. Sections: weather, local news, community events, sports, county government, business spotlight. Revenue via local business ads ($25-150/mo).",
+      "status": "active",
+      "progress": 40,
+      "color": "#1e3a5f",
+      "lastUpdated": "2026-02-14T22:00:00Z",
+      "lastWorkedOn": "Initial build deployed to Cloudflare Pages. First business spotlight: Santa Fe Site Prep LLC (Brad Taylor).",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Initial site built and deployed",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "First business spotlight (Santa Fe Site Prep)",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Set up automated daily content pipeline (scraping + AI summarization cron)",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Share in Fort White Facebook groups for traction",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Add more business spotlights",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Build ad placement system ($25-150/mo tiers)",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Expand to Lake City edition",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-14",
+          "summary": "Built and deployed The Tiwahe Times — hyperlocal digital newspaper for Fort White, FL. Named after Fort White HS motto #TIWAHE (Lakota for 'family'). Sections: weather, local news, community events, sports, county govt, business spotlight. First spotlight: Santa Fe Site Prep LLC (Brad Taylor). Business model: free at first, then $25-150/mo ad placements. Marketing flywheel: share in FB groups → town reads → businesses notice → KodaAI leads."
+        }
+      ],
+      "liveUrl": "https://tiwahe-times.pages.dev"
     }
   ]
 }

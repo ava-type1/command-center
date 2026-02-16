@@ -1,85 +1,85 @@
 {
-  "lastUpdated": "2026-02-15T12:00:00Z",
+  "lastUpdated": "2026-02-16T12:00:00Z",
   "items": [
     {
-      "id": "127",
-      "title": "Half of xAI's Founding Team Has Now Left — Musk Claims 'Reorganization'",
-      "summary": "At least 11 engineers including 6 of xAI's 12 co-founders have departed the company, with most exits happening in the past week. Co-founders Jimmy Ba and others left after the SpaceX-xAI merger. Musk addressed the wave of departures by saying xAI was 'reorganized,' suggesting some exits were push rather than pull. Infrastructure lead Kyle Kosic left for OpenAI, researcher Christian Szegedy departed last year. The exodus raises questions about xAI's stability and Grok's development roadmap.",
-      "url": "https://techcrunch.com/2026/02/10/nearly-half-of-xais-founding-team-has-now-left-the-company/",
+      "id": "135",
+      "title": "India AI Impact Summit 2026 Kicks Off — PM Modi Inaugurates Global AI Forum",
+      "summary": "India is hosting the AI Impact Summit 2026 (Feb 16-20) in New Delhi, bringing together world leaders, tech CEOs, and researchers to discuss governance, jobs, and public services shaped by AI. PM Modi inaugurated the AI Impact Expo, saying outcomes will 'help shape a future that is progressive, innovative, and opportunity-driven.' The summit is expected to produce policy frameworks around AI regulation, safety, and equitable access across developing nations.",
+      "url": "https://www.aljazeera.com/news/2026/2/16/india-hosts-ai-impact-summit-drawing-world-leaders-tech-giants",
       "category": "ai",
-      "source": "TechCrunch / NBC News / CNBC",
-      "date": "2026-02-15",
-      "relevance": "Major talent drain at a key AI competitor. When half your founding team walks out, that's not 'reorganization' — that's a crisis. The brain drain benefits competitors like Anthropic and OpenAI who are absorbing this talent. For the broader AI ecosystem, it signals that even well-funded labs struggle to retain top researchers when leadership is chaotic."
+      "source": "Al Jazeera / Indian Express / Business Standard",
+      "date": "2026-02-16",
+      "relevance": "Major global AI governance event happening this week. Any regulatory frameworks that come out of this could affect how AI tools (including Claude, Clawdbot) operate internationally. India is the world's largest developer talent pool — policy decisions here shape AI adoption for billions. Worth watching for any announcements about AI in healthcare or education that could impact AVA's reach."
     },
     {
-      "id": "128",
-      "title": "Anthropic Expands Claude Free Tier — Files, Connectors, Skills, and Compaction Now Free",
-      "summary": "Anthropic opened up several paid features to free Claude users: file creation/editing (Excel, PowerPoint, Word, PDF), third-party connectors (Slack, Notion, Zapier, Figma, Stripe, and more), and custom skills. Free users also get compaction for longer conversations. The move comes days after OpenAI started showing ads in ChatGPT's free tier — Anthropic previously pledged to keep Claude ad-free. Free tier still uses Sonnet 4.5 (Pro gets Opus).",
-      "url": "https://www.macrumors.com/2026/02/11/anthropic-claude-more-free-features/",
+      "id": "136",
+      "title": "AI Disruption Fears Hit Corporate America — Earnings Calls Mentions Double, Stocks Sell Off",
+      "summary": "Bloomberg analysis reveals AI disruption mentions in corporate earnings calls nearly doubled quarter-over-quarter, triggering selloffs in software and knowledge-work sectors despite strong overall earnings. Morgan Stanley flagged potential threats to the $1.5T US software credit space. Meanwhile, agentic AI models (Claude Opus 4.6, MiniMax M2.5) are enabling autonomous task execution at dramatically lower costs — enterprises report running continuous AI agents for ~$10K/year.",
+      "url": "https://aicost.org/blog/ai-today-news-2026-02-15",
       "category": "ai",
-      "source": "MacRumors / Anthropic",
-      "date": "2026-02-15",
-      "relevance": "Smart competitive move by Anthropic. Free connectors to Slack, Notion, Zapier etc. could be useful for AVA community management without paying for Pro. The ad-free positioning is a strong differentiator — OpenAI putting ads in ChatGPT is a bold bet that could backfire. Compaction on free tier means longer productive conversations for anyone testing Claude."
+      "source": "AICost / Bloomberg / Morgan Stanley",
+      "date": "2026-02-16",
+      "relevance": "The $10K/year for continuous AI agents is the number to watch. That's what Clawdbot represents — an always-on agent handling your daily operations. The market panic around AI disruption in knowledge work validates the automation-first approach you're building into your contracting workflow. Software companies scrambling means opportunities for nimble builders who already have their AI tooling figured out."
     },
     {
-      "id": "129",
-      "title": "Claude Opus 4.6 — Agent Teams, 1M Token Context, Compaction",
-      "summary": "Released Feb 5, Claude Opus 4.6 brings major upgrades: native 'agent teams' for multi-agent collaboration in Claude Code, 1M token context window, compaction (automatic context summarization for infinite conversations), and state-of-the-art coding abilities. Anthropic offered $50 in free API credits for the launch. The agent teams feature lets multiple Claude instances coordinate on complex tasks — directly competing with OpenAI's Codex multi-agent approach.",
-      "url": "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
-      "category": "claude",
-      "source": "TechCrunch / VentureBeat",
-      "date": "2026-02-15",
-      "relevance": "You're already running on Opus 4.6 (that's me). The agent teams feature is what powers Clawdbot's sub-agent spawning. The 1M token context window means longer sessions without losing context — huge for complex AVA development work. Compaction keeps conversations going indefinitely. This is the model powering your daily workflow right now."
+      "id": "137",
+      "title": "Anthropic Safety Researcher Resigns — AI Risk Concerns Growing at Major Labs",
+      "summary": "Mrinank Sharma, an AI safety researcher at Anthropic, resigned publicly, joining a growing list of departures from major AI labs citing concerns that capabilities are outpacing safety measures. Al Jazeera reports that prominent researchers from OpenAI, Anthropic, and Google have increasingly sounded alarms about AI-enabled crime, unintended autonomy, and insufficient governance. Internal safety teams at multiple labs are being restructured amid the tension between shipping fast and shipping safe.",
+      "url": "https://www.aljazeera.com/news/2026/2/15/why-are-experts-sounding-the-alarm-on-ai-risks",
+      "category": "ai",
+      "source": "Al Jazeera",
+      "date": "2026-02-16",
+      "relevance": "Anthropic is the company behind Claude (the AI you're using). Safety researcher departures are worth tracking because they signal internal tension about how fast to push capabilities vs. guardrails. For daily use this doesn't change anything, but it's the kind of industry context that matters if you're building products on top of these models long-term."
     },
     {
-      "id": "130",
-      "title": "Dexcom Beats Q4 Estimates — G7 15-Day System Driving Growth",
-      "summary": "Dexcom reported Q4 revenue of $1.26B (up 13% YoY), beating estimates of $1.25B. Adjusted EPS of $0.68 beat the $0.65 consensus. CEO Jake Leach highlighted the G7 15-Day System launch and expanded CGM access. Dexcom reiterated 2026 revenue guidance of $5.16-5.25B. Stelo, the OTC CGM for non-insulin users, is expanding into the broader consumer wellness market. BTIG reaffirmed a 'Buy' rating.",
-      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/dexcom-beats-quarterly-estimates-strong-demand-glucose-monitors-2026-02-12/",
+      "id": "138",
+      "title": "ADA 2026 Standards of Care — Major Updates to Diabetes Tech Guidance",
+      "summary": "The American Diabetes Association published its 2026 Standards of Care with significant technology updates. Key changes: AID systems (like Omnipod 5) no longer require minimum C-peptide levels, islet autoantibodies, or duration of insulin therapy to initiate — expanding access for newly diagnosed patients. New guidance explicitly supports CGM and insulin delivery systems in schools and workplaces, ensuring children and adults have time to monitor and manage glucose safely.",
+      "url": "https://www.patientcareonline.com/view/ada-publishes-2026-standards-of-care-with-updates-to-sections-on-technology-obesity-cardiometabolic-disease-management",
       "category": "diabetes",
-      "source": "Reuters",
-      "date": "2026-02-15",
-      "relevance": "Directly relevant — both you and Kaislyn use Dexcom G7. The 15-Day System is a game-changer: fewer sensor changes means less hassle, especially for a 7-year-old. Dexcom's strong financials mean continued R&D investment in the platform. Stelo expanding into non-insulin users grows the diabetes tech ecosystem overall — more awareness helps AVA's mission too."
+      "source": "Patient Care Online / ADA",
+      "date": "2026-02-16",
+      "relevance": "Directly relevant to both you and Kaislyn. The removal of initiation barriers for AID systems means faster access to pumps like Omnipod 5 for newly diagnosed T1D patients — no more waiting for lab results to qualify. The school guidance is huge: explicit ADA backing for CGM/pump use in schools gives parents like you stronger footing when advocating for Kaislyn's tech needs. This also validates AVA's educational mission — if kids are wearing CGMs in school, they need to understand them."
     },
     {
-      "id": "131",
-      "title": "Dexcom Submits New Stelo CGM for Non-Insulin Type 2 Diabetes — FDA Clearance Pending",
-      "summary": "Dexcom submitted its Stelo CGM system to the FDA for clearance, specifically designed for patients with diabetes who do not require insulin. This expands beyond Dexcom's traditional T1D/insulin-dependent market into the much larger Type 2 population. If cleared, it would be one of the first CGMs explicitly indicated for non-insulin diabetes management.",
-      "url": "https://www.drugtopics.com/view/dexcom-submits-new-cgm-for-non-insulin-type-2-diabetes-for-fda-clearance",
+      "id": "139",
+      "title": "Sava Technologies Reports Clinical Results for Microsensor-Based CGM",
+      "summary": "Sava Technologies published early clinical results for a novel microsensor-based continuous glucose monitor. The study included 46 participants with T1D and insulin-dependent T2D, demonstrating reliable glucose measurements over a 10-day wear period. Separately, Washington State University developed a wearable biosensor using microneedles and signal amplification that significantly reduces skin discomfort and irritation compared to traditional CGM formats — a provisional patent has been filed.",
+      "url": "https://www.azosensors.com/article.aspx?ArticleID=3282",
       "category": "diabetes",
-      "source": "Drug Topics",
-      "date": "2026-02-15",
-      "relevance": "Dexcom pushing into the non-insulin T2D market massively expands who uses CGM technology. More CGM users = more awareness of glucose monitoring = more potential interest in educational tools like AVA. If Stelo gets cleared, the 'glucose awareness' population grows from ~2M T1D to potentially 30M+ T2D users in the US alone. AVA could eventually expand to serve that audience."
+      "source": "AZoSensors / Sava Technologies / WSU",
+      "date": "2026-02-16",
+      "relevance": "Next-gen CGM tech in the pipeline. Microsensor-based CGMs could eventually mean smaller, less noticeable sensors — especially meaningful for kids like Kaislyn who wear them 24/7. The WSU microneedle approach reducing skin irritation is a big deal; sensor-site irritation is one of the most common complaints from CGM users. More comfortable sensors = better adherence = better outcomes. Also relevant for AVA Companion — as CGM form factors shrink, integration possibilities expand."
     },
     {
-      "id": "132",
-      "title": "Upcoming Omnipod Upgrades — Autonomous Basal + Bolus Delivery, Zero-Setup Design",
-      "summary": "HCPLive reports on upcoming Omnipod technology upgrades: a new intelligent algorithm that autonomously manages both basal AND bolus insulin delivery, plus a zero-setup design intended for primary care prescription. The zero-setup approach aims to dramatically broaden AID access by removing the technical barriers that currently require endocrinologist involvement. Omnipod 5 also expanded to Middle East markets (Saudi Arabia, Kuwait, Qatar, UAE).",
-      "url": "https://www.hcplive.com/view/diabetes-dialogue-upcoming-upgrades-for-omnipod-technology",
-      "category": "diabetes",
-      "source": "HCPLive / Zawya",
-      "date": "2026-02-15",
-      "relevance": "This is your pump platform. Autonomous bolus delivery would be a massive quality-of-life improvement — no more manual bolusing for meals, the pod handles it. Zero-setup for primary care means more people get access without specialist wait times. For AVA: if AID systems become fully autonomous, the educational angle shifts from 'how to manage' to 'understanding what your body is doing' — which is exactly what AVA teaches."
-    },
-    {
-      "id": "133",
-      "title": "GitHub Octoverse: TypeScript Now #1 Language, AI Reshaping How Software Gets Built",
-      "summary": "GitHub's 2025 Octoverse report reveals TypeScript overtook Python and JavaScript as the most-used language on GitHub (Aug 2025). Key trends: typed languages becoming the default for reliability at scale, Python central to AI systems moving to production, developers rewarding tools that minimize friction. The ecosystem is optimizing for speed, clarity, and reproducibility. 36M new developers joined GitHub in 2025, with 1B commits.",
+      "id": "140",
+      "title": "GitHub Octoverse: TypeScript is #1, Python Surges, AI Reshaping Development",
+      "summary": "GitHub's latest Octoverse report confirms TypeScript overtook Python and JavaScript as the most-used language on GitHub (since Aug 2025), adding 1M+ contributors in 2025. Python grew 48.78% YoY (~850K new contributors), driven by AI/ML production workloads. Key insight: strongly typed languages are becoming the default because they catch AI-generated code errors earlier — type mismatches and broken contracts are the most common failure mode with AI-assisted coding.",
       "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
       "category": "productivity",
       "source": "GitHub Blog",
-      "date": "2026-02-15",
-      "relevance": "TypeScript overtaking Python is a significant shift. For your stack: the Command Center and Clawdbot extensions use TypeScript, so you're aligned with the industry trend. The focus on 'tools that minimize friction' validates the workflow automation approach you're taking with Clawdbot + Command Center. 36M new devs joining means more potential contributors and a larger talent pool."
+      "date": "2026-02-16",
+      "relevance": "Your Command Center and Clawdbot extensions run on TypeScript — you're riding the #1 language trend. The insight about typed languages catching AI-generated code errors is directly applicable: when Claude Code writes TypeScript for your projects, the type system acts as a safety net. Python's growth driven by AI production work also matters for any future AVA backend services or data processing."
     },
     {
-      "id": "134",
-      "title": "Alibaba Launches RynnBrain AI Model for Robotics — 'Physical AI' Race Heats Up",
-      "summary": "Alibaba released RynnBrain, an AI model specifically designed to power robots, joining Nvidia and Google in the 'physical AI' space. The model aims to bridge the gap between digital AI capabilities and real-world robotic control. This comes as major tech giants race to make AI models that can understand and interact with the physical world, not just process text and images.",
-      "url": "https://www.cnbc.com/2026/02/10/alibaba-ai-model-robotics-rynnbrain-china.html",
+      "id": "141",
+      "title": "Claude Code Resource Ecosystem Explodes — Hooks, Multi-Agent Monitoring, Custom Skills",
+      "summary": "A comprehensive resource list reveals the Claude Code ecosystem is rapidly maturing. Top community projects: claude-code-hooks-multi-agent-observability (real-time monitoring for Claude Code agents via hook events, 893 stars), Claude-Command-Suite (professional slash commands for structured dev workflows, 904 stars), and tweakcc (CLI tool to customize Claude Code styling, 810 stars). Claude Code's January 2026 update added SKILL.md support, session forking, cloud handoff, and --from-pr flag for reviewing PRs.",
+      "url": "https://www.scriptbyai.com/claude-code-resource-list/",
+      "category": "claude",
+      "source": "ScriptByAI / Developer Toolkit",
+      "date": "2026-02-16",
+      "relevance": "The hooks-multi-agent-observability tool could be useful for monitoring Clawdbot's sub-agent sessions — real-time visibility into what spawned agents are doing. SKILL.md support (which Clawdbot already uses) is becoming a standard pattern. The --from-pr flag is handy for quick code reviews on AVA repos. This ecosystem growing means more community tooling that plugs into your existing Claude Code workflow."
+    },
+    {
+      "id": "142",
+      "title": "SaaS Industry Pivots to 'AI Company' Branding — SaaStr Renames Itself",
+      "summary": "In a sign of the times, SaaStr — the largest SaaS community — has rebranded as 'SaaStr AI' to reflect AI's dominance in the software industry. NYT reports that software companies across the board are repositioning as 'AI companies,' with executives changing titles to 'Chief AI Officer.' The shift isn't just cosmetic: Deloitte's 2026 Software Industry Outlook identifies three major themes — intensifying competition, AI-first development models, and agentic cybersecurity.",
+      "url": "https://www.nytimes.com/2026/02/14/business/dealbook/software-companies-ai.html",
       "category": "ai",
-      "source": "CNBC",
-      "date": "2026-02-15",
-      "relevance": "Physical AI is where the industry is heading — models that interact with the real world, not just chat. For AVA Companion: as these models mature, the diabetes bear concept could evolve beyond a BLE display into something that actually understands and responds to a child's needs. Long-term thinking, but the foundation is being laid now."
+      "source": "New York Times / Deloitte",
+      "date": "2026-02-16",
+      "relevance": "Every software company calling themselves an 'AI company' is both a signal and noise. The real takeaway from the Deloitte report: AI-first development models are becoming standard, not optional. For AVA — positioning it as an AI-powered diabetes education platform (which it genuinely is, with the physiological simulation model) puts you in the right category. The market is pricing in AI as table stakes, so lean into it in your marketing."
     }
   ]
 }

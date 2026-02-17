@@ -1,85 +1,75 @@
 {
-  "lastUpdated": "2026-02-16T12:00:00Z",
+  "lastUpdated": "2026-02-17T12:00:00Z",
   "items": [
     {
-      "id": "135",
-      "title": "India AI Impact Summit 2026 Kicks Off — PM Modi Inaugurates Global AI Forum",
-      "summary": "India is hosting the AI Impact Summit 2026 (Feb 16-20) in New Delhi, bringing together world leaders, tech CEOs, and researchers to discuss governance, jobs, and public services shaped by AI. PM Modi inaugurated the AI Impact Expo, saying outcomes will 'help shape a future that is progressive, innovative, and opportunity-driven.' The summit is expected to produce policy frameworks around AI regulation, safety, and equitable access across developing nations.",
-      "url": "https://www.aljazeera.com/news/2026/2/16/india-hosts-ai-impact-summit-drawing-world-leaders-tech-giants",
-      "category": "ai",
-      "source": "Al Jazeera / Indian Express / Business Standard",
-      "date": "2026-02-16",
-      "relevance": "Major global AI governance event happening this week. Any regulatory frameworks that come out of this could affect how AI tools (including Claude, Clawdbot) operate internationally. India is the world's largest developer talent pool — policy decisions here shape AI adoption for billions. Worth watching for any announcements about AI in healthcare or education that could impact AVA's reach."
-    },
-    {
-      "id": "136",
-      "title": "AI Disruption Fears Hit Corporate America — Earnings Calls Mentions Double, Stocks Sell Off",
-      "summary": "Bloomberg analysis reveals AI disruption mentions in corporate earnings calls nearly doubled quarter-over-quarter, triggering selloffs in software and knowledge-work sectors despite strong overall earnings. Morgan Stanley flagged potential threats to the $1.5T US software credit space. Meanwhile, agentic AI models (Claude Opus 4.6, MiniMax M2.5) are enabling autonomous task execution at dramatically lower costs — enterprises report running continuous AI agents for ~$10K/year.",
-      "url": "https://aicost.org/blog/ai-today-news-2026-02-15",
-      "category": "ai",
-      "source": "AICost / Bloomberg / Morgan Stanley",
-      "date": "2026-02-16",
-      "relevance": "The $10K/year for continuous AI agents is the number to watch. That's what Clawdbot represents — an always-on agent handling your daily operations. The market panic around AI disruption in knowledge work validates the automation-first approach you're building into your contracting workflow. Software companies scrambling means opportunities for nimble builders who already have their AI tooling figured out."
-    },
-    {
-      "id": "137",
-      "title": "Anthropic Safety Researcher Resigns — AI Risk Concerns Growing at Major Labs",
-      "summary": "Mrinank Sharma, an AI safety researcher at Anthropic, resigned publicly, joining a growing list of departures from major AI labs citing concerns that capabilities are outpacing safety measures. Al Jazeera reports that prominent researchers from OpenAI, Anthropic, and Google have increasingly sounded alarms about AI-enabled crime, unintended autonomy, and insufficient governance. Internal safety teams at multiple labs are being restructured amid the tension between shipping fast and shipping safe.",
-      "url": "https://www.aljazeera.com/news/2026/2/15/why-are-experts-sounding-the-alarm-on-ai-risks",
-      "category": "ai",
-      "source": "Al Jazeera",
-      "date": "2026-02-16",
-      "relevance": "Anthropic is the company behind Claude (the AI you're using). Safety researcher departures are worth tracking because they signal internal tension about how fast to push capabilities vs. guardrails. For daily use this doesn't change anything, but it's the kind of industry context that matters if you're building products on top of these models long-term."
-    },
-    {
-      "id": "138",
-      "title": "ADA 2026 Standards of Care — Major Updates to Diabetes Tech Guidance",
-      "summary": "The American Diabetes Association published its 2026 Standards of Care with significant technology updates. Key changes: AID systems (like Omnipod 5) no longer require minimum C-peptide levels, islet autoantibodies, or duration of insulin therapy to initiate — expanding access for newly diagnosed patients. New guidance explicitly supports CGM and insulin delivery systems in schools and workplaces, ensuring children and adults have time to monitor and manage glucose safely.",
-      "url": "https://www.patientcareonline.com/view/ada-publishes-2026-standards-of-care-with-updates-to-sections-on-technology-obesity-cardiometabolic-disease-management",
+      "id": "143",
+      "title": "Omnipod 6 Coming — Expanding AID to Type 2 Diabetes",
+      "summary": "HCPLive published a deep dive on upcoming Omnipod technology upgrades. Omnipod 6 is being designed for both Type 1 and Type 2 diabetes, expanding automated insulin delivery to the massive population of insulin-requiring T2D patients who've had limited access to pump therapy. This is the biggest expansion of AID applicability since Omnipod 5 launched. Details on timeline and specific feature improvements are still emerging from Insulet.",
+      "url": "https://www.hcplive.com/view/diabetes-dialogue-upcoming-upgrades-for-omnipod-technology",
       "category": "diabetes",
-      "source": "Patient Care Online / ADA",
-      "date": "2026-02-16",
-      "relevance": "Directly relevant to both you and Kaislyn. The removal of initiation barriers for AID systems means faster access to pumps like Omnipod 5 for newly diagnosed T1D patients — no more waiting for lab results to qualify. The school guidance is huge: explicit ADA backing for CGM/pump use in schools gives parents like you stronger footing when advocating for Kaislyn's tech needs. This also validates AVA's educational mission — if kids are wearing CGMs in school, they need to understand them."
+      "source": "HCPLive",
+      "date": "2026-02-17",
+      "relevance": "You're on Omnipod 5 right now — this is your next upgrade path. Omnipod 6 expanding to T2D is also a massive market signal: the AID ecosystem is growing, which means more mainstream awareness and potentially better insurance coverage. For AVA, a bigger AID user base means a larger audience for diabetes education tools. Worth tracking the timeline closely."
     },
     {
-      "id": "139",
-      "title": "Sava Technologies Reports Clinical Results for Microsensor-Based CGM",
-      "summary": "Sava Technologies published early clinical results for a novel microsensor-based continuous glucose monitor. The study included 46 participants with T1D and insulin-dependent T2D, demonstrating reliable glucose measurements over a 10-day wear period. Separately, Washington State University developed a wearable biosensor using microneedles and signal amplification that significantly reduces skin discomfort and irritation compared to traditional CGM formats — a provisional patent has been filed.",
-      "url": "https://www.azosensors.com/article.aspx?ArticleID=3282",
-      "category": "diabetes",
-      "source": "AZoSensors / Sava Technologies / WSU",
-      "date": "2026-02-16",
-      "relevance": "Next-gen CGM tech in the pipeline. Microsensor-based CGMs could eventually mean smaller, less noticeable sensors — especially meaningful for kids like Kaislyn who wear them 24/7. The WSU microneedle approach reducing skin irritation is a big deal; sensor-site irritation is one of the most common complaints from CGM users. More comfortable sensors = better adherence = better outcomes. Also relevant for AVA Companion — as CGM form factors shrink, integration possibilities expand."
-    },
-    {
-      "id": "140",
-      "title": "GitHub Octoverse: TypeScript is #1, Python Surges, AI Reshaping Development",
-      "summary": "GitHub's latest Octoverse report confirms TypeScript overtook Python and JavaScript as the most-used language on GitHub (since Aug 2025), adding 1M+ contributors in 2025. Python grew 48.78% YoY (~850K new contributors), driven by AI/ML production workloads. Key insight: strongly typed languages are becoming the default because they catch AI-generated code errors earlier — type mismatches and broken contracts are the most common failure mode with AI-assisted coding.",
-      "url": "https://github.blog/news-insights/octoverse/what-the-fastest-growing-tools-reveal-about-how-software-is-being-built/",
-      "category": "productivity",
-      "source": "GitHub Blog",
-      "date": "2026-02-16",
-      "relevance": "Your Command Center and Clawdbot extensions run on TypeScript — you're riding the #1 language trend. The insight about typed languages catching AI-generated code errors is directly applicable: when Claude Code writes TypeScript for your projects, the type system acts as a safety net. Python's growth driven by AI production work also matters for any future AVA backend services or data processing."
-    },
-    {
-      "id": "141",
-      "title": "Claude Code Resource Ecosystem Explodes — Hooks, Multi-Agent Monitoring, Custom Skills",
-      "summary": "A comprehensive resource list reveals the Claude Code ecosystem is rapidly maturing. Top community projects: claude-code-hooks-multi-agent-observability (real-time monitoring for Claude Code agents via hook events, 893 stars), Claude-Command-Suite (professional slash commands for structured dev workflows, 904 stars), and tweakcc (CLI tool to customize Claude Code styling, 810 stars). Claude Code's January 2026 update added SKILL.md support, session forking, cloud handoff, and --from-pr flag for reviewing PRs.",
-      "url": "https://www.scriptbyai.com/claude-code-resource-list/",
+      "id": "144",
+      "title": "Claude Code UI Controversy — Anthropic Hides File Names, Devs Push Back Hard",
+      "summary": "Anthropic updated Claude Code (v2.1.20+) to collapse progress output, hiding which files are being read/written behind a 'Read 3 files (ctrl+o to expand)' summary. Developers revolted on GitHub and Hacker News, arguing they need file visibility for security, catching wrong-context mistakes, and controlling token spend. Boris Cherny (Claude Code lead) initially defended it as 'reducing noise' but eventually repurposed verbose mode to show file paths as a compromise. The debate continues — many feel the compromise still removes too much info.",
+      "url": "https://www.theregister.com/2026/02/16/anthropic_claude_ai_edits",
       "category": "claude",
-      "source": "ScriptByAI / Developer Toolkit",
-      "date": "2026-02-16",
-      "relevance": "The hooks-multi-agent-observability tool could be useful for monitoring Clawdbot's sub-agent sessions — real-time visibility into what spawned agents are doing. SKILL.md support (which Clawdbot already uses) is becoming a standard pattern. The --from-pr flag is handy for quick code reviews on AVA repos. This ecosystem growing means more community tooling that plugs into your existing Claude Code workflow."
+      "source": "The Register / GitHub",
+      "date": "2026-02-17",
+      "relevance": "Directly affects your daily workflow with Claude Code. If you update to the latest version, file read/write names will be hidden by default. Enable verbose mode in settings to get them back. The broader signal: Anthropic is optimizing Claude Code for longer agentic runs where output volume gets overwhelming — but power users want the details. Keep verbose mode on."
     },
     {
-      "id": "142",
-      "title": "SaaS Industry Pivots to 'AI Company' Branding — SaaStr Renames Itself",
-      "summary": "In a sign of the times, SaaStr — the largest SaaS community — has rebranded as 'SaaStr AI' to reflect AI's dominance in the software industry. NYT reports that software companies across the board are repositioning as 'AI companies,' with executives changing titles to 'Chief AI Officer.' The shift isn't just cosmetic: Deloitte's 2026 Software Industry Outlook identifies three major themes — intensifying competition, AI-first development models, and agentic cybersecurity.",
-      "url": "https://www.nytimes.com/2026/02/14/business/dealbook/software-companies-ai.html",
+      "id": "145",
+      "title": "Anthropic vs. The Pentagon — $200M Contract at Risk Over Military AI Usage Limits",
+      "summary": "The Pentagon is pressuring AI companies (Anthropic, OpenAI, Google, xAI) to allow military use of their AI for 'all lawful purposes.' Anthropic is the most resistant, drawing a hard line against fully autonomous weapons and mass domestic surveillance. The Pentagon is threatening to pull its $200M contract. One unnamed company has already agreed to the terms. Claude was reportedly used in the U.S. military operation to capture Venezuela's Maduro, adding fuel to the debate.",
+      "url": "https://techcrunch.com/2026/02/15/anthropic-and-the-pentagon-are-reportedly-arguing-over-claude-usage/",
       "category": "ai",
-      "source": "New York Times / Deloitte",
-      "date": "2026-02-16",
-      "relevance": "Every software company calling themselves an 'AI company' is both a signal and noise. The real takeaway from the Deloitte report: AI-first development models are becoming standard, not optional. For AVA — positioning it as an AI-powered diabetes education platform (which it genuinely is, with the physiological simulation model) puts you in the right category. The market is pricing in AI as table stakes, so lean into it in your marketing."
+      "source": "TechCrunch / Axios / WSJ",
+      "date": "2026-02-17",
+      "relevance": "Anthropic makes the AI you use daily. Their willingness to push back on military usage — even at the cost of $200M — says something about the company's values and long-term direction. From a practical standpoint, Anthropic walking away from defense money could mean more pressure to grow commercial revenue, which could affect pricing or features for developers like you."
+    },
+    {
+      "id": "146",
+      "title": "China's AI Video & Robotics Wave — Seedance 2.0, Kling 3.0, RynnBrain",
+      "summary": "Chinese tech giants dropped major AI models this week. ByteDance released Seedance 2.0 (realistic AI video generation from text/image prompts), Kuaishou launched Kling 3.0 (competing directly with OpenAI's Sora), and Alibaba's DAMO Academy unveiled RynnBrain — a robotics AI model that gives robots spatial and temporal awareness to perform complex physical tasks. Google DeepMind's CEO said Chinese models are now just 'months' behind Western rivals.",
+      "url": "https://www.cnbc.com/2026/02/14/new-china-ai-models-alibaba-bytedance-seedance-kuaishou-kling.html",
+      "category": "ai",
+      "source": "CNBC",
+      "date": "2026-02-17",
+      "relevance": "The video generation models (Seedance 2.0, Kling 3.0) could be useful for creating AVA marketing content — realistic AI-generated demo videos without needing to hire videographers. RynnBrain's robotics approach is more long-term interesting. The competitive pressure from China keeps pushing all AI labs to ship faster, which benefits end users."
+    },
+    {
+      "id": "147",
+      "title": "AI Dev Tool Power Rankings — Claude Code Holds Strong, Antigravity Disrupts",
+      "summary": "LogRocket's February 2026 AI dev tool rankings compared 12 tools and 15 models. Windsurf (formerly Codeium) took #1 with its Cascade AI agent and live preview. Antigravity (free, multi-agent orchestration with built-in Chrome automation) landed #2. Claude Code maintained a top position for its deep codebase understanding and agentic workflow capabilities. The rankings now track Claude Opus 4.6, GPT-5.2, Gemini 3 Pro, and newcomer Kimi K2.5 among models.",
+      "url": "https://blog.logrocket.com/ai-dev-tool-power-rankings",
+      "category": "productivity",
+      "source": "LogRocket Blog",
+      "date": "2026-02-17",
+      "relevance": "Good benchmark for where Claude Code sits vs. competition. Antigravity is the interesting newcomer — free with multi-agent orchestration and browser automation (similar to what Clawdbot does). Windsurf's Cascade agent is worth watching. But for your workflow (CLI-based, deep codebase work, sub-agent spawning), Claude Code + Clawdbot is still the most flexible setup."
+    },
+    {
+      "id": "148",
+      "title": "Medtronic Simplera CGM Approved + Abbott Partnership Expands AID Access",
+      "summary": "FDA approved Medtronic's Simplera CGM — a smaller, tape-free, simplified-insertion glucose monitor. Simultaneously, Medtronic announced a global partnership with Abbott: Abbott will provide its advanced CGM platform exclusively integrated into Medtronic's insulin delivery and Smart MDI systems. This means Medtronic pumps will work with both Simplera and Abbott-based CGMs, giving users more sensor options within one ecosystem.",
+      "url": "https://www.pharmexec.com/view/fda-approves-medtronic-simplera-continuous-glucose-monitor-announces-partnership-abbott",
+      "category": "diabetes",
+      "source": "PharmExec / PR Newswire",
+      "date": "2026-02-17",
+      "relevance": "The Medtronic-Abbott partnership is a big deal for the CGM landscape. More sensor options = more competition = potentially lower costs. The tape-free design on Simplera addresses one of the biggest user complaints (skin irritation from overtape). Kaislyn is on Tandem + Dexcom so this doesn't directly affect her setup, but it signals the whole industry is racing to make CGMs smaller and more comfortable — which is great for all T1D kids."
+    },
+    {
+      "id": "149",
+      "title": "OpenAI Launches GPT-5.3-Codex-Spark on Cerebras Hardware — Latency-First AI Coding",
+      "summary": "OpenAI partnered with Cerebras to run a new GPT-5.3-Codex-Spark model on Cerebras' Wafer Scale Engine 3, a purpose-built AI accelerator optimized for ultra-low latency inference. The model runs in the same production stack as other OpenAI models but with a dedicated fast-inference tier. The focus is on discovering what near-instant AI coding responses enable — new interaction patterns and use cases that aren't possible with standard latency.",
+      "url": "https://releasebot.io/updates/openai",
+      "category": "productivity",
+      "source": "Releasebot / OpenAI",
+      "date": "2026-02-17",
+      "relevance": "OpenAI is betting that dramatically faster inference changes how developers interact with AI coding tools — not just faster responses, but fundamentally different workflows when latency drops below human reaction time. This competitive pressure benefits you regardless of which tool you use: Anthropic will need to match on speed. For now, Claude Code's depth still beats raw speed for complex projects."
     }
   ]
 }

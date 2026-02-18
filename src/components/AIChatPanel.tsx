@@ -365,8 +365,21 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
   }, [getSpeechRecognition, stopListening, startWhisperListening]);
 
   // ── TTS (Deepgram with browser fallback) ────────────────────────────────
+  // iOS Safari requires Audio element to be created/played during user gesture.
+  // We create a persistent audio element on first voice mode toggle and reuse it.
   const dgAudioRef = useRef<HTMLAudioElement | null>(null);
   const TTS_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/tts';
+
+  const ensureAudioElement = useCallback(() => {
+    if (!dgAudioRef.current) {
+      const audio = new Audio();
+      // Play silent audio to unlock iOS audio context during user gesture
+      audio.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAABhgC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7//////////////////////////////////////////////////////////////////8AAAAATGF2YzYwLjMxAAAAAAAAAAAAAAAAJAAAAAAAAAABhkn/aEkAAAAAAAAAAAAAAAAA//tQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//tQZB8P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+      audio.play().then(() => { audio.pause(); audio.currentTime = 0; }).catch(() => {});
+      dgAudioRef.current = audio;
+    }
+    return dgAudioRef.current;
+  }, []);
 
   const speakText = useCallback((text: string) => {
     if (!ttsEnabledRef.current || !voiceModeRef.current) return;
@@ -409,11 +422,28 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
       return res.blob();
     }).then(blob => {
       const url = URL.createObjectURL(blob);
-      const audio = new Audio(url);
+      const audio = dgAudioRef.current || new Audio();
       dgAudioRef.current = audio;
-      audio.onended = () => { URL.revokeObjectURL(url); dgAudioRef.current = null; finishSpeech(); };
-      audio.onerror = () => { URL.revokeObjectURL(url); dgAudioRef.current = null; finishSpeech(); };
-      audio.play().catch(() => finishSpeech());
+      // Clean up previous object URL if any
+      audio.pause();
+      audio.onended = () => { URL.revokeObjectURL(url); finishSpeech(); };
+      audio.onerror = () => { URL.revokeObjectURL(url); finishSpeech(); };
+      audio.src = url;
+      audio.play().catch(() => {
+        URL.revokeObjectURL(url);
+        // Fallback to browser TTS if autoplay blocked
+        if (window.speechSynthesis) {
+          window.speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(speechText);
+          utterance.lang = 'en-US';
+          utterance.rate = 1.05;
+          utterance.onend = () => finishSpeech();
+          utterance.onerror = () => finishSpeech();
+          window.speechSynthesis.speak(utterance);
+        } else {
+          finishSpeech();
+        }
+      });
     }).catch(() => {
       // Fallback to browser TTS
       if (window.speechSynthesis) {
@@ -435,13 +465,16 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
     const next = !voiceMode;
     setVoiceMode(next);
     if (next) {
+      // Unlock iOS audio on user gesture
+      ensureAudioElement();
       startListening();
     } else {
       stopListening();
       window.speechSynthesis?.cancel();
+      if (dgAudioRef.current) { dgAudioRef.current.pause(); }
       setIsSpeaking(false);
     }
-  }, [voiceMode, startListening, stopListening]);
+  }, [voiceMode, startListening, stopListening, ensureAudioElement]);
 
   const toggleTts = useCallback(() => {
     const next = !ttsEnabled;

@@ -347,6 +347,16 @@ export function KodaVoice() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedVoice, voiceRate]);
 
+  // Unlock iOS audio on user gesture — call this from mic button tap
+  const ensureAudioElement = useCallback(() => {
+    if (!dgAudioRef.current) {
+      const audio = new Audio();
+      audio.src = 'data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE2LjEwMAAAAAAAAAAAAAAA//tQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAABhgC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7//////////////////////////////////////////////////////////////////8AAAAATGF2YzYwLjMxAAAAAAAAAAAAAAAAJAAAAAAAAAABhkn/aEkAAAAAAAAAAAAAAAAA//tQZAAP8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAETEFNRTMuMTAwVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//tQZB8P8AAAaQAAAAgAAA0gAAABAAABpAAAACAAADSAAAAEVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+      audio.play().then(() => { audio.pause(); audio.currentTime = 0; }).catch(() => {});
+      dgAudioRef.current = audio;
+    }
+  }, []);
+
   const speakWithDeepgram = useCallback(async (text: string) => {
     const speechText = text.length > 2000
       ? text.substring(0, 2000) + '. Check the chat for the full response.'
@@ -363,19 +373,19 @@ export function KodaVoice() {
 
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
-      const audio = new Audio(url);
+      const audio = dgAudioRef.current || new Audio();
       dgAudioRef.current = audio;
 
+      audio.pause();
       audio.onended = () => {
         URL.revokeObjectURL(url);
-        dgAudioRef.current = null;
         finishSpeaking();
       };
       audio.onerror = () => {
         URL.revokeObjectURL(url);
-        dgAudioRef.current = null;
         finishSpeaking();
       };
+      audio.src = url;
 
       await audio.play();
     } catch {
@@ -934,6 +944,9 @@ export function KodaVoice() {
     // Can't interrupt thinking
     if (voiceState === 'thinking') return;
 
+    // Unlock iOS audio on first tap
+    ensureAudioElement();
+
     if (mode === 'handsfree') {
       if (voiceState === 'listening') {
         // If there's pending text, send it
@@ -959,7 +972,7 @@ export function KodaVoice() {
         startPTTRecording();
       }
     }
-  }, [voiceState, mode, startHandsfreeListening, stopWebSpeechListening, cleanupWhisperFallback, sendToAPI, startPTTRecording, stopPTTRecording]);
+  }, [voiceState, mode, startHandsfreeListening, stopWebSpeechListening, cleanupWhisperFallback, sendToAPI, startPTTRecording, stopPTTRecording, ensureAudioElement]);
 
   // ── Mode switch ───────────────────────────────────────────────────────
   const switchMode = useCallback((newMode: VoiceMode) => {

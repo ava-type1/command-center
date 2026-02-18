@@ -1,9 +1,1111 @@
 {
   "projects": [
     {
+      "id": "command-center",
+      "name": "Command Center",
+      "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
+      "status": "active",
+      "progress": 85,
+      "color": "#00ff88",
+      "lastUpdated": "2026-02-18T04:30:00Z",
+      "lastWorkedOn": "Projects.json refreshed with latest work. Grid card layout with drag-to-reorder added. UI modernized.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Implement GitHub-based data sync",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Add embedded Claude chat interface",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Deploy Telegram relay worker",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Real-time updates when AI makes changes",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Weather widget",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Quick Links panel",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Project progress bars",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Auto-update dashboard after every conversation",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Grid card layout with drag-to-reorder",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-18",
+          "summary": "Overnight build: Updated projects.json with all recent work (Tiwahe Times v2, FieldBook, Koda Voice v2). Redesigned dashboard to grid card layout with drag-to-reorder capability. Compact cards show project name, status, progress, last updated. Click to expand."
+        },
+        {
+          "date": "2026-01-27",
+          "summary": "Added project progress bars with completion percentages. Weather widget (Fort White FL). Quick Links panel."
+        },
+        {
+          "date": "2026-01-26",
+          "summary": "Built Command Center dashboard with dark cyberpunk aesthetic. Added Claude chat panel with Telegram relay."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/command-center",
+      "liveUrl": "https://command-center-2nk.pages.dev"
+    },
+    {
+      "id": "koda-voice",
+      "name": "Koda Voice",
+      "description": "Hands-free voice conversation with Koda AI. Real-time talk-and-respond via browser — no typing needed. Built with Pipecat (open-source voice AI framework) + SmallWebRTCTransport (free P2P) + Deepgram ($200 free credit STT) + Claude. Goal: phone-call-like experience from any device.",
+      "status": "active",
+      "progress": 35,
+      "color": "#7c3aed",
+      "lastUpdated": "2026-02-18T04:30:00Z",
+      "lastWorkedOn": "V2 Pipecat pipeline built: Deepgram STT → Claude (Anthropic) → Deepgram TTS over SmallWebRTCTransport. Server-side bot ready, Deepgram signup pending.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "V1 prototype deployed (record → transcribe → respond → TTS)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Cloudflare Whisper transcription worker deployed",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Research completed: Pipecat + SmallWebRTCTransport is the right approach",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Sign up for Deepgram free tier ($200 credit, no CC, no expiry)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Install Pipecat on Contabo VPS (Python)",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Build Pipecat pipeline: Deepgram STT → Claude LLM → browser TTS",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Set up SmallWebRTCTransport (free P2P, no Daily.co needed)",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Build web client (connect button, auto-listen, interruption support)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Deploy and test end-to-end voice conversation",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Add to home screen as PWA for one-tap access",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Test with AirPods for hands-free field use",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-18",
+          "summary": "V2 Pipecat pipeline built: Python bot using Pipecat framework with Deepgram STT + Anthropic Claude LLM + Deepgram TTS over SmallWebRTCTransport (free P2P WebRTC). Koda personality prompt configured. Virtual env set up on Contabo VPS. Needs Deepgram API key to go live."
+        },
+        {
+          "date": "2026-02-17",
+          "summary": "V1 prototype: Built browser-based voice chat (koda-voice.pages.dev). Uses MediaRecorder → Cloudflare Workers AI Whisper → Clawdbot chat API → browser TTS. Works on desktop but iOS Safari has issues with Web Speech API (service-not-allowed) and audio format (MP4 vs WAV). Switched to raw PCM capture + WAV encoding. Partially working but not reliable enough for daily use."
+        },
+        {
+          "date": "2026-02-17",
+          "summary": "Research phase: Investigated proper solutions. Pipecat (open-source voice AI framework by Daily.co) + SmallWebRTCTransport (free P2P WebRTC, no infrastructure cost) is the right approach. Uses WebRTC like Zoom — handles streaming audio, echo cancellation, interruptions natively. Deepgram offers $200 free credit (no expiry, no CC) for STT. Total ongoing cost after credits: ~$0.46/hr. Vapi evaluated but rejected ($0.13-0.31/min = another Twilio situation)."
+        }
+      ],
+      "liveUrl": "https://koda-voice.pages.dev",
+      "costBreakdown": {
+        "pipecat": "Free (open source, self-hosted on Contabo)",
+        "webrtcTransport": "Free (SmallWebRTCTransport, P2P, no server needed)",
+        "stt": "Deepgram — $200 free credit (~26,000 min), then $0.0077/min",
+        "tts": "Browser built-in (free) or Deepgram TTS (included in credit)",
+        "llm": "Claude via Clawdbot (already paid)",
+        "hosting": "Contabo VPS (already paid)",
+        "totalNow": "$0",
+        "totalAfterCredits": "~$0.46/hr (~$2.30/mo for 10 min/day)"
+      }
+    },
+    {
+      "id": "tiwahe-times",
+      "name": "The Tiwahe Times",
+      "description": "Hyperlocal digital newspaper for Fort White, FL. AI-powered content generation. Dark red/black theme. Sections: weather, local news, community events, sports (MaxPreps integration), county government, business spotlight. Fort White vs Lake City locality split. Revenue via local business ads ($25-150/mo).",
+      "status": "active",
+      "progress": 75,
+      "color": "#1e3a5f",
+      "lastUpdated": "2026-02-18T01:00:00Z",
+      "lastWorkedOn": "Major v2 redesign complete: dark red/black/white theme, hero cards, section pages, MaxPreps sports with box scores, Fort White vs Lake City locality split, always-visible navigation tabs, alerts banner. Ready for Facebook group launch.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Initial site built and deployed",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "First business spotlight (Santa Fe Site Prep)",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "V2 redesign — dark theme, hero cards, section pages",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "MaxPreps sports integration with box scores",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Fort White vs Lake City locality split",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Always-visible navigation tabs (no hamburger menu)",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Alerts banner with source links",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Daily cron job with locality tagging",
+          "done": true
+        },
+        {
+          "id": "9",
+          "text": "Share in Fort White Facebook groups for traction",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Add more business spotlights",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Build ad placement system ($25-150/mo tiers)",
+          "done": false
+        },
+        {
+          "id": "12",
+          "text": "Expand to Lake City edition",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-18",
+          "summary": "MAJOR V2 REDESIGN: Dark red/black/white theme carried throughout. Hero cards on front page. Section pages (Sports, News, Government, Events, Business). MaxPreps integration with box scores and season records. Fort White vs Lake City news split with locality tagging. Always-visible tab navigation (no hamburger menu — better for older audience). Alerts banner with full descriptions and source links. Daily cron updated with locality rules. Ready for Facebook group launch."
+        },
+        {
+          "date": "2026-02-14",
+          "summary": "Built and deployed The Tiwahe Times — hyperlocal digital newspaper for Fort White, FL. Named after Fort White HS motto #TIWAHE (Lakota for 'family'). Sections: weather, local news, community events, sports, county govt, business spotlight. First spotlight: Santa Fe Site Prep LLC (Brad Taylor). Business model: free at first, then $25-150/mo ad placements. Marketing flywheel: share in FB groups → town reads → businesses notice → KodaAI leads."
+        }
+      ],
+      "liveUrl": "https://tiwahe-times.pages.dev",
+      "repoUrl": "https://github.com/ava-type1/tiwahe-times"
+    },
+    {
+      "id": "fieldbook",
+      "name": "FieldBook",
+      "description": "Mobile-first field contact book for contractors. Quick-access contact cards with one-tap call/text, organized by job site. Built as PWA for instant access in the field.",
+      "status": "completed",
+      "progress": 100,
+      "color": "#10b981",
+      "lastUpdated": "2026-02-18T00:00:00Z",
+      "lastWorkedOn": "Live and confirmed working by Kam. Text + Call buttons added. Deployed to Cloudflare Pages as PWA.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Contact card UI with call/text buttons",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Job site organization",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "PWA manifest and service worker",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Deploy to Cloudflare Pages",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Kam confirmed working in field",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-17",
+          "summary": "Built and deployed FieldBook — mobile-first field contact book PWA. Quick-access contact cards with one-tap call/text buttons. Organized by job site. Deployed to Cloudflare Pages (fieldbook-bpi.pages.dev). Kam tested and confirmed working."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/fieldbook",
+      "liveUrl": "https://fieldbook-bpi.pages.dev"
+    },
+    {
+      "id": "fiverr-freelance",
+      "name": "Fiverr Freelance",
+      "description": "Website building gig on Fiverr — AI-assisted sites delivered in minutes. 3-tier pricing: Basic $75, Standard $150, Premium $250. Portfolio: Total Transformation, Karen's Country Cuts, AVA Type 1.",
+      "status": "active",
+      "progress": 90,
+      "color": "#1dbf73",
+      "lastUpdated": "2026-02-16T02:48:00Z",
+      "lastWorkedOn": "GIG LIVE! W-9 cleared Feb 15, gig published and accepting orders. $75/$150/$250 tiers.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "W-9 verification (1-3 business days)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Publish gig once W-9 clears",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Record gig video (30-60 sec site scroll)",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Set up Fiverr profile (bio, photo, skills)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Post in Facebook groups with portfolio links",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Get 2-3 friends/family to place first orders for reviews",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Set up Upwork profile (same gigs)",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Gig overview completed",
+          "done": true
+        },
+        {
+          "id": "9",
+          "text": "Pricing tiers set (Basic/Standard/Premium)",
+          "done": true
+        },
+        {
+          "id": "10",
+          "text": "Gig description written",
+          "done": true
+        },
+        {
+          "id": "11",
+          "text": "Requirements questions configured",
+          "done": true
+        },
+        {
+          "id": "12",
+          "text": "Gallery images selected (3 portfolio sites)",
+          "done": true
+        },
+        {
+          "id": "13",
+          "text": "Gig extras configured (add-on services)",
+          "done": true
+        },
+        {
+          "id": "14",
+          "text": "Extra fast delivery enabled",
+          "done": true
+        },
+        {
+          "id": "15",
+          "text": "W-9 tax form submitted",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-15",
+          "summary": "GIG IS LIVE! W-9 verification completed ~9:44 PM ET. Gig published ~9:48 PM ET and now accepting orders. Was blocked since Feb 13 on W-9 — now fully operational."
+        },
+        {
+          "date": "2026-02-13",
+          "summary": "Full Fiverr gig setup session. Created website building gig with 3 tiers: Basic ($75, 1-page, 2-day), Standard ($150, 3-page, 3-day), Premium ($250, 5-page, 4-day). Added extras: additional page ($25), revision ($10), content upload ($15), e-commerce ($75). Extra fast delivery enabled. Gallery: Total Transformation, Karen's Country Cuts, AVA Type 1. Requirements questions set. W-9 submitted — waiting verification before publish."
+        }
+      ]
+    },
+    {
+      "id": "vhs-vault",
+      "name": "VHS Vault",
+      "description": "Nostalgic iPhone app — virtual VHS tape collection. Upload videos, each gets a VHS tape with sharpie-on-white-label. Browse your shelf, pull a tape, watch the video. Targets millennials/Gen X who grew up with VCR culture.",
+      "status": "active",
+      "progress": 85,
+      "color": "#8b4513",
+      "lastUpdated": "2026-02-16T02:30:00Z",
+      "lastWorkedOn": "Full app built in one session — 13 Swift files, ~2,300 lines. All visuals rendered in code (no external assets). Permanent Marker font for sharpie style.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Core app built (13 Swift files, ~2,300 lines)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Shelf browsing UI with wooden bookcase",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Tape pull animation",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "VHS static intro effect",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Video playback with CRT scan lines",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Spinning spool cassette view",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Add tapes from Photos library",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Add sound effects (freesound.org sources documented)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "App Store submission",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Monetization: free (5 tapes) → $4.99 unlimited",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-15",
+          "summary": "NIGHTLY BUILD: Full VHS Vault app built from scratch. 13 Swift files, ~2,300 lines SwiftUI. All visuals code-rendered (no image assets). Permanent Marker font bundled for sharpie-on-tape aesthetic. Features: oak bookcase shelf, tape pull animation, VHS static intro, CRT scan line playback, spinning spool cassette view, add tapes from Photos. Product vision: NOT about digitizing old tapes — it's a curated video library for your best/most important videos with nostalgic VHS aesthetic. Freemium: 5 free tapes, $4.99 unlimited."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/vhs-vault-ios"
+    },
+    {
+      "id": "kodaai",
+      "name": "KodaAI",
+      "description": "Consumer GUI for OpenClaw — the 'grandma-proof' managed AI assistant platform. Each client gets their own isolated OpenClaw sandbox on Cloudflare, accessed via SMS. Sign up, answer 5 questions, get a personal AI assistant on your phone. No tech knowledge needed.",
+      "status": "active",
+      "progress": 30,
+      "color": "#06b6d4",
+      "lastUpdated": "2026-02-14T16:30:00Z",
+      "lastWorkedOn": "MAJOR PIVOT: Repositioned as consumer GUI for OpenClaw. Deep competitive research completed. 1,091-line platform spec written. Project scaffolded (1,868 lines TypeScript). Multi-tenant Moltworker architecture designed.",
+      "todos": [
+        {
+          "id": "kam-1",
+          "text": "⚡ KAM: Sign up for Twilio account (twilio.com) + buy a local FL phone number",
+          "done": false
+        },
+        {
+          "id": "kam-2",
+          "text": "⚡ KAM: Validate demand — ask 5 local business owners if they'd pay $99/mo for an AI assistant they text",
+          "done": false
+        },
+        {
+          "id": "kam-3",
+          "text": "⚡ KAM: Talk to Brad's brother-in-law about being beta tester #1",
+          "done": false
+        },
+        {
+          "id": "kam-4",
+          "text": "⚡ KAM: Set up Stripe account for KodaAI billing",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Deep competitive research completed (nobody has built consumer OpenClaw GUI yet)",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Platform spec written (PLATFORM-SPEC.md — 1,091 lines)",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Project scaffolded (kodaai-platform/ — 1,868 lines TypeScript)",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Multi-tenant architecture designed (isolated Cloudflare Sandboxes per client)",
+          "done": true
+        },
+        {
+          "id": "9",
+          "text": "Industry templates created (contractor, salon, restaurant, retail, professional services)",
+          "done": true
+        },
+        {
+          "id": "10",
+          "text": "D1 database schema designed (clients, sandboxes, billing, audit_log)",
+          "done": true
+        },
+        {
+          "id": "11",
+          "text": "Twilio SMS bridge code written (inbound/outbound routing)",
+          "done": true
+        },
+        {
+          "id": "12",
+          "text": "Stripe webhook handler code written",
+          "done": true
+        },
+        {
+          "id": "13",
+          "text": "Wire up Twilio credentials + test SMS routing end-to-end",
+          "done": false
+        },
+        {
+          "id": "14",
+          "text": "Wire up Stripe credentials + test payment → provisioning flow",
+          "done": false
+        },
+        {
+          "id": "15",
+          "text": "Build signup frontend (5-question onboarding wizard)",
+          "done": false
+        },
+        {
+          "id": "16",
+          "text": "Deploy provisioning Worker to Cloudflare",
+          "done": false
+        },
+        {
+          "id": "17",
+          "text": "Test full flow: signup → pay → sandbox spins up → SMS works",
+          "done": false
+        },
+        {
+          "id": "18",
+          "text": "Build simple client dashboard (conversation history, settings)",
+          "done": false
+        },
+        {
+          "id": "19",
+          "text": "Build admin dashboard (manage all client instances)",
+          "done": false
+        },
+        {
+          "id": "20",
+          "text": "First beta client live and working",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-14",
+          "summary": "MAJOR PIVOT: Heard on Moonshots podcast (Peter Diamandis) that whoever perfects the consumer GUI for OpenClaw will capture massive value. Deep research confirmed: nobody has built it yet. Cloud providers only solving hosting, not usability. Completed: competitive landscape analysis, 1,091-line platform spec (PLATFORM-SPEC.md), project scaffold with 1,868 lines TypeScript (provisioning, Twilio SMS, Stripe billing, admin API, industry templates). Architecture: each client gets isolated Cloudflare Sandbox (Moltworker), accessed via SMS. Cost per client: $35-65/mo. Revenue: $99-349/mo."
+        },
+        {
+          "date": "2026-02-13",
+          "summary": "Landing page deployed to kodaai.kameronmartinllc.workers.dev. 5-step signup wizard. Moltworker architecture chosen for multi-tenant. Brother-in-law identified as first beta."
+        },
+        {
+          "date": "2026-02-11",
+          "summary": "Built Cloudflare Worker (calendar API), client dashboard, ElevenLabs agent template. Salon config for Karen beta."
+        },
+        {
+          "date": "2026-02-10",
+          "summary": "Concept born. Pricing tiers defined. Client dashboard MVP built."
+        }
+      ],
+      "repoUrl": null,
+      "pricing": {
+        "starter": "$99/mo — AI assistant via SMS, email monitoring, scheduling, auto-responses",
+        "pro": "$199/mo — + calendar integration, Google Maps, client dashboard",
+        "business": "$349/mo — + AI phone answering, full automation, custom workflows",
+        "costPerClient": "$35-65/mo (Cloudflare Sandbox + Claude API + Twilio)",
+        "profitPerClient": "$34-284/mo depending on tier"
+      }
+    },
+    {
+      "id": "instantsite",
+      "name": "InstantSite",
+      "description": "Micro-SaaS auto website generator — business owners fill a form, get a professional live website in 60 seconds. Preview-before-payment flow, Stripe billing, cross-promo ads on free tier. Built on Cloudflare Workers.",
+      "status": "active",
+      "progress": 45,
+      "color": "#ff6b35",
+      "lastUpdated": "2026-02-13T16:00:00Z",
+      "lastWorkedOn": "Deployed with Stripe integration, preview-before-payment flow, cross-promo ads on free sites, KV-based image serving.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Build landing page with pricing tiers",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Build multi-step business info form",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Build site generator engine (Cloudflare Worker)",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Create business site templates (handyman, salon, restaurant, contractor)",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Deploy to Cloudflare Workers + Pages",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Add Stripe payment integration",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Add image upload (R2 or KV)",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "Add Google Maps embed (Pro tier)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Add booking calendar (Business tier)",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Add custom domain support (Business tier)",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "List on Product Hunt",
+          "done": false
+        },
+        {
+          "id": "12",
+          "text": "Post in Facebook groups + Reddit",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-13",
+          "summary": "Concept born from Fiverr gig discussion. If you can build a site in 10 min manually, automate it. Architecture: Cloudflare Worker receives form data, generates site from templates, serves dynamically."
+        },
+        {
+          "date": "2026-02-13",
+          "summary": "MVP deployed: preview-before-payment flow (user sees full site before committing), Stripe integration (checkout + webhooks + subscription lifecycle), cross-promo ads on free tier (rotate KodaAI, GentlyTold, upgrade CTAs), KV-based image serving (R2 ready when enabled). Tiers: Free (with banner), Pro $29/mo, Lifetime $199. Live at instant-site-engine.kameronmartinllc.workers.dev"
+        }
+      ],
+      "liveUrl": "https://instant-site-engine.kameronmartinllc.workers.dev"
+    },
+    {
+      "id": "crewclock",
+      "name": "CrewClock",
+      "description": "GPS time tracking for contractor crews — trackers in trucks auto clock in/out via geofence. Zero employee effort. Traccar self-hosted + cheap GPS trackers.",
+      "status": "idea",
+      "progress": 15,
+      "color": "#f97316",
+      "lastUpdated": "2026-02-13T16:00:00Z",
+      "lastWorkedOn": "Researched architecture: Traccar (open-source GPS server) + Bouncie trackers ($67, $8/mo) for beta, cheap Concox/Sinotrack ($15, $3-5/mo SIM) for scale. Brad = first customer.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Set up Traccar server (self-hosted)",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Order Bouncie tracker for beta testing with Brad",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Build geofence auto clock-in/out logic",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Build crew dashboard (attendance, hours, job sites)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Test with Brad's crew",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Research completed (architecture, pricing, competitors)",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-13",
+          "summary": "Researched and designed. Target: contractors with crews (Brad = first customer). GPS tracker in each truck → auto clock in/out via geofence. Pricing: Starter $39/mo (5 trucks), Crew $79/mo (15), Company $149/mo (50). Brad's cost ~$129/mo vs Samsara $225-360/mo. Key insight: employees lie about hours, GPS verification solves it. Cross-sells into KodaAI for contractor tier."
+        }
+      ]
+    },
+    {
+      "id": "twilio-sms",
+      "name": "Koda SMS (Twilio)",
+      "description": "AI receptionist via SMS — Koda handles customer texts while Kam is in the field with no cell service. Local FL number (386) 433-3380. Dog-fooding for KodaAI.",
+      "status": "active",
+      "progress": 60,
+      "color": "#ef4444",
+      "lastUpdated": "2026-02-13T16:00:00Z",
+      "lastWorkedOn": "Server built and running (Express on port 3457, pm2 managed, Caddy proxy). Inbound SMS webhook working. BLOCKED on Twilio account upgrade ($35-40) for outbound.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Express server built and running (pm2 + Caddy)",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Inbound SMS webhook → Clawdbot working",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Outbound SMS code written",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "Local FL number acquired: (386) 433-3380",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Upgrade Twilio account ($35-40)",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Register A2P 10DLC brand ($4) + campaign ($15)",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Test full inbound + outbound SMS flow end-to-end",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Give number to Nobility Homes / Matt as contact",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-13",
+          "summary": "Built Twilio SMS server: Express on port 3457, pm2 managed, Caddy reverse proxy on :8444. Inbound SMS → Clawdbot hooks/agent endpoint working. Outbound code written but blocked by A2P 10DLC registration (trial account). Monthly cost: ~$3.15/mo fixed + $0.0079/text. This is the KodaAI product being dog-fooded for Kam's Nobility Homes work first."
+        }
+      ]
+    },
+    {
+      "id": "gentlytold",
+      "name": "GentlyTold",
+      "description": "Memorial pages SaaS for funeral homes. AI-powered narrative generation, automated intake-to-publish pipeline, family memories with photo uploads. B2B model: $50/page wholesale, $249 lifetime hosting.",
+      "status": "active",
+      "progress": 75,
+      "color": "#a78bfa",
+      "lastUpdated": "2026-02-12T05:55:00Z",
+      "lastWorkedOn": "Domain purchased (gentlytold.com on Cloudflare). Site deployed to Pages, engine + memories workers routed to subdomains. DNS records needed to go fully live.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Add 4 DNS CNAME records in Cloudflare dashboard (gentlytold.com, www, engine, memories)",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Verify gentlytold.com loads the landing page",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Verify engine.gentlytold.com/api/health returns OK",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Test full intake flow: intake form → generate → preview → approve → publish",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Set up hello@gentlytold.com email routing (Cloudflare Email Routing)",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Update Rhodes demo links to use gentlytold.com domain",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Set up Stripe for $29/yr and $249 lifetime family hosting payments",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Print leave-behind sheets with gentlytold.com URLs",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Walk into Gateway-Forest Lawn funeral home with printed demo",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Visit 5 funeral homes within 50mi of Fort White",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Get first paying funeral home partner",
+          "done": false
+        },
+        {
+          "id": "20",
+          "text": "Domain purchased: gentlytold.com (Cloudflare Registrar)",
+          "done": true
+        },
+        {
+          "id": "21",
+          "text": "Site deployed to Cloudflare Pages (gentlytold.pages.dev)",
+          "done": true
+        },
+        {
+          "id": "22",
+          "text": "Engine worker routed to engine.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "23",
+          "text": "Memories worker routed to memories.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "24",
+          "text": "Intake form updated to use engine.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "25",
+          "text": "Contribute page updated to use memories.gentlytold.com",
+          "done": true
+        },
+        {
+          "id": "11a",
+          "text": "Engine worker deployed and live",
+          "done": true
+        },
+        {
+          "id": "12",
+          "text": "Intake form built (paste obituary + manual entry)",
+          "done": true
+        },
+        {
+          "id": "13",
+          "text": "Memories API with photo upload (KV-backed)",
+          "done": true
+        },
+        {
+          "id": "14",
+          "text": "Sales landing page built",
+          "done": true
+        },
+        {
+          "id": "15",
+          "text": "Leave-behind print sheet designed",
+          "done": true
+        },
+        {
+          "id": "16",
+          "text": "Live demo: Rhodes memorial page",
+          "done": true
+        },
+        {
+          "id": "17",
+          "text": "22 funeral homes identified within 50mi",
+          "done": true
+        },
+        {
+          "id": "18",
+          "text": "Video support added to memorial template",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-12",
+          "summary": "Domain purchased: gentlytold.com via Cloudflare Registrar. Deployed site to Cloudflare Pages. Configured engine.gentlytold.com and memories.gentlytold.com worker routes. Updated all internal URLs to use new domain. DNS CNAME records needed to activate custom domains."
+        },
+        {
+          "date": "2026-02-09",
+          "summary": "Full MVP built: GentlyTold engine worker (intake → Claude API → generate → preview → approve → publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/gentlytold",
+      "liveUrl": "https://gentlytold.com",
+      "demoUrl": "https://ava-type1.github.io/rhodes-memorial/"
+    },
+    {
+      "id": "fieldsync",
+      "name": "FieldSync",
+      "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",
+      "status": "active",
+      "progress": 70,
+      "color": "#00ff88",
+      "lastUpdated": "2026-02-11T18:00:00Z",
+      "lastWorkedOn": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready. Refactored codebase. OCR scanner tested with Nobility Homes work orders.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Test sign-out flow after latest fix",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Test onboarding creates organization_members",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Delete test properties and add real data",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Fix camera capture button visibility (in progress)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Add materials list tracking",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-01-26",
+          "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages."
+        },
+        {
+          "date": "2026-01-26",
+          "summary": "Evening session: Fixed address parser - now requires 3+ digit street numbers and filters keywords (Phone, Serial, etc) to prevent false matches. Added dismissable scan guidance tip suggesting landscape mode for customer info. Camera button layout fix in progress."
+        },
+        {
+          "date": "2026-02-11",
+          "summary": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready, installable on mobile. Refactored codebase via sub-agent. Tested OCR scanner with Nobility Homes work orders — tried Tesseract, Cloudflare Workers AI (Llama 3.2 Vision), landed on OpenAI Vision API for best accuracy."
+        }
+      ],
+      "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
+      "liveUrl": "https://fieldsync-b2y.pages.dev"
+    },
+    {
+      "id": "karen-salon-agent",
+      "name": "Karen's Salon AI (KodaAI Beta)",
+      "description": "First KodaAI deployment — AI phone receptionist for Karen's hair salon in Fort White, FL. Answers missed calls, checks real-time availability, books appointments, notifies Karen via Telegram. Proof of concept for KodaAI SaaS.",
+      "status": "active",
+      "progress": 30,
+      "color": "#8b5cf6",
+      "lastUpdated": "2026-02-11T05:30:00Z",
+      "lastWorkedOn": "Salon config complete (23 services, 2 stylists Karen+Linda, flexible hours Tue-Sat). Dashboard calendar built. Previous project analyzed.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Get Karen's Gmail (or create one) for Google Calendar",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Set up Google Calendar \"Salon Appointments\"",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Set up Google Cloud project + enable Calendar API + OAuth creds",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Buy Twilio local FL number for salon",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Create ElevenLabs phone agent with salon prompt",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Connect Twilio → ElevenLabs",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Deploy kodaai-salon Cloudflare Worker with secrets",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Add paper schedule photo parsing to Karen's Telegram bot",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Have Karen snap her current schedule → sync to Google Calendar",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "First test call end-to-end",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Get Karen's feedback on voice, conversation flow, booking accuracy",
+          "done": false
+        },
+        {
+          "id": "12",
+          "text": "Get Karen's actual service pricing (optional — AI can say \"call for pricing\")",
+          "done": false
+        },
+        {
+          "id": "13",
+          "text": "Train Karen on daily workflow: snap paper schedule → send to Telegram",
+          "done": false
+        },
+        {
+          "id": "14",
+          "text": "Set up call forwarding from salon phone to Twilio number (missed calls)",
+          "done": false
+        },
+        {
+          "id": "15",
+          "text": "ElevenLabs account created",
+          "done": true
+        },
+        {
+          "id": "16",
+          "text": "Salon service config complete (23 services, 6 categories)",
+          "done": true
+        },
+        {
+          "id": "17",
+          "text": "Karen's Telegram bot already running (Koda agent)",
+          "done": true
+        },
+        {
+          "id": "18",
+          "text": "Dashboard calendar built (multi-stylist, color-coded)",
+          "done": true
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-11",
+          "summary": "Salon fully configured: 2 stylists (Karen + Linda), 23 services (cuts, styling, color, perms, deep conditioning, waxing), flexible hours Tue-Sat, smart appointment clustering. Dashboard calendar with color-coding and Set Hours panel. Paper schedule photo sync designed."
+        },
+        {
+          "date": "2026-02-09",
+          "summary": "Karen's Telegram bot set up as isolated Clawdbot agent. Separate workspace at /root/karen/ with warm, patient personality."
+        }
+      ]
+    },
+    {
       "id": "glucose-insights",
       "name": "Glucose Insights Pro",
-      "description": "AI-powered CGM + pump data analysis SaaS \u2014 glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
+      "description": "AI-powered CGM + pump data analysis SaaS — glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
       "status": "active",
       "progress": 70,
       "color": "#ff0040",
@@ -75,59 +1177,6 @@
       "repoUrl": "https://github.com/ava-type1/glucose-insights"
     },
     {
-      "id": "fieldsync",
-      "name": "FieldSync",
-      "description": "Property lifecycle management for manufactured housing - walkthroughs, materials tracking, field service coordination",
-      "status": "active",
-      "progress": 70,
-      "color": "#00ff88",
-      "lastUpdated": "2026-02-11T18:00:00Z",
-      "lastWorkedOn": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready. Refactored codebase. OCR scanner tested with Nobility Homes work orders.",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Test sign-out flow after latest fix",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Test onboarding creates organization_members",
-          "done": false
-        },
-        {
-          "id": "3",
-          "text": "Delete test properties and add real data",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Fix camera capture button visibility (in progress)",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Add materials list tracking",
-          "done": false
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-01-26",
-          "summary": "Major session: Fixed scanner parsing for Nobility Homes forms (names, addresses, all 3 phone numbers, hyphenated names). Added calendar view with job scheduling. Fixed sign-out bug and organization creation flow. Added delete property feature. Deployed to Cloudflare Pages."
-        },
-        {
-          "date": "2026-01-26",
-          "summary": "Evening session: Fixed address parser - now requires 3+ digit street numbers and filters keywords (Phone, Serial, etc) to prevent false matches. Added dismissable scan guidance tip suggesting landscape mode for customer info. Camera button layout fix in progress."
-        },
-        {
-          "date": "2026-02-11",
-          "summary": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready, installable on mobile. Refactored codebase via sub-agent. Tested OCR scanner with Nobility Homes work orders \u2014 tried Tesseract, Cloudflare Workers AI (Llama 3.2 Vision), landed on OpenAI Vision API for best accuracy."
-        }
-      ],
-      "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
-      "liveUrl": "https://fieldsync-b2y.pages.dev"
-    },
-    {
       "id": "ava-type1-app",
       "name": "AVA Type 1 App",
       "description": "iOS simulation game teaching T1D management - gamified diabetes education for kids ages 5-18",
@@ -161,7 +1210,7 @@
       "changelog": [
         {
           "date": "2026-02-09",
-          "summary": "Resubmitted to App Store \u2014 included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
+          "summary": "Resubmitted to App Store — included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
         },
         {
           "date": "2026-01-20",
@@ -171,116 +1220,83 @@
       "repoUrl": "https://github.com/ava-type1/ava-type1"
     },
     {
-      "id": "ava-drive",
-      "name": "AvaDrive",
-      "description": "Driving safety display - real-time CGM data mirrored to external ESP32 display for diabetics while driving",
-      "status": "active",
-      "progress": 88,
-      "color": "#ff0080",
-      "lastUpdated": "2026-02-07T23:00:00Z",
-      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received \u2014 these will be used for AvaDrive (dash mount CGM display)",
+      "id": "bid-finder",
+      "name": "Brad's Bid Finder",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Scrapes SAM.gov, ConstructConnect, FDOT, MFMP, and Bonfire portals for site prep, demolition, and excavation opportunities in FL/GA.",
+      "status": "completed",
+      "progress": 100,
+      "color": "#f59e0b",
+      "lastUpdated": "2026-02-10T00:15:00Z",
+      "lastWorkedOn": "Added Find Email / Open Bid Page button to email modal for bids missing contact emails",
       "todos": [
         {
           "id": "1",
-          "text": "Complete Dexcom API integration",
-          "done": true
+          "text": "Set up automated weekly refresh cron job",
+          "done": false
         },
         {
           "id": "2",
-          "text": "ESP32 BLE display communication",
+          "text": "Add PlanHub as data source",
           "done": false
         },
         {
           "id": "3",
-          "text": "Design car mount/display enclosure",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Apply for Dexcom production API access",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Matter smart bulb integration \u2014 flash lights for low/high BG alerts via HomeKit API",
+          "text": "Get Brad's feedback on bid quality",
           "done": false
         }
       ],
       "changelog": [
         {
-          "date": "2026-01-26",
-          "summary": "Dexcom Sandbox API working. Closest to production-ready in AVA ecosystem."
+          "date": "2026-02-09",
+          "summary": "Added 'Open Bid Page' / 'Find Email' button to email draft modal. 144/150 bids lack contact emails — button opens source page or Google search to help find procurement contacts."
         },
         {
-          "date": "2026-01-29",
-          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI \u2014 difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
-        },
-        {
-          "date": "2026-02-07",
-          "summary": "20x Waveshare ESP32-C6 1.47\" screens received. These compact displays are now designated for AvaDrive (car dash mount). Previously planned for Companion but too small for kid-friendly use."
+          "date": "2026-02-09",
+          "summary": "Built from scratch: Dark pro dashboard with tile/list views, 5 data sources (SAM.gov, ConstructConnect, FDOT, MFMP, Bonfire), full bid detail enrichment, contact info, email drafting, relevance scoring, FL/GA filtering. 150 open bids, 65 high relevance. Deployed to Cloudflare Pages."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/ava-drive"
+      "repoUrl": "https://github.com/ava-type1/brad-workflow",
+      "liveUrl": "https://bid-finder.pages.dev"
     },
     {
-      "id": "pulse-game",
-      "name": "PULSE",
-      "description": "One-button arcade game - your circle pulses, tap to lock size, fit through gates. Simple, addictive, Flappy Bird energy.",
+      "id": "rhodes-cookbook",
+      "name": "Rhodes Family Cookbook",
+      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ — Jerry & Gloria Rhodes' restaurant",
       "status": "active",
-      "progress": 60,
-      "color": "#00ff88",
-      "lastUpdated": "2026-01-28T05:10:00Z",
-      "lastWorkedOn": "Built initial game, fixed gate alignment bug",
+      "progress": 90,
+      "color": "#c4a478",
+      "lastUpdated": "2026-02-10T00:15:00Z",
+      "lastWorkedOn": "Built complete cookbook site with 36 recipes, interactive serving scaler, organized by category",
       "todos": [
         {
           "id": "1",
-          "text": "Core game loop",
-          "done": true
+          "text": "Find restaurant logo photo",
+          "done": false
         },
         {
           "id": "2",
-          "text": "Scoring and combos",
-          "done": true
+          "text": "Add more recipes if Kam finds them",
+          "done": false
         },
         {
           "id": "3",
-          "text": "High score persistence",
-          "done": true
-        },
-        {
-          "id": "4",
-          "text": "Fix gate positioning",
-          "done": true
-        },
-        {
-          "id": "5",
-          "text": "Sound effects",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Mobile optimization",
-          "done": false
-        },
-        {
-          "id": "7",
-          "text": "Leaderboards",
+          "text": "Verify scaled-down restaurant recipe quantities",
           "done": false
         }
       ],
       "changelog": [
         {
-          "date": "2026-01-28",
-          "summary": "Built PULSE from scratch - one button timing game. Player circle pulses, tap to lock size, squeeze through gates. Combo system, difficulty scaling, deployed to GitHub Pages."
+          "date": "2026-02-09",
+          "summary": "Built complete digital cookbook from scratch. 36 recipes digitized from family photos (magazine clippings, handwritten cards, restaurant binder). Categories: Sauces & Dressings (8), Mains (7), Appetizers (2), Sides (8), Desserts (11). Interactive serving scaler on every recipe. Restaurant-scale recipes converted to home portions. Deployed to GitHub Pages."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/pulse-game",
-      "liveUrl": "https://ava-type1.github.io/pulse-game/"
+      "repoUrl": "https://github.com/ava-type1/rhodes-cookbook",
+      "liveUrl": "https://ava-type1.github.io/rhodes-cookbook/"
     },
     {
       "id": "ava-companion",
       "name": "AVA Companion",
-      "description": "Strap-on diabetes buddy device \u2014 turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
+      "description": "Strap-on diabetes buddy device — turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
       "status": "active",
       "progress": 40,
       "color": "#bf00ff",
@@ -291,12 +1307,12 @@
           "name": "DIYmalls ESP32-2432S024C",
           "specs": "2.4\" IPS 240x320 Capacitive Touch, ESP32-WROOM-32, ILI9341 driver",
           "features": "USB-C, TF card slot, speaker (SC8002B), RGB LED, temp/humidity sensor, battery switch",
-          "batteryManagement": "IP5603 Power Bank SoC \u2014 handles charging, discharging, overcurrent protection",
+          "batteryManagement": "IP5603 Power Bank SoC — handles charging, discharging, overcurrent protection",
           "batteryConnector": "JST 1.25mm 2-pin",
           "amazonLink": "https://a.co/d/06BnG9Ky",
           "amazonPrice": "$13-15",
           "aliexpressPrice": "$7.50-$8.30",
-          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6\u2605, 1299 reviews)"
+          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6★, 1299 reviews)"
         },
         "battery": {
           "name": "TAHULU 3.7V 1000mAh LiPo",
@@ -310,15 +1326,15 @@
         "enclosure": {
           "type": "3D printed (Bambu Lab P1S)",
           "designTool": "CadQuery (Python)",
-          "status": "Pending \u2014 design after boards arrive, plan 2-3 revision prints",
+          "status": "Pending — design after boards arrive, plan 2-3 revision prints",
           "features": "Holds board + LiPo as single unit, velcro strap mount on back, USB-C charging slot"
         },
-        "attachment": "Adjustable velcro strap \u2014 wraps around any stuffed animal"
+        "attachment": "Adjustable velcro strap — wraps around any stuffed animal"
       },
       "pricing": {
         "retailPrice": "$99",
         "launchPromo": "$79-89 launch week discount",
-        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 \u2014 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
+        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 — 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
       },
       "costs": {
         "amazonSourced": {
@@ -360,7 +1376,7 @@
           "Facebook (organic story, not self-promo)",
           "Reddit (r/diabetes_t1, r/parents)"
         ],
-        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy \u2014 don't self-promote in groups.",
+        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy — don't self-promote in groups.",
         "appCrossSell": "Include QR code linking to AVA Type 1 app in packaging. Every Companion sold = app install.",
         "launchTiming": "Launch product listing same day AVA Type 1 app is approved on App Store"
       },
@@ -397,7 +1413,7 @@
         },
         {
           "id": "7",
-          "text": "Test board with LiPo \u2014 verify charging circuit works",
+          "text": "Test board with LiPo — verify charging circuit works",
           "done": false
         },
         {
@@ -437,7 +1453,7 @@
         },
         {
           "id": "15",
-          "text": "FIX: Film BLE demo video \u2014 iPhone + ESP32 pairing on physical device",
+          "text": "FIX: Film BLE demo video — iPhone + ESP32 pairing on physical device",
           "done": false
         },
         {
@@ -474,27 +1490,27 @@
       "changelog": [
         {
           "date": "2026-02-07",
-          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector \u2014 LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
+          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector — LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
         },
         {
           "date": "2026-02-08",
-          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem \u2014 one hardware platform, multiple firmware profiles, lifetime customer relationship."
+          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem — one hardware platform, multiple firmware profiles, lifetime customer relationship."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-companion",
       "roadmap": {
         "phase1_launch": {
-          "name": "Phase 1 \u2014 Launch (Current)",
-          "product": "AVA Companion \u2014 Simulation Mode",
+          "name": "Phase 1 — Launch (Current)",
+          "product": "AVA Companion — Simulation Mode",
           "description": "Standalone diabetes simulation display. Straps onto any stuffed animal. Shows simulated glucose numbers for educational play.",
           "price": "$99 retail ($79-89 launch promo)",
-          "status": "In progress \u2014 ordering Tuesday, targeting app approval window"
+          "status": "In progress — ordering Tuesday, targeting app approval window"
         },
         "phase2_upgrade": {
-          "name": "Phase 2 \u2014 Live Mode Upgrade",
-          "product": "AVA Companion \u2192 AVA Live Display",
-          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device \u2014 transitions from educational toy to real health tool.",
-          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app \u2192 Upgrade to Live Mode \u2192 device reflashes automatically. No mail-in required.",
+          "name": "Phase 2 — Live Mode Upgrade",
+          "product": "AVA Companion → AVA Live Display",
+          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device — transitions from educational toy to real health tool.",
+          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app → Upgrade to Live Mode → device reflashes automatically. No mail-in required.",
           "alternateMethod": "Mail-in reflash service as fallback option",
           "upgradePrice": "$39-49 for firmware unlock",
           "prerequisites": [
@@ -502,26 +1518,26 @@
             "OTA update system built into ESP32 firmware",
             "Live CGM display firmware ported to ESP32-2432S024C"
           ],
-          "status": "Planned \u2014 depends on Dexcom production API approval"
+          "status": "Planned — depends on Dexcom production API approval"
         },
         "phase3_ecosystem": {
-          "name": "Phase 3 \u2014 Full Ecosystem",
+          "name": "Phase 3 — Full Ecosystem",
           "description": "AVA app ties together Companion (simulation), Live Display (real CGM), AvaDrive (car mount), and AVA Heart (bedside). All using similar ESP32 hardware with different firmware and form factors.",
           "vision": "One hardware platform, multiple firmware profiles, lifetime customer relationship from diagnosis through adulthood."
         }
       },
       "appStoreReview": {
-        "status": "Rejected \u2014 fixable",
+        "status": "Rejected — fixable",
         "submissionId": "61573647-429f-41f7-b0c1-f45504fe8270",
         "reviewDate": "2026-02-03",
         "issues": [
           {
-            "guideline": "2.1.0 \u2014 Performance: App Completeness",
+            "guideline": "2.1.0 — Performance: App Completeness",
             "issue": "Need demo video showing BLE pairing with physical hardware on real iPhone. Need to answer hardware ownership questions.",
             "fix": "Film BLE demo video (iPhone + ESP32 board). Reply with hardware info: AVA Companion by KameronMartinLLC, own product, not third-party."
           },
           {
-            "guideline": "1.4.1 \u2014 Safety: Physical Harm",
+            "guideline": "1.4.1 — Safety: Physical Harm",
             "issue": "Medical information in Home and Learn sections lacks citations/sources.",
             "fix": "Add Medical References screen with ADA Standards of Care, JDRF resources, CDC diabetes info, insulin pharmacokinetic studies. Add medical disclaimer."
           }
@@ -529,162 +1545,56 @@
       }
     },
     {
-      "id": "ava-heart",
-      "name": "AVA Heart",
-      "description": "Standalone glucose display device for home - shows real CGM data on dedicated display",
-      "status": "idea",
-      "progress": 10,
-      "color": "#ffc800",
-      "lastUpdated": "2026-01-10T00:00:00Z",
-      "lastWorkedOn": "Concept design, hardware selection",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Define hardware requirements",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Design enclosure for bedside/desk",
-          "done": false
-        }
-      ],
-      "changelog": []
-    },
-    {
-      "id": "command-center",
-      "name": "Command Center",
-      "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
+      "id": "ava-drive",
+      "name": "AvaDrive",
+      "description": "Driving safety display - real-time CGM data mirrored to external ESP32 display for diabetics while driving",
       "status": "active",
-      "progress": 75,
-      "color": "#00ff88",
-      "lastUpdated": "2026-01-28T05:00:00Z",
-      "lastWorkedOn": "Added project progress bars with completion percentages",
+      "progress": 88,
+      "color": "#ff0080",
+      "lastUpdated": "2026-02-07T23:00:00Z",
+      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received — these will be used for AvaDrive (dash mount CGM display)",
       "todos": [
         {
           "id": "1",
-          "text": "Implement GitHub-based data sync",
+          "text": "Complete Dexcom API integration",
           "done": true
         },
         {
           "id": "2",
-          "text": "Add embedded Claude chat interface",
-          "done": true
+          "text": "ESP32 BLE display communication",
+          "done": false
         },
         {
           "id": "3",
-          "text": "Deploy Telegram relay worker",
-          "done": true
+          "text": "Design car mount/display enclosure",
+          "done": false
         },
         {
           "id": "4",
-          "text": "Real-time updates when AI makes changes",
-          "done": true
+          "text": "Apply for Dexcom production API access",
+          "done": false
         },
         {
           "id": "5",
-          "text": "Weather widget",
-          "done": true
-        },
-        {
-          "id": "6",
-          "text": "Quick Links panel",
-          "done": true
-        },
-        {
-          "id": "7",
-          "text": "Project progress bars",
-          "done": true
-        },
-        {
-          "id": "8",
-          "text": "Auto-update dashboard after every conversation",
+          "text": "Matter smart bulb integration — flash lights for low/high BG alerts via HomeKit API",
           "done": false
         }
       ],
       "changelog": [
-        {
-          "date": "2026-01-27",
-          "summary": "Added project progress bars with completion percentages. Weather widget (Fort White FL). Quick Links panel."
-        },
         {
           "date": "2026-01-26",
-          "summary": "Built Command Center dashboard with dark cyberpunk aesthetic. Added Claude chat panel with Telegram relay."
+          "summary": "Dexcom Sandbox API working. Closest to production-ready in AVA ecosystem."
+        },
+        {
+          "date": "2026-01-29",
+          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI — difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
+        },
+        {
+          "date": "2026-02-07",
+          "summary": "20x Waveshare ESP32-C6 1.47\" screens received. These compact displays are now designated for AvaDrive (car dash mount). Previously planned for Companion but too small for kid-friendly use."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/command-center",
-      "liveUrl": "https://command-center-2nk.pages.dev"
-    },
-    {
-      "id": "diabetesdata-io",
-      "name": "DiabetesData.io",
-      "description": "Unified CGM Data API concept - shelved due to manufacturer API restrictions preventing resale",
-      "status": "paused",
-      "progress": 40,
-      "color": "#ff3366",
-      "lastUpdated": "2026-01-28T04:00:00Z",
-      "lastWorkedOn": "Shelved - CGM manufacturers prohibit API reselling. Pivoting to personal health hub concept instead.",
-      "todos": [],
-      "changelog": [
-        {
-          "date": "2026-01-28",
-          "summary": "SHELVED: Dexcom, Abbott, Medtronic all prohibit redistribution of API data. B2B SaaS model not viable. Concept may pivot to personal-use health data aggregator."
-        },
-        {
-          "date": "2026-01-27",
-          "summary": "Built initial API service with Cloudflare Workers, client libraries, business plan."
-        }
-      ],
-      "repoUrl": "https://github.com/ava-type1/diabetesdata-io"
-    },
-    {
-      "id": "syncfield",
-      "name": "SyncField",
-      "description": "Offline-first field service management for teams working in areas with poor connectivity - PWA that syncs when connected",
-      "status": "active",
-      "progress": 70,
-      "color": "#2563eb",
-      "lastUpdated": "2026-01-28T07:00:00Z",
-      "lastWorkedOn": "Built complete MVP - offline PWA with work orders, photo docs, time tracking, manager dashboard, auto-sync",
-      "todos": [
-        {
-          "id": "1",
-          "text": "GPS tracking (even offline)",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Digital signatures for customer sign-off",
-          "done": false
-        },
-        {
-          "id": "3",
-          "text": "Material tracking and inventory requests",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Route optimization for multiple jobs",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "QuickBooks integration API",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Landing page and marketing site",
-          "done": false
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-01-28",
-          "summary": "Built complete SyncField MVP in nightly innovation session. Progressive Web App with offline functionality, work order management, photo documentation, time tracking, manager dashboard. Auto-syncs when connectivity restored. Target: $10-30/user/month SaaS for field service teams (construction, utilities, contractors)."
-        }
-      ],
-      "repoUrl": "https://github.com/ava-type1/syncfield"
+      "repoUrl": "https://github.com/ava-type1/ava-drive"
     },
     {
       "id": "timeproof",
@@ -827,975 +1737,153 @@
       "liveUrl": "https://t1d-benefits-navigator.pages.dev"
     },
     {
-      "id": "gentlytold",
-      "name": "GentlyTold",
-      "description": "Memorial pages SaaS for funeral homes. AI-powered narrative generation, automated intake-to-publish pipeline, family memories with photo uploads. B2B model: $50/page wholesale, $249 lifetime hosting.",
+      "id": "syncfield",
+      "name": "SyncField",
+      "description": "Offline-first field service management for teams working in areas with poor connectivity - PWA that syncs when connected",
       "status": "active",
-      "progress": 75,
-      "color": "#a78bfa",
-      "lastUpdated": "2026-02-12T05:55:00Z",
-      "lastWorkedOn": "Domain purchased (gentlytold.com on Cloudflare). Site deployed to Pages, engine + memories workers routed to subdomains. DNS records needed to go fully live.",
+      "progress": 70,
+      "color": "#2563eb",
+      "lastUpdated": "2026-01-28T07:00:00Z",
+      "lastWorkedOn": "Built complete MVP - offline PWA with work orders, photo docs, time tracking, manager dashboard, auto-sync",
       "todos": [
         {
           "id": "1",
-          "text": "Add 4 DNS CNAME records in Cloudflare dashboard (gentlytold.com, www, engine, memories)",
+          "text": "GPS tracking (even offline)",
           "done": false
         },
         {
           "id": "2",
-          "text": "Verify gentlytold.com loads the landing page",
+          "text": "Digital signatures for customer sign-off",
           "done": false
         },
         {
           "id": "3",
-          "text": "Verify engine.gentlytold.com/api/health returns OK",
+          "text": "Material tracking and inventory requests",
           "done": false
         },
         {
           "id": "4",
-          "text": "Test full intake flow: intake form \u2192 generate \u2192 preview \u2192 approve \u2192 publish",
+          "text": "Route optimization for multiple jobs",
           "done": false
         },
         {
           "id": "5",
-          "text": "Set up hello@gentlytold.com email routing (Cloudflare Email Routing)",
+          "text": "QuickBooks integration API",
           "done": false
         },
         {
           "id": "6",
-          "text": "Update Rhodes demo links to use gentlytold.com domain",
-          "done": false
-        },
-        {
-          "id": "7",
-          "text": "Set up Stripe for $29/yr and $249 lifetime family hosting payments",
-          "done": false
-        },
-        {
-          "id": "8",
-          "text": "Print leave-behind sheets with gentlytold.com URLs",
-          "done": false
-        },
-        {
-          "id": "9",
-          "text": "Walk into Gateway-Forest Lawn funeral home with printed demo",
-          "done": false
-        },
-        {
-          "id": "10",
-          "text": "Visit 5 funeral homes within 50mi of Fort White",
-          "done": false
-        },
-        {
-          "id": "11",
-          "text": "Get first paying funeral home partner",
-          "done": false
-        },
-        {
-          "id": "20",
-          "text": "Domain purchased: gentlytold.com (Cloudflare Registrar)",
-          "done": true
-        },
-        {
-          "id": "21",
-          "text": "Site deployed to Cloudflare Pages (gentlytold.pages.dev)",
-          "done": true
-        },
-        {
-          "id": "22",
-          "text": "Engine worker routed to engine.gentlytold.com",
-          "done": true
-        },
-        {
-          "id": "23",
-          "text": "Memories worker routed to memories.gentlytold.com",
-          "done": true
-        },
-        {
-          "id": "24",
-          "text": "Intake form updated to use engine.gentlytold.com",
-          "done": true
-        },
-        {
-          "id": "25",
-          "text": "Contribute page updated to use memories.gentlytold.com",
-          "done": true
-        },
-        {
-          "id": "11a",
-          "text": "Engine worker deployed and live",
-          "done": true
-        },
-        {
-          "id": "12",
-          "text": "Intake form built (paste obituary + manual entry)",
-          "done": true
-        },
-        {
-          "id": "13",
-          "text": "Memories API with photo upload (KV-backed)",
-          "done": true
-        },
-        {
-          "id": "14",
-          "text": "Sales landing page built",
-          "done": true
-        },
-        {
-          "id": "15",
-          "text": "Leave-behind print sheet designed",
-          "done": true
-        },
-        {
-          "id": "16",
-          "text": "Live demo: Rhodes memorial page",
-          "done": true
-        },
-        {
-          "id": "17",
-          "text": "22 funeral homes identified within 50mi",
-          "done": true
-        },
-        {
-          "id": "18",
-          "text": "Video support added to memorial template",
-          "done": true
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-12",
-          "summary": "Domain purchased: gentlytold.com via Cloudflare Registrar. Deployed site to Cloudflare Pages. Configured engine.gentlytold.com and memories.gentlytold.com worker routes. Updated all internal URLs to use new domain. DNS CNAME records needed to activate custom domains."
-        },
-        {
-          "date": "2026-02-09",
-          "summary": "Full MVP built: GentlyTold engine worker (intake \u2192 Claude API \u2192 generate \u2192 preview \u2192 approve \u2192 publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
-        }
-      ],
-      "repoUrl": "https://github.com/ava-type1/gentlytold",
-      "liveUrl": "https://gentlytold.com",
-      "demoUrl": "https://ava-type1.github.io/rhodes-memorial/"
-    },
-    {
-      "id": "bid-finder",
-      "name": "Brad's Bid Finder",
-      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Scrapes SAM.gov, ConstructConnect, FDOT, MFMP, and Bonfire portals for site prep, demolition, and excavation opportunities in FL/GA.",
-      "status": "completed",
-      "progress": 100,
-      "color": "#f59e0b",
-      "lastUpdated": "2026-02-10T00:15:00Z",
-      "lastWorkedOn": "Added Find Email / Open Bid Page button to email modal for bids missing contact emails",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Set up automated weekly refresh cron job",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Add PlanHub as data source",
-          "done": false
-        },
-        {
-          "id": "3",
-          "text": "Get Brad's feedback on bid quality",
+          "text": "Landing page and marketing site",
           "done": false
         }
       ],
       "changelog": [
         {
-          "date": "2026-02-09",
-          "summary": "Added 'Open Bid Page' / 'Find Email' button to email draft modal. 144/150 bids lack contact emails \u2014 button opens source page or Google search to help find procurement contacts."
-        },
-        {
-          "date": "2026-02-09",
-          "summary": "Built from scratch: Dark pro dashboard with tile/list views, 5 data sources (SAM.gov, ConstructConnect, FDOT, MFMP, Bonfire), full bid detail enrichment, contact info, email drafting, relevance scoring, FL/GA filtering. 150 open bids, 65 high relevance. Deployed to Cloudflare Pages."
+          "date": "2026-01-28",
+          "summary": "Built complete SyncField MVP in nightly innovation session. Progressive Web App with offline functionality, work order management, photo documentation, time tracking, manager dashboard. Auto-syncs when connectivity restored. Target: $10-30/user/month SaaS for field service teams (construction, utilities, contractors)."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/brad-workflow",
-      "liveUrl": "https://bid-finder.pages.dev"
+      "repoUrl": "https://github.com/ava-type1/syncfield"
     },
     {
-      "id": "rhodes-cookbook",
-      "name": "Rhodes Family Cookbook",
-      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ \u2014 Jerry & Gloria Rhodes' restaurant",
-      "status": "active",
-      "progress": 90,
-      "color": "#c4a478",
-      "lastUpdated": "2026-02-10T00:15:00Z",
-      "lastWorkedOn": "Built complete cookbook site with 36 recipes, interactive serving scaler, organized by category",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Find restaurant logo photo",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Add more recipes if Kam finds them",
-          "done": false
-        },
-        {
-          "id": "3",
-          "text": "Verify scaled-down restaurant recipe quantities",
-          "done": false
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-09",
-          "summary": "Built complete digital cookbook from scratch. 36 recipes digitized from family photos (magazine clippings, handwritten cards, restaurant binder). Categories: Sauces & Dressings (8), Mains (7), Appetizers (2), Sides (8), Desserts (11). Interactive serving scaler on every recipe. Restaurant-scale recipes converted to home portions. Deployed to GitHub Pages."
-        }
-      ],
-      "repoUrl": "https://github.com/ava-type1/rhodes-cookbook",
-      "liveUrl": "https://ava-type1.github.io/rhodes-cookbook/"
-    },
-    {
-      "id": "kodaai",
-      "name": "KodaAI",
-      "description": "Consumer GUI for OpenClaw \u2014 the 'grandma-proof' managed AI assistant platform. Each client gets their own isolated OpenClaw sandbox on Cloudflare, accessed via SMS. Sign up, answer 5 questions, get a personal AI assistant on your phone. No tech knowledge needed.",
-      "status": "active",
-      "progress": 30,
-      "color": "#06b6d4",
-      "lastUpdated": "2026-02-14T16:30:00Z",
-      "lastWorkedOn": "MAJOR PIVOT: Repositioned as consumer GUI for OpenClaw. Deep competitive research completed. 1,091-line platform spec written. Project scaffolded (1,868 lines TypeScript). Multi-tenant Moltworker architecture designed.",
-      "todos": [
-        {
-          "id": "kam-1",
-          "text": "\u26a1 KAM: Sign up for Twilio account (twilio.com) + buy a local FL phone number",
-          "done": false
-        },
-        {
-          "id": "kam-2",
-          "text": "\u26a1 KAM: Validate demand \u2014 ask 5 local business owners if they'd pay $99/mo for an AI assistant they text",
-          "done": false
-        },
-        {
-          "id": "kam-3",
-          "text": "\u26a1 KAM: Talk to Brad's brother-in-law about being beta tester #1",
-          "done": false
-        },
-        {
-          "id": "kam-4",
-          "text": "\u26a1 KAM: Set up Stripe account for KodaAI billing",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Deep competitive research completed (nobody has built consumer OpenClaw GUI yet)",
-          "done": true
-        },
-        {
-          "id": "6",
-          "text": "Platform spec written (PLATFORM-SPEC.md \u2014 1,091 lines)",
-          "done": true
-        },
-        {
-          "id": "7",
-          "text": "Project scaffolded (kodaai-platform/ \u2014 1,868 lines TypeScript)",
-          "done": true
-        },
-        {
-          "id": "8",
-          "text": "Multi-tenant architecture designed (isolated Cloudflare Sandboxes per client)",
-          "done": true
-        },
-        {
-          "id": "9",
-          "text": "Industry templates created (contractor, salon, restaurant, retail, professional services)",
-          "done": true
-        },
-        {
-          "id": "10",
-          "text": "D1 database schema designed (clients, sandboxes, billing, audit_log)",
-          "done": true
-        },
-        {
-          "id": "11",
-          "text": "Twilio SMS bridge code written (inbound/outbound routing)",
-          "done": true
-        },
-        {
-          "id": "12",
-          "text": "Stripe webhook handler code written",
-          "done": true
-        },
-        {
-          "id": "13",
-          "text": "Wire up Twilio credentials + test SMS routing end-to-end",
-          "done": false
-        },
-        {
-          "id": "14",
-          "text": "Wire up Stripe credentials + test payment \u2192 provisioning flow",
-          "done": false
-        },
-        {
-          "id": "15",
-          "text": "Build signup frontend (5-question onboarding wizard)",
-          "done": false
-        },
-        {
-          "id": "16",
-          "text": "Deploy provisioning Worker to Cloudflare",
-          "done": false
-        },
-        {
-          "id": "17",
-          "text": "Test full flow: signup \u2192 pay \u2192 sandbox spins up \u2192 SMS works",
-          "done": false
-        },
-        {
-          "id": "18",
-          "text": "Build simple client dashboard (conversation history, settings)",
-          "done": false
-        },
-        {
-          "id": "19",
-          "text": "Build admin dashboard (manage all client instances)",
-          "done": false
-        },
-        {
-          "id": "20",
-          "text": "First beta client live and working",
-          "done": false
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-14",
-          "summary": "MAJOR PIVOT: Heard on Moonshots podcast (Peter Diamandis) that whoever perfects the consumer GUI for OpenClaw will capture massive value. Deep research confirmed: nobody has built it yet. Cloud providers only solving hosting, not usability. Completed: competitive landscape analysis, 1,091-line platform spec (PLATFORM-SPEC.md), project scaffold with 1,868 lines TypeScript (provisioning, Twilio SMS, Stripe billing, admin API, industry templates). Architecture: each client gets isolated Cloudflare Sandbox (Moltworker), accessed via SMS. Cost per client: $35-65/mo. Revenue: $99-349/mo."
-        },
-        {
-          "date": "2026-02-13",
-          "summary": "Landing page deployed to kodaai.kameronmartinllc.workers.dev. 5-step signup wizard. Moltworker architecture chosen for multi-tenant. Brother-in-law identified as first beta."
-        },
-        {
-          "date": "2026-02-11",
-          "summary": "Built Cloudflare Worker (calendar API), client dashboard, ElevenLabs agent template. Salon config for Karen beta."
-        },
-        {
-          "date": "2026-02-10",
-          "summary": "Concept born. Pricing tiers defined. Client dashboard MVP built."
-        }
-      ],
-      "repoUrl": null,
-      "pricing": {
-        "starter": "$99/mo \u2014 AI assistant via SMS, email monitoring, scheduling, auto-responses",
-        "pro": "$199/mo \u2014 + calendar integration, Google Maps, client dashboard",
-        "business": "$349/mo \u2014 + AI phone answering, full automation, custom workflows",
-        "costPerClient": "$35-65/mo (Cloudflare Sandbox + Claude API + Twilio)",
-        "profitPerClient": "$34-284/mo depending on tier"
-      }
-    },
-    {
-      "id": "karen-salon-agent",
-      "name": "Karen's Salon AI (KodaAI Beta)",
-      "description": "First KodaAI deployment \u2014 AI phone receptionist for Karen's hair salon in Fort White, FL. Answers missed calls, checks real-time availability, books appointments, notifies Karen via Telegram. Proof of concept for KodaAI SaaS.",
-      "status": "active",
-      "progress": 30,
-      "color": "#8b5cf6",
-      "lastUpdated": "2026-02-11T05:30:00Z",
-      "lastWorkedOn": "Salon config complete (23 services, 2 stylists Karen+Linda, flexible hours Tue-Sat). Dashboard calendar built. Previous project analyzed.",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Get Karen's Gmail (or create one) for Google Calendar",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Set up Google Calendar \"Salon Appointments\"",
-          "done": false
-        },
-        {
-          "id": "3",
-          "text": "Set up Google Cloud project + enable Calendar API + OAuth creds",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Buy Twilio local FL number for salon",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Create ElevenLabs phone agent with salon prompt",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Connect Twilio \u2192 ElevenLabs",
-          "done": false
-        },
-        {
-          "id": "7",
-          "text": "Deploy kodaai-salon Cloudflare Worker with secrets",
-          "done": false
-        },
-        {
-          "id": "8",
-          "text": "Add paper schedule photo parsing to Karen's Telegram bot",
-          "done": false
-        },
-        {
-          "id": "9",
-          "text": "Have Karen snap her current schedule \u2192 sync to Google Calendar",
-          "done": false
-        },
-        {
-          "id": "10",
-          "text": "First test call end-to-end",
-          "done": false
-        },
-        {
-          "id": "11",
-          "text": "Get Karen's feedback on voice, conversation flow, booking accuracy",
-          "done": false
-        },
-        {
-          "id": "12",
-          "text": "Get Karen's actual service pricing (optional \u2014 AI can say \"call for pricing\")",
-          "done": false
-        },
-        {
-          "id": "13",
-          "text": "Train Karen on daily workflow: snap paper schedule \u2192 send to Telegram",
-          "done": false
-        },
-        {
-          "id": "14",
-          "text": "Set up call forwarding from salon phone to Twilio number (missed calls)",
-          "done": false
-        },
-        {
-          "id": "15",
-          "text": "ElevenLabs account created",
-          "done": true
-        },
-        {
-          "id": "16",
-          "text": "Salon service config complete (23 services, 6 categories)",
-          "done": true
-        },
-        {
-          "id": "17",
-          "text": "Karen's Telegram bot already running (Koda agent)",
-          "done": true
-        },
-        {
-          "id": "18",
-          "text": "Dashboard calendar built (multi-stylist, color-coded)",
-          "done": true
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-11",
-          "summary": "Salon fully configured: 2 stylists (Karen + Linda), 23 services (cuts, styling, color, perms, deep conditioning, waxing), flexible hours Tue-Sat, smart appointment clustering. Dashboard calendar with color-coding and Set Hours panel. Paper schedule photo sync designed."
-        },
-        {
-          "date": "2026-02-09",
-          "summary": "Karen's Telegram bot set up as isolated Clawdbot agent. Separate workspace at /root/karen/ with warm, patient personality."
-        }
-      ]
-    },
-    {
-      "id": "fiverr-freelance",
-      "name": "Fiverr Freelance",
-      "description": "Website building gig on Fiverr \u2014 AI-assisted sites delivered in minutes. 3-tier pricing: Basic $75, Standard $150, Premium $250. Portfolio: Total Transformation, Karen's Country Cuts, AVA Type 1.",
-      "status": "active",
-      "progress": 90,
-      "color": "#1dbf73",
-      "lastUpdated": "2026-02-16T02:48:00Z",
-      "lastWorkedOn": "GIG LIVE! W-9 cleared Feb 15, gig published and accepting orders. $75/$150/$250 tiers.",
-      "todos": [
-        {
-          "id": "1",
-          "text": "W-9 verification (1-3 business days)",
-          "done": true
-        },
-        {
-          "id": "2",
-          "text": "Publish gig once W-9 clears",
-          "done": true
-        },
-        {
-          "id": "3",
-          "text": "Record gig video (30-60 sec site scroll)",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Set up Fiverr profile (bio, photo, skills)",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Post in Facebook groups with portfolio links",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Get 2-3 friends/family to place first orders for reviews",
-          "done": false
-        },
-        {
-          "id": "7",
-          "text": "Set up Upwork profile (same gigs)",
-          "done": false
-        },
-        {
-          "id": "8",
-          "text": "Gig overview completed",
-          "done": true
-        },
-        {
-          "id": "9",
-          "text": "Pricing tiers set (Basic/Standard/Premium)",
-          "done": true
-        },
-        {
-          "id": "10",
-          "text": "Gig description written",
-          "done": true
-        },
-        {
-          "id": "11",
-          "text": "Requirements questions configured",
-          "done": true
-        },
-        {
-          "id": "12",
-          "text": "Gallery images selected (3 portfolio sites)",
-          "done": true
-        },
-        {
-          "id": "13",
-          "text": "Gig extras configured (add-on services)",
-          "done": true
-        },
-        {
-          "id": "14",
-          "text": "Extra fast delivery enabled",
-          "done": true
-        },
-        {
-          "id": "15",
-          "text": "W-9 tax form submitted",
-          "done": true
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-15",
-          "summary": "GIG IS LIVE! W-9 verification completed ~9:44 PM ET. Gig published ~9:48 PM ET and now accepting orders. Was blocked since Feb 13 on W-9 \u2014 now fully operational."
-        },
-        {
-          "date": "2026-02-13",
-          "summary": "Full Fiverr gig setup session. Created website building gig with 3 tiers: Basic ($75, 1-page, 2-day), Standard ($150, 3-page, 3-day), Premium ($250, 5-page, 4-day). Added extras: additional page ($25), revision ($10), content upload ($15), e-commerce ($75). Extra fast delivery enabled. Gallery: Total Transformation, Karen's Country Cuts, AVA Type 1. Requirements questions set. W-9 submitted \u2014 waiting verification before publish."
-        }
-      ]
-    },
-    {
-      "id": "instantsite",
-      "name": "InstantSite",
-      "description": "Micro-SaaS auto website generator \u2014 business owners fill a form, get a professional live website in 60 seconds. Preview-before-payment flow, Stripe billing, cross-promo ads on free tier. Built on Cloudflare Workers.",
-      "status": "active",
-      "progress": 45,
-      "color": "#ff6b35",
-      "lastUpdated": "2026-02-13T16:00:00Z",
-      "lastWorkedOn": "Deployed with Stripe integration, preview-before-payment flow, cross-promo ads on free sites, KV-based image serving.",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Build landing page with pricing tiers",
-          "done": true
-        },
-        {
-          "id": "2",
-          "text": "Build multi-step business info form",
-          "done": true
-        },
-        {
-          "id": "3",
-          "text": "Build site generator engine (Cloudflare Worker)",
-          "done": true
-        },
-        {
-          "id": "4",
-          "text": "Create business site templates (handyman, salon, restaurant, contractor)",
-          "done": true
-        },
-        {
-          "id": "5",
-          "text": "Deploy to Cloudflare Workers + Pages",
-          "done": true
-        },
-        {
-          "id": "6",
-          "text": "Add Stripe payment integration",
-          "done": true
-        },
-        {
-          "id": "7",
-          "text": "Add image upload (R2 or KV)",
-          "done": true
-        },
-        {
-          "id": "8",
-          "text": "Add Google Maps embed (Pro tier)",
-          "done": false
-        },
-        {
-          "id": "9",
-          "text": "Add booking calendar (Business tier)",
-          "done": false
-        },
-        {
-          "id": "10",
-          "text": "Add custom domain support (Business tier)",
-          "done": false
-        },
-        {
-          "id": "11",
-          "text": "List on Product Hunt",
-          "done": false
-        },
-        {
-          "id": "12",
-          "text": "Post in Facebook groups + Reddit",
-          "done": false
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-13",
-          "summary": "Concept born from Fiverr gig discussion. If you can build a site in 10 min manually, automate it. Architecture: Cloudflare Worker receives form data, generates site from templates, serves dynamically."
-        },
-        {
-          "date": "2026-02-13",
-          "summary": "MVP deployed: preview-before-payment flow (user sees full site before committing), Stripe integration (checkout + webhooks + subscription lifecycle), cross-promo ads on free tier (rotate KodaAI, GentlyTold, upgrade CTAs), KV-based image serving (R2 ready when enabled). Tiers: Free (with banner), Pro $29/mo, Lifetime $199. Live at instant-site-engine.kameronmartinllc.workers.dev"
-        }
-      ],
-      "liveUrl": "https://instant-site-engine.kameronmartinllc.workers.dev"
-    },
-    {
-      "id": "crewclock",
-      "name": "CrewClock",
-      "description": "GPS time tracking for contractor crews \u2014 trackers in trucks auto clock in/out via geofence. Zero employee effort. Traccar self-hosted + cheap GPS trackers.",
-      "status": "idea",
-      "progress": 15,
-      "color": "#f97316",
-      "lastUpdated": "2026-02-13T16:00:00Z",
-      "lastWorkedOn": "Researched architecture: Traccar (open-source GPS server) + Bouncie trackers ($67, $8/mo) for beta, cheap Concox/Sinotrack ($15, $3-5/mo SIM) for scale. Brad = first customer.",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Set up Traccar server (self-hosted)",
-          "done": false
-        },
-        {
-          "id": "2",
-          "text": "Order Bouncie tracker for beta testing with Brad",
-          "done": false
-        },
-        {
-          "id": "3",
-          "text": "Build geofence auto clock-in/out logic",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Build crew dashboard (attendance, hours, job sites)",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Test with Brad's crew",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Research completed (architecture, pricing, competitors)",
-          "done": true
-        }
-      ],
-      "changelog": [
-        {
-          "date": "2026-02-13",
-          "summary": "Researched and designed. Target: contractors with crews (Brad = first customer). GPS tracker in each truck \u2192 auto clock in/out via geofence. Pricing: Starter $39/mo (5 trucks), Crew $79/mo (15), Company $149/mo (50). Brad's cost ~$129/mo vs Samsara $225-360/mo. Key insight: employees lie about hours, GPS verification solves it. Cross-sells into KodaAI for contractor tier."
-        }
-      ]
-    },
-    {
-      "id": "twilio-sms",
-      "name": "Koda SMS (Twilio)",
-      "description": "AI receptionist via SMS \u2014 Koda handles customer texts while Kam is in the field with no cell service. Local FL number (386) 433-3380. Dog-fooding for KodaAI.",
+      "id": "pulse-game",
+      "name": "PULSE",
+      "description": "One-button arcade game - your circle pulses, tap to lock size, fit through gates. Simple, addictive, Flappy Bird energy.",
       "status": "active",
       "progress": 60,
-      "color": "#ef4444",
-      "lastUpdated": "2026-02-13T16:00:00Z",
-      "lastWorkedOn": "Server built and running (Express on port 3457, pm2 managed, Caddy proxy). Inbound SMS webhook working. BLOCKED on Twilio account upgrade ($35-40) for outbound.",
+      "color": "#00ff88",
+      "lastUpdated": "2026-01-28T05:10:00Z",
+      "lastWorkedOn": "Built initial game, fixed gate alignment bug",
       "todos": [
         {
           "id": "1",
-          "text": "Express server built and running (pm2 + Caddy)",
+          "text": "Core game loop",
           "done": true
         },
         {
           "id": "2",
-          "text": "Inbound SMS webhook \u2192 Clawdbot working",
+          "text": "Scoring and combos",
           "done": true
         },
         {
           "id": "3",
-          "text": "Outbound SMS code written",
+          "text": "High score persistence",
           "done": true
         },
         {
           "id": "4",
-          "text": "Local FL number acquired: (386) 433-3380",
+          "text": "Fix gate positioning",
           "done": true
         },
         {
           "id": "5",
-          "text": "Upgrade Twilio account ($35-40)",
+          "text": "Sound effects",
           "done": false
         },
         {
           "id": "6",
-          "text": "Register A2P 10DLC brand ($4) + campaign ($15)",
+          "text": "Mobile optimization",
           "done": false
         },
         {
           "id": "7",
-          "text": "Test full inbound + outbound SMS flow end-to-end",
-          "done": false
-        },
-        {
-          "id": "8",
-          "text": "Give number to Nobility Homes / Matt as contact",
+          "text": "Leaderboards",
           "done": false
         }
       ],
       "changelog": [
         {
-          "date": "2026-02-13",
-          "summary": "Built Twilio SMS server: Express on port 3457, pm2 managed, Caddy reverse proxy on :8444. Inbound SMS \u2192 Clawdbot hooks/agent endpoint working. Outbound code written but blocked by A2P 10DLC registration (trial account). Monthly cost: ~$3.15/mo fixed + $0.0079/text. This is the KodaAI product being dog-fooded for Kam's Nobility Homes work first."
-        }
-      ]
-    },
-    {
-      "id": "vhs-vault",
-      "name": "VHS Vault",
-      "description": "Nostalgic iPhone app \u2014 virtual VHS tape collection. Upload videos, each gets a VHS tape with sharpie-on-white-label. Browse your shelf, pull a tape, watch the video. Targets millennials/Gen X who grew up with VCR culture.",
-      "status": "active",
-      "progress": 85,
-      "color": "#8b4513",
-      "lastUpdated": "2026-02-16T02:30:00Z",
-      "lastWorkedOn": "Full app built in one session \u2014 13 Swift files, ~2,300 lines. All visuals rendered in code (no external assets). Permanent Marker font for sharpie style.",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Core app built (13 Swift files, ~2,300 lines)",
-          "done": true
-        },
-        {
-          "id": "2",
-          "text": "Shelf browsing UI with wooden bookcase",
-          "done": true
-        },
-        {
-          "id": "3",
-          "text": "Tape pull animation",
-          "done": true
-        },
-        {
-          "id": "4",
-          "text": "VHS static intro effect",
-          "done": true
-        },
-        {
-          "id": "5",
-          "text": "Video playback with CRT scan lines",
-          "done": true
-        },
-        {
-          "id": "6",
-          "text": "Spinning spool cassette view",
-          "done": true
-        },
-        {
-          "id": "7",
-          "text": "Add tapes from Photos library",
-          "done": true
-        },
-        {
-          "id": "8",
-          "text": "Add sound effects (freesound.org sources documented)",
-          "done": false
-        },
-        {
-          "id": "9",
-          "text": "App Store submission",
-          "done": false
-        },
-        {
-          "id": "10",
-          "text": "Monetization: free (5 tapes) \u2192 $4.99 unlimited",
-          "done": false
+          "date": "2026-01-28",
+          "summary": "Built PULSE from scratch - one button timing game. Player circle pulses, tap to lock size, squeeze through gates. Combo system, difficulty scaling, deployed to GitHub Pages."
         }
       ],
-      "changelog": [
-        {
-          "date": "2026-02-15",
-          "summary": "NIGHTLY BUILD: Full VHS Vault app built from scratch. 13 Swift files, ~2,300 lines SwiftUI. All visuals code-rendered (no image assets). Permanent Marker font bundled for sharpie-on-tape aesthetic. Features: oak bookcase shelf, tape pull animation, VHS static intro, CRT scan line playback, spinning spool cassette view, add tapes from Photos. Product vision: NOT about digitizing old tapes \u2014 it's a curated video library for your best/most important videos with nostalgic VHS aesthetic. Freemium: 5 free tapes, $4.99 unlimited."
-        }
-      ],
-      "repoUrl": "https://github.com/ava-type1/vhs-vault-ios"
+      "repoUrl": "https://github.com/ava-type1/pulse-game",
+      "liveUrl": "https://ava-type1.github.io/pulse-game/"
     },
     {
-      "id": "tiwahe-times",
-      "name": "The Tiwahe Times",
-      "description": "Hyperlocal digital newspaper for Fort White, FL. AI-powered content generation. Sections: weather, local news, community events, sports, county government, business spotlight. Revenue via local business ads ($25-150/mo).",
-      "status": "active",
+      "id": "diabetesdata-io",
+      "name": "DiabetesData.io",
+      "description": "Unified CGM Data API concept - shelved due to manufacturer API restrictions preventing resale",
+      "status": "paused",
       "progress": 40,
-      "color": "#1e3a5f",
-      "lastUpdated": "2026-02-14T22:00:00Z",
-      "lastWorkedOn": "Initial build deployed to Cloudflare Pages. First business spotlight: Santa Fe Site Prep LLC (Brad Taylor).",
-      "todos": [
-        {
-          "id": "1",
-          "text": "Initial site built and deployed",
-          "done": true
-        },
-        {
-          "id": "2",
-          "text": "First business spotlight (Santa Fe Site Prep)",
-          "done": true
-        },
-        {
-          "id": "3",
-          "text": "Set up automated daily content pipeline (scraping + AI summarization cron)",
-          "done": false
-        },
-        {
-          "id": "4",
-          "text": "Share in Fort White Facebook groups for traction",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Add more business spotlights",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Build ad placement system ($25-150/mo tiers)",
-          "done": false
-        },
-        {
-          "id": "7",
-          "text": "Expand to Lake City edition",
-          "done": false
-        }
-      ],
+      "color": "#ff3366",
+      "lastUpdated": "2026-01-28T04:00:00Z",
+      "lastWorkedOn": "Shelved - CGM manufacturers prohibit API reselling. Pivoting to personal health hub concept instead.",
+      "todos": [],
       "changelog": [
         {
-          "date": "2026-02-14",
-          "summary": "Built and deployed The Tiwahe Times \u2014 hyperlocal digital newspaper for Fort White, FL. Named after Fort White HS motto #TIWAHE (Lakota for 'family'). Sections: weather, local news, community events, sports, county govt, business spotlight. First spotlight: Santa Fe Site Prep LLC (Brad Taylor). Business model: free at first, then $25-150/mo ad placements. Marketing flywheel: share in FB groups \u2192 town reads \u2192 businesses notice \u2192 KodaAI leads."
+          "date": "2026-01-28",
+          "summary": "SHELVED: Dexcom, Abbott, Medtronic all prohibit redistribution of API data. B2B SaaS model not viable. Concept may pivot to personal-use health data aggregator."
+        },
+        {
+          "date": "2026-01-27",
+          "summary": "Built initial API service with Cloudflare Workers, client libraries, business plan."
         }
       ],
-      "liveUrl": "https://tiwahe-times.pages.dev"
+      "repoUrl": "https://github.com/ava-type1/diabetesdata-io"
     },
     {
-      "id": "koda-voice",
-      "name": "Koda Voice",
-      "description": "Hands-free voice conversation with Koda AI. Real-time talk-and-respond via browser \u2014 no typing needed. Built with Pipecat (open-source voice AI framework) + SmallWebRTCTransport (free P2P) + Deepgram ($200 free credit STT) + Claude. Goal: phone-call-like experience from any device.",
-      "status": "active",
-      "progress": 20,
-      "color": "#7c3aed",
-      "lastUpdated": "2026-02-18T00:50:00Z",
-      "lastWorkedOn": "V1 prototype deployed (koda-voice.pages.dev) \u2014 recording + Whisper transcription + TTS response. Works but has iOS quirks. Researched proper solution: Pipecat + WebRTC for real-time bidirectional voice.",
+      "id": "ava-heart",
+      "name": "AVA Heart",
+      "description": "Standalone glucose display device for home - shows real CGM data on dedicated display",
+      "status": "idea",
+      "progress": 10,
+      "color": "#ffc800",
+      "lastUpdated": "2026-01-10T00:00:00Z",
+      "lastWorkedOn": "Concept design, hardware selection",
       "todos": [
         {
           "id": "1",
-          "text": "V1 prototype deployed (record \u2192 transcribe \u2192 respond \u2192 TTS)",
-          "done": true
+          "text": "Define hardware requirements",
+          "done": false
         },
         {
           "id": "2",
-          "text": "Cloudflare Whisper transcription worker deployed",
-          "done": true
-        },
-        {
-          "id": "3",
-          "text": "Research completed: Pipecat + SmallWebRTCTransport is the right approach",
-          "done": true
-        },
-        {
-          "id": "4",
-          "text": "Sign up for Deepgram free tier ($200 credit, no CC, no expiry)",
-          "done": false
-        },
-        {
-          "id": "5",
-          "text": "Install Pipecat on Contabo VPS (Python)",
-          "done": false
-        },
-        {
-          "id": "6",
-          "text": "Build Pipecat pipeline: Deepgram STT \u2192 Claude LLM \u2192 browser TTS",
-          "done": false
-        },
-        {
-          "id": "7",
-          "text": "Set up SmallWebRTCTransport (free P2P, no Daily.co needed)",
-          "done": false
-        },
-        {
-          "id": "8",
-          "text": "Build web client (connect button, auto-listen, interruption support)",
-          "done": false
-        },
-        {
-          "id": "9",
-          "text": "Deploy and test end-to-end voice conversation",
-          "done": false
-        },
-        {
-          "id": "10",
-          "text": "Add to home screen as PWA for one-tap access",
-          "done": false
-        },
-        {
-          "id": "11",
-          "text": "Test with AirPods for hands-free field use",
+          "text": "Design enclosure for bedside/desk",
           "done": false
         }
       ],
-      "changelog": [
-        {
-          "date": "2026-02-17",
-          "summary": "V1 prototype: Built browser-based voice chat (koda-voice.pages.dev). Uses MediaRecorder \u2192 Cloudflare Workers AI Whisper \u2192 Clawdbot chat API \u2192 browser TTS. Works on desktop but iOS Safari has issues with Web Speech API (service-not-allowed) and audio format (MP4 vs WAV). Switched to raw PCM capture + WAV encoding. Partially working but not reliable enough for daily use."
-        },
-        {
-          "date": "2026-02-17",
-          "summary": "Research phase: Investigated proper solutions. Pipecat (open-source voice AI framework by Daily.co) + SmallWebRTCTransport (free P2P WebRTC, no infrastructure cost) is the right approach. Uses WebRTC like Zoom \u2014 handles streaming audio, echo cancellation, interruptions natively. Deepgram offers $200 free credit (no expiry, no CC) for STT. Total ongoing cost after credits: ~$0.46/hr. Vapi evaluated but rejected ($0.13-0.31/min = another Twilio situation)."
-        }
-      ],
-      "liveUrl": "https://koda-voice.pages.dev",
-      "costBreakdown": {
-        "pipecat": "Free (open source, self-hosted on Contabo)",
-        "webrtcTransport": "Free (SmallWebRTCTransport, P2P, no server needed)",
-        "stt": "Deepgram \u2014 $200 free credit (~26,000 min), then $0.0077/min",
-        "tts": "Browser built-in (free) or Deepgram TTS (included in credit)",
-        "llm": "Claude via Clawdbot (already paid)",
-        "hosting": "Contabo VPS (already paid)",
-        "totalNow": "$0",
-        "totalAfterCredits": "~$0.46/hr (~$2.30/mo for 10 min/day)"
-      }
+      "changelog": []
     }
   ]
 }

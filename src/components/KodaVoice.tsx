@@ -46,7 +46,6 @@ type VoiceMode = 'handsfree' | 'ptt';
 const API_URL = 'https://vmi3042450.contaboserver.net:8443/v1/chat/completions';
 const API_TOKEN = '4c6b9520fe27cba5e3258e3ee09dc43ca5e7ef53e4c72cb0';
 const TRANSCRIBE_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/transcribe';
-
 const STORAGE_KEYS = {
   history: 'koda-voice-history',
   mode: 'koda-voice-mode',

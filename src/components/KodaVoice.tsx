@@ -46,6 +46,8 @@ type VoiceMode = 'handsfree' | 'ptt';
 const API_URL = 'https://vmi3042450.contaboserver.net:8443/v1/chat/completions';
 const API_TOKEN = '4c6b9520fe27cba5e3258e3ee09dc43ca5e7ef53e4c72cb0';
 const TRANSCRIBE_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/transcribe';
+const TTS_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/tts';
+const VOICES_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/voices';
 const STORAGE_KEYS = {
   history: 'koda-voice-history',
   mode: 'koda-voice-mode',
@@ -53,6 +55,8 @@ const STORAGE_KEYS = {
   voiceRate: 'koda-voice-rate',
   silenceTimeout: 'koda-voice-silence',
   settingsOpen: 'koda-voice-settings',
+  ttsMode: 'koda-voice-tts-mode',
+  dgVoice: 'koda-voice-dg-voice',
 };
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
@@ -141,6 +145,11 @@ export function KodaVoice() {
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoice, setSelectedVoice] = useState(() => localStorage.getItem(STORAGE_KEYS.voiceName) || '');
   const [voiceRate, setVoiceRate] = useState(() => parseFloat(localStorage.getItem(STORAGE_KEYS.voiceRate) || '1.0'));
+  const [ttsMode, setTtsMode] = useState<'deepgram' | 'browser'>(() =>
+    (localStorage.getItem(STORAGE_KEYS.ttsMode) as 'deepgram' | 'browser') || 'deepgram'
+  );
+  const [dgVoice, setDgVoice] = useState(() => localStorage.getItem(STORAGE_KEYS.dgVoice) || 'aura-2-zeus-en');
+  const [dgVoices, setDgVoices] = useState<Record<string, string>>({});
   const [silenceTimeout, setSilenceTimeout] = useState(() => parseFloat(localStorage.getItem(STORAGE_KEYS.silenceTimeout) || '2.0'));
 
   // Refs
@@ -176,9 +185,15 @@ export function KodaVoice() {
   const whisperSilenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const whisperLastSoundRef = useRef<number>(0);
 
+  // Deepgram TTS audio ref
+  const dgAudioRef = useRef<HTMLAudioElement | null>(null);
+  const ttsModeRef = useRef<'deepgram' | 'browser'>(ttsMode);
+
   // Keep refs in sync
   useEffect(() => { voiceStateRef.current = voiceState; }, [voiceState]);
   useEffect(() => { modeRef.current = mode; localStorage.setItem(STORAGE_KEYS.mode, mode); }, [mode]);
+  useEffect(() => { ttsModeRef.current = ttsMode; localStorage.setItem(STORAGE_KEYS.ttsMode, ttsMode); }, [ttsMode]);
+  useEffect(() => { localStorage.setItem(STORAGE_KEYS.dgVoice, dgVoice); }, [dgVoice]);
   useEffect(() => { finalTranscriptRef.current = finalTranscript; }, [finalTranscript]);
   useEffect(() => { interimTranscriptRef.current = interimTranscript; }, [interimTranscript]);
 
@@ -195,7 +210,7 @@ export function KodaVoice() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, streamContent, interimTranscript]);
 
-  // Load voices
+  // Load browser voices
   useEffect(() => {
     const loadVoices = () => {
       const v = window.speechSynthesis?.getVoices() || [];
@@ -208,6 +223,13 @@ export function KodaVoice() {
     return () => {
       if (window.speechSynthesis) window.speechSynthesis.onvoiceschanged = null;
     };
+
+  // Load Deepgram voices
+  }, []);
+  useEffect(() => {
+    fetch(VOICES_API).then(r => r.json()).then(data => {
+      setDgVoices(data.voices || {});
+    }).catch(() => {});
   }, []);
 
   // Chrome TTS keepalive
@@ -243,8 +265,13 @@ export function KodaVoice() {
     }
     recognitionActiveRef.current = false;
 
-    // Stop TTS
+    // Stop TTS (both browser and Deepgram)
     window.speechSynthesis?.cancel();
+    if (dgAudioRef.current) {
+      dgAudioRef.current.pause();
+      dgAudioRef.current.src = '';
+      dgAudioRef.current = null;
+    }
 
     // Stop PTT
     cleanupPTT();
@@ -285,20 +312,13 @@ export function KodaVoice() {
   }, []);
 
   // ── TTS ────────────────────────────────────────────────────────────────
-  const speakText = useCallback((text: string) => {
-    if (!window.speechSynthesis) return;
+  const speakWithBrowser = useCallback((text: string) => {
+    if (!window.speechSynthesis) { finishSpeaking(); return; }
     window.speechSynthesis.cancel();
 
-    const clean = cleanTextForSpeech(text);
-    if (!clean) {
-      finishSpeaking();
-      return;
-    }
-
-    // Truncate for speech
-    const speechText = clean.length > 1000
-      ? clean.substring(0, 1000) + '... Check the chat for the full response.'
-      : clean;
+    const speechText = text.length > 1000
+      ? text.substring(0, 1000) + '... Check the chat for the full response.'
+      : text;
 
     const utterance = new SpeechSynthesisUtterance(speechText);
     utterance.lang = 'en-US';
@@ -310,7 +330,6 @@ export function KodaVoice() {
       const found = allVoices.find(v => v.name === selectedVoice);
       if (found) utterance.voice = found;
     } else {
-      // Pick a natural voice
       const preferred = allVoices.find(v =>
         v.name.includes('Google') && v.name.includes('US') && v.lang.startsWith('en')
       ) || allVoices.find(v =>
@@ -319,9 +338,7 @@ export function KodaVoice() {
       if (preferred) utterance.voice = preferred;
     }
 
-    utterance.onstart = () => {
-      setVoiceState('speaking');
-    };
+    utterance.onstart = () => setVoiceState('speaking');
     utterance.onend = () => finishSpeaking();
     utterance.onerror = () => finishSpeaking();
 
@@ -329,6 +346,57 @@ export function KodaVoice() {
     window.speechSynthesis.speak(utterance);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedVoice, voiceRate]);
+
+  const speakWithDeepgram = useCallback(async (text: string) => {
+    const speechText = text.length > 2000
+      ? text.substring(0, 2000) + '. Check the chat for the full response.'
+      : text;
+
+    setVoiceState('speaking');
+    try {
+      const res = await fetch(TTS_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: speechText, voice: dgVoice }),
+      });
+      if (!res.ok) throw new Error('TTS failed');
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const audio = new Audio(url);
+      dgAudioRef.current = audio;
+
+      audio.onended = () => {
+        URL.revokeObjectURL(url);
+        dgAudioRef.current = null;
+        finishSpeaking();
+      };
+      audio.onerror = () => {
+        URL.revokeObjectURL(url);
+        dgAudioRef.current = null;
+        finishSpeaking();
+      };
+
+      await audio.play();
+    } catch {
+      // Fallback to browser TTS
+      console.warn('Deepgram TTS failed, falling back to browser');
+      speakWithBrowser(text);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dgVoice]);
+
+  const speakText = useCallback((text: string) => {
+    const clean = cleanTextForSpeech(text);
+    if (!clean) { finishSpeaking(); return; }
+
+    if (ttsModeRef.current === 'deepgram') {
+      speakWithDeepgram(clean);
+    } else {
+      speakWithBrowser(clean);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [speakWithDeepgram, speakWithBrowser]);
 
   const finishSpeaking = useCallback(() => {
     isProcessingRef.current = false;
@@ -854,6 +922,7 @@ export function KodaVoice() {
     // Interrupt TTS if speaking
     if (voiceState === 'speaking') {
       window.speechSynthesis?.cancel();
+      if (dgAudioRef.current) { dgAudioRef.current.pause(); dgAudioRef.current.src = ''; dgAudioRef.current = null; }
       isProcessingRef.current = false;
       setVoiceState('idle');
       if (mode === 'handsfree') {
@@ -1027,37 +1096,88 @@ export function KodaVoice() {
       {/* Settings Panel */}
       {settingsOpen && (
         <div className="px-4 sm:px-6 py-3 border-b border-white/5 bg-dark-800/80 space-y-3 shrink-0">
+          {/* TTS Engine Toggle */}
           <div className="flex items-center justify-between">
-            <label className="text-xs text-gray-400 uppercase tracking-wider">Voice</label>
-            <select
-              value={selectedVoice}
-              onChange={e => setSelectedVoice(e.target.value)}
-              className="bg-dark-700 border border-white/10 rounded-lg px-3 py-1.5 text-sm text-white max-w-[60%] focus:outline-none focus:border-neon-green/50"
-            >
-              <option value="">Auto</option>
-              {voices
-                .sort((a, b) => {
-                  const aEn = a.lang.startsWith('en') ? 0 : 1;
-                  const bEn = b.lang.startsWith('en') ? 0 : 1;
-                  return aEn - bEn || a.name.localeCompare(b.name);
-                })
-                .map(v => (
-                  <option key={v.name} value={v.name}>{v.name} ({v.lang})</option>
-                ))}
-            </select>
-          </div>
-          <div className="flex items-center justify-between">
-            <label className="text-xs text-gray-400 uppercase tracking-wider">Speed</label>
-            <div className="flex items-center gap-2">
-              <input
-                type="range" min="0.7" max="1.5" step="0.1"
-                value={voiceRate}
-                onChange={e => setVoiceRate(parseFloat(e.target.value))}
-                className="w-24 accent-neon-green"
-              />
-              <span className="text-xs text-white w-8 text-center">{voiceRate}x</span>
+            <label className="text-xs text-gray-400 uppercase tracking-wider">TTS Engine</label>
+            <div className="flex bg-dark-700 rounded-full p-0.5 border border-white/5">
+              <button
+                onClick={() => setTtsMode('deepgram')}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                  ttsMode === 'deepgram'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                🎧 Deepgram
+              </button>
+              <button
+                onClick={() => setTtsMode('browser')}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+                  ttsMode === 'browser'
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                🔊 Browser
+              </button>
             </div>
           </div>
+
+          {/* Deepgram Voice (when Deepgram TTS selected) */}
+          {ttsMode === 'deepgram' && (
+            <div className="flex items-center justify-between">
+              <label className="text-xs text-gray-400 uppercase tracking-wider">Voice</label>
+              <select
+                value={dgVoice}
+                onChange={e => setDgVoice(e.target.value)}
+                className="bg-dark-700 border border-white/10 rounded-lg px-3 py-1.5 text-sm text-white max-w-[60%] focus:outline-none focus:border-cyan-500/50"
+              >
+                {Object.entries(dgVoices).map(([id, name]) => (
+                  <option key={id} value={id}>{name}</option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          {/* Browser Voice (when browser TTS selected) */}
+          {ttsMode === 'browser' && (
+            <div className="flex items-center justify-between">
+              <label className="text-xs text-gray-400 uppercase tracking-wider">Voice</label>
+              <select
+                value={selectedVoice}
+                onChange={e => setSelectedVoice(e.target.value)}
+                className="bg-dark-700 border border-white/10 rounded-lg px-3 py-1.5 text-sm text-white max-w-[60%] focus:outline-none focus:border-neon-green/50"
+              >
+                <option value="">Auto</option>
+                {voices
+                  .sort((a, b) => {
+                    const aEn = a.lang.startsWith('en') ? 0 : 1;
+                    const bEn = b.lang.startsWith('en') ? 0 : 1;
+                    return aEn - bEn || a.name.localeCompare(b.name);
+                  })
+                  .map(v => (
+                    <option key={v.name} value={v.name}>{v.name} ({v.lang})</option>
+                  ))}
+              </select>
+            </div>
+          )}
+
+          {/* Speed (browser TTS only) */}
+          {ttsMode === 'browser' && (
+            <div className="flex items-center justify-between">
+              <label className="text-xs text-gray-400 uppercase tracking-wider">Speed</label>
+              <div className="flex items-center gap-2">
+                <input
+                  type="range" min="0.7" max="1.5" step="0.1"
+                  value={voiceRate}
+                  onChange={e => setVoiceRate(parseFloat(e.target.value))}
+                  className="w-24 accent-neon-green"
+                />
+                <span className="text-xs text-white w-8 text-center">{voiceRate}x</span>
+              </div>
+            </div>
+          )}
+
           <div className="flex items-center justify-between">
             <label className="text-xs text-gray-400 uppercase tracking-wider">Silence Timeout</label>
             <div className="flex items-center gap-2">

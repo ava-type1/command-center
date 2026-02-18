@@ -1298,6 +1298,7 @@ export function KodaVoice() {
         <div className="flex flex-col items-center py-4 gap-2">
           <button
             onClick={handleMicClick}
+            onTouchEnd={(e) => { e.preventDefault(); handleMicClick(); }}
             disabled={voiceState === 'thinking'}
             className={micButtonClasses}
             style={voiceState === 'thinking' ? { animation: 'pulse 1s ease-in-out infinite' } : undefined}

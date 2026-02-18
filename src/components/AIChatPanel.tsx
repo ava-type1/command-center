@@ -148,23 +148,63 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
     if (!isOpen) {
       stopListening();
       window.speechSynthesis?.cancel();
+      if (dgAudioRef?.current) { dgAudioRef.current.pause(); dgAudioRef.current.src = ''; dgAudioRef.current = null; }
       setIsSpeaking(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
+  // ── Whisper fallback refs ────────────────────────────────────────────────
+  const whisperModeRef = useRef(false);
+  const whisperAudioCtxRef = useRef<AudioContext | null>(null);
+  const whisperProcessorRef = useRef<ScriptProcessorNode | null>(null);
+  const whisperStreamRef = useRef<MediaStream | null>(null);
+  const whisperChunksRef = useRef<Float32Array[]>([]);
+  const whisperLastSoundRef = useRef<number>(0);
+  const TRANSCRIBE_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/transcribe';
+
+  function encodeWav(chunks: Float32Array[], sampleRate: number): Blob {
+    let totalLength = 0;
+    for (const c of chunks) totalLength += c.length;
+    const samples = new Float32Array(totalLength);
+    let off = 0;
+    for (const c of chunks) { samples.set(c, off); off += c.length; }
+    const buf = new ArrayBuffer(44 + samples.length * 2);
+    const v = new DataView(buf);
+    const w = (p: number, s: string) => { for (let i = 0; i < s.length; i++) v.setUint8(p + i, s.charCodeAt(i)); };
+    w(0, 'RIFF');
+    v.setUint32(4, 36 + samples.length * 2, true);
+    w(8, 'WAVE'); w(12, 'fmt ');
+    v.setUint32(16, 16, true); v.setUint16(20, 1, true);
+    v.setUint16(22, 1, true); v.setUint32(24, sampleRate, true);
+    v.setUint32(28, sampleRate * 2, true); v.setUint16(32, 2, true);
+    v.setUint16(34, 16, true); w(36, 'data');
+    v.setUint32(40, samples.length * 2, true);
+    for (let i = 0; i < samples.length; i++) {
+      const s = Math.max(-1, Math.min(1, samples[i]));
+      v.setInt16(44 + i * 2, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+    }
+    return new Blob([buf], { type: 'audio/wav' });
+  }
+
   // ── SpeechRecognition setup ────────────────────────────────────────────
   const getSpeechRecognition = useCallback((): SpeechRecognitionInstance | null => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      setVoiceError('Speech recognition is not supported in this browser.');
-      return null;
-    }
+    if (!SpeechRecognition) return null;
     const recognition = new SpeechRecognition();
     recognition.continuous = false;
     recognition.interimResults = true;
     recognition.lang = 'en-US';
     return recognition;
+  }, []);
+
+  const cleanupWhisper = useCallback(() => {
+    whisperModeRef.current = false;
+    try { whisperProcessorRef.current?.disconnect(); } catch { /* */ }
+    try { whisperAudioCtxRef.current?.close(); } catch { /* */ }
+    whisperAudioCtxRef.current = null;
+    if (whisperStreamRef.current) { whisperStreamRef.current.getTracks().forEach(t => t.stop()); whisperStreamRef.current = null; }
+    whisperChunksRef.current = [];
   }, []);
 
   const stopListening = useCallback(() => {
@@ -173,14 +213,87 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
       try { recognitionRef.current.abort(); } catch { /* ignore */ }
       recognitionRef.current = null;
     }
+    cleanupWhisper();
     setIsListening(false);
     setInterimTranscript('');
+  }, [cleanupWhisper]);
+
+  // Whisper: send recorded audio for transcription
+  const whisperTranscribe = useCallback(async (chunks: Float32Array[], sampleRate: number) => {
+    const wavBlob = encodeWav(chunks, sampleRate);
+    if (wavBlob.size < 5000) return; // too short
+    try {
+      const formData = new FormData();
+      formData.append('audio', wavBlob, 'recording.wav');
+      const resp = await fetch(TRANSCRIBE_API, { method: 'POST', body: formData });
+      if (!resp.ok) return;
+      const data = await resp.json();
+      const transcript = (data.transcript || '').trim();
+      if (transcript && transcript !== '[BLANK_AUDIO]' && transcript.length > 1) {
+        setInput(prev => prev ? prev + ' ' + transcript : transcript);
+      }
+    } catch { /* ignore */ }
   }, []);
+
+  // Start Whisper-based listening (fallback when Web Speech API unavailable)
+  const startWhisperListening = useCallback(async () => {
+    setVoiceError(null);
+    whisperModeRef.current = true;
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: { echoCancellation: true, noiseSuppression: true }
+      });
+      whisperStreamRef.current = stream;
+      whisperChunksRef.current = [];
+      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)({ sampleRate: 16000 });
+      if (audioContext.state === 'suspended') await audioContext.resume();
+      whisperAudioCtxRef.current = audioContext;
+      const source = audioContext.createMediaStreamSource(stream);
+      const processor = audioContext.createScriptProcessor(4096, 1, 1);
+      whisperProcessorRef.current = processor;
+      whisperLastSoundRef.current = Date.now();
+
+      processor.onaudioprocess = (e: AudioProcessingEvent) => {
+        if (!whisperModeRef.current) return;
+        const data = new Float32Array(e.inputBuffer.getChannelData(0));
+        whisperChunksRef.current.push(data);
+        // Energy detection
+        let sum = 0;
+        for (let i = 0; i < data.length; i++) sum += data[i] * data[i];
+        if (Math.sqrt(sum / data.length) > 0.01) {
+          whisperLastSoundRef.current = Date.now();
+        }
+        // Silence = transcribe
+        if (Date.now() - whisperLastSoundRef.current > 2000 && whisperChunksRef.current.length > 10) {
+          const chunks = [...whisperChunksRef.current];
+          whisperChunksRef.current = [];
+          whisperLastSoundRef.current = Date.now();
+          const sr = whisperAudioCtxRef.current?.sampleRate || 16000;
+          whisperTranscribe(chunks, sr);
+        }
+      };
+
+      source.connect(processor);
+      const silentGain = audioContext.createGain();
+      silentGain.gain.value = 0;
+      silentGain.connect(audioContext.destination);
+      processor.connect(silentGain);
+      setIsListening(true);
+    } catch {
+      setVoiceError('Microphone access denied. Please allow mic access.');
+      whisperModeRef.current = false;
+    }
+  }, [whisperTranscribe]);
 
   const startListening = useCallback(() => {
     setVoiceError(null);
     const recognition = getSpeechRecognition();
-    if (!recognition) return;
+
+    // If Web Speech API unavailable, use Whisper fallback
+    if (!recognition) {
+      startWhisperListening();
+      return;
+    }
 
     // Stop any existing
     if (recognitionRef.current) {
@@ -219,19 +332,20 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
 
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
       if (event.error === 'aborted' || event.error === 'no-speech') return;
-      if (event.error === 'not-allowed') {
-        setVoiceError('Microphone access denied. Please allow mic access and try again.');
-        shouldRestartRef.current = false;
-      } else {
-        setVoiceError(`Speech error: ${event.error}`);
+      if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+        // Web Speech API blocked — fall back to Whisper
+        setIsListening(false);
+        recognitionRef.current = null;
+        startWhisperListening();
+        return;
       }
+      setVoiceError(`Speech error: ${event.error}`);
       setIsListening(false);
     };
 
     recognition.onend = () => {
       setIsListening(false);
       recognitionRef.current = null;
-      // Continuous conversation: restart if voice mode is on and we're not currently streaming/speaking
       if (shouldRestartRef.current && voiceModeRef.current && !streamingRef.current && !isSpeakingRef.current) {
         setTimeout(() => {
           if (shouldRestartRef.current && voiceModeRef.current) {
@@ -243,21 +357,21 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
 
     try {
       recognition.start();
-    } catch (err) {
-      setVoiceError('Failed to start speech recognition.');
+    } catch {
+      // Start failed — try Whisper fallback
       setIsListening(false);
+      startWhisperListening();
     }
-  }, [getSpeechRecognition, stopListening]);
+  }, [getSpeechRecognition, stopListening, startWhisperListening]);
 
-  // ── TTS ────────────────────────────────────────────────────────────────
+  // ── TTS (Deepgram with browser fallback) ────────────────────────────────
+  const dgAudioRef = useRef<HTMLAudioElement | null>(null);
+  const TTS_API = 'https://koda-transcribe.kameronmartinllc.workers.dev/tts';
+
   const speakText = useCallback((text: string) => {
     if (!ttsEnabledRef.current || !voiceModeRef.current) return;
-    if (!window.speechSynthesis) return;
 
-    // Cancel any ongoing speech
-    window.speechSynthesis.cancel();
-
-    // Strip markdown-ish formatting for cleaner speech
+    // Strip markdown for cleaner speech
     const clean = text
       .replace(/```[\s\S]*?```/g, ' code block ')
       .replace(/`([^`]+)`/g, '$1')
@@ -265,30 +379,16 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
       .replace(/\*([^*]+)\*/g, '$1')
       .replace(/#{1,6}\s/g, '')
       .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/https?:\/\/[^\s]+/g, '')
       .replace(/[_~]/g, '')
       .trim();
 
     if (!clean) return;
 
-    const utterance = new SpeechSynthesisUtterance(clean);
-    utterance.lang = 'en-US';
-    utterance.rate = 1.05;
-    utterance.pitch = 1.0;
+    const speechText = clean.length > 2000 ? clean.substring(0, 2000) + '. Check the chat for the full response.' : clean;
 
-    // Pick a natural voice if available
-    const voices = window.speechSynthesis.getVoices();
-    const preferred = voices.find(v =>
-      v.name.includes('Google') && v.name.includes('US') && v.lang.startsWith('en')
-    ) || voices.find(v =>
-      v.name.includes('Samantha') || v.name.includes('Daniel') || v.name.includes('Karen')
-    ) || voices.find(v => v.lang.startsWith('en') && v.localService);
-
-    if (preferred) utterance.voice = preferred;
-
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => {
+    const finishSpeech = () => {
       setIsSpeaking(false);
-      // Restart listening for continuous conversation
       if (voiceModeRef.current && shouldRestartRef.current) {
         setTimeout(() => {
           if (voiceModeRef.current && shouldRestartRef.current && !streamingRef.current) {
@@ -297,11 +397,37 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
         }, 400);
       }
     };
-    utterance.onerror = () => {
-      setIsSpeaking(false);
-    };
 
-    window.speechSynthesis.speak(utterance);
+    // Try Deepgram TTS first
+    setIsSpeaking(true);
+    fetch(TTS_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: speechText, voice: 'aura-2-zeus-en' }),
+    }).then(res => {
+      if (!res.ok) throw new Error('TTS failed');
+      return res.blob();
+    }).then(blob => {
+      const url = URL.createObjectURL(blob);
+      const audio = new Audio(url);
+      dgAudioRef.current = audio;
+      audio.onended = () => { URL.revokeObjectURL(url); dgAudioRef.current = null; finishSpeech(); };
+      audio.onerror = () => { URL.revokeObjectURL(url); dgAudioRef.current = null; finishSpeech(); };
+      audio.play().catch(() => finishSpeech());
+    }).catch(() => {
+      // Fallback to browser TTS
+      if (window.speechSynthesis) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(speechText);
+        utterance.lang = 'en-US';
+        utterance.rate = 1.05;
+        utterance.onend = () => finishSpeech();
+        utterance.onerror = () => finishSpeech();
+        window.speechSynthesis.speak(utterance);
+      } else {
+        finishSpeech();
+      }
+    });
   }, [startListening]);
 
   // ── Voice mode toggle ──────────────────────────────────────────────────
@@ -577,6 +703,7 @@ export function AIChatPanel({ isOpen, onClose }: AIChatPanelProps) {
             {/* Voice Mode Toggle */}
             <button
               onClick={toggleVoiceMode}
+              onTouchEnd={(e) => { e.preventDefault(); toggleVoiceMode(); }}
               className={`p-2 rounded-lg transition-all relative ${
                 voiceMode
                   ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30 ring-1 ring-red-500/40'

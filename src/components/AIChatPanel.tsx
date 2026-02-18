@@ -25,7 +25,13 @@ interface SpeechRecognitionInstance extends EventTarget {
   onstart: (() => void) | null;
 }
 
-// Window SpeechRecognition types declared in KodaVoice.tsx
+declare global {
+  interface Window {
+    SpeechRecognition: new () => SpeechRecognitionInstance;
+    webkitSpeechRecognition: new () => SpeechRecognitionInstance;
+    webkitAudioContext: typeof AudioContext;
+  }
+}
 
 // ─── Interfaces ────────────────────────────────────────────────────────────
 interface Message {

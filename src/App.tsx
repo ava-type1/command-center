@@ -183,7 +183,7 @@ function App() {
           </div>
         </header>
 
-        {view === 'koda' ? (
+        {view === 'voice' ? (
           <ErrorBoundary>
             <KodaVoice />
           </ErrorBoundary>

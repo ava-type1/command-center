@@ -1,6 +1,6 @@
 import { LayoutDashboard, Lightbulb, DollarSign, PenTool, Calendar, X, Zap, Target, Mic } from 'lucide-react';
 
-export type View = 'dashboard' | 'finance' | 'content' | 'ideas' | 'briefing' | 'prospects' | 'koda';
+export type View = 'dashboard' | 'finance' | 'content' | 'ideas' | 'briefing' | 'prospects' | 'voice';
 
 interface SidebarProps {
   view: View;
@@ -16,7 +16,7 @@ const navItems: { id: View; label: string; icon: typeof LayoutDashboard; activeC
   { id: 'ideas', label: 'Ideas', icon: Lightbulb, activeColor: '#bf00ff', activeBg: 'rgba(191,0,255,0.1)', activeBorder: 'rgba(191,0,255,0.2)' },
   { id: 'prospects', label: 'Prospects', icon: Target, activeColor: '#ff3366', activeBg: 'rgba(255,51,102,0.1)', activeBorder: 'rgba(255,51,102,0.2)' },
   { id: 'briefing', label: 'Daily Briefing', icon: Calendar, activeColor: '#ff6600', activeBg: 'rgba(255,102,0,0.1)', activeBorder: 'rgba(255,102,0,0.2)' },
-  { id: 'koda', label: 'Koda', icon: Mic, activeColor: '#00d4ff', activeBg: 'rgba(0,212,255,0.1)', activeBorder: 'rgba(0,212,255,0.2)' },
+  { id: 'voice', label: 'Voice', icon: Mic, activeColor: '#ff6347', activeBg: 'rgba(255,99,71,0.1)', activeBorder: 'rgba(255,99,71,0.2)' },
 ];
 
 export function Sidebar({ view, onViewChange, isOpen, onClose }: SidebarProps) {

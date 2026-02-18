@@ -6,6 +6,7 @@ import { FinanceDashboard } from './components/FinanceDashboard';
 import { ContentCreator } from './components/ContentCreator';
 import { DailyBriefing } from './components/DailyBriefing';
 import { ProspectsList } from './components/ProspectsList';
+import { KodaVoice } from './components/KodaVoice';
 import { Sidebar, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2, Menu, RefreshCw } from 'lucide-react';
@@ -182,33 +183,39 @@ function App() {
           </div>
         </header>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          {error && (
-            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
-              {error}
-              <button onClick={loadData} className="ml-4 underline hover:text-red-300">
-                Retry
-              </button>
-            </div>
-          )}
-
+        {view === 'koda' ? (
           <ErrorBoundary>
-            {view === 'dashboard' && (
-              <DashboardView
-                projects={projects}
-                onSelectProject={setSelectedProject}
-                onReorderProjects={reorderProjects}
-                lastSync={lastSync}
-                onRefresh={loadData}
-              />
-            )}
-            {view === 'finance' && <FinanceDashboard />}
-            {view === 'content' && <ContentCreator />}
-            {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
-            {view === 'prospects' && <ProspectsList />}
-            {view === 'briefing' && <DailyBriefing days={dailyLog} />}
+            <KodaVoice />
           </ErrorBoundary>
-        </main>
+        ) : (
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            {error && (
+              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
+                {error}
+                <button onClick={loadData} className="ml-4 underline hover:text-red-300">
+                  Retry
+                </button>
+              </div>
+            )}
+
+            <ErrorBoundary>
+              {view === 'dashboard' && (
+                <DashboardView
+                  projects={projects}
+                  onSelectProject={setSelectedProject}
+                  onReorderProjects={reorderProjects}
+                  lastSync={lastSync}
+                  onRefresh={loadData}
+                />
+              )}
+              {view === 'finance' && <FinanceDashboard />}
+              {view === 'content' && <ContentCreator />}
+              {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
+              {view === 'prospects' && <ProspectsList />}
+              {view === 'briefing' && <DailyBriefing days={dailyLog} />}
+            </ErrorBoundary>
+          </main>
+        )}
       </div>
 
       {/* AI Chat */}

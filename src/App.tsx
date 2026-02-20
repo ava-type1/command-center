@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { ProjectCard } from './components/ProjectCard';
 import { ProjectDetail } from './components/ProjectDetail';
 import { IdeasHub } from './components/IdeasHub';
+import { NewsFeed } from './components/NewsFeed';
 import { FinanceDashboard } from './components/FinanceDashboard';
 import { ContentCreator } from './components/ContentCreator';
 import { DailyBriefing } from './components/DailyBriefing';
@@ -16,11 +17,14 @@ import type { Project, Idea } from './types';
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
 const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
 const IDEAS_URL = `${GITHUB_BASE}/ideas.json`;
+const NEWS_URL = `${GITHUB_BASE}/news.json`;
 const DAILY_LOG_URL = `${GITHUB_BASE}/daily-log.json`;
 
 function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
+  const [news, setNews] = useState<any[]>([]);
+  const [newsLastUpdated, setNewsLastUpdated] = useState<string | undefined>(undefined);
   const [dailyLog, setDailyLog] = useState<any[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [view, setView] = useState<View>('dashboard');
@@ -35,9 +39,10 @@ function App() {
     setError(null);
 
     try {
-      const [projectsRes, ideasRes, dailyLogRes] = await Promise.all([
+      const [projectsRes, ideasRes, newsRes, dailyLogRes] = await Promise.all([
         fetch(PROJECTS_URL + '?t=' + Date.now()),
         fetch(IDEAS_URL + '?t=' + Date.now()),
+        fetch(NEWS_URL + '?t=' + Date.now()),
         fetch(DAILY_LOG_URL + '?t=' + Date.now()),
       ]);
 
@@ -74,6 +79,14 @@ function App() {
         setProjects(orderedProjects);
         setIdeas(ideasData.ideas || []);
         setLastSync(new Date());
+
+        if (newsRes.ok) {
+          const newsData = await newsRes.json();
+          setNews(newsData.items || []);
+          setNewsLastUpdated(newsData.lastUpdated);
+          localStorage.setItem('kam-news', JSON.stringify(newsData.items));
+          localStorage.setItem('kam-news-updated', newsData.lastUpdated || '');
+        }
 
         localStorage.setItem('kam-projects', JSON.stringify(orderedProjects));
         localStorage.setItem('kam-ideas', JSON.stringify(ideasData.ideas));
@@ -208,6 +221,7 @@ function App() {
                   onRefresh={loadData}
                 />
               )}
+              {view === 'news' && <NewsFeed news={news} lastUpdated={newsLastUpdated} />}
               {view === 'finance' && <FinanceDashboard />}
               {view === 'content' && <ContentCreator />}
               {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}

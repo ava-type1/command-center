@@ -1,6 +1,6 @@
-import { LayoutDashboard, Lightbulb, DollarSign, PenTool, Calendar, X, Zap, Target, Mic } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, DollarSign, PenTool, Calendar, X, Zap, Target, Mic, Newspaper } from 'lucide-react';
 
-export type View = 'dashboard' | 'finance' | 'content' | 'ideas' | 'briefing' | 'prospects' | 'voice';
+export type View = 'dashboard' | 'news' | 'finance' | 'content' | 'ideas' | 'briefing' | 'prospects' | 'voice';
 
 interface SidebarProps {
   view: View;
@@ -11,6 +11,7 @@ interface SidebarProps {
 
 const navItems: { id: View; label: string; icon: typeof LayoutDashboard; activeColor: string; activeBg: string; activeBorder: string }[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, activeColor: '#00ff88', activeBg: 'rgba(0,255,136,0.1)', activeBorder: 'rgba(0,255,136,0.2)' },
+  { id: 'news', label: 'News', icon: Newspaper, activeColor: '#00d4ff', activeBg: 'rgba(0,212,255,0.1)', activeBorder: 'rgba(0,212,255,0.2)' },
   { id: 'finance', label: 'Finance', icon: DollarSign, activeColor: '#00d4ff', activeBg: 'rgba(0,212,255,0.1)', activeBorder: 'rgba(0,212,255,0.2)' },
   { id: 'content', label: 'Content', icon: PenTool, activeColor: '#ff0080', activeBg: 'rgba(255,0,128,0.1)', activeBorder: 'rgba(255,0,128,0.2)' },
   { id: 'ideas', label: 'Ideas', icon: Lightbulb, activeColor: '#bf00ff', activeBg: 'rgba(191,0,255,0.1)', activeBorder: 'rgba(191,0,255,0.2)' },

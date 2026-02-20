@@ -65,56 +65,20 @@
       "status": "active",
       "progress": 90,
       "color": "#00ff88",
-      "lastUpdated": "2026-02-20T10:30:00Z",
-      "lastWorkedOn": "Added Moonshots/Innermost Loop category to News tab (orange rocket filter). Daily news cron now auto-pulls Alex Wissner-Gross's newsletter RSS every morning. Feb 19 entry already live.",
+      "lastUpdated": "2026-02-20",
+      "lastWorkedOn": "2026-02-20",
       "todos": [
-        {
-          "id": "1",
-          "text": "Implement GitHub-based data sync",
-          "done": true
-        },
-        {
-          "id": "2",
-          "text": "Add embedded Claude chat interface",
-          "done": true
-        },
-        {
-          "id": "3",
-          "text": "Deploy Telegram relay worker",
-          "done": true
-        },
-        {
-          "id": "4",
-          "text": "Real-time updates when AI makes changes",
-          "done": true
-        },
-        {
-          "id": "5",
-          "text": "Weather widget",
-          "done": true
-        },
-        {
-          "id": "6",
-          "text": "Quick Links panel",
-          "done": true
-        },
-        {
-          "id": "7",
-          "text": "Project progress bars",
-          "done": true
-        },
         {
           "id": "8",
           "text": "Auto-update dashboard after every conversation",
           "done": false
-        },
-        {
-          "id": "9",
-          "text": "Grid card layout with drag-to-reorder",
-          "done": true
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-20",
+          "summary": "Added News tab to sidebar (was never wired up). Now loads news.json with Moonshots/Innermost Loop category (Dr. Alex Wissner-Gross daily AI newsletter). Daily news cron updated to auto-pull The Innermost Loop RSS every morning. Nightly Ideas cron added (11:59 PM) to auto-log ideas from daily conversations."
+        },
         {
           "date": "2026-02-20",
           "entry": "Added Moonshots category to News tab \u2014 pulls The Innermost Loop (Alex Wissner-Gross) daily via RSS. Daily news cron updated to fetch it first. Feb 19 entry loaded."
@@ -234,8 +198,8 @@
       "status": "active",
       "progress": 75,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-02-20T10:00:00Z",
-      "lastWorkedOn": "Daily news cron ran \u2014 2 new stories (Indians beat Bell 12-7, record now 1-4; FHSAA football restructure puts Fort White in new Class 1A district). Sports, events, and government notices updated. Weather refreshed.",
+      "lastUpdated": "2026-02-20",
+      "lastWorkedOn": "2026-02-20",
       "todos": [
         {
           "id": "1",
@@ -301,6 +265,10 @@
       "changelog": [
         {
           "date": "2026-02-20",
+          "summary": "Morning update: Indians beat Bell 12-7 (record 1-4). FHSAA merges Rural/1A football \u2014 Fort White now in Class 1A with Lafayette, Madison County, Taylor County. Weather: cold front Mon (lows 30s). Events cleaned up. Fixed timeout issue by spawning manual run."
+        },
+        {
+          "date": "2026-02-20",
           "entry": "Daily update: Indians beat Bell 12-7 (record 1-4). FHSAA merges rural/1A football \u2014 Fort White now in Class 1A with Lafayette, Madison Co, Taylor Co. Events and gov notices cleaned up."
         },
         {
@@ -324,10 +292,10 @@
       "name": "FieldBook",
       "description": "Mobile-first PWA for Nobility Homes contractors. Job tracking, photo documentation, return ticket workflow with materials checklist, digital signature pad (ink color picker), and email-to-HQ sharing. Offline-capable, installable on iOS.",
       "status": "active",
-      "progress": 95,
+      "progress": 85,
       "color": "#10b981",
-      "lastUpdated": "2026-02-20T00:30:00Z",
-      "lastWorkedOn": "Active URL: master.fieldbook-pro.pages.dev. Service worker removed (was causing iOS reload loop). Signature stamps directly on ticket photo with ink color picker. iOS file input fix deployed.",
+      "lastUpdated": "2026-02-20",
+      "lastWorkedOn": "2026-02-20",
       "todos": [
         {
           "id": "1",
@@ -381,6 +349,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-20",
+          "summary": "Return Ticket feature complete: camera/library upload, materials checklist with red strikethrough, signature pad with ink color picker, signature overlays on ticket photo (bottom-right), real-time email preview canvas, iOS native share sheet for 'Email to HQ'. Fixed iOS file input bug (label pattern). Active at master.fieldbook-pro.pages.dev."
+        },
         {
           "date": "2026-02-19",
           "entry": "Migrated to new CF Pages project (fieldbook-pro). Removed service worker. Added ink color picker (Black/Blue/Red). Signature now overlays on ticket photo. Fixed iOS file picker bug."
@@ -570,8 +542,8 @@
       "status": "active",
       "progress": 30,
       "color": "#06b6d4",
-      "lastUpdated": "2026-02-14T16:30:00Z",
-      "lastWorkedOn": "MAJOR PIVOT: Repositioned as consumer GUI for OpenClaw. Deep competitive research completed. 1,091-line platform spec written. Project scaffolded (1,868 lines TypeScript). Multi-tenant Moltworker architecture designed.",
+      "lastUpdated": "2026-02-20",
+      "lastWorkedOn": "2026-02-20",
       "todos": [
         {
           "id": "kam-1",
@@ -675,6 +647,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-20",
+          "summary": "PRD written at /root/clawd/koda-app/PRD.md. Nightly backend build cron active (2 AM ET). Strategy: self-hosted model approach. iOS architecture research complete. Switched main session from Opus to Sonnet to avoid rate limits."
+        },
         {
           "date": "2026-02-14",
           "summary": "MAJOR PIVOT: Heard on Moonshots podcast (Peter Diamandis) that whoever perfects the consumer GUI for OpenClaw will capture massive value. Deep research confirmed: nobody has built it yet. Cloud providers only solving hosting, not usability. Completed: competitive landscape analysis, 1,091-line platform spec (PLATFORM-SPEC.md), project scaffold with 1,868 lines TypeScript (provisioning, Twilio SMS, Stripe billing, admin API, industry templates). Architecture: each client gets isolated Cloudflare Sandbox (Moltworker), accessed via SMS. Cost per client: $35-65/mo. Revenue: $99-349/mo."

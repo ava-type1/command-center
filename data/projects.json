@@ -8,7 +8,7 @@
       "progress": 5,
       "color": "#8b5cf6",
       "lastUpdated": "2026-02-20T07:00:00Z",
-      "lastWorkedOn": "Nightly build cron active (2 AM ET). First build ran Feb 20 — hit 10min timeout working on backend scaffold. Switched main model from Opus 4.6 → Sonnet 4.6 to conserve Claude Max rate limits; Opus still available for heavy tasks.",
+      "lastWorkedOn": "Nightly build cron active (2 AM ET). First build ran Feb 20 \u2014 hit 10min timeout working on backend scaffold. Switched main model from Opus 4.6 \u2192 Sonnet 4.6 to conserve Claude Max rate limits; Opus still available for heavy tasks.",
       "todos": [
         {
           "id": "1",
@@ -63,10 +63,10 @@
       "name": "Command Center",
       "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
       "status": "active",
-      "progress": 85,
+      "progress": 90,
       "color": "#00ff88",
-      "lastUpdated": "2026-02-18T04:30:00Z",
-      "lastWorkedOn": "Projects.json refreshed with latest work. Grid card layout with drag-to-reorder added. UI modernized.",
+      "lastUpdated": "2026-02-20T10:30:00Z",
+      "lastWorkedOn": "Added Moonshots/Innermost Loop category to News tab (orange rocket filter). Daily news cron now auto-pulls Alex Wissner-Gross's newsletter RSS every morning. Feb 19 entry already live.",
       "todos": [
         {
           "id": "1",
@@ -115,6 +115,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-20",
+          "entry": "Added Moonshots category to News tab \u2014 pulls The Innermost Loop (Alex Wissner-Gross) daily via RSS. Daily news cron updated to fetch it first. Feb 19 entry loaded."
+        },
         {
           "date": "2026-02-18",
           "summary": "Overnight build: Updated projects.json with all recent work (Tiwahe Times v2, FieldBook, Koda Voice v2). Redesigned dashboard to grid card layout with drag-to-reorder capability. Compact cards show project name, status, progress, last updated. Click to expand."
@@ -230,8 +234,8 @@
       "status": "active",
       "progress": 75,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-02-20T13:00:00Z",
-      "lastWorkedOn": "Daily news update: Indians beat Bell 12-7 (record 1-4), FHSAA merges rural/1A football district (Fort White now with Lafayette, Madison County, Taylor County). Sports, events, and government notices updated. Weather refreshed.",
+      "lastUpdated": "2026-02-20T10:00:00Z",
+      "lastWorkedOn": "Daily news cron ran \u2014 2 new stories (Indians beat Bell 12-7, record now 1-4; FHSAA football restructure puts Fort White in new Class 1A district). Sports, events, and government notices updated. Weather refreshed.",
       "todos": [
         {
           "id": "1",
@@ -297,6 +301,10 @@
       "changelog": [
         {
           "date": "2026-02-20",
+          "entry": "Daily update: Indians beat Bell 12-7 (record 1-4). FHSAA merges rural/1A football \u2014 Fort White now in Class 1A with Lafayette, Madison Co, Taylor Co. Events and gov notices cleaned up."
+        },
+        {
+          "date": "2026-02-20",
           "summary": "Daily news update: Added Indians baseball win vs Bell (12-7, record now 1-4) with full batting notes. Added FHSAA district restructure story (Fort White moves to Class 1A football with Lafayette, Madison County, Taylor County). Upcoming games added: vs Dixie County (Feb 24), @ Trenton (Feb 26). Past Feb 19 events removed. Fort White Town Council meeting time corrected to 6 PM. Government notices cleaned up. Weather refreshed."
         },
         {
@@ -318,8 +326,8 @@
       "status": "active",
       "progress": 95,
       "color": "#10b981",
-      "lastUpdated": "2026-02-20T00:00:00Z",
-      "lastWorkedOn": "Return Ticket feature complete: photo upload (Camera or Photo Library), materials checklist with red strikethrough, signature stamps directly on ticket photo (Black/Blue/Red ink), iOS share sheet for email to HQ. Migrated to new Cloudflare Pages project (master.fieldbook-pro.pages.dev) to fix iOS service worker cache lock. Service worker fully removed.",
+      "lastUpdated": "2026-02-20T00:30:00Z",
+      "lastWorkedOn": "Active URL: master.fieldbook-pro.pages.dev. Service worker removed (was causing iOS reload loop). Signature stamps directly on ticket photo with ink color picker. iOS file input fix deployed.",
       "todos": [
         {
           "id": "1",
@@ -373,6 +381,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-19",
+          "entry": "Migrated to new CF Pages project (fieldbook-pro). Removed service worker. Added ink color picker (Black/Blue/Red). Signature now overlays on ticket photo. Fixed iOS file picker bug."
+        },
         {
           "date": "2026-02-20",
           "summary": "Return Ticket feature complete: photo upload (Camera OR Photo Library), materials checklist (tap to strikethrough in red), signature canvas overlaid on ticket photo (bottom-right), ink color picker (Black/Blue/Red), iOS share sheet for email. Fixed iOS programmatic .click() block using label+input pattern. Migrated to master.fieldbook-pro.pages.dev after iOS PWA service worker cache lock. Service worker removed entirely. Jobs re-seeded: John Barron (Callahan) + James Guest (Yulee)."
@@ -1976,5 +1988,6 @@
       ],
       "changelog": []
     }
-  ]
+  ],
+  "lastUpdated": "2026-02-20T10:30:00Z"
 }

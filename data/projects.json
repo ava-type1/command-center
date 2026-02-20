@@ -7,8 +7,8 @@
       "status": "active",
       "progress": 5,
       "color": "#8b5cf6",
-      "lastUpdated": "2026-02-19T16:00:00Z",
-      "lastWorkedOn": "Project inception. Deep research completed. PRD written. Architecture decided: Cloudflare DO backend + SwiftUI/TCA iOS app. Nightly builds starting tonight.",
+      "lastUpdated": "2026-02-20T07:00:00Z",
+      "lastWorkedOn": "Nightly build cron active (2 AM ET). First build ran Feb 20 — hit 10min timeout working on backend scaffold. Switched main model from Opus 4.6 → Sonnet 4.6 to conserve Claude Max rate limits; Opus still available for heavy tasks.",
       "todos": [
         {
           "id": "1",
@@ -230,8 +230,8 @@
       "status": "active",
       "progress": 75,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-02-18T01:00:00Z",
-      "lastWorkedOn": "Major v2 redesign complete: dark red/black/white theme, hero cards, section pages, MaxPreps sports with box scores, Fort White vs Lake City locality split, always-visible navigation tabs, alerts banner. Ready for Facebook group launch.",
+      "lastUpdated": "2026-02-20T13:00:00Z",
+      "lastWorkedOn": "Daily news update: Indians beat Bell 12-7 (record 1-4), FHSAA merges rural/1A football district (Fort White now with Lafayette, Madison County, Taylor County). Sports, events, and government notices updated. Weather refreshed.",
       "todos": [
         {
           "id": "1",
@@ -296,6 +296,10 @@
       ],
       "changelog": [
         {
+          "date": "2026-02-20",
+          "summary": "Daily news update: Added Indians baseball win vs Bell (12-7, record now 1-4) with full batting notes. Added FHSAA district restructure story (Fort White moves to Class 1A football with Lafayette, Madison County, Taylor County). Upcoming games added: vs Dixie County (Feb 24), @ Trenton (Feb 26). Past Feb 19 events removed. Fort White Town Council meeting time corrected to 6 PM. Government notices cleaned up. Weather refreshed."
+        },
+        {
           "date": "2026-02-18",
           "summary": "MAJOR V2 REDESIGN: Dark red/black/white theme carried throughout. Hero cards on front page. Section pages (Sports, News, Government, Events, Business). MaxPreps integration with box scores and season records. Fort White vs Lake City news split with locality tagging. Always-visible tab navigation (no hamburger menu \u2014 better for older audience). Alerts banner with full descriptions and source links. Daily cron updated with locality rules. Ready for Facebook group launch."
         },
@@ -310,12 +314,12 @@
     {
       "id": "fieldbook",
       "name": "FieldBook",
-      "description": "Mobile-first field contact book for contractors. Quick-access contact cards with one-tap call/text, organized by job site. Built as PWA for instant access in the field.",
-      "status": "completed",
-      "progress": 100,
+      "description": "Mobile-first PWA for Nobility Homes contractors. Job tracking, photo documentation, return ticket workflow with materials checklist, digital signature pad (ink color picker), and email-to-HQ sharing. Offline-capable, installable on iOS.",
+      "status": "active",
+      "progress": 95,
       "color": "#10b981",
-      "lastUpdated": "2026-02-18T00:00:00Z",
-      "lastWorkedOn": "Live and confirmed working by Kam. Text + Call buttons added. Deployed to Cloudflare Pages as PWA.",
+      "lastUpdated": "2026-02-20T00:00:00Z",
+      "lastWorkedOn": "Return Ticket feature complete: photo upload (Camera or Photo Library), materials checklist with red strikethrough, signature stamps directly on ticket photo (Black/Blue/Red ink), iOS share sheet for email to HQ. Migrated to new Cloudflare Pages project (master.fieldbook-pro.pages.dev) to fix iOS service worker cache lock. Service worker fully removed.",
       "todos": [
         {
           "id": "1",
@@ -329,28 +333,57 @@
         },
         {
           "id": "3",
-          "text": "PWA manifest and service worker",
-          "done": true
-        },
-        {
-          "id": "4",
           "text": "Deploy to Cloudflare Pages",
           "done": true
         },
         {
-          "id": "5",
+          "id": "4",
           "text": "Kam confirmed working in field",
           "done": true
+        },
+        {
+          "id": "5",
+          "text": "Return Ticket workflow (photo + checklist + signature)",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Signature ink color picker (Black/Blue/Red)",
+          "done": true
+        },
+        {
+          "id": "7",
+          "text": "Fix iOS service worker cache issue (migrated to new Pages project)",
+          "done": true
+        },
+        {
+          "id": "8",
+          "text": "iOS file input fix (label pattern for real user tap)",
+          "done": true
+        },
+        {
+          "id": "9",
+          "text": "Test with Matt at Nobility Homes",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Add GPS/timestamp to photos",
+          "done": false
         }
       ],
       "changelog": [
         {
+          "date": "2026-02-20",
+          "summary": "Return Ticket feature complete: photo upload (Camera OR Photo Library), materials checklist (tap to strikethrough in red), signature canvas overlaid on ticket photo (bottom-right), ink color picker (Black/Blue/Red), iOS share sheet for email. Fixed iOS programmatic .click() block using label+input pattern. Migrated to master.fieldbook-pro.pages.dev after iOS PWA service worker cache lock. Service worker removed entirely. Jobs re-seeded: John Barron (Callahan) + James Guest (Yulee)."
+        },
+        {
           "date": "2026-02-17",
-          "summary": "Built and deployed FieldBook \u2014 mobile-first field contact book PWA. Quick-access contact cards with one-tap call/text buttons. Organized by job site. Deployed to Cloudflare Pages (fieldbook-bpi.pages.dev). Kam tested and confirmed working."
+          "summary": "Built and deployed FieldBook \u2014 mobile-first field contact book PWA. Quick-access contact cards with one-tap call/text buttons. Organized by job site. Deployed to Cloudflare Pages. Kam tested and confirmed working."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/fieldbook",
-      "liveUrl": "https://fieldbook-bpi.pages.dev"
+      "liveUrl": "https://master.fieldbook-pro.pages.dev"
     },
     {
       "id": "fiverr-freelance",

@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Newspaper, Cpu, Heart, Sparkles, ExternalLink, Clock } from 'lucide-react';
+import { Newspaper, Cpu, Heart, Sparkles, ExternalLink, Clock, Rocket } from 'lucide-react';
 
 interface NewsItem {
   id: string;
   title: string;
   summary: string;
   url?: string;
-  category: 'ai' | 'diabetes' | 'claude' | 'tools';
+  category: 'ai' | 'diabetes' | 'claude' | 'tools' | 'moonshots';
   source: string;
   date: string;
   relevance?: string;
@@ -18,6 +18,7 @@ interface NewsFeedProps {
 }
 
 const categoryConfig = {
+  moonshots: { icon: Rocket, label: 'Moonshots / Innermost Loop', color: 'text-orange-400 bg-orange-400/10 border-orange-400/30' },
   ai: { icon: Sparkles, label: 'AI News', color: 'text-purple-400 bg-purple-400/10 border-purple-400/30' },
   diabetes: { icon: Heart, label: 'Diabetes Tech', color: 'text-red-400 bg-red-400/10 border-red-400/30' },
   claude: { icon: Cpu, label: 'Claude/Coding', color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30' },

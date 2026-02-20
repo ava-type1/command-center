@@ -2,6 +2,16 @@
   "lastUpdated": "2026-02-20T11:00:00Z",
   "items": [
     {
+      "id": "173",
+      "title": "The Innermost Loop — Feb 19: Gemini 3 Sets Records, Anthropic Raises $30B, Autonomy Goes Vertical",
+      "summary": "Google's Gemini 3 Deep Think hits 48.4% on HLE and 84.6% on ARC-AGI-2 — only 7 people on Earth can still beat it in competitive programming. OpenAI's GPT-5.3-Codex-Spark runs at 1,000+ tokens/second on Cerebras. 95% of OpenAI's own engineers use Codex; Spotify's best devs haven't written code since December. Anthropic raised $30B at $380B valuation with $14B run-rate revenue. METR data shows autonomy time horizons are now doubling post-o1-preview — implying 10x/year increases. Microsoft Silica stores 4.8TB in glass with 10,000-year lifetimes.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-19-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-19",
+      "relevance": "Autonomy horizons doubling 10x/year is the most important signal here. If true, we're months away from agents that can run businesses unsupervised. Gemini 3's cost collapse (280-420x cheaper than o3 per ARC-AGI task in 14 months) is the trajectory KodaAI should be riding — costs only go down."
+    },
+    {
       "id": "165",
       "title": "Claude Sonnet 4.6 Released — Now Default for Free & Pro Users",
       "summary": "Anthropic released Claude Sonnet 4.6 on Feb 17, now the default model for all free and Pro users on claude.ai. Key improvements: better computer use, coding, design, knowledge work, and large data processing. 1M token context window. Fewer hallucinations compared to predecessor. Priced same as Sonnet 4.5. Follows Opus 4.6 release earlier this month. Wikipedia notes agent teams and Claude in PowerPoint were also part of the 4.6 launch.",

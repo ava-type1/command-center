@@ -1,75 +1,85 @@
 {
-  "lastUpdated": "2026-02-19T12:00:00Z",
+  "lastUpdated": "2026-02-20T11:00:00Z",
   "items": [
     {
-      "id": "158",
-      "title": "Google Publishes 2026 Responsible AI Report + AI Impact Summit",
-      "summary": "Google released its 2026 Responsible AI Progress Report detailing multi-layered governance across the full AI lifecycle. Key highlights: SynthID verification in Gemini App has been used over 20 million times to identify AI-generated images, video, and audio. Circle to Search and Lens now detect scam messages, helping millions avoid fraud. The report covers how Google operationalizes its AI Principles from initial research through post-launch monitoring. Announced alongside the AI Impact Summit 2026 in India.",
-      "url": "https://blog.google/innovation-and-ai/products/responsible-ai-2026-report-ongoing-work/",
-      "category": "ai",
-      "source": "Google Blog",
-      "date": "2026-02-19",
-      "relevance": "SynthID hitting 20M uses shows AI content verification is becoming mainstream. The scam detection in Circle to Search is practical AI safety that affects daily life. Google's governance framework is worth skimming if you're thinking about responsible AI practices for AVA — especially around health data and kid safety."
-    },
-    {
-      "id": "159",
-      "title": "Global Memory Chip Shortage — HBM Sold Out Through 2026, Prices Soaring",
-      "summary": "AI demand has triggered a full-blown memory chip crisis. Micron stock surged 44% as the company announced a $200B manufacturing expansion. All HBM4 and HBM3e inventory is sold out through December 2026, with shortages expected into 2027. HBM demand will increase 70% year-over-year in 2026, consuming 23% of total DRAM wafer output (up from 19%). The shortage is inflating prices on everything from laptops and smartphones to automobiles — not just AI hardware.",
-      "url": "https://www.bloomberg.com/news/articles/2026-02-15/rampant-ai-demand-for-memory-is-fueling-a-growing-chip-crisis",
-      "category": "ai",
-      "source": "Bloomberg / Parameter",
-      "date": "2026-02-19",
-      "relevance": "The downstream effects matter: laptop and phone prices going up means hardware refresh cycles get more expensive. For AI API pricing, this could slow the cost compression trend — if compute hardware gets more expensive, API prices might plateau or increase. Worth factoring into any budget planning for AVA's AI backend costs."
-    },
-    {
-      "id": "160",
-      "title": "Claude Code v2.1.32 — Opus 4.6, Agent Teams, and the File Name Controversy",
-      "summary": "Claude Code v2.1.32 shipped with Opus 4.6 support and a research preview of 'agent teams' for multi-agent collaboration. Meanwhile, the v2.1.20 change that hid file names from progress output continues to generate backlash. Boris Cherny repurposed verbose mode as a compromise — showing file paths for reads/searches without full thinking output. Developers argue this breaks verbose mode's original purpose. The core tension: Anthropic optimizes for longer agentic runs while power users need granular visibility.",
-      "url": "https://www.theregister.com/2026/02/16/anthropic_claude_ai_edits",
+      "id": "165",
+      "title": "Claude Sonnet 4.6 Released — Now Default for Free & Pro Users",
+      "summary": "Anthropic released Claude Sonnet 4.6 on Feb 17, now the default model for all free and Pro users on claude.ai. Key improvements: better computer use, coding, design, knowledge work, and large data processing. 1M token context window. Fewer hallucinations compared to predecessor. Priced same as Sonnet 4.5. Follows Opus 4.6 release earlier this month. Wikipedia notes agent teams and Claude in PowerPoint were also part of the 4.6 launch.",
+      "url": "https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html",
       "category": "claude",
-      "source": "The Register / Gradually.ai",
-      "date": "2026-02-19",
-      "relevance": "Agent teams is the headline feature — multi-agent collaboration in Claude Code means you could have specialized agents working on different parts of AVA simultaneously. The file name controversy is a practical heads-up: if you update, verbose mode behaves differently now. Check your settings."
+      "source": "CNBC / PCWorld",
+      "date": "2026-02-20",
+      "relevance": "You're running on Opus 4.6 right now. Sonnet 4.6 being the new default means the free tier just got significantly better — useful for any public-facing AVA features where you want to minimize API costs. The agent teams feature could be huge for multi-agent workflows."
     },
     {
-      "id": "161",
-      "title": "ADA 2026 Diabetes Care Standards — Updated Tech and Pediatric Guidance",
-      "summary": "The American Diabetes Association published its 2026 Standards of Care with updated guidance on diabetes technology, obesity medications, nutrition, preventive care, hospital management, pregnancy, pediatrics, and older adults. Separately, ADA announced 2026 Pathway to Stop Diabetes grant recipients, including research using computational models to identify CGM patterns as early warning signals for progression from healthy glucose levels to prediabetes.",
-      "url": "https://www.medicaleconomics.com/view/what-s-new-in-the-american-diabetes-association-s-2026-diabetes-care-standards",
-      "category": "diabetes",
-      "source": "Medical Economics / PR Newswire",
-      "date": "2026-02-19",
-      "relevance": "Updated pediatric guidance is directly relevant for Kaislyn's care. The CGM-as-early-warning research could eventually expand CGM use beyond diagnosed diabetes into prevention — a massive market expansion that would bring more investment and innovation to the CGM space. Worth checking the specific pediatric tech recommendations."
-    },
-    {
-      "id": "162",
-      "title": "CGM Market to Hit $49.3B by 2036 — 10.6% CAGR",
-      "summary": "New market forecast projects the global glucose monitoring device market will grow from its current base to USD 49.3 billion by 2036, reflecting a 10.6% compound annual growth rate. Growth driven by rising diabetes prevalence, aging populations, and rapid technology advances. The expanding use of CGMs by non-diabetic wellness consumers and the shift toward automated insulin delivery systems are key accelerators.",
-      "url": "https://www.morningstar.com/news/accesswire/1138444msn/glucose-monitoring-device-market-forecast-2026-2036-global-market-to-reach-usd-493-billion-by-2036-at-106-cagr",
-      "category": "diabetes",
-      "source": "Morningstar / AccessWire",
-      "date": "2026-02-19",
-      "relevance": "A $49B market means the CGM ecosystem will keep getting better, cheaper, and more competitive. For AVA Type 1, this validates building on CGM data — the installed base of CGM users is only going to grow. The wellness consumer crossover also means more app developers entering the space, which means both more competition and more potential integration partners."
-    },
-    {
-      "id": "163",
-      "title": "Alibaba Qwen3.5 — 200 Languages, 5x Faster Agents, 60% Cheaper",
-      "summary": "Alibaba launched Qwen3.5 handling text, images, and video across 200 languages. AI agent deployment is 5x faster than predecessors and 60% cheaper than Qwen3. Part of China's Lunar New Year AI blitz alongside ByteDance's Doubao 2.0 (reasoning matching ChatGPT/Gemini) and Zhipu's GLM-5 (744B open-source model trained entirely on Huawei Ascend chips with zero US semiconductor dependency). All three companies pushing hard on autonomous web-navigating agents.",
-      "url": "https://www.cnbc.com/2026/02/17/china-alibaba-qwen-ai-agent-latest-model.html",
+      "id": "166",
+      "title": "OpenAI & Anthropic CEOs Awkwardly Avoid Handshake at India AI Summit",
+      "summary": "Sam Altman and Dario Amodei had a visibly awkward moment at India's AI Impact Summit, refusing to hold hands during a group photo. The summit, convened by PM Modi, brought together Silicon Valley's biggest AI companies and thousands of Indian entrepreneurs for deal-making. India is positioning itself as a major AI player with massive infrastructure investments.",
+      "url": "https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html",
       "category": "ai",
-      "source": "CNBC / Euronews",
-      "date": "2026-02-19",
-      "relevance": "GLM-5 on zero US chips is a geopolitical milestone — sanctions aren't stopping Chinese AI development. Qwen3.5's 60% cost drop continues the trend of AI getting radically cheaper. If you need a budget model for batch processing or less critical tasks, these Chinese models are increasingly viable alternatives."
+      "source": "CNBC / NYT",
+      "date": "2026-02-20",
+      "relevance": "The rivalry is real. More competition between Anthropic and OpenAI means faster innovation and better pricing for developers. India's AI push could also mean more affordable compute options and talent pools for startups."
     },
     {
-      "id": "164",
-      "title": "Former GitHub CEO Launches 'Entire' — $60M to Rebuild Dev Workflows for AI Agents",
-      "summary": "Thomas Dohmke launched Entire with the largest-ever seed round for dev tools ($60M, backed by Felicis, Madrona, Microsoft M12). The thesis: Git tracks what changed but not why. AI agents generate reasoning and decision paths that disappear when sessions end. Entire's first open-source product is a Git-aware CLI that automatically captures AI agent context during development. Dohmke argues current dev workflows were designed for human-to-human collaboration and can't be retrofitted for human-to-agent work.",
+      "id": "167",
+      "title": "Kimi K2.5 + Kimi Code CLI — Open-Source Claude Code Competitor",
+      "summary": "Moonshot AI's Kimi K2.5 launched with Kimi Code, an open-source terminal-first coding agent that directly competes with Claude Code and Gemini CLI. Features include autonomous coding, IDE integration for VSCode/Cursor/Zed, and 100 parallel agents. The multimodal model can convert screen recordings to code. Ranked #4 in LogRocket's Feb 2026 AI dev tool power rankings.",
+      "url": "https://www.nxcode.io/resources/news/kimi-k2-5-developer-guide-kimi-code-cli-2026",
+      "category": "productivity",
+      "source": "NxCode / LogRocket",
+      "date": "2026-02-20",
+      "relevance": "An open-source Claude Code alternative is worth trying — especially the video-to-code feature. If it can clone websites from screen recordings, that's a workflow game-changer for rapid prototyping. Free access available."
+    },
+    {
+      "id": "168",
+      "title": "CGM in Pregnancy: New Research Supports Broader Use",
+      "summary": "New research presented at the Society for Maternal-Fetal Medicine 2026 Annual Meeting shows that continuous glucose monitoring makes gestational diabetes management significantly more efficient. This adds to the growing body of evidence pushing CGM use beyond traditional Type 1/2 diabetes into pregnancy and wellness monitoring.",
+      "url": "https://www.medscape.com/viewarticle/case-continuous-glucose-monitoring-pregnancy-2026a10004we",
+      "category": "diabetes",
+      "source": "Medscape / SMFM",
+      "date": "2026-02-20",
+      "relevance": "CGM expanding into gestational diabetes is another signal that the addressable market is growing fast. More use cases = more device innovation = better tech for Type 1 users too. The SMFM endorsement carries weight with OBGYNs who previously relied on finger sticks."
+    },
+    {
+      "id": "169",
+      "title": "Time in Range vs A1C — The CGM Metric Debate Heats Up",
+      "summary": "EverydayHealth published a deep dive on whether Time in Range (TIR) from CGMs is more clinically meaningful than the traditional A1C test. TIR provides real-time granularity that A1C can't — showing daily glucose variability, time spent in dangerous highs/lows, and patterns tied to meals, exercise, and sleep. Growing consensus that TIR should be a primary metric alongside A1C, not secondary.",
+      "url": "https://www.everydayhealth.com/diabetes/is-time-in-range-more-important-than-a1c/",
+      "category": "diabetes",
+      "source": "EverydayHealth",
+      "date": "2026-02-20",
+      "relevance": "Directly relevant to AVA Type 1. If TIR becomes the primary metric, your app should make it front-and-center. This validates the CGM-first approach — A1C is a lagging quarterly snapshot, TIR is actionable daily data. Design around TIR."
+    },
+    {
+      "id": "170",
+      "title": "Former GitHub CEO Launches 'Entire' — $60M Seed to Rebuild Dev Workflows for AI Agents",
+      "summary": "Thomas Dohmke launched Entire with the largest-ever dev tools seed round ($60M from Felicis, Madrona, Microsoft M12). Core thesis: Git tracks what changed but not why. AI agents generate reasoning that disappears when sessions end. First product is an open-source Git-aware CLI that captures AI agent context during development. Built for human-to-agent collaboration workflows.",
       "url": "https://itwire.com/business-it-news/open-source/former-github-ceo-launches-entire-to-rebuild-software-development-for-the-agentic-era.html",
       "category": "productivity",
       "source": "iTWire",
-      "date": "2026-02-19",
-      "relevance": "This solves a real pain point — when Claude Code makes changes, the 'why' behind decisions doesn't survive in Git history. The open-source CLI could be worth trying in your AVA workflow. At $60M seed, investors clearly think developer tooling for the agent era is a huge gap. Watch for the first release."
+      "date": "2026-02-20",
+      "relevance": "This solves a real pain point — when Claude Code makes changes, the reasoning behind decisions doesn't survive in git history. Worth watching for the first release. At $60M seed, investors clearly see dev tooling for agent workflows as a massive gap."
+    },
+    {
+      "id": "171",
+      "title": "AI Chip Shortage Deepens — HBM Sold Out Through 2026, Consumer Prices Rising",
+      "summary": "AI demand has triggered a full memory chip crisis. All HBM4 and HBM3e inventory sold out through December 2026, with shortages expected into 2027. HBM demand up 70% YoY, consuming 23% of total DRAM wafer output. Micron surged 44% on a $200B manufacturing expansion announcement. The shortage is inflating prices on laptops, phones, and automobiles — not just AI hardware.",
+      "url": "https://www.bloomberg.com/news/articles/2026-02-15/rampant-ai-demand-for-memory-is-fueling-a-growing-chip-crisis",
+      "category": "ai",
+      "source": "Bloomberg",
+      "date": "2026-02-20",
+      "relevance": "Hardware costs ripple into API pricing. If compute gets more expensive, the AI cost compression trend could stall. Factor this into budget planning — and maybe hold off on any big hardware purchases until prices stabilize."
+    },
+    {
+      "id": "172",
+      "title": "China's AI Blitz: Qwen3.5 (200 Languages), GLM-5 on Zero US Chips",
+      "summary": "Alibaba launched Qwen3.5 handling text/images/video across 200 languages — 5x faster agent deployment and 60% cheaper than Qwen3. Zhipu's GLM-5 is a 744B open-source model trained entirely on Huawei Ascend chips with zero US semiconductor dependency. ByteDance's Doubao 2.0 matches ChatGPT/Gemini on reasoning. All three pushing hard on autonomous web-navigating agents.",
+      "url": "https://www.cnbc.com/2026/02/17/china-alibaba-qwen-ai-agent-latest-model.html",
+      "category": "ai",
+      "source": "CNBC / Euronews",
+      "date": "2026-02-20",
+      "relevance": "GLM-5 on zero US chips is a geopolitical milestone — sanctions aren't stopping progress. Qwen3.5's 60% cost drop means viable budget alternatives for batch processing. These models are increasingly competitive for non-critical tasks."
     }
   ]
 }

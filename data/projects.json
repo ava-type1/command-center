@@ -278,12 +278,12 @@
     {
       "id": "fieldbook",
       "name": "FieldBook",
-      "description": "Mobile-first PWA for Nobility Homes contractors. Job tracking, photo documentation, return ticket workflow with materials checklist, digital signature pad (ink color picker), and email-to-HQ sharing. Offline-capable, installable on iOS.",
+      "description": "Mobile-first PWA for Nobility Homes contractors. Job tracking, photo documentation, return ticket workflow, digital signature overlay, earnings strip, pay ticket email generator, and R2 photo storage. Offline-capable, installable on iOS.",
       "status": "active",
-      "progress": 75,
+      "progress": 88,
       "color": "#10b981",
-      "lastUpdated": "2026-02-21T02:31:38.348Z",
-      "lastWorkedOn": "Feb 20: Big session. Added Unscheduled status (4th option). Fixed job persistence (localStorage backup layer). Discovered private browsing was root cause. Built full R2 photo storage — photos now upload to Cloudflare R2 (fieldbook-photos bucket) on add, auto-delete on job delete. Deploy branch = master for fieldbook-pro CF project.",
+      "lastUpdated": "2026-02-21T09:02:00Z",
+      "lastWorkedOn": "Feb 20 (late night): Earnings strip pinned to bottom (date + jobs-today count + estimated pay). Pay Ticket section in every job with auto-calc ($400 flat walk-through, $40/hr return + mileage), email-to-HQ via mailto:sharon@nobilityhomes.com. Geocoding proxy added to fieldbook-photos Worker (24hr edge cache). iOS bug fixes: blank tickets (missing materials:[]), mileage button (label click swallowed by iOS → standalone button), signature transparency (white fillRect removed, transparent canvas ink-only PNG). Active: master.fieldbook-pro.pages.dev.",
       "todos": [
         {
           "id": "1",
@@ -339,15 +339,11 @@
       "changelog": [
         {
           "date": "2026-02-20",
-          "summary": "Return Ticket feature complete: camera/library upload, materials checklist with red strikethrough, signature pad with ink color picker, signature overlays on ticket photo (bottom-right), real-time email preview canvas, iOS native share sheet for 'Email to HQ'. Fixed iOS file input bug (label pattern). Active at master.fieldbook-pro.pages.dev."
-        },
-        {
-          "date": "2026-02-19",
-          "entry": "Migrated to new CF Pages project (fieldbook-pro). Removed service worker. Added ink color picker (Black/Blue/Red). Signature now overlays on ticket photo. Fixed iOS file picker bug."
+          "summary": "LATE NIGHT: Earnings strip pinned to bottom — shows today's date + job count (left), + new job button (center), estimated pay total (right). Pay Ticket section added to every job detail: auto-fills date/PO/customer/serial, calculates walk-through ($400) or return ($40/hr × hours + round-trip mileage at $0.55/mi), optional hotel/WPD/supplies fields, live TOTAL line, 'Submit Pay Ticket' emails sharon@nobilityhomes.com with pre-filled body. Geocoding proxy on fieldbook-photos Worker (GET /geocode?address=, 24hr edge cache) — more reliable than direct Census API on iOS. iOS bug fixes: blank return tickets (missing materials:[]), mileage button unclickable (moved from span inside label to standalone button with ⏳ feedback), signature exported as transparent PNG (removed white fillRect so ink-only overlays cleanly on ticket photo)."
         },
         {
           "date": "2026-02-20",
-          "summary": "Return Ticket feature complete: photo upload (Camera OR Photo Library), materials checklist (tap to strikethrough in red), signature canvas overlaid on ticket photo (bottom-right), ink color picker (Black/Blue/Red), iOS share sheet for email. Fixed iOS programmatic .click() block using label+input pattern. Migrated to master.fieldbook-pro.pages.dev after iOS PWA service worker cache lock. Service worker removed entirely. Jobs re-seeded: John Barron (Callahan) + James Guest (Yulee)."
+          "summary": "Return Ticket feature complete: camera/library upload, materials checklist with red strikethrough, signature pad with ink color picker, signature overlays on ticket photo (bottom-right), real-time email preview canvas, iOS native share sheet for 'Email to HQ'. Fixed iOS file input bug (label pattern). Added Unscheduled as 4th status. localStorage backup layer for job persistence. Full R2 photo storage (fieldbook-photos bucket, auto-delete on job remove). Active at master.fieldbook-pro.pages.dev."
         },
         {
           "date": "2026-02-17",
@@ -1953,5 +1949,5 @@
       "changelog": []
     }
   ],
-  "lastUpdated": "2026-02-20T11:27:00Z"
+  "lastUpdated": "2026-02-21T09:02:00Z"
 }

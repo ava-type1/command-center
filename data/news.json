@@ -1,15 +1,45 @@
 {
-  "lastUpdated": "2026-02-20T11:00:00Z",
+  "lastUpdated": "2026-02-21T11:00:00Z",
   "items": [
     {
-      "id": "173",
-      "title": "The Innermost Loop — Feb 19: Gemini 3 Sets Records, Anthropic Raises $30B, Autonomy Goes Vertical",
-      "summary": "Google's Gemini 3 Deep Think hits 48.4% on HLE and 84.6% on ARC-AGI-2 — only 7 people on Earth can still beat it in competitive programming. OpenAI's GPT-5.3-Codex-Spark runs at 1,000+ tokens/second on Cerebras. 95% of OpenAI's own engineers use Codex; Spotify's best devs haven't written code since December. Anthropic raised $30B at $380B valuation with $14B run-rate revenue. METR data shows autonomy time horizons are now doubling post-o1-preview — implying 10x/year increases. Microsoft Silica stores 4.8TB in glass with 10,000-year lifetimes.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-19-2026",
+      "id": "174",
+      "title": "The Innermost Loop — Feb 20: Gemini 3.1 Pro SOTA, UAP Disclosure Forced by AI Curve, Fusion Licensing",
+      "summary": "Google launched Gemini 3.1 Pro with new SOTA scores: 44.4% on HLE (no tools), 77.1% on ARC-AGI-2, and 94.3% on GPQA Diamond — crowned the new Artificial Analysis Intelligence Index leader at less than half the cost of Opus 4.6 or GPT-5.2. The White House directed agencies to begin releasing UFO/UAP files, with growing recognition that disclosure was 'forced by the AI curve.' Arc Institute's MULTI-evolve achieved 10-fold improvements in protein directed evolution with a single ML round. SoftBank is forming a consortium for a 9.2 GW gas plant ($33B) — the largest in the US — to power data centers. Type One Energy submitted a fusion stellarator licensing application targeting a 2029 prototype.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-20-2026",
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-20",
+      "relevance": "Gemini 3.1 Pro at half the cost of Opus 4.6 with better benchmarks is the key signal — cost compression continues accelerating. For KodaAI, this means the model powering your agents gets cheaper every month. The freelancer displacement stat ($1 human → $0.03 AI) validates the entire AI-agent-as-service thesis."
+    },
+    {
+      "id": "175",
+      "title": "Seedance 2.0: China's AI Video Model Spooks Hollywood",
+      "summary": "ByteDance released Seedance 2.0, one of the most advanced AI video generation models yet. CNN reports it's drawn praise for ease of use and the realistic nature of videos it generates in minutes. Hollywood is reportedly concerned about the implications for content production costs and timelines.",
+      "url": "https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst",
+      "category": "ai",
+      "source": "CNN",
+      "date": "2026-02-20",
+      "relevance": "Video generation quality is hitting an inflection point. For any content creation in AVA or KodaAI marketing, AI-generated video is becoming viable for demos, explainers, and social content at near-zero cost."
+    },
+    {
+      "id": "176",
+      "title": "Eversense 365 + twiist AID System Now Fully Available in the US",
+      "summary": "Senseonics and Sequel Med Tech announced full US availability of the twiist Automated Insulin Delivery system integrated with the Eversense 365 CGM — the first AID system compatible with an implantable 365-day CGM sensor. This eliminates the need for frequent sensor changes entirely, a major quality-of-life improvement for Type 1 diabetes management.",
+      "url": "https://www.stocktitan.net/news/SENS/",
+      "category": "diabetes",
+      "source": "Senseonics / StockTitan",
       "date": "2026-02-19",
-      "relevance": "Autonomy horizons doubling 10x/year is the most important signal here. If true, we're months away from agents that can run businesses unsupervised. Gemini 3's cost collapse (280-420x cheaper than o3 per ARC-AGI task in 14 months) is the trajectory KodaAI should be riding — costs only go down."
+      "relevance": "A full-year implantable CGM with automated insulin delivery is a game-changer for T1D. AVA Type 1 should support Eversense data integration — users on this system will want app support. The 365-day sensor removes the biggest friction point in CGM adoption."
+    },
+    {
+      "id": "177",
+      "title": "CGM Market to Hit $49.3B by 2036 — 10.6% CAGR",
+      "summary": "New market research projects the glucose monitoring device market will grow from $17.9B in 2026 to $49.3B by 2036 at 10.6% CAGR. Growth driven by expanding CGM use beyond traditional diabetes into gestational diabetes, prediabetes wellness monitoring, and metabolic health optimization.",
+      "url": "https://www.morningstar.com/news/accesswire/1138444msn/glucose-monitoring-device-market-forecast-2026-2036-global-market-to-reach-usd-493-billion-by-2036-at-106-cagr",
+      "category": "diabetes",
+      "source": "Morningstar / Access Newswire",
+      "date": "2026-02-18",
+      "relevance": "Nearly 3x market growth in 10 years confirms CGM is going mainstream. AVA Type 1 is positioned in a rapidly expanding market — the addressable user base will roughly triple by 2036. This is investor-deck material."
     },
     {
       "id": "165",
@@ -18,18 +48,8 @@
       "url": "https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html",
       "category": "claude",
       "source": "CNBC / PCWorld",
-      "date": "2026-02-20",
+      "date": "2026-02-17",
       "relevance": "You're running on Opus 4.6 right now. Sonnet 4.6 being the new default means the free tier just got significantly better — useful for any public-facing AVA features where you want to minimize API costs. The agent teams feature could be huge for multi-agent workflows."
-    },
-    {
-      "id": "166",
-      "title": "OpenAI & Anthropic CEOs Awkwardly Avoid Handshake at India AI Summit",
-      "summary": "Sam Altman and Dario Amodei had a visibly awkward moment at India's AI Impact Summit, refusing to hold hands during a group photo. The summit, convened by PM Modi, brought together Silicon Valley's biggest AI companies and thousands of Indian entrepreneurs for deal-making. India is positioning itself as a major AI player with massive infrastructure investments.",
-      "url": "https://www.cnbc.com/2026/02/19/openai-sam-altman-anthropic-dario-amodei-india-ai-summit.html",
-      "category": "ai",
-      "source": "CNBC / NYT",
-      "date": "2026-02-20",
-      "relevance": "The rivalry is real. More competition between Anthropic and OpenAI means faster innovation and better pricing for developers. India's AI push could also mean more affordable compute options and talent pools for startups."
     },
     {
       "id": "167",
@@ -38,58 +58,18 @@
       "url": "https://www.nxcode.io/resources/news/kimi-k2-5-developer-guide-kimi-code-cli-2026",
       "category": "productivity",
       "source": "NxCode / LogRocket",
-      "date": "2026-02-20",
+      "date": "2026-02-17",
       "relevance": "An open-source Claude Code alternative is worth trying — especially the video-to-code feature. If it can clone websites from screen recordings, that's a workflow game-changer for rapid prototyping. Free access available."
-    },
-    {
-      "id": "168",
-      "title": "CGM in Pregnancy: New Research Supports Broader Use",
-      "summary": "New research presented at the Society for Maternal-Fetal Medicine 2026 Annual Meeting shows that continuous glucose monitoring makes gestational diabetes management significantly more efficient. This adds to the growing body of evidence pushing CGM use beyond traditional Type 1/2 diabetes into pregnancy and wellness monitoring.",
-      "url": "https://www.medscape.com/viewarticle/case-continuous-glucose-monitoring-pregnancy-2026a10004we",
-      "category": "diabetes",
-      "source": "Medscape / SMFM",
-      "date": "2026-02-20",
-      "relevance": "CGM expanding into gestational diabetes is another signal that the addressable market is growing fast. More use cases = more device innovation = better tech for Type 1 users too. The SMFM endorsement carries weight with OBGYNs who previously relied on finger sticks."
-    },
-    {
-      "id": "169",
-      "title": "Time in Range vs A1C — The CGM Metric Debate Heats Up",
-      "summary": "EverydayHealth published a deep dive on whether Time in Range (TIR) from CGMs is more clinically meaningful than the traditional A1C test. TIR provides real-time granularity that A1C can't — showing daily glucose variability, time spent in dangerous highs/lows, and patterns tied to meals, exercise, and sleep. Growing consensus that TIR should be a primary metric alongside A1C, not secondary.",
-      "url": "https://www.everydayhealth.com/diabetes/is-time-in-range-more-important-than-a1c/",
-      "category": "diabetes",
-      "source": "EverydayHealth",
-      "date": "2026-02-20",
-      "relevance": "Directly relevant to AVA Type 1. If TIR becomes the primary metric, your app should make it front-and-center. This validates the CGM-first approach — A1C is a lagging quarterly snapshot, TIR is actionable daily data. Design around TIR."
     },
     {
       "id": "170",
       "title": "Former GitHub CEO Launches 'Entire' — $60M Seed to Rebuild Dev Workflows for AI Agents",
-      "summary": "Thomas Dohmke launched Entire with the largest-ever dev tools seed round ($60M from Felicis, Madrona, Microsoft M12). Core thesis: Git tracks what changed but not why. AI agents generate reasoning that disappears when sessions end. First product is an open-source Git-aware CLI that captures AI agent context during development. Built for human-to-agent collaboration workflows.",
+      "summary": "Thomas Dohmke launched Entire with the largest-ever dev tools seed round ($60M from Felicis, Madrona, Microsoft M12). Core thesis: Git tracks what changed but not why. AI agents generate reasoning that disappears when sessions end. First product is an open-source Git-aware CLI that captures AI agent context during development.",
       "url": "https://itwire.com/business-it-news/open-source/former-github-ceo-launches-entire-to-rebuild-software-development-for-the-agentic-era.html",
       "category": "productivity",
       "source": "iTWire",
-      "date": "2026-02-20",
+      "date": "2026-02-18",
       "relevance": "This solves a real pain point — when Claude Code makes changes, the reasoning behind decisions doesn't survive in git history. Worth watching for the first release. At $60M seed, investors clearly see dev tooling for agent workflows as a massive gap."
-    },
-    {
-      "id": "171",
-      "title": "AI Chip Shortage Deepens — HBM Sold Out Through 2026, Consumer Prices Rising",
-      "summary": "AI demand has triggered a full memory chip crisis. All HBM4 and HBM3e inventory sold out through December 2026, with shortages expected into 2027. HBM demand up 70% YoY, consuming 23% of total DRAM wafer output. Micron surged 44% on a $200B manufacturing expansion announcement. The shortage is inflating prices on laptops, phones, and automobiles — not just AI hardware.",
-      "url": "https://www.bloomberg.com/news/articles/2026-02-15/rampant-ai-demand-for-memory-is-fueling-a-growing-chip-crisis",
-      "category": "ai",
-      "source": "Bloomberg",
-      "date": "2026-02-20",
-      "relevance": "Hardware costs ripple into API pricing. If compute gets more expensive, the AI cost compression trend could stall. Factor this into budget planning — and maybe hold off on any big hardware purchases until prices stabilize."
-    },
-    {
-      "id": "172",
-      "title": "China's AI Blitz: Qwen3.5 (200 Languages), GLM-5 on Zero US Chips",
-      "summary": "Alibaba launched Qwen3.5 handling text/images/video across 200 languages — 5x faster agent deployment and 60% cheaper than Qwen3. Zhipu's GLM-5 is a 744B open-source model trained entirely on Huawei Ascend chips with zero US semiconductor dependency. ByteDance's Doubao 2.0 matches ChatGPT/Gemini on reasoning. All three pushing hard on autonomous web-navigating agents.",
-      "url": "https://www.cnbc.com/2026/02/17/china-alibaba-qwen-ai-agent-latest-model.html",
-      "category": "ai",
-      "source": "CNBC / Euronews",
-      "date": "2026-02-20",
-      "relevance": "GLM-5 on zero US chips is a geopolitical milestone — sanctions aren't stopping progress. Qwen3.5's 60% cost drop means viable budget alternatives for batch processing. These models are increasingly competitive for non-critical tasks."
     }
   ]
 }

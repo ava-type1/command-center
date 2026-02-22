@@ -1,0 +1,15 @@
+{
+  "lastUpdated": "2026-02-21T22:00:00Z",
+  "notes": [
+    {
+      "id": "note-001",
+      "title": "Gemini 3.1 Pro — Sketch to CAD / 3D Print",
+      "date": "2026-02-21",
+      "category": "AI Tools",
+      "tags": ["ai", "3d-printing", "cad", "gemini", "hardware"],
+      "content": "Google released Gemini 3.1 Pro on Feb 19, 2026. The sketch-to-3D feature lives in Deep Think mode (which runs on 3.1 Pro under the hood).\n\nWhat it does:\n• Take a photo of a sketch or physical object → generates a full 3D model\n• Outputs STL files ready for 3D printing\n• Conversational edits after: \"make that wall 2mm thicker\", \"add a snap clip\"\n• No CAD software or OpenSCAD knowledge needed\n\nRelevant for AVA enclosures (Dash, Mini, Max) and any custom brackets/mounts.\n\nHow to try it:\nGo to aistudio.google.com → select gemini-3.1-pro-preview → enable Deep Think mode → upload sketch or photo → describe what you want.\n\nBenchmark: scored 77.1% on ARC-AGI-2 — more than double Gemini 3 Pro's performance.",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "sourceLabel": "Google Blog"
+    }
+  ]
+}

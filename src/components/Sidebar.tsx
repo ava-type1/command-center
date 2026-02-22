@@ -1,6 +1,6 @@
-import { LayoutDashboard, Lightbulb, DollarSign, PenTool, Calendar, X, Zap, Target, Mic, Newspaper } from 'lucide-react';
+import { LayoutDashboard, Lightbulb, DollarSign, PenTool, Calendar, X, Zap, Target, Mic, Newspaper, BookOpen } from 'lucide-react';
 
-export type View = 'dashboard' | 'news' | 'finance' | 'content' | 'ideas' | 'briefing' | 'prospects' | 'voice';
+export type View = 'dashboard' | 'news' | 'finance' | 'content' | 'ideas' | 'briefing' | 'prospects' | 'voice' | 'notes';
 
 interface SidebarProps {
   view: View;
@@ -18,6 +18,7 @@ const navItems: { id: View; label: string; icon: typeof LayoutDashboard; activeC
   { id: 'prospects', label: 'Prospects', icon: Target, activeColor: '#ff3366', activeBg: 'rgba(255,51,102,0.1)', activeBorder: 'rgba(255,51,102,0.2)' },
   { id: 'briefing', label: 'Daily Briefing', icon: Calendar, activeColor: '#ff6600', activeBg: 'rgba(255,102,0,0.1)', activeBorder: 'rgba(255,102,0,0.2)' },
   { id: 'voice', label: 'Voice', icon: Mic, activeColor: '#ff6347', activeBg: 'rgba(255,99,71,0.1)', activeBorder: 'rgba(255,99,71,0.2)' },
+  { id: 'notes', label: 'Notes', icon: BookOpen, activeColor: '#00d4ff', activeBg: 'rgba(0,212,255,0.1)', activeBorder: 'rgba(0,212,255,0.2)' },
 ];
 
 export function Sidebar({ view, onViewChange, isOpen, onClose }: SidebarProps) {
@@ -90,7 +91,7 @@ export function Sidebar({ view, onViewChange, isOpen, onClose }: SidebarProps) {
         {/* Footer */}
         <div className="p-4 border-t border-white/5">
           <div className="text-xs text-gray-600 text-center">
-            Command Center v2.0
+            Command Center v2.1
           </div>
         </div>
       </aside>

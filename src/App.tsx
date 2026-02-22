@@ -8,6 +8,7 @@ import { ContentCreator } from './components/ContentCreator';
 import { DailyBriefing } from './components/DailyBriefing';
 import { ProspectsList } from './components/ProspectsList';
 import { KodaVoice } from './components/KodaVoice';
+import { NotesTab } from './components/NotesTab';
 import { Sidebar, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2, Menu, RefreshCw } from 'lucide-react';
@@ -19,12 +20,14 @@ const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
 const IDEAS_URL = `${GITHUB_BASE}/ideas.json`;
 const NEWS_URL = `${GITHUB_BASE}/news.json`;
 const DAILY_LOG_URL = `${GITHUB_BASE}/daily-log.json`;
+const NOTES_URL = `${GITHUB_BASE}/notes.json`;
 
 function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [ideas, setIdeas] = useState<Idea[]>([]);
   const [news, setNews] = useState<any[]>([]);
   const [newsLastUpdated, setNewsLastUpdated] = useState<string | undefined>(undefined);
+  const [notes, setNotes] = useState<any[]>([]);
   const [dailyLog, setDailyLog] = useState<any[]>([]);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [view, setView] = useState<View>('dashboard');
@@ -39,11 +42,12 @@ function App() {
     setError(null);
 
     try {
-      const [projectsRes, ideasRes, newsRes, dailyLogRes] = await Promise.all([
+      const [projectsRes, ideasRes, newsRes, dailyLogRes, notesRes] = await Promise.all([
         fetch(PROJECTS_URL + '?t=' + Date.now()),
         fetch(IDEAS_URL + '?t=' + Date.now()),
         fetch(NEWS_URL + '?t=' + Date.now()),
         fetch(DAILY_LOG_URL + '?t=' + Date.now()),
+        fetch(NOTES_URL + '?t=' + Date.now()),
       ]);
 
       if (projectsRes.ok && ideasRes.ok) {
@@ -86,6 +90,11 @@ function App() {
           setNewsLastUpdated(newsData.lastUpdated);
           localStorage.setItem('kam-news', JSON.stringify(newsData.items));
           localStorage.setItem('kam-news-updated', newsData.lastUpdated || '');
+        }
+
+        if (notesRes && notesRes.ok) {
+          const notesData = await notesRes.json();
+          setNotes(notesData.notes || []);
         }
 
         localStorage.setItem('kam-projects', JSON.stringify(orderedProjects));
@@ -227,6 +236,7 @@ function App() {
               {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
               {view === 'prospects' && <ProspectsList />}
               {view === 'briefing' && <DailyBriefing days={dailyLog} />}
+              {view === 'notes' && <NotesTab notes={notes} />}
             </ErrorBoundary>
           </main>
         )}

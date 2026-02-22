@@ -23,7 +23,8 @@ const categoryConfig = {
   diabetes: { icon: Heart, label: 'Diabetes Tech', color: 'text-red-400 bg-red-400/10 border-red-400/30' },
   claude: { icon: Cpu, label: 'Claude/Coding', color: 'text-cyan-400 bg-cyan-400/10 border-cyan-400/30' },
   tools: { icon: Sparkles, label: 'Productivity', color: 'text-green-400 bg-green-400/10 border-green-400/30' },
-};
+  productivity: { icon: Sparkles, label: 'Productivity', color: 'text-green-400 bg-green-400/10 border-green-400/30' },
+} as Record<string, { icon: any; label: string; color: string }>;
 
 export function NewsFeed({ news, lastUpdated }: NewsFeedProps) {
   const [filter, setFilter] = useState<string>('all');
@@ -90,7 +91,7 @@ export function NewsFeed({ news, lastUpdated }: NewsFeedProps) {
           </div>
         ) : (
           filteredNews.map(item => {
-            const config = categoryConfig[item.category];
+            const config = categoryConfig[item.category] || categoryConfig['ai'];
             return (
               <div 
                 key={item.id}

@@ -1,6 +1,16 @@
 {
-  "lastUpdated": "2026-02-21T11:00:00Z",
+  "lastUpdated": "2026-02-22T11:00:00Z",
   "items": [
+    {
+      "id": "178",
+      "title": "The Innermost Loop — Feb 21: 'You Are Invited to February 2027' — Moonshot Predictions",
+      "summary": "Dr. Wissner-Gross's latest post imagines pitches from a year ago that became real companies by Feb 2027. Highlights: a startup inverted weather foundation models (GraphCast) to steer hurricanes via cheap albedo modifications — insurers and governments are first customers, now selling 'good weather' as a commodity. Autonomous business swarms let one person run 1,000 AI-operated microbusinesses (Etsy stores, travel guides, arbitrage) with zero headcount. A 'human routing layer' uses driverless Winnebagos to relocate people overnight based on calendar optimization. Western public safety drone fleets finally cracked the regulatory/trust barrier via radical transparency. A food printer crossed the taste threshold and a workout exoskeleton eliminates the learning curve for resistance training.",
+      "url": "https://theinnermostloop.substack.com/p/you-are-invited-to-february-2027",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-21",
+      "relevance": "The autonomous business swarms concept is literally KodaAI's thesis — AI agents running end-to-end business operations at near-zero marginal cost. Weather control via differentiable models shows the power of running gradients backward through foundation models, a technique applicable to any domain with a differentiable simulator."
+    },
     {
       "id": "174",
       "title": "The Innermost Loop — Feb 20: Gemini 3.1 Pro SOTA, UAP Disclosure Forced by AI Curve, Fusion Licensing",
@@ -25,51 +35,41 @@
       "id": "176",
       "title": "Eversense 365 + twiist AID System Now Fully Available in the US",
       "summary": "Senseonics and Sequel Med Tech announced full US availability of the twiist Automated Insulin Delivery system integrated with the Eversense 365 CGM — the first AID system compatible with an implantable 365-day CGM sensor. This eliminates the need for frequent sensor changes entirely, a major quality-of-life improvement for Type 1 diabetes management.",
-      "url": "https://www.stocktitan.net/news/SENS/",
+      "url": "https://www.globenewswire.com/news-release/2026/02/19/3241021/0/en/Sequel-Med-Tech-and-Senseonics-Launch-Transformative-Combination-of-twiist-and-Eversense-365.html",
       "category": "diabetes",
-      "source": "Senseonics / StockTitan",
+      "source": "Senseonics / GlobeNewsWire",
       "date": "2026-02-19",
       "relevance": "A full-year implantable CGM with automated insulin delivery is a game-changer for T1D. AVA Type 1 should support Eversense data integration — users on this system will want app support. The 365-day sensor removes the biggest friction point in CGM adoption."
     },
     {
-      "id": "177",
-      "title": "CGM Market to Hit $49.3B by 2036 — 10.6% CAGR",
-      "summary": "New market research projects the glucose monitoring device market will grow from $17.9B in 2026 to $49.3B by 2036 at 10.6% CAGR. Growth driven by expanding CGM use beyond traditional diabetes into gestational diabetes, prediabetes wellness monitoring, and metabolic health optimization.",
-      "url": "https://www.morningstar.com/news/accesswire/1138444msn/glucose-monitoring-device-market-forecast-2026-2036-global-market-to-reach-usd-493-billion-by-2036-at-106-cagr",
-      "category": "diabetes",
-      "source": "Morningstar / Access Newswire",
-      "date": "2026-02-18",
-      "relevance": "Nearly 3x market growth in 10 years confirms CGM is going mainstream. AVA Type 1 is positioned in a rapidly expanding market — the addressable user base will roughly triple by 2036. This is investor-deck material."
-    },
-    {
       "id": "165",
       "title": "Claude Sonnet 4.6 Released — Now Default for Free & Pro Users",
-      "summary": "Anthropic released Claude Sonnet 4.6 on Feb 17, now the default model for all free and Pro users on claude.ai. Key improvements: better computer use, coding, design, knowledge work, and large data processing. 1M token context window. Fewer hallucinations compared to predecessor. Priced same as Sonnet 4.5. Follows Opus 4.6 release earlier this month. Wikipedia notes agent teams and Claude in PowerPoint were also part of the 4.6 launch.",
+      "summary": "Anthropic released Claude Sonnet 4.6 on Feb 17, now the default model for all free and Pro users on claude.ai. Key improvements: better computer use, coding, design, knowledge work, and large data processing. 1M token context window. Fewer hallucinations compared to predecessor.",
       "url": "https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html",
       "category": "claude",
-      "source": "CNBC / PCWorld",
+      "source": "CNBC",
       "date": "2026-02-17",
-      "relevance": "You're running on Opus 4.6 right now. Sonnet 4.6 being the new default means the free tier just got significantly better — useful for any public-facing AVA features where you want to minimize API costs. The agent teams feature could be huge for multi-agent workflows."
+      "relevance": "You're running on Opus 4.6 right now. Sonnet 4.6 being the new default means the free tier just got significantly better — useful for any public-facing AVA features where you want to minimize API costs."
     },
     {
       "id": "167",
       "title": "Kimi K2.5 + Kimi Code CLI — Open-Source Claude Code Competitor",
-      "summary": "Moonshot AI's Kimi K2.5 launched with Kimi Code, an open-source terminal-first coding agent that directly competes with Claude Code and Gemini CLI. Features include autonomous coding, IDE integration for VSCode/Cursor/Zed, and 100 parallel agents. The multimodal model can convert screen recordings to code. Ranked #4 in LogRocket's Feb 2026 AI dev tool power rankings.",
+      "summary": "Moonshot AI's Kimi K2.5 launched with Kimi Code, an open-source terminal-first coding agent that directly competes with Claude Code and Gemini CLI. Features include autonomous coding, IDE integration for VSCode/Cursor/Zed, and 100 parallel agents. The multimodal model can convert screen recordings to code.",
       "url": "https://www.nxcode.io/resources/news/kimi-k2-5-developer-guide-kimi-code-cli-2026",
       "category": "productivity",
       "source": "NxCode / LogRocket",
       "date": "2026-02-17",
-      "relevance": "An open-source Claude Code alternative is worth trying — especially the video-to-code feature. If it can clone websites from screen recordings, that's a workflow game-changer for rapid prototyping. Free access available."
+      "relevance": "An open-source Claude Code alternative with video-to-code is worth trying for rapid prototyping. Free access available."
     },
     {
       "id": "170",
       "title": "Former GitHub CEO Launches 'Entire' — $60M Seed to Rebuild Dev Workflows for AI Agents",
-      "summary": "Thomas Dohmke launched Entire with the largest-ever dev tools seed round ($60M from Felicis, Madrona, Microsoft M12). Core thesis: Git tracks what changed but not why. AI agents generate reasoning that disappears when sessions end. First product is an open-source Git-aware CLI that captures AI agent context during development.",
+      "summary": "Thomas Dohmke launched Entire with the largest-ever dev tools seed round ($60M). Core thesis: Git tracks what changed but not why. First product is an open-source Git-aware CLI that captures AI agent context during development.",
       "url": "https://itwire.com/business-it-news/open-source/former-github-ceo-launches-entire-to-rebuild-software-development-for-the-agentic-era.html",
       "category": "productivity",
       "source": "iTWire",
       "date": "2026-02-18",
-      "relevance": "This solves a real pain point — when Claude Code makes changes, the reasoning behind decisions doesn't survive in git history. Worth watching for the first release. At $60M seed, investors clearly see dev tooling for agent workflows as a massive gap."
+      "relevance": "Solves a real pain point — when Claude Code makes changes, the reasoning behind decisions doesn't survive in git history. Worth watching."
     }
   ]
 }

@@ -5,15 +5,15 @@
       "name": "AVA Type 1 Feedback + Companion Launch CRM",
       "description": "Track community comments/requests and prepare launch email campaign for AVA Companion plush.",
       "status": "active",
-      "progress": 20,
+      "progress": 40,
       "color": "#3b82f6",
-      "lastUpdated": "2026-02-23",
-      "lastWorkedOn": "Campaign tracker scaffolded. Ready to log feedback from Facebook + waitlist.",
+      "lastUpdated": "2026-02-22",
+      "lastWorkedOn": "Brevo wired to contact form. Every signup auto-captured. AVA Feedback tab + mini-CRM added to Command Center. App live in App Store.",
       "todos": [
         {
           "id": "1",
           "text": "Import/export contact list for campaign segmentation",
-          "done": false
+          "done": true
         },
         {
           "id": "2",
@@ -35,6 +35,10 @@
         {
           "date": "2026-02-23",
           "summary": "Created AVA feedback tracker + companion launch campaign skeleton files for ongoing updates from community comments."
+        },
+        {
+          "date": "2026-02-22",
+          "summary": "Brevo email list live. Contact form now saves every signup permanently with category tags. Auto-replies disabled for personal outreach. AVA Feedback + CRM tab added to Command Center."
         }
       ]
     },

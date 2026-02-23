@@ -1,8 +1,41 @@
 {
   "days": [
     {
+      "date": "2026-02-22",
+      "conversations": [
+        "AVA Type 1 app went LIVE on App Store (https://apps.apple.com/us/app/avatype1/id6758495309)",
+        "ChatGPT OAuth fallback set up \u2014 gpt-5.3-codex as fallback, sub-agents default to Codex",
+        "Google Gemini 2.5 Pro connected via API key (/model gemini alias added)",
+        "Android port started \u2014 Phase 0/1/2 complete (plan, scaffold, build pipeline working)",
+        "Brevo email list wired to contact form \u2014 every AVA signup now saved permanently",
+        "Contact form auto-replies disabled \u2014 Kam will reply personally",
+        "Website CTA updated from 'Coming Soon' to 'Download on App Store'",
+        "AVA Feedback + mini-CRM added to Command Center",
+        "Two daily briefing cron jobs added (9:10 AM + 11:40 PM ET)",
+        "Fixed WhatsApp dependency crash in OpenClaw CLI"
+      ],
+      "decisions": [
+        "Full Android native build (not PWA)",
+        "Codex as default sub-agent model to preserve Claude credits",
+        "Manual personal replies only \u2014 no auto-replies on contact form",
+        "Brevo as email list platform (free tier, unlimited contacts)"
+      ],
+      "action_items": [
+        "Rotate Gemini API key (was pasted in chat)",
+        "Get one real Android device for BLE testing (Phase 4+)",
+        "Run Android emulator locally on Mac for Phase 3 testing",
+        "Post AVA launch posts to Facebook T1D groups + Fort White community pages",
+        "Start Phase 3 Android build when ready"
+      ],
+      "wins": [
+        "AVA Type 1 officially live in App Store",
+        "Three AI models now available: Claude (primary), Codex (fallback + sub-agents), Gemini",
+        "Email marketing pipeline fully automated via Brevo"
+      ]
+    },
+    {
       "date": "2026-02-13",
-      "summary": "Major KodaAI evolution day — pivoted from manual setup to self-service platform. Built consumer onboarding, phone integration spec, portfolio site. Improved Glucose Insights with export guides.",
+      "summary": "Major KodaAI evolution day \u2014 pivoted from manual setup to self-service platform. Built consumer onboarding, phone integration spec, portfolio site. Improved Glucose Insights with export guides.",
       "highlights": [
         "KodaAI self-service platform designed and landing page deployed",
         "Stripe payment integration completed for InstantSite",
@@ -12,7 +45,7 @@
       ],
       "decisions": [
         "KodaAI pricing restructured: $79 Lite / $149 Standard / $299 Pro",
-        "SMS via Twilio as primary channel (not Telegram) — grandma-proof",
+        "SMS via Twilio as primary channel (not Telegram) \u2014 grandma-proof",
         "Single Anthropic API key bundled into subscription, use Sonnet not Opus for clients",
         "Brother-in-law's site prep business = first beta tester",
         "Cloudflare Moltworker for hosting client instances (not per-user VPS)"
@@ -25,14 +58,43 @@
         "Inventory connection for car dealerships"
       ],
       "actionItems": [
-        { "text": "Set up Twilio account and buy test number", "owner": "Kam", "status": "pending" },
-        { "text": "Build SMS bridge (Twilio → Clawdbot)", "owner": "Koda", "status": "pending" },
-        { "text": "Configure site prep assistant for brother-in-law beta", "owner": "Koda", "status": "pending" },
-        { "text": "Fiverr W-9 verification", "owner": "Kam", "status": "waiting" },
-        { "text": "Walk into Gateway-Forest Lawn with GentlyTold demo", "owner": "Kam", "status": "pending" },
-        { "text": "Follow up on Glooko API request", "owner": "Koda", "status": "done" }
+        {
+          "text": "Set up Twilio account and buy test number",
+          "owner": "Kam",
+          "status": "pending"
+        },
+        {
+          "text": "Build SMS bridge (Twilio \u2192 Clawdbot)",
+          "owner": "Koda",
+          "status": "pending"
+        },
+        {
+          "text": "Configure site prep assistant for brother-in-law beta",
+          "owner": "Koda",
+          "status": "pending"
+        },
+        {
+          "text": "Fiverr W-9 verification",
+          "owner": "Kam",
+          "status": "waiting"
+        },
+        {
+          "text": "Walk into Gateway-Forest Lawn with GentlyTold demo",
+          "owner": "Kam",
+          "status": "pending"
+        },
+        {
+          "text": "Follow up on Glooko API request",
+          "owner": "Koda",
+          "status": "done"
+        }
       ],
-      "projects_touched": ["kodaai", "instantsite", "glucose-insights", "gentlytold"],
+      "projects_touched": [
+        "kodaai",
+        "instantsite",
+        "glucose-insights",
+        "gentlytold"
+      ],
       "mood": "productive"
     },
     {
@@ -41,7 +103,7 @@
       "highlights": [
         "gentlytold.com domain connected via Cloudflare",
         "Email routing set up for kameron@gentlytold.com",
-        "Engine worker AI_PROXY_TOKEN fixed — full pipeline working",
+        "Engine worker AI_PROXY_TOKEN fixed \u2014 full pipeline working",
         "AVA Mini enclosure work continued"
       ],
       "decisions": [
@@ -49,10 +111,22 @@
       ],
       "ideas": [],
       "actionItems": [
-        { "text": "Set up Stripe for GentlyTold", "owner": "Koda", "status": "pending" },
-        { "text": "Build leave-behind print sheets", "owner": "Koda", "status": "pending" }
+        {
+          "text": "Set up Stripe for GentlyTold",
+          "owner": "Koda",
+          "status": "pending"
+        },
+        {
+          "text": "Build leave-behind print sheets",
+          "owner": "Koda",
+          "status": "pending"
+        }
       ],
-      "projects_touched": ["gentlytold", "ava-app", "ava-mini"],
+      "projects_touched": [
+        "gentlytold",
+        "ava-app",
+        "ava-mini"
+      ],
       "mood": "steady"
     },
     {
@@ -62,7 +136,7 @@
         "Installed 10 new skills from ClawHub",
         "Built and deployed InstantSite micro-SaaS",
         "Created Fiverr gig with 3 tiers",
-        "Income strategy discussion — focus on passive income"
+        "Income strategy discussion \u2014 focus on passive income"
       ],
       "decisions": [
         "InstantSite as top micro-SaaS pick",
@@ -75,11 +149,23 @@
         "Estimate/Invoice Generator"
       ],
       "actionItems": [
-        { "text": "Submit W-9 on Fiverr", "owner": "Kam", "status": "done" },
-        { "text": "Add image uploads to InstantSite", "owner": "Koda", "status": "done" }
+        {
+          "text": "Submit W-9 on Fiverr",
+          "owner": "Kam",
+          "status": "done"
+        },
+        {
+          "text": "Add image uploads to InstantSite",
+          "owner": "Koda",
+          "status": "done"
+        }
       ],
-      "projects_touched": ["instantsite", "fiverr"],
+      "projects_touched": [
+        "instantsite",
+        "fiverr"
+      ],
       "mood": "energized"
     }
-  ]
+  ],
+  "lastUpdated": "2026-02-22"
 }

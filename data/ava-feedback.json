@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-23T02:36:10Z",
+  "lastUpdated": "2026-02-23T04:52:20Z",
   "description": "Community feedback and lightweight contact tracking for AVA Type 1.",
   "notes": [
     {
@@ -9,6 +9,42 @@
       "category": "feature request",
       "source": "Facebook comments",
       "askedForMmol": true,
+      "date": "2026-02-22"
+    },
+    {
+      "id": "launch-android-demand-1",
+      "title": "Strong Android demand signal",
+      "text": "Multiple commenters asked specifically for Android/Google Play availability. This is the top repeated request after launch day.",
+      "category": "market signal",
+      "source": "Facebook groups launch comments",
+      "askedForMmol": false,
+      "date": "2026-02-22"
+    },
+    {
+      "id": "launch-mmol-request-2",
+      "title": "mmol units requested by UK users",
+      "text": "At least one commenter asked for mmol display option; current app appears mg/dL only. International users noticed immediately.",
+      "category": "feature request",
+      "source": "Facebook groups launch comments",
+      "askedForMmol": true,
+      "date": "2026-02-22"
+    },
+    {
+      "id": "launch-adoption-parents-1",
+      "title": "Immediate parent adoption + gratitude",
+      "text": "Many parents downloaded immediately and shared diagnosed-at-young-age context (2 years, 16 months, etc). Strong emotional resonance.",
+      "category": "customer voice",
+      "source": "Facebook groups launch comments",
+      "askedForMmol": false,
+      "date": "2026-02-22"
+    },
+    {
+      "id": "launch-review-loop-1",
+      "title": "Review CTA is working in replies",
+      "text": "Reply pattern requesting App Store reviews appears in thread and should continue to improve ranking/social proof.",
+      "category": "growth tactic",
+      "source": "Facebook groups launch comments",
+      "askedForMmol": false,
       "date": "2026-02-22"
     }
   ],
@@ -20,6 +56,42 @@
       "category": "android interest",
       "status": "new",
       "note": "Asked for Android timeline and mmol options.",
+      "date": "2026-02-22"
+    },
+    {
+      "id": "fb-holly-android",
+      "nameOrEmail": "Holly Gekoski",
+      "source": "facebook",
+      "category": "android interest",
+      "status": "new",
+      "note": "Asked for Android availability; high intent.",
+      "date": "2026-02-22"
+    },
+    {
+      "id": "fb-rachel-googleplay",
+      "nameOrEmail": "Rachel Jack",
+      "source": "facebook",
+      "category": "android interest",
+      "status": "new",
+      "note": "Asked for Google Play version.",
+      "date": "2026-02-22"
+    },
+    {
+      "id": "fb-sarina-android",
+      "nameOrEmail": "Sarina Mae Stewart",
+      "source": "facebook",
+      "category": "android interest",
+      "status": "new",
+      "note": "Asked if Android app exists.",
+      "date": "2026-02-22"
+    },
+    {
+      "id": "fb-flower-mmol",
+      "nameOrEmail": "Flower Flower",
+      "source": "facebook",
+      "category": "feature request",
+      "status": "new",
+      "note": "Asked for mmol setting support.",
       "date": "2026-02-22"
     }
   ],

@@ -157,10 +157,11 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <Loader2 className="w-8 h-8 animate-spin text-neon-green mx-auto mb-4" />
-          <p className="text-gray-400">Loading Command Center...</p>
+      <div className="min-h-screen flex items-center justify-center px-4">
+        <div className="glass rounded-2xl p-8 text-center max-w-sm w-full">
+          <Loader2 className="w-8 h-8 animate-spin text-neon-cyan mx-auto mb-4" />
+          <p className="text-gray-200 font-medium">Loading Command Center...</p>
+          <p className="text-xs text-gray-400 mt-1">Syncing projects, ideas, briefing, notes, and news</p>
         </div>
       </div>
     );
@@ -182,7 +183,6 @@ function App() {
 
   return (
     <div className="min-h-screen flex">
-      {/* Sidebar */}
       <Sidebar
         view={view}
         onViewChange={setView}
@@ -190,19 +190,29 @@ function App() {
         onClose={() => setSidebarOpen(false)}
       />
 
-      {/* Main content area */}
-      <div className="flex-1 lg:ml-64 min-h-screen">
-        {/* Top bar - mobile */}
-        <header className="glass border-b border-white/5 sticky top-0 z-30 lg:hidden">
-          <div className="flex items-center justify-between px-4 h-14">
+      <div className="flex-1 lg:ml-72 min-h-screen">
+        <header className="glass border-b border-white/10 sticky top-0 z-30">
+          <div className="h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setSidebarOpen(true)}
+                className="p-2 rounded-lg hover:bg-white/10 text-gray-300 lg:hidden"
+              >
+                <Menu className="w-5 h-5" />
+              </button>
+              <div>
+                <h1 className="text-sm sm:text-base font-semibold text-white tracking-tight">Command Center</h1>
+                <p className="text-[11px] text-gray-400 hidden sm:block">Modern preview build</p>
+              </div>
+            </div>
+
             <button
-              onClick={() => setSidebarOpen(true)}
-              className="p-2 rounded-lg hover:bg-white/5 text-gray-400"
+              onClick={loadData}
+              className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-white/10 text-gray-200 hover:bg-white/10"
+              title="Refresh all data"
             >
-              <Menu className="w-5 h-5" />
+              <RefreshCw className="w-3.5 h-3.5" /> Refresh
             </button>
-            <h1 className="text-sm font-semibold text-white">Command Center</h1>
-            <div className="w-9" /> {/* Spacer */}
           </div>
         </header>
 
@@ -211,7 +221,7 @@ function App() {
             <KodaVoice />
           </ErrorBoundary>
         ) : (
-          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
             {error && (
               <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
                 {error}
@@ -342,8 +352,7 @@ function DashboardView({
 
   return (
     <div className="space-y-6">
-      {/* Compact stats row */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {[
           { label: 'Active', count: active.length, color: 'text-neon-green', filter: 'active' as const },
           { label: 'Paused', count: paused.length, color: 'text-yellow-400', filter: 'paused' as const },
@@ -353,20 +362,20 @@ function DashboardView({
           <button
             key={stat.label}
             onClick={() => setFilter(f => f === stat.filter ? 'all' : stat.filter)}
-            className={`glass rounded-lg p-3 text-center transition-all hover:bg-white/5 ${
-              filter === stat.filter ? 'ring-1 ring-white/20 bg-white/5' : ''
+            className={`glass rounded-xl p-3.5 text-center transition-all hover:bg-white/10 ${
+              filter === stat.filter ? 'ring-1 ring-neon-cyan/40 bg-white/10' : ''
             }`}
           >
             <div className={`text-2xl font-bold ${stat.color}`}>{stat.count}</div>
-            <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">{stat.label}</div>
+            <div className="text-[11px] text-gray-400 uppercase tracking-wide mt-0.5">{stat.label}</div>
           </button>
         ))}
       </div>
 
       {/* Header with sync + filter info */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
-          <h2 className="text-lg font-semibold text-gray-200">
+          <h2 className="text-xl font-semibold text-white tracking-tight">
             Projects
             {filter !== 'all' && (
               <span className="ml-2 text-xs text-gray-500 font-normal">
@@ -397,8 +406,8 @@ function DashboardView({
 
       {/* Drag hint */}
       {filter === 'all' && (
-        <p className="text-[10px] text-gray-700 -mt-4">
-          ✋ Drag cards to reorder • Order is saved locally
+        <p className="text-xs text-gray-400 -mt-4">
+          Drag cards to reorder • Order is saved locally
         </p>
       )}
 

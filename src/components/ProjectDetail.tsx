@@ -50,8 +50,7 @@ export function ProjectDetail({ project, onBack, onUpdate }: ProjectDetailProps)
 
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="glass border-b border-white/5 sticky top-0 z-50">
+      <header className="glass border-b border-white/10 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center gap-4">
             <button
@@ -74,7 +73,7 @@ export function ProjectDetail({ project, onBack, onUpdate }: ProjectDetailProps)
                   {statusLabels[project.status]}
                 </span>
               </div>
-              <p className="text-sm text-gray-400 mt-1">{project.description}</p>
+              <p className="text-sm text-gray-300 mt-1">{project.description}</p>
             </div>
           </div>
         </div>

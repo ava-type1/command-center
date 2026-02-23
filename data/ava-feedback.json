@@ -1,5 +1,27 @@
 {
   "lastUpdated": "2026-02-23T02:36:10Z",
-  "description": "Community feedback and feature requests for AVA Type 1 (especially Android + Companion plush).",
+  "description": "Community feedback and lightweight contact tracking for AVA Type 1.",
+  "notes": [
+    {
+      "id": "seed-note-1",
+      "title": "mmol display request",
+      "text": "Several Facebook comments asked for mmol/L units in addition to mg/dL.",
+      "category": "feature request",
+      "source": "Facebook comments",
+      "askedForMmol": true,
+      "date": "2026-02-22"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "seed-contact-1",
+      "nameOrEmail": "Parent lead (FB DM)",
+      "source": "facebook",
+      "category": "android interest",
+      "status": "new",
+      "note": "Asked for Android timeline and mmol options.",
+      "date": "2026-02-22"
+    }
+  ],
   "items": []
 }

@@ -9,6 +9,7 @@ import { DailyBriefing } from './components/DailyBriefing';
 import { ProspectsList } from './components/ProspectsList';
 import { KodaVoice } from './components/KodaVoice';
 import { NotesTab } from './components/NotesTab';
+import { AvaFeedbackTab } from './components/AvaFeedbackTab';
 import { Sidebar, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
 import { Loader2, Menu, RefreshCw } from 'lucide-react';
@@ -237,6 +238,7 @@ function App() {
               {view === 'prospects' && <ProspectsList />}
               {view === 'briefing' && <DailyBriefing days={dailyLog} />}
               {view === 'notes' && <NotesTab notes={notes} />}
+              {view === 'ava-feedback' && <AvaFeedbackTab />}
             </ErrorBoundary>
           </main>
         )}

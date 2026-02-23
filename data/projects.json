@@ -1,6 +1,44 @@
 {
   "projects": [
     {
+      "id": "ava-type1-feedback-crm",
+      "name": "AVA Type 1 Feedback + Companion Launch CRM",
+      "description": "Track community comments/requests and prepare launch email campaign for AVA Companion plush.",
+      "status": "active",
+      "progress": 20,
+      "color": "#3b82f6",
+      "lastUpdated": "2026-02-23",
+      "lastWorkedOn": "Campaign tracker scaffolded. Ready to log feedback from Facebook + waitlist.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Import/export contact list for campaign segmentation",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Log every FB comment/request into ava-feedback.json",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Draft 4-email Companion launch sequence",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Set launch trigger date + auto-send workflow",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-23",
+          "summary": "Created AVA feedback tracker + companion launch campaign skeleton files for ongoing updates from community comments."
+        }
+      ]
+    },
+    {
       "id": "kodaai-ios",
       "name": "KodaAI iOS App",
       "description": "The first true AI agent in the App Store. OpenClaw-powered personal AI assistant with 60-second onboarding, persistent memory, proactive alerts, and Apple native integrations.",

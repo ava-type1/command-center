@@ -1,0 +1,53 @@
+{
+  "lastUpdated": "2026-02-23T02:36:10Z",
+  "campaignName": "AVA Companion Launch Waitlist",
+  "status": "planning",
+  "audiences": [
+    {
+      "id": "parents_t1d",
+      "name": "Parents of kids with T1D",
+      "criteria": "Families asking for education support, comments from Facebook groups"
+    },
+    {
+      "id": "android_interest",
+      "name": "Android interested users",
+      "criteria": "Anyone who asked for Android version"
+    },
+    {
+      "id": "general_waitlist",
+      "name": "General AVA waitlist",
+      "criteria": "Contact form + website signups"
+    }
+  ],
+  "emailSequence": [
+    {
+      "step": 1,
+      "name": "Teaser",
+      "trigger": "Companion date confirmed",
+      "goal": "Announce product and open priority list",
+      "status": "draft"
+    },
+    {
+      "step": 2,
+      "name": "Early Access",
+      "trigger": "7 days before launch",
+      "goal": "Invite waitlist to join early access",
+      "status": "draft"
+    },
+    {
+      "step": 3,
+      "name": "Launch Day",
+      "trigger": "Launch day",
+      "goal": "Drive orders/downloads",
+      "status": "draft"
+    },
+    {
+      "step": 4,
+      "name": "Social Proof Follow-up",
+      "trigger": "3 days after launch",
+      "goal": "Share early feedback and reviews",
+      "status": "draft"
+    }
+  ],
+  "notes": []
+}

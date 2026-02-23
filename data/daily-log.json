@@ -31,6 +31,29 @@
         "AVA Type 1 officially live in App Store",
         "Three AI models now available: Claude (primary), Codex (fallback + sub-agents), Gemini",
         "Email marketing pipeline fully automated via Brevo"
+      ],
+      "summary": "AVA Type 1 launched on the App Store, model infrastructure expanded to 3 providers, Android build pipeline started, and Command Center gained feedback/CRM + daily briefing automation.",
+      "completed": [
+        "Shipped AVA Type 1 on App Store and updated website CTAs to live download links",
+        "Connected ChatGPT OAuth fallback and set Codex as default for sub-agents",
+        "Connected Gemini 2.5 Pro alias and validated model switching",
+        "Started AVA Android port (planning, scaffold, and successful APK build pipeline)",
+        "Integrated Brevo list capture for AVA contact form submissions",
+        "Disabled auto-replies so Kam can respond personally",
+        "Added AVA Feedback + mini-CRM section to Command Center",
+        "Added daily Command Center briefing cron jobs (morning + night)"
+      ],
+      "pending": [
+        "Rotate Gemini API key exposed in chat context",
+        "Acquire/test with a real Android device for BLE-dependent phases",
+        "Run Phase 3 Android runtime testing on Kam's Mac emulator",
+        "Publish AVA launch posts in Facebook T1D + local community groups"
+      ],
+      "next_actions": [
+        "Kick off Android Phase 3 UI/runtime validation and track blockers",
+        "Collect first wave of AVA user feedback in Command Center CRM tab",
+        "Post launch updates and Android waitlist messaging publicly",
+        "Review Brevo subscriber growth and message strategy tomorrow"
       ]
     },
     {

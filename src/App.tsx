@@ -1,6 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import { ProjectCard } from './components/ProjectCard';
-import { ProjectDetail } from './components/ProjectDetail';
+import { useEffect, useMemo, useState } from 'react';
 import { IdeasHub } from './components/IdeasHub';
 import { NewsFeed } from './components/NewsFeed';
 import { FinanceDashboard } from './components/FinanceDashboard';
@@ -10,11 +8,12 @@ import { ProspectsList } from './components/ProspectsList';
 import { KodaVoice } from './components/KodaVoice';
 import { NotesTab } from './components/NotesTab';
 import { AvaFeedbackTab } from './components/AvaFeedbackTab';
-import { Sidebar, type View } from './components/Sidebar';
+import { AppNavigation, type View } from './components/Sidebar';
 import { AIChatPanel, AIChatButton } from './components/AIChatPanel';
-import { Loader2, Menu, RefreshCw } from 'lucide-react';
+import { ArrowRight, CircleDot, Loader2, RefreshCw } from 'lucide-react';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import type { Project, Idea } from './types';
+import { ProjectDetail } from './components/ProjectDetail';
+import type { Idea, Project } from './types';
 
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
 const PROJECTS_URL = `${GITHUB_BASE}/projects.json`;
@@ -36,7 +35,6 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [lastSync, setLastSync] = useState<Date | null>(null);
   const [chatOpen, setChatOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const loadData = async () => {
     setLoading(true);
@@ -51,65 +49,58 @@ function App() {
         fetch(NOTES_URL + '?t=' + Date.now()),
       ]);
 
-      if (projectsRes.ok && ideasRes.ok) {
-        const projectsData = await projectsRes.json();
-        const ideasData = await ideasRes.json();
+      if (!projectsRes.ok || !ideasRes.ok) throw new Error('Failed to fetch from GitHub');
 
-        // Apply saved order if available
-        const savedOrder = localStorage.getItem('kam-project-order');
-        let orderedProjects = projectsData.projects || [];
-        if (savedOrder) {
-          try {
-            const orderIds: string[] = JSON.parse(savedOrder);
-            const projectMap = new Map<string, Project>(orderedProjects.map((p: Project) => [p.id, p]));
-            const reordered: Project[] = [];
-            // First add projects in saved order
-            for (const id of orderIds) {
-              const proj = projectMap.get(id);
-              if (proj) {
-                reordered.push(proj);
-                projectMap.delete(id);
-              }
-            }
-            // Then add any new projects not in saved order
-            projectMap.forEach((proj) => {
+      const projectsData = await projectsRes.json();
+      const ideasData = await ideasRes.json();
+
+      const savedOrder = localStorage.getItem('kam-project-order');
+      let orderedProjects = projectsData.projects || [];
+      if (savedOrder) {
+        try {
+          const orderIds: string[] = JSON.parse(savedOrder);
+          const projectMap = new Map<string, Project>(orderedProjects.map((p: Project) => [p.id, p]));
+          const reordered: Project[] = [];
+          for (const id of orderIds) {
+            const proj = projectMap.get(id);
+            if (proj) {
               reordered.push(proj);
-            });
-            orderedProjects = reordered;
-          } catch {
-            // Invalid saved order, use default
+              projectMap.delete(id);
+            }
           }
+          projectMap.forEach((proj) => reordered.push(proj));
+          orderedProjects = reordered;
+        } catch {
+          // ignore invalid saved order
         }
-
-        setProjects(orderedProjects);
-        setIdeas(ideasData.ideas || []);
-        setLastSync(new Date());
-
-        if (newsRes.ok) {
-          const newsData = await newsRes.json();
-          setNews(newsData.items || []);
-          setNewsLastUpdated(newsData.lastUpdated);
-          localStorage.setItem('kam-news', JSON.stringify(newsData.items));
-          localStorage.setItem('kam-news-updated', newsData.lastUpdated || '');
-        }
-
-        if (notesRes && notesRes.ok) {
-          const notesData = await notesRes.json();
-          setNotes(notesData.notes || []);
-        }
-
-        localStorage.setItem('kam-projects', JSON.stringify(orderedProjects));
-        localStorage.setItem('kam-ideas', JSON.stringify(ideasData.ideas));
-        localStorage.setItem('kam-last-sync', new Date().toISOString());
-
-        if (dailyLogRes.ok) {
-          const dailyLogData = await dailyLogRes.json();
-          setDailyLog(dailyLogData.days || []);
-          localStorage.setItem('kam-daily-log', JSON.stringify(dailyLogData.days));
-        }
-      } else {
-        throw new Error('Failed to fetch from GitHub');
       }
+
+      setProjects(orderedProjects);
+      setIdeas(ideasData.ideas || []);
+      setLastSync(new Date());
+
+      if (newsRes.ok) {
+        const newsData = await newsRes.json();
+        setNews(newsData.items || []);
+        setNewsLastUpdated(newsData.lastUpdated);
+        localStorage.setItem('kam-news', JSON.stringify(newsData.items));
+        localStorage.setItem('kam-news-updated', newsData.lastUpdated || '');
+      }
+
+      if (notesRes.ok) {
+        const notesData = await notesRes.json();
+        setNotes(notesData.notes || []);
+      }
+
+      if (dailyLogRes.ok) {
+        const dailyLogData = await dailyLogRes.json();
+        setDailyLog(dailyLogData.days || []);
+        localStorage.setItem('kam-daily-log', JSON.stringify(dailyLogData.days));
+      }
+
+      localStorage.setItem('kam-projects', JSON.stringify(orderedProjects));
+      localStorage.setItem('kam-ideas', JSON.stringify(ideasData.ideas));
+      localStorage.setItem('kam-last-sync', new Date().toISOString());
     } catch {
       const cachedProjects = localStorage.getItem('kam-projects');
       const cachedIdeas = localStorage.getItem('kam-ideas');
@@ -136,18 +127,12 @@ function App() {
   }, []);
 
   const updateProject = (updatedProject: Project) => {
-    setProjects(prev => {
-      const updated = prev.map(p => p.id === updatedProject.id ? updatedProject : p);
+    setProjects((prev) => {
+      const updated = prev.map((p) => (p.id === updatedProject.id ? updatedProject : p));
       localStorage.setItem('kam-projects', JSON.stringify(updated));
       return updated;
     });
     setSelectedProject(updatedProject);
-  };
-
-  const reorderProjects = (reordered: Project[]) => {
-    setProjects(reordered);
-    localStorage.setItem('kam-projects', JSON.stringify(reordered));
-    localStorage.setItem('kam-project-order', JSON.stringify(reordered.map(p => p.id)));
   };
 
   const updateIdeas = (newIdeas: Idea[]) => {
@@ -158,10 +143,9 @@ function App() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
-        <div className="glass rounded-2xl p-8 text-center max-w-sm w-full">
-          <Loader2 className="w-8 h-8 animate-spin text-neon-cyan mx-auto mb-4" />
-          <p className="text-gray-200 font-medium">Loading Command Center...</p>
-          <p className="text-xs text-gray-400 mt-1">Syncing projects, ideas, briefing, notes, and news</p>
+        <div className="panel rounded-2xl p-8 text-center max-w-sm w-full">
+          <Loader2 className="w-8 h-8 animate-spin text-cyan-300 mx-auto mb-4" />
+          <p className="text-slate-100 font-medium">Loading Command Center...</p>
         </div>
       </div>
     );
@@ -170,11 +154,7 @@ function App() {
   if (selectedProject) {
     return (
       <>
-        <ProjectDetail
-          project={selectedProject}
-          onBack={() => setSelectedProject(null)}
-          onUpdate={updateProject}
-        />
+        <ProjectDetail project={selectedProject} onBack={() => setSelectedProject(null)} onUpdate={updateProject} />
         <AIChatButton onClick={() => setChatOpen(true)} />
         <AIChatPanel isOpen={chatOpen} onClose={() => setChatOpen(false)} />
       </>
@@ -182,259 +162,247 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen flex">
-      <Sidebar
-        view={view}
-        onViewChange={setView}
-        isOpen={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-      />
+    <div className="min-h-screen">
+      <AppNavigation view={view} onViewChange={setView} />
 
-      <div className="flex-1 lg:ml-72 min-h-screen">
-        <header className="glass border-b border-white/10 sticky top-0 z-30">
-          <div className="h-14 sm:h-16 px-4 sm:px-6 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setSidebarOpen(true)}
-                className="p-2 rounded-lg hover:bg-white/10 text-gray-300 lg:hidden"
-              >
-                <Menu className="w-5 h-5" />
-              </button>
-              <div>
-                <h1 className="text-sm sm:text-base font-semibold text-white tracking-tight">Command Center</h1>
-                <p className="text-[11px] text-gray-400 hidden sm:block">Modern preview build</p>
-              </div>
+      <div className="lg:ml-72 pb-20 lg:pb-0">
+        <header className="sticky top-0 z-30 border-b border-white/10 bg-[#0b1220]/90 backdrop-blur-xl">
+          <div className="h-14 px-4 lg:px-8 flex items-center justify-between">
+            <div>
+              <h1 className="text-sm lg:text-base font-semibold text-white tracking-tight">Command Center</h1>
+              <p className="text-[11px] text-slate-400">Operations cockpit</p>
             </div>
-
             <button
               onClick={loadData}
-              className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-white/10 text-gray-200 hover:bg-white/10"
-              title="Refresh all data"
+              className="inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border border-white/10 text-slate-200 hover:bg-white/10"
             >
               <RefreshCw className="w-3.5 h-3.5" /> Refresh
             </button>
           </div>
         </header>
 
-        {view === 'voice' ? (
-          <ErrorBoundary>
-            <KodaVoice />
-          </ErrorBoundary>
-        ) : (
-          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-            {error && (
-              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400 text-sm">
-                {error}
-                <button onClick={loadData} className="ml-4 underline hover:text-red-300">
-                  Retry
-                </button>
-              </div>
-            )}
+        <main className="px-4 lg:px-8 py-5">
+          {error && <div className="mb-4 rounded-xl border border-red-500/30 bg-red-500/10 text-red-300 text-sm p-3">{error}</div>}
 
-            <ErrorBoundary>
-              {view === 'dashboard' && (
-                <DashboardView
-                  projects={projects}
-                  onSelectProject={setSelectedProject}
-                  onReorderProjects={reorderProjects}
-                  lastSync={lastSync}
-                  onRefresh={loadData}
-                />
-              )}
-              {view === 'news' && <NewsFeed news={news} lastUpdated={newsLastUpdated} />}
-              {view === 'finance' && <FinanceDashboard />}
-              {view === 'content' && <ContentCreator />}
-              {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
-              {view === 'prospects' && <ProspectsList />}
-              {view === 'briefing' && <DailyBriefing days={dailyLog} />}
-              {view === 'notes' && <NotesTab notes={notes} />}
-              {view === 'ava-feedback' && <AvaFeedbackTab />}
-            </ErrorBoundary>
-          </main>
-        )}
+          <ErrorBoundary>
+            {view === 'dashboard' && (
+              <HomeDashboard
+                projects={projects}
+                ideas={ideas}
+                news={news}
+                lastSync={lastSync}
+                onSelectProject={setSelectedProject}
+                onNavigate={setView}
+              />
+            )}
+            {view === 'news' && <NewsFeed news={news} lastUpdated={newsLastUpdated} />}
+            {view === 'finance' && <FinanceDashboard />}
+            {view === 'content' && <ContentCreator />}
+            {view === 'ideas' && <IdeasHub ideas={ideas} onUpdate={updateIdeas} />}
+            {view === 'prospects' && <ProspectsList />}
+            {view === 'briefing' && <DailyBriefing days={dailyLog} />}
+            {view === 'notes' && <NotesTab notes={notes} />}
+            {view === 'voice' && <KodaVoice />}
+            {view === 'ava-feedback' && <AvaFeedbackTab />}
+          </ErrorBoundary>
+        </main>
       </div>
 
-      {/* AI Chat */}
       <AIChatButton onClick={() => setChatOpen(true)} />
       <AIChatPanel isOpen={chatOpen} onClose={() => setChatOpen(false)} />
     </div>
   );
 }
 
-// Dashboard sub-view with drag-to-reorder grid
-function DashboardView({
+function HomeDashboard({
   projects,
-  onSelectProject,
-  onReorderProjects,
+  ideas,
+  news,
   lastSync,
-  onRefresh,
+  onSelectProject,
+  onNavigate,
 }: {
   projects: Project[];
-  onSelectProject: (p: Project) => void;
-  onReorderProjects: (projects: Project[]) => void;
+  ideas: Idea[];
+  news: any[];
   lastSync: Date | null;
-  onRefresh: () => void;
+  onSelectProject: (project: Project) => void;
+  onNavigate: (view: View) => void;
 }) {
-  const [filter, setFilter] = useState<'all' | 'active' | 'paused' | 'completed' | 'idea'>('all');
-  const [dragIndex, setDragIndex] = useState<number | null>(null);
-  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
-  const dragCounter = useRef(0);
+  const [activeStatus, setActiveStatus] = useState<Project['status'] | 'all'>('active');
+  const [focusedProjectId, setFocusedProjectId] = useState<string | null>(null);
 
-  const active = projects.filter(p => p.status === 'active');
-  const paused = projects.filter(p => p.status === 'paused');
-  const completed = projects.filter(p => p.status === 'completed');
-  const ideaProjects = projects.filter(p => p.status === 'idea');
+  const filteredProjects = useMemo(
+    () => (activeStatus === 'all' ? projects : projects.filter((p) => p.status === activeStatus)),
+    [projects, activeStatus],
+  );
 
-  const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.status === filter);
+  const focusedProject = useMemo(() => {
+    if (focusedProjectId) return projects.find((p) => p.id === focusedProjectId) || filteredProjects[0];
+    return filteredProjects[0] || projects[0];
+  }, [focusedProjectId, projects, filteredProjects]);
 
-  const handleDragStart = useCallback((e: React.DragEvent, index: number) => {
-    setDragIndex(index);
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/plain', String(index));
-    // Add a slight delay for visual feedback
-    requestAnimationFrame(() => {
-      (e.target as HTMLElement).style.opacity = '0.4';
-    });
-  }, []);
+  const activeProjects = projects.filter((p) => p.status === 'active');
+  const recentChanges = projects
+    .flatMap((p) => p.changelog.slice(0, 2).map((c) => ({ ...c, projectName: p.name })))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 5);
 
-  const handleDragEnd = useCallback((e: React.DragEvent) => {
-    (e.target as HTMLElement).style.opacity = '1';
-    setDragIndex(null);
-    setDragOverIndex(null);
-    dragCounter.current = 0;
-  }, []);
-
-  const handleDragOver = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    e.dataTransfer.dropEffect = 'move';
-  }, []);
-
-  const handleDragEnter = useCallback((e: React.DragEvent, index: number) => {
-    e.preventDefault();
-    dragCounter.current++;
-    setDragOverIndex(index);
-  }, []);
-
-  const handleDragLeave = useCallback((_e: React.DragEvent) => {
-    dragCounter.current--;
-    if (dragCounter.current === 0) {
-      setDragOverIndex(null);
-    }
-  }, []);
-
-  const handleDrop = useCallback((e: React.DragEvent, dropIndex: number) => {
-    e.preventDefault();
-    const fromIndex = dragIndex;
-    if (fromIndex === null || fromIndex === dropIndex) {
-      setDragIndex(null);
-      setDragOverIndex(null);
-      dragCounter.current = 0;
-      return;
-    }
-
-    // Only allow reorder when showing all projects (not filtered)
-    if (filter !== 'all') {
-      setDragIndex(null);
-      setDragOverIndex(null);
-      dragCounter.current = 0;
-      return;
-    }
-
-    const newProjects = [...projects];
-    const [movedProject] = newProjects.splice(fromIndex, 1);
-    newProjects.splice(dropIndex, 0, movedProject);
-    onReorderProjects(newProjects);
-
-    setDragIndex(null);
-    setDragOverIndex(null);
-    dragCounter.current = 0;
-  }, [dragIndex, projects, onReorderProjects, filter]);
+  const quickActions: Array<{ label: string; hint: string; view: View }> = [
+    { label: 'Read Daily Briefing', hint: 'Plan your day in one pass', view: 'briefing' },
+    { label: 'Capture ideas', hint: `${ideas.length} ideas tracked`, view: 'ideas' },
+    { label: 'Review notes', hint: 'Scratchpad + references', view: 'notes' },
+    { label: 'Check prospects', hint: 'Leads and opportunities', view: 'prospects' },
+    { label: 'Open AVA feedback', hint: 'Model coaching stream', view: 'ava-feedback' },
+  ];
 
   return (
-    <div className="space-y-6">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        {[
-          { label: 'Active', count: active.length, color: 'text-neon-green', filter: 'active' as const },
-          { label: 'Paused', count: paused.length, color: 'text-yellow-400', filter: 'paused' as const },
-          { label: 'Done', count: completed.length, color: 'text-neon-cyan', filter: 'completed' as const },
-          { label: 'Ideas', count: ideaProjects.length, color: 'text-neon-purple', filter: 'idea' as const },
-        ].map(stat => (
-          <button
-            key={stat.label}
-            onClick={() => setFilter(f => f === stat.filter ? 'all' : stat.filter)}
-            className={`glass rounded-xl p-3.5 text-center transition-all hover:bg-white/10 ${
-              filter === stat.filter ? 'ring-1 ring-neon-cyan/40 bg-white/10' : ''
-            }`}
-          >
-            <div className={`text-2xl font-bold ${stat.color}`}>{stat.count}</div>
-            <div className="text-[11px] text-gray-400 uppercase tracking-wide mt-0.5">{stat.label}</div>
-          </button>
-        ))}
-      </div>
+    <div className="space-y-4 lg:space-y-6">
+      <section className="panel rounded-2xl p-4 lg:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Today</p>
+            <h2 className="text-xl lg:text-2xl font-semibold text-white mt-1">Execution at a glance</h2>
+          </div>
+          {lastSync && <span className="text-xs text-slate-400">Synced {lastSync.toLocaleTimeString()}</span>}
+        </div>
 
-      {/* Header with sync + filter info */}
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-3">
-          <h2 className="text-xl font-semibold text-white tracking-tight">
-            Projects
-            {filter !== 'all' && (
-              <span className="ml-2 text-xs text-gray-500 font-normal">
-                ({filter}) —{' '}
-                <button onClick={() => setFilter('all')} className="text-neon-green hover:underline">
-                  show all
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
+          <Metric title="Active" value={projects.filter((p) => p.status === 'active').length} />
+          <Metric title="Paused" value={projects.filter((p) => p.status === 'paused').length} />
+          <Metric title="Completed" value={projects.filter((p) => p.status === 'completed').length} />
+          <Metric title="News Items" value={news.length} />
+        </div>
+      </section>
+
+      <section className="grid lg:grid-cols-[1.4fr_1fr] gap-4 lg:gap-6">
+        <div className="panel rounded-2xl p-4 lg:p-5">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-base font-semibold text-white">Focus Projects</h3>
+            <div className="flex gap-1 rounded-lg bg-black/20 p-1">
+              {(['all', 'active', 'paused', 'completed', 'idea'] as const).map((status) => (
+                <button
+                  key={status}
+                  onClick={() => setActiveStatus(status)}
+                  className={`px-2 py-1 rounded-md text-[11px] capitalize ${
+                    activeStatus === status ? 'bg-cyan-400/20 text-cyan-200' : 'text-slate-400'
+                  }`}
+                >
+                  {status}
                 </button>
-              </span>
-            )}
-          </h2>
-        </div>
-        <div className="flex items-center gap-2">
-          {lastSync && (
-            <div className="flex items-center gap-1.5 text-[10px] text-gray-600">
-              <div className="w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse" />
-              {lastSync.toLocaleTimeString()}
+              ))}
             </div>
-          )}
-          <button
-            onClick={onRefresh}
-            className="p-1.5 rounded-lg bg-dark-600 hover:bg-dark-500 transition-colors text-gray-500 hover:text-white"
-            title="Refresh"
-          >
-            <RefreshCw className="w-3.5 h-3.5" />
-          </button>
+          </div>
+
+          <div className="grid md:grid-cols-[320px_1fr] gap-3">
+            <div className="rounded-xl border border-white/10 overflow-hidden">
+              {filteredProjects.map((project) => (
+                <button
+                  key={project.id}
+                  onClick={() => setFocusedProjectId(project.id)}
+                  className={`w-full text-left px-3 py-2.5 border-b border-white/5 last:border-b-0 ${
+                    focusedProject?.id === project.id ? 'bg-cyan-400/10' : 'hover:bg-white/[0.03]'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm text-white font-medium truncate pr-2">{project.name}</p>
+                    <span className="text-[10px] text-slate-400 capitalize">{project.status}</span>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-1">{project.progress}% complete</p>
+                </button>
+              ))}
+            </div>
+
+            <div className="rounded-xl border border-white/10 bg-white/[0.02] p-4 min-h-[260px]">
+              {focusedProject ? (
+                <>
+                  <p className="text-xs uppercase tracking-wider text-slate-400">Project Detail</p>
+                  <h4 className="text-lg font-semibold text-white mt-1">{focusedProject.name}</h4>
+                  <p className="text-sm text-slate-300 mt-2">{focusedProject.description}</p>
+                  <div className="mt-4">
+                    <div className="h-2 rounded-full bg-black/35 overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-emerald-300 to-cyan-300" style={{ width: `${focusedProject.progress}%` }} />
+                    </div>
+                    <p className="text-xs text-slate-400 mt-2">Last updated {focusedProject.lastUpdated}</p>
+                  </div>
+
+                  <div className="mt-4 space-y-2">
+                    {(focusedProject.changelog || []).slice(0, 3).map((entry, idx) => (
+                      <div key={`${entry.date}-${idx}`} className="text-sm text-slate-300 flex gap-2">
+                        <CircleDot className="w-3.5 h-3.5 mt-1 text-cyan-300 shrink-0" />
+                        <div>
+                          <p className="text-xs text-slate-400">{entry.date}</p>
+                          <p>{entry.summary}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={() => onSelectProject(focusedProject)}
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm rounded-lg border border-cyan-300/30 bg-cyan-400/10 px-3 py-2 text-cyan-100"
+                  >
+                    Open full project <ArrowRight className="w-4 h-4" />
+                  </button>
+                </>
+              ) : (
+                <p className="text-sm text-slate-400">No projects match this filter.</p>
+              )}
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Drag hint */}
-      {filter === 'all' && (
-        <p className="text-xs text-gray-400 -mt-4">
-          Drag cards to reorder • Order is saved locally
-        </p>
-      )}
+        <div className="space-y-4">
+          <section className="panel rounded-2xl p-4">
+            <h3 className="text-base font-semibold text-white">Recent Changes</h3>
+            <div className="mt-3 space-y-2">
+              {recentChanges.map((change, i) => (
+                <div key={`${change.projectName}-${i}`} className="rounded-lg border border-white/10 p-2.5 bg-white/[0.02]">
+                  <p className="text-[11px] text-slate-400">{change.projectName} • {change.date}</p>
+                  <p className="text-sm text-slate-200 mt-0.5">{change.summary}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-      {/* Projects grid — compact cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-        {filteredProjects.map((project, index) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            onClick={() => onSelectProject(project)}
-            isDragging={dragIndex === index}
-            isDragOver={dragOverIndex === index && dragIndex !== index}
-            onDragStart={(e) => handleDragStart(e, index)}
-            onDragEnd={handleDragEnd}
-            onDragOver={handleDragOver}
-            onDragEnter={(e) => handleDragEnter(e, index)}
-            onDragLeave={handleDragLeave}
-            onDrop={(e) => handleDrop(e, index)}
-          />
-        ))}
-      </div>
+          <section className="panel rounded-2xl p-4">
+            <h3 className="text-base font-semibold text-white">Quick Actions</h3>
+            <div className="mt-3 space-y-2">
+              {quickActions.map((item) => (
+                <button
+                  key={item.label}
+                  onClick={() => onNavigate(item.view)}
+                  className="w-full text-left rounded-lg border border-white/10 hover:border-cyan-300/40 hover:bg-cyan-400/5 p-2.5"
+                >
+                  <p className="text-sm text-white">{item.label}</p>
+                  <p className="text-xs text-slate-400">{item.hint}</p>
+                </button>
+              ))}
+            </div>
+          </section>
 
-      {filteredProjects.length === 0 && (
-        <div className="text-center py-12 text-gray-600">
-          No {filter} projects found
+          <section className="panel rounded-2xl p-4">
+            <h3 className="text-base font-semibold text-white">Top Focus</h3>
+            <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+              {activeProjects.slice(0, 4).map((p) => (
+                <li key={p.id} className="flex items-center justify-between">
+                  <span className="truncate pr-2">{p.name}</span>
+                  <span className="text-xs text-slate-400">{p.progress}%</span>
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
-      )}
+      </section>
+    </div>
+  );
+}
+
+function Metric({ title, value }: { title: string; value: number }) {
+  return (
+    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+      <p className="text-[11px] uppercase tracking-wide text-slate-400">{title}</p>
+      <p className="text-2xl font-semibold text-white mt-1">{value}</p>
     </div>
   );
 }

@@ -3,27 +3,35 @@
     {
       "date": "2026-02-23",
       "conversations": [
-        "AVA Type 1 App marketing strategy discussed — Facebook groups (#1 channel), personal story approach, Reddit, TikTok",
+        "AVA Type 1 App marketing strategy discussed \u2014 Facebook groups (#1 channel), personal story approach, Reddit, TikTok",
         "App analytics: 149 users launch day (Feb 22), ~7 downloads today (Feb 23), building organic momentum",
-        "AVA Companion enclosure design confirmed by Kam — ready for production phase",
-        "Tiwahe Times daily cron ran: freeze warning (low 25°F tonight), aquifer recharge controversy, 3 gov meetings added",
-        "Kam heading to Nobility Homes walkthrough (field work day)"
+        "AVA Companion enclosure design confirmed by Kam \u2014 ready for production phase",
+        "Tiwahe Times daily cron ran: freeze warning (low 25\u00b0F tonight), aquifer recharge controversy, 3 gov meetings added",
+        "Kam heading to Nobility Homes walkthrough (field work day)",
+        "FieldBook bug fixed: return tickets appeared deleted after going back (was UI refresh issue \u2014 ticket was saved, job detail just wasn't re-rendering)",
+        "FieldBook monetization strategy: pitch Matt at Nobility Homes directly ($99-199/mo), or onboard as FieldSync Dealership tier customer ($199/mo)",
+        "Breakthrough T1D outreach discussed \u2014 agreed it's worth emailing, lead with personal story not product pitch"
       ],
       "decisions": [
-        "AVA marketing: lead with personal T1D dad story, not brand posts — community groups respond better",
+        "AVA marketing: lead with personal T1D dad story, not brand posts \u2014 community groups respond better",
         "AVA Companion: case design locked, proceed to hardware order + firmware port",
-        "TikTok companion + app reveal to be coordinated together for max impact"
+        "TikTok companion + app reveal to be coordinated together for max impact",
+        "FieldBook \u2192 FieldSync pipeline: Nobility Homes as potential first paying customer, dog food \u2192 sell",
+        "Breakthrough T1D email: personal story angle (30yr T1D dad + daughter diagnosed at 3) not brand pitch"
       ],
       "action_items": [
         "Post in T1D Facebook groups: 'Type 1 Diabetic Moms', 'Children with Type 1 diabetes support group' (Kam)",
-        "Order 5x ESP32-2432S024C boards + batteries from Amazon (Kam — payday)",
+        "Order 5x ESP32-2432S024C boards + batteries from Amazon (Kam \u2014 payday)",
         "Port AVA Companion firmware to ESP32-2432S024C (Koda)",
         "Film TikTok demo video: app + companion together (Kam)",
-        "Post AVA launch in r/diabetes_t1 and r/Type1Diabetes (Kam)"
+        "Post AVA launch in r/diabetes_t1 and r/Type1Diabetes (Kam)",
+        "Draft + send Breakthrough T1D email (Koda can draft, Kam sends)",
+        "Have casual conversation with Matt about FieldSync (when back from field)"
       ],
       "wins": [
-        "AVA Companion enclosure confirmed — production unblocked",
-        "App live and building momentum with real T1D community"
+        "AVA Companion enclosure confirmed \u2014 production unblocked",
+        "App live and building momentum with real T1D community",
+        "FieldBook return ticket bug fixed and deployed"
       ]
     },
     {

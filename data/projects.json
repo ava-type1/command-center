@@ -336,7 +336,7 @@
       "status": "active",
       "progress": 93,
       "color": "#10b981",
-      "lastUpdated": "2026-02-22",
+      "lastUpdated": "2026-02-23",
       "lastWorkedOn": "Feb 21: Settings modal (name/address/email/PIN), multi-contractor support, Manager Dashboard (fieldbook-manager.pages.dev, pw: nobility2026), D1 database backend (fieldbook-db), API worker (fieldbook-api.kameronmartinllc.workers.dev), Archive system (90-day auto-purge), Calendar scheduling (tap day \u2192 assign jobs), fixed home marker map bug, phantom seed jobs removed.",
       "todos": [
         {
@@ -421,6 +421,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-23",
+          "summary": "Bug fix: return tickets now refresh the job detail view after going back (was appearing deleted). Added auto-save indicator to ticket detail header. Deployed to production."
+        },
         {
           "date": "2026-02-21",
           "summary": "MAJOR DAY: Settings modal added (contractor name, home address, submit email, PIN \u2014 stored in localStorage). Multi-contractor support via contractor ID slugs. Manager Dashboard built and deployed (fieldbook-manager.pages.dev, pw: nobility2026) with D1 backend (fieldbook-db) and API Worker (fieldbook-api.kameronmartinllc.workers.dev, pw: nobility2026). Archive system: completing a job prompts 'Move to Archive?', archived jobs hidden from main list, 90-day auto-purge. Manager side: indefinite retention, Archive tab, searchable, PDF download per completed job. Calendar scheduling: tap day \u2192 tap + \u2192 assign unscheduled jobs or create new. Calendar dots: red=unscheduled, blue=scheduled, yellow=in-progress, green=complete. Bug fixes: home marker async (await ensureHomeCoords), deleted assigned jobs no longer reappear (fb_dismissed localStorage set), seed test jobs (John Barron, James Guest) removed."
@@ -1381,11 +1385,11 @@
       "changelog": [
         {
           "date": "2026-02-23",
-          "summary": "Marketing strategy session: T1D Facebook groups (Type 1 Diabetic Moms, Children with Type 1 diabetes support group) are top priority. Personal story approach (T1D dad + daughter diagnosed at 3) outperforms brand posts. TikTok + Reddit r/diabetes_t1 next. Only 7 downloads showing in today's analytics — building organic momentum through community."
+          "summary": "Marketing strategy session: T1D Facebook groups (Type 1 Diabetic Moms, Children with Type 1 diabetes support group) are top priority. Personal story approach (T1D dad + daughter diagnosed at 3) outperforms brand posts. TikTok + Reddit r/diabetes_t1 next. Only 7 downloads showing in today's analytics \u2014 building organic momentum through community."
         },
         {
           "date": "2026-02-22",
-          "summary": "APP LAUNCHED on App Store! https://apps.apple.com/us/app/avatype1/id6758495309 — 149 users, 165 views, 173 sessions launch day. 11 active users at 11:48 PM. Posted in Type 1 Diabetic Moms and Children with Type 1 diabetes support groups. Immediate Android demand (multiple comments). UK users requesting mmol units. avatype1.com hero + nav CTA updated to App Store link. Brevo email list live."
+          "summary": "APP LAUNCHED on App Store! https://apps.apple.com/us/app/avatype1/id6758495309 \u2014 149 users, 165 views, 173 sessions launch day. 11 active users at 11:48 PM. Posted in Type 1 Diabetic Moms and Children with Type 1 diabetes support groups. Immediate Android demand (multiple comments). UK users requesting mmol units. avatype1.com hero + nav CTA updated to App Store link. Brevo email list live."
         },
         {
           "date": "2026-02-09",

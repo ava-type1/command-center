@@ -1,15 +1,45 @@
 {
-  "lastUpdated": "2026-02-22T11:00:00Z",
+  "lastUpdated": "2026-02-23T11:00:00Z",
   "items": [
     {
-      "id": "178",
-      "title": "The Innermost Loop — Feb 21: 'You Are Invited to February 2027' — Moonshot Predictions",
-      "summary": "Dr. Wissner-Gross's latest post imagines pitches from a year ago that became real companies by Feb 2027. Highlights: a startup inverted weather foundation models (GraphCast) to steer hurricanes via cheap albedo modifications — insurers and governments are first customers, now selling 'good weather' as a commodity. Autonomous business swarms let one person run 1,000 AI-operated microbusinesses (Etsy stores, travel guides, arbitrage) with zero headcount. A 'human routing layer' uses driverless Winnebagos to relocate people overnight based on calendar optimization. Western public safety drone fleets finally cracked the regulatory/trust barrier via radical transparency. A food printer crossed the taste threshold and a workout exoskeleton eliminates the learning curve for resistance training.",
-      "url": "https://theinnermostloop.substack.com/p/you-are-invited-to-february-2027",
+      "id": "179",
+      "title": "The Innermost Loop — Ben Horowitz on AI Classification, Entrepreneurship & Crypto as AI's Economic Layer",
+      "summary": "Dr. Wissner-Gross interviews a16z cofounder Ben Horowitz, who reveals a shocking White House meeting where officials said they could classify AI progress just as nuclear physics was classified in the 1940s — with some of that physics still classified today. Horowitz speculates this overclassification may have stalled fundamental physics progress for decades. On AI displacement fears, Horowitz pushes back hard: 'everybody can be an entrepreneur' in the AI age, setting up armies of AI agents to do useful work. He also discusses crypto as the native economic layer for AI agent transactions.",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-ben-horowitz",
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-22",
+      "relevance": "Horowitz's 'army of AI agents' vision is exactly KodaAI's thesis. His framing of AI entrepreneurship as the escape hatch from displacement validates the agent-as-service model. The crypto-as-AI-economic-layer angle is worth watching for agent payment infrastructure."
+    },
+    {
+      "id": "180",
+      "title": "Claude Code Security: AI-Powered Vulnerability Scanning Now in Preview",
+      "summary": "Anthropic launched Claude Code Security in limited research preview for Enterprise and Team customers. Using Opus 4.6, their team found 500+ vulnerabilities in production open-source codebases — bugs hidden for decades despite expert review. The tool reads code like a human security researcher, traces data flows, and catches complex business logic flaws that static analysis misses. Every finding goes through multi-stage AI verification before human review.",
+      "url": "https://releasebot.io/updates/anthropic",
+      "category": "claude",
+      "source": "Anthropic / Releasebot",
       "date": "2026-02-21",
-      "relevance": "The autonomous business swarms concept is literally KodaAI's thesis — AI agents running end-to-end business operations at near-zero marginal cost. Weather control via differentiable models shows the power of running gradients backward through foundation models, a technique applicable to any domain with a differentiable simulator."
+      "relevance": "Direct upgrade to your workflow — Claude Code Security could audit KodaAI and AVA codebases for vulnerabilities automatically. 500 bugs found in production OSS is staggering signal for AI-assisted security."
+    },
+    {
+      "id": "181",
+      "title": "OpenAI Codex Desktop App Passes 1M Downloads in 3 Weeks",
+      "summary": "OpenAI's Codex desktop app, launched February 2, has already surpassed one million downloads with 60% week-over-week growth. A new survey shows 93% of developers now use AI tools, though measured productivity gains remain around 10% — suggesting the tooling is still maturing and the real gains come from workflow redesign, not just drop-in replacement.",
+      "url": "https://shiftmag.dev/this-cto-says-93-of-developers-use-ai-but-productivity-is-still-10-8013/",
+      "category": "productivity",
+      "source": "ShiftMag",
+      "date": "2026-02-18",
+      "relevance": "93% adoption but only 10% productivity gain is the gap KodaAI can exploit — the real value isn't AI-assisted coding, it's AI-driven autonomous workflows. Also validates that developer AI tooling is now table stakes."
+    },
+    {
+      "id": "182",
+      "title": "CGM Market to Hit $49.3B by 2036 — 10.6% CAGR",
+      "summary": "New market forecast projects the glucose monitoring device market growing from $17.9B in 2026 to $49.3B by 2036 at 10.6% CAGR. Growth driven by rising diabetes prevalence, consumer CGM adoption among non-diabetics, and integration with AI-powered insulin delivery systems like the recently launched twiist + Eversense 365 combo.",
+      "url": "https://www.morningstar.com/news/accesswire/1138444msn/glucose-monitoring-device-market-forecast-2026-2036-global-market-to-reach-usd-493-billion-by-2036-at-106-cagr",
+      "category": "diabetes",
+      "source": "Morningstar / ACCESS Newswire",
+      "date": "2026-02-18",
+      "relevance": "AVA Type 1 is entering a $17.9B market growing at 10.6%. The consumer CGM trend (non-diabetics using CGMs) expands the addressable market beyond T1D. AI + CGM integration is the future — exactly where AVA sits."
     },
     {
       "id": "174",
@@ -19,7 +49,7 @@
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
       "date": "2026-02-20",
-      "relevance": "Gemini 3.1 Pro at half the cost of Opus 4.6 with better benchmarks is the key signal — cost compression continues accelerating. For KodaAI, this means the model powering your agents gets cheaper every month. The freelancer displacement stat ($1 human → $0.03 AI) validates the entire AI-agent-as-service thesis."
+      "relevance": "Gemini 3.1 Pro at half the cost of Opus 4.6 with better benchmarks is the key signal — cost compression continues accelerating. For KodaAI, this means the model powering your agents gets cheaper every month."
     },
     {
       "id": "175",
@@ -39,17 +69,7 @@
       "category": "diabetes",
       "source": "Senseonics / GlobeNewsWire",
       "date": "2026-02-19",
-      "relevance": "A full-year implantable CGM with automated insulin delivery is a game-changer for T1D. AVA Type 1 should support Eversense data integration — users on this system will want app support. The 365-day sensor removes the biggest friction point in CGM adoption."
-    },
-    {
-      "id": "165",
-      "title": "Claude Sonnet 4.6 Released — Now Default for Free & Pro Users",
-      "summary": "Anthropic released Claude Sonnet 4.6 on Feb 17, now the default model for all free and Pro users on claude.ai. Key improvements: better computer use, coding, design, knowledge work, and large data processing. 1M token context window. Fewer hallucinations compared to predecessor.",
-      "url": "https://www.cnbc.com/2026/02/17/anthropic-ai-claude-sonnet-4-6-default-free-pro.html",
-      "category": "claude",
-      "source": "CNBC",
-      "date": "2026-02-17",
-      "relevance": "You're running on Opus 4.6 right now. Sonnet 4.6 being the new default means the free tier just got significantly better — useful for any public-facing AVA features where you want to minimize API costs."
+      "relevance": "A full-year implantable CGM with automated insulin delivery is a game-changer for T1D. AVA Type 1 should support Eversense data integration — users on this system will want app support."
     },
     {
       "id": "167",
@@ -60,16 +80,6 @@
       "source": "NxCode / LogRocket",
       "date": "2026-02-17",
       "relevance": "An open-source Claude Code alternative with video-to-code is worth trying for rapid prototyping. Free access available."
-    },
-    {
-      "id": "170",
-      "title": "Former GitHub CEO Launches 'Entire' — $60M Seed to Rebuild Dev Workflows for AI Agents",
-      "summary": "Thomas Dohmke launched Entire with the largest-ever dev tools seed round ($60M). Core thesis: Git tracks what changed but not why. First product is an open-source Git-aware CLI that captures AI agent context during development.",
-      "url": "https://itwire.com/business-it-news/open-source/former-github-ceo-launches-entire-to-rebuild-software-development-for-the-agentic-era.html",
-      "category": "productivity",
-      "source": "iTWire",
-      "date": "2026-02-18",
-      "relevance": "Solves a real pain point — when Claude Code makes changes, the reasoning behind decisions doesn't survive in git history. Worth watching."
     }
   ]
 }

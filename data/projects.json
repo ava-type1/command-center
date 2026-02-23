@@ -236,8 +236,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-02-22",
-      "lastWorkedOn": "2026-02-22",
+      "lastUpdated": "2026-02-23",
+      "lastWorkedOn": "2026-02-23",
       "todos": [
         {
           "id": "1",
@@ -301,6 +301,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-23",
+          "summary": "Daily update: Freeze warning tonight \u2014 low 25\u00b0F, wind chill 21\u00b0F Tuesday, frost through Wednesday morning (NWS verified, marked Featured). Columbia County pushes back on SRWMD aquifer recharge plan \u2014 40M gal/day reclaimed wastewater injection opposed by Commission Chair Tim Murphy (WUFT Feb 22). 3 government meetings added to calendar: Tourist Dev Council Mar 18, Economic Dev Board Mar 19, P&Z/Board of Adjustment Mar 26. Sports unchanged (Hamilton County home game tonight 7 PM, no results yet)."
+        },
         {
           "date": "2026-02-22",
           "summary": "Daily news update: Red Flag Warning story (NWS, WCJB \u2014 30+ mph gusts, 29-33\u00b0F lows mid-week, Columbia County burn ban); SR-47 Fort White closures Tue-Wed 8am-6pm + Hal Adams Bridge closed through Feb 28. Government calendar updated (P&Z Feb 26, BCC March 19). Weather refreshed from live API (Sunday 71\u00b0F \u2192 sharp drop to 49\u00b0F Monday). Deployed commit 7492530."
@@ -1328,10 +1332,10 @@
       "name": "AVA Type 1 App",
       "description": "iOS simulation game teaching T1D management - gamified diabetes education for kids ages 5-18",
       "status": "active",
-      "progress": 80,
+      "progress": 85,
       "color": "#00d4ff",
-      "lastUpdated": "2026-02-10T00:15:00Z",
-      "lastWorkedOn": "Resubmitted to App Store with video walkthrough, detailed explanation, and patent references",
+      "lastUpdated": "2026-02-23",
+      "lastWorkedOn": "APP IS LIVE on App Store! 149 users, 165 views, 173 sessions on launch day (Feb 22). Strong Android demand and UK mmol requests. Marketing underway in T1D Facebook groups.",
       "todos": [
         {
           "id": "1",
@@ -1351,20 +1355,45 @@
         {
           "id": "4",
           "text": "App Store submission prep",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Post in T1D Facebook groups + personal story marketing",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "TikTok demo video (show app + companion together)",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Add mmol/L unit support (UK/international request)",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Android version (Phase 0-2 scaffolded, emulator testing on Mac)",
           "done": false
         }
       ],
       "changelog": [
         {
-          "date": "2026-02-09",
-          "summary": "Resubmitted to App Store \u2014 included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
+          "date": "2026-02-23",
+          "summary": "Marketing strategy session: T1D Facebook groups (Type 1 Diabetic Moms, Children with Type 1 diabetes support group) are top priority. Personal story approach (T1D dad + daughter diagnosed at 3) outperforms brand posts. TikTok + Reddit r/diabetes_t1 next. Only 7 downloads showing in today's analytics — building organic momentum through community."
         },
         {
-          "date": "2026-01-20",
-          "summary": "Approximately 80% complete. Core simulation working with realistic carb absorption and insulin action curves."
+          "date": "2026-02-22",
+          "summary": "APP LAUNCHED on App Store! https://apps.apple.com/us/app/avatype1/id6758495309 — 149 users, 165 views, 173 sessions launch day. 11 active users at 11:48 PM. Posted in Type 1 Diabetic Moms and Children with Type 1 diabetes support groups. Immediate Android demand (multiple comments). UK users requesting mmol units. avatype1.com hero + nav CTA updated to App Store link. Brevo email list live."
+        },
+        {
+          "date": "2026-02-09",
+          "summary": "Resubmitted to App Store \u2014 included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/ava-type1"
+      "repoUrl": "https://github.com/ava-type1/ava-type1",
+      "liveUrl": "https://apps.apple.com/us/app/avatype1/id6758495309"
     },
     {
       "id": "bid-finder",
@@ -1635,6 +1664,14 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-23",
+          "summary": "Case design confirmed by Kam \u2014 ready for production. +8mm depth variant works. Next: order hardware, port firmware to ESP32-2432S024C, print final enclosure."
+        },
+        {
+          "date": "2026-02-22",
+          "summary": "3D print iteration: +8mm depth promising. 5 targeted variants (A-E) generated with window shift/size corrections, post trim (1.8-2.2mm), LED cutout (~2mm). Board confirmed: ESP32-2432S024, 68x42.9mm, 2.4\" 240x320 ILI9341. Sent ZIP variants to Telegram."
+        },
         {
           "date": "2026-02-07",
           "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector \u2014 LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
@@ -2033,5 +2070,5 @@
       "changelog": []
     }
   ],
-  "lastUpdated": "2026-02-22T15:03:00Z"
+  "lastUpdated": "2026-02-23T09:02:00Z"
 }

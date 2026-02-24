@@ -234,7 +234,7 @@
       "score": 60,
       "status": "📐 Designed — part of FieldSync",
       "createdAt": "2026-01-26T00:00:00Z",
-      "notes": "Already built into FieldSync architecture. Premium tier feature. Needs FieldSync to get users first."
+      "notes": "Already built into FieldSync architecture. Premium tier feature. Needs FieldSync to get users first. | 2026-02-23 update: Discussed concrete GTM path — pitch Nobility Homes as the first FieldSync dealership customer at $199/mo, using FieldBook in-production usage as proof-of-concept."
     },
     {
       "id": "7",
@@ -310,6 +310,15 @@
       "status": "🔨 Scaffold + APK builds complete — device testing next",
       "createdAt": "2026-02-22T05:00:00Z",
       "notes": "Genuinely discussed and started on launch day. Two public Android requests came in immediately after App Store launch. Work already underway in /root/clawd/ava-android with onboarding + tab nav shell complete and build toolchain working. Current blocker is emulator KVM on server; runtime/device testing needs Kam's Mac."
+    },
+    {
+      "id": "50",
+      "title": "🏢 FieldSync Dealership Pilot Offer",
+      "description": "Package FieldSync as a dealership SaaS offer for manufactured home businesses, starting with a first-customer pilot at $199/month.",
+      "category": "saas",
+      "potential": "high",
+      "createdAt": "2026-02-23",
+      "notes": "Discussed on 2026-02-23 after FieldBook bug-fix deployment: position FieldBook as proof-of-concept and sell FieldSync as the polished dealership product. Initial target: Nobility Homes as first paying customer at $199/mo."
     }
   ],
   "avadrive_integrations": [

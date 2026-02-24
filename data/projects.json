@@ -1670,7 +1670,7 @@
       "changelog": [
         {
           "date": "2026-02-23",
-          "summary": "Case design confirmed by Kam \u2014 ready for production. +8mm depth variant works. Next: order hardware, port firmware to ESP32-2432S024C, print final enclosure."
+          "summary": "Case refinements: Kam fed back screen sits 3-4mm too deep + window shifted ~2mm. Generated Variants F (shift left) and G (shift right) with posts lowered 4mm (Z=10.2) and window shifted ±2mm on X axis. Sent as ZIPs via Telegram for test print. Once direction confirmed, will finalize as V9. Files in /root/clawd/cyd-case-depth/v8_window_post_led_variants/."
         },
         {
           "date": "2026-02-22",

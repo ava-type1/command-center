@@ -5,10 +5,10 @@
       "name": "AVA Type 1 Feedback + Companion Launch CRM",
       "description": "Track community comments/requests and prepare launch email campaign for AVA Companion plush.",
       "status": "active",
-      "progress": 40,
+      "progress": 55,
       "color": "#3b82f6",
-      "lastUpdated": "2026-02-22",
-      "lastWorkedOn": "Brevo wired to contact form. Every signup auto-captured. AVA Feedback tab + mini-CRM added to Command Center. App live in App Store.",
+      "lastUpdated": "2026-02-23",
+      "lastWorkedOn": "VIRAL DAY: Kam posted in 12 T1D Facebook groups. 403 unique visitors to avatype1.com today (vs 7 all last week). UK, Canada, Australia traffic. App Store downloads TBD (24-48hr Apple lag). Facebook group strategy confirmed as #1 channel.",
       "todos": [
         {
           "id": "1",
@@ -34,7 +34,7 @@
       "changelog": [
         {
           "date": "2026-02-23",
-          "summary": "Created AVA feedback tracker + companion launch campaign skeleton files for ongoing updates from community comments."
+          "summary": "VIRAL DAY — 403 unique visitors from Facebook T1D groups in a single day. Kam posted in 12 groups, ~half approved, some blowing up with comments. International traffic: UK (60), Canada (41), Australia (14). Facebook group strategy proven. App Store real count arrives tomorrow (Apple 24-48hr lag)."
         },
         {
           "date": "2026-02-22",

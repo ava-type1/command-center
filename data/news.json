@@ -1,55 +1,55 @@
 {
-  "lastUpdated": "2026-02-23T11:00:00Z",
+  "lastUpdated": "2026-02-24T11:00:00Z",
   "items": [
     {
+      "title": "The Innermost Loop \u2014 Feb 23: Agent Autonomy Jumps, FrontierMath Breakthrough, Robotics 24/7 Ops, and Compute Megabuildout",
+      "summary": "In the latest \u201cWelcome to\u2026\u201d briefing, Dr. Wissner-Gross tracks a sharp acceleration in deployed AI capabilities: METR estimates Claude Opus 4.6 now sustains ~14.5 hours of autonomous software work, while Gemini 3.1 Pro reportedly solved a FrontierMath Tier-4 problem no previous model cracked. Anthropic launched Claude Code Security, and markets immediately priced in disruption to legacy cybersecurity vendors. The post also highlights major infrastructure and embodiment signals \u2014 OpenAI targeting roughly $600B in compute through 2030, custom AI silicon claims from Taalas, and Figure humanoids operating continuously with autonomous charging. Together, it frames the shift from \u201cAI demos\u201d to real-world autonomous systems with capital, hardware, and labor implications arriving at once.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-23-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop \u2014 Dr. Alex Wissner-Gross",
+      "date": "2026-02-23",
+      "relevance": "For KodaAI, this is validation that longer-horizon autonomous agents are becoming production-credible now, not later. For AVA, the same reliability trend in agent workflows and edge devices supports always-on health copilots that can monitor, triage, and assist with much less human babysitting.",
+      "id": "183"
+    },
+    {
       "id": "179",
-      "title": "The Innermost Loop — Ben Horowitz on AI Classification, Entrepreneurship & Crypto as AI's Economic Layer",
-      "summary": "Dr. Wissner-Gross interviews a16z cofounder Ben Horowitz, who reveals a shocking White House meeting where officials said they could classify AI progress just as nuclear physics was classified in the 1940s — with some of that physics still classified today. Horowitz speculates this overclassification may have stalled fundamental physics progress for decades. On AI displacement fears, Horowitz pushes back hard: 'everybody can be an entrepreneur' in the AI age, setting up armies of AI agents to do useful work. He also discusses crypto as the native economic layer for AI agent transactions.",
+      "title": "The Innermost Loop \u2014 Ben Horowitz on AI Classification, Entrepreneurship & Crypto as AI's Economic Layer",
+      "summary": "Dr. Wissner-Gross interviews a16z cofounder Ben Horowitz, who reveals a shocking White House meeting where officials said they could classify AI progress just as nuclear physics was classified in the 1940s \u2014 with some of that physics still classified today. Horowitz speculates this overclassification may have stalled fundamental physics progress for decades. On AI displacement fears, Horowitz pushes back hard: 'everybody can be an entrepreneur' in the AI age, setting up armies of AI agents to do useful work. He also discusses crypto as the native economic layer for AI agent transactions.",
       "url": "https://theinnermostloop.substack.com/p/a-conversation-with-ben-horowitz",
       "category": "moonshots",
-      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "source": "The Innermost Loop \u2014 Dr. Alex Wissner-Gross",
       "date": "2026-02-22",
       "relevance": "Horowitz's 'army of AI agents' vision is exactly KodaAI's thesis. His framing of AI entrepreneurship as the escape hatch from displacement validates the agent-as-service model. The crypto-as-AI-economic-layer angle is worth watching for agent payment infrastructure."
     },
     {
+      "title": "Anthropic: Claude Code Sessions Are Running Longer with More Practical Autonomy",
+      "summary": "Anthropic\u2019s \u201cMeasuring AI agent autonomy in practice\u201d reports that long-running Claude Code sessions nearly doubled in three months (from under 25 minutes to over 45 minutes). Experienced users increasingly rely on full auto-approve while still intervening when needed, and Claude often pauses for clarification more than humans interrupt it on complex tasks. The research suggests usable autonomy is improving not just from model upgrades, but from better human-agent operating patterns.",
+      "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+      "category": "claude",
+      "source": "Anthropic Research",
+      "date": "2026-02-21",
+      "relevance": "Operational insight for KodaAI: design around mixed-initiative supervision, not full hands-off autonomy. For AVA, this supports trust-building UX where the assistant acts independently but explicitly asks for confirmation in high-risk moments.",
+      "id": "185"
+    },
+    {
       "id": "180",
       "title": "Claude Code Security: AI-Powered Vulnerability Scanning Now in Preview",
-      "summary": "Anthropic launched Claude Code Security in limited research preview for Enterprise and Team customers. Using Opus 4.6, their team found 500+ vulnerabilities in production open-source codebases — bugs hidden for decades despite expert review. The tool reads code like a human security researcher, traces data flows, and catches complex business logic flaws that static analysis misses. Every finding goes through multi-stage AI verification before human review.",
+      "summary": "Anthropic launched Claude Code Security in limited research preview for Enterprise and Team customers. Using Opus 4.6, their team found 500+ vulnerabilities in production open-source codebases \u2014 bugs hidden for decades despite expert review. The tool reads code like a human security researcher, traces data flows, and catches complex business logic flaws that static analysis misses. Every finding goes through multi-stage AI verification before human review.",
       "url": "https://releasebot.io/updates/anthropic",
       "category": "claude",
       "source": "Anthropic / Releasebot",
       "date": "2026-02-21",
-      "relevance": "Direct upgrade to your workflow — Claude Code Security could audit KodaAI and AVA codebases for vulnerabilities automatically. 500 bugs found in production OSS is staggering signal for AI-assisted security."
+      "relevance": "Direct upgrade to your workflow \u2014 Claude Code Security could audit KodaAI and AVA codebases for vulnerabilities automatically. 500 bugs found in production OSS is staggering signal for AI-assisted security."
     },
     {
-      "id": "181",
-      "title": "OpenAI Codex Desktop App Passes 1M Downloads in 3 Weeks",
-      "summary": "OpenAI's Codex desktop app, launched February 2, has already surpassed one million downloads with 60% week-over-week growth. A new survey shows 93% of developers now use AI tools, though measured productivity gains remain around 10% — suggesting the tooling is still maturing and the real gains come from workflow redesign, not just drop-in replacement.",
-      "url": "https://shiftmag.dev/this-cto-says-93-of-developers-use-ai-but-productivity-is-still-10-8013/",
-      "category": "productivity",
-      "source": "ShiftMag",
-      "date": "2026-02-18",
-      "relevance": "93% adoption but only 10% productivity gain is the gap KodaAI can exploit — the real value isn't AI-assisted coding, it's AI-driven autonomous workflows. Also validates that developer AI tooling is now table stakes."
-    },
-    {
-      "id": "182",
-      "title": "CGM Market to Hit $49.3B by 2036 — 10.6% CAGR",
-      "summary": "New market forecast projects the glucose monitoring device market growing from $17.9B in 2026 to $49.3B by 2036 at 10.6% CAGR. Growth driven by rising diabetes prevalence, consumer CGM adoption among non-diabetics, and integration with AI-powered insulin delivery systems like the recently launched twiist + Eversense 365 combo.",
-      "url": "https://www.morningstar.com/news/accesswire/1138444msn/glucose-monitoring-device-market-forecast-2026-2036-global-market-to-reach-usd-493-billion-by-2036-at-106-cagr",
-      "category": "diabetes",
-      "source": "Morningstar / ACCESS Newswire",
-      "date": "2026-02-18",
-      "relevance": "AVA Type 1 is entering a $17.9B market growing at 10.6%. The consumer CGM trend (non-diabetics using CGMs) expands the addressable market beyond T1D. AI + CGM integration is the future — exactly where AVA sits."
-    },
-    {
-      "id": "174",
-      "title": "The Innermost Loop — Feb 20: Gemini 3.1 Pro SOTA, UAP Disclosure Forced by AI Curve, Fusion Licensing",
-      "summary": "Google launched Gemini 3.1 Pro with new SOTA scores: 44.4% on HLE (no tools), 77.1% on ARC-AGI-2, and 94.3% on GPQA Diamond — crowned the new Artificial Analysis Intelligence Index leader at less than half the cost of Opus 4.6 or GPT-5.2. The White House directed agencies to begin releasing UFO/UAP files, with growing recognition that disclosure was 'forced by the AI curve.' Arc Institute's MULTI-evolve achieved 10-fold improvements in protein directed evolution with a single ML round. SoftBank is forming a consortium for a 9.2 GW gas plant ($33B) — the largest in the US — to power data centers. Type One Energy submitted a fusion stellarator licensing application targeting a 2029 prototype.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-20-2026",
-      "category": "moonshots",
-      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "title": "OpenAI Targets ~$600B Compute Spend Through 2030 as IPO Plans Take Shape",
+      "summary": "Reuters reports OpenAI is targeting about $600 billion in cumulative compute spending by 2030, while preparing for a potential IPO that could value the company near $1 trillion. The company reportedly beat 2025 revenue expectations at $13B while keeping spending below plan. The signal is clear: frontier labs are scaling infrastructure spend to nation-state levels, which will keep pressure on model performance and cost curves.",
+      "url": "https://www.reuters.com/technology/openai-sees-compute-spend-around-600-billion-by-2030-cnbc-reports-2026-02-20/",
+      "category": "ai",
+      "source": "Reuters",
       "date": "2026-02-20",
-      "relevance": "Gemini 3.1 Pro at half the cost of Opus 4.6 with better benchmarks is the key signal — cost compression continues accelerating. For KodaAI, this means the model powering your agents gets cheaper every month."
+      "relevance": "Bigger compute budgets mean faster model iteration and cheaper inference over time \u2014 a direct tailwind for KodaAI agent margins and for AVA\u2019s ability to run richer medical intelligence without exploding costs.",
+      "id": "184"
     },
     {
       "id": "175",
@@ -62,24 +62,24 @@
       "relevance": "Video generation quality is hitting an inflection point. For any content creation in AVA or KodaAI marketing, AI-generated video is becoming viable for demos, explainers, and social content at near-zero cost."
     },
     {
+      "id": "174",
+      "title": "The Innermost Loop \u2014 Feb 20: Gemini 3.1 Pro SOTA, UAP Disclosure Forced by AI Curve, Fusion Licensing",
+      "summary": "Google launched Gemini 3.1 Pro with new SOTA scores: 44.4% on HLE (no tools), 77.1% on ARC-AGI-2, and 94.3% on GPQA Diamond \u2014 crowned the new Artificial Analysis Intelligence Index leader at less than half the cost of Opus 4.6 or GPT-5.2. The White House directed agencies to begin releasing UFO/UAP files, with growing recognition that disclosure was 'forced by the AI curve.' Arc Institute's MULTI-evolve achieved 10-fold improvements in protein directed evolution with a single ML round. SoftBank is forming a consortium for a 9.2 GW gas plant ($33B) \u2014 the largest in the US \u2014 to power data centers. Type One Energy submitted a fusion stellarator licensing application targeting a 2029 prototype.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-20-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop \u2014 Dr. Alex Wissner-Gross",
+      "date": "2026-02-20",
+      "relevance": "Gemini 3.1 Pro at half the cost of Opus 4.6 with better benchmarks is the key signal \u2014 cost compression continues accelerating. For KodaAI, this means the model powering your agents gets cheaper every month."
+    },
+    {
       "id": "176",
       "title": "Eversense 365 + twiist AID System Now Fully Available in the US",
-      "summary": "Senseonics and Sequel Med Tech announced full US availability of the twiist Automated Insulin Delivery system integrated with the Eversense 365 CGM — the first AID system compatible with an implantable 365-day CGM sensor. This eliminates the need for frequent sensor changes entirely, a major quality-of-life improvement for Type 1 diabetes management.",
+      "summary": "Senseonics and Sequel Med Tech announced full US availability of the twiist Automated Insulin Delivery system integrated with the Eversense 365 CGM \u2014 the first AID system compatible with an implantable 365-day CGM sensor. This eliminates the need for frequent sensor changes entirely, a major quality-of-life improvement for Type 1 diabetes management.",
       "url": "https://www.globenewswire.com/news-release/2026/02/19/3241021/0/en/Sequel-Med-Tech-and-Senseonics-Launch-Transformative-Combination-of-twiist-and-Eversense-365.html",
       "category": "diabetes",
       "source": "Senseonics / GlobeNewsWire",
       "date": "2026-02-19",
-      "relevance": "A full-year implantable CGM with automated insulin delivery is a game-changer for T1D. AVA Type 1 should support Eversense data integration — users on this system will want app support."
-    },
-    {
-      "id": "167",
-      "title": "Kimi K2.5 + Kimi Code CLI — Open-Source Claude Code Competitor",
-      "summary": "Moonshot AI's Kimi K2.5 launched with Kimi Code, an open-source terminal-first coding agent that directly competes with Claude Code and Gemini CLI. Features include autonomous coding, IDE integration for VSCode/Cursor/Zed, and 100 parallel agents. The multimodal model can convert screen recordings to code.",
-      "url": "https://www.nxcode.io/resources/news/kimi-k2-5-developer-guide-kimi-code-cli-2026",
-      "category": "productivity",
-      "source": "NxCode / LogRocket",
-      "date": "2026-02-17",
-      "relevance": "An open-source Claude Code alternative with video-to-code is worth trying for rapid prototyping. Free access available."
+      "relevance": "A full-year implantable CGM with automated insulin delivery is a game-changer for T1D. AVA Type 1 should support Eversense data integration \u2014 users on this system will want app support."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-07T06:11:23.084830+00:00",
+  "lastUpdated": "2026-02-25T03:03:19.567Z",
   "account": {
     "name": "TD BUSINESS SIMPLE CHECKING (5108)",
     "balance": 240.81,
@@ -60,7 +60,7 @@
     },
     {
       "name": "Overdraft Paid",
-      "total": 350.0,
+      "total": 350,
       "count": 6
     },
     {
@@ -110,7 +110,7 @@
     },
     {
       "name": "Ap Pai ATM",
-      "total": 123.0,
+      "total": 123,
       "count": 1
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "name": "Ap Anthropic",
-      "amount": 10.0,
+      "amount": 10,
       "count": 4,
       "lastDate": "2026-01-21"
     },
@@ -163,7 +163,7 @@
     },
     {
       "name": "ATM Fee",
-      "amount": 3.0,
+      "amount": 3,
       "count": 5,
       "lastDate": "2026-02-04"
     }
@@ -175,7 +175,7 @@
       "date": "2026-02-05",
       "description": "OVERDRAFT PD",
       "payee": "Overdraft Paid",
-      "amount": -105.0,
+      "amount": -105,
       "category": "Bank Fees"
     },
     {
@@ -203,7 +203,7 @@
       "date": "2026-02-04",
       "description": "NONTD ATM FEE",
       "payee": "ATM Fee",
-      "amount": -3.0,
+      "amount": -3,
       "category": "ATM/Cash"
     },
     {
@@ -217,7 +217,7 @@
       "date": "2026-02-04",
       "description": "DDA PURCHASE *4097, 11708901   EXXON II                    M",
       "payee": "ExxonMobil",
-      "amount": -15.0,
+      "amount": -15,
       "category": "Gas/Fuel"
     },
     {
@@ -238,14 +238,14 @@
       "date": "2026-02-04",
       "description": "OD GRACE FEE REFUND",
       "payee": "Overdraft Fee Refund",
-      "amount": 70.0,
+      "amount": 70,
       "category": "Bank Fees"
     },
     {
       "date": "2026-02-03",
       "description": "OVERDRAFT PD",
       "payee": "Overdraft Paid",
-      "amount": -70.0,
+      "amount": -70,
       "category": "Bank Fees"
     },
     {
@@ -259,7 +259,7 @@
       "date": "2026-02-02",
       "description": "NONTD ATM FEE",
       "payee": "ATM Fee",
-      "amount": -3.0,
+      "amount": -3,
       "category": "ATM/Cash"
     },
     {
@@ -357,14 +357,14 @@
       "date": "2026-02-02",
       "description": "DDA WITHDRAW *4097, RT36544    PAI ATM                     F",
       "payee": "Pai ATM",
-      "amount": -203.0,
+      "amount": -203,
       "category": "ATM/Cash"
     },
     {
       "date": "2026-01-30",
       "description": "MAINTENANCE FEE",
       "payee": "Maintenance Fee",
-      "amount": -10.0,
+      "amount": -10,
       "category": "Bank Fees"
     },
     {
@@ -385,5 +385,136 @@
   "period": {
     "start": "2026-01-08",
     "end": "2026-02-07"
-  }
+  },
+  "billSchedule": [
+    {
+      "name": "Simply Business (Business Insurance)",
+      "amount": 74.44,
+      "dueDay": 2,
+      "autopay": true,
+      "category": "Insurance"
+    },
+    {
+      "name": "Spotify",
+      "amount": 13.62,
+      "dueDay": 5,
+      "autopay": true,
+      "category": "Subscription"
+    },
+    {
+      "name": "SimpleFin",
+      "amount": 1.5,
+      "dueDay": 9,
+      "autopay": true,
+      "category": "Subscription"
+    },
+    {
+      "name": "Cloudflare",
+      "amount": 10.46,
+      "dueDay": 12,
+      "autopay": true,
+      "category": "Software"
+    },
+    {
+      "name": "Hometown Capital (Trailer)",
+      "amount": 296.89,
+      "dueDay": 17,
+      "autopay": true,
+      "category": "Loan"
+    },
+    {
+      "name": "Apple.com (YouTube?)",
+      "amount": 18.99,
+      "dueDay": 18,
+      "autopay": true,
+      "notes": "verify merchant label",
+      "category": "Subscription"
+    },
+    {
+      "name": "Windstream",
+      "amount": 125,
+      "dueDay": 18,
+      "autopay": false,
+      "flexible": true,
+      "notes": "grace period available",
+      "category": "Utilities"
+    },
+    {
+      "name": "OpenAI",
+      "amount": 20,
+      "dueDay": 20,
+      "autopay": true,
+      "category": "Software"
+    },
+    {
+      "name": "Anthropic (Claude)",
+      "amount": 100,
+      "dueDay": 23,
+      "autopay": true,
+      "notes": "currently 20, planned back to 100",
+      "category": "Software"
+    },
+    {
+      "name": "Google (Gemini)",
+      "amount": 3.99,
+      "dueDay": 23,
+      "autopay": true,
+      "category": "Software"
+    },
+    {
+      "name": "Conteboe",
+      "amount": 10.87,
+      "dueDay": 23,
+      "autopay": true,
+      "category": "Service"
+    },
+    {
+      "name": "Apple.com",
+      "amount": 2.99,
+      "dueDay": 26,
+      "autopay": true,
+      "notes": "possible duplicate",
+      "category": "Subscription"
+    },
+    {
+      "name": "Apple.com",
+      "amount": 7.51,
+      "dueDay": 26,
+      "autopay": true,
+      "notes": "possible duplicate",
+      "category": "Subscription"
+    },
+    {
+      "name": "Conteboe",
+      "amount": 10.89,
+      "dueDay": 26,
+      "autopay": true,
+      "notes": "possible duplicate",
+      "category": "Service"
+    },
+    {
+      "name": "Bank Service Charge",
+      "amount": 10,
+      "dueDay": 30,
+      "autopay": true,
+      "category": "Bank Fee"
+    },
+    {
+      "name": "Electric (PLE)",
+      "amount": 325,
+      "dueDay": 3,
+      "autopay": false,
+      "flexible": true,
+      "notes": "usually 275-325; last month 450; payable by 3rd following month",
+      "category": "Utilities"
+    },
+    {
+      "name": "Google Workspace (AVA Type)",
+      "amount": 19.8,
+      "dueDay": 2,
+      "autopay": true,
+      "notes": "recurring status needs confirmation",
+      "category": "Software"
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { DollarSign, TrendingDown, CreditCard, RefreshCw, ArrowDownCircle, ArrowUpCircle, Repeat, ShoppingBag, Loader2 } from 'lucide-react';
+import { DollarSign, TrendingDown, CreditCard, RefreshCw, ArrowDownCircle, ArrowUpCircle, Repeat, ShoppingBag, Loader2, CalendarDays } from 'lucide-react';
 
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ava-type1/command-center/main/data';
 const FINANCE_URL = `${GITHUB_BASE}/finance.json`;
@@ -31,6 +31,16 @@ interface Transaction {
   category: string;
 }
 
+interface BillScheduleItem {
+  name: string;
+  amount: number;
+  dueDay: number;
+  autopay?: boolean;
+  flexible?: boolean;
+  notes?: string;
+  category?: string;
+}
+
 interface FinanceData {
   lastUpdated: string;
   account: {
@@ -48,6 +58,7 @@ interface FinanceData {
     start: string;
     end: string;
   };
+  billSchedule?: BillScheduleItem[];
 }
 
 const categoryColors: Record<string, string> = {
@@ -122,6 +133,14 @@ export function FinanceDashboard() {
   }
 
   const maxCategoryTotal = Math.max(...data.categories.map(c => c.total));
+  const bills = [...(data.billSchedule || [])].sort((a, b) => a.dueDay - b.dueDay);
+  const billMonthlyTotal = bills.reduce((s, b) => s + (Number(b.amount) || 0), 0);
+  const billWeeklyTotals = [
+    bills.filter(b => b.dueDay >= 1 && b.dueDay <= 7).reduce((s, b) => s + b.amount, 0),
+    bills.filter(b => b.dueDay >= 8 && b.dueDay <= 14).reduce((s, b) => s + b.amount, 0),
+    bills.filter(b => b.dueDay >= 15 && b.dueDay <= 21).reduce((s, b) => s + b.amount, 0),
+    bills.filter(b => b.dueDay >= 22).reduce((s, b) => s + b.amount, 0),
+  ];
 
   return (
     <div className="space-y-6">
@@ -255,6 +274,51 @@ export function FinanceDashboard() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="glass rounded-2xl p-6">
+        <h3 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
+          <CalendarDays className="w-5 h-5 text-neon-cyan" />
+          Bills Calendar (Due Dates)
+        </h3>
+        {bills.length === 0 ? (
+          <p className="text-gray-500 text-sm">No bill schedule loaded yet</p>
+        ) : (
+          <>
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 mb-5">
+              <div className="rounded-lg bg-dark-600/40 p-3 border border-white/5 col-span-2 lg:col-span-1">
+                <div className="text-xs text-gray-400">Monthly Bills Total</div>
+                <div className="text-xl font-bold text-neon-green">${billMonthlyTotal.toFixed(2)}</div>
+              </div>
+              {billWeeklyTotals.map((v, i) => (
+                <div key={i} className="rounded-lg bg-dark-600/30 p-3 border border-white/5">
+                  <div className="text-xs text-gray-400">Week {i + 1}</div>
+                  <div className="text-lg font-semibold text-white">${v.toFixed(2)}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-2 max-h-[360px] overflow-y-auto pr-1">
+              {bills.map((bill, i) => (
+                <div key={`${bill.name}-${i}`} className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-dark-600/30 border border-white/5">
+                  <div>
+                    <div className="text-sm text-gray-100">{bill.name}</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      Due on day {bill.dueDay}
+                      {bill.autopay ? ' · Autopay' : ''}
+                      {bill.flexible ? ' · Flexible due' : ''}
+                      {bill.notes ? ` · ${bill.notes}` : ''}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm font-semibold text-neon-cyan">${bill.amount.toFixed(2)}</div>
+                    {bill.category && <div className="text-[10px] text-gray-500">{bill.category}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

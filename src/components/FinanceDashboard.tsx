@@ -19,10 +19,18 @@ interface FinanceData {
   billSchedule?: BillScheduleItem[];
 }
 
+function monthLabel(date: Date) {
+  return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+}
+
 export function FinanceDashboard() {
   const [data, setData] = useState<FinanceData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [viewMonth, setViewMonth] = useState(() => {
+    const d = new Date();
+    return new Date(d.getFullYear(), d.getMonth(), 1);
+  });
 
   const loadData = async () => {
     setLoading(true);
@@ -77,6 +85,29 @@ export function FinanceDashboard() {
     bills.filter(b => b.dueDay >= 22).reduce((s, b) => s + b.amount, 0),
   ];
 
+  const year = viewMonth.getFullYear();
+  const month = viewMonth.getMonth();
+  const first = new Date(year, month, 1);
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const firstDowMon = (first.getDay() + 6) % 7; // Mon=0
+
+  const byDay: Record<number, BillScheduleItem[]> = {};
+  bills.forEach((b) => {
+    if (b.dueDay >= 1 && b.dueDay <= daysInMonth) {
+      byDay[b.dueDay] = byDay[b.dueDay] || [];
+      byDay[b.dueDay].push(b);
+    }
+  });
+
+  const dayCells: Array<{ day?: number }> = [];
+  for (let i = 0; i < firstDowMon; i++) dayCells.push({});
+  for (let d = 1; d <= daysInMonth; d++) dayCells.push({ day: d });
+
+  const prevMonth = () => setViewMonth(new Date(year, month - 1, 1));
+  const nextMonth = () => setViewMonth(new Date(year, month + 1, 1));
+
+  const dayAmount = (d: number) => (byDay[d] || []).reduce((s, b) => s + b.amount, 0);
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -114,24 +145,70 @@ export function FinanceDashboard() {
               ))}
             </div>
 
-            <div className="space-y-2 max-h-[560px] overflow-y-auto pr-1">
-              {bills.map((bill, i) => (
-                <div key={`${bill.name}-${i}`} className="flex items-center justify-between py-2.5 px-3 rounded-lg bg-dark-600/30 border border-white/5">
-                  <div>
-                    <div className="text-sm text-gray-100">{bill.name}</div>
-                    <div className="text-xs text-gray-500 mt-0.5">
-                      Due on day {bill.dueDay}
-                      {bill.autopay ? ' · Autopay' : ''}
-                      {bill.flexible ? ' · Flexible due' : ''}
-                      {bill.notes ? ` · ${bill.notes}` : ''}
+            <div className="rounded-xl border border-white/10 bg-dark-700/30 p-4 mb-5">
+              <div className="flex items-center justify-between mb-3">
+                <button onClick={prevMonth} className="px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 text-gray-300">‹</button>
+                <div className="text-sm font-semibold text-white">{monthLabel(viewMonth)}</div>
+                <button onClick={nextMonth} className="px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 text-gray-300">›</button>
+              </div>
+
+              <div className="grid grid-cols-7 gap-2 text-[11px] text-gray-500 mb-2 text-center">
+                <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+              </div>
+
+              <div className="grid grid-cols-7 gap-2">
+                {dayCells.map((c, i) => {
+                  if (!c.day) return <div key={i} className="h-16 rounded bg-transparent" />;
+                  const list = byDay[c.day] || [];
+                  const total = dayAmount(c.day);
+                  return (
+                    <div key={i} className="h-16 rounded border border-white/10 bg-dark-600/30 p-1.5 flex flex-col justify-between">
+                      <div className="text-[11px] text-gray-300 font-semibold">{c.day}</div>
+                      {list.length > 0 ? (
+                        <>
+                          <div className="text-[10px] text-neon-green font-semibold truncate">${total.toFixed(0)}</div>
+                          <div className="flex gap-1">
+                            {list.slice(0, 3).map((b, idx) => {
+                              const dot = b.flexible ? 'bg-yellow-400' : b.autopay ? 'bg-neon-cyan' : 'bg-red-400';
+                              return <span key={idx} className={`w-1.5 h-1.5 rounded-full ${dot}`} />;
+                            })}
+                          </div>
+                        </>
+                      ) : <div className="text-[10px] text-gray-600">—</div>}
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-wrap gap-4 mt-4 text-xs text-gray-400">
+                <div className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full bg-neon-cyan" /> Autopay</div>
+                <div className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full bg-red-400" /> Manual pay</div>
+                <div className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full bg-yellow-400" /> Flexible / grace</div>
+                <div className="flex items-center gap-2"><span className="w-2.5 h-2.5 rounded-full bg-neon-green" /> Day total shown</div>
+              </div>
+            </div>
+
+            <div className="space-y-2 max-h-[420px] overflow-y-auto pr-1">
+              {bills.map((bill, i) => {
+                const rowColor = bill.flexible ? 'border-yellow-400/30' : bill.autopay ? 'border-cyan-400/30' : 'border-red-400/30';
+                return (
+                  <div key={`${bill.name}-${i}`} className={`flex items-center justify-between py-2.5 px-3 rounded-lg bg-dark-600/30 border ${rowColor}`}>
+                    <div>
+                      <div className="text-sm text-gray-100">{bill.name}</div>
+                      <div className="text-xs text-gray-500 mt-0.5">
+                        Due on day {bill.dueDay}
+                        {bill.autopay ? ' · Autopay' : ' · Manual'}
+                        {bill.flexible ? ' · Flexible due' : ''}
+                        {bill.notes ? ` · ${bill.notes}` : ''}
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm font-semibold text-neon-cyan">${bill.amount.toFixed(2)}</div>
+                      {bill.category && <div className="text-[10px] text-gray-500">{bill.category}</div>}
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm font-semibold text-neon-cyan">${bill.amount.toFixed(2)}</div>
-                    {bill.category && <div className="text-[10px] text-gray-500">{bill.category}</div>}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </>
         )}

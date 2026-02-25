@@ -31,6 +31,7 @@ export function FinanceDashboard() {
     const d = new Date();
     return new Date(d.getFullYear(), d.getMonth(), 1);
   });
+  const [selectedDay, setSelectedDay] = useState<number | null>(null);
 
   const loadData = async () => {
     setLoading(true);
@@ -103,10 +104,11 @@ export function FinanceDashboard() {
   for (let i = 0; i < firstDowMon; i++) dayCells.push({});
   for (let d = 1; d <= daysInMonth; d++) dayCells.push({ day: d });
 
-  const prevMonth = () => setViewMonth(new Date(year, month - 1, 1));
-  const nextMonth = () => setViewMonth(new Date(year, month + 1, 1));
+  const prevMonth = () => { setViewMonth(new Date(year, month - 1, 1)); setSelectedDay(null); };
+  const nextMonth = () => { setViewMonth(new Date(year, month + 1, 1)); setSelectedDay(null); };
 
   const dayAmount = (d: number) => (byDay[d] || []).reduce((s, b) => s + b.amount, 0);
+  const listBills = selectedDay ? bills.filter(b => b.dueDay === selectedDay) : bills;
 
   return (
     <div className="space-y-6">
@@ -161,8 +163,10 @@ export function FinanceDashboard() {
                   if (!c.day) return <div key={i} className="h-16 rounded bg-transparent" />;
                   const list = byDay[c.day] || [];
                   const total = dayAmount(c.day);
+                  const day = c.day as number;
+                  const isSelected = selectedDay === day;
                   return (
-                    <div key={i} className="h-16 rounded border border-white/10 bg-dark-600/30 p-1.5 flex flex-col justify-between">
+                    <button key={i} onClick={() => setSelectedDay(isSelected ? null : day)} className={`h-16 rounded border p-1.5 flex flex-col justify-between text-left ${isSelected ? 'border-neon-cyan bg-neon-cyan/15' : 'border-white/10 bg-dark-600/30'}`}>
                       <div className="text-[11px] text-gray-300 font-semibold">{c.day}</div>
                       {list.length > 0 ? (
                         <>
@@ -175,7 +179,7 @@ export function FinanceDashboard() {
                           </div>
                         </>
                       ) : <div className="text-[10px] text-gray-600">—</div>}
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -188,8 +192,12 @@ export function FinanceDashboard() {
               </div>
             </div>
 
+            <div className="flex items-center justify-between mb-2 text-xs text-gray-400">
+              <span>{selectedDay ? `Showing bills due on day ${selectedDay}` : 'Showing all bills'}</span>
+              {selectedDay && <button onClick={() => setSelectedDay(null)} className="px-2 py-1 rounded bg-dark-600 hover:bg-dark-500 text-gray-300">Clear</button>}
+            </div>
             <div className="space-y-2 max-h-[420px] overflow-y-auto pr-1">
-              {bills.map((bill, i) => {
+              {listBills.map((bill, i) => {
                 const rowColor = bill.flexible ? 'border-yellow-400/30' : bill.autopay ? 'border-cyan-400/30' : 'border-red-400/30';
                 return (
                   <div key={`${bill.name}-${i}`} className={`flex items-center justify-between py-2.5 px-3 rounded-lg bg-dark-600/30 border ${rowColor}`}>

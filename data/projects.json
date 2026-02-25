@@ -105,10 +105,10 @@
       "name": "Command Center",
       "description": "Personal project dashboard with GitHub sync, dark cyberpunk theme, ideas hub, embedded Claude chat",
       "status": "active",
-      "progress": 92,
+      "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-02-20",
-      "lastWorkedOn": "2026-02-20",
+      "lastUpdated": "2026-02-24",
+      "lastWorkedOn": "2026-02-24",
       "todos": [
         {
           "id": "8",
@@ -117,6 +117,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-24",
+          "summary": "Finance tab overhaul shipped: simplified to bills-only view, added monthly bills calendar with color legend, enabled clickable day filtering, and added car insurance autopay due on the 1st. Improves monthly cashflow visibility and due-date planning."
+        },
         {
           "date": "2026-02-20",
           "summary": "v2.1 release. Added News tab to sidebar navigation (was missing entirely) \u2014 wired up to load news.json from GitHub raw URL. Added Moonshots/Innermost Loop category (orange rocket icon) for Dr. Alex Wissner-Gross's daily AI newsletter. Fixed category crash bug (undefined 'productivity' category). Fixed Cloudflare deployment branch (was deploying to 'master' instead of 'main'). Added _headers file for proper cache control (no-store on data JSON files). Nightly ideas cron created (runs at 11:59 PM ET, scans daily memory files, updates ideas.json). Daily news cron updated to prioritize Innermost Loop Substack RSS feed. OpenAI Codex auth configured (fresh iOS token) \u2014 confirmed Plus plan doesn't include Codex CLI API access; gpt-4o fallback removed, openai-codex provider fully diagnosed."
@@ -2074,5 +2078,5 @@
       "changelog": []
     }
   ],
-  "lastUpdated": "2026-02-23T09:02:00Z"
+  "lastUpdated": "2026-02-24T23:59:00Z"
 }

@@ -2088,7 +2088,80 @@
         }
       ],
       "changelog": []
+    },
+    {
+      "id": "framevision",
+      "name": "FrameVision",
+      "description": "AI-powered lumber project visualizer + materials calculator PWA. Upload a house photo, pick a deck/porch style, see a photorealistic AI-generated overlay of the finished project on your actual house. Full materials list with Home Depot + Lowe's affiliate links. Acquisition play targeting Home Depot.",
+      "status": "planning",
+      "progress": 15,
+      "color": "#22c55e",
+      "lastUpdated": "2026-02-26",
+      "lastWorkedOn": "Full product scoped Feb 26. Domain framevision.com available ~$10/yr. Complete vision locked in — ready to build.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Register framevision.com on Cloudflare Registrar",
+          "done": false
+        },
+        {
+          "id": "2",
+          "text": "Create GitHub repo + Cloudflare Pages project",
+          "done": false
+        },
+        {
+          "id": "3",
+          "text": "Generate 12 deck/porch style catalog images via Replicate (Flux.1)",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Build Unbrowse product database scraper for HD + Lowe's SKUs",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Sign up for Home Depot + Lowe's affiliate programs",
+          "done": false
+        },
+        {
+          "id": "6",
+          "text": "Build Cloudflare Worker for OpenAI/Replicate image generation proxy",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Build React PWA — photo upload, theme picker, style catalog, AI visualization",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Build materials calculator engine (procedural math — boards, joists, posts, stringers)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Build top-down plan view with Canvas API",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Set up Larry TikTok content machine for FrameVision",
+          "done": false
+        },
+        {
+          "id": "11",
+          "text": "Sign up Replicate + get API key for image generation",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-26",
+          "summary": "Full product scoped in one session. AI visualization (user's actual house + deck overlay via Replicate/OpenAI), theme-based accessory bundles, procedural materials calculator, Home Depot + Lowe's + Amazon affiliate model, TikTok content machine (Larry skill + ElevenLabs narration), contractor Pro tier ($29/mo), acquisition target: Home Depot. Domain framevision.com available. Per-user cost: ~$0.02-0.08 (AI generation only). Operating cost: ~$1/mo fixed."
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-02-26T12:48:00Z"
+  "lastUpdated": "2026-02-26T17:26:00Z"
 }

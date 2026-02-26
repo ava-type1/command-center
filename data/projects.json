@@ -107,8 +107,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-02-25",
-      "lastWorkedOn": "2026-02-24",
+      "lastUpdated": "2026-02-26",
+      "lastWorkedOn": "2026-02-26",
       "todos": [
         {
           "id": "8",
@@ -117,6 +117,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-26",
+          "summary": "Mac remote dev setup complete: SSH access from server established (nitram@100.122.25.86 via Tailscale). Installed nvm, Node v24.14.0, Claude Code 2.1.59 on Mac. Created ~/bin/claude wrapper and ~/bin/koda helper script for named screen sessions (koda ava, koda new, koda attach, koda list). Discussed Anthropic's new Claude Code Remote Control feature (claude remote-control) — available now on Max plan, lets you control a Mac Claude Code session from iPhone/browser. Full mobile-first dev workflow ready: Termius on iPhone → SSH → Mac → launch Claude Code sessions in any project from the field. Also discussed building a Mac→phone deployment pipeline: fix code → xcodebuild → R2 upload → OTA manifest → Telegram install link (no TestFlight wait)."
+        },
         {
           "date": "2026-02-25",
           "summary": "Server optimization session: Diagnostic tools installed (iotop, sysstat, ripgrep, fd-find, tree). Confirmed elevated/root access already active. Node heap + UV thread pool upgrade planned (8GB / 64 threads). Cognitive-memory skill identified as proper upgrade path over raw ChromaDB. MEMORY.md over 20k limit — needs trimming."
@@ -2086,5 +2090,5 @@
       "changelog": []
     }
   ],
-  "lastUpdated": "2026-02-25T19:30:00Z"
+  "lastUpdated": "2026-02-26T12:48:00Z"
 }

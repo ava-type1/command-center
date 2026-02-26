@@ -1,6 +1,33 @@
 {
   "days": [
     {
+      "date": "2026-02-26",
+      "conversations": [],
+      "decisions": [],
+      "completed": [],
+      "pending": [
+        "Kam must sign into Xcode with Apple ID (nitram-noremak@hotmail.com) to unblock iOS OpenClaw node build.",
+        "After Xcode sign-in: select iPhone UDID 00008110-000670E92ED9A01E and hit Run.",
+        "Enable Power Nap on Mac for persistent Tailscale/SSH.",
+        "MEMORY.md trimming needed (over 20k char limit).",
+        "Order AVA Companion ESP32-2432S024C boards from Amazon (payday).",
+        "Test Koda Dev bot via @Karen62764bot.",
+        "Twilio upgrade (5-40) to unlock Koda SMS outbound.",
+        "AVA Type 1: TikTok demo video, mmol/L unit support, Android version in progress.",
+        "AVA Companion: case variant F/G print results pending from Kam.",
+        "FieldBook: test with Matt at Nobility Homes still pending."
+      ],
+      "next_actions": [
+        "Kam: Xcode sign-in → iPhone → Run (iOS node app one step away).",
+        "Kam: Enable Power Nap on Mac.",
+        "Kam: Order AVA Companion boards on payday.",
+        "Koda: Trim MEMORY.md during next maintenance window.",
+        "Koda: Continue morning + nightly sync crons for Command Center accuracy."
+      ],
+      "wins": [],
+      "summary": "Day start. Carrying strong momentum from Feb 25 infrastructure day — VPS tuned, Tailscale mesh live, Koda Dev Agent running, iOS node app one Xcode sign-in away. Focus: ship AVA Companion boards order, unblock iOS node, keep AVA marketing momentum."
+    },
+    {
       "date": "2026-02-25",
       "conversations": [
         "Massive server optimization session — Node heap bumped to 8GB, UV thread pool to 64, maxConcurrent to 8, cron.maxConcurrentRuns to 4.",
@@ -105,31 +132,31 @@
     {
       "date": "2026-02-23",
       "conversations": [
-        "AVA Type 1 App marketing strategy discussed \u2014 Facebook groups (#1 channel), personal story approach, Reddit, TikTok",
-        "Kam posted in 12 T1D Facebook groups \u2014 ~half approved, some posts blowing up with comments",
+        "AVA Type 1 App marketing strategy discussed — Facebook groups (#1 channel), personal story approach, Reddit, TikTok",
+        "Kam posted in 12 T1D Facebook groups — ~half approved, some posts blowing up with comments",
         "AVA Type 1 VIRAL on Facebook: 439 page views / 403 unique visitors today (vs 7 all of last week). Traffic from US, UK, Canada, Australia, Ireland, NZ, India, Philippines, South Africa",
-        "App Store downloads showing 7 for Feb 16-22 window (Apple analytics 24-48hr lag \u2014 real today count TBD tomorrow)",
-        "AVA Companion enclosure design confirmed by Kam \u2014 ready for production phase",
-        "Tiwahe Times daily cron ran: freeze warning (low 25\u00b0F tonight), aquifer recharge controversy, 3 gov meetings added",
+        "App Store downloads showing 7 for Feb 16-22 window (Apple analytics 24-48hr lag — real today count TBD tomorrow)",
+        "AVA Companion enclosure design confirmed by Kam — ready for production phase",
+        "Tiwahe Times daily cron ran: freeze warning (low 25°F tonight), aquifer recharge controversy, 3 gov meetings added",
         "Kam heading to Nobility Homes walkthrough (field work day)",
-        "FieldBook bug fixed: return tickets appeared deleted after going back (was UI refresh issue \u2014 ticket was saved, job detail just wasn't re-rendering). Deployed.",
+        "FieldBook bug fixed: return tickets appeared deleted after going back (was UI refresh issue — ticket was saved, job detail just wasn't re-rendering). Deployed.",
         "FieldBook monetization strategy: pitch Matt at Nobility Homes directly ($99-199/mo), or onboard as FieldSync Dealership tier customer ($199/mo)",
-        "Breakthrough T1D outreach discussed \u2014 agreed it's worth emailing, lead with personal story not product pitch",
-        "Cloudflare KV limit hit (90% of 100k reads) \u2014 diagnosed as analytics-worker doing 2 reads per page view. Fix: add 60s cache layer or upgrade to paid ($5/mo for 10M reads)"
+        "Breakthrough T1D outreach discussed — agreed it's worth emailing, lead with personal story not product pitch",
+        "Cloudflare KV limit hit (90% of 100k reads) — diagnosed as analytics-worker doing 2 reads per page view. Fix: add 60s cache layer or upgrade to paid ($5/mo for 10M reads)"
       ],
       "decisions": [
-        "AVA marketing: Facebook groups work \u2014 proven today with 403 real visitors. Lead with personal T1D dad story, not brand posts",
+        "AVA marketing: Facebook groups work — proven today with 403 real visitors. Lead with personal T1D dad story, not brand posts",
         "AVA Companion: case design locked, proceed to hardware order + firmware port",
         "TikTok companion + app reveal to be coordinated together for max impact",
-        "FieldBook \u2192 FieldSync pipeline: Nobility Homes as potential first paying customer, dog food \u2192 sell",
+        "FieldBook → FieldSync pipeline: Nobility Homes as potential first paying customer, dog food → sell",
         "Breakthrough T1D email: personal story angle (30yr T1D dad + daughter diagnosed at 3) not brand pitch",
         "KV analytics fix: add cache layer to analytics-worker to cut reads ~90%"
       ],
       "action_items": [
-        "Engage comments on the Facebook posts that are blowing up \u2014 keep them alive (Kam)",
+        "Engage comments on the Facebook posts that are blowing up — keep them alive (Kam)",
         "Check App Store Connect tomorrow AM for today's real download count (Kam)",
         "Post in UK/Canadian/Australian T1D groups to follow up on international traffic (Kam)",
-        "Order 5x ESP32-2432S024C boards + batteries from Amazon (Kam \u2014 payday)",
+        "Order 5x ESP32-2432S024C boards + batteries from Amazon (Kam — payday)",
         "Port AVA Companion firmware to ESP32-2432S024C (Koda)",
         "Film TikTok demo video: app + companion together (Kam)",
         "Post AVA launch in r/diabetes_t1 and r/Type1Diabetes (Kam)",
@@ -138,9 +165,9 @@
         "Fix analytics-worker KV reads with cache layer (Koda)"
       ],
       "wins": [
-        "AVA Type 1 went viral on Facebook \u2014 403 unique visitors in one day, internationally",
+        "AVA Type 1 went viral on Facebook — 403 unique visitors in one day, internationally",
         "Facebook group strategy PROVEN: authentic story posts in T1D groups = real traffic",
-        "AVA Companion enclosure confirmed \u2014 production unblocked",
+        "AVA Companion enclosure confirmed — production unblocked",
         "App live and building real community momentum",
         "FieldBook return ticket bug fixed and deployed"
       ],
@@ -170,11 +197,11 @@
       "date": "2026-02-22",
       "conversations": [
         "AVA Type 1 app went LIVE on App Store (https://apps.apple.com/us/app/avatype1/id6758495309)",
-        "ChatGPT OAuth fallback set up \u2014 gpt-5.3-codex as fallback, sub-agents default to Codex",
+        "ChatGPT OAuth fallback set up — gpt-5.3-codex as fallback, sub-agents default to Codex",
         "Google Gemini 2.5 Pro connected via API key (/model gemini alias added)",
-        "Android port started \u2014 Phase 0/1/2 complete (plan, scaffold, build pipeline working)",
-        "Brevo email list wired to contact form \u2014 every AVA signup now saved permanently",
-        "Contact form auto-replies disabled \u2014 Kam will reply personally",
+        "Android port started — Phase 0/1/2 complete (plan, scaffold, build pipeline working)",
+        "Brevo email list wired to contact form — every AVA signup now saved permanently",
+        "Contact form auto-replies disabled — Kam will reply personally",
         "Website CTA updated from 'Coming Soon' to 'Download on App Store'",
         "AVA Feedback + mini-CRM added to Command Center",
         "Two daily briefing cron jobs added (9:10 AM + 11:40 PM ET)",
@@ -183,7 +210,7 @@
       "decisions": [
         "Full Android native build (not PWA)",
         "Codex as default sub-agent model to preserve Claude credits",
-        "Manual personal replies only \u2014 no auto-replies on contact form",
+        "Manual personal replies only — no auto-replies on contact form",
         "Brevo as email list platform (free tier, unlimited contacts)"
       ],
       "action_items": [
@@ -201,7 +228,7 @@
     },
     {
       "date": "2026-02-13",
-      "summary": "Major KodaAI evolution day \u2014 pivoted from manual setup to self-service platform. Built consumer onboarding, phone integration spec, portfolio site. Improved Glucose Insights with export guides.",
+      "summary": "Major KodaAI evolution day — pivoted from manual setup to self-service platform. Built consumer onboarding, phone integration spec, portfolio site. Improved Glucose Insights with export guides.",
       "highlights": [
         "KodaAI self-service platform designed and landing page deployed",
         "Stripe payment integration completed for InstantSite",
@@ -211,7 +238,7 @@
       ],
       "decisions": [
         "KodaAI pricing restructured: $79 Lite / $149 Standard / $299 Pro",
-        "SMS via Twilio as primary channel (not Telegram) \u2014 grandma-proof",
+        "SMS via Twilio as primary channel (not Telegram) — grandma-proof",
         "Single Anthropic API key bundled into subscription, use Sonnet not Opus for clients",
         "Brother-in-law's site prep business = first beta tester",
         "Cloudflare Moltworker for hosting client instances (not per-user VPS)"
@@ -230,7 +257,7 @@
           "status": "pending"
         },
         {
-          "text": "Build SMS bridge (Twilio \u2192 Clawdbot)",
+          "text": "Build SMS bridge (Twilio → Clawdbot)",
           "owner": "Koda",
           "status": "pending"
         },
@@ -269,7 +296,7 @@
       "highlights": [
         "gentlytold.com domain connected via Cloudflare",
         "Email routing set up for kameron@gentlytold.com",
-        "Engine worker AI_PROXY_TOKEN fixed \u2014 full pipeline working",
+        "Engine worker AI_PROXY_TOKEN fixed — full pipeline working",
         "AVA Mini enclosure work continued"
       ],
       "decisions": [
@@ -302,7 +329,7 @@
         "Installed 10 new skills from ClawHub",
         "Built and deployed InstantSite micro-SaaS",
         "Created Fiverr gig with 3 tiers",
-        "Income strategy discussion \u2014 focus on passive income"
+        "Income strategy discussion — focus on passive income"
       ],
       "decisions": [
         "InstantSite as top micro-SaaS pick",
@@ -333,5 +360,5 @@
       "mood": "energized"
     }
   ],
-  "lastUpdated": "2026-02-25T23:46:00-05:00"
+  "lastUpdated": "2026-02-26T09:10:00-05:00"
 }

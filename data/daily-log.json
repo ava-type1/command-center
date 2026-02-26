@@ -4,11 +4,11 @@
       "date": "2026-02-26",
       "conversations": [],
       "decisions": [],
-      "completed": [],
+      "completed": [
+        "iOS OpenClaw node app paired and connected via Tailscale (Feb 26 morning).",
+        "Mac Power Nap confirmed enabled by Kam."
+      ],
       "pending": [
-        "Kam must sign into Xcode with Apple ID (nitram-noremak@hotmail.com) to unblock iOS OpenClaw node build.",
-        "After Xcode sign-in: select iPhone UDID 00008110-000670E92ED9A01E and hit Run.",
-        "Enable Power Nap on Mac for persistent Tailscale/SSH.",
         "MEMORY.md trimming needed (over 20k char limit).",
         "Order AVA Companion ESP32-2432S024C boards from Amazon (payday).",
         "Test Koda Dev bot via @Karen62764bot.",
@@ -18,8 +18,6 @@
         "FieldBook: test with Matt at Nobility Homes still pending."
       ],
       "next_actions": [
-        "Kam: Xcode sign-in → iPhone → Run (iOS node app one step away).",
-        "Kam: Enable Power Nap on Mac.",
         "Kam: Order AVA Companion boards on payday.",
         "Koda: Trim MEMORY.md during next maintenance window.",
         "Koda: Continue morning + nightly sync crons for Command Center accuracy."

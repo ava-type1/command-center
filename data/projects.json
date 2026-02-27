@@ -2098,10 +2098,10 @@
       "name": "See It Built",
       "description": "AI-powered outdoor space visualizer + materials calculator PWA. Upload deck photo or enter dimensions, pick style + budget, see real purchasable products composited into your actual space via IC-Light relighting. Shop the look via Wayfair/Amazon/HD/Lowe's affiliate links. Acquisition play targeting Home Depot, Lowe's, or Wayfair.",
       "status": "active",
-      "progress": 50,
+      "progress": 58,
       "color": "#22c55e",
       "lastUpdated": "2026-02-27",
-      "lastWorkedOn": "Opus nightly build Feb 27 (2\u20133:20 AM): Phase 1 complete (React+Vite+TS+Tailwind+PWA scaffold, Cloudflare Worker API proxy, KV usage tracking, email gate modal, Turnstile bot protection, PostHog+GA4, ToS+Privacy pages). Phase 2 complete (photo upload drag/drop/camera, 10 themes + 3 budget tiers, product catalog, shopping list, lead form, share/before-after). Phase 3 core done (door detection canvas 2-click calibration, parametric template system, full IRC materials calculator, pricing engine ~45 SKUs with HD/Lowe\u2019s URLs). Next: Phase 3.6 \u2014 materials list UI + PDF export.",
+      "lastWorkedOn": "Phase 3.6 now building (Opus spawned 12:01 PM Feb 27): Materials List UI + PDF export \u2014 wiring materials calculator \u2192 pricing engine \u2192 grouped BOM display, tier comparison, branded PDF. Phase 3.5 done overnight. Blocked items still need Kam: Replicate account + domain registration.",
       "todos": [
         {
           "id": "1",
@@ -2175,7 +2175,7 @@
         },
         {
           "id": "15",
-          "text": "Phase 3.6: Materials list UI + PDF export (next session)",
+          "text": "Phase 3.6: Materials list UI + PDF export (Opus building now \u2014 Feb 27 12 PM)",
           "done": false
         },
         {

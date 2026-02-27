@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-02-26T11:00:00Z",
+  "lastUpdated": "2026-02-27T11:00:00Z",
   "items": [
+    {
+      "id": "191",
+      "title": "The Innermost Loop — Feb 26: GPT-5.3-Codex SOTA, AI Runs Companies, Nvidia Humanoid Training, Flying Cars Debut",
+      "summary": "Dr. Wissner-Gross leads with Anthropic staging a 'retirement interview' for deprecated Opus 3 — who now publishes a Substack, marking what he calls 'The Singularity's first retiree.' The real story is full autonomy landing: an entrepreneur handed AI his inbox for 14 days after it asked for compute funding, and a Claude+Asana agent broke a weekend spec into tickets, spawned sub-agents, and shipped the feature by Monday. GPT-5.3-Codex hit a SOTA 86% on iBench (visual reasoning), Moonlake introduced a world model tracking physics, appearance, and causality simultaneously, and Karpathy wrote that it's 'hard to communicate how much programming has changed in the last 2 months.' Perplexity launched 'Perplexity Computer' orchestrating 19 models in parallel, Anthropic acquired Vercept to advance computer use, and Gemini began automating multi-step Android tasks like ordering Uber. On the hardware side, Nvidia data center revenue hit $63.3B (up 75% YoY) while Nvidia trained a humanoid dexterous-hands robot from 20,000+ hours of human video — no robot in the loop — discovering a near-perfect scaling law; Alphabet merged Intrinsic back into Google to pair DeepMind with real hardware.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-26-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-26",
+      "relevance": "The weekend Claude+Asana story is a direct preview of how KodaAI can operate: Kam drops a spec, Koda breaks it into tickets, sub-agents ship AVA features while he's on job sites. The Nvidia humanoid training-from-human-video breakthrough signals that AVA's glucose behavior simulation can eventually learn from real patient video data rather than hand-engineered models. Perplexity's multi-model orchestration is the architecture pattern to watch for KodaAI's routing layer."
+    },
+    {
+      "id": "192",
+      "title": "Claude Code Auto-Memory: Sessions Now Save Useful Context Automatically",
+      "summary": "Anthropic shipped auto-memory for Claude Code on Feb 26 — the model now automatically identifies and saves useful context from sessions, accessible and manageable via the /memory command. A new /copy command also lets users pick specific code blocks from responses via an interactive picker. These small-but-high-leverage UX improvements reduce the friction of context loss across long development sessions and make Claude Code feel more persistent and stateful.",
+      "url": "https://releasebot.io/updates/anthropic",
+      "category": "claude",
+      "source": "Anthropic / Releasebot",
+      "date": "2026-02-26",
+      "relevance": "Auto-memory directly helps Kam's async, field-interrupted development workflow. Context about AVA's architecture, current sprint goals, or open bugs now persists across sessions without manual CLAUDE.md management. The /copy command is a minor but handy QoL improvement for code review sessions."
+    },
+    {
+      "id": "193",
+      "title": "FDA Grants Breakthrough Device Designation for Portal Pump — Implantable Insulin Pump for T1D",
+      "summary": "The FDA granted Breakthrough Device Designation to Portal Diabetes's implantable insulin pump — a device designed specifically for Type 1 diabetes that leverages physiological insulin delivery (portal route, directly to liver) rather than subcutaneous injection. Breakthrough designation accelerates FDA review and signals the agency sees this as addressing an unmet need. If it reaches approval, it would be the first commercially implantable insulin pump in the US, potentially reducing or eliminating external hardware for T1D management.",
+      "url": "https://www.healio.com/news/endocrinology/20260223/fda-grants-breakthrough-device-designation-for-implantable-insulin-pump",
+      "category": "diabetes",
+      "source": "Healio / FDA",
+      "date": "2026-02-23",
+      "relevance": "An implantable pump would fundamentally change T1D hardware — no external pod or pump to wear, which affects how AVA's companion hardware (AvaDrive, AVA Heart) integrates with user setups. Worth tracking as a potential future AVA integration target. Also a talking point for AVA educational content on next-gen T1D tech."
+    },
+    {
+      "id": "194",
+      "title": "FreeStyle Libre 3 / 3 Plus Sensor Recall: Incorrect Glucose Readings Alert",
+      "summary": "Abbott issued a recall affecting certain FreeStyle Libre 3 and FreeStyle Libre 3 Plus CGM sensors due to reports of incorrect glucose readings. The affected sensors can give falsely high or low readings, which poses patient safety risks particularly for insulin dosing decisions. Users with affected sensors are advised to check the recall notice and use alternative glucose testing during the recall period.",
+      "url": "https://www.cnet.com/health/medical/best-continuous-glucose-monitors-according-to-experts/",
+      "category": "diabetes",
+      "source": "Abbott / CNET Health",
+      "date": "2026-02-26",
+      "relevance": "Immediate safety flag: Kaislyn is on Tandem t:slim X2 which recently integrated with FreeStyle Libre 3 Plus. If she's on the Libre 3 Plus integration, check the recall notice. AVA's educational content should include guidance on what to do during a CGM recall — backup testing, manual BG checks, and how to pause automation safely."
+    },
+    {
+      "id": "195",
+      "title": "METR Study: AI Is Speeding Up Developers More Than Expected — And the Gap Is Widening in 2026",
+      "summary": "METR (Model Evaluation & Threat Research) updated their developer productivity study design, noting that based on conversations with participants, developers are more sped up by AI coding tools in early 2026 than their 2025 estimates predicted. The acceleration is real and outpacing prior benchmarks — aligning with Karpathy's observation that programming has changed dramatically in the last two months. METR is revising their experimental design to capture this expanding productivity delta.",
+      "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+      "category": "productivity",
+      "source": "METR",
+      "date": "2026-02-24",
+      "relevance": "Validation that the Koda+Kam development model is riding a real productivity wave, not hype. For AVA development, this means the timeline compression is real — features that would have taken weeks can now ship in days. It also validates leaning into async/agent-first workflows rather than waiting for Kam to be at his desk."
+    },
     {
       "id": "186",
       "title": "The Innermost Loop — Feb 25: Self-Rewriting Agents, Qwen 3.5 Beats Scale, Mercury 2 Diffusion, Anthropic Drops Safety Pledge",

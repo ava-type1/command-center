@@ -354,10 +354,10 @@
       "name": "FieldBook",
       "description": "Mobile-first PWA for Nobility Homes contractors. Job tracking, photo documentation, return ticket workflow, digital signature overlay, earnings strip, pay ticket email generator, and R2 photo storage. Offline-capable, installable on iOS.",
       "status": "active",
-      "progress": 93,
+      "progress": 95,
       "color": "#10b981",
-      "lastUpdated": "2026-02-23",
-      "lastWorkedOn": "Feb 21: Settings modal (name/address/email/PIN), multi-contractor support, Manager Dashboard (fieldbook-manager.pages.dev, pw: nobility2026), D1 database backend (fieldbook-db), API worker (fieldbook-api.kameronmartinllc.workers.dev), Archive system (90-day auto-purge), Calendar scheduling (tap day \u2192 assign jobs), fixed home marker map bug, phantom seed jobs removed.",
+      "lastUpdated": "2026-02-27",
+      "lastWorkedOn": "Feb 27: Replaced Census geocoder with Nominatim (OpenStreetMap) \u2014 fixes 75% mileage calculation failure rate on rural FL manufactured home addresses. Map popups now show scheduled date when tapping a job marker. Deployed to master.fieldbook-pro.pages.dev.",
       "todos": [
         {
           "id": "1",
@@ -2098,10 +2098,10 @@
       "name": "See It Built",
       "description": "AI-powered outdoor space visualizer + materials calculator PWA. Upload deck photo or enter dimensions, pick style + budget, see real purchasable products composited into your actual space via IC-Light relighting. Shop the look via Wayfair/Amazon/HD/Lowe's affiliate links. Acquisition play targeting Home Depot, Lowe's, or Wayfair.",
       "status": "active",
-      "progress": 58,
+      "progress": 63,
       "color": "#22c55e",
       "lastUpdated": "2026-02-27",
-      "lastWorkedOn": "Phase 3.6 now building (Opus spawned 12:01 PM Feb 27): Materials List UI + PDF export \u2014 wiring materials calculator \u2192 pricing engine \u2192 grouped BOM display, tier comparison, branded PDF. Phase 3.5 done overnight. Blocked items still need Kam: Replicate account + domain registration.",
+      "lastWorkedOn": "Phase 3.6 COMPLETE (Feb 27): Materials List UI + PDF export done \u2014 BOM engine wired, grouped Bill of Materials, tier comparison (Budget/Mid-Range/Premium), branded PDF export (free=watermark, pro=contractor logo). Phase 4 next: full flow wiring (dimension input \u2192 door detection \u2192 template \u2192 estimate). Blocked: Replicate account + domain still need Kam.",
       "todos": [
         {
           "id": "1",

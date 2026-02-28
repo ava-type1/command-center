@@ -1,6 +1,76 @@
 {
   "projects": [
     {
+      "id": "iran-strike-map",
+      "name": "Iran Strike Map",
+      "description": "Real-time conflict tracking map for the US-Israel strikes on Iran (Operation Epic Fury, Feb 28 2026). Interactive map with confirmed strike markers, flag-emoji markers showing who struck (US/Israel/Iran), leader elimination tracker, US military assets layer, video popup support, and AI-powered geolocation pipeline (Phase 2). Mobile-first design with bottom-sheet panels.",
+      "status": "active",
+      "progress": 60,
+      "color": "#ff3300",
+      "lastUpdated": "2026-02-28",
+      "lastWorkedOn": "Feb 28: Built and launched same day conflict began. Flag emoji markers (\ud83c\uddfa\ud83c\uddf8\ud83c\uddee\ud83c\uddf1\ud83c\uddee\ud83c\uddf7) show attacker at a glance. 11 confirmed strike locations seeded. Mobile-first redesign with FAB buttons + bottom sheets. Video pipeline (Phase 2) planned.",
+      "todos": [
+        {
+          "id": "1",
+          "text": "Launch map with seeded confirmed strikes",
+          "done": true
+        },
+        {
+          "id": "2",
+          "text": "Flag emoji markers + target-type color dots",
+          "done": true
+        },
+        {
+          "id": "3",
+          "text": "Leader tracker panel (Khamenei, IRGC commanders)",
+          "done": true
+        },
+        {
+          "id": "4",
+          "text": "US military assets layer (bases + carrier groups)",
+          "done": true
+        },
+        {
+          "id": "5",
+          "text": "Mobile-first redesign (FAB buttons, bottom sheets)",
+          "done": true
+        },
+        {
+          "id": "6",
+          "text": "Register iranstrikemap.com domain",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Phase 2: Telegram OSINT channel monitoring (Telethon)",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Phase 2: AI video geolocation pipeline (frame extract + vision model)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Phase 2: Approval queue for strike verification",
+          "done": false
+        },
+        {
+          "id": "10",
+          "text": "Keep strike data current as conflict develops",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-02-28",
+          "summary": "Built and launched in one day as conflict broke out. US and Israel launched Operation Epic Fury against Iran at 1 AM ET. Map seeded with 11 confirmed events: 9 US/Israel strikes (nuclear facilities, IRGC HQ, Khamenei compound, airbases) + 2 Iranian retaliatory strikes (northern Israel, Al Udeid Qatar). Flag emoji markers show attacker instantly. Mobile redesign with full-screen map, FAB buttons, slide-up bottom sheets for feed and leader tracker. AI video pipeline (Phase 2) designed and ready to build."
+        }
+      ],
+      "liveUrl": "https://iran-strike-map.pages.dev",
+      "repoUrl": null
+    },
+    {
       "id": "ava-type1-feedback-crm",
       "name": "AVA Type 1 Feedback + Companion Launch CRM",
       "description": "Track community comments/requests and prepare launch email campaign for AVA Companion plush.",
@@ -249,7 +319,7 @@
       "progress": 80,
       "color": "#1e3a5f",
       "lastUpdated": "2026-02-28",
-      "lastWorkedOn": "Feb 28: Daily cron — 2 new stories (Tucker Ayers spelling bee win + house fire SW of Lake City). 10 upcoming baseball games added to schedule through Apr 9.",
+      "lastWorkedOn": "Feb 28: Daily cron \u2014 2 new stories (Tucker Ayers spelling bee win + house fire SW of Lake City). 10 upcoming baseball games added to schedule through Apr 9.",
       "todos": [
         {
           "id": "1",
@@ -315,7 +385,7 @@
       "changelog": [
         {
           "date": "2026-02-28",
-          "summary": "2 new stories: Columbia County 8th grader Tucker Ayers won 2026 First Coast Spelling Bee at Fort White HS (25 rounds, word: 'theca') — heads to National Spelling Bee in D.C. in May (News4Jax, featured). Columbia County house fire contained to room of origin SW of Lake City, no injuries (WCJB). Sports: 10 upcoming games added to schedule through Apr 9 from MaxPreps (record still 1-7, no new games since Feb 26). Deployed."
+          "summary": "2 new stories: Columbia County 8th grader Tucker Ayers won 2026 First Coast Spelling Bee at Fort White HS (25 rounds, word: 'theca') \u2014 heads to National Spelling Bee in D.C. in May (News4Jax, featured). Columbia County house fire contained to room of origin SW of Lake City, no injuries (WCJB). Sports: 10 upcoming games added to schedule through Apr 9 from MaxPreps (record still 1-7, no new games since Feb 26). Deployed."
         },
         {
           "date": "2026-02-27",
@@ -2210,5 +2280,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-28T09:03:00Z"
+  "lastUpdated": "2026-02-28T17:04:00Z"
 }

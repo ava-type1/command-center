@@ -2176,7 +2176,7 @@
         {
           "id": "15",
           "text": "Phase 3.6: Materials list UI + PDF export (Opus building now \u2014 Feb 27 12 PM)",
-          "done": false
+          "done": true
         },
         {
           "id": "16",
@@ -2206,5 +2206,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-27T09:08:00Z"
+  "lastUpdated": "2026-02-27T22:26:00Z"
 }

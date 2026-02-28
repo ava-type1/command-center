@@ -248,8 +248,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-02-27",
-      "lastWorkedOn": "2026-02-27",
+      "lastUpdated": "2026-02-28",
+      "lastWorkedOn": "Feb 28: Daily cron — 2 new stories (Tucker Ayers spelling bee win + house fire SW of Lake City). 10 upcoming baseball games added to schedule through Apr 9.",
       "todos": [
         {
           "id": "1",
@@ -313,6 +313,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-02-28",
+          "summary": "2 new stories: Columbia County 8th grader Tucker Ayers won 2026 First Coast Spelling Bee at Fort White HS (25 rounds, word: 'theca') — heads to National Spelling Bee in D.C. in May (News4Jax, featured). Columbia County house fire contained to room of origin SW of Lake City, no injuries (WCJB). Sports: 10 upcoming games added to schedule through Apr 9 from MaxPreps (record still 1-7, no new games since Feb 26). Deployed."
+        },
         {
           "date": "2026-02-27",
           "summary": "2 new stories: Fort White woman (56) killed in pickup rollover on US-27 Thursday night (WCJB TV20, verified). Fort White Town Council removed dissolution ordinance \u2014 not dissolving, focus shifts to grants + income (Mainstreet Daily News, Feb 24). Sports: Baseball loss at Trenton 11-1 (Feb 26), record now 1-7 / 0-2 district. Next game: vs SFCA Mon Mar 2 home 6 PM. Government: BCC meeting Apr 2 added, past P&Z removed. Deployed."
@@ -2206,5 +2210,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-27T22:26:00Z"
+  "lastUpdated": "2026-02-28T09:03:00Z"
 }

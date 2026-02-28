@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2026-02-27T11:00:00Z",
+  "lastUpdated": "2026-02-28T11:00:00Z",
   "items": [
+    {
+      "id": "196",
+      "title": "The Innermost Loop — Feb 27: Block Cuts Half Its Workforce for AI, Norway's $2T Fund Uses Claude, Self-Distillation 3x Faster",
+      "summary": "Dr. Wissner-Gross opens with 'The Singularity is now conducting layoffs' — Block just axed 4,000 employees (half its workforce) to move faster with smaller AI-augmented teams, and the market rewarded the purge with a 24% after-hours spike, now targeting $2M+ gross profit per person. Meanwhile, legacy SaaS stocks lost a combined $1.6 trillion in market cap as investors reprice them against AI-native replacements. Norway's $2 trillion sovereign wealth fund now uses Claude to screen investments for ethical and reputational risk at sovereign scale. On the architecture front, researchers showed foundation models can be self-distilled into multi-token predictors that decode 3x faster at under 5% accuracy loss, while Sakana demonstrated compiling documents directly into model weights via hypernetworks — giving LLMs durable memory without bloating context windows. QED-Nano, a compact 4B model, writes Olympiad-level math proofs approaching frontier performance. Google's Nano Banana 2 collapses Pro-level reasoning into Flash-level speed. Anthropic introduced scheduled recurring tasks in Claude Cowork (morning briefs, Friday presentations), while Amplifying.ai is scanning thousands of GitHub repos with Claude Code to extract current best-practice patterns. Anthropic publicly refused to let its models power mass surveillance or autonomous weapons for the Department of War. Eli Lilly and Nvidia launched LillyPod — the world's first DGX SuperPOD with B300 Blackwell Ultra GPUs (1,016 GPUs, 9,000+ petaFLOPs) aimed at drug discovery acceleration. OpenAI closed a $110B funding round at an $840B valuation.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-27-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-27",
+      "relevance": "The self-distillation and Sakana document-to-weights stories are directly relevant to AVA's architecture: durable model memory without context window limits is exactly what a persistent health copilot needs. Anthropic's Cowork scheduled tasks is a usable pattern for Koda's heartbeat-driven proactive work — Koda can run recurring jobs on a calendar like an intern with a work schedule. The Block layoff story is a preview of the AI-first workforce restructuring that validates building lean, AI-augmented products rather than headcount-heavy ones."
+    },
+    {
+      "id": "197",
+      "title": "Omnipod Achieves Medicare Part D Coverage — Pharmacy Dispensing Path Now Open",
+      "summary": "After a long-awaited regulatory milestone, Insulet's Omnipod insulin delivery system has achieved coverage through Medicare Part D, distributed through pharmacy channels rather than durable medical equipment (DME) — which Insulet believes will create a superior consumer experience and lower cost-sharing. The same announcement confirmed Abbott's FreeStyle Libre also received Medicare pharmacy reimbursement approval. Insulet is now working to secure the best possible formulary placement across Medicare plans to minimize out-of-pocket costs for T1D and T2D patients who need tubeless pod therapy.",
+      "url": "https://www.ajmc.com/view/after-long-wait-omnipod-achieves-coverage-through-medicare-part-d",
+      "category": "diabetes",
+      "source": "AJMC / Insulet",
+      "date": "2026-02-28",
+      "relevance": "Kam uses Omnipod 5 — this is a direct coverage expansion. Pharmacy-channel distribution means easier refills without DME paperwork. For AVA educational content, Medicare Omnipod coverage is a big accessibility story for older T1D patients and a key point in any device comparison or access guide. It also signals the broader insurance landscape is moving toward pharmacy-dispensed insulin delivery, which affects how AVA positions device recommendations."
+    },
     {
       "id": "191",
       "title": "The Innermost Loop — Feb 26: GPT-5.3-Codex SOTA, AI Runs Companies, Nvidia Humanoid Training, Flying Cars Debut",
@@ -102,14 +122,24 @@
       "relevance": "Direct upgrade for Kam's field workflow. Running Claude Code from a phone between job sites means AVA development can continue during the workday without needing to be at a desk. Claude Remote Control could be the bridge between Kam's hands-on contracting work and async Koda-assisted development sessions."
     },
     {
+      "id": "183",
       "title": "The Innermost Loop — Feb 23: Agent Autonomy Jumps, FrontierMath Breakthrough, Robotics 24/7 Ops, and Compute Megabuildout",
       "summary": "In the latest 'Welcome to…' briefing, Dr. Wissner-Gross tracks a sharp acceleration in deployed AI capabilities: METR estimates Claude Opus 4.6 now sustains ~14.5 hours of autonomous software work, while Gemini 3.1 Pro reportedly solved a FrontierMath Tier-4 problem no previous model cracked. Anthropic launched Claude Code Security, and markets immediately priced in disruption to legacy cybersecurity vendors. The post also highlights major infrastructure and embodiment signals — OpenAI targeting roughly $600B in compute through 2030, custom AI silicon claims from Taalas, and Figure humanoids operating continuously with autonomous charging. Together, it frames the shift from 'AI demos' to real-world autonomous systems with capital, hardware, and labor implications arriving at once.",
       "url": "https://theinnermostloop.substack.com/p/welcome-to-february-23-2026",
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
       "date": "2026-02-23",
-      "relevance": "For KodaAI, this is validation that longer-horizon autonomous agents are becoming production-credible now, not later. For AVA, the same reliability trend in agent workflows and edge devices supports always-on health copilots that can monitor, triage, and assist with much less human babysitting.",
-      "id": "183"
+      "relevance": "For KodaAI, this is validation that longer-horizon autonomous agents are becoming production-credible now, not later. For AVA, the same reliability trend in agent workflows and edge devices supports always-on health copilots that can monitor, triage, and assist with much less human babysitting."
+    },
+    {
+      "id": "185",
+      "title": "Anthropic: Claude Code Sessions Are Running Longer with More Practical Autonomy",
+      "summary": "Anthropic's 'Measuring AI agent autonomy in practice' reports that long-running Claude Code sessions nearly doubled in three months (from under 25 minutes to over 45 minutes). Experienced users increasingly rely on full auto-approve while still intervening when needed, and Claude often pauses for clarification more than humans interrupt it on complex tasks. The research suggests usable autonomy is improving not just from model upgrades, but from better human-agent operating patterns.",
+      "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
+      "category": "claude",
+      "source": "Anthropic Research",
+      "date": "2026-02-21",
+      "relevance": "Operational insight for KodaAI: design around mixed-initiative supervision, not full hands-off autonomy. For AVA, this supports trust-building UX where the assistant acts independently but explicitly asks for confirmation in high-risk moments."
     },
     {
       "id": "179",
@@ -120,56 +150,6 @@
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
       "date": "2026-02-22",
       "relevance": "Horowitz's 'army of AI agents' vision is exactly KodaAI's thesis. His framing of AI entrepreneurship as the escape hatch from displacement validates the agent-as-service model. The crypto-as-AI-economic-layer angle is worth watching for agent payment infrastructure."
-    },
-    {
-      "title": "Anthropic: Claude Code Sessions Are Running Longer with More Practical Autonomy",
-      "summary": "Anthropic's 'Measuring AI agent autonomy in practice' reports that long-running Claude Code sessions nearly doubled in three months (from under 25 minutes to over 45 minutes). Experienced users increasingly rely on full auto-approve while still intervening when needed, and Claude often pauses for clarification more than humans interrupt it on complex tasks. The research suggests usable autonomy is improving not just from model upgrades, but from better human-agent operating patterns.",
-      "url": "https://www.anthropic.com/research/measuring-agent-autonomy",
-      "category": "claude",
-      "source": "Anthropic Research",
-      "date": "2026-02-21",
-      "relevance": "Operational insight for KodaAI: design around mixed-initiative supervision, not full hands-off autonomy. For AVA, this supports trust-building UX where the assistant acts independently but explicitly asks for confirmation in high-risk moments.",
-      "id": "185"
-    },
-    {
-      "id": "180",
-      "title": "Claude Code Security: AI-Powered Vulnerability Scanning Now in Preview",
-      "summary": "Anthropic launched Claude Code Security in limited research preview for Enterprise and Team customers. Using Opus 4.6, their team found 500+ vulnerabilities in production open-source codebases — bugs hidden for decades despite expert review. The tool reads code like a human security researcher, traces data flows, and catches complex business logic flaws that static analysis misses. Every finding goes through multi-stage AI verification before human review.",
-      "url": "https://releasebot.io/updates/anthropic",
-      "category": "claude",
-      "source": "Anthropic / Releasebot",
-      "date": "2026-02-21",
-      "relevance": "Direct upgrade to your workflow — Claude Code Security could audit KodaAI and AVA codebases for vulnerabilities automatically. 500 bugs found in production OSS is staggering signal for AI-assisted security."
-    },
-    {
-      "title": "OpenAI Targets ~$600B Compute Spend Through 2030 as IPO Plans Take Shape",
-      "summary": "Reuters reports OpenAI is targeting about $600 billion in cumulative compute spending by 2030, while preparing for a potential IPO that could value the company near $1 trillion. The company reportedly beat 2025 revenue expectations at $13B while keeping spending below plan. The signal is clear: frontier labs are scaling infrastructure spend to nation-state levels, which will keep pressure on model performance and cost curves.",
-      "url": "https://www.reuters.com/technology/openai-sees-compute-spend-around-600-billion-by-2030-cnbc-reports-2026-02-20/",
-      "category": "ai",
-      "source": "Reuters",
-      "date": "2026-02-20",
-      "relevance": "Bigger compute budgets mean faster model iteration and cheaper inference over time — a direct tailwind for KodaAI agent margins and for AVA's ability to run richer medical intelligence without exploding costs.",
-      "id": "184"
-    },
-    {
-      "id": "175",
-      "title": "Seedance 2.0: China's AI Video Model Spooks Hollywood",
-      "summary": "ByteDance released Seedance 2.0, one of the most advanced AI video generation models yet. CNN reports it's drawn praise for ease of use and the realistic nature of videos it generates in minutes. Hollywood is reportedly concerned about the implications for content production costs and timelines.",
-      "url": "https://www.cnn.com/2026/02/20/china/china-ai-seedance-intl-hnk-dst",
-      "category": "ai",
-      "source": "CNN",
-      "date": "2026-02-20",
-      "relevance": "Video generation quality is hitting an inflection point. For any content creation in AVA or KodaAI marketing, AI-generated video is becoming viable for demos, explainers, and social content at near-zero cost."
-    },
-    {
-      "id": "174",
-      "title": "The Innermost Loop — Feb 20: Gemini 3.1 Pro SOTA, UAP Disclosure Forced by AI Curve, Fusion Licensing",
-      "summary": "Google launched Gemini 3.1 Pro with new SOTA scores: 44.4% on HLE (no tools), 77.1% on ARC-AGI-2, and 94.3% on GPQA Diamond — crowned the new Artificial Analysis Intelligence Index leader at less than half the cost of Opus 4.6 or GPT-5.2. The White House directed agencies to begin releasing UFO/UAP files, with growing recognition that disclosure was 'forced by the AI curve.' Arc Institute's MULTI-evolve achieved 10-fold improvements in protein directed evolution with a single ML round. SoftBank is forming a consortium for a 9.2 GW gas plant ($33B) — the largest in the US — to power data centers. Type One Energy submitted a fusion stellarator licensing application targeting a 2029 prototype.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-20-2026",
-      "category": "moonshots",
-      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
-      "date": "2026-02-20",
-      "relevance": "Gemini 3.1 Pro at half the cost of Opus 4.6 with better benchmarks is the key signal — cost compression continues accelerating. For KodaAI, this means the model powering your agents gets cheaper every month."
     },
     {
       "id": "176",

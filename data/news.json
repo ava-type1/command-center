@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-02-28T11:00:00Z",
+  "lastUpdated": "2026-03-01T11:00:00Z",
   "items": [
+    {
+      "id": "202",
+      "title": "The Innermost Loop — Feb 28: Pentagon vs. Anthropic, OpenAI $110B, Brain Cells Playing DOOM, SpaceX IPO",
+      "summary": "Dr. Wissner-Gross leads with 'The Singularity is now powerful enough to trigger a constitutional crisis' — the US Secretary of War declared Anthropic a national security supply-chain risk after it refused to grant unrestricted model access for military use, while OpenAI simultaneously announced a Pentagon classified-network deal while claiming the same red lines. 591 Google and 93 OpenAI employees signed an open letter titled 'We Will Not Be Divided' demanding refusal of mass surveillance and autonomous killing. On the infrastructure front, OpenAI closed $110 billion in new funding at a $730 billion valuation with 900 million weekly ChatGPT users and Codex users tripling to 1.6 million; OpenAI and Amazon announced a $50 billion partnership with 2 GW of Trainium through AWS. The FDA approved lung cancer drug Hernexeos in just 44 days under its new National Priority Voucher program, and Cortical Labs demonstrated that living human brain cells on an electrode array learned to play DOOM in a week. SpaceX is targeting a confidential IPO filing next month at a valuation north of $1.75 trillion, NASA overhauled Artemis pulling the first lunar landing forward to 2027, and Nvidia is reportedly unveiling a new inference-specific chip incorporating a Groq-designed processor at GTC.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-28-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-28",
+      "relevance": "The Anthropic-Pentagon standoff is a direct signal for KodaAI's positioning: health AI assistants that handle sensitive patient data need a clear values stance, just like Anthropic's. OpenAI's $730B valuation and 900M weekly users set the ceiling for what AI-first health platforms can reach — AVA is building at the right moment. The 44-day FDA drug approval is a bellwether for accelerating health-tech regulatory timelines that could benefit AVA's own approval pathway."
+    },
+    {
+      "id": "201",
+      "title": "Claude Cowork Expands into Excel, PowerPoint, and Slack — 'In 2026, We're Bringing This to All Knowledge Work'",
+      "summary": "Anthropic pushed Claude deep into the tools knowledge workers already use — Excel, PowerPoint, Slack — with Claude now able to edit files and pass context between apps in a single session. The Cowork update includes private plugin marketplaces, 10+ new department-specific plugins (finance, HR, wealth management, design), 12 new MCP connectors, cross-app workflows between Excel and PowerPoint, and a new admin control system called 'Customize.' Anthropic's announcement: 'In 2025, Claude Code transformed how software gets built. In 2026, we're bringing that transformation to all knowledge work.' Currently available for Claude Enterprise customers.",
+      "url": "https://www.businessinsider.com/anthropic-ai-software-claude-microsoft-powerpoint-excel-slack-2026-2",
+      "category": "claude",
+      "source": "Anthropic / Business Insider",
+      "date": "2026-02-24",
+      "relevance": "The cross-app context passing (Excel → PowerPoint → Slack in one session) is the productivity architecture Kam needs for job-site documentation workflows — materials lists, work order summaries, client presentations — all linked without manual copy-paste. Claude's enterprise plugin framework is also the pattern to watch for future AVA integrations with healthcare platforms and EHR systems."
+    },
+    {
+      "id": "200",
+      "title": "OpenAI Closes $110B Funding Round at $730B Valuation — 900M Weekly ChatGPT Users",
+      "summary": "OpenAI announced $110 billion in new funding at a $730 billion valuation, with 900 million weekly ChatGPT users and Codex users tripling to 1.6 million developers. The company also finalized a $50 billion partnership with Amazon, with OpenAI consuming 2 GW of Trainium compute through AWS. These numbers put OpenAI in rare company — a private company valued above most Fortune 100 firms — and signal that the AI platform market is consolidating fast around a handful of dominant players.",
+      "url": "https://openai.com/index/scaling-ai-for-everyone/",
+      "category": "ai",
+      "source": "OpenAI",
+      "date": "2026-02-28",
+      "relevance": "The Codex user growth (1.6M developers) is the competitive benchmark for any AI coding product. AVA Type 1 is building in a market where the platform layer (OpenAI, Anthropic, Google) is consolidating at scale — this validates focusing AVA on the niche health layer where vertical expertise wins, rather than competing on raw model capability."
+    },
+    {
+      "id": "199",
+      "title": "Gemini 3.1 Pro Is Now the Current Flagship — Gemini 3 Pro Preview Shuts Down March 9",
+      "summary": "Google deprecated Gemini 3 Pro Preview with a shutdown deadline of March 9, 2026 — developers still using it need to migrate to Gemini 3.1 Pro immediately. The 3.1 Pro release is a major upgrade focused on modern science, research, and engineering challenges, while Gemini 3 Deep Think received a significant update in February improving performance on advanced reasoning tasks. The rapid deprecation cycle signals Google's aggressive model iteration pace in 2026.",
+      "url": "https://exploreaitogether.com/llm-usage-limits-comparison/",
+      "category": "ai",
+      "source": "Google / Explore AI Together",
+      "date": "2026-02-27",
+      "relevance": "For KodaAI model routing: Gemini 3 Pro Preview deprecates March 9 — any integrations using that model need updating now. Gemini 3.1 Pro's science/engineering focus makes it a candidate for AVA's medical accuracy checks and clinical literature synthesis tasks."
+    },
+    {
+      "id": "198",
+      "title": "Cursor: AI Agent Users Now Outnumber Autocomplete Users 2-to-1 — The Coding Paradigm Flipped",
+      "summary": "Cursor reported that agent-mode users now outnumber autocomplete users 2-to-1, inverting last year's ratio entirely. This is one of the sharpest behavioral shifts in developer tooling in years — developers who started with AI as a suggestion-engine are now running it as an autonomous actor. Combined with Karpathy's observation that 'it's hard to communicate how much programming has changed in the last 2 months,' the data confirms that async, agent-first development is no longer experimental.",
+      "url": "https://x.com/mntruell/status/2026736314272591924",
+      "category": "productivity",
+      "source": "Cursor / Michael Truell",
+      "date": "2026-02-28",
+      "relevance": "Validation for the Koda+Kam model: the industry has already flipped to agents-over-autocomplete. AVA development sessions should lean into agent-mode workflows (spec → ticket → sub-agent → ship) rather than line-by-line suggestion. Also a signal that AVA's eventual developer tools integrations should be agent-first, not copilot-first."
+    },
     {
       "id": "196",
       "title": "The Innermost Loop — Feb 27: Block Cuts Half Its Workforce for AI, Norway's $2T Fund Uses Claude, Self-Distillation 3x Faster",

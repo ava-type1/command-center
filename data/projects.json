@@ -318,8 +318,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-02-28",
-      "lastWorkedOn": "Feb 28: Daily cron \u2014 2 new stories (Tucker Ayers spelling bee win + house fire SW of Lake City). 10 upcoming baseball games added to schedule through Apr 9.",
+      "lastUpdated": "2026-03-01",
+      "lastWorkedOn": "Mar 1: Daily cron \u2014 brush fire story (2 Columbia County fires, 50 acres total, burn ban through Mar 6); Softball 22-5 win vs Corinth Christian (record now 2-0, 1-0 district); Mar 2 games added (baseball vs SFCA 6PM, softball vs Union County 7PM). Deployed commit 5ecea9b.",
       "todos": [
         {
           "id": "1",
@@ -383,6 +383,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-01",
+          "summary": "2 Columbia County brush fires (50 acres total) \u2014 burn ban spreading across North Central FL, Alachua County through at least Mar 6, Columbia County judicial ban in effect (WCJB TV20, featured). Softball: Lady Indians beat Corinth Christian Academy 22-5 on road (Feb 24), record now 2-0 (1-0 district). Baseball holds at 1-7. Added Mar 2 home games: vs SFCA (baseball, 6 PM) + vs Union County (softball, 7 PM). 2 expired Feb 26 events removed. Deployed."
+        },
         {
           "date": "2026-02-28",
           "summary": "2 new stories: Columbia County 8th grader Tucker Ayers won 2026 First Coast Spelling Bee at Fort White HS (25 rounds, word: 'theca') \u2014 heads to National Spelling Bee in D.C. in May (News4Jax, featured). Columbia County house fire contained to room of origin SW of Lake City, no injuries (WCJB). Sports: 10 upcoming games added to schedule through Apr 9 from MaxPreps (record still 1-7, no new games since Feb 26). Deployed."
@@ -2280,5 +2284,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-28T17:04:00Z"
+  "lastUpdated": "2026-03-01T09:13:00Z"
 }

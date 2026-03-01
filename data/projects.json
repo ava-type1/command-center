@@ -5,10 +5,10 @@
       "name": "Iran Strike Map",
       "description": "Real-time conflict tracking map for the US-Israel strikes on Iran (Operation Epic Fury, Feb 28 2026). Interactive map with confirmed strike markers, flag-emoji markers showing who struck (US/Israel/Iran), leader elimination tracker, US military assets layer, video popup support, and AI-powered geolocation pipeline (Phase 2). Mobile-first design with bottom-sheet panels.",
       "status": "active",
-      "progress": 60,
+      "progress": 75,
       "color": "#ff3300",
       "lastUpdated": "2026-02-28",
-      "lastWorkedOn": "Feb 28: Built and launched same day conflict began. Flag emoji markers (\ud83c\uddfa\ud83c\uddf8\ud83c\uddee\ud83c\uddf1\ud83c\uddee\ud83c\uddf7) show attacker at a glance. 11 confirmed strike locations seeded. Mobile-first redesign with FAB buttons + bottom sheets. Video pipeline (Phase 2) planned.",
+      "lastWorkedOn": "Feb 28 (full day): Launched iranstrikemap.com. 29+ confirmed strikes, 103 videos, leader tracker, US assets. Timeline bar with full-view + focus-window (\u00b15 events proportional). Analytics dashboard at /stats.html. Facebook OG image (actual map screenshot). Telegram OSINT video pipeline built (Phase 2). Custom domain live.",
       "todos": [
         {
           "id": "1",
@@ -38,17 +38,17 @@
         {
           "id": "6",
           "text": "Register iranstrikemap.com domain",
-          "done": false
+          "done": true
         },
         {
           "id": "7",
           "text": "Phase 2: Telegram OSINT channel monitoring (Telethon)",
-          "done": false
+          "done": true
         },
         {
           "id": "8",
           "text": "Phase 2: AI video geolocation pipeline (frame extract + vision model)",
-          "done": false
+          "done": true
         },
         {
           "id": "9",

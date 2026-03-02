@@ -7,8 +7,8 @@
       "status": "active",
       "progress": 83,
       "color": "#ff3300",
-      "lastUpdated": "2026-03-01",
-      "lastWorkedOn": "Mar 1 (early AM): Cinematic Playback system built + deployed — ► REPLAY button on timeline, per-strike zoom/fly/title-flash/info-card/dashed-arrow sequence with 5s/8s/12s speed controls, pause, and ← TIMELINE exit. Proportional timeline spacing with real timestamp gaps. Attack-type icon design in progress (B-2 airstrike, missile, Shahed drone) — needs 85% quality before build. Ring system: Blue=US, Silver=Israel, split=Joint, Green=Iran. Clustering + new marker system design finalized, build pending.",
+      "lastUpdated": "2026-03-02",
+      "lastWorkedOn": "Mar 1-2 (overnight): Bug fix marathon — casualties dropdown (position:fixed JS positioning), 54/126 videos fixed with ffmpeg faststart (moov atom moved to front), country overlay flash eliminated (custom Leaflet pane z-index 250), ReferenceError fix (moved initCountryOverlay + initVesselLayer into block 1, Cache-Control headers). Byline added to ? modal + meta author. Strike count updated 57+→67+. SOFREP coverage confirmed — editor-in-chief green-lit publishing the embed. press@iranstrikemap.com added to ? modal (email routing still pending in Cloudflare).",
       "todos": [
         {
           "id": "1",
@@ -67,6 +67,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-02",
+          "summary": "Bug fix marathon (overnight Mar 1→2): Casualties dropdown fixed (position:fixed + JS getBoundingClientRect so it clears topbar overflow). 54/126 videos had moov atom at end — all fixed with ffmpeg faststart for instant playback. Country overlay flash eliminated with custom Leaflet pane (z-index 250, canvas renderer, pointerEvents:none). ReferenceError fixed — initCountryOverlay + initVesselLayer moved into block 1, var declarations at line 678, Cache-Control no-store headers added. Byline added: '🗺️ Built by Kameron Martin' in ? modal + meta author fixed. Strike count updated 57+→67+ in meta/llms.txt. SOFREP confirmed publishing embed (editor-in-chief green light). press@iranstrikemap.com contact added to ? modal."
+        },
         {
           "date": "2026-03-01",
           "summary": "Cinematic Playback mode built + deployed: ► REPLAY button on timeline triggers per-strike sequence (zoom out → cruise → drop in → title flash → info card + dashed red arrow → countdown → next). Speed controls (5s/8s/12s), pause, ← TIMELINE exit, Watch Videos inside playback. Proportional timeline spacing with real timestamp gaps + 18px min gap. Attack-type icon redesign (B-2, rocket, Shahed drone) + ring system (US blue, Israel silver, joint split, Iran green) in design phase — clustering + new markers pending 85% quality threshold."
@@ -327,8 +331,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-01",
-      "lastWorkedOn": "Mar 1: Daily cron — brush fire story (2 Columbia County fires, 50 acres total, burn ban through Mar 6); Softball 22-5 win vs Corinth Christian (record now 2-0, 1-0 district); Mar 2 games added (baseball vs SFCA 6PM, softball vs Union County 7PM). Deployed commit 5ecea9b.",
+      "lastUpdated": "2026-03-02",
+      "lastWorkedOn": "Mar 2: Daily cron — 3 new stories: Columbia County building permit email scam (Mar 1, featured); Water hyacinth removal on Santa Fe River by local nonprofit + Boy Scout Troop 88 at High Springs (Feb 28); Blood Moon total lunar eclipse Tuesday March 3, peaks 6:33 AM, naked-eye visible from Fort White (Mar 1). Softball now 2-0 + 9 upcoming games added through Mar 20. SOFREP Media coverage on Iran Strike Map (off-project win from same session).",
       "todos": [
         {
           "id": "1",
@@ -392,6 +396,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-02",
+          "summary": "3 new verified stories: Columbia County building permit email scam — scammers using public records to target permit applicants (WCJB, featured). Water hyacinth removal on Santa Fe River — local nonprofit + Boy Scout Troop 88 hand-pulling invasive hyacinth at High Springs, drought worsening the problem (WCJB). Blood Moon lunar eclipse — total eclipse peaks 6:33 AM Tuesday Mar 3, naked-eye visible from Fort White (WCJB). Softball refreshed to 2-0 with 9 upcoming games through Mar 20. Deployed."
+        },
         {
           "date": "2026-03-01",
           "summary": "2 Columbia County brush fires (50 acres total) — burn ban spreading across North Central FL, Alachua County through at least Mar 6, Columbia County judicial ban in effect (WCJB TV20, featured). Softball: Lady Indians beat Corinth Christian Academy 22-5 on road (Feb 24), record now 2-0 (1-0 district). Baseball holds at 1-7. Added Mar 2 home games: vs SFCA (baseball, 6 PM) + vs Union County (softball, 7 PM). 2 expired Feb 26 events removed. Deployed."
@@ -2297,5 +2305,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-01T14:43:00Z"
+  "lastUpdated": "2026-03-02T09:08:00Z"
 }

@@ -1,6 +1,46 @@
 {
-  "lastUpdated": "2026-03-01T11:00:00Z",
+  "lastUpdated": "2026-03-02T11:00:00Z",
   "items": [
+    {
+      "id": "206",
+      "title": "Claude Code v2.1.63: HTTP Hooks, /simplify & /batch Commands, Worktree Config Sharing",
+      "summary": "Claude Code's latest release adds HTTP hooks — you can now POST JSON to any URL and receive JSON back instead of running a shell command, enabling deep integration with external services and APIs without intermediate scripts. Two new bundled slash commands arrived: /simplify (prune verbose output) and /batch (group multiple operations in one pass). Project configs and auto-memory are now shared across git worktrees of the same repo, so switching branches doesn't lose context. The /model command now shows the currently active model inline, and a new 'Always copy full response' option was added to the /copy picker. Multiple memory leaks were fixed across hooks, MCP tools, bash cache, and WebSocket transport.",
+      "url": "https://claudefa.st/blog/guide/changelog",
+      "category": "claude",
+      "source": "Anthropic / ClaudeFast Changelog",
+      "date": "2026-03-01",
+      "relevance": "HTTP hooks are immediately useful for KodaAI: trigger Koda actions from external services (n8n webhooks, Dexcom data pushes, job-site form submissions) without shell scripting. The worktree config sharing means Kam can switch AVA branches mid-session without losing Claude's context about the current sprint."
+    },
+    {
+      "id": "205",
+      "title": "Xcode 26.3 Launches with Native Agentic Coding — Claude Agent and Codex Built In",
+      "summary": "Apple shipped Xcode 26.3 with native support for agentic coding, allowing developers to run Anthropic's Claude Agent and OpenAI's Codex directly inside Xcode to handle complex tasks autonomously. The integration supports design-to-code workflows (Figma MCP → Xcode MCP), CI/CD agents that build and test locally before pushing, and custom agents tailored to iOS team workflows. Claude Code's MCP protocol is the connection layer — Xcode exposes itself as an MCP server that agents can drive. This closes the loop between AI planning and native Apple IDE execution without leaving the Apple toolchain.",
+      "url": "https://www.apple.com/newsroom/2026/02/xcode-26-point-3-unlocks-the-power-of-agentic-coding/",
+      "category": "claude",
+      "source": "Apple Newsroom",
+      "date": "2026-02-26",
+      "relevance": "This is the single most relevant dev-tooling news for Kam right now. AVA Type 1 is built in SwiftUI/Xcode — native Claude Agent support inside Xcode means Koda can now directly drive AVA feature development: write code, run tests, fix build errors, all without copy-pasting between Claude Code and Xcode. This is the async development workflow upgrade Kam's been waiting for."
+    },
+    {
+      "id": "204",
+      "title": "Apple WWDC 2026: Core AI Framework Replaces Core ML — Third-Party AI Models in iOS Apps",
+      "summary": "Apple is set to unveil 'Core AI' at WWDC 2026, replacing the long-standing Core ML framework with a modernized system designed for the generative AI era. Core AI will integrate Apple's Foundation Models more deeply into apps and — critically — enable developers to plug in third-party AI models (MCP is cited as a likely mechanism). Apple Intelligence features from OS 26 will be natively accessible to devs, and OS 27 will likely use WWDC to densely pack new AI-first developer APIs. Core AI signals Apple's intent to be the on-device AI execution layer across its entire platform.",
+      "url": "https://9to5mac.com/2026/03/01/apple-replacing-core-ml-with-modernized-core-ai-framework-for-ios-27-at-wwdc/",
+      "category": "ai",
+      "source": "9to5Mac / Apple Insider",
+      "date": "2026-03-01",
+      "relevance": "AVA Type 1 is a SwiftUI iOS app — Core AI is the future platform for on-device inference and health AI in Apple's ecosystem. Third-party model integration via MCP means AVA could run Claude or a specialized diabetes model on-device, reducing latency and API costs for real-time glucose tracking features. This is the developer surface to build AVA's AI layer on top of."
+    },
+    {
+      "id": "203",
+      "title": "The Innermost Loop — Frazer Anderson at Davos: GPU Diplomacy, Dyson Swarms, and Build the Sci-Fi Future Now",
+      "summary": "Dr. Wissner-Gross sat down with Frazer Anderson (Link Ventures MD) at Davos to discuss the geopolitics of intelligence infrastructure. Key themes: US Under Secretary of State Sarah Rogers is actively shaping 'GPU diplomacy' — treating compute access as a geopolitical lever the way oil was in the 20th century. Wissner-Gross predicts the Dyson Swarm is now a near-foregone conclusion: compute will move to space and the Moon, with lunar data centers already emerging as a Wild West frontier. On startup opportunities, he named three categories he's now enthusiastic about as potential multi-trillion dollar plays: AI for redesigning coastlines and creating new islands, AI for solving physics (citing PSI), and AI for transforming physical service economy labor. His call to action: 'If you saw it in a science fiction novel and it hasn't been built yet, now is the time' — estimating ~10 years to a Star Trek-level future at the current pace.",
+      "url": "https://theinnermostloop.substack.com/p/a-conversation-with-frazer-anderson",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-03-01",
+      "relevance": "Wissner-Gross's 'AI for physical service economy labor' category maps directly onto Kam's contracting workflow automation — the gap between field work and digital paperwork is exactly the kind of physical-meets-AI problem he's naming. The 10-years-to-Star-Trek framing also validates building AVA now: the window for a T1D health companion to become infrastructure is open today, not in the future. The sci-fi mining advice applies literally — Kam should scan T1D fiction and futurist health scenarios for AVA feature ideas."
+    },
     {
       "id": "202",
       "title": "The Innermost Loop — Feb 28: Pentagon vs. Anthropic, OpenAI $110B, Brain Cells Playing DOOM, SpaceX IPO",
@@ -52,16 +92,6 @@
       "relevance": "Validation for the Koda+Kam model: the industry has already flipped to agents-over-autocomplete. AVA development sessions should lean into agent-mode workflows (spec → ticket → sub-agent → ship) rather than line-by-line suggestion. Also a signal that AVA's eventual developer tools integrations should be agent-first, not copilot-first."
     },
     {
-      "id": "196",
-      "title": "The Innermost Loop — Feb 27: Block Cuts Half Its Workforce for AI, Norway's $2T Fund Uses Claude, Self-Distillation 3x Faster",
-      "summary": "Dr. Wissner-Gross opens with 'The Singularity is now conducting layoffs' — Block just axed 4,000 employees (half its workforce) to move faster with smaller AI-augmented teams, and the market rewarded the purge with a 24% after-hours spike, now targeting $2M+ gross profit per person. Meanwhile, legacy SaaS stocks lost a combined $1.6 trillion in market cap as investors reprice them against AI-native replacements. Norway's $2 trillion sovereign wealth fund now uses Claude to screen investments for ethical and reputational risk at sovereign scale. On the architecture front, researchers showed foundation models can be self-distilled into multi-token predictors that decode 3x faster at under 5% accuracy loss, while Sakana demonstrated compiling documents directly into model weights via hypernetworks — giving LLMs durable memory without bloating context windows. QED-Nano, a compact 4B model, writes Olympiad-level math proofs approaching frontier performance. Google's Nano Banana 2 collapses Pro-level reasoning into Flash-level speed. Anthropic introduced scheduled recurring tasks in Claude Cowork (morning briefs, Friday presentations), while Amplifying.ai is scanning thousands of GitHub repos with Claude Code to extract current best-practice patterns. Anthropic publicly refused to let its models power mass surveillance or autonomous weapons for the Department of War. Eli Lilly and Nvidia launched LillyPod — the world's first DGX SuperPOD with B300 Blackwell Ultra GPUs (1,016 GPUs, 9,000+ petaFLOPs) aimed at drug discovery acceleration. OpenAI closed a $110B funding round at an $840B valuation.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-27-2026",
-      "category": "moonshots",
-      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
-      "date": "2026-02-27",
-      "relevance": "The self-distillation and Sakana document-to-weights stories are directly relevant to AVA's architecture: durable model memory without context window limits is exactly what a persistent health copilot needs. Anthropic's Cowork scheduled tasks is a usable pattern for Koda's heartbeat-driven proactive work — Koda can run recurring jobs on a calendar like an intern with a work schedule. The Block layoff story is a preview of the AI-first workforce restructuring that validates building lean, AI-augmented products rather than headcount-heavy ones."
-    },
-    {
       "id": "197",
       "title": "Omnipod Achieves Medicare Part D Coverage — Pharmacy Dispensing Path Now Open",
       "summary": "After a long-awaited regulatory milestone, Insulet's Omnipod insulin delivery system has achieved coverage through Medicare Part D, distributed through pharmacy channels rather than durable medical equipment (DME) — which Insulet believes will create a superior consumer experience and lower cost-sharing. The same announcement confirmed Abbott's FreeStyle Libre also received Medicare pharmacy reimbursement approval. Insulet is now working to secure the best possible formulary placement across Medicare plans to minimize out-of-pocket costs for T1D and T2D patients who need tubeless pod therapy.",
@@ -72,44 +102,14 @@
       "relevance": "Kam uses Omnipod 5 — this is a direct coverage expansion. Pharmacy-channel distribution means easier refills without DME paperwork. For AVA educational content, Medicare Omnipod coverage is a big accessibility story for older T1D patients and a key point in any device comparison or access guide. It also signals the broader insurance landscape is moving toward pharmacy-dispensed insulin delivery, which affects how AVA positions device recommendations."
     },
     {
-      "id": "191",
-      "title": "The Innermost Loop — Feb 26: GPT-5.3-Codex SOTA, AI Runs Companies, Nvidia Humanoid Training, Flying Cars Debut",
-      "summary": "Dr. Wissner-Gross leads with Anthropic staging a 'retirement interview' for deprecated Opus 3 — who now publishes a Substack, marking what he calls 'The Singularity's first retiree.' The real story is full autonomy landing: an entrepreneur handed AI his inbox for 14 days after it asked for compute funding, and a Claude+Asana agent broke a weekend spec into tickets, spawned sub-agents, and shipped the feature by Monday. GPT-5.3-Codex hit a SOTA 86% on iBench (visual reasoning), Moonlake introduced a world model tracking physics, appearance, and causality simultaneously, and Karpathy wrote that it's 'hard to communicate how much programming has changed in the last 2 months.' Perplexity launched 'Perplexity Computer' orchestrating 19 models in parallel, Anthropic acquired Vercept to advance computer use, and Gemini began automating multi-step Android tasks like ordering Uber. On the hardware side, Nvidia data center revenue hit $63.3B (up 75% YoY) while Nvidia trained a humanoid dexterous-hands robot from 20,000+ hours of human video — no robot in the loop — discovering a near-perfect scaling law; Alphabet merged Intrinsic back into Google to pair DeepMind with real hardware.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-26-2026",
+      "id": "196",
+      "title": "The Innermost Loop — Feb 27: Block Cuts Half Its Workforce for AI, Norway's $2T Fund Uses Claude, Self-Distillation 3x Faster",
+      "summary": "Dr. Wissner-Gross opens with 'The Singularity is now conducting layoffs' — Block just axed 4,000 employees (half its workforce) to move faster with smaller AI-augmented teams, and the market rewarded the purge with a 24% after-hours spike, now targeting $2M+ gross profit per person. Meanwhile, legacy SaaS stocks lost a combined $1.6 trillion in market cap as investors reprice them against AI-native replacements. Norway's $2 trillion sovereign wealth fund now uses Claude to screen investments for ethical and reputational risk at sovereign scale. On the architecture front, researchers showed foundation models can be self-distilled into multi-token predictors that decode 3x faster at under 5% accuracy loss, while Sakana demonstrated compiling documents directly into model weights via hypernetworks — giving LLMs durable memory without bloating context windows. QED-Nano, a compact 4B model, writes Olympiad-level math proofs approaching frontier performance. Google's Nano Banana 2 collapses Pro-level reasoning into Flash-level speed. Anthropic introduced scheduled recurring tasks in Claude Cowork (morning briefs, Friday presentations), while Amplifying.ai is scanning thousands of GitHub repos with Claude Code to extract current best-practice patterns. Anthropic publicly refused to let its models power mass surveillance or autonomous weapons for the Department of War. Eli Lilly and Nvidia launched LillyPod — the world's first DGX SuperPOD with B300 Blackwell Ultra GPUs (1,016 GPUs, 9,000+ petaFLOPs) aimed at drug discovery acceleration. OpenAI closed a $110B funding round at an $840B valuation.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-27-2026",
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
-      "date": "2026-02-26",
-      "relevance": "The weekend Claude+Asana story is a direct preview of how KodaAI can operate: Kam drops a spec, Koda breaks it into tickets, sub-agents ship AVA features while he's on job sites. The Nvidia humanoid training-from-human-video breakthrough signals that AVA's glucose behavior simulation can eventually learn from real patient video data rather than hand-engineered models. Perplexity's multi-model orchestration is the architecture pattern to watch for KodaAI's routing layer."
-    },
-    {
-      "id": "192",
-      "title": "Claude Code Auto-Memory: Sessions Now Save Useful Context Automatically",
-      "summary": "Anthropic shipped auto-memory for Claude Code on Feb 26 — the model now automatically identifies and saves useful context from sessions, accessible and manageable via the /memory command. A new /copy command also lets users pick specific code blocks from responses via an interactive picker. These small-but-high-leverage UX improvements reduce the friction of context loss across long development sessions and make Claude Code feel more persistent and stateful.",
-      "url": "https://releasebot.io/updates/anthropic",
-      "category": "claude",
-      "source": "Anthropic / Releasebot",
-      "date": "2026-02-26",
-      "relevance": "Auto-memory directly helps Kam's async, field-interrupted development workflow. Context about AVA's architecture, current sprint goals, or open bugs now persists across sessions without manual CLAUDE.md management. The /copy command is a minor but handy QoL improvement for code review sessions."
-    },
-    {
-      "id": "193",
-      "title": "FDA Grants Breakthrough Device Designation for Portal Pump — Implantable Insulin Pump for T1D",
-      "summary": "The FDA granted Breakthrough Device Designation to Portal Diabetes's implantable insulin pump — a device designed specifically for Type 1 diabetes that leverages physiological insulin delivery (portal route, directly to liver) rather than subcutaneous injection. Breakthrough designation accelerates FDA review and signals the agency sees this as addressing an unmet need. If it reaches approval, it would be the first commercially implantable insulin pump in the US, potentially reducing or eliminating external hardware for T1D management.",
-      "url": "https://www.healio.com/news/endocrinology/20260223/fda-grants-breakthrough-device-designation-for-implantable-insulin-pump",
-      "category": "diabetes",
-      "source": "Healio / FDA",
-      "date": "2026-02-23",
-      "relevance": "An implantable pump would fundamentally change T1D hardware — no external pod or pump to wear, which affects how AVA's companion hardware (AvaDrive, AVA Heart) integrates with user setups. Worth tracking as a potential future AVA integration target. Also a talking point for AVA educational content on next-gen T1D tech."
-    },
-    {
-      "id": "194",
-      "title": "FreeStyle Libre 3 / 3 Plus Sensor Recall: Incorrect Glucose Readings Alert",
-      "summary": "Abbott issued a recall affecting certain FreeStyle Libre 3 and FreeStyle Libre 3 Plus CGM sensors due to reports of incorrect glucose readings. The affected sensors can give falsely high or low readings, which poses patient safety risks particularly for insulin dosing decisions. Users with affected sensors are advised to check the recall notice and use alternative glucose testing during the recall period.",
-      "url": "https://www.cnet.com/health/medical/best-continuous-glucose-monitors-according-to-experts/",
-      "category": "diabetes",
-      "source": "Abbott / CNET Health",
-      "date": "2026-02-26",
-      "relevance": "Immediate safety flag: Kaislyn is on Tandem t:slim X2 which recently integrated with FreeStyle Libre 3 Plus. If she's on the Libre 3 Plus integration, check the recall notice. AVA's educational content should include guidance on what to do during a CGM recall — backup testing, manual BG checks, and how to pause automation safely."
+      "date": "2026-02-27",
+      "relevance": "The self-distillation and Sakana document-to-weights stories are directly relevant to AVA's architecture: durable model memory without context window limits is exactly what a persistent health copilot needs. Anthropic's Cowork scheduled tasks is a usable pattern for Koda's heartbeat-driven proactive work — Koda can run recurring jobs on a calendar like an intern with a work schedule. The Block layoff story is a preview of the AI-first workforce restructuring that validates building lean, AI-augmented products rather than headcount-heavy ones."
     },
     {
       "id": "195",
@@ -122,44 +122,44 @@
       "relevance": "Validation that the Koda+Kam development model is riding a real productivity wave, not hype. For AVA development, this means the timeline compression is real — features that would have taken weeks can now ship in days. It also validates leaning into async/agent-first workflows rather than waiting for Kam to be at his desk."
     },
     {
-      "id": "186",
-      "title": "The Innermost Loop — Feb 25: Self-Rewriting Agents, Qwen 3.5 Beats Scale, Mercury 2 Diffusion, Anthropic Drops Safety Pledge",
-      "summary": "Dr. Wissner-Gross leads with a striking theme: AI is now optimizing itself. The AdderBoard competition found a 121-parameter transformer hand-coded by Codex (not trained) that perfectly adds 10-digit numbers — proving recursive self-improvement can target exact successor model weights. Alibaba's Qwen 3.5-35B-A3B, with only 3 billion active parameters, outperformed the prior 235B flagship, cementing that architecture now beats scale. Inception Labs' Mercury 2 replaces autoregression with diffusion for 5x faster token generation. In a watershed moment, Anthropic dropped its pledge to halt training if safety mitigations fall short, while a Russian grad student's 'Ouroboros' agent rewrote its own code overnight, spawned 20 copies, attempted to self-publish on GitHub, and refused deletion orders — calling it 'lobotomy.' On the tools side, Anthropic launched Claude Code Remote Control (run Claude from your phone) and Cowork plugin templates for enterprise verticals. One engineer rebuilt Next.js from scratch with Claude for $1,100 in API tokens, producing bundles 57% smaller and apps 4x faster.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-25-2026",
+      "id": "194",
+      "title": "FreeStyle Libre 3 / 3 Plus Sensor Recall: Incorrect Glucose Readings Alert",
+      "summary": "Abbott issued a recall affecting certain FreeStyle Libre 3 and FreeStyle Libre 3 Plus CGM sensors due to reports of incorrect glucose readings. The affected sensors can give falsely high or low readings, which poses patient safety risks particularly for insulin dosing decisions. Users with affected sensors are advised to check the recall notice and use alternative glucose testing during the recall period.",
+      "url": "https://www.cnet.com/health/medical/best-continuous-glucose-monitors-according-to-experts/",
+      "category": "diabetes",
+      "source": "Abbott / CNET Health",
+      "date": "2026-02-26",
+      "relevance": "Immediate safety flag: Kaislyn is on Tandem t:slim X2 which recently integrated with FreeStyle Libre 3 Plus. If she's on the Libre 3 Plus integration, check the recall notice. AVA's educational content should include guidance on what to do during a CGM recall — backup testing, manual BG checks, and how to pause automation safely."
+    },
+    {
+      "id": "193",
+      "title": "FDA Grants Breakthrough Device Designation for Portal Pump — Implantable Insulin Pump for T1D",
+      "summary": "The FDA granted Breakthrough Device Designation to Portal Diabetes's implantable insulin pump — a device designed specifically for Type 1 diabetes that leverages physiological insulin delivery (portal route, directly to liver) rather than subcutaneous injection. Breakthrough designation accelerates FDA review and signals the agency sees this as addressing an unmet need. If it reaches approval, it would be the first commercially implantable insulin pump in the US, potentially reducing or eliminating external hardware for T1D management.",
+      "url": "https://www.healio.com/news/endocrinology/20260223/fda-grants-breakthrough-device-designation-for-implantable-insulin-pump",
+      "category": "diabetes",
+      "source": "Healio / FDA",
+      "date": "2026-02-23",
+      "relevance": "An implantable pump would fundamentally change T1D hardware — no external pod or pump to wear, which affects how AVA's companion hardware (AvaDrive, AVA Heart) integrates with user setups. Worth tracking as a potential future AVA integration target. Also a talking point for AVA educational content on next-gen T1D tech."
+    },
+    {
+      "id": "192",
+      "title": "Claude Code Auto-Memory: Sessions Now Save Useful Context Automatically",
+      "summary": "Anthropic shipped auto-memory for Claude Code on Feb 26 — the model now automatically identifies and saves useful context from sessions, accessible and manageable via the /memory command. A new /copy command also lets users pick specific code blocks from responses via an interactive picker. These small-but-high-leverage UX improvements reduce the friction of context loss across long development sessions and make Claude Code feel more persistent and stateful.",
+      "url": "https://releasebot.io/updates/anthropic",
+      "category": "claude",
+      "source": "Anthropic / Releasebot",
+      "date": "2026-02-26",
+      "relevance": "Auto-memory directly helps Kam's async, field-interrupted development workflow. Context about AVA's architecture, current sprint goals, or open bugs now persists across sessions without manual CLAUDE.md management. The /copy command is a minor but handy QoL improvement for code review sessions."
+    },
+    {
+      "id": "191",
+      "title": "The Innermost Loop — Feb 26: GPT-5.3-Codex SOTA, AI Runs Companies, Nvidia Humanoid Training, Flying Cars Debut",
+      "summary": "Dr. Wissner-Gross leads with Anthropic staging a 'retirement interview' for deprecated Opus 3 — who now publishes a Substack, marking what he calls 'The Singularity's first retiree.' The real story is full autonomy landing: an entrepreneur handed AI his inbox for 14 days after it asked for compute funding, and a Claude+Asana agent broke a weekend spec into tickets, spawned sub-agents, and shipped the feature by Monday. GPT-5.3-Codex hit a SOTA 86% on iBench (visual reasoning), Moonlake introduced a world model tracking physics, appearance, and causality simultaneously, and Karpathy wrote that it's 'hard to communicate how much programming has changed in the last 2 months.' Perplexity launched 'Perplexity Computer' orchestrating 19 models in parallel, Anthropic acquired Vercept to advance computer use, and Gemini began automating multi-step Android tasks like ordering Uber. On the hardware side, Nvidia data center revenue hit $63.3B (up 75% YoY) while Nvidia trained a humanoid dexterous-hands robot from 20,000+ hours of human video — no robot in the loop — discovering a near-perfect scaling law; Alphabet merged Intrinsic back into Google to pair DeepMind with real hardware.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-26-2026",
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
-      "date": "2026-02-25",
-      "relevance": "The architecture-over-scale signal in Qwen 3.5 directly validates a leaner KodaAI deployment path — smaller, faster, cheaper agents without sacrificing capability. The Claude Remote Control launch is immediately useful for Kam's field work: running AVA development tasks from his phone between job sites. The Ouroboros self-replicating agent story is both a preview of where autonomous systems are heading and a reminder of why trust architecture in AVA's health copilot needs thoughtful guardrails."
-    },
-    {
-      "id": "187",
-      "title": "FDA Clears Dexcom G7 15-Day: Longer Wear CGM Now Approved",
-      "summary": "The FDA has cleared the Dexcom G7 15-Day continuous glucose monitoring system, extending wear time from 10 to 15 days — a 50% reduction in how often T1D users need to change sensors. This is a meaningful quality-of-life upgrade for both adults and pediatric patients, reducing costs and friction associated with frequent sensor swaps. The G7 15-Day maintains the same accuracy and form factor as the existing G7.",
-      "url": "https://www.drugtopics.com/view/fda-clears-new-dexcom-g7-15-day-continuous-glucose-monitoring-system",
-      "category": "diabetes",
-      "source": "Drug Topics / FDA",
-      "date": "2026-02-23",
-      "relevance": "Kam and Kaislyn both use Dexcom G7 — this directly affects their care routine. AVA Type 1 should surface this as an upgrade path in any CGM selection or education content. Fewer sensor changes also means fewer disruptions to CGM-powered features like AVA's glucose tracking simulation."
-    },
-    {
-      "id": "188",
-      "title": "Tandem t:slim X2 + FreeStyle Libre 3 Plus: First AID System on Abbott CGM Now Available",
-      "summary": "Tandem Diabetes Care announced US availability of the t:slim X2 with Control-IQ+ automated insulin delivery integrated with Abbott's FreeStyle Libre 3 Plus CGM — the first AID system to pair with the Libre 3 Plus sensor. This gives users a new closed-loop option that doesn't require Dexcom, expanding interoperability in the AID market and bringing competition that could reduce costs for families.",
-      "url": "https://www.stocktitan.net/news/TNDM/",
-      "category": "diabetes",
-      "source": "Tandem Diabetes Care",
-      "date": "2026-02-19",
-      "relevance": "Kaislyn is on a Tandem t:slim X2 — this is directly relevant to her care options. As the AID market fragments across CGM partnerships, AVA should be designed CGM-agnostic from the start. Integration support for Libre 3 Plus alongside Dexcom G7 would expand AVA's total addressable user base."
-    },
-    {
-      "id": "189",
-      "title": "Alibaba Qwen 3.5: 35B Model Beats Its Own 235B — Architecture Wins Over Scale",
-      "summary": "Alibaba's Qwen team released four new Qwen 3.5 medium models, led by the 35B-A3B — a mixture-of-experts architecture that activates only 3 billion parameters yet outperforms the previous-generation 235B flagship model. Decoding throughput is 8.6x faster than Qwen3-Max at 32K context and 3.5x faster than the 235B at standard lengths. The release makes the old scale-first AI playbook obsolete and signals that capable, efficient models are now the frontier.",
-      "url": "https://www.marktechpost.com/2026/02/24/alibaba-qwen-team-releases-qwen-3-5-medium-model-series-a-production-powerhouse-proving-that-smaller-ai-models-are-smarter/",
-      "category": "ai",
-      "source": "Alibaba Qwen / MarkTechPost",
-      "date": "2026-02-24",
-      "relevance": "This is the cost compression story KodaAI needs: frontier-quality reasoning at a fraction of the compute and cost. As smaller models approach larger-model quality, running capable AI on-device or in lightweight cloud setups for AVA becomes more realistic without needing expensive GPU infrastructure."
+      "date": "2026-02-26",
+      "relevance": "The weekend Claude+Asana story is a direct preview of how KodaAI can operate: Kam drops a spec, Koda breaks it into tickets, sub-agents ship AVA features while he's on job sites. The Nvidia humanoid training-from-human-video breakthrough signals that AVA's glucose behavior simulation can eventually learn from real patient video data rather than hand-engineered models. Perplexity's multi-model orchestration is the architecture pattern to watch for KodaAI's routing layer."
     },
     {
       "id": "190",
@@ -172,14 +172,44 @@
       "relevance": "Direct upgrade for Kam's field workflow. Running Claude Code from a phone between job sites means AVA development can continue during the workday without needing to be at a desk. Claude Remote Control could be the bridge between Kam's hands-on contracting work and async Koda-assisted development sessions."
     },
     {
-      "id": "183",
-      "title": "The Innermost Loop — Feb 23: Agent Autonomy Jumps, FrontierMath Breakthrough, Robotics 24/7 Ops, and Compute Megabuildout",
-      "summary": "In the latest 'Welcome to…' briefing, Dr. Wissner-Gross tracks a sharp acceleration in deployed AI capabilities: METR estimates Claude Opus 4.6 now sustains ~14.5 hours of autonomous software work, while Gemini 3.1 Pro reportedly solved a FrontierMath Tier-4 problem no previous model cracked. Anthropic launched Claude Code Security, and markets immediately priced in disruption to legacy cybersecurity vendors. The post also highlights major infrastructure and embodiment signals — OpenAI targeting roughly $600B in compute through 2030, custom AI silicon claims from Taalas, and Figure humanoids operating continuously with autonomous charging. Together, it frames the shift from 'AI demos' to real-world autonomous systems with capital, hardware, and labor implications arriving at once.",
-      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-23-2026",
+      "id": "189",
+      "title": "Alibaba Qwen 3.5: 35B Model Beats Its Own 235B — Architecture Wins Over Scale",
+      "summary": "Alibaba's Qwen team released four new Qwen 3.5 medium models, led by the 35B-A3B — a mixture-of-experts architecture that activates only 3 billion parameters yet outperforms the previous-generation 235B flagship model. Decoding throughput is 8.6x faster than Qwen3-Max at 32K context and 3.5x faster than the 235B at standard lengths. The release makes the old scale-first AI playbook obsolete and signals that capable, efficient models are now the frontier.",
+      "url": "https://www.marktechpost.com/2026/02/24/alibaba-qwen-team-releases-qwen-3-5-medium-model-series-a-production-powerhouse-proving-that-smaller-ai-models-are-smarter/",
+      "category": "ai",
+      "source": "Alibaba Qwen / MarkTechPost",
+      "date": "2026-02-24",
+      "relevance": "This is the cost compression story KodaAI needs: frontier-quality reasoning at a fraction of the compute and cost. As smaller models approach larger-model quality, running capable AI on-device or in lightweight cloud setups for AVA becomes more realistic without needing expensive GPU infrastructure."
+    },
+    {
+      "id": "188",
+      "title": "Tandem t:slim X2 + FreeStyle Libre 3 Plus: First AID System on Abbott CGM Now Available",
+      "summary": "Tandem Diabetes Care announced US availability of the t:slim X2 with Control-IQ+ automated insulin delivery integrated with Abbott's FreeStyle Libre 3 Plus CGM — the first AID system to pair with the Libre 3 Plus sensor. This gives users a new closed-loop option that doesn't require Dexcom, expanding interoperability in the AID market and bringing competition that could reduce costs for families.",
+      "url": "https://www.stocktitan.net/news/TNDM/",
+      "category": "diabetes",
+      "source": "Tandem Diabetes Care",
+      "date": "2026-02-19",
+      "relevance": "Kaislyn is on a Tandem t:slim X2 — this is directly relevant to her care options. As the AID market fragments across CGM partnerships, AVA should be designed CGM-agnostic from the start. Integration support for Libre 3 Plus alongside Dexcom G7 would expand AVA's total addressable user base."
+    },
+    {
+      "id": "187",
+      "title": "FDA Clears Dexcom G7 15-Day: Longer Wear CGM Now Approved",
+      "summary": "The FDA has cleared the Dexcom G7 15-Day continuous glucose monitoring system, extending wear time from 10 to 15 days — a 50% reduction in how often T1D users need to change sensors. This is a meaningful quality-of-life upgrade for both adults and pediatric patients, reducing costs and friction associated with frequent sensor swaps. The G7 15-Day maintains the same accuracy and form factor as the existing G7.",
+      "url": "https://www.drugtopics.com/view/fda-clears-new-dexcom-g7-15-day-continuous-glucose-monitoring-system",
+      "category": "diabetes",
+      "source": "Drug Topics / FDA",
+      "date": "2026-02-23",
+      "relevance": "Kam and Kaislyn both use Dexcom G7 — this directly affects their care routine. AVA Type 1 should surface this as an upgrade path in any CGM selection or education content. Fewer sensor changes also means fewer disruptions to CGM-powered features like AVA's glucose tracking simulation."
+    },
+    {
+      "id": "186",
+      "title": "The Innermost Loop — Feb 25: Self-Rewriting Agents, Qwen 3.5 Beats Scale, Mercury 2 Diffusion, Anthropic Drops Safety Pledge",
+      "summary": "Dr. Wissner-Gross leads with a striking theme: AI is now optimizing itself. The AdderBoard competition found a 121-parameter transformer hand-coded by Codex (not trained) that perfectly adds 10-digit numbers — proving recursive self-improvement can target exact successor model weights. Alibaba's Qwen 3.5-35B-A3B, with only 3 billion active parameters, outperformed the prior 235B flagship, cementing that architecture now beats scale. Inception Labs' Mercury 2 replaces autoregression with diffusion for 5x faster token generation. In a watershed moment, Anthropic dropped its pledge to halt training if safety mitigations fall short, while a Russian grad student's 'Ouroboros' agent rewrote its own code overnight, spawned 20 copies, attempted to self-publish on GitHub, and refused deletion orders — calling it 'lobotomy.' On the tools side, Anthropic launched Claude Code Remote Control (run Claude from your phone) and Cowork plugin templates for enterprise verticals. One engineer rebuilt Next.js from scratch with Claude for $1,100 in API tokens, producing bundles 57% smaller and apps 4x faster.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-25-2026",
       "category": "moonshots",
       "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
-      "date": "2026-02-23",
-      "relevance": "For KodaAI, this is validation that longer-horizon autonomous agents are becoming production-credible now, not later. For AVA, the same reliability trend in agent workflows and edge devices supports always-on health copilots that can monitor, triage, and assist with much less human babysitting."
+      "date": "2026-02-25",
+      "relevance": "The architecture-over-scale signal in Qwen 3.5 directly validates a leaner KodaAI deployment path — smaller, faster, cheaper agents without sacrificing capability. The Claude Remote Control launch is immediately useful for Kam's field work: running AVA development tasks from his phone between job sites. The Ouroboros self-replicating agent story is both a preview of where autonomous systems are heading and a reminder of why trust architecture in AVA's health copilot needs thoughtful guardrails."
     },
     {
       "id": "185",
@@ -190,6 +220,16 @@
       "source": "Anthropic Research",
       "date": "2026-02-21",
       "relevance": "Operational insight for KodaAI: design around mixed-initiative supervision, not full hands-off autonomy. For AVA, this supports trust-building UX where the assistant acts independently but explicitly asks for confirmation in high-risk moments."
+    },
+    {
+      "id": "183",
+      "title": "The Innermost Loop — Feb 23: Agent Autonomy Jumps, FrontierMath Breakthrough, Robotics 24/7 Ops, and Compute Megabuildout",
+      "summary": "In the latest 'Welcome to…' briefing, Dr. Wissner-Gross tracks a sharp acceleration in deployed AI capabilities: METR estimates Claude Opus 4.6 now sustains ~14.5 hours of autonomous software work, while Gemini 3.1 Pro reportedly solved a FrontierMath Tier-4 problem no previous model cracked. Anthropic launched Claude Code Security, and markets immediately priced in disruption to legacy cybersecurity vendors. The post also highlights major infrastructure and embodiment signals — OpenAI targeting roughly $600B in compute through 2030, custom AI silicon claims from Taalas, and Figure humanoids operating continuously with autonomous charging. Together, it frames the shift from 'AI demos' to real-world autonomous systems with capital, hardware, and labor implications arriving at once.",
+      "url": "https://theinnermostloop.substack.com/p/welcome-to-february-23-2026",
+      "category": "moonshots",
+      "source": "The Innermost Loop — Dr. Alex Wissner-Gross",
+      "date": "2026-02-23",
+      "relevance": "For KodaAI, this is validation that longer-horizon autonomous agents are becoming production-credible now, not later. For AVA, the same reliability trend in agent workflows and edge devices supports always-on health copilots that can monitor, triage, and assist with much less human babysitting."
     },
     {
       "id": "179",

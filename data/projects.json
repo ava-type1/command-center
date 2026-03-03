@@ -1536,30 +1536,44 @@
     {
       "id": "bid-finder",
       "name": "Brad's Bid Finder (V2)",
-      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Brad V2 \u2014 Python scraper running nightly at 6 AM ET. Sources: SAM.gov, OpenGov, MFMP, DemandStar, FDOT. Filtered to Florida + South Georgia only (lat < 32.5\u00b0N). 298 active bids tracked. Dashboard auto-deploys to Cloudflare Pages.",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Nightly scraper \u2014 SAM.gov working, county scrapers being fixed. 403 active bids. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
       "status": "active",
-      "progress": 90,
+      "progress": 72,
       "color": "#f59e0b",
       "lastUpdated": "2026-03-03",
-      "lastWorkedOn": "Mar 3: Geographic filter fix \u2014 restricted to FL + South Georgia only (lat < 32.5\u00b0N cutoff), radius tightened 300\u2192200 miles. Disabled per-bid Telegram notifications (was firing 5+ pings per morning run). Wiped old national bids from DB for clean slate. Next run will populate with FL/South GA only.",
+      "lastWorkedOn": "Mar 3: Keyword overhaul per santafesiteprepllc.com (site pads/culverts/septic HIGH priority, bridges/repaving negative). Santa Fe logo added to dashboard. 3 new filters: min value, min score, category. Discovered all 4 non-SAM scrapers broken \u2014 repair subagent running.",
       "todos": [
         {
           "id": "1",
-          "text": "Set up automated weekly refresh cron job",
+          "text": "Fix OpenGov scraper (20 FL county portals returning 0)",
           "done": false
         },
         {
           "id": "2",
-          "text": "Add PlanHub as data source",
+          "text": "Fix DemandStar, MFMP, FDOT scrapers",
           "done": false
         },
         {
           "id": "3",
-          "text": "Get Brad's feedback on bid quality",
+          "text": "Add bid tracking (submitted/won/lost) + 10% earnings tracker",
+          "done": false
+        },
+        {
+          "id": "4",
+          "text": "Add Columbia County direct scrape (Fort White is here!)",
+          "done": false
+        },
+        {
+          "id": "5",
+          "text": "Get Brad feedback on bid quality",
           "done": false
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-03",
+          "summary": "Keyword overhaul based on santafesiteprepllc.com: site pads, culverts, septic = high priority; bridges/road repaving = negative. Santa Fe logo + 5 service images pulled and added to dashboard header. 3 new dashboard filters: min estimated value (0K-00K+), min relevance score, category (culverts/pads/septic/clearing). 403 active bids. Non-SAM scrapers (OpenGov 20 counties, MFMP, DemandStar, FDOT) confirmed broken \u2014 repair subagent dispatched."
+        },
         {
           "date": "2026-03-03",
           "summary": "Geographic filter fix: bids now restricted to FL + South Georgia only (lat < 32.5\u00b0N \u2014 excludes Atlanta/North GA). Radius tightened 300\u2192200 miles. Per-bid Telegram notifications disabled (was firing 5+ pings per morning run). Old national bids wiped from DB. Morning run reported 55 new SAM.gov bids, 298 active total."
@@ -1570,7 +1584,7 @@
         }
       ],
       "repoUrl": "https://github.com/ava-type1/brad-v2",
-      "liveUrl": "https://d23f51b7.brad-v2.pages.dev"
+      "liveUrl": "https://master.brad-v2.pages.dev"
     },
     {
       "id": "rhodes-cookbook",

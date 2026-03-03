@@ -1457,8 +1457,8 @@
       "status": "active",
       "progress": 85,
       "color": "#00d4ff",
-      "lastUpdated": "2026-02-23",
-      "lastWorkedOn": "APP IS LIVE on App Store! 149 users, 165 views, 173 sessions on launch day (Feb 22). Strong Android demand and UK mmol requests. Marketing underway in T1D Facebook groups.",
+      "lastUpdated": "2026-03-03",
+      "lastWorkedOn": "TTS bake-off completed (Mar 3): tested Kokoro, Chatterbox, XTTS-v2, F5-TTS for bedtime storytelling feature. Kokoro selected \u2014 best bedtime vibe, lightest weight, $0 cost on-device via CoreML. Architecture planned: constrained LLM inputs + system prompt guardrails + OpenAI moderation layer before TTS. Backend story generation API next step.",
       "todos": [
         {
           "id": "1",
@@ -1498,6 +1498,21 @@
         {
           "id": "8",
           "text": "Android version (Phase 0-2 scaffolded, emulator testing on Mac)",
+          "done": false
+        },
+        {
+          "id": "t1",
+          "text": "Build story generation backend API (LLM + guardrails + moderation)",
+          "done": false
+        },
+        {
+          "id": "t2",
+          "text": "Convert Kokoro to CoreML for on-device iOS inference",
+          "done": false
+        },
+        {
+          "id": "t3",
+          "text": "Design constrained story input UI (dropdowns, not free text)",
           "done": false
         }
       ],

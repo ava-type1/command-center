@@ -331,8 +331,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-02",
-      "lastWorkedOn": "Mar 2: Daily cron — 3 new stories: Columbia County building permit email scam (Mar 1, featured); Water hyacinth removal on Santa Fe River by local nonprofit + Boy Scout Troop 88 at High Springs (Feb 28); Blood Moon total lunar eclipse Tuesday March 3, peaks 6:33 AM, naked-eye visible from Fort White (Mar 1). Softball now 2-0 + 9 upcoming games added through Mar 20. SOFREP Media coverage on Iran Strike Map (off-project win from same session).",
+      "lastUpdated": "2026-03-03",
+      "lastWorkedOn": "Mar 3: Daily cron — 4 new stories: I-75 wildfire smoke forced 3hr closure (25 acres SW of Lake City, 100% contained); Tennessee man critically airlifted after I-75 motorcycle crash; NOAA spring outlook (warm/dry, 68% of FL in extreme drought); Lake City Unity Fest council debate ($10K contribution blocked, mayor pushed park restoration). Softball updated to 2-1 after Union County loss (16-2). Next event: BOCC Thu Mar 5 at 6 PM.",
       "todos": [
         {
           "id": "1",
@@ -396,6 +396,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-03",
+          "summary": "4 new stories: I-75 wildfire smoke shutdown — 25-acre fire SW of Lake City caused 3hr I-75 closure Monday night, 100% contained (WCJB). Tennessee man critically airlifted to UF Health Shands after hitting a semi on I-75 north of US-90 (WCJB). NOAA spring outlook — below-normal precip, drought likely to intensify, 68% of FL in extreme drought (WUFT). Lake City Unity Fest debate — council majority blocked $10K city contribution, mayor preferred park restoration (WCJB). Softball updated to 2-1 (loss to Union County 16-2). BOCC meeting Thu Mar 5 at 6 PM next up."
+        },
         {
           "date": "2026-03-02",
           "summary": "3 new verified stories: Columbia County building permit email scam — scammers using public records to target permit applicants (WCJB, featured). Water hyacinth removal on Santa Fe River — local nonprofit + Boy Scout Troop 88 hand-pulling invasive hyacinth at High Springs, drought worsening the problem (WCJB). Blood Moon lunar eclipse — total eclipse peaks 6:33 AM Tuesday Mar 3, naked-eye visible from Fort White (WCJB). Softball refreshed to 2-0 with 9 upcoming games through Mar 20. Deployed."
@@ -1516,13 +1520,13 @@
     },
     {
       "id": "bid-finder",
-      "name": "Brad's Bid Finder",
-      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Scrapes SAM.gov, ConstructConnect, FDOT, MFMP, and Bonfire portals for site prep, demolition, and excavation opportunities in FL/GA.",
-      "status": "completed",
-      "progress": 100,
+      "name": "Brad's Bid Finder (V2)",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Brad V2 — Python scraper running nightly at 6 AM ET. Sources: SAM.gov, OpenGov, MFMP, DemandStar, FDOT. Filtered to Florida + South Georgia only (lat < 32.5°N). 298 active bids tracked. Dashboard auto-deploys to Cloudflare Pages.",
+      "status": "active",
+      "progress": 90,
       "color": "#f59e0b",
-      "lastUpdated": "2026-02-10T00:15:00Z",
-      "lastWorkedOn": "Added Find Email / Open Bid Page button to email modal for bids missing contact emails",
+      "lastUpdated": "2026-03-03",
+      "lastWorkedOn": "Mar 3: Geographic filter fix — restricted to FL + South Georgia only (lat < 32.5°N cutoff), radius tightened 300→200 miles. Disabled per-bid Telegram notifications (was firing 5+ pings per morning run). Wiped old national bids from DB for clean slate. Next run will populate with FL/South GA only.",
       "todos": [
         {
           "id": "1",
@@ -1542,16 +1546,16 @@
       ],
       "changelog": [
         {
-          "date": "2026-02-09",
-          "summary": "Added 'Open Bid Page' / 'Find Email' button to email draft modal. 144/150 bids lack contact emails — button opens source page or Google search to help find procurement contacts."
+          "date": "2026-03-03",
+          "summary": "Geographic filter fix: bids now restricted to FL + South Georgia only (lat < 32.5°N — excludes Atlanta/North GA). Radius tightened 300→200 miles. Per-bid Telegram notifications disabled (was firing 5+ pings per morning run). Old national bids wiped from DB. Morning run reported 55 new SAM.gov bids, 298 active total."
         },
         {
           "date": "2026-02-09",
-          "summary": "Built from scratch: Dark pro dashboard with tile/list views, 5 data sources (SAM.gov, ConstructConnect, FDOT, MFMP, Bonfire), full bid detail enrichment, contact info, email drafting, relevance scoring, FL/GA filtering. 150 open bids, 65 high relevance. Deployed to Cloudflare Pages."
+          "summary": "Brad V2 rebuilt from scratch: Python scraper with nightly 6 AM cron. Sources: SAM.gov (official API + public search), OpenGov (20 FL county portals), MFMP, DemandStar, FDOT. Relevance scoring, geocoding, distance filtering. Dashboard auto-deploys to Cloudflare Pages."
         }
       ],
-      "repoUrl": "https://github.com/ava-type1/brad-workflow",
-      "liveUrl": "https://bid-finder.pages.dev"
+      "repoUrl": "https://github.com/ava-type1/brad-v2",
+      "liveUrl": "https://d23f51b7.brad-v2.pages.dev"
     },
     {
       "id": "rhodes-cookbook",
@@ -2305,5 +2309,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-02T09:08:00Z"
+  "lastUpdated": "2026-03-03T09:02:00Z"
 }

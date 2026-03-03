@@ -1,6 +1,19 @@
 {
   "ideas": [
     {
+      "id": "52",
+      "title": "\ud83c\udf19 Bedtime Story AI \u2014 Personalized audio stories for kids",
+      "description": "Screen-free bedtime story device/app. Kid says 'tell me a story where I'm a superhero fighting giant candy corn' \u2014 AI generates a personalized 8-10 min story with the child as hero, read aloud in an expressive storyteller voice. No screen during playback.",
+      "category": "saas",
+      "potential": "high",
+      "effort": "prototype",
+      "score": 82,
+      "status": "\ud83d\udca1 Concept \u2014 unit economics validated, voice quality to test",
+      "createdAt": "2026-03-03T10:00:00Z",
+      "highlight": false,
+      "notes": "Market gap: Yoto/Tonies/Lunii = screen-free audio for kids (huge market) but all pre-recorded. Nobody does real-time AI-generated personalized stories where the child is the hero. Core economics: LLM ~$0.002/story, TTS is the cost driver. OpenAI TTS ~$0.14/story \u2192 $9.99/mo with 30-story cap works at 59% margin. ElevenLabs quality >> OpenAI but blows up economics. Self-hosted Kokoro TTS (open source, runs on VPS) = near-zero marginal cost, tested Mar 3. Business model: app-first ($9.99/mo, 30 stories/cap), hardware (Pi puck) as Phase 2 dream. Kaislyn angle: T1D-friendly stories where hero has a magic pump. Voice actor clone ($200-300 Fiverr) = branded storyteller identity. Tested Kokoro ONNX on VPS \u2014 voice sample generated and sent to Kam for review."
+    },
+    {
       "id": "37",
       "title": "\ud83d\udc8a Glucose Insights Pro \u2014 $9.99/mo SaaS",
       "description": "Web app that analyzes CGM + pump data with AI. Already built: glucose charts, insulin overlay, AI analysis, endo reports, insurance docs, data chatbot. Revenue model: freemium with $9.99/mo for AI features.",

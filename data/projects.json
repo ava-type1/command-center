@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4: OG image updated to live map screenshot via CF Worker (no Pages redeploy). Meta description updated to current stats (115+ strikes, 22 leaders, 1,291+ killed) via Worker. FB OG cache busted. Outreach sent to 7 defense/military outlets (The War Zone, Task & Purpose, Military Times, Breaking Defense, 19FortyFive, War on the Rocks, SoFRep). Correction follow-up sent to 5 outlets fixing timeline error. Reply monitor cron running every 15 min \u2014 Telegram alert on any response. sofrep.com top referrer at 5,864 visits. Guy McCardle (SoFRep) had already replied Mar 1 confirming EiC approval.",
+      "lastWorkedOn": "Mar 4 PM: Embed requests coming in via Telegram — Bilal Siddik (bsiddik992@hotmail.com, web-pwr.com) + test submission (Jim/a@a.com). Facebook post getting engagement/public questions. Earlier: OG image updated via CF Worker, meta description updated (115+ strikes, 22 leaders, 1,291+ killed), FB OG cache busted. Outreach sent to 7 defense/military outlets. Reply monitor cron running every 15 min. sofrep.com top referrer at 5,864 visits.",
       "todos": [
         {
           "id": "1",
@@ -69,7 +69,7 @@
       "changelog": [
         {
           "date": "2026-03-04",
-          "summary": "SoFrep embed live and driving traffic: 5,864 referral hits from sofrep.com in 3 days (50,651 direct). Total 102 sessions on iranstrikemap.com domain. Analytics shared with Kam. Outreach strategy planned \u2014 use SoFrep embed as social proof to pitch Task & Purpose, War on the Rocks, The Drive, Military Times, RealClearDefense, and geopolitics Substacks. Short email pitch + X DM approach drafted."
+          "summary": "PM: Embed requests coming in — Bilal Siddik (web-pwr.com, 400x400px) + test submission. Facebook post getting organic engagement + technical questions about data update frequency. AM: SoFRep embed driving 5,864 referral visits (50,651+ direct). Outreach sent to 7 defense/military outlets. Reply monitor cron live (15 min interval, Telegram alert on response)."
         },
         {
           "date": "2026-03-02",
@@ -84,7 +84,7 @@
           "summary": "Built and launched in one day as conflict broke out. US and Israel launched Operation Epic Fury against Iran at 1 AM ET. Map seeded with 11 confirmed events: 9 US/Israel strikes (nuclear facilities, IRGC HQ, Khamenei compound, airbases) + 2 Iranian retaliatory strikes (northern Israel, Al Udeid Qatar). Flag emoji markers show attacker instantly. Mobile redesign with full-screen map, FAB buttons, slide-up bottom sheets for feed and leader tracker. AI video pipeline (Phase 2) designed and ready to build."
         }
       ],
-      "liveUrl": "https://iran-strike-map.pages.dev",
+      "liveUrl": "https://iranstrikemap.com",
       "repoUrl": null
     },
     {
@@ -2368,5 +2368,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-04T09:16:00Z"
+  "lastUpdated": "2026-03-04T19:43:00Z"
 }

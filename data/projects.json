@@ -7,8 +7,8 @@
       "status": "active",
       "progress": 83,
       "color": "#ff3300",
-      "lastUpdated": "2026-03-02",
-      "lastWorkedOn": "Mar 1-2 (overnight): Bug fix marathon — casualties dropdown (position:fixed JS positioning), 54/126 videos fixed with ffmpeg faststart (moov atom moved to front), country overlay flash eliminated (custom Leaflet pane z-index 250), ReferenceError fix (moved initCountryOverlay + initVesselLayer into block 1, Cache-Control headers). Byline added to ? modal + meta author. Strike count updated 57+→67+. SOFREP coverage confirmed — editor-in-chief green-lit publishing the embed. press@iranstrikemap.com added to ? modal (email routing still pending in Cloudflare).",
+      "lastUpdated": "2026-03-04",
+      "lastWorkedOn": "Mar 4: SoFrep embed confirmed live — analytics show 5,864 referral visits from sofrep.com in 3 days (vs 50,651 direct homepage hits). Discussed social-proof outreach strategy: use SoFrep embed as credibility anchor to pitch Task & Purpose, War on the Rocks, The Drive, Military Times, RealClearDefense, and defense Substacks. Short pitch format: 'SoFrep embedded it, drove X,000 hits in 3 days, free to embed.' Email + X DM approach. Mar 1-2: Bug fix marathon complete.",
       "todos": [
         {
           "id": "1",
@@ -67,6 +67,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-04",
+          "summary": "SoFrep embed live and driving traffic: 5,864 referral hits from sofrep.com in 3 days (50,651 direct). Total 102 sessions on iranstrikemap.com domain. Analytics shared with Kam. Outreach strategy planned — use SoFrep embed as social proof to pitch Task & Purpose, War on the Rocks, The Drive, Military Times, RealClearDefense, and geopolitics Substacks. Short email pitch + X DM approach drafted."
+        },
         {
           "date": "2026-03-02",
           "summary": "Bug fix marathon (overnight Mar 1→2): Casualties dropdown fixed (position:fixed + JS getBoundingClientRect so it clears topbar overflow). 54/126 videos had moov atom at end — all fixed with ffmpeg faststart for instant playback. Country overlay flash eliminated with custom Leaflet pane (z-index 250, canvas renderer, pointerEvents:none). ReferenceError fixed — initCountryOverlay + initVesselLayer moved into block 1, var declarations at line 678, Cache-Control no-store headers added. Byline added: '🗺️ Built by Kameron Martin' in ? modal + meta author fixed. Strike count updated 57+→67+ in meta/llms.txt. SOFREP confirmed publishing embed (editor-in-chief green light). press@iranstrikemap.com contact added to ? modal."
@@ -331,8 +335,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-03",
-      "lastWorkedOn": "Mar 3: Daily cron — 4 new stories: I-75 wildfire smoke forced 3hr closure (25 acres SW of Lake City, 100% contained); Tennessee man critically airlifted after I-75 motorcycle crash; NOAA spring outlook (warm/dry, 68% of FL in extreme drought); Lake City Unity Fest council debate ($10K contribution blocked, mayor pushed park restoration). Softball updated to 2-1 after Union County loss (16-2). Next event: BOCC Thu Mar 5 at 6 PM.",
+      "lastUpdated": "2026-03-04",
+      "lastWorkedOn": "Mar 4: Daily cron — SRWMD officials walked out of NCFRPC meeting before public comment ended (Water First North Florida / wastewater-to-aquifer plan). Packed room from 4 counties. Madison County sent formal letter of opposition. Baseball updated 2-8 (W 11-1 @ Gainesville, Capallia 2-for-4). Softball updated 2-2 (L 8-11 vs Bradford). Next: baseball Fri Mar 6 @ Branford district; softball Thu Mar 5 vs Suwannee home.",
       "todos": [
         {
           "id": "1",
@@ -396,6 +400,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-04",
+          "summary": "SRWMD officials exited NCFRPC meeting early before public comment ended — opposition to Water First North Florida (Jacksonville wastewater-to-aquifer plan) drew packed room from Alachua, Columbia, Hamilton, Clay counties. Madison County sent formal letter of opposition. Baseball: W 11-1 @ Gainesville (record now 2-8; Capallia 2-for-4, Westland W). Next: Fri Mar 6 @ Branford district. Softball: L 8-11 vs Bradford (record 2-2; Alvey 3-for-4). Next: Thu Mar 5 vs Suwannee home."
+        },
         {
           "date": "2026-03-03",
           "summary": "4 new stories: I-75 wildfire smoke shutdown — 25-acre fire SW of Lake City caused 3hr I-75 closure Monday night, 100% contained (WCJB). Tennessee man critically airlifted to UF Health Shands after hitting a semi on I-75 north of US-90 (WCJB). NOAA spring outlook — below-normal precip, drought likely to intensify, 68% of FL in extreme drought (WUFT). Lake City Unity Fest debate — council majority blocked $10K city contribution, mayor preferred park restoration (WCJB). Softball updated to 2-1 (loss to Union County 16-2). BOCC meeting Thu Mar 5 at 6 PM next up."
@@ -1549,8 +1557,8 @@
       "status": "active",
       "progress": 72,
       "color": "#f59e0b",
-      "lastUpdated": "2026-03-04T04:24:44.731Z",
-      "lastWorkedOn": "Mar 3: Keyword overhaul per santafesiteprepllc.com (site pads/culverts/septic HIGH priority, bridges/repaving negative). Santa Fe logo added to dashboard. 3 new filters: min value, min score, category. Discovered all 4 non-SAM scrapers broken — repair subagent running.",
+      "lastUpdated": "2026-03-04",
+      "lastWorkedOn": "Mar 4: Morning scrape — 104 new SAM.gov, 8 new FDOT, 3 new Columbia County direct. FDOT + county_direct scrapers confirmed working after Mar 3 repair. DemandStar/OpenGov/MFMP still 0. 5 expired cleaned. 661 total active / 647 exported. Dashboard live.",
       "todos": [
         {
           "id": "1",
@@ -1559,7 +1567,7 @@
         },
         {
           "id": "2",
-          "text": "Fix DemandStar, MFMP, FDOT scrapers",
+          "text": "Fix DemandStar + MFMP scrapers (FDOT now working)",
           "done": false
         },
         {
@@ -1570,7 +1578,7 @@
         {
           "id": "4",
           "text": "Add Columbia County direct scrape (Fort White is here!)",
-          "done": false
+          "done": true
         },
         {
           "id": "5",
@@ -1580,10 +1588,14 @@
         {
           "id": "1772598284731",
           "text": "Verify scraper repair results — county_direct, fdot, demandstar were modified",
-          "done": false
+          "done": true
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-04",
+          "summary": "Morning scrape results: 104 new SAM.gov, 8 new FDOT, 3 new Columbia County direct, 5 expired cleaned. FDOT + county_direct scrapers now confirmed working after yesterday's repair. DemandStar/OpenGov/MFMP still returning 0. 661 total active bids / 647 exported to dashboard."
+        },
         {
           "date": "2026-03-03",
           "note": "Mobile responsive overhaul: collapsible filter drawer, search always on top, badge shows active filter count. Expired bid auto-cleanup on every scrape. 493 clean active bids live."
@@ -2356,5 +2368,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-03T10:13:00Z"
+  "lastUpdated": "2026-03-04T09:16:00Z"
 }

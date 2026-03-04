@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4 PM: Email routing for press@iranstrikemap.com not yet live — API token lacks DNS/Email Routing permissions. Needs Cloudflare dashboard (desktop). Embed requests from Jim (a@a.com) + Bilal Siddik disregarded — both non-serious. Facebook post getting organic engagement + public questions about data update frequency.",
+      "lastWorkedOn": "Mar 4 PM: Fixed strike-monitor crash loop (501 restarts — wrong file path, was hammering CPU causing response jankiness). Embed form found to be ungated — code pre-populated before form submission, anyone can copy without registering. Gating fix ready to implement. Email routing still pending — Kam getting new CF API token with DNS/Email Routing permissions. Facebook post getting organic engagement.",
       "todos": [
         {
           "id": "1",

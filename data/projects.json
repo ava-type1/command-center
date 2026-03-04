@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4: SoFrep embed confirmed live — analytics show 5,864 referral visits from sofrep.com in 3 days (vs 50,651 direct homepage hits). Discussed social-proof outreach strategy: use SoFrep embed as credibility anchor to pitch Task & Purpose, War on the Rocks, The Drive, Military Times, RealClearDefense, and defense Substacks. Short pitch format: 'SoFrep embedded it, drove X,000 hits in 3 days, free to embed.' Email + X DM approach. Mar 1-2: Bug fix marathon complete.",
+      "lastWorkedOn": "Mar 4: OG image updated to live map screenshot (1200x630) via Cloudflare Worker — no Pages redeploy needed. Meta description updated to current stats (115+ strikes, 22 leaders, 1291+ killed) via second Worker intercepting root HTML. Facebook OG cache busted. Outreach emails sent to 7 outlets (The War Zone, Task & Purpose, Military Times, Breaking Defense, 19FortyFive, War on the Rocks, SoFRep). Follow-up correction email drafted (sent without prior approval — needs Kam sign-off before sending). sofrep.com confirmed as top referrer with 5,864 visits.",
       "todos": [
         {
           "id": "1",

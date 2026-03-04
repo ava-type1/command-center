@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4 PM: Embed requests coming in via Telegram — Bilal Siddik (bsiddik992@hotmail.com, web-pwr.com) + test submission (Jim/a@a.com). Facebook post getting engagement/public questions. Earlier: OG image updated via CF Worker, meta description updated (115+ strikes, 22 leaders, 1,291+ killed), FB OG cache busted. Outreach sent to 7 defense/military outlets. Reply monitor cron running every 15 min. sofrep.com top referrer at 5,864 visits.",
+      "lastWorkedOn": "Mar 4 PM: Email routing for press@iranstrikemap.com not yet live — API token lacks DNS/Email Routing permissions. Needs Cloudflare dashboard (desktop). Embed requests from Jim (a@a.com) + Bilal Siddik disregarded — both non-serious. Facebook post getting organic engagement + public questions about data update frequency.",
       "todos": [
         {
           "id": "1",
@@ -52,7 +52,7 @@
         },
         {
           "id": "9",
-          "text": "Cinematic playback mode (\u25ba REPLAY + per-strike zoom/card/arrow sequence)",
+          "text": "Cinematic playback mode (► REPLAY + per-strike zoom/card/arrow sequence)",
           "done": true
         },
         {
@@ -69,15 +69,15 @@
       "changelog": [
         {
           "date": "2026-03-04",
-          "summary": "PM: Embed requests coming in — Bilal Siddik (web-pwr.com, 400x400px) + test submission. Facebook post getting organic engagement + technical questions about data update frequency. AM: SoFRep embed driving 5,864 referral visits (50,651+ direct). Outreach sent to 7 defense/military outlets. Reply monitor cron live (15 min interval, Telegram alert on response)."
+          "summary": "PM: Embed requests (Jim/a@a.com = test, Bilal Siddik/web-pwr.com = non-serious) disregarded. Facebook post engagement — technical questions about data update pipeline answered. Email routing for press@iranstrikemap.com still pending — needs Cloudflare dashboard on desktop (API token lacks DNS/Email Routing perms). AM: SoFRep embed driving 5,864 referral visits. Outreach sent to 7 defense/military outlets. Reply monitor cron live."
         },
         {
           "date": "2026-03-02",
-          "summary": "Bug fix marathon (overnight Mar 1\u21922): Casualties dropdown fixed (position:fixed + JS getBoundingClientRect so it clears topbar overflow). 54/126 videos had moov atom at end \u2014 all fixed with ffmpeg faststart for instant playback. Country overlay flash eliminated with custom Leaflet pane (z-index 250, canvas renderer, pointerEvents:none). ReferenceError fixed \u2014 initCountryOverlay + initVesselLayer moved into block 1, var declarations at line 678, Cache-Control no-store headers added. Byline added: '\ud83d\uddfa\ufe0f Built by Kameron Martin' in ? modal + meta author fixed. Strike count updated 57+\u219267+ in meta/llms.txt. SOFREP confirmed publishing embed (editor-in-chief green light). press@iranstrikemap.com contact added to ? modal."
+          "summary": "Bug fix marathon (overnight Mar 1→2): Casualties dropdown fixed (position:fixed + JS getBoundingClientRect so it clears topbar overflow). 54/126 videos had moov atom at end — all fixed with ffmpeg faststart for instant playback. Country overlay flash eliminated with custom Leaflet pane (z-index 250, canvas renderer, pointerEvents:none). ReferenceError fixed — initCountryOverlay + initVesselLayer moved into block 1, var declarations at line 678, Cache-Control no-store headers added. Byline added: '🗺️ Built by Kameron Martin' in ? modal + meta author fixed. Strike count updated 57+→67+ in meta/llms.txt. SOFREP confirmed publishing embed (editor-in-chief green light). press@iranstrikemap.com contact added to ? modal."
         },
         {
           "date": "2026-03-01",
-          "summary": "Cinematic Playback mode built + deployed: \u25ba REPLAY button on timeline triggers per-strike sequence (zoom out \u2192 cruise \u2192 drop in \u2192 title flash \u2192 info card + dashed red arrow \u2192 countdown \u2192 next). Speed controls (5s/8s/12s), pause, \u2190 TIMELINE exit, Watch Videos inside playback. Proportional timeline spacing with real timestamp gaps + 18px min gap. Attack-type icon redesign (B-2, rocket, Shahed drone) + ring system (US blue, Israel silver, joint split, Iran green) in design phase \u2014 clustering + new markers pending 85% quality threshold."
+          "summary": "Cinematic Playback mode built + deployed: ► REPLAY button on timeline triggers per-strike sequence (zoom out → cruise → drop in → title flash → info card + dashed red arrow → countdown → next). Speed controls (5s/8s/12s), pause, ← TIMELINE exit, Watch Videos inside playback. Proportional timeline spacing with real timestamp gaps + 18px min gap. Attack-type icon redesign (B-2, rocket, Shahed drone) + ring system (US blue, Israel silver, joint split, Iran green) in design phase — clustering + new markers pending 85% quality threshold."
         },
         {
           "date": "2026-02-28",
@@ -121,7 +121,7 @@
       "changelog": [
         {
           "date": "2026-02-23",
-          "summary": "VIRAL DAY \u2014 403 unique visitors from Facebook T1D groups in a single day. Kam posted in 12 groups, ~half approved, some blowing up with comments. International traffic: UK (60), Canada (41), Australia (14). Facebook group strategy proven. App Store real count arrives tomorrow (Apple 24-48hr lag)."
+          "summary": "VIRAL DAY — 403 unique visitors from Facebook T1D groups in a single day. Kam posted in 12 groups, ~half approved, some blowing up with comments. International traffic: UK (60), Canada (41), Australia (14). Facebook group strategy proven. App Store real count arrives tomorrow (Apple 24-48hr lag)."
         },
         {
           "date": "2026-02-22",
@@ -137,7 +137,7 @@
       "progress": 5,
       "color": "#8b5cf6",
       "lastUpdated": "2026-02-20T07:00:00Z",
-      "lastWorkedOn": "Nightly build cron active (2 AM ET). First build ran Feb 20 \u2014 hit 10min timeout working on backend scaffold. Switched main model from Opus 4.6 \u2192 Sonnet 4.6 to conserve Claude Max rate limits; Opus still available for heavy tasks.",
+      "lastWorkedOn": "Nightly build cron active (2 AM ET). First build ran Feb 20 — hit 10min timeout working on backend scaffold. Switched main model from Opus 4.6 → Sonnet 4.6 to conserve Claude Max rate limits; Opus still available for heavy tasks.",
       "todos": [
         {
           "id": "1",
@@ -206,11 +206,11 @@
       "changelog": [
         {
           "date": "2026-02-26",
-          "summary": "Mac remote dev setup complete: SSH access from server established (nitram@100.122.25.86 via Tailscale). Installed nvm, Node v24.14.0, Claude Code 2.1.59 on Mac. Created ~/bin/claude wrapper and ~/bin/koda helper script for named screen sessions (koda ava, koda new, koda attach, koda list). Discussed Anthropic's new Claude Code Remote Control feature (claude remote-control) \u2014 available now on Max plan, lets you control a Mac Claude Code session from iPhone/browser. Full mobile-first dev workflow ready: Termius on iPhone \u2192 SSH \u2192 Mac \u2192 launch Claude Code sessions in any project from the field. Also discussed building a Mac\u2192phone deployment pipeline: fix code \u2192 xcodebuild \u2192 R2 upload \u2192 OTA manifest \u2192 Telegram install link (no TestFlight wait)."
+          "summary": "Mac remote dev setup complete: SSH access from server established (nitram@100.122.25.86 via Tailscale). Installed nvm, Node v24.14.0, Claude Code 2.1.59 on Mac. Created ~/bin/claude wrapper and ~/bin/koda helper script for named screen sessions (koda ava, koda new, koda attach, koda list). Discussed Anthropic's new Claude Code Remote Control feature (claude remote-control) — available now on Max plan, lets you control a Mac Claude Code session from iPhone/browser. Full mobile-first dev workflow ready: Termius on iPhone → SSH → Mac → launch Claude Code sessions in any project from the field. Also discussed building a Mac→phone deployment pipeline: fix code → xcodebuild → R2 upload → OTA manifest → Telegram install link (no TestFlight wait)."
         },
         {
           "date": "2026-02-25",
-          "summary": "Server optimization session: Diagnostic tools installed (iotop, sysstat, ripgrep, fd-find, tree). Confirmed elevated/root access already active. Node heap + UV thread pool upgrade planned (8GB / 64 threads). Cognitive-memory skill identified as proper upgrade path over raw ChromaDB. MEMORY.md over 20k limit \u2014 needs trimming."
+          "summary": "Server optimization session: Diagnostic tools installed (iotop, sysstat, ripgrep, fd-find, tree). Confirmed elevated/root access already active. Node heap + UV thread pool upgrade planned (8GB / 64 threads). Cognitive-memory skill identified as proper upgrade path over raw ChromaDB. MEMORY.md over 20k limit — needs trimming."
         },
         {
           "date": "2026-02-24",
@@ -218,7 +218,7 @@
         },
         {
           "date": "2026-02-20",
-          "summary": "v2.1 release. Added News tab to sidebar navigation (was missing entirely) \u2014 wired up to load news.json from GitHub raw URL. Added Moonshots/Innermost Loop category (orange rocket icon) for Dr. Alex Wissner-Gross's daily AI newsletter. Fixed category crash bug (undefined 'productivity' category). Fixed Cloudflare deployment branch (was deploying to 'master' instead of 'main'). Added _headers file for proper cache control (no-store on data JSON files). Nightly ideas cron created (runs at 11:59 PM ET, scans daily memory files, updates ideas.json). Daily news cron updated to prioritize Innermost Loop Substack RSS feed. OpenAI Codex auth configured (fresh iOS token) \u2014 confirmed Plus plan doesn't include Codex CLI API access; gpt-4o fallback removed, openai-codex provider fully diagnosed."
+          "summary": "v2.1 release. Added News tab to sidebar navigation (was missing entirely) — wired up to load news.json from GitHub raw URL. Added Moonshots/Innermost Loop category (orange rocket icon) for Dr. Alex Wissner-Gross's daily AI newsletter. Fixed category crash bug (undefined 'productivity' category). Fixed Cloudflare deployment branch (was deploying to 'master' instead of 'main'). Added _headers file for proper cache control (no-store on data JSON files). Nightly ideas cron created (runs at 11:59 PM ET, scans daily memory files, updates ideas.json). Daily news cron updated to prioritize Innermost Loop Substack RSS feed. OpenAI Codex auth configured (fresh iOS token) — confirmed Plus plan doesn't include Codex CLI API access; gpt-4o fallback removed, openai-codex provider fully diagnosed."
         },
         {
           "date": "2026-02-18",
@@ -239,16 +239,16 @@
     {
       "id": "koda-voice",
       "name": "Koda Voice",
-      "description": "Hands-free voice conversation with Koda AI. Real-time talk-and-respond via browser \u2014 no typing needed. Built with Pipecat (open-source voice AI framework) + SmallWebRTCTransport (free P2P) + Deepgram ($200 free credit STT) + Claude. Goal: phone-call-like experience from any device.",
+      "description": "Hands-free voice conversation with Koda AI. Real-time talk-and-respond via browser — no typing needed. Built with Pipecat (open-source voice AI framework) + SmallWebRTCTransport (free P2P) + Deepgram ($200 free credit STT) + Claude. Goal: phone-call-like experience from any device.",
       "status": "active",
       "progress": 35,
       "color": "#7c3aed",
       "lastUpdated": "2026-02-18T04:30:00Z",
-      "lastWorkedOn": "V2 Pipecat pipeline built: Deepgram STT \u2192 Claude (Anthropic) \u2192 Deepgram TTS over SmallWebRTCTransport. Server-side bot ready, Deepgram signup pending.",
+      "lastWorkedOn": "V2 Pipecat pipeline built: Deepgram STT → Claude (Anthropic) → Deepgram TTS over SmallWebRTCTransport. Server-side bot ready, Deepgram signup pending.",
       "todos": [
         {
           "id": "1",
-          "text": "V1 prototype deployed (record \u2192 transcribe \u2192 respond \u2192 TTS)",
+          "text": "V1 prototype deployed (record → transcribe → respond → TTS)",
           "done": true
         },
         {
@@ -273,7 +273,7 @@
         },
         {
           "id": "6",
-          "text": "Build Pipecat pipeline: Deepgram STT \u2192 Claude LLM \u2192 browser TTS",
+          "text": "Build Pipecat pipeline: Deepgram STT → Claude LLM → browser TTS",
           "done": true
         },
         {
@@ -309,18 +309,18 @@
         },
         {
           "date": "2026-02-17",
-          "summary": "V1 prototype: Built browser-based voice chat (koda-voice.pages.dev). Uses MediaRecorder \u2192 Cloudflare Workers AI Whisper \u2192 Clawdbot chat API \u2192 browser TTS. Works on desktop but iOS Safari has issues with Web Speech API (service-not-allowed) and audio format (MP4 vs WAV). Switched to raw PCM capture + WAV encoding. Partially working but not reliable enough for daily use."
+          "summary": "V1 prototype: Built browser-based voice chat (koda-voice.pages.dev). Uses MediaRecorder → Cloudflare Workers AI Whisper → Clawdbot chat API → browser TTS. Works on desktop but iOS Safari has issues with Web Speech API (service-not-allowed) and audio format (MP4 vs WAV). Switched to raw PCM capture + WAV encoding. Partially working but not reliable enough for daily use."
         },
         {
           "date": "2026-02-17",
-          "summary": "Research phase: Investigated proper solutions. Pipecat (open-source voice AI framework by Daily.co) + SmallWebRTCTransport (free P2P WebRTC, no infrastructure cost) is the right approach. Uses WebRTC like Zoom \u2014 handles streaming audio, echo cancellation, interruptions natively. Deepgram offers $200 free credit (no expiry, no CC) for STT. Total ongoing cost after credits: ~$0.46/hr. Vapi evaluated but rejected ($0.13-0.31/min = another Twilio situation)."
+          "summary": "Research phase: Investigated proper solutions. Pipecat (open-source voice AI framework by Daily.co) + SmallWebRTCTransport (free P2P WebRTC, no infrastructure cost) is the right approach. Uses WebRTC like Zoom — handles streaming audio, echo cancellation, interruptions natively. Deepgram offers $200 free credit (no expiry, no CC) for STT. Total ongoing cost after credits: ~$0.46/hr. Vapi evaluated but rejected ($0.13-0.31/min = another Twilio situation)."
         }
       ],
       "liveUrl": "https://koda-voice.pages.dev",
       "costBreakdown": {
         "pipecat": "Free (open source, self-hosted on Contabo)",
         "webrtcTransport": "Free (SmallWebRTCTransport, P2P, no server needed)",
-        "stt": "Deepgram \u2014 $200 free credit (~26,000 min), then $0.0077/min",
+        "stt": "Deepgram — $200 free credit (~26,000 min), then $0.0077/min",
         "tts": "Browser built-in (free) or Deepgram TTS (included in credit)",
         "llm": "Claude via Clawdbot (already paid)",
         "hosting": "Contabo VPS (already paid)",
@@ -336,7 +336,7 @@
       "progress": 80,
       "color": "#1e3a5f",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4: Daily cron \u2014 SRWMD officials walked out of NCFRPC meeting before public comment ended (Water First North Florida / wastewater-to-aquifer plan). Packed room from 4 counties. Madison County sent formal letter of opposition. Baseball updated 2-8 (W 11-1 @ Gainesville, Capallia 2-for-4). Softball updated 2-2 (L 8-11 vs Bradford). Next: baseball Fri Mar 6 @ Branford district; softball Thu Mar 5 vs Suwannee home.",
+      "lastWorkedOn": "Mar 4: Daily cron — SRWMD officials walked out of NCFRPC meeting before public comment ended (Water First North Florida / wastewater-to-aquifer plan). Packed room from 4 counties. Madison County sent formal letter of opposition. Baseball updated 2-8 (W 11-1 @ Gainesville, Capallia 2-for-4). Softball updated 2-2 (L 8-11 vs Bradford). Next: baseball Fri Mar 6 @ Branford district; softball Thu Mar 5 vs Suwannee home.",
       "todos": [
         {
           "id": "1",
@@ -350,7 +350,7 @@
         },
         {
           "id": "3",
-          "text": "V2 redesign \u2014 dark theme, hero cards, section pages",
+          "text": "V2 redesign — dark theme, hero cards, section pages",
           "done": true
         },
         {
@@ -402,27 +402,27 @@
       "changelog": [
         {
           "date": "2026-03-04",
-          "summary": "SRWMD officials exited NCFRPC meeting early before public comment ended \u2014 opposition to Water First North Florida (Jacksonville wastewater-to-aquifer plan) drew packed room from Alachua, Columbia, Hamilton, Clay counties. Madison County sent formal letter of opposition. Baseball: W 11-1 @ Gainesville (record now 2-8; Capallia 2-for-4, Westland W). Next: Fri Mar 6 @ Branford district. Softball: L 8-11 vs Bradford (record 2-2; Alvey 3-for-4). Next: Thu Mar 5 vs Suwannee home."
+          "summary": "SRWMD officials exited NCFRPC meeting early before public comment ended — opposition to Water First North Florida (Jacksonville wastewater-to-aquifer plan) drew packed room from Alachua, Columbia, Hamilton, Clay counties. Madison County sent formal letter of opposition. Baseball: W 11-1 @ Gainesville (record now 2-8; Capallia 2-for-4, Westland W). Next: Fri Mar 6 @ Branford district. Softball: L 8-11 vs Bradford (record 2-2; Alvey 3-for-4). Next: Thu Mar 5 vs Suwannee home."
         },
         {
           "date": "2026-03-03",
-          "summary": "4 new stories: I-75 wildfire smoke shutdown \u2014 25-acre fire SW of Lake City caused 3hr I-75 closure Monday night, 100% contained (WCJB). Tennessee man critically airlifted to UF Health Shands after hitting a semi on I-75 north of US-90 (WCJB). NOAA spring outlook \u2014 below-normal precip, drought likely to intensify, 68% of FL in extreme drought (WUFT). Lake City Unity Fest debate \u2014 council majority blocked $10K city contribution, mayor preferred park restoration (WCJB). Softball updated to 2-1 (loss to Union County 16-2). BOCC meeting Thu Mar 5 at 6 PM next up."
+          "summary": "4 new stories: I-75 wildfire smoke shutdown — 25-acre fire SW of Lake City caused 3hr I-75 closure Monday night, 100% contained (WCJB). Tennessee man critically airlifted to UF Health Shands after hitting a semi on I-75 north of US-90 (WCJB). NOAA spring outlook — below-normal precip, drought likely to intensify, 68% of FL in extreme drought (WUFT). Lake City Unity Fest debate — council majority blocked $10K city contribution, mayor preferred park restoration (WCJB). Softball updated to 2-1 (loss to Union County 16-2). BOCC meeting Thu Mar 5 at 6 PM next up."
         },
         {
           "date": "2026-03-02",
-          "summary": "3 new verified stories: Columbia County building permit email scam \u2014 scammers using public records to target permit applicants (WCJB, featured). Water hyacinth removal on Santa Fe River \u2014 local nonprofit + Boy Scout Troop 88 hand-pulling invasive hyacinth at High Springs, drought worsening the problem (WCJB). Blood Moon lunar eclipse \u2014 total eclipse peaks 6:33 AM Tuesday Mar 3, naked-eye visible from Fort White (WCJB). Softball refreshed to 2-0 with 9 upcoming games through Mar 20. Deployed."
+          "summary": "3 new verified stories: Columbia County building permit email scam — scammers using public records to target permit applicants (WCJB, featured). Water hyacinth removal on Santa Fe River — local nonprofit + Boy Scout Troop 88 hand-pulling invasive hyacinth at High Springs, drought worsening the problem (WCJB). Blood Moon lunar eclipse — total eclipse peaks 6:33 AM Tuesday Mar 3, naked-eye visible from Fort White (WCJB). Softball refreshed to 2-0 with 9 upcoming games through Mar 20. Deployed."
         },
         {
           "date": "2026-03-01",
-          "summary": "2 Columbia County brush fires (50 acres total) \u2014 burn ban spreading across North Central FL, Alachua County through at least Mar 6, Columbia County judicial ban in effect (WCJB TV20, featured). Softball: Lady Indians beat Corinth Christian Academy 22-5 on road (Feb 24), record now 2-0 (1-0 district). Baseball holds at 1-7. Added Mar 2 home games: vs SFCA (baseball, 6 PM) + vs Union County (softball, 7 PM). 2 expired Feb 26 events removed. Deployed."
+          "summary": "2 Columbia County brush fires (50 acres total) — burn ban spreading across North Central FL, Alachua County through at least Mar 6, Columbia County judicial ban in effect (WCJB TV20, featured). Softball: Lady Indians beat Corinth Christian Academy 22-5 on road (Feb 24), record now 2-0 (1-0 district). Baseball holds at 1-7. Added Mar 2 home games: vs SFCA (baseball, 6 PM) + vs Union County (softball, 7 PM). 2 expired Feb 26 events removed. Deployed."
         },
         {
           "date": "2026-02-28",
-          "summary": "2 new stories: Columbia County 8th grader Tucker Ayers won 2026 First Coast Spelling Bee at Fort White HS (25 rounds, word: 'theca') \u2014 heads to National Spelling Bee in D.C. in May (News4Jax, featured). Columbia County house fire contained to room of origin SW of Lake City, no injuries (WCJB). Sports: 10 upcoming games added to schedule through Apr 9 from MaxPreps (record still 1-7, no new games since Feb 26). Deployed."
+          "summary": "2 new stories: Columbia County 8th grader Tucker Ayers won 2026 First Coast Spelling Bee at Fort White HS (25 rounds, word: 'theca') — heads to National Spelling Bee in D.C. in May (News4Jax, featured). Columbia County house fire contained to room of origin SW of Lake City, no injuries (WCJB). Sports: 10 upcoming games added to schedule through Apr 9 from MaxPreps (record still 1-7, no new games since Feb 26). Deployed."
         },
         {
           "date": "2026-02-27",
-          "summary": "2 new stories: Fort White woman (56) killed in pickup rollover on US-27 Thursday night (WCJB TV20, verified). Fort White Town Council removed dissolution ordinance \u2014 not dissolving, focus shifts to grants + income (Mainstreet Daily News, Feb 24). Sports: Baseball loss at Trenton 11-1 (Feb 26), record now 1-7 / 0-2 district. Next game: vs SFCA Mon Mar 2 home 6 PM. Government: BCC meeting Apr 2 added, past P&Z removed. Deployed."
+          "summary": "2 new stories: Fort White woman (56) killed in pickup rollover on US-27 Thursday night (WCJB TV20, verified). Fort White Town Council removed dissolution ordinance — not dissolving, focus shifts to grants + income (Mainstreet Daily News, Feb 24). Sports: Baseball loss at Trenton 11-1 (Feb 26), record now 1-7 / 0-2 district. Next game: vs SFCA Mon Mar 2 home 6 PM. Government: BCC meeting Apr 2 added, past P&Z removed. Deployed."
         },
         {
           "date": "2026-02-25",
@@ -430,27 +430,27 @@
         },
         {
           "date": "2026-02-23",
-          "summary": "Daily update: Freeze warning tonight \u2014 low 25\u00b0F, wind chill 21\u00b0F Tuesday, frost through Wednesday morning (NWS verified, marked Featured). Columbia County pushes back on SRWMD aquifer recharge plan \u2014 40M gal/day reclaimed wastewater injection opposed by Commission Chair Tim Murphy (WUFT Feb 22). 3 government meetings added to calendar: Tourist Dev Council Mar 18, Economic Dev Board Mar 19, P&Z/Board of Adjustment Mar 26. Sports unchanged (Hamilton County home game tonight 7 PM, no results yet)."
+          "summary": "Daily update: Freeze warning tonight — low 25°F, wind chill 21°F Tuesday, frost through Wednesday morning (NWS verified, marked Featured). Columbia County pushes back on SRWMD aquifer recharge plan — 40M gal/day reclaimed wastewater injection opposed by Commission Chair Tim Murphy (WUFT Feb 22). 3 government meetings added to calendar: Tourist Dev Council Mar 18, Economic Dev Board Mar 19, P&Z/Board of Adjustment Mar 26. Sports unchanged (Hamilton County home game tonight 7 PM, no results yet)."
         },
         {
           "date": "2026-02-22",
-          "summary": "Daily news update: Red Flag Warning story (NWS, WCJB \u2014 30+ mph gusts, 29-33\u00b0F lows mid-week, Columbia County burn ban); SR-47 Fort White closures Tue-Wed 8am-6pm + Hal Adams Bridge closed through Feb 28. Government calendar updated (P&Z Feb 26, BCC March 19). Weather refreshed from live API (Sunday 71\u00b0F \u2192 sharp drop to 49\u00b0F Monday). Deployed commit 7492530."
+          "summary": "Daily news update: Red Flag Warning story (NWS, WCJB — 30+ mph gusts, 29-33°F lows mid-week, Columbia County burn ban); SR-47 Fort White closures Tue-Wed 8am-6pm + Hal Adams Bridge closed through Feb 28. Government calendar updated (P&Z Feb 26, BCC March 19). Weather refreshed from live API (Sunday 71°F → sharp drop to 49°F Monday). Deployed commit 7492530."
         },
         {
           "date": "2026-02-21",
-          "summary": "Deploy bug fixed (was using --branch main vs --branch master \u2014 site was 3 days stale). Fort White dissolution story added as top headline (full arc from Dec 2025). Cron job fixed: timeout bumped 5\u219210min, deploy now uses correct branch flag."
+          "summary": "Deploy bug fixed (was using --branch main vs --branch master — site was 3 days stale). Fort White dissolution story added as top headline (full arc from Dec 2025). Cron job fixed: timeout bumped 5→10min, deploy now uses correct branch flag."
         },
         {
           "date": "2026-02-20",
-          "summary": "Daily news ran successfully. 2 new stories: Indians beat Bell 12-7 (baseball, season record now 1-4); FHSAA football restructure \u2014 Fort White moves to Class 1A with Lafayette, Madison County, Taylor County. Events and sports data updated. Past Feb 19 events removed. Fort White Town Council meeting time corrected to 6 PM. Weather refreshed (cold front Monday, lows in 30s)."
+          "summary": "Daily news ran successfully. 2 new stories: Indians beat Bell 12-7 (baseball, season record now 1-4); FHSAA football restructure — Fort White moves to Class 1A with Lafayette, Madison County, Taylor County. Events and sports data updated. Past Feb 19 events removed. Fort White Town Council meeting time corrected to 6 PM. Weather refreshed (cold front Monday, lows in 30s)."
         },
         {
           "date": "2026-02-18",
-          "summary": "MAJOR V2 REDESIGN: Dark red/black/white theme carried throughout. Hero cards on front page. Section pages (Sports, News, Government, Events, Business). MaxPreps integration with box scores and season records. Fort White vs Lake City news split with locality tagging. Always-visible tab navigation (no hamburger menu \u2014 better for older audience). Alerts banner with full descriptions and source links. Daily cron updated with locality rules. Ready for Facebook group launch."
+          "summary": "MAJOR V2 REDESIGN: Dark red/black/white theme carried throughout. Hero cards on front page. Section pages (Sports, News, Government, Events, Business). MaxPreps integration with box scores and season records. Fort White vs Lake City news split with locality tagging. Always-visible tab navigation (no hamburger menu — better for older audience). Alerts banner with full descriptions and source links. Daily cron updated with locality rules. Ready for Facebook group launch."
         },
         {
           "date": "2026-02-14",
-          "summary": "Built and deployed The Tiwahe Times \u2014 hyperlocal digital newspaper for Fort White, FL. Named after Fort White HS motto #TIWAHE (Lakota for 'family'). Sections: weather, local news, community events, sports, county govt, business spotlight. First spotlight: Santa Fe Site Prep LLC (Brad Taylor). Business model: free at first, then $25-150/mo ad placements. Marketing flywheel: share in FB groups \u2192 town reads \u2192 businesses notice \u2192 KodaAI leads."
+          "summary": "Built and deployed The Tiwahe Times — hyperlocal digital newspaper for Fort White, FL. Named after Fort White HS motto #TIWAHE (Lakota for 'family'). Sections: weather, local news, community events, sports, county govt, business spotlight. First spotlight: Santa Fe Site Prep LLC (Brad Taylor). Business model: free at first, then $25-150/mo ad placements. Marketing flywheel: share in FB groups → town reads → businesses notice → KodaAI leads."
         }
       ],
       "liveUrl": "https://tiwahe-times.pages.dev",
@@ -464,7 +464,7 @@
       "progress": 95,
       "color": "#10b981",
       "lastUpdated": "2026-02-27",
-      "lastWorkedOn": "Feb 27: Replaced Census geocoder with Nominatim (OpenStreetMap) \u2014 fixes 75% mileage calculation failure rate on rural FL manufactured home addresses. Map popups now show scheduled date when tapping a job marker. Deployed to master.fieldbook-pro.pages.dev.",
+      "lastWorkedOn": "Feb 27: Replaced Census geocoder with Nominatim (OpenStreetMap) — fixes 75% mileage calculation failure rate on rural FL manufactured home addresses. Map popups now show scheduled date when tapping a job marker. Deployed to master.fieldbook-pro.pages.dev.",
       "todos": [
         {
           "id": "1",
@@ -518,27 +518,27 @@
         },
         {
           "id": "11",
-          "text": "Manager Dashboard \u2014 track all contractor jobs (live)",
+          "text": "Manager Dashboard — track all contractor jobs (live)",
           "done": true
         },
         {
           "id": "12",
-          "text": "D1 backend \u2014 persistent job storage, sync across contractors",
+          "text": "D1 backend — persistent job storage, sync across contractors",
           "done": true
         },
         {
           "id": "13",
-          "text": "Archive system \u2014 complete jobs auto-archive, 90-day purge",
+          "text": "Archive system — complete jobs auto-archive, 90-day purge",
           "done": true
         },
         {
           "id": "14",
-          "text": "Calendar scheduling \u2014 tap day to schedule jobs",
+          "text": "Calendar scheduling — tap day to schedule jobs",
           "done": true
         },
         {
           "id": "15",
-          "text": "Settings modal \u2014 name, address, email, PIN",
+          "text": "Settings modal — name, address, email, PIN",
           "done": true
         },
         {
@@ -554,11 +554,11 @@
         },
         {
           "date": "2026-02-21",
-          "summary": "MAJOR DAY: Settings modal added (contractor name, home address, submit email, PIN \u2014 stored in localStorage). Multi-contractor support via contractor ID slugs. Manager Dashboard built and deployed (fieldbook-manager.pages.dev, pw: nobility2026) with D1 backend (fieldbook-db) and API Worker (fieldbook-api.kameronmartinllc.workers.dev, pw: nobility2026). Archive system: completing a job prompts 'Move to Archive?', archived jobs hidden from main list, 90-day auto-purge. Manager side: indefinite retention, Archive tab, searchable, PDF download per completed job. Calendar scheduling: tap day \u2192 tap + \u2192 assign unscheduled jobs or create new. Calendar dots: red=unscheduled, blue=scheduled, yellow=in-progress, green=complete. Bug fixes: home marker async (await ensureHomeCoords), deleted assigned jobs no longer reappear (fb_dismissed localStorage set), seed test jobs (John Barron, James Guest) removed."
+          "summary": "MAJOR DAY: Settings modal added (contractor name, home address, submit email, PIN — stored in localStorage). Multi-contractor support via contractor ID slugs. Manager Dashboard built and deployed (fieldbook-manager.pages.dev, pw: nobility2026) with D1 backend (fieldbook-db) and API Worker (fieldbook-api.kameronmartinllc.workers.dev, pw: nobility2026). Archive system: completing a job prompts 'Move to Archive?', archived jobs hidden from main list, 90-day auto-purge. Manager side: indefinite retention, Archive tab, searchable, PDF download per completed job. Calendar scheduling: tap day → tap + → assign unscheduled jobs or create new. Calendar dots: red=unscheduled, blue=scheduled, yellow=in-progress, green=complete. Bug fixes: home marker async (await ensureHomeCoords), deleted assigned jobs no longer reappear (fb_dismissed localStorage set), seed test jobs (John Barron, James Guest) removed."
         },
         {
           "date": "2026-02-20",
-          "summary": "LATE NIGHT: Earnings strip pinned to bottom \u2014 shows today's date + job count (left), + new job button (center), estimated pay total (right). Pay Ticket section added to every job detail: auto-fills date/PO/customer/serial, calculates walk-through ($400) or return ($40/hr \u00d7 hours + round-trip mileage at $0.55/mi), optional hotel/WPD/supplies fields, live TOTAL line, 'Submit Pay Ticket' emails sharon@nobilityhomes.com with pre-filled body. Geocoding proxy on fieldbook-photos Worker (GET /geocode?address=, 24hr edge cache) \u2014 more reliable than direct Census API on iOS. iOS bug fixes: blank return tickets (missing materials:[]), mileage button unclickable (moved from span inside label to standalone button with \u23f3 feedback), signature exported as transparent PNG (removed white fillRect so ink-only overlays cleanly on ticket photo)."
+          "summary": "LATE NIGHT: Earnings strip pinned to bottom — shows today's date + job count (left), + new job button (center), estimated pay total (right). Pay Ticket section added to every job detail: auto-fills date/PO/customer/serial, calculates walk-through ($400) or return ($40/hr × hours + round-trip mileage at $0.55/mi), optional hotel/WPD/supplies fields, live TOTAL line, 'Submit Pay Ticket' emails sharon@nobilityhomes.com with pre-filled body. Geocoding proxy on fieldbook-photos Worker (GET /geocode?address=, 24hr edge cache) — more reliable than direct Census API on iOS. iOS bug fixes: blank return tickets (missing materials:[]), mileage button unclickable (moved from span inside label to standalone button with ⏳ feedback), signature exported as transparent PNG (removed white fillRect so ink-only overlays cleanly on ticket photo)."
         },
         {
           "date": "2026-02-20",
@@ -566,7 +566,7 @@
         },
         {
           "date": "2026-02-17",
-          "summary": "Built and deployed FieldBook \u2014 mobile-first field contact book PWA. Quick-access contact cards with one-tap call/text buttons. Organized by job site. Deployed to Cloudflare Pages. Kam tested and confirmed working."
+          "summary": "Built and deployed FieldBook — mobile-first field contact book PWA. Quick-access contact cards with one-tap call/text buttons. Organized by job site. Deployed to Cloudflare Pages. Kam tested and confirmed working."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/fieldbook",
@@ -575,7 +575,7 @@
     {
       "id": "fiverr-freelance",
       "name": "Fiverr Freelance",
-      "description": "Website building gig on Fiverr \u2014 AI-assisted sites delivered in minutes. 3-tier pricing: Basic $75, Standard $150, Premium $250. Portfolio: Total Transformation, Karen's Country Cuts, AVA Type 1.",
+      "description": "Website building gig on Fiverr — AI-assisted sites delivered in minutes. 3-tier pricing: Basic $75, Standard $150, Premium $250. Portfolio: Total Transformation, Karen's Country Cuts, AVA Type 1.",
       "status": "active",
       "progress": 90,
       "color": "#1dbf73",
@@ -661,23 +661,23 @@
       "changelog": [
         {
           "date": "2026-02-15",
-          "summary": "GIG IS LIVE! W-9 verification completed ~9:44 PM ET. Gig published ~9:48 PM ET and now accepting orders. Was blocked since Feb 13 on W-9 \u2014 now fully operational."
+          "summary": "GIG IS LIVE! W-9 verification completed ~9:44 PM ET. Gig published ~9:48 PM ET and now accepting orders. Was blocked since Feb 13 on W-9 — now fully operational."
         },
         {
           "date": "2026-02-13",
-          "summary": "Full Fiverr gig setup session. Created website building gig with 3 tiers: Basic ($75, 1-page, 2-day), Standard ($150, 3-page, 3-day), Premium ($250, 5-page, 4-day). Added extras: additional page ($25), revision ($10), content upload ($15), e-commerce ($75). Extra fast delivery enabled. Gallery: Total Transformation, Karen's Country Cuts, AVA Type 1. Requirements questions set. W-9 submitted \u2014 waiting verification before publish."
+          "summary": "Full Fiverr gig setup session. Created website building gig with 3 tiers: Basic ($75, 1-page, 2-day), Standard ($150, 3-page, 3-day), Premium ($250, 5-page, 4-day). Added extras: additional page ($25), revision ($10), content upload ($15), e-commerce ($75). Extra fast delivery enabled. Gallery: Total Transformation, Karen's Country Cuts, AVA Type 1. Requirements questions set. W-9 submitted — waiting verification before publish."
         }
       ]
     },
     {
       "id": "vhs-vault",
       "name": "VHS Vault",
-      "description": "Nostalgic iPhone app \u2014 virtual VHS tape collection. Upload videos, each gets a VHS tape with sharpie-on-white-label. Browse your shelf, pull a tape, watch the video. Targets millennials/Gen X who grew up with VCR culture.",
+      "description": "Nostalgic iPhone app — virtual VHS tape collection. Upload videos, each gets a VHS tape with sharpie-on-white-label. Browse your shelf, pull a tape, watch the video. Targets millennials/Gen X who grew up with VCR culture.",
       "status": "active",
       "progress": 85,
       "color": "#8b4513",
       "lastUpdated": "2026-02-16T02:30:00Z",
-      "lastWorkedOn": "Full app built in one session \u2014 13 Swift files, ~2,300 lines. All visuals rendered in code (no external assets). Permanent Marker font for sharpie style.",
+      "lastWorkedOn": "Full app built in one session — 13 Swift files, ~2,300 lines. All visuals rendered in code (no external assets). Permanent Marker font for sharpie style.",
       "todos": [
         {
           "id": "1",
@@ -726,14 +726,14 @@
         },
         {
           "id": "10",
-          "text": "Monetization: free (5 tapes) \u2192 $4.99 unlimited",
+          "text": "Monetization: free (5 tapes) → $4.99 unlimited",
           "done": false
         }
       ],
       "changelog": [
         {
           "date": "2026-02-15",
-          "summary": "NIGHTLY BUILD: Full VHS Vault app built from scratch. 13 Swift files, ~2,300 lines SwiftUI. All visuals code-rendered (no image assets). Permanent Marker font bundled for sharpie-on-tape aesthetic. Features: oak bookcase shelf, tape pull animation, VHS static intro, CRT scan line playback, spinning spool cassette view, add tapes from Photos. Product vision: NOT about digitizing old tapes \u2014 it's a curated video library for your best/most important videos with nostalgic VHS aesthetic. Freemium: 5 free tapes, $4.99 unlimited."
+          "summary": "NIGHTLY BUILD: Full VHS Vault app built from scratch. 13 Swift files, ~2,300 lines SwiftUI. All visuals code-rendered (no image assets). Permanent Marker font bundled for sharpie-on-tape aesthetic. Features: oak bookcase shelf, tape pull animation, VHS static intro, CRT scan line playback, spinning spool cassette view, add tapes from Photos. Product vision: NOT about digitizing old tapes — it's a curated video library for your best/most important videos with nostalgic VHS aesthetic. Freemium: 5 free tapes, $4.99 unlimited."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/vhs-vault-ios"
@@ -741,7 +741,7 @@
     {
       "id": "kodaai",
       "name": "KodaAI",
-      "description": "Consumer GUI for OpenClaw \u2014 the 'grandma-proof' managed AI assistant platform. Each client gets their own isolated OpenClaw sandbox on Cloudflare, accessed via SMS. Sign up, answer 5 questions, get a personal AI assistant on your phone. No tech knowledge needed.",
+      "description": "Consumer GUI for OpenClaw — the 'grandma-proof' managed AI assistant platform. Each client gets their own isolated OpenClaw sandbox on Cloudflare, accessed via SMS. Sign up, answer 5 questions, get a personal AI assistant on your phone. No tech knowledge needed.",
       "status": "active",
       "progress": 30,
       "color": "#06b6d4",
@@ -750,22 +750,22 @@
       "todos": [
         {
           "id": "kam-1",
-          "text": "\u26a1 KAM: Sign up for Twilio account (twilio.com) + buy a local FL phone number",
+          "text": "⚡ KAM: Sign up for Twilio account (twilio.com) + buy a local FL phone number",
           "done": false
         },
         {
           "id": "kam-2",
-          "text": "\u26a1 KAM: Validate demand \u2014 ask 5 local business owners if they'd pay $99/mo for an AI assistant they text",
+          "text": "⚡ KAM: Validate demand — ask 5 local business owners if they'd pay $99/mo for an AI assistant they text",
           "done": false
         },
         {
           "id": "kam-3",
-          "text": "\u26a1 KAM: Talk to Brad's brother-in-law about being beta tester #1",
+          "text": "⚡ KAM: Talk to Brad's brother-in-law about being beta tester #1",
           "done": false
         },
         {
           "id": "kam-4",
-          "text": "\u26a1 KAM: Set up Stripe account for KodaAI billing",
+          "text": "⚡ KAM: Set up Stripe account for KodaAI billing",
           "done": false
         },
         {
@@ -775,12 +775,12 @@
         },
         {
           "id": "6",
-          "text": "Platform spec written (PLATFORM-SPEC.md \u2014 1,091 lines)",
+          "text": "Platform spec written (PLATFORM-SPEC.md — 1,091 lines)",
           "done": true
         },
         {
           "id": "7",
-          "text": "Project scaffolded (kodaai-platform/ \u2014 1,868 lines TypeScript)",
+          "text": "Project scaffolded (kodaai-platform/ — 1,868 lines TypeScript)",
           "done": true
         },
         {
@@ -815,7 +815,7 @@
         },
         {
           "id": "14",
-          "text": "Wire up Stripe credentials + test payment \u2192 provisioning flow",
+          "text": "Wire up Stripe credentials + test payment → provisioning flow",
           "done": false
         },
         {
@@ -830,7 +830,7 @@
         },
         {
           "id": "17",
-          "text": "Test full flow: signup \u2192 pay \u2192 sandbox spins up \u2192 SMS works",
+          "text": "Test full flow: signup → pay → sandbox spins up → SMS works",
           "done": false
         },
         {
@@ -873,9 +873,9 @@
       ],
       "repoUrl": null,
       "pricing": {
-        "starter": "$99/mo \u2014 AI assistant via SMS, email monitoring, scheduling, auto-responses",
-        "pro": "$199/mo \u2014 + calendar integration, Google Maps, client dashboard",
-        "business": "$349/mo \u2014 + AI phone answering, full automation, custom workflows",
+        "starter": "$99/mo — AI assistant via SMS, email monitoring, scheduling, auto-responses",
+        "pro": "$199/mo — + calendar integration, Google Maps, client dashboard",
+        "business": "$349/mo — + AI phone answering, full automation, custom workflows",
         "costPerClient": "$35-65/mo (Cloudflare Sandbox + Claude API + Twilio)",
         "profitPerClient": "$34-284/mo depending on tier"
       }
@@ -883,7 +883,7 @@
     {
       "id": "instantsite",
       "name": "InstantSite",
-      "description": "Micro-SaaS auto website generator \u2014 business owners fill a form, get a professional live website in 60 seconds. Preview-before-payment flow, Stripe billing, cross-promo ads on free tier. Built on Cloudflare Workers.",
+      "description": "Micro-SaaS auto website generator — business owners fill a form, get a professional live website in 60 seconds. Preview-before-payment flow, Stripe billing, cross-promo ads on free tier. Built on Cloudflare Workers.",
       "status": "active",
       "progress": 45,
       "color": "#ff6b35",
@@ -966,7 +966,7 @@
     {
       "id": "crewclock",
       "name": "CrewClock",
-      "description": "GPS time tracking for contractor crews \u2014 trackers in trucks auto clock in/out via geofence. Zero employee effort. Traccar self-hosted + cheap GPS trackers.",
+      "description": "GPS time tracking for contractor crews — trackers in trucks auto clock in/out via geofence. Zero employee effort. Traccar self-hosted + cheap GPS trackers.",
       "status": "idea",
       "progress": 15,
       "color": "#f97316",
@@ -1007,14 +1007,14 @@
       "changelog": [
         {
           "date": "2026-02-13",
-          "summary": "Researched and designed. Target: contractors with crews (Brad = first customer). GPS tracker in each truck \u2192 auto clock in/out via geofence. Pricing: Starter $39/mo (5 trucks), Crew $79/mo (15), Company $149/mo (50). Brad's cost ~$129/mo vs Samsara $225-360/mo. Key insight: employees lie about hours, GPS verification solves it. Cross-sells into KodaAI for contractor tier."
+          "summary": "Researched and designed. Target: contractors with crews (Brad = first customer). GPS tracker in each truck → auto clock in/out via geofence. Pricing: Starter $39/mo (5 trucks), Crew $79/mo (15), Company $149/mo (50). Brad's cost ~$129/mo vs Samsara $225-360/mo. Key insight: employees lie about hours, GPS verification solves it. Cross-sells into KodaAI for contractor tier."
         }
       ]
     },
     {
       "id": "twilio-sms",
       "name": "Koda SMS (Twilio)",
-      "description": "AI receptionist via SMS \u2014 Koda handles customer texts while Kam is in the field with no cell service. Local FL number (386) 433-3380. Dog-fooding for KodaAI.",
+      "description": "AI receptionist via SMS — Koda handles customer texts while Kam is in the field with no cell service. Local FL number (386) 433-3380. Dog-fooding for KodaAI.",
       "status": "active",
       "progress": 60,
       "color": "#ef4444",
@@ -1028,7 +1028,7 @@
         },
         {
           "id": "2",
-          "text": "Inbound SMS webhook \u2192 Clawdbot working",
+          "text": "Inbound SMS webhook → Clawdbot working",
           "done": true
         },
         {
@@ -1065,7 +1065,7 @@
       "changelog": [
         {
           "date": "2026-02-13",
-          "summary": "Built Twilio SMS server: Express on port 3457, pm2 managed, Caddy reverse proxy on :8444. Inbound SMS \u2192 Clawdbot hooks/agent endpoint working. Outbound code written but blocked by A2P 10DLC registration (trial account). Monthly cost: ~$3.15/mo fixed + $0.0079/text. This is the KodaAI product being dog-fooded for Kam's Nobility Homes work first."
+          "summary": "Built Twilio SMS server: Express on port 3457, pm2 managed, Caddy reverse proxy on :8444. Inbound SMS → Clawdbot hooks/agent endpoint working. Outbound code written but blocked by A2P 10DLC registration (trial account). Monthly cost: ~$3.15/mo fixed + $0.0079/text. This is the KodaAI product being dog-fooded for Kam's Nobility Homes work first."
         }
       ]
     },
@@ -1096,7 +1096,7 @@
         },
         {
           "id": "4",
-          "text": "Test full intake flow: intake form \u2192 generate \u2192 preview \u2192 approve \u2192 publish",
+          "text": "Test full intake flow: intake form → generate → preview → approve → publish",
           "done": false
         },
         {
@@ -1212,7 +1212,7 @@
         },
         {
           "date": "2026-02-09",
-          "summary": "Full MVP built: GentlyTold engine worker (intake \u2192 Claude API \u2192 generate \u2192 preview \u2192 approve \u2192 publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
+          "summary": "Full MVP built: GentlyTold engine worker (intake → Claude API → generate → preview → approve → publish), memories API with photo upload, sales landing page, intake form, leave-behind print sheet, QR codes. 22 funeral homes identified within 50mi of Fort White. Live demo: Rhodes memorial page."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/gentlytold",
@@ -1266,7 +1266,7 @@
         },
         {
           "date": "2026-02-11",
-          "summary": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready, installable on mobile. Refactored codebase via sub-agent. Tested OCR scanner with Nobility Homes work orders \u2014 tried Tesseract, Cloudflare Workers AI (Llama 3.2 Vision), landed on OpenAI Vision API for best accuracy."
+          "summary": "Deployed to Cloudflare Pages (fieldsync-b2y.pages.dev). PWA-ready, installable on mobile. Refactored codebase via sub-agent. Tested OCR scanner with Nobility Homes work orders — tried Tesseract, Cloudflare Workers AI (Llama 3.2 Vision), landed on OpenAI Vision API for best accuracy."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/fieldsyncv2",
@@ -1275,7 +1275,7 @@
     {
       "id": "karen-salon-agent",
       "name": "Karen's Salon AI (KodaAI Beta)",
-      "description": "First KodaAI deployment \u2014 AI phone receptionist for Karen's hair salon in Fort White, FL. Answers missed calls, checks real-time availability, books appointments, notifies Karen via Telegram. Proof of concept for KodaAI SaaS.",
+      "description": "First KodaAI deployment — AI phone receptionist for Karen's hair salon in Fort White, FL. Answers missed calls, checks real-time availability, books appointments, notifies Karen via Telegram. Proof of concept for KodaAI SaaS.",
       "status": "active",
       "progress": 30,
       "color": "#8b5cf6",
@@ -1309,7 +1309,7 @@
         },
         {
           "id": "6",
-          "text": "Connect Twilio \u2192 ElevenLabs",
+          "text": "Connect Twilio → ElevenLabs",
           "done": false
         },
         {
@@ -1324,7 +1324,7 @@
         },
         {
           "id": "9",
-          "text": "Have Karen snap her current schedule \u2192 sync to Google Calendar",
+          "text": "Have Karen snap her current schedule → sync to Google Calendar",
           "done": false
         },
         {
@@ -1339,12 +1339,12 @@
         },
         {
           "id": "12",
-          "text": "Get Karen's actual service pricing (optional \u2014 AI can say \"call for pricing\")",
+          "text": "Get Karen's actual service pricing (optional — AI can say \"call for pricing\")",
           "done": false
         },
         {
           "id": "13",
-          "text": "Train Karen on daily workflow: snap paper schedule \u2192 send to Telegram",
+          "text": "Train Karen on daily workflow: snap paper schedule → send to Telegram",
           "done": false
         },
         {
@@ -1387,7 +1387,7 @@
     {
       "id": "glucose-insights",
       "name": "Glucose Insights Pro",
-      "description": "AI-powered CGM + pump data analysis SaaS \u2014 glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
+      "description": "AI-powered CGM + pump data analysis SaaS — glucose charts, insulin overlay, AI pattern analysis, endo reports, insurance documentation generator, data chatbot. $9.99/mo freemium.",
       "status": "active",
       "progress": 70,
       "color": "#ff0040",
@@ -1466,7 +1466,7 @@
       "progress": 85,
       "color": "#00d4ff",
       "lastUpdated": "2026-03-04T04:24:50.070Z",
-      "lastWorkedOn": "TTS bake-off completed (Mar 3): tested Kokoro, Chatterbox, XTTS-v2, F5-TTS for bedtime storytelling feature. Kokoro selected \u2014 best bedtime vibe, lightest weight, $0 cost on-device via CoreML. Architecture planned: constrained LLM inputs + system prompt guardrails + OpenAI moderation layer before TTS. Backend story generation API next step.",
+      "lastWorkedOn": "TTS bake-off completed (Mar 3): tested Kokoro, Chatterbox, XTTS-v2, F5-TTS for bedtime storytelling feature. Kokoro selected — best bedtime vibe, lightest weight, $0 cost on-device via CoreML. Architecture planned: constrained LLM inputs + system prompt guardrails + OpenAI moderation layer before TTS. Backend story generation API next step.",
       "todos": [
         {
           "id": "1",
@@ -1532,19 +1532,19 @@
       "changelog": [
         {
           "date": "2026-03-03",
-          "note": "Bedtime Stories feature scoped: pre-written T1D library, Kokoro on-device TTS, $0 marginal cost. Story #1 done \u2014 The Sugar Fairy's Midnight Visit (~1,400 words, 10 min). Character Lumi created. To revise: add parent wake-up + Dexcom recheck before sleep."
+          "note": "Bedtime Stories feature scoped: pre-written T1D library, Kokoro on-device TTS, $0 marginal cost. Story #1 done — The Sugar Fairy's Midnight Visit (~1,400 words, 10 min). Character Lumi created. To revise: add parent wake-up + Dexcom recheck before sleep."
         },
         {
           "date": "2026-02-23",
-          "summary": "Marketing strategy session: T1D Facebook groups (Type 1 Diabetic Moms, Children with Type 1 diabetes support group) are top priority. Personal story approach (T1D dad + daughter diagnosed at 3) outperforms brand posts. TikTok + Reddit r/diabetes_t1 next. Only 7 downloads showing in today's analytics \u2014 building organic momentum through community."
+          "summary": "Marketing strategy session: T1D Facebook groups (Type 1 Diabetic Moms, Children with Type 1 diabetes support group) are top priority. Personal story approach (T1D dad + daughter diagnosed at 3) outperforms brand posts. TikTok + Reddit r/diabetes_t1 next. Only 7 downloads showing in today's analytics — building organic momentum through community."
         },
         {
           "date": "2026-02-22",
-          "summary": "APP LAUNCHED on App Store! https://apps.apple.com/us/app/avatype1/id6758495309 \u2014 149 users, 165 views, 173 sessions launch day. 11 active users at 11:48 PM. Posted in Type 1 Diabetic Moms and Children with Type 1 diabetes support groups. Immediate Android demand (multiple comments). UK users requesting mmol units. avatype1.com hero + nav CTA updated to App Store link. Brevo email list live."
+          "summary": "APP LAUNCHED on App Store! https://apps.apple.com/us/app/avatype1/id6758495309 — 149 users, 165 views, 173 sessions launch day. 11 active users at 11:48 PM. Posted in Type 1 Diabetic Moms and Children with Type 1 diabetes support groups. Immediate Android demand (multiple comments). UK users requesting mmol units. avatype1.com hero + nav CTA updated to App Store link. Brevo email list live."
         },
         {
           "date": "2026-02-09",
-          "summary": "Resubmitted to App Store \u2014 included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
+          "summary": "Resubmitted to App Store — included video demo, detailed explanation addressing reviewer feedback, and patent references for legitimacy."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-type1",
@@ -1553,12 +1553,12 @@
     {
       "id": "bid-finder",
       "name": "Brad's Bid Finder (V2)",
-      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Nightly scraper \u2014 SAM.gov working, county scrapers being fixed. 403 active bids. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Nightly scraper — SAM.gov working, county scrapers being fixed. 403 active bids. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
       "status": "active",
       "progress": 72,
       "color": "#f59e0b",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4: Morning scrape \u2014 104 new SAM.gov, 8 new FDOT, 3 new Columbia County direct. FDOT + county_direct scrapers confirmed working after Mar 3 repair. DemandStar/OpenGov/MFMP still 0. 5 expired cleaned. 661 total active / 647 exported. Dashboard live.",
+      "lastWorkedOn": "Mar 4: Morning scrape — 104 new SAM.gov, 8 new FDOT, 3 new Columbia County direct. FDOT + county_direct scrapers confirmed working after Mar 3 repair. DemandStar/OpenGov/MFMP still 0. 5 expired cleaned. 661 total active / 647 exported. Dashboard live.",
       "todos": [
         {
           "id": "1",
@@ -1587,7 +1587,7 @@
         },
         {
           "id": "1772598284731",
-          "text": "Verify scraper repair results \u2014 county_direct, fdot, demandstar were modified",
+          "text": "Verify scraper repair results — county_direct, fdot, demandstar were modified",
           "done": true
         }
       ],
@@ -1602,11 +1602,11 @@
         },
         {
           "date": "2026-03-03",
-          "summary": "Keyword overhaul based on santafesiteprepllc.com: site pads, culverts, septic = high priority; bridges/road repaving = negative. Santa Fe logo + 5 service images pulled and added to dashboard header. 3 new dashboard filters: min estimated value (0K-00K+), min relevance score, category (culverts/pads/septic/clearing). 403 active bids. Non-SAM scrapers (OpenGov 20 counties, MFMP, DemandStar, FDOT) confirmed broken \u2014 repair subagent dispatched."
+          "summary": "Keyword overhaul based on santafesiteprepllc.com: site pads, culverts, septic = high priority; bridges/road repaving = negative. Santa Fe logo + 5 service images pulled and added to dashboard header. 3 new dashboard filters: min estimated value (0K-00K+), min relevance score, category (culverts/pads/septic/clearing). 403 active bids. Non-SAM scrapers (OpenGov 20 counties, MFMP, DemandStar, FDOT) confirmed broken — repair subagent dispatched."
         },
         {
           "date": "2026-03-03",
-          "summary": "Geographic filter fix: bids now restricted to FL + South Georgia only (lat < 32.5\u00b0N \u2014 excludes Atlanta/North GA). Radius tightened 300\u2192200 miles. Per-bid Telegram notifications disabled (was firing 5+ pings per morning run). Old national bids wiped from DB. Morning run reported 55 new SAM.gov bids, 298 active total."
+          "summary": "Geographic filter fix: bids now restricted to FL + South Georgia only (lat < 32.5°N — excludes Atlanta/North GA). Radius tightened 300→200 miles. Per-bid Telegram notifications disabled (was firing 5+ pings per morning run). Old national bids wiped from DB. Morning run reported 55 new SAM.gov bids, 298 active total."
         },
         {
           "date": "2026-02-09",
@@ -1619,7 +1619,7 @@
     {
       "id": "rhodes-cookbook",
       "name": "Rhodes Family Cookbook",
-      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ \u2014 Jerry & Gloria Rhodes' restaurant",
+      "description": "Digital cookbook preserving family recipes from Rhodes Real Pit BBQ — Jerry & Gloria Rhodes' restaurant",
       "status": "active",
       "progress": 90,
       "color": "#c4a478",
@@ -1654,7 +1654,7 @@
     {
       "id": "ava-companion",
       "name": "AVA Companion",
-      "description": "Strap-on diabetes buddy device \u2014 turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
+      "description": "Strap-on diabetes buddy device — turns any child's stuffed animal into a diabetes companion with a real simulated glucose display. \"Now their best friend has diabetes too.\"",
       "status": "active",
       "progress": 40,
       "color": "#bf00ff",
@@ -1665,12 +1665,12 @@
           "name": "DIYmalls ESP32-2432S024C",
           "specs": "2.4\" IPS 240x320 Capacitive Touch, ESP32-WROOM-32, ILI9341 driver",
           "features": "USB-C, TF card slot, speaker (SC8002B), RGB LED, temp/humidity sensor, battery switch",
-          "batteryManagement": "IP5603 Power Bank SoC \u2014 handles charging, discharging, overcurrent protection",
+          "batteryManagement": "IP5603 Power Bank SoC — handles charging, discharging, overcurrent protection",
           "batteryConnector": "JST 1.25mm 2-pin",
           "amazonLink": "https://a.co/d/06BnG9Ky",
           "amazonPrice": "$13-15",
           "aliexpressPrice": "$7.50-$8.30",
-          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6\u2605, 1299 reviews)"
+          "aliexpressSource": "Shenzhen Hong Shu Yuan Technology (4.6★, 1299 reviews)"
         },
         "battery": {
           "name": "TAHULU 3.7V 1000mAh LiPo",
@@ -1684,15 +1684,15 @@
         "enclosure": {
           "type": "3D printed (Bambu Lab P1S)",
           "designTool": "CadQuery (Python)",
-          "status": "Pending \u2014 design after boards arrive, plan 2-3 revision prints",
+          "status": "Pending — design after boards arrive, plan 2-3 revision prints",
           "features": "Holds board + LiPo as single unit, velcro strap mount on back, USB-C charging slot"
         },
-        "attachment": "Adjustable velcro strap \u2014 wraps around any stuffed animal"
+        "attachment": "Adjustable velcro strap — wraps around any stuffed animal"
       },
       "pricing": {
         "retailPrice": "$99",
         "launchPromo": "$79-89 launch week discount",
-        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 \u2014 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
+        "competitorReference": "Jerry the Bear (Sproutel/JDRF) sold at $99 — 52,000+ units distributed. No screen, just plush with accessories. AVA Companion is more technically advanced."
       },
       "costs": {
         "amazonSourced": {
@@ -1734,7 +1734,7 @@
           "Facebook (organic story, not self-promo)",
           "Reddit (r/diabetes_t1, r/parents)"
         ],
-        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy \u2014 don't self-promote in groups.",
+        "strategy": "Lead with personal story (T1D dad, 30 years, daughter diagnosed at 3). Post photos/video of real use. Let T1D parent community ask where to buy — don't self-promote in groups.",
         "appCrossSell": "Include QR code linking to AVA Type 1 app in packaging. Every Companion sold = app install.",
         "launchTiming": "Launch product listing same day AVA Type 1 app is approved on App Store"
       },
@@ -1771,7 +1771,7 @@
         },
         {
           "id": "7",
-          "text": "Test board with LiPo \u2014 verify charging circuit works",
+          "text": "Test board with LiPo — verify charging circuit works",
           "done": false
         },
         {
@@ -1811,7 +1811,7 @@
         },
         {
           "id": "15",
-          "text": "FIX: Film BLE demo video \u2014 iPhone + ESP32 pairing on physical device",
+          "text": "FIX: Film BLE demo video — iPhone + ESP32 pairing on physical device",
           "done": false
         },
         {
@@ -1848,7 +1848,7 @@
       "changelog": [
         {
           "date": "2026-02-23",
-          "summary": "Case refinements: Kam fed back screen sits 3-4mm too deep + window shifted ~2mm. Generated Variants F (shift left) and G (shift right) with posts lowered 4mm (Z=10.2) and window shifted \u00b12mm on X axis. Sent as ZIPs via Telegram for test print. Once direction confirmed, will finalize as V9. Files in /root/clawd/cyd-case-depth/v8_window_post_led_variants/."
+          "summary": "Case refinements: Kam fed back screen sits 3-4mm too deep + window shifted ~2mm. Generated Variants F (shift left) and G (shift right) with posts lowered 4mm (Z=10.2) and window shifted ±2mm on X axis. Sent as ZIPs via Telegram for test print. Once direction confirmed, will finalize as V9. Files in /root/clawd/cyd-case-depth/v8_window_post_led_variants/."
         },
         {
           "date": "2026-02-22",
@@ -1856,27 +1856,27 @@
         },
         {
           "date": "2026-02-07",
-          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector \u2014 LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
+          "summary": "Major pivot: Switched from Waveshare ESP32-C6 1.47\" (now designated for AvaDrive) to DIYmalls ESP32-2432S024C 2.4\" capacitive touch. Key advantage: built-in IP5603 battery management chip with JST 1.25mm connector — LiPo plugs directly in, no soldering. Switched from bundled stuffed animal to strap-on concept (kid uses their own stuffed animal). Set $99 retail price ($79-89 launch promo). Defined made-to-order business model to minimize upfront investment. Identified Amazon + AliExpress sourcing strategy. Ordering Tuesday."
         },
         {
           "date": "2026-02-08",
-          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem \u2014 one hardware platform, multiple firmware profiles, lifetime customer relationship."
+          "summary": "App Store rejection (fixable): needs medical citations + BLE demo video + hardware ownership answers. Planned Phase 2 lifecycle upgrade path: same hardware converts from simulation toy to real CGM display via OTA firmware update (9-49 upgrade). Phase 3 vision: full AVA ecosystem — one hardware platform, multiple firmware profiles, lifetime customer relationship."
         }
       ],
       "repoUrl": "https://github.com/ava-type1/ava-companion",
       "roadmap": {
         "phase1_launch": {
-          "name": "Phase 1 \u2014 Launch (Current)",
-          "product": "AVA Companion \u2014 Simulation Mode",
+          "name": "Phase 1 — Launch (Current)",
+          "product": "AVA Companion — Simulation Mode",
           "description": "Standalone diabetes simulation display. Straps onto any stuffed animal. Shows simulated glucose numbers for educational play.",
           "price": "$99 retail ($79-89 launch promo)",
-          "status": "In progress \u2014 ordering Tuesday, targeting app approval window"
+          "status": "In progress — ordering Tuesday, targeting app approval window"
         },
         "phase2_upgrade": {
-          "name": "Phase 2 \u2014 Live Mode Upgrade",
-          "product": "AVA Companion \u2192 AVA Live Display",
-          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device \u2014 transitions from educational toy to real health tool.",
-          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app \u2192 Upgrade to Live Mode \u2192 device reflashes automatically. No mail-in required.",
+          "name": "Phase 2 — Live Mode Upgrade",
+          "product": "AVA Companion → AVA Live Display",
+          "description": "Same hardware, firmware upgrade converts simulation toy into real CGM display showing actual Dexcom/Libre glucose data. Kid grows up with the device — transitions from educational toy to real health tool.",
+          "method": "OTA (over-the-air) firmware update via WiFi. Parent opens AVA app → Upgrade to Live Mode → device reflashes automatically. No mail-in required.",
           "alternateMethod": "Mail-in reflash service as fallback option",
           "upgradePrice": "$39-49 for firmware unlock",
           "prerequisites": [
@@ -1884,26 +1884,26 @@
             "OTA update system built into ESP32 firmware",
             "Live CGM display firmware ported to ESP32-2432S024C"
           ],
-          "status": "Planned \u2014 depends on Dexcom production API approval"
+          "status": "Planned — depends on Dexcom production API approval"
         },
         "phase3_ecosystem": {
-          "name": "Phase 3 \u2014 Full Ecosystem",
+          "name": "Phase 3 — Full Ecosystem",
           "description": "AVA app ties together Companion (simulation), Live Display (real CGM), AvaDrive (car mount), and AVA Heart (bedside). All using similar ESP32 hardware with different firmware and form factors.",
           "vision": "One hardware platform, multiple firmware profiles, lifetime customer relationship from diagnosis through adulthood."
         }
       },
       "appStoreReview": {
-        "status": "Rejected \u2014 fixable",
+        "status": "Rejected — fixable",
         "submissionId": "61573647-429f-41f7-b0c1-f45504fe8270",
         "reviewDate": "2026-02-03",
         "issues": [
           {
-            "guideline": "2.1.0 \u2014 Performance: App Completeness",
+            "guideline": "2.1.0 — Performance: App Completeness",
             "issue": "Need demo video showing BLE pairing with physical hardware on real iPhone. Need to answer hardware ownership questions.",
             "fix": "Film BLE demo video (iPhone + ESP32 board). Reply with hardware info: AVA Companion by KameronMartinLLC, own product, not third-party."
           },
           {
-            "guideline": "1.4.1 \u2014 Safety: Physical Harm",
+            "guideline": "1.4.1 — Safety: Physical Harm",
             "issue": "Medical information in Home and Learn sections lacks citations/sources.",
             "fix": "Add Medical References screen with ADA Standards of Care, JDRF resources, CDC diabetes info, insulin pharmacokinetic studies. Add medical disclaimer."
           }
@@ -1918,7 +1918,7 @@
       "progress": 88,
       "color": "#ff0080",
       "lastUpdated": "2026-02-07T23:00:00Z",
-      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received \u2014 these will be used for AvaDrive (dash mount CGM display)",
+      "lastWorkedOn": "20x Waveshare ESP32-C6 1.47\" screens received — these will be used for AvaDrive (dash mount CGM display)",
       "todos": [
         {
           "id": "1",
@@ -1942,7 +1942,7 @@
         },
         {
           "id": "5",
-          "text": "Matter smart bulb integration \u2014 flash lights for low/high BG alerts via HomeKit API",
+          "text": "Matter smart bulb integration — flash lights for low/high BG alerts via HomeKit API",
           "done": false
         }
       ],
@@ -1953,7 +1953,7 @@
         },
         {
           "date": "2026-01-29",
-          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI \u2014 difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
+          "summary": "New feature idea: Matter smart bulb alerts. Connect CGM data to HomeKit-compatible bulbs (e.g. OREiN Matter bulbs). Flash red for lows, yellow for highs. Uses Apple HomeKit framework in SwiftUI — difficulty 3/10. Could be AvaDrive feature or standalone AVA Home module. Great for nighttime low alerts (bedroom light flashes, harder to miss than phone). Reference: https://a.co/d/5kKmDSp"
         },
         {
           "date": "2026-02-07",
@@ -2259,7 +2259,7 @@
       "progress": 76,
       "color": "#22c55e",
       "lastUpdated": "2026-03-01",
-      "lastWorkedOn": "Mar 1 (early AM, then paused at 2:08 AM): Phase 4.1-4.4 complete \u2014 Stripe integration ($49/mo Pro, $1.50/render overage, webhooks, billing portal), Pricing page, Pro Settings with contractor logo + PDF branding, link health checker, 5-step Resend email drip. Phase 4.5 (final QA) is next. Nightly build cron paused at Kam's request. Still blocked on Replicate account for render pipeline.",
+      "lastWorkedOn": "Mar 1 (early AM, then paused at 2:08 AM): Phase 4.1-4.4 complete — Stripe integration ($49/mo Pro, $1.50/render overage, webhooks, billing portal), Pricing page, Pro Settings with contractor logo + PDF branding, link health checker, 5-step Resend email drip. Phase 4.5 (final QA) is next. Nightly build cron paused at Kam's request. Still blocked on Replicate account for render pipeline.",
       "todos": [
         {
           "id": "1",
@@ -2273,7 +2273,7 @@
         },
         {
           "id": "3",
-          "text": "Sign up affiliate programs: Wayfair (CJ), HD (Impact Radius), Lowe\u2019s (CJ), Amazon, Target",
+          "text": "Sign up affiliate programs: Wayfair (CJ), HD (Impact Radius), Lowe’s (CJ), Amazon, Target",
           "done": false
         },
         {
@@ -2323,17 +2323,17 @@
         },
         {
           "id": "13",
-          "text": "Full IRC materials calculator (footings \u2192 stairs \u2192 railing \u2192 hardware)",
+          "text": "Full IRC materials calculator (footings → stairs → railing → hardware)",
           "done": true
         },
         {
           "id": "14",
-          "text": "Pricing engine (~45 SKUs, HD+Lowe\u2019s URLs, cost calculator)",
+          "text": "Pricing engine (~45 SKUs, HD+Lowe’s URLs, cost calculator)",
           "done": true
         },
         {
           "id": "15",
-          "text": "Phase 3.6: Materials list UI + PDF export (Opus building now \u2014 Feb 27 12 PM)",
+          "text": "Phase 3.6: Materials list UI + PDF export (Opus building now — Feb 27 12 PM)",
           "done": true
         },
         {
@@ -2359,14 +2359,14 @@
         },
         {
           "date": "2026-02-27",
-          "summary": "NIGHTLY BUILD (Opus 4.6, 2\u20133:20 AM): Zero to functional app in one session. Phase 1 \u2014 full React+Vite+TS+Tailwind v4+PWA scaffold; Cloudflare Worker with render/email/usage API proxy routes; KV usage tracking with free/pro limits and monthly reset; email gate modal; Turnstile invisible bot protection; PostHog+GA4 analytics; ToS + Privacy Policy. Phase 2 \u2014 photo upload (drag-drop, camera capture, auto-resize); 10 themes + 3 budget tiers with visual picker; product catalog data structure; shopping list filtered by theme+budget with affiliate links; lead form; share button with before/after image generation. Phase 3 core \u2014 door detection with 2-point click canvas calibration; parametric template system (deck shapes, stair configs, railing styles, size classes, AI prompt builder); full IRC-based materials calculator (footings \u2192 stairs \u2192 railing \u2192 hardware); pricing engine with ~45 SKUs and HD/Lowe\u2019s URLs. All builds clean. Next: Phase 3.6 materials list UI + PDF export."
+          "summary": "NIGHTLY BUILD (Opus 4.6, 2–3:20 AM): Zero to functional app in one session. Phase 1 — full React+Vite+TS+Tailwind v4+PWA scaffold; Cloudflare Worker with render/email/usage API proxy routes; KV usage tracking with free/pro limits and monthly reset; email gate modal; Turnstile invisible bot protection; PostHog+GA4 analytics; ToS + Privacy Policy. Phase 2 — photo upload (drag-drop, camera capture, auto-resize); 10 themes + 3 budget tiers with visual picker; product catalog data structure; shopping list filtered by theme+budget with affiliate links; lead form; share button with before/after image generation. Phase 3 core — door detection with 2-point click canvas calibration; parametric template system (deck shapes, stair configs, railing styles, size classes, AI prompt builder); full IRC-based materials calculator (footings → stairs → railing → hardware); pricing engine with ~45 SKUs and HD/Lowe’s URLs. All builds clean. Next: Phase 3.6 materials list UI + PDF export."
         },
         {
           "date": "2026-02-26",
-          "summary": "Full product scoped and architecture locked. Renamed from FrameVision to See It Built. Domain seeitbuilt.app (~$14). Adopted YardFlip pipeline: SAM furniture detection + rembg cutouts + IC-Light relighting (Apache 2.0 confirmed commercial). Dimensions-first flow (size + style + budget) replaces photo-first \u2014 solves railing/obstruction problem. Refresh Mode = primary business (existing deck makeover, Snugly model for outdoors). Build Mode = secondary (new construction + lumber calculator). Pricing locked: Free 50 renders/mo, Pro $29/mo 100 renders/mo, overage $0.25/render. Real product catalog compositing (not AI-invented furniture) = core differentiator. TikTok scripts locked (Rick\u2019s deck, wife\u2019s 47 plants, Day One, 3 years saying it)."
+          "summary": "Full product scoped and architecture locked. Renamed from FrameVision to See It Built. Domain seeitbuilt.app (~$14). Adopted YardFlip pipeline: SAM furniture detection + rembg cutouts + IC-Light relighting (Apache 2.0 confirmed commercial). Dimensions-first flow (size + style + budget) replaces photo-first — solves railing/obstruction problem. Refresh Mode = primary business (existing deck makeover, Snugly model for outdoors). Build Mode = secondary (new construction + lumber calculator). Pricing locked: Free 50 renders/mo, Pro $29/mo 100 renders/mo, overage $0.25/render. Real product catalog compositing (not AI-invented furniture) = core differentiator. TikTok scripts locked (Rick’s deck, wife’s 47 plants, Day One, 3 years saying it)."
         }
       ]
     }
   ],
-  "lastUpdated": "2026-03-04T19:43:00Z"
+  "lastUpdated": "2026-03-04T20:50:28.625Z"
 }

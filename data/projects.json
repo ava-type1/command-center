@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4 PM: Killed strike-monitor crash loop (501 restarts, wrong path, was hammering CPU). Gated embed form \u2014 code now hidden until name/email/site submitted. Deployed to iranstrikemap.com. Email routing still pending new CF API token from Kam. Italian outlet inquired via Facebook \u2014 pending reply.",
+      "lastWorkedOn": "Mar 4 Evening: Full embed verification system live. Worker at iran-embed-verify.kameronmartinllc.workers.dev. All secrets secured.",
       "todos": [
         {
           "id": "1",
@@ -87,6 +87,10 @@
         {
           "date": "2026-02-28",
           "summary": "Built and launched in one day as conflict broke out. US and Israel launched Operation Epic Fury against Iran at 1 AM ET. Map seeded with 11 confirmed events: 9 US/Israel strikes (nuclear facilities, IRGC HQ, Khamenei compound, airbases) + 2 Iranian retaliatory strikes (northern Israel, Al Udeid Qatar). Flag emoji markers show attacker instantly. Mobile redesign with full-screen map, FAB buttons, slide-up bottom sheets for feed and leader tracker. AI video pipeline (Phase 2) designed and ready to build."
+        },
+        {
+          "date": "2026-03-04",
+          "summary": "EVENING: Built full email verification system (Cloudflare Worker + KV + Resend). Telegram bot token moved off client HTML to Worker secrets. Embed form now requires name/email/site + 6-digit email OTP before embed code reveals. Tested end-to-end \u2014 working. Aaron Mehta (Breaking Defense) replied to map email. SIA Italia embed request answered."
         }
       ],
       "liveUrl": "https://iranstrikemap.com",

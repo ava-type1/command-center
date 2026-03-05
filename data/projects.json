@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-04",
-      "lastWorkedOn": "Mar 4 EVE: Built full email verification system \u2014 Cloudflare Worker (iran-embed-verify) + KV storage + Resend integration. Embed code now gated behind verified email. Telegram bot token moved server-side (security fix). Tested end-to-end, confirmed working. SIA Italia embed request answered. Aaron Mehta (Breaking Defense) replied. Strike-monitor crash loop killed.",
+      "lastWorkedOn": "Mar 4 Evening: Built full email verification system \u2014 Cloudflare Worker (iran-embed-verify.kameronmartinllc.workers.dev) + KV storage + Resend API. All tokens moved server-side. Verified end-to-end. Press contact Aaron Mehta (Breaking Defense) replied to Kam. SIA Italia embed request answered.",
       "todos": [
         {
           "id": "1",
@@ -74,7 +74,7 @@
       "changelog": [
         {
           "date": "2026-03-04",
-          "summary": "PM: Embed requests (Jim/a@a.com = test, Bilal Siddik/web-pwr.com = non-serious) disregarded. Facebook post engagement \u2014 technical questions about data update pipeline answered. Email routing for press@iranstrikemap.com still pending \u2014 needs Cloudflare dashboard on desktop (API token lacks DNS/Email Routing perms). AM: SoFRep embed driving 5,864 referral visits. Outreach sent to 7 defense/military outlets. Reply monitor cron live. PM: Killed strike-monitor crash loop (501 restarts \u2014 wrong file path hammering CPU, causing response jankiness). Gated embed form \u2014 code was pre-populated on load, now hidden behind form submission (name+email+site required). Deployed. Italian outlet Facebook inquiry pending reply. EVE: Full email verification built and deployed (CF Worker + KV + Resend). Embed code gated \u2014 requires verified email. Bot token secured server-side. SIA Italia responded. Aaron Mehta (Breaking Defense) replied to outreach."
+          "summary": "PM: Embed requests (Jim/a@a.com = test, Bilal Siddik/web-pwr.com = non-serious) disregarded. Facebook post engagement \u2014 technical questions about data update pipeline answered. Email routing for press@iranstrikemap.com still pending \u2014 needs Cloudflare dashboard on desktop (API token lacks DNS/Email Routing perms). AM: SoFRep embed driving 5,864 referral visits. Outreach sent to 7 defense/military outlets. Reply monitor cron live. PM: Killed strike-monitor crash loop (501 restarts \u2014 wrong file path hammering CPU, causing response jankiness). Gated embed form \u2014 code was pre-populated on load, now hidden behind form submission (name+email+site required). Deployed. Italian outlet Facebook inquiry pending reply. EVE: Full email verification built and deployed (CF Worker + KV + Resend). Embed code gated \u2014 requires verified email. Bot token secured server-side. SIA Italia responded. Aaron Mehta (Breaking Defense) replied to outreach. Evening: Full email verification system built and deployed \u2014 Cloudflare Worker + KV + Resend. Verification codes expire in 10min. Telegram token fully off client-side. Tested end-to-end. Aaron Mehta (Breaking Defense) responded to embed inquiry."
         },
         {
           "date": "2026-03-02",

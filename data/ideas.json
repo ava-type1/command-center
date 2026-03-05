@@ -345,6 +345,27 @@
       "createdAt": "2026-02-27T00:00:00Z",
       "highlight": false,
       "notes": "18,873 all-volunteer fire departments in the US. Existing software (ESO, ImageTrend, Firehouse) built for career departments \u2014 expensive overkill. Pricing: $30-50/month per dept. FEMA AFG grants = depts can use grant money to pay (lowers friction). 1% of market = ~190 paying depts. Key insight: ops-only scope skips regulated incident reporting entirely. Kam interested \u2014 come back to this."
+    },
+    {
+      "id": "idea-3d-agent-office",
+      "title": "3D Agent Office \u2014 Visual Multi-Agent Interface",
+      "description": "A 3D browser-based office where each AI agent has a walking character. Walk up to an agent, tap to open a chat. Status bubble shows what they last worked on. Inspired by a Facebook commenter who built something similar with gaming logic. Would connect to OpenClaw session API. Works as a PWA on mobile too.",
+      "tags": [
+        "agents",
+        "ui",
+        "three.js",
+        "3d",
+        "cool"
+      ],
+      "status": "idea",
+      "priority": "medium",
+      "todos": [
+        "Research open source projects doing the same thing (virtual AI offices, agent visualizers)",
+        "Check the Facebook commenter \u2014 DM him about what stack he used",
+        "Evaluate Three.js vs Babylon.js for mobile PWA",
+        "Map out which agents would live in the office"
+      ],
+      "createdAt": "2026-03-05T05:07:06Z"
     }
   ],
   "avadrive_integrations": [

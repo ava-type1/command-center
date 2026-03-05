@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-05",
-      "lastWorkedOn": "Mar 5: SIA Italia (sistema-italiano-autodifesa.it) follow-up resolved. Issue was on our end — fixed. Replied with screenshot proof showing map loading correctly on their site. Instructed hard refresh (Ctrl+Shift+R). No map data changes.",
+      "lastWorkedOn": "Mar 5 PM: Embed requests coming in fast — 3 confirmed embedders: SIA Italia (Italian self-defense org), Democracy News Live / RIG 360 Media (Rohit Gandhi, democracynewslive.com), tcivinfo.net (Johan). Discussing embedder registry + analytics page to track all sites using the map. SIA zoom + legend issues ongoing.",
       "todos": [
         {
           "id": "1",
@@ -74,7 +74,7 @@
       "changelog": [
         {
           "date": "2026-03-05",
-          "summary": "SIA Italia follow-up closed: embed issue was on our end, resolved. Replied with screenshot proof of map loading correctly on their site. Hard refresh (Ctrl+Shift+R) confirmed fix."
+          "summary": "PM: 3 confirmed embed requests — SIA Italia, Democracy News Live (Rohit Gandhi / RIG 360 Media, democracynewslive.com), tcivinfo.net (Johan). Building embedder registry to track all sites using the map. AM: SIA Italia follow-up closed: embed issue was on our end, resolved."
         },
         {
           "date": "2026-03-04",
@@ -2389,5 +2389,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-05T13:18:00.000Z"
+  "lastUpdated": "2026-03-05T16:20:00.000Z"
 }

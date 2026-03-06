@@ -348,8 +348,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-05",
-      "lastWorkedOn": "Mar 5: No new Columbia County / Fort White stories (latest still Mar 3). Baseball 2-8, Softball 2-2 / 1-0 district. 11 upcoming softball games added through Apr 20. Weather refreshed. Deployed.",
+      "lastUpdated": "2026-03-06",
+      "lastWorkedOn": "Mar 6: Daily news cron ran but hit a snag — events.json edit failed. Other content likely deployed. Needs investigation.",
       "todos": [
         {
           "id": "1",
@@ -413,6 +413,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-06",
+          "summary": "Daily news cron ran — events.json edit failed (file write error). Content otherwise likely deployed. Needs investigation."
+        },
         {
           "date": "2026-03-05",
           "summary": "Daily update: No new verifiable local stories (Mar 3 still latest — SRWMD aquifer opposition, I-75 wildfire). Sports confirmed: baseball 2-8, softball 2-2 / 1-0 district. 11 upcoming softball games added (Apr 2–20). Weather refreshed. Deployed."
@@ -1570,12 +1574,12 @@
     {
       "id": "bid-finder",
       "name": "Brad's Bid Finder (V2)",
-      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Nightly scraper — SAM.gov working, county scrapers being fixed. 403 active bids. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Nightly scraper — SAM.gov working, county scrapers being fixed. 2 clean active bids after major scoring overhaul Mar 5. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
       "status": "active",
-      "progress": 72,
+      "progress": 75,
       "color": "#f59e0b",
-      "lastUpdated": "2026-03-05",
-      "lastWorkedOn": "Mar 5 scrape: SAM.gov 57 new, FDOT 8 new, Columbia County Direct 3 new. 4 expired cleaned. 1,111 total active bids / 1,087 exported to dashboard. DemandStar/OpenGov/MFMP still 0.",
+      "lastUpdated": "2026-03-06",
+      "lastWorkedOn": "Mar 6 scrape (6 AM): SAM.gov 0, OpenGov 0, MFMP 0, DemandStar 2 (0 new), FDOT 0, Columbia County 0. 2 active bids total. No new hits today.",
       "todos": [
         {
           "id": "1",
@@ -1610,8 +1614,12 @@
       ],
       "changelog": [
         {
+          "date": "2026-03-06",
+          "summary": "6 AM scrape: 0 new bids across all sources (SAM.gov, OpenGov, MFMP, FDOT, Columbia County). DemandStar holds 2 active bids (0 new). Quiet morning."
+        },
+        {
           "date": "2026-03-05",
-          "summary": "Morning scrape: 57 new SAM.gov, 8 new FDOT, 3 new Columbia County Direct, 4 expired cleaned. 1,111 total active / 1,087 exported to dashboard. DemandStar/OpenGov/MFMP still returning 0."
+          "summary": "MAJOR SCORING OVERHAUL: Was showing 1,446 bids — 90% junk (score <5). Fixed root issues: title-first scoring gate (no title match = score 0), negative keyword hard-zero, MIN_RELEVANCE_SCORE=6 pre-filter, removed noisy NAICS codes, removed location-less SAM.gov bids. Result: 2 clean relevant FL bids. Morning scrape before fix: 57 new SAM.gov, 8 FDOT, 3 Columbia County. Cron re-enabled (6 AM + 6 PM ET). BLOCKER: Need SAM.gov API key — Kam has registered before, check sam.gov/content/data-services."
         },
         {
           "date": "2026-03-04",
@@ -2389,5 +2397,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-05T16:20:00.000Z"
+  "lastUpdated": "2026-03-06T09:21:00.000Z"
 }

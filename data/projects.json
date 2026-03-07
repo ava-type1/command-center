@@ -207,8 +207,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-02-26",
-      "lastWorkedOn": "2026-02-26",
+      "lastUpdated": "2026-03-07",
+      "lastWorkedOn": "Mar 7 AM: Daily dashboard sync captured fresh Brad V2 scrape status and Tiwahe Times daily content refresh/deploy.",
       "todos": [
         {
           "id": "8",
@@ -217,6 +217,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-07",
+          "summary": "Daily dashboard sync: recorded latest Brad V2 scrape (2 active bids, 0 new, DemandStar-only hits) and Tiwahe Times refresh (new Suwannee rescue story, meetings/events cleanup, MaxPreps results update, weather refresh, production deploy)."
+        },
         {
           "date": "2026-02-26",
           "summary": "Mac remote dev setup complete: SSH access from server established (nitram@100.122.25.86 via Tailscale). Installed nvm, Node v24.14.0, Claude Code 2.1.59 on Mac. Created ~/bin/claude wrapper and ~/bin/koda helper script for named screen sessions (koda ava, koda new, koda attach, koda list). Discussed Anthropic's new Claude Code Remote Control feature (claude remote-control) \u2014 available now on Max plan, lets you control a Mac Claude Code session from iPhone/browser. Full mobile-first dev workflow ready: Termius on iPhone \u2192 SSH \u2192 Mac \u2192 launch Claude Code sessions in any project from the field. Also discussed building a Mac\u2192phone deployment pipeline: fix code \u2192 xcodebuild \u2192 R2 upload \u2192 OTA manifest \u2192 Telegram install link (no TestFlight wait)."
@@ -2409,5 +2413,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-06T17:52:00.000Z"
+  "lastUpdated": "2026-03-07T11:50:00.000Z"
 }

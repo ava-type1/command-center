@@ -348,8 +348,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-06",
-      "lastWorkedOn": "Mar 6 noon: Daily weather refresh succeeded (weather.json updated with current + 5-day forecast) and deployed. Earlier morning news run had an events.json edit failure that still needs investigation.",
+      "lastUpdated": "2026-03-07",
+      "lastWorkedOn": "2026-03-07",
       "todos": [
         {
           "id": "1",
@@ -413,6 +413,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-07",
+          "summary": "Daily news refresh completed cleanly: added Suwannee River rescue story, pruned to 30-day window, fixed meetings/events feed with Code Enforcement Magistrate Hearing (2026-04-10), updated MaxPreps sports (baseball L 1-11, softball W 15-2; records 2-9 and 3-2), refreshed weather, committed and deployed to production."
+        },
         {
           "date": "2026-03-06",
           "summary": "Noon weather refresh succeeded: weather.json updated (current conditions + 5-day forecast) and deployed. Earlier morning news run had events.json edit failure; events feed needs follow-up."
@@ -1582,8 +1586,8 @@
       "status": "active",
       "progress": 75,
       "color": "#f59e0b",
-      "lastUpdated": "2026-03-06",
-      "lastWorkedOn": "Mar 6 scrape (6 AM): SAM.gov 0, OpenGov 0, MFMP 0, DemandStar 2 (0 new), FDOT 0, Columbia County 0. 2 active bids total. No new hits today.",
+      "lastUpdated": "2026-03-07",
+      "lastWorkedOn": "2026-03-07",
       "todos": [
         {
           "id": "1",
@@ -1617,6 +1621,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-07",
+          "summary": "Morning scrape completed with no errors: 2 active bids exported, 0 new bids; DemandStar provided both active bids while SAM.gov/OpenGov/MFMP/FDOT/County Direct returned 0. Dashboard deployed successfully."
+        },
         {
           "date": "2026-03-06",
           "summary": "6 AM scrape: 0 new bids across all sources (SAM.gov, OpenGov, MFMP, FDOT, Columbia County). DemandStar holds 2 active bids (0 new). Quiet morning."

@@ -207,8 +207,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-03-07",
-      "lastWorkedOn": "Mar 7: Full day sync — Brad scrapes (AM + 6 PM, 2 active bids from DemandStar, 0 new), Tiwahe Times news + weather deployed, Countdown prank PWA built for movie night (countdown-app-cuy.pages.dev).",
+      "lastUpdated": "2026-03-08",
+      "lastWorkedOn": "Mar 8: Brad scrape 6 AM (2 active DemandStar bids, 0 new). Tiwahe Times daily cron ran — 2 stories added, 2 expired, committed to GitHub — but deploy blocked (wrangler OAuth token expired Mar 7). Telegram alert sent to Kam.",
       "todos": [
         {
           "id": "8",
@@ -217,6 +217,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-08",
+          "summary": "Brad scrape at 6 AM — 2 active DemandStar bids, 0 new. Tiwahe Times daily news cron ran: 2 stories added (Lake City arson charges, Columbia County predator sting), 2 expired, committed to GitHub (b3ccd32) — but Cloudflare deploy blocked due to wrangler OAuth token expiry (Mar 7 11:04 PM). Telegram alert sent to Kam. Fix: npx wrangler login on server, then redeploy."
+        },
         {
           "date": "2026-03-07",
           "summary": "Full day: Brad scrapers ran at 6 AM + 6 PM (2 active bids from DemandStar both runs, 0 new). Tiwahe Times daily news updated (Suwannee River rescue story, Code Enforcement Magistrate Hearing Apr 10, baseball L 1-11 + softball W 15-2, records 2-9 / 3-2) and weather refreshed — both deployed to production. Countdown prank PWA built and deployed for Kam's movie night with kids (countdown-app-cuy.pages.dev) — fake death timer + jump scare."

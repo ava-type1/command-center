@@ -352,8 +352,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-07",
-      "lastWorkedOn": "2026-03-07",
+      "lastUpdated": "2026-03-08",
+      "lastWorkedOn": "2026-03-08",
       "todos": [
         {
           "id": "1",
@@ -417,6 +417,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-08",
+          "summary": "Daily cron ran — 2 new stories added (Lake City arson charges: Marvin Roberts 70; Columbia County predator sting: Horatio Carrie 25 from Ocala), 2 old stories expired (IDs 1 & 2, Feb 5). Weather, sports, and government calendar updated. Committed to GitHub (b3ccd32). DEPLOY BLOCKED — wrangler OAuth token expired Mar 7 at 11:04 PM. Site not yet updated on Cloudflare. Fix: npx wrangler login on server, then redeploy."
+        },
         {
           "date": "2026-03-07",
           "summary": "Daily news refresh completed cleanly: added Suwannee River rescue story, pruned to 30-day window, fixed meetings/events feed with Code Enforcement Magistrate Hearing (2026-04-10), updated MaxPreps sports (baseball L 1-11, softball W 15-2; records 2-9 and 3-2), refreshed weather, committed and deployed to production."
@@ -1590,8 +1594,8 @@
       "status": "active",
       "progress": 75,
       "color": "#f59e0b",
-      "lastUpdated": "2026-03-07",
-      "lastWorkedOn": "2026-03-07",
+      "lastUpdated": "2026-03-08",
+      "lastWorkedOn": "2026-03-08",
       "todos": [
         {
           "id": "1",
@@ -1625,6 +1629,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-08",
+          "summary": "6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
+        },
         {
           "date": "2026-03-07",
           "summary": "Two scrape runs (6 AM + 6 PM): both clean, no errors. 2 active bids from DemandStar only; SAM.gov, OpenGov, MFMP, FDOT, County Direct all returned 0. Dashboard deployed after each run."
@@ -2413,5 +2421,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-07T11:50:00.000Z"
+  "lastUpdated": "2026-03-08T09:41:00.000Z"
 }

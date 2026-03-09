@@ -207,8 +207,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-03-08",
-      "lastWorkedOn": "Mar 8: Brad scrape 6 AM (2 active DemandStar bids, 0 new). Tiwahe Times daily cron ran — 2 stories added, 2 expired, committed to GitHub — but deploy blocked (wrangler OAuth token expired Mar 7). Telegram alert sent to Kam.",
+      "lastUpdated": "2026-03-09",
+      "lastWorkedOn": "Mar 9: Brad scrape 6 AM (2 active DemandStar bids, 0 new). Tiwahe Times sports current (baseball 2-9, softball 3-2). Command Center updated.",
       "todos": [
         {
           "id": "8",
@@ -217,6 +217,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-09",
+          "summary": "Brad 6 AM scrape: 2 active DemandStar bids, 0 new, all other sources 0. Tiwahe Times cron ran: sports current (baseball 2-9, softball 3-2), no new game results. Command Center dashboard updated."
+        },
         {
           "date": "2026-03-08",
           "summary": "Brad scrape at 6 AM — 2 active DemandStar bids, 0 new. Tiwahe Times daily news cron ran: 2 stories added (Lake City arson charges, Columbia County predator sting), 2 expired, committed to GitHub (b3ccd32) — but Cloudflare deploy blocked due to wrangler OAuth token expiry (Mar 7 11:04 PM). Telegram alert sent to Kam. Fix: npx wrangler login on server, then redeploy."
@@ -356,8 +360,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-08",
-      "lastWorkedOn": "2026-03-08",
+      "lastUpdated": "2026-03-09",
+      "lastWorkedOn": "2026-03-09",
       "todos": [
         {
           "id": "1",
@@ -421,6 +425,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-09",
+          "summary": "Daily cron ran — sports data confirmed current (baseball 2-9, softball 3-2). No new completed game results since last update. Committed and deployed."
+        },
         {
           "date": "2026-03-08",
           "summary": "Daily cron ran — 2 new stories added (Lake City arson charges: Marvin Roberts 70; Columbia County predator sting: Horatio Carrie 25 from Ocala), 2 old stories expired (IDs 1 & 2, Feb 5). Weather, sports, and government calendar updated. Committed to GitHub (b3ccd32). DEPLOY BLOCKED — wrangler OAuth token expired Mar 7 at 11:04 PM. Site not yet updated on Cloudflare. Fix: npx wrangler login on server, then redeploy."
@@ -1598,8 +1606,8 @@
       "status": "active",
       "progress": 75,
       "color": "#f59e0b",
-      "lastUpdated": "2026-03-08",
-      "lastWorkedOn": "2026-03-08",
+      "lastUpdated": "2026-03-09",
+      "lastWorkedOn": "2026-03-09",
       "todos": [
         {
           "id": "1",
@@ -1633,6 +1641,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-09",
+          "summary": "6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
+        },
         {
           "date": "2026-03-08",
           "summary": "6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
@@ -2425,5 +2437,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-08T09:41:00.000Z"
+  "lastUpdated": "2026-03-09T09:11:00.000Z"
 }

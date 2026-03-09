@@ -208,7 +208,7 @@
       "progress": 93,
       "color": "#00ff88",
       "lastUpdated": "2026-03-09",
-      "lastWorkedOn": "Mar 9: Brad scrape 6 AM (2 active DemandStar bids, 0 new). Tiwahe Times sports current (baseball 2-9, softball 3-2). Command Center updated.",
+      "lastWorkedOn": "Mar 9 PM: OpenClaw updated 2026.2.24 → 2026.3.8 (gateway install fixed, config backed up). AM: Brad scrape 6 AM (2 active DemandStar bids, 0 new). Tiwahe Times sports current (baseball 2-9, softball 3-2).",
       "todos": [
         {
           "id": "8",
@@ -219,7 +219,7 @@
       "changelog": [
         {
           "date": "2026-03-09",
-          "summary": "Brad 6 AM scrape: 2 active DemandStar bids, 0 new, all other sources 0. Tiwahe Times cron ran: sports current (baseball 2-9, softball 3-2), no new game results. Command Center dashboard updated."
+          "summary": "PM: OpenClaw updated from 2026.2.24 → 2026.3.8. Config backed up to /root/clawd-backups/ before update. Gateway reinstalled clean (embedded token warning resolved). AM: Brad 6 AM scrape: 2 active DemandStar bids, 0 new, all other sources 0. Tiwahe Times cron ran: sports current (baseball 2-9, softball 3-2), no new game results."
         },
         {
           "date": "2026-03-08",

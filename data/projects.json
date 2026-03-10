@@ -1638,12 +1638,32 @@
           "id": "1772598284731",
           "text": "Verify scraper repair results \u2014 county_direct, fdot, demandstar were modified",
           "done": true
+        },
+        {
+          "id": "6",
+          "text": "Fix/proxy BidNet Direct WAF (403 blocker — unlocks many FL counties)",
+          "done": false
+        },
+        {
+          "id": "7",
+          "text": "Add FL school board procurement portals (Duval, Alachua, Marion, Hillsborough)",
+          "done": false
+        },
+        {
+          "id": "8",
+          "text": "Add water management districts (SJRWMD, SRWMD, SWFWMD)",
+          "done": false
+        },
+        {
+          "id": "9",
+          "text": "Investigate DemandStar paid tier or API for full bid access",
+          "done": false
         }
       ],
       "changelog": [
         {
           "date": "2026-03-09",
-          "summary": "6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
+          "summary": "PM: Analyzed why only 2 bids showing. Root cause: BidNet Direct (403 WAF), Alachua (Cloudflare blocked), SAM.gov/MFMP/FDOT/OpenGov all returning 0 — scrapers broken or keyword filters too narrow. Missing sources: school districts, water management districts (SJRWMD, SRWMD), municipal portals (Jacksonville/Gainesville/Ocala), ConstructConnect/BidClerk (industry paid boards). DemandStar likely limited by free tier. AM: 6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
         },
         {
           "date": "2026-03-08",

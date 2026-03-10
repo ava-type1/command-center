@@ -7,8 +7,8 @@
       "status": "active",
       "progress": 83,
       "color": "#ff3300",
-      "lastUpdated": "2026-03-05",
-      "lastWorkedOn": "Mar 5 PM: Embed requests coming in fast \u2014 3 confirmed embedders: SIA Italia (Italian self-defense org), Democracy News Live / RIG 360 Media (Rohit Gandhi, democracynewslive.com), tcivinfo.net (Johan). Discussing embedder registry + analytics page to track all sites using the map. SIA zoom + legend issues ongoing.",
+      "lastUpdated": "2026-03-10",
+      "lastWorkedOn": "Mar 10: Researching HELIOS viral post, confirmed deployment real. Planning to add USS Preble + HELIOS laser to US Assets layer (not currently on map).",
       "todos": [
         {
           "id": "1",
@@ -69,9 +69,18 @@
           "id": "12",
           "text": "Gate embed form \u2014 require registration before code reveals",
           "done": true
+        },
+        {
+          "id": "13",
+          "text": "Add USS Preble (DDG-88) to vessels layer with HELIOS laser note",
+          "done": false
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-10",
+          "summary": "Mar 10: Researched HELIOS laser weapon deployment (viral social media post). Confirmed MOSTLY TRUE \u2014 USS Preble (DDG-88) deployed with HELIOS during Operation Epic Fury, CENTCOM footage confirms, multiple outlets report combat use against Iranian Shahed drones. Official combat kills not confirmed by DoD. Decided to add USS Preble + HELIOS to US Assets layer. Ship not currently on the map \u2014 pending add."
+        },
         {
           "date": "2026-03-05",
           "summary": "PM: 3 confirmed embed requests \u2014 SIA Italia, Democracy News Live (Rohit Gandhi / RIG 360 Media, democracynewslive.com), tcivinfo.net (Johan). Building embedder registry to track all sites using the map. AM: SIA Italia follow-up closed: embed issue was on our end, resolved."
@@ -208,7 +217,7 @@
       "progress": 93,
       "color": "#00ff88",
       "lastUpdated": "2026-03-10",
-      "lastWorkedOn": "Mar 10 AM: Routine morning check — all systems current. No new events since Mar 9 PM update. Brad scrapers will run today at 6 AM/PM ET. Iran Strike Map and all projects stable.",
+      "lastWorkedOn": "Mar 10 AM: Routine morning check \u2014 all systems current. No new events since Mar 9 PM update. Brad scrapers will run today at 6 AM/PM ET. Iran Strike Map and all projects stable.",
       "todos": [
         {
           "id": "8",
@@ -219,19 +228,19 @@
       "changelog": [
         {
           "date": "2026-03-10",
-          "summary": "AM: Routine morning check — all systems current. No new events since Mar 9 PM update. Brad scrapers running today (6 AM/PM ET). Iran Strike Map and all projects stable."
+          "summary": "AM: Routine morning check \u2014 all systems current. No new events since Mar 9 PM update. Brad scrapers running today (6 AM/PM ET). Iran Strike Map and all projects stable."
         },
         {
           "date": "2026-03-09",
-          "summary": "PM: OpenClaw updated from 2026.2.24 → 2026.3.8. Config backed up to /root/clawd-backups/ before update. Gateway reinstalled clean (embedded token warning resolved). AM: Brad 6 AM scrape: 2 active DemandStar bids, 0 new, all other sources 0. Tiwahe Times cron ran: sports current (baseball 2-9, softball 3-2), no new game results."
+          "summary": "PM: OpenClaw updated from 2026.2.24 \u2192 2026.3.8. Config backed up to /root/clawd-backups/ before update. Gateway reinstalled clean (embedded token warning resolved). AM: Brad 6 AM scrape: 2 active DemandStar bids, 0 new, all other sources 0. Tiwahe Times cron ran: sports current (baseball 2-9, softball 3-2), no new game results."
         },
         {
           "date": "2026-03-08",
-          "summary": "Brad scrape at 6 AM — 2 active DemandStar bids, 0 new. Tiwahe Times daily news cron ran: 2 stories added (Lake City arson charges, Columbia County predator sting), 2 expired, committed to GitHub (b3ccd32) — but Cloudflare deploy blocked due to wrangler OAuth token expiry (Mar 7 11:04 PM). Telegram alert sent to Kam. Fix: npx wrangler login on server, then redeploy."
+          "summary": "Brad scrape at 6 AM \u2014 2 active DemandStar bids, 0 new. Tiwahe Times daily news cron ran: 2 stories added (Lake City arson charges, Columbia County predator sting), 2 expired, committed to GitHub (b3ccd32) \u2014 but Cloudflare deploy blocked due to wrangler OAuth token expiry (Mar 7 11:04 PM). Telegram alert sent to Kam. Fix: npx wrangler login on server, then redeploy."
         },
         {
           "date": "2026-03-07",
-          "summary": "Full day: Brad scrapers ran at 6 AM + 6 PM (2 active bids from DemandStar both runs, 0 new). Tiwahe Times daily news updated (Suwannee River rescue story, Code Enforcement Magistrate Hearing Apr 10, baseball L 1-11 + softball W 15-2, records 2-9 / 3-2) and weather refreshed — both deployed to production. Countdown prank PWA built and deployed for Kam's movie night with kids (countdown-app-cuy.pages.dev) — fake death timer + jump scare."
+          "summary": "Full day: Brad scrapers ran at 6 AM + 6 PM (2 active bids from DemandStar both runs, 0 new). Tiwahe Times daily news updated (Suwannee River rescue story, Code Enforcement Magistrate Hearing Apr 10, baseball L 1-11 + softball W 15-2, records 2-9 / 3-2) and weather refreshed \u2014 both deployed to production. Countdown prank PWA built and deployed for Kam's movie night with kids (countdown-app-cuy.pages.dev) \u2014 fake death timer + jump scare."
         },
         {
           "date": "2026-02-26",
@@ -431,11 +440,11 @@
       "changelog": [
         {
           "date": "2026-03-09",
-          "summary": "Daily cron ran — sports data confirmed current (baseball 2-9, softball 3-2). No new completed game results since last update. Committed and deployed."
+          "summary": "Daily cron ran \u2014 sports data confirmed current (baseball 2-9, softball 3-2). No new completed game results since last update. Committed and deployed."
         },
         {
           "date": "2026-03-08",
-          "summary": "Daily cron ran — 2 new stories added (Lake City arson charges: Marvin Roberts 70; Columbia County predator sting: Horatio Carrie 25 from Ocala), 2 old stories expired (IDs 1 & 2, Feb 5). Weather, sports, and government calendar updated. Committed to GitHub (b3ccd32). DEPLOY BLOCKED — wrangler OAuth token expired Mar 7 at 11:04 PM. Site not yet updated on Cloudflare. Fix: npx wrangler login on server, then redeploy."
+          "summary": "Daily cron ran \u2014 2 new stories added (Lake City arson charges: Marvin Roberts 70; Columbia County predator sting: Horatio Carrie 25 from Ocala), 2 old stories expired (IDs 1 & 2, Feb 5). Weather, sports, and government calendar updated. Committed to GitHub (b3ccd32). DEPLOY BLOCKED \u2014 wrangler OAuth token expired Mar 7 at 11:04 PM. Site not yet updated on Cloudflare. Fix: npx wrangler login on server, then redeploy."
         },
         {
           "date": "2026-03-07",
@@ -1645,7 +1654,7 @@
         },
         {
           "id": "6",
-          "text": "Fix/proxy BidNet Direct WAF (403 blocker — unlocks many FL counties)",
+          "text": "Fix/proxy BidNet Direct WAF (403 blocker \u2014 unlocks many FL counties)",
           "done": false
         },
         {
@@ -1667,7 +1676,7 @@
       "changelog": [
         {
           "date": "2026-03-09",
-          "summary": "PM: Analyzed why only 2 bids showing. Root cause: BidNet Direct (403 WAF), Alachua (Cloudflare blocked), SAM.gov/MFMP/FDOT/OpenGov all returning 0 — scrapers broken or keyword filters too narrow. Missing sources: school districts, water management districts (SJRWMD, SRWMD), municipal portals (Jacksonville/Gainesville/Ocala), ConstructConnect/BidClerk (industry paid boards). DemandStar likely limited by free tier. AM: 6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
+          "summary": "PM: Analyzed why only 2 bids showing. Root cause: BidNet Direct (403 WAF), Alachua (Cloudflare blocked), SAM.gov/MFMP/FDOT/OpenGov all returning 0 \u2014 scrapers broken or keyword filters too narrow. Missing sources: school districts, water management districts (SJRWMD, SRWMD), municipal portals (Jacksonville/Gainesville/Ocala), ConstructConnect/BidClerk (industry paid boards). DemandStar likely limited by free tier. AM: 6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."
         },
         {
           "date": "2026-03-08",

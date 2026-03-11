@@ -5,10 +5,10 @@
       "name": "Iran Strike Map",
       "description": "Real-time conflict tracking map for the US-Israel strikes on Iran (Operation Epic Fury, Feb 28 2026). Interactive map with confirmed strike markers, flag-emoji markers showing who struck (US/Israel/Iran), leader elimination tracker, US military assets layer, video popup support, and AI-powered geolocation pipeline (Phase 2). Mobile-first design with bottom-sheet panels.",
       "status": "active",
-      "progress": 83,
+      "progress": 85,
       "color": "#ff3300",
-      "lastUpdated": "2026-03-10",
-      "lastWorkedOn": "Mar 10: HELIOS laser research complete — confirmed mostly true (CENTCOM footage real, USS Preble deployed, combat use reported but not officially confirmed by DoD). USS Preble not currently on map. Decided to add to vessels layer with HELIOS note. Pending Kam GO.",
+      "lastUpdated": "2026-03-11",
+      "lastWorkedOn": "Mar 11 (Day 12): Auto-cron added s250 (Iran drone strike on Komala party, Iraqi Kurdistan — 8+ drones, 1 fighter killed). Casualties: 289→290. Notable events added: Iran announces 'continuous strikes' + warns oil to $200/barrel; US asks Israel to halt strikes on Iran energy infrastructure (first US restraint in 12 days); Japan & Germany announce strategic oil reserve releases. Mojtaba Khamenei leg wound confirmed by 4th independent source (Cyprus ambassador). 234 strikes total in staging. Video search cron timing out — notified Kam.",
       "todos": [
         {
           "id": "1",
@@ -77,6 +77,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-11",
+          "summary": "Day 12 auto-update (10:40 AM ET): Added s250 — Iran drone strike on Komala Kurdish party positions in Iraqi Kurdistan (8+ drones, 1 fighter killed, Al Arabiya/AFP). Casualties updated 289→290. Notable events: Iran announces 'continuous strikes' policy + $200 oil warning (Khatam al-Anbiya); US privately asks Israel to halt strikes on Iran energy infrastructure (Axios/Reuters — first US restraint move in 12 days of war); Japan & Germany to release strategic oil reserves (IEA requesting 400M barrels, Japan release as early as Mar 16). Mojtaba Khamenei leg wound confirmed by 4th independent source. 234 total strikes. Video search cron timing out — health monitor alerted Kam."
+        },
         {
           "date": "2026-03-10",
           "summary": "Mar 10 PM: Kam shared BidNet Direct bid screenshot (closes Apr 9) — details behind registration wall. Brad workflow has WAF bypass built in, can pull full details with URL. Mar 10 AM: Researched HELIOS laser weapon viral post. Confirmed MOSTLY TRUE — USS Preble (DDG-88) deployed with HELIOS during Operation Epic Fury. CENTCOM footage real. Multiple outlets (NY Post, Gulf News) report combat drone kills but DoD hasn't officially confirmed. Checked vessels.json — USS Preble not on map. Kam asked to add it. Pending Kam GO to write JSON + deploy."

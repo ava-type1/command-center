@@ -8,7 +8,7 @@
       "progress": 83,
       "color": "#ff3300",
       "lastUpdated": "2026-03-10",
-      "lastWorkedOn": "Mar 10: Researching HELIOS viral post, confirmed deployment real. Planning to add USS Preble + HELIOS laser to US Assets layer (not currently on map).",
+      "lastWorkedOn": "Mar 10: HELIOS laser research complete — confirmed mostly true (CENTCOM footage real, USS Preble deployed, combat use reported but not officially confirmed by DoD). USS Preble not currently on map. Decided to add to vessels layer with HELIOS note. Pending Kam GO.",
       "todos": [
         {
           "id": "1",
@@ -79,7 +79,7 @@
       "changelog": [
         {
           "date": "2026-03-10",
-          "summary": "Mar 10: Researched HELIOS laser weapon deployment (viral social media post). Confirmed MOSTLY TRUE \u2014 USS Preble (DDG-88) deployed with HELIOS during Operation Epic Fury, CENTCOM footage confirms, multiple outlets report combat use against Iranian Shahed drones. Official combat kills not confirmed by DoD. Decided to add USS Preble + HELIOS to US Assets layer. Ship not currently on the map \u2014 pending add."
+          "summary": "Mar 10 PM: Kam shared BidNet Direct bid screenshot (closes Apr 9) — details behind registration wall. Brad workflow has WAF bypass built in, can pull full details with URL. Mar 10 AM: Researched HELIOS laser weapon viral post. Confirmed MOSTLY TRUE — USS Preble (DDG-88) deployed with HELIOS during Operation Epic Fury. CENTCOM footage real. Multiple outlets (NY Post, Gulf News) report combat drone kills but DoD hasn't officially confirmed. Checked vessels.json — USS Preble not on map. Kam asked to add it. Pending Kam GO to write JSON + deploy."
         },
         {
           "date": "2026-03-05",
@@ -217,7 +217,7 @@
       "progress": 93,
       "color": "#00ff88",
       "lastUpdated": "2026-03-10",
-      "lastWorkedOn": "Mar 10 AM: Routine morning check \u2014 all systems current. No new events since Mar 9 PM update. Brad scrapers will run today at 6 AM/PM ET. Iran Strike Map and all projects stable.",
+      "lastWorkedOn": "Mar 10 PM: Daily CC update. HELIOS research done (Iran Strike Map). USS Preble pending add to vessels layer. Brad BidNet screenshot discussed — WAF bypass ready. All systems stable.",
       "todos": [
         {
           "id": "8",
@@ -228,7 +228,7 @@
       "changelog": [
         {
           "date": "2026-03-10",
-          "summary": "AM: Routine morning check \u2014 all systems current. No new events since Mar 9 PM update. Brad scrapers running today (6 AM/PM ET). Iran Strike Map and all projects stable."
+          "summary": "PM: HELIOS laser research (Iran Strike Map) — confirmed mostly true, USS Preble not on map, pending add. Brad BidNet screenshot shared — WAF bypass available. All systems stable. Context 19%, no compaction risk."
         },
         {
           "date": "2026-03-09",
@@ -2470,5 +2470,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-03-09T21:48:00.000Z"
+  "lastUpdated": "2026-03-10T23:58:00.000Z"
 }

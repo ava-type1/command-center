@@ -7,8 +7,8 @@
       "status": "active",
       "progress": 85,
       "color": "#ff3300",
-      "lastUpdated": "2026-03-11",
-      "lastWorkedOn": "Mar 11 (Day 12): Auto-cron added s250 (Iran drone strike on Komala party, Iraqi Kurdistan — 8+ drones, 1 fighter killed). Casualties: 289→290. Notable events added: Iran announces 'continuous strikes' + warns oil to $200/barrel; US asks Israel to halt strikes on Iran energy infrastructure (first US restraint in 12 days); Japan & Germany announce strategic oil reserve releases. Mojtaba Khamenei leg wound confirmed by 4th independent source (Cyprus ambassador). 234 strikes total in staging. Video search cron timing out — notified Kam.",
+      "lastUpdated": "2026-03-12",
+      "lastWorkedOn": "Mar 12 (Day 13): Auto-cron added s269-s273 (Mohammadi Beirut strike, Riyan Harouf strike, Taleghan 2 nuclear site, Tehran IRGC checkpoints drone attack, Muharraq Island fire). 22 leaders eliminated. 304 casualties. New notable events: IEA oil disruption warning, 3.2M Iranians displaced, oil crosses $100/bbl, Iraq closes oil terminals. iranstrikemap.com deployed \u2705",
       "todos": [
         {
           "id": "1",
@@ -79,11 +79,11 @@
       "changelog": [
         {
           "date": "2026-03-11",
-          "summary": "Day 12 auto-update (10:40 AM ET): Added s250 — Iran drone strike on Komala Kurdish party positions in Iraqi Kurdistan (8+ drones, 1 fighter killed, Al Arabiya/AFP). Casualties updated 289→290. Notable events: Iran announces 'continuous strikes' policy + $200 oil warning (Khatam al-Anbiya); US privately asks Israel to halt strikes on Iran energy infrastructure (Axios/Reuters — first US restraint move in 12 days of war); Japan & Germany to release strategic oil reserves (IEA requesting 400M barrels, Japan release as early as Mar 16). Mojtaba Khamenei leg wound confirmed by 4th independent source. 234 total strikes. Video search cron timing out — health monitor alerted Kam."
+          "summary": "Day 12 auto-update (10:40 AM ET): Added s250 \u2014 Iran drone strike on Komala Kurdish party positions in Iraqi Kurdistan (8+ drones, 1 fighter killed, Al Arabiya/AFP). Casualties updated 289\u2192290. Notable events: Iran announces 'continuous strikes' policy + $200 oil warning (Khatam al-Anbiya); US privately asks Israel to halt strikes on Iran energy infrastructure (Axios/Reuters \u2014 first US restraint move in 12 days of war); Japan & Germany to release strategic oil reserves (IEA requesting 400M barrels, Japan release as early as Mar 16). Mojtaba Khamenei leg wound confirmed by 4th independent source. 234 total strikes. Video search cron timing out \u2014 health monitor alerted Kam."
         },
         {
           "date": "2026-03-10",
-          "summary": "Mar 10 PM: Kam shared BidNet Direct bid screenshot (closes Apr 9) — details behind registration wall. Brad workflow has WAF bypass built in, can pull full details with URL. Mar 10 AM: Researched HELIOS laser weapon viral post. Confirmed MOSTLY TRUE — USS Preble (DDG-88) deployed with HELIOS during Operation Epic Fury. CENTCOM footage real. Multiple outlets (NY Post, Gulf News) report combat drone kills but DoD hasn't officially confirmed. Checked vessels.json — USS Preble not on map. Kam asked to add it. Pending Kam GO to write JSON + deploy."
+          "summary": "Mar 10 PM: Kam shared BidNet Direct bid screenshot (closes Apr 9) \u2014 details behind registration wall. Brad workflow has WAF bypass built in, can pull full details with URL. Mar 10 AM: Researched HELIOS laser weapon viral post. Confirmed MOSTLY TRUE \u2014 USS Preble (DDG-88) deployed with HELIOS during Operation Epic Fury. CENTCOM footage real. Multiple outlets (NY Post, Gulf News) report combat drone kills but DoD hasn't officially confirmed. Checked vessels.json \u2014 USS Preble not on map. Kam asked to add it. Pending Kam GO to write JSON + deploy."
         },
         {
           "date": "2026-03-05",
@@ -221,7 +221,7 @@
       "progress": 93,
       "color": "#00ff88",
       "lastUpdated": "2026-03-12",
-      "lastWorkedOn": "Mar 12 AM: Daily CC check — no new work overnight. All systems stable. Iran Strike Map monitoring continues (Day 13). USS Preble HELIOS add still pending Kam GO.",
+      "lastWorkedOn": "Mar 12 AM: Daily CC check \u2014 no new work overnight. All systems stable. Iran Strike Map monitoring continues (Day 13). USS Preble HELIOS add still pending Kam GO.",
       "todos": [
         {
           "id": "8",
@@ -232,15 +232,15 @@
       "changelog": [
         {
           "date": "2026-03-12",
-          "summary": "AM: Daily check — no new work overnight. Systems stable. Iran Strike Map Day 13 monitoring active. USS Preble (HELIOS laser) add still pending Kam GO."
+          "summary": "AM: Daily check \u2014 no new work overnight. Systems stable. Iran Strike Map Day 13 monitoring active. USS Preble (HELIOS laser) add still pending Kam GO."
         },
         {
           "date": "2026-03-11",
-          "summary": "AM: Daily check — no new work overnight. Systems stable. USS Preble (HELIOS laser) add to Iran Strike Map still pending Kam GO."
+          "summary": "AM: Daily check \u2014 no new work overnight. Systems stable. USS Preble (HELIOS laser) add to Iran Strike Map still pending Kam GO."
         },
         {
           "date": "2026-03-10",
-          "summary": "PM: HELIOS laser research (Iran Strike Map) — confirmed mostly true, USS Preble not on map, pending add. Brad BidNet screenshot shared — WAF bypass available. All systems stable. Context 19%, no compaction risk."
+          "summary": "PM: HELIOS laser research (Iran Strike Map) \u2014 confirmed mostly true, USS Preble not on map, pending add. Brad BidNet screenshot shared \u2014 WAF bypass available. All systems stable. Context 19%, no compaction risk."
         },
         {
           "date": "2026-03-09",
@@ -385,8 +385,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-09",
-      "lastWorkedOn": "2026-03-09",
+      "lastUpdated": "2026-03-12",
+      "lastWorkedOn": "Mar 12: Daily news update \u2014 Columbia County burn ban still in effect, Lake City Humane Society vs Animal Services dispute. Fort White Indians baseball 3-10 (MaxPreps confirmed). Sports updated. Weather updated. tiwahe-times.pages.dev deployed \u2705",
       "todos": [
         {
           "id": "1",
@@ -2480,6 +2480,14 @@
           "summary": "Full product scoped and architecture locked. Renamed from FrameVision to See It Built. Domain seeitbuilt.app (~$14). Adopted YardFlip pipeline: SAM furniture detection + rembg cutouts + IC-Light relighting (Apache 2.0 confirmed commercial). Dimensions-first flow (size + style + budget) replaces photo-first \u2014 solves railing/obstruction problem. Refresh Mode = primary business (existing deck makeover, Snugly model for outdoors). Build Mode = secondary (new construction + lumber calculator). Pricing locked: Free 50 renders/mo, Pro $29/mo 100 renders/mo, overage $0.25/render. Real product catalog compositing (not AI-invented furniture) = core differentiator. TikTok scripts locked (Rick\u2019s deck, wife\u2019s 47 plants, Day One, 3 years saying it)."
         }
       ]
+    },
+    {
+      "id": "zeitgeist",
+      "name": "Zeitgeist",
+      "status": "active",
+      "description": "Real-time public sentiment platform. Hourly Python pipeline: GDELT + Polymarket + Google Trends \u2192 Claude synthesis \u2192 JSON output. Topics: geopolitics, economy, tech, culture.",
+      "lastUpdated": "2026-03-12",
+      "lastWorkedOn": "Mar 12: Hourly cron running (0 * * * *). Pipeline: gdelt_ingest \u2192 polymarket_ingest \u2192 trends_ingest \u2192 processor \u2192 synthesizer (Claude via OpenClaw gateway). Output at /root/zeitgeist/backend/output/topics.json. Multiple Claude sessions spinning for narrative synthesis."
     }
   ],
   "lastUpdated": "2026-03-12T13:05:00.000Z"

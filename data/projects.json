@@ -1635,12 +1635,12 @@
     {
       "id": "bid-finder",
       "name": "Brad's Bid Finder (V2)",
-      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Nightly scraper — SAM.gov working, county scrapers being fixed. 2 clean active bids after major scoring overhaul Mar 5. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
-      "status": "active",
+      "description": "Government bid aggregator for Santa Fe Site Prep LLC (Brad Taylor). Scraper cron paused Mar 13 per Kam. Dashboard at master.brad-v2.pages.dev. Kam earns 10% referral on jobs Brad wins.",
+      "status": "paused",
       "progress": 75,
       "color": "#f59e0b",
-      "lastUpdated": "2026-03-09",
-      "lastWorkedOn": "2026-03-09",
+      "lastUpdated": "2026-03-13",
+      "lastWorkedOn": "2026-03-13",
       "todos": [
         {
           "id": "1",
@@ -1694,6 +1694,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-13",
+          "summary": "Scraper cron deleted per Kam request (was running 6 AM + 6 PM ET). Project on hold."
+        },
         {
           "date": "2026-03-09",
           "summary": "PM: Analyzed why only 2 bids showing. Root cause: BidNet Direct (403 WAF), Alachua (Cloudflare blocked), SAM.gov/MFMP/FDOT/OpenGov all returning 0 — scrapers broken or keyword filters too narrow. Missing sources: school districts, water management districts (SJRWMD, SRWMD), municipal portals (Jacksonville/Gainesville/Ocala), ConstructConnect/BidClerk (industry paid boards). DemandStar likely limited by free tier. AM: 6 AM scrape: 2 active bids (DemandStar), 0 new. SAM.gov, OpenGov, MFMP, FDOT, Columbia County all returned 0. Clean run, no errors. Dashboard deployed."

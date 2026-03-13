@@ -220,8 +220,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-03-12",
-      "lastWorkedOn": "Mar 12 Noon: Weather cron ran (82°F Clear, data committed + pushed ✅), but Cloudflare Pages deploy failed — CLOUDFLARE_API_TOKEN not set on server. Messaged Kam. Live site data stale until token configured.",
+      "lastUpdated": "2026-03-13",
+      "lastWorkedOn": "Mar 13: Brad Bid Finder scraper cron deleted per Kam (was running 6 AM + 6 PM ET). Brad project marked paused. Dashboard updated.",
       "todos": [
         {
           "id": "8",
@@ -230,6 +230,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-13",
+          "summary": "Mar 13: Brad Bid Finder scraper cron deleted per Kam (was running 6 AM + 6 PM ET). Brad project marked paused in dashboard."
+        },
         {
           "date": "2026-03-12",
           "summary": "Noon: Tiwahe Times weather cron ran cleanly (data fetched + GitHub push ✅) but Cloudflare Pages deploy blocked — CLOUDFLARE_API_TOKEN env var not set on server. Wrangler cannot auth in non-interactive mode. Messaged Kam. Also: exec session glow-she (code 1) triggered the same wrangler auth error. All other systems stable. USS Preble HELIOS add still pending GO."

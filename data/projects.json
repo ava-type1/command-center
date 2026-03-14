@@ -7,8 +7,8 @@
       "status": "active",
       "progress": 85,
       "color": "#ff3300",
-      "lastUpdated": "2026-03-12",
-      "lastWorkedOn": "Mar 12 (Day 13): Auto-cron added s269-s273 (Mohammadi Beirut strike, Riyan Harouf strike, Taleghan 2 nuclear site, Tehran IRGC checkpoints drone attack, Muharraq Island fire). 22 leaders eliminated. 304 casualties. New notable events: IEA oil disruption warning, 3.2M Iranians displaced, oil crosses $100/bbl, Iraq closes oil terminals. iranstrikemap.com deployed \u2705",
+      "lastUpdated": "2026-03-14",
+      "lastWorkedOn": "Mar 14 (Day 15): RSS monitor active \u2014 CENTCOM confirms 90+ strikes on Kharg Island oil hub. 16 unprocessed leads. Conflict escalating to energy infrastructure. RSS cron running every 10min.",
       "todos": [
         {
           "id": "1",
@@ -77,6 +77,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-14",
+          "summary": "Day 15: RSS monitor picking up major escalation \u2014 CENTCOM confirms US struck 90+ military targets on Kharg Island (Irans primary oil export hub). Trump threatening further oil infrastructure strikes. 16 unprocessed OSINT leads queued. Conflict entering energy warfare phase."
+        },
         {
           "date": "2026-03-11",
           "summary": "Day 12 auto-update (10:40 AM ET): Added s250 \u2014 Iran drone strike on Komala Kurdish party positions in Iraqi Kurdistan (8+ drones, 1 fighter killed, Al Arabiya/AFP). Casualties updated 289\u2192290. Notable events: Iran announces 'continuous strikes' policy + $200 oil warning (Khatam al-Anbiya); US privately asks Israel to halt strikes on Iran energy infrastructure (Axios/Reuters \u2014 first US restraint move in 12 days of war); Japan & Germany to release strategic oil reserves (IEA requesting 400M barrels, Japan release as early as Mar 16). Mojtaba Khamenei leg wound confirmed by 4th independent source. 234 total strikes. Video search cron timing out \u2014 health monitor alerted Kam."
@@ -397,8 +401,8 @@
       "status": "active",
       "progress": 80,
       "color": "#1e3a5f",
-      "lastUpdated": "2026-03-12",
-      "lastWorkedOn": "Mar 12: Daily news update \u2014 Columbia County burn ban still in effect, Lake City Humane Society vs Animal Services dispute. Fort White Indians baseball 3-10 (MaxPreps confirmed). Sports updated. Weather updated. tiwahe-times.pages.dev deployed \u2705",
+      "lastUpdated": "2026-03-14",
+      "lastWorkedOn": "Mar 14: Daily news cron running, Cloudflare Pages auto-deploy active.",
       "todos": [
         {
           "id": "1",

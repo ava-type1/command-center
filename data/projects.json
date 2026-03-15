@@ -406,11 +406,11 @@
       "id": "tiwahe-times",
       "name": "The Tiwahe Times",
       "description": "Hyperlocal digital newspaper for Fort White, FL. AI-powered content generation. Dark red/black theme. Sections: weather, local news, community events, sports (MaxPreps integration), county government, business spotlight. Fort White vs Lake City locality split. Revenue via local business ads ($25-150/mo).",
-      "status": "active",
+      "status": "paused",
       "progress": 80,
       "color": "#1e3a5f",
       "lastUpdated": "2026-03-15",
-      "lastWorkedOn": "Mar 15: Daily news + weather cron ran at 8:04 AM ET. stories.json + events.json + weather.json updated. Committed + deployed to Cloudflare Pages.",
+      "lastWorkedOn": "Mar 15: Daily crons DELETED (8 AM news + noon weather). Site stays live on Cloudflare Pages (free tier) but no more AI updates. Traffic was 104 visitors/30 days — too low to justify daily token burn.",
       "todos": [
         {
           "id": "1",
@@ -474,6 +474,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-03-15",
+          "summary": "Crons killed per Kam — 30-day analytics showed only 104 unique visitors (3-4/day), no growth after initial Feb launch spike. Site stays live on Cloudflare Pages at no cost but AI daily updates stopped. Can revive if Fort White FB group push happens."
+        },
         {
           "date": "2026-03-15",
           "summary": "Daily cron ran at 8:04 AM ET — stories.json, events.json, and weather.json all updated. 3 files changed (+66/-28 lines). Committed (41ec0d2) and deployed successfully."

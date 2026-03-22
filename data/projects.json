@@ -324,7 +324,7 @@
       "progress": 93,
       "color": "#00ff88",
       "lastUpdated": "2026-03-21",
-      "lastWorkedOn": "Mar 21 (6 PM ET): Daily update. Cron errors investigated + Kam alerted. Kam spent the day on OpenAI Parameter Golf challenge \u2014 training locally on MacBook, score 3.83 BPB at step 200, applied for Runpod compute grant, waiting on response. Context 29%, no compaction risk.",
+      "lastWorkedOn": "Mar 21 (9 PM ET): Kam spent the day on OpenAI Parameter Golf challenge \u2014 training since 8 PM last night on MacBook, score 3.83 BPB at step 200 (baseline is 1.2244, lower is better). Architecture: asymmetric heterogeneous layers \u2014 fat generalized block + 8 leaner blocks. Applied for Runpod compute grant (OpenAI offering $1M in credits). Waiting on grant decision before testing quantization (int5/int6) + BigramHash at scale. Context 29%, no compaction risk.",
       "todos": [
         {
           "id": "8",
@@ -335,7 +335,7 @@
       "changelog": [
         {
           "date": "2026-03-21",
-          "summary": "Mar 21 (6 PM ET): Cron errors investigated (Staging Data Sync 2x timeout, Video Search 2x error, lucky-du exec SIGTERM). All background, non-production-breaking. Kam working on OpenAI Parameter Golf challenge \u2014 applied for Runpod compute grant. Context 29%, no compaction risk."
+          "summary": "Mar 21: AM \u2014 cron errors investigated (Staging Data Sync 2x timeout, Video Search 2x error, lucky-du exec SIGTERM \u2014 all background/non-production). PM \u2014 Kam deep in OpenAI Parameter Golf challenge all day. Training locally on MacBook since 8 PM Mar 20. Score 3.83 BPB at step 200 (vs 1.2244 baseline). Architecture: fat generalized block + 8 lean blocks (heterogeneous). Applied for $1M Runpod compute grant. Waiting to test full quantization/BigramHash approach at scale."
         },
         {
           "date": "2026-03-20",
@@ -2645,5 +2645,5 @@
       "lastWorkedOn": "Mar 12: Hourly cron running (0 * * * *). Pipeline: gdelt_ingest \u2192 polymarket_ingest \u2192 trends_ingest \u2192 processor \u2192 synthesizer (Claude via OpenClaw gateway). Output at /root/zeitgeist/backend/output/topics.json. Multiple Claude sessions spinning for narrative synthesis."
     }
   ],
-  "lastUpdated": "2026-03-21T18:09:00.000Z"
+  "lastUpdated": "2026-03-21T21:09:00.000Z"
 }

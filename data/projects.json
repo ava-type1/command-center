@@ -406,10 +406,10 @@
       "name": "Hollie Dashboard",
       "description": "Custom AI-powered business dashboard for Hollie Mancini (Brooksville, FL) \u2014 runs 7+ businesses. Live Shopify inventory, AI morning brief, inline assistant, calendar (3 sources), dark/light theme, revenue charts, permission tiers. First paying client for KameronMartinLLC automation agency.",
       "status": "active",
-      "progress": 80,
+      "progress": 85,
       "color": "#f59e0b",
-      "lastUpdated": "2026-04-01",
-      "lastWorkedOn": "Apr 1: $1,000 deposit received from Hollie (Zenbean Coffee, confirmation u8r9g6p11). KameronMartinLLC first paying automation agency client. Proposal needed to formalize full $3,500 setup + $500/mo.",
+      "lastUpdated": "2026-04-02",
+      "lastWorkedOn": "Apr 2: Constant Contact integration Worker deployed (hollie-cc.kameronmartinllc.workers.dev). OAuth 2.0 flow + data endpoints (/data/summary, /data/contacts). KV namespace for token storage. Awaiting Hollie OAuth authorization + dashboard UI wiring.",
       "todos": [
         {
           "id": "1",
@@ -475,9 +475,23 @@
           "id": "13",
           "text": "Phase 3: Autopilot email + social media drafts",
           "done": false
+        },
+        {
+          "id": "cc-wire",
+          "text": "Wire CC widget into dashboard frontend (on Mac)",
+          "done": false
+        },
+        {
+          "id": "cc-auth",
+          "text": "Hollie visits hollie-cc.kameronmartinllc.workers.dev/auth/login to authorize CC",
+          "done": false
         }
       ],
       "changelog": [
+        {
+          "date": "2026-04-02",
+          "summary": "Deployed Constant Contact Worker (OAuth + data API). CC credentials stored. KV namespace live. Next: dashboard frontend integration + Hollie auth."
+        },
         {
           "date": "2026-04-01",
           "summary": "$1,000 DEPOSIT RECEIVED \u2014 Hollie paid via Zenbean Coffee (confirmation u8r9g6p11). KameronMartinLLC first paying automation agency client. Formal proposal to gmancini12@gmail.com still needed to document full $3,500 setup + $500/mo deal. Remaining balance: $2,500."
@@ -508,8 +522,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-04-01",
-      "lastWorkedOn": "Apr 1 (9 AM heartbeat): Daily check \u2014 all systems stable. Hollie $1K deposit received (first paying client!). Iran Strike Map Day 33 active. TaskClawed blocked on funded API key + Stripe Connect.",
+      "lastUpdated": "2026-04-02",
+      "lastWorkedOn": "Apr 2 (11 AM heartbeat): Hollie CC Worker deployed. Iran Strike Map still live. All systems stable.",
       "todos": [
         {
           "id": "8",
@@ -518,6 +532,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-04-02",
+          "summary": "Apr 2: Hollie CC integration Worker live. Daily check \u2014 all systems stable."
+        },
         {
           "date": "2026-04-01",
           "summary": "Apr 1 (9 AM heartbeat): Daily check \u2014 all systems stable. \ud83c\udf89 HOLLIE DASHBOARD: $1,000 deposit received Mar 31 (first paying client!). Formal proposal to gmancini12@gmail.com still needed. Iran Strike Map Day 33 active (299 strikes, 526 leads). TaskClawed blocked on funded API key + Stripe Connect."
@@ -2874,5 +2892,5 @@
       "lastWorkedOn": "Mar 12: Hourly cron running (0 * * * *). Pipeline: gdelt_ingest \u2192 polymarket_ingest \u2192 trends_ingest \u2192 processor \u2192 synthesizer (Claude via OpenClaw gateway). Output at /root/zeitgeist/backend/output/topics.json. Multiple Claude sessions spinning for narrative synthesis."
     }
   ],
-  "lastUpdated": "2026-04-01T13:23:00.000Z"
+  "lastUpdated": "2026-04-02"
 }

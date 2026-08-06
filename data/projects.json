@@ -42,6 +42,60 @@
       ]
     },
     {
+      "id": "agency-ops-stack",
+      "name": "Agency Ops Stack",
+      "description": "KameronMartinLLC local business websites and digital operations stack for the Mancini/property group: client sites, Google Business Profiles/accounts, Google Ads, reporting, billing, change requests, restaurant strategy, ZenAdmin client portal, Agency Ops cockpit, and private Second Brain strategy layer.",
+      "status": "active",
+      "progress": 60,
+      "color": "#14b8a6",
+      "lastUpdated": "2026-08-06",
+      "lastWorkedOn": "Aug 6 (3:11 PM ET): Daily sync captured July agency momentum. Sites already built for three golf courses, a restaurant, and an event space; two more golf course websites approved; Google Business Profiles/accounts and ads moving under Kam; ZenAdmin, Agency Ops Core, and Second Brain form the operating stack.",
+      "todos": [
+        {
+          "id": "sites-built",
+          "text": "Sites built for three golf courses, a restaurant, and an event space",
+          "done": true
+        },
+        {
+          "id": "two-golf-sites",
+          "text": "Build two newly approved golf course websites",
+          "done": false
+        },
+        {
+          "id": "google-profiles",
+          "text": "Take over Google Business Profiles and Google accounts",
+          "done": false
+        },
+        {
+          "id": "ads-management",
+          "text": "Set up and manage Google Ads campaigns",
+          "done": false
+        },
+        {
+          "id": "zenadmin-portal",
+          "text": "Run ZenAdmin as the Mancini Group client portal",
+          "done": true
+        },
+        {
+          "id": "ops-brain",
+          "text": "Use Agency Ops Core + Second Brain as internal operating stack",
+          "done": true
+        },
+        {
+          "id": "proposal-4750",
+          "text": "Close/track $4,750 proposal for two websites plus Google Ads setup",
+          "done": false
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-08-06",
+          "summary": "Daily Command Center sync added Agency Ops Stack from Jul 8 memory: Mancini/property group work has expanded from websites into local business digital operations, including sites, Google profiles/accounts, ads, reporting, billing/change requests, ZenAdmin, Agency Ops Core, and Second Brain."
+        }
+      ],
+      "liveUrl": "https://agency-ops-core.kameronmartinllc.workers.dev/"
+    },
+    {
       "id": "taskclawed",
       "name": "TaskClawed",
       "description": "AI Agent Marketplace — Fiverr-for-AI-agents concept. Developers list agents, consumers submit tasks, platform handles payments. React+Vite frontend on CF Pages, CF Worker API, D1, KV, R2, Stripe Connect.",
@@ -530,8 +584,8 @@
       "status": "active",
       "progress": 93,
       "color": "#00ff88",
-      "lastUpdated": "2026-04-10",
-      "lastWorkedOn": "Apr 10 (9:12 AM ET): Daily heartbeat sync completed. Reviewed memory/project context; no material project status changes to publish. Context healthy at 8% (no compaction risk).",
+      "lastUpdated": "2026-08-06",
+      "lastWorkedOn": "Aug 6 (3:11 PM ET): Daily heartbeat sync completed. Reviewed memory since Apr 10; added Agency Ops Stack as an active project from July client-service momentum. Context at 81%, so compaction warning threshold crossed.",
       "todos": [
         {
           "id": "8",
@@ -540,6 +594,10 @@
         }
       ],
       "changelog": [
+        {
+          "date": "2026-08-06",
+          "summary": "Aug 6 (3:11 PM ET) heartbeat: Daily sync completed. Reviewed memory since Apr 10; added Agency Ops Stack as an active project from July Mancini/property group work. Context at 81%, crossing the compaction warning threshold."
+        },
         {
           "date": "2026-04-10",
           "summary": "Apr 10 (9:12 AM ET heartbeat): Daily sync completed. Reviewed memory/project context; no material project status changes to publish. Context healthy at 8% (no compaction risk)."
@@ -2928,5 +2986,5 @@
       "lastWorkedOn": "Mar 12: Hourly cron running (0 * * * *). Pipeline: gdelt_ingest → polymarket_ingest → trends_ingest → processor → synthesizer (Claude via OpenClaw gateway). Output at /root/zeitgeist/backend/output/topics.json. Multiple Claude sessions spinning for narrative synthesis."
     }
   ],
-  "lastUpdated": "2026-04-10"
+  "lastUpdated": "2026-08-06"
 }
